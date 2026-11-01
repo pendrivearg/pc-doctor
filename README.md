@@ -2,7 +2,25 @@
 
 Diagnóstico y reparación de computadoras desde un pendrive, pensado para que cualquier persona —incluso sin conocimientos— pueda entender qué le pasa a su PC y solucionarlo. Funciona **sin Internet**, **no instala nada** en la computadora, **no envía datos** y **nunca cambia nada sin preguntar**.
 
-> Estado: versión 0.1 de prueba. Ver [docs/03-Estado-de-implementacion.md](docs/03-Estado-de-implementacion.md).
+Si Windows no arranca o un virus no deja usar la PC, el pendrive tiene un **modo rescate** que arranca sin Windows: rescata fotos y documentos, busca virus y señales de hackeo con Windows apagado y revisa si el disco está fallando.
+
+> Estado: versión 0.2 de prueba. Ver [docs/03-Estado-de-implementacion.md](docs/03-Estado-de-implementacion.md).
+
+## Descargas
+
+Las versiones están en [Releases](https://github.com/pendrivearg/pc-doctor/releases). Cada versión trae un manifiesto firmado con la clave del proyecto: los pendrives solo instalan versiones cuya firma es válida. Se compilan y prueban en GitHub a partir de este código ([Compilar y probar](https://github.com/pendrivearg/pc-doctor/actions)).
+
+## Política de firma de código
+
+La firma de código de Windows de PC Doctor la provee gratuitamente [SignPath.io](https://about.signpath.io), con certificado de [SignPath Foundation](https://signpath.org) *(solicitud en trámite: hasta que se apruebe, los programas se publican sin firma de Windows)*.
+
+- Solo se firman programas compilados en GitHub Actions a partir del código de este repositorio.
+- Cada firma la aprueba manualmente una persona del equipo.
+- Roles del equipo:
+  - **Autores** (pueden subir cambios): [pendrivearg](https://github.com/pendrivearg)
+  - **Revisores** (revisan cambios de otras personas): [pendrivearg](https://github.com/pendrivearg)
+  - **Aprobadores** (aprueban cada firma): [pendrivearg](https://github.com/pendrivearg)
+- Privacidad: ver la [política de privacidad](PRIVACIDAD.md). En resumen, el programa no envía datos; solo se conecta a GitHub cuando la persona toca «Buscar actualizaciones».
 
 ## Principios
 

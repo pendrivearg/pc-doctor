@@ -1,0 +1,62 @@
+# Compilación verificable de PC Doctor en GitHub (gratis para repositorios públicos).
+# Cada cambio se prueba y se arma acá, a partir del código publicado: así cualquiera puede comprobar de dónde sale cada versión.
+name: Compilar y probar
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pruebas:
+    name: Pruebas automáticas
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Pruebas (las de administrador corren aparte)
+        run: dotnet test tests/PCDoctor.Tests -c Release --filter "FullyQualifiedName!~AdminActionTests&FullyQualifiedName!~ElevatedAgent"
+
+  pruebas-con-permiso:
+    # Las máquinas de GitHub corren como administrador: sirven para probar las reparaciones reales en una PC descartable.
+    # Informan, pero no frenan la compilación (el entorno de un servidor no siempre tiene sonido, impresora o Defender activo).
+    name: Pruebas con permiso de administrador (informativas)
+    runs-on: windows-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Reparaciones reales con permiso
+        run: dotnet test tests/PCDoctor.Tests -c Release --filter "FullyQualifiedName~AdminActionTests|FullyQualifiedName~ElevatedAgent" --logger "console;verbosity=normal"
+
+  compilar:
+    name: Armar el pendrive
+    needs: pruebas
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Programa para Windows (lo que va en la parte «PC DOCTOR» del pendrive)
+        shell: pwsh
+        run: ./tools/publicar.ps1 -Destino "$env:RUNNER_TEMP\pendrive\"
+      - name: Programa del modo rescate (Linux)
+        run: dotnet publish src/PCDoctor.Rescue -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true -p:DebugType=none -o "${{ runner.temp }}/rescate"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pcdoctor-windows
+          path: ${{ runner.temp }}/pendrive
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pcdoctor-rescate
+          path: ${{ runner.temp }}/rescate
