@@ -44,6 +44,9 @@ public class KnowledgeTests
         "otherusers", "yourinfo", "emailandaccounts", "workplace", "personalization-start", "lockscreen", "fonts", "deviceencryption",
         "typing", "usb", "pen", "autoplay", "storagepolicies", "troubleshoot", "keyboard", "regionformatting", "findmydevice", "family-group",
         "sound-devices", "privacy-location", "search", "optionalfeatures", "crossdevice", "project", "camera",
+        "batterysaver-usagedetails", "connecteddevices", "delivery-optimization", "energyrecommendations", "mobile-devices-addphone-direct",
+        "personalization-lighting", "personalization-textinput-copilot-hardwarekey", "privacy", "privacy-activityhistory", "privacy-contacts",
+        "privacy-feedback", "signinoptions-dynamiclock", "storagerecommendations", "windowsupdate-activehours",
     ];
 
     [Fact]

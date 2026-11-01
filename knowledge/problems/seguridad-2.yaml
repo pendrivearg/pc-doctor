@@ -240,7 +240,7 @@ titulo:
 explicacion:
   sencillo: "Chrome frena las descargas que pueden traer virus. Si lo bloqueó, no tenés que hacer nada: tu compu queda protegida. Ojo con las páginas que te dicen que tenés virus para que bajes algo: es un engaño."
   tecnico: "Bloqueo de descargas por Navegación segura: archivo peligroso, sospechoso, no verificado o inseguro; análisis opcional con Protección mejorada."
-frases: ["chrome bloqueó una descarga", "dice que el archivo puede ser peligroso", "no me deja descargar un programa", "este archivo puede ser peligroso qué hago"]
+frases: ["chrome bloqueó una descarga", "chrome avisa que la descarga es peligrosa", "no me deja descargar un programa", "este archivo puede ser peligroso qué hago"]
 pasos:
   - texto: "Si ves «Este archivo puede ser peligroso», lo mejor es cancelar la descarga. No hace falta hacer nada más."
     abrir: "https://support.google.com/chrome/answer/6261569?hl=es-419"

@@ -1,0 +1,484 @@
+# Archivos, OneDrive y copias de seguridad: archivos a petición, íconos y códigos de error de OneDrive, copia de carpetas, compartir, versiones, Papelera, Historial de archivos, Copia de seguridad de Windows, pendrives y unidades. Guiadas con fuente oficial.
+id: ARC-001
+area: archivos
+titulo:
+  sencillo: "Un archivo de OneDrive tiene una nubecita y no abre sin Internet"
+  tecnico: "Archivos a petición de OneDrive: solo en línea frente a disponible siempre"
+explicacion:
+  sencillo: "OneDrive muestra todos tus archivos, pero algunos están guardados solo en la nube (tienen una nubecita azul) y para abrirlos hace falta Internet. Si querés tenerlos siempre en la compu, se puede marcar que se queden guardados en ella."
+  tecnico: "Archivos a petición: nube azul = solo en línea; tilde verde = disponible localmente; círculo verde lleno = «Mantener siempre en este dispositivo» (ocupa espacio y funciona sin conexión)."
+frases: ["el archivo tiene una nubecita y no me abre", "no puedo abrir mis archivos de onedrive sin internet", "quiero tener los archivos de onedrive en la compu", "me voy de viaje sin internet y necesito mis documentos"]
+pasos:
+  - texto: "Mirá el ícono en la columna «Estado» del Explorador: la nubecita azul quiere decir que el archivo está solo en la nube; el tilde verde, que ya está en la compu."
+    abrir: "https://support.microsoft.com/office/save-disk-space-with-onedrive-files-on-demand-for-windows-0e6860d3-d9f3-4971-b321-7092438fb38e"
+  - texto: "Con Internet, hacé clic derecho sobre el archivo o la carpeta y elegí «Mantener siempre en este dispositivo». Esperá a que el ícono pase a un círculo verde con tilde blanco: desde ahí abre sin conexión."
+  - texto: "Tené en cuenta que esos archivos ocupan lugar en el disco, y que lo que agregues después a esa carpeta también se va a bajar."
+fuentes:
+  - https://support.microsoft.com/office/save-disk-space-with-onedrive-files-on-demand-for-windows-0e6860d3-d9f3-4971-b321-7092438fb38e
+madurez: T0
+---
+id: ARC-002
+area: archivos
+titulo:
+  sencillo: "Quiero que OneDrive ocupe menos lugar en la compu sin borrar nada"
+  tecnico: "Liberar espacio con archivos a petición y Sensor de almacenamiento"
+explicacion:
+  sencillo: "Los archivos de OneDrive se pueden dejar solo en la nube: siguen apareciendo en la compu y no se borran, pero dejan de ocupar lugar en el disco. Para abrirlos después vas a necesitar Internet."
+  tecnico: "Clic derecho > «Liberar espacio» (pasa a solo en línea). El Sensor de almacenamiento puede hacerlo solo con el contenido de la nube que no se abre hace un tiempo."
+frases: ["onedrive me ocupa todo el disco", "liberar espacio de onedrive en la compu", "que los archivos de onedrive queden solo en la nube", "tengo el disco lleno por onedrive"]
+pasos:
+  - texto: "En el Explorador de archivos, hacé clic derecho sobre una carpeta grande de OneDrive (por ejemplo, videos viejos) y elegí «Liberar espacio». Los archivos quedan con la nubecita azul: siguen en OneDrive, pero ya no ocupan lugar en la compu."
+    abrir: "https://support.microsoft.com/office/save-disk-space-with-onedrive-files-on-demand-for-windows-0e6860d3-d9f3-4971-b321-7092438fb38e"
+  - texto: "Ojo: no borres esos archivos pensando que así liberás espacio. Si borrás un archivo de OneDrive, se borra también de la nube y de tus otros aparatos."
+  - texto: "Para que Windows lo haga solo, abrí el Sensor de almacenamiento, iniciá sesión en tu cuenta si te lo pide y elegí después de cuántos días sin abrir el contenido de la nube pasa a estar solo en línea. No borra archivos, y lo que marcaste como «Mantener siempre en este dispositivo» no se toca."
+    abrir: "ms-settings:storagepolicies"
+fuentes:
+  - https://support.microsoft.com/office/save-disk-space-with-onedrive-files-on-demand-for-windows-0e6860d3-d9f3-4971-b321-7092438fb38e
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/manage-drive-space-with-storage-sense
+madurez: T0
+---
+id: ARC-003
+area: archivos
+titulo:
+  sencillo: "¿Qué significan los dibujitos de OneDrive al lado de mis archivos?"
+  tecnico: "Íconos de estado de OneDrive en el Explorador y el área de notificación"
+explicacion:
+  sencillo: "OneDrive pone un dibujito al lado de cada archivo para contarte cómo está: si está solo en la nube, si ya está en la compu, si se está subiendo o si tiene un problema."
+  tecnico: "Nube azul: solo en línea. Tilde verde: disponible localmente. Círculo verde lleno: siempre en el dispositivo. Flechas circulares: sincronizando. Círculo rojo con cruz: error de sincronización. Nube con persona: compartido."
+frases: ["qué es la nubecita al lado de los archivos", "qué significa el tilde verde en mis documentos", "me aparecen unas flechitas en los archivos", "qué son los iconos de onedrive"]
+pasos:
+  - texto: "Nubecita azul: el archivo está solo en la nube y necesita Internet para abrir. Tilde verde sobre blanco: ya está en la compu. Círculo verde lleno con tilde blanco: lo marcaste para que quede siempre en la compu."
+    abrir: "https://support.microsoft.com/office/what-do-the-onedrive-icons-mean-11143026-8000-44f8-aaa9-67c985aa49b3"
+  - texto: "Dos flechas en círculo: el archivo se está subiendo o bajando; esperá a que termine antes de apagar. Una nube con una persona: ese archivo o carpeta está compartido con alguien."
+  - texto: "Un círculo rojo con una cruz blanca quiere decir que ese archivo no se pudo sincronizar: escribile a PC Doctor «un archivo de OneDrive tiene una cruz roja»."
+fuentes:
+  - https://support.microsoft.com/office/what-do-the-onedrive-icons-mean-11143026-8000-44f8-aaa9-67c985aa49b3
+madurez: T0
+---
+id: ARC-004
+area: archivos
+titulo:
+  sencillo: "Un archivo de OneDrive tiene una cruz roja y no se sube"
+  tecnico: "Error de sincronización de un elemento (círculo rojo con cruz blanca)"
+explicacion:
+  sencillo: "La cruz roja quiere decir que OneDrive no pudo subir ese archivo o carpeta a la nube. Muchas veces es por el nombre (tiene un signo que OneDrive no acepta) o porque el archivo es enorme."
+  tecnico: "Causas frecuentes: caracteres no válidos (\" * : < > ? / \\ |), espacios al inicio o al final, nombres reservados (CON, PRN, AUX, NUL, desktop.ini, los que empiezan con ~$) o archivos de más de 250 GB."
+frases: ["un archivo de onedrive tiene una cruz roja", "me sale un circulito rojo en un documento", "hay un archivo que onedrive no quiere subir", "la nube de onedrive dice que hay un problema con un archivo"]
+pasos:
+  - texto: "Tocá la nubecita de OneDrive al lado del reloj: arriba te dice qué archivo tiene el problema y, muchas veces, por qué."
+    abrir: "https://support.microsoft.com/office/what-do-the-onedrive-icons-mean-11143026-8000-44f8-aaa9-67c985aa49b3"
+  - texto: "Mirá el nombre del archivo: si tiene alguno de estos signos \" * : < > ? / \\ | o empieza o termina con un espacio, cambiale el nombre sacándolos (clic derecho > «Cambiar nombre»)."
+    abrir: "https://support.microsoft.com/office/restrictions-and-limitations-in-onedrive-and-sharepoint-64883a5d-228e-48f5-b3d2-eb39e07630fa"
+  - texto: "Si el archivo es gigante (más de 250 GB), OneDrive no lo puede subir: guardalo en un disco externo."
+  - texto: "Si son muchos archivos o sigue igual, escribile a PC Doctor «OneDrive no sincroniza»."
+fuentes:
+  - https://support.microsoft.com/office/what-do-the-onedrive-icons-mean-11143026-8000-44f8-aaa9-67c985aa49b3
+  - https://support.microsoft.com/office/restrictions-and-limitations-in-onedrive-and-sharepoint-64883a5d-228e-48f5-b3d2-eb39e07630fa
+madurez: T0
+---
+id: ARC-005
+area: archivos
+titulo:
+  sencillo: "OneDrive está en pausa y no guarda mis cambios en la nube"
+  tecnico: "Sincronización de OneDrive en pausa"
+explicacion:
+  sencillo: "Si la nubecita de OneDrive tiene el dibujo de pausa (dos rayitas), OneDrive dejó de subir tus cambios a la nube por un rato. No se pierde nada: hay que reanudarlo."
+  tecnico: "Ícono de pausa en el área de notificación: la sincronización está pausada; se reanuda desde el ícono con «Reanudar la sincronización»."
+frases: ["onedrive dice que está en pausa", "la nubecita tiene dos rayitas", "onedrive pausado no sube nada", "cómo saco la pausa de onedrive"]
+pasos:
+  - texto: "Abajo a la derecha, junto al reloj, tocá la nubecita de OneDrive (si no la ves, tocá la flechita «^»)."
+    abrir: "https://support.microsoft.com/office/what-do-the-onedrive-icons-mean-11143026-8000-44f8-aaa9-67c985aa49b3"
+  - texto: "Elegí la opción para reanudar la sincronización. Vas a ver las flechitas en círculo mientras sube lo pendiente: dejá la compu prendida y con Internet hasta que termine."
+  - texto: "Si después aparece otro aviso o una cruz roja, escribile a PC Doctor «OneDrive no sincroniza»."
+fuentes:
+  - https://support.microsoft.com/office/what-do-the-onedrive-icons-mean-11143026-8000-44f8-aaa9-67c985aa49b3
+madurez: T0
+---
+id: ARC-006
+area: archivos
+titulo:
+  sencillo: "Mis cosas del Escritorio y Documentos ahora están dentro de OneDrive"
+  tecnico: "Copia de seguridad de carpetas de OneDrive (Escritorio, Documentos, Imágenes)"
+explicacion:
+  sencillo: "OneDrive tiene una función que guarda en la nube tu Escritorio, tus Documentos y tus Imágenes. Cuando está activada, esas carpetas pasan a estar dentro de OneDrive: tus archivos no se perdieron, están ahí y además tienen copia en la nube."
+  tecnico: "Copia de seguridad de carpetas (Known Folder Move): Escritorio, Documentos e Imágenes se sincronizan con OneDrive. Se administra en Configuración de OneDrive > Sincronización y copia de seguridad > Administrar copia de seguridad."
+frases: ["onedrive se llevó mi escritorio", "mis documentos ahora están en onedrive", "por qué mis carpetas dicen onedrive", "las cosas del escritorio se fueron a la nube"]
+pasos:
+  - texto: "Tranquilo: abrí el Explorador de archivos y entrá a OneDrive. Ahí vas a ver las carpetas Escritorio, Documentos e Imágenes con tus archivos."
+    abrir: "https://support.microsoft.com/office/back-up-your-folders-with-onedrive-d61a7930-a6fb-4b95-b28a-6552e77c3057"
+  - texto: "Para ver qué carpetas se están copiando: tocá la nubecita de OneDrive junto al reloj > el engranaje (Ayuda y configuración) > «Configuración». En la pestaña «Sincronización y copia de seguridad», tocá «Administrar copia de seguridad»."
+  - texto: "Tené en cuenta que esas carpetas ocupan lugar en tu OneDrive (la cuenta gratuita trae 5 GB). Si querés dejar de copiar alguna, escribile a PC Doctor «quiero sacar el escritorio de OneDrive sin perder nada»."
+fuentes:
+  - https://support.microsoft.com/office/back-up-your-folders-with-onedrive-d61a7930-a6fb-4b95-b28a-6552e77c3057
+  - https://support.microsoft.com/windows/experience/backup-recovery/back-up-and-restore-with-windows-backup
+madurez: T0
+---
+id: ARC-007
+area: archivos
+titulo:
+  sencillo: "Quiero sacar el Escritorio (o Documentos) de OneDrive sin perder nada"
+  tecnico: "Detener la copia de seguridad de una carpeta en OneDrive"
+explicacion:
+  sencillo: "Se puede dejar de copiar una carpeta a OneDrive, pero hay que elegir con cuidado dónde quedan los archivos: o solo en OneDrive, o solo en la compu. Si elegís mal, los archivos desaparecen de la compu (aunque sigan en la nube)."
+  tecnico: "Al apagar la copia de una carpeta, Windows pregunta si conservar los archivos solo en OneDrive (se quitan del equipo) o solo en el equipo (se quitan de OneDrive). Los archivos solo en línea deben descargarse antes."
+frases: ["quiero que el escritorio no esté más en onedrive", "dejar de hacer copia de seguridad de documentos en onedrive", "cómo saco mis carpetas de onedrive sin que se borren", "no quiero que onedrive guarde mi escritorio"]
+pasos:
+  - texto: "Antes que nada, con Internet, hacé clic derecho sobre la carpeta (por ejemplo, Escritorio dentro de OneDrive) y elegí «Mantener siempre en este dispositivo». Esperá a que todo tenga el círculo verde: si quedan archivos solo en la nube, Windows no los puede mover."
+    abrir: "https://support.microsoft.com/office/save-disk-space-with-onedrive-files-on-demand-for-windows-0e6860d3-d9f3-4971-b321-7092438fb38e"
+  - texto: "Guardá y cerrá los documentos que tengas abiertos de esa carpeta."
+  - texto: "Tocá la nubecita de OneDrive > el engranaje > «Configuración» > pestaña «Sincronización y copia de seguridad» > «Administrar copia de seguridad». Apagá el interruptor de la carpeta."
+    abrir: "https://support.microsoft.com/office/back-up-your-folders-with-onedrive-d61a7930-a6fb-4b95-b28a-6552e77c3057"
+  - texto: "Cuidado con la pregunta que aparece: si querés seguir viendo tus archivos en la compu, elegí mantener los archivos «solo en mi PC». La otra opción («solo en OneDrive») los deja en la nube y los saca de la compu. Si dudás, pará y escribile a PC Doctor."
+fuentes:
+  - https://support.microsoft.com/office/back-up-your-folders-with-onedrive-d61a7930-a6fb-4b95-b28a-6552e77c3057
+  - https://support.microsoft.com/office/save-disk-space-with-onedrive-files-on-demand-for-windows-0e6860d3-d9f3-4971-b321-7092438fb38e
+madurez: T0
+---
+id: ARC-008
+area: archivos
+titulo:
+  sencillo: "Quiero mandarle a alguien un archivo grande que tengo en OneDrive"
+  tecnico: "Compartir un archivo o carpeta de OneDrive con un vínculo"
+explicacion:
+  sencillo: "En vez de adjuntar un archivo pesado al correo, podés compartir un enlace de OneDrive: la otra persona lo abre o lo descarga desde ahí."
+  tecnico: "Clic derecho > Compartir (copia un vínculo, por defecto con permiso de edición) o desde onedrive.com > Compartir, con opciones del vínculo (permitir edición, fecha de vencimiento)."
+frases: ["compartir un archivo de onedrive", "mandar un link de un archivo grande", "pasarle unas fotos a mi hija por onedrive", "cómo comparto una carpeta de la nube"]
+pasos:
+  - texto: "Opción rápida: en el Explorador, hacé clic derecho sobre el archivo dentro de OneDrive y elegí compartir con un vínculo de OneDrive. El enlace queda copiado: pegalo (Ctrl + V) en un correo o en WhatsApp."
+    abrir: "https://support.microsoft.com/office/share-onedrive-files-and-folders-9fcc2f7d-de0c-4cec-93b0-a82024800c07"
+  - texto: "Ojo: ese vínculo rápido deja que la otra persona modifique el archivo. Si solo querés que lo vea, compartilo desde onedrive.com: marcá el archivo, tocá «Compartir», entrá a la configuración del vínculo y apagá «Permitir edición»."
+  - texto: "Si movés el archivo a otra carpeta, el vínculo deja de andar. Compartí solo lo que tengas derecho a compartir."
+fuentes:
+  - https://support.microsoft.com/office/share-onedrive-files-and-folders-9fcc2f7d-de0c-4cec-93b0-a82024800c07
+madurez: T0
+---
+id: ARC-009
+area: archivos
+titulo:
+  sencillo: "Compartí algo por OneDrive y ya no quiero que lo vean"
+  tecnico: "Dejar de compartir o quitar un vínculo de OneDrive"
+explicacion:
+  sencillo: "Si compartiste un archivo o una carpeta de OneDrive y te arrepentiste, podés borrar el enlace: a partir de ahí, quien lo tenga ya no puede entrar."
+  tecnico: "onedrive.com > seleccionar el elemento > Información (detalles) > Administrar acceso > quitar el vínculo (X > Quitar vínculo)."
+frases: ["dejar de compartir un archivo de onedrive", "compartí una carpeta sin querer", "sacarle el acceso a alguien en onedrive", "borrar el link que mandé"]
+pasos:
+  - texto: "Entrá a onedrive.com con tu cuenta y marcá el archivo o la carpeta compartida (de a uno)."
+    abrir: "https://support.microsoft.com/office/share-onedrive-files-and-folders-9fcc2f7d-de0c-4cec-93b0-a82024800c07"
+  - texto: "Arriba a la derecha, tocá el ícono de información para ver los detalles y, en la parte de quién tiene acceso, elegí «Administrar acceso»."
+  - texto: "Tocá la X al lado del vínculo y confirmá que lo querés quitar. Si se lo habías compartido a una persona puntual, desde ahí también le podés sacar el permiso."
+fuentes:
+  - https://support.microsoft.com/office/share-onedrive-files-and-folders-9fcc2f7d-de0c-4cec-93b0-a82024800c07
+madurez: T0
+---
+id: ARC-010
+area: archivos
+titulo:
+  sencillo: "Guardé encima de un documento de OneDrive y quiero la versión de antes"
+  tecnico: "Restaurar una versión anterior de un archivo en OneDrive"
+explicacion:
+  sencillo: "OneDrive guarda las versiones anteriores de tus archivos durante 30 días. Si guardaste cambios que no querías, podés volver a como estaba antes."
+  tecnico: "Clic derecho > Historial de versiones (Explorador u onedrive.com) > «...» > Restaurar. La versión restaurada pasa a ser la actual."
+frases: ["guardé encima de un archivo y perdí lo de antes", "recuperar la versión anterior de un documento de onedrive", "borré parte del texto y ya guardé", "volver atrás un archivo de la nube"]
+pasos:
+  - texto: "En el Explorador de archivos, hacé clic derecho sobre el archivo (dentro de OneDrive) y elegí «Historial de versiones»."
+    abrir: "https://support.microsoft.com/office/restore-a-previous-version-of-a-file-stored-in-onedrive-159cad6d-d76e-4981-88ef-de6e96c93893"
+  - texto: "Buscá la versión por fecha y hora, tocá los tres puntitos «...» al lado y elegí «Restaurar». La versión que tenías ahora no se pierde: queda en la lista."
+  - texto: "También lo podés hacer desde onedrive.com (clic derecho > «Historial de versiones»). Solo se guardan las versiones de los últimos 30 días."
+fuentes:
+  - https://support.microsoft.com/office/restore-a-previous-version-of-a-file-stored-in-onedrive-159cad6d-d76e-4981-88ef-de6e96c93893
+madurez: T0
+---
+id: ARC-011
+area: archivos
+titulo:
+  sencillo: "Se me borraron o arruinaron muchos archivos de OneDrive de golpe"
+  tecnico: "Restaurar OneDrive a una fecha anterior (Microsoft 365)"
+explicacion:
+  sencillo: "Si un virus, un error o alguien borró o cambió muchos archivos de OneDrive, y tenés Microsoft 365, podés volver todo OneDrive a como estaba un día de los últimos 30."
+  tecnico: "onedrive.com > Configuración > Opciones > Restaurar OneDrive: requiere suscripción a Microsoft 365; deshace toda la actividad posterior a la fecha elegida."
+frases: ["se me borraron un montón de archivos de onedrive", "un virus me cambió todos los archivos de la nube", "volver onedrive a como estaba ayer", "restaurar onedrive a una fecha"]
+pasos:
+  - texto: "Entrá a onedrive.com con tu cuenta. Tocá el engranaje (Configuración) > «Opciones» y, a la izquierda, «Restaurar OneDrive». Solo aparece si tenés Microsoft 365."
+    abrir: "https://support.microsoft.com/office/restore-your-onedrive-fa231298-759d-41cf-bcd0-25ac53eb8a15"
+  - texto: "Elegí la fecha (por ejemplo, «Ayer») o una fecha y hora a medida, y revisá en la lista de actividad qué cambios se van a deshacer."
+  - texto: "Antes de tocar «Restaurar», tené en cuenta que se deshace TODO lo que pasó después de esa fecha, no solo los archivos que te preocupan. Lo creado después va a la Papelera de OneDrive. Si te arrepentís, se puede deshacer con otra restauración."
+fuentes:
+  - https://support.microsoft.com/office/restore-your-onedrive-fa231298-759d-41cf-bcd0-25ac53eb8a15
+madurez: T0
+---
+id: ARC-012
+area: archivos
+titulo:
+  sencillo: "Borré un archivo de OneDrive y no está en la Papelera de la compu"
+  tecnico: "Recuperar elementos desde la Papelera de reciclaje de OneDrive (web)"
+explicacion:
+  sencillo: "OneDrive tiene su propia papelera en la página web. Lo que borraste de la nube (o lo que estaba solo en la nube) va ahí, y se puede recuperar durante 30 días."
+  tecnico: "onedrive.com > Papelera de reciclaje > seleccionar > Restaurar. Retención: 30 días (cuentas personales), 93 días (trabajo o escuela). Lo eliminado de esa papelera no se recupera."
+frases: ["borré un archivo de onedrive", "no encuentro en la papelera lo que borré de onedrive", "recuperar algo borrado de la nube", "dónde está la papelera de onedrive"]
+pasos:
+  - texto: "Primero mirá la Papelera de reciclaje del escritorio: si está, clic derecho > «Restaurar»."
+    abrir: "https://support.microsoft.com/office/restore-deleted-files-or-folders-in-onedrive-949ada80-0026-4db3-a953-c99083e6a84f"
+  - texto: "Si no está, entrá a onedrive.com con tu cuenta y, en el menú de la izquierda, tocá «Papelera de reciclaje»."
+  - texto: "Marcá el circulito de cada archivo que quieras recuperar y tocá «Restaurar». Vuelve a su carpeta de OneDrive y, al rato, a la compu."
+  - texto: "Hacelo pronto: pasados 30 días se borra para siempre, y lo que se vacíe de esa papelera ya no se puede recuperar."
+fuentes:
+  - https://support.microsoft.com/office/restore-deleted-files-or-folders-in-onedrive-949ada80-0026-4db3-a953-c99083e6a84f
+madurez: T0
+---
+id: ARC-013
+area: archivos
+titulo:
+  sencillo: "OneDrive no me deja entrar: error 0x8004de40"
+  tecnico: "Error 0x8004de40 / 0x8004de88 al iniciar sesión en OneDrive"
+explicacion:
+  sencillo: "Ese error quiere decir que OneDrive no se puede conectar con la nube. Casi siempre es un problema de conexión a Internet, no de tu cuenta ni de tus archivos."
+  tecnico: "0x8004de40/0x8004de88: OneDrive no logra conectar con el servicio. Revisar conectividad y TLS 1.2 (Opciones de Internet > Opciones avanzadas); como último paso, restablecer OneDrive."
+frases: ["onedrive error 0x8004de40", "onedrive dice que no puede iniciar sesión", "el inicio de sesión se interrumpió en onedrive", "no puedo entrar a onedrive me da un código de error"]
+pasos:
+  - texto: "Fijate que tengas Internet: abrí una página cualquiera en el navegador. Si no anda, escribile a PC Doctor «no tengo Internet»."
+    abrir: "https://learn.microsoft.com/troubleshoot/sharepoint/sync/error-0x8004de40-in-onedrive"
+  - texto: "Apretá Windows + R, escribí inetcpl.cpl y Enter. En la pestaña «Opciones avanzadas», bajá hasta el final y fijate que «Usar TLS 1.2» esté marcado. Tocá «Aplicar» y «Aceptar»."
+  - texto: "Reiniciá la compu y volvé a abrir OneDrive."
+  - texto: "Si sigue igual, restablecé OneDrive como explica Microsoft: no se pierden archivos, pero vuelve a sincronizar todo."
+    abrir: "https://support.microsoft.com/office/reset-onedrive-34701e00-bf7b-42db-b960-84905399050c"
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/sharepoint/sync/error-0x8004de40-in-onedrive
+  - https://support.microsoft.com/office/reset-onedrive-34701e00-bf7b-42db-b960-84905399050c
+madurez: T0
+---
+id: ARC-014
+area: archivos
+titulo:
+  sencillo: "OneDrive da el error 0x8007016A y no abre los archivos"
+  tecnico: "Error 0x8007016A: el proveedor de archivos en la nube no se está ejecutando"
+explicacion:
+  sencillo: "Ese código aparece cuando la parte de Windows que baja los archivos de la nube no está funcionando bien. Suele arreglarse actualizando Windows y restableciendo OneDrive, sin perder archivos."
+  tecnico: "0x8007016A: buscar actualizaciones de Windows, desactivar y volver a activar archivos a petición en la configuración de OneDrive y restablecer OneDrive."
+frases: ["onedrive error 0x8007016a", "el proveedor de archivos en la nube no se está ejecutando", "no puedo abrir ni mover archivos de onedrive", "me sale un error al abrir un archivo de la nube"]
+pasos:
+  - texto: "Abrí Windows Update e instalá lo que haya pendiente. Reiniciá si te lo pide."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Restablecé OneDrive como explica Microsoft (Windows + R y el comando que indica). No se pierden archivos: OneDrive vuelve a sincronizar todo y, si habías elegido solo algunas carpetas, las tenés que volver a elegir."
+    abrir: "https://support.microsoft.com/office/reset-onedrive-34701e00-bf7b-42db-b960-84905399050c"
+  - texto: "Si sigue, Microsoft indica apagar y volver a prender la opción de archivos a petición en la configuración de OneDrive. Si no la encontrás, escribile a PC Doctor «OneDrive no sincroniza»."
+    abrir: "https://support.microsoft.com/onedrive/what-do-the-onedrive-error-codes-mean"
+fuentes:
+  - https://support.microsoft.com/onedrive/what-do-the-onedrive-error-codes-mean
+  - https://support.microsoft.com/office/reset-onedrive-34701e00-bf7b-42db-b960-84905399050c
+madurez: T0
+---
+id: ARC-015
+area: archivos
+titulo:
+  sencillo: "OneDrive dice que no terminé de configurarlo (error 0x8004de90)"
+  tecnico: "Error 0x8004de90: configuración de OneDrive incompleta"
+explicacion:
+  sencillo: "Ese aviso aparece cuando OneDrive se instaló pero nunca se terminó de conectar con tu cuenta. Se arregla completando la configuración."
+  tecnico: "0x8004de90: la configuración inicial no finalizó. Abrir OneDrive desde Inicio e iniciar sesión con la cuenta de Microsoft."
+frases: ["onedrive error 0x8004de90", "onedrive dice que no está configurado", "onedrive me pide terminar la configuración", "la nube de onedrive aparece tachada desde que compré la compu"]
+pasos:
+  - texto: "Tocá Inicio, escribí «OneDrive» y abrilo."
+    abrir: "https://support.microsoft.com/onedrive/what-do-the-onedrive-error-codes-mean"
+  - texto: "En la pantalla de configuración, escribí el correo de tu cuenta de Microsoft (Hotmail, Outlook) y seguí los pasos. La contraseña la escribís vos en la ventana de Microsoft."
+  - texto: "Cuando termine, la nubecita junto al reloj deja de estar tachada. Si ves otro código de error, escribile a PC Doctor el número."
+fuentes:
+  - https://support.microsoft.com/onedrive/what-do-the-onedrive-error-codes-mean
+  - https://support.microsoft.com/office/what-do-the-onedrive-icons-mean-11143026-8000-44f8-aaa9-67c985aa49b3
+madurez: T0
+---
+id: ARC-016
+area: archivos
+titulo:
+  sencillo: "No quiero usar más OneDrive en esta compu"
+  tecnico: "Desvincular OneDrive del equipo"
+explicacion:
+  sencillo: "Si no querés que OneDrive siga sincronizando en esta compu, lo más simple es «desvincularlo». Tus archivos siguen en la nube (en onedrive.com), pero los que estaban solo en la nube no van a quedar en la compu."
+  tecnico: "Configuración de OneDrive > Cuenta > Desvincular este equipo > Desvincular cuenta. No borra archivos de la nube; los archivos solo en línea no quedan disponibles en el equipo."
+frases: ["quiero sacar onedrive de la compu", "no quiero que onedrive sincronice más", "dejar de usar onedrive", "desactivar onedrive en esta computadora"]
+pasos:
+  - texto: "Antes, si querés tener todo en la compu, hacé clic derecho sobre la carpeta OneDrive y elegí «Mantener siempre en este dispositivo». Esperá a que todo tenga el círculo verde (necesitás lugar en el disco)."
+    abrir: "https://support.microsoft.com/office/save-disk-space-with-onedrive-files-on-demand-for-windows-0e6860d3-d9f3-4971-b321-7092438fb38e"
+  - texto: "Si usás la copia de seguridad de carpetas (Escritorio, Documentos), primero escribile a PC Doctor «quiero sacar el escritorio de OneDrive sin perder nada»."
+  - texto: "Tocá la nubecita de OneDrive > el engranaje > «Configuración» > pestaña «Cuenta» > «Desvincular este equipo» y confirmá. Microsoft aclara que no se pierden archivos: siguen en onedrive.com."
+    abrir: "https://support.microsoft.com/onedrive/turn-off-disable-or-uninstall-onedrive"
+  - texto: "Nunca borres los archivos desde onedrive.com pensando que así lo desactivás: eso sí los borra de la nube."
+fuentes:
+  - https://support.microsoft.com/onedrive/turn-off-disable-or-uninstall-onedrive
+  - https://support.microsoft.com/office/save-disk-space-with-onedrive-files-on-demand-for-windows-0e6860d3-d9f3-4971-b321-7092438fb38e
+madurez: T0
+---
+id: ARC-017
+area: archivos
+titulo:
+  sencillo: "Compré una compu nueva y quiero recuperar lo que tenía en la vieja"
+  tecnico: "Restaurar con Copia de seguridad de Windows en un equipo nuevo"
+explicacion:
+  sencillo: "Si en la compu vieja usabas Copia de seguridad de Windows, al preparar la nueva con la misma cuenta de Microsoft te ofrece traer tus programas fijados y tus configuraciones. Los archivos se recuperan desde OneDrive."
+  tecnico: "Windows Backup: en la configuración inicial, con la misma cuenta Microsoft personal, ofrece restaurar (Más opciones si hay varias copias). Los archivos vuelven vía OneDrive; no sirve con cuentas de trabajo o escuela."
+frases: ["pasar mis cosas a la compu nueva", "recuperar la copia de seguridad en la computadora nueva", "cómo restauro el backup de windows", "quiero que la compu nueva quede como la vieja"]
+pasos:
+  - texto: "En la compu vieja, si todavía anda: tocá Inicio, escribí «copia de seguridad», abrí «Copia de seguridad de Windows», encendé las carpetas que quieras guardar y tocá para hacer la copia."
+    abrir: "https://support.microsoft.com/windows/experience/backup-recovery/back-up-and-restore-with-windows-backup"
+  - texto: "Al preparar la compu nueva, entrá con la MISMA cuenta de Microsoft. Windows te va a preguntar si querés restaurar una copia; si tenés de varias compus, tocá «Más opciones» y elegí la correcta."
+  - texto: "Los archivos aparecen al entrar a OneDrive con esa misma cuenta. Los programas de la Microsoft Store se instalan tocando su ícono; los demás te mandan a la página para bajarlos."
+  - texto: "Necesitás una cuenta de Microsoft personal (las de trabajo o escuela no sirven) y lugar en OneDrive (la gratuita trae 5 GB)."
+fuentes:
+  - https://support.microsoft.com/windows/experience/backup-recovery/back-up-and-restore-with-windows-backup
+madurez: T0
+---
+id: ARC-018
+area: archivos
+titulo:
+  sencillo: "Quiero que la compu guarde sola una copia de mis archivos en un disco externo"
+  tecnico: "Activar el Historial de archivos"
+explicacion:
+  sencillo: "El Historial de archivos copia solo, cada tanto, tus documentos, fotos, música y videos a un disco externo. Si un día se rompe o se borra algo, lo recuperás desde ahí."
+  tecnico: "Panel de control > Sistema y seguridad > Historial de archivos > Activar (y Seleccionar unidad). Respalda las bibliotecas en una unidad externa o ubicación de red."
+frases: ["hacer copia automática en un disco externo", "activar el historial de archivos", "que se guarden solos mis documentos en el disco externo", "backup automático sin la nube"]
+pasos:
+  - texto: "Conectá el disco externo."
+  - texto: "Abrí el Panel de control (tocá Inicio y escribí «Panel de control») > «Sistema y seguridad» > la opción de guardar copias de seguridad de tus archivos con el Historial de archivos."
+    abrir: "https://support.microsoft.com/windows/experience/backup-recovery/backup-and-restore-with-file-history"
+  - texto: "Tocá «Activar». Si eligió otro disco, tocá «Seleccionar unidad», marcá el tuyo y «Aceptar»."
+  - texto: "Dejá el disco conectado seguido para que pueda copiar. Para sumar otra carpeta, agregala a una biblioteca (clic derecho > «Mostrar más opciones» > «Incluir en biblioteca»)."
+fuentes:
+  - https://support.microsoft.com/windows/experience/backup-recovery/backup-and-restore-with-file-history
+madurez: T0
+---
+id: ARC-019
+area: archivos
+titulo:
+  sencillo: "Quiero recuperar cómo estaba un archivo o una carpeta hace unos días"
+  tecnico: "Restaurar versiones anteriores con el Historial de archivos"
+explicacion:
+  sencillo: "Si tenés activado el Historial de archivos, Windows guarda copias viejas de tus cosas en el disco externo. Desde ahí podés recuperar un archivo borrado o cómo estaba un documento antes."
+  tecnico: "Explorador > clic derecho en la carpeta > Restaurar versiones anteriores > elegir versión > Restaurar o «Restaurar en...». Requiere copias previas del Historial de archivos."
+frases: ["recuperar un archivo de hace unos días", "restaurar versiones anteriores de una carpeta", "quiero el documento como estaba la semana pasada", "recuperar algo del historial de archivos"]
+pasos:
+  - texto: "Conectá el disco externo donde se guardan las copias."
+  - texto: "En el Explorador, andá a la carpeta donde estaba el archivo, hacé clic derecho sobre ella y elegí «Restaurar versiones anteriores». Elegí una fecha en la que el archivo todavía estaba bien."
+    abrir: "https://support.microsoft.com/windows/experience/backup-recovery/backup-and-restore-with-file-history"
+  - texto: "Para no pisar lo que tenés ahora, desplegá «Restaurar» y elegí «Restaurar en...» para guardarlo en otro lugar. Si tocás «Restaurar» directo, reemplaza la versión actual y eso no se puede deshacer."
+  - texto: "Si nunca activaste el Historial de archivos, no va a haber versiones: escribile a PC Doctor «borré un archivo sin querer»."
+fuentes:
+  - https://support.microsoft.com/windows/experience/backup-recovery/backup-and-restore-with-file-history
+madurez: T0
+---
+id: ARC-020
+area: archivos
+titulo:
+  sencillo: "Me dice que el nombre del archivo es demasiado largo"
+  tecnico: "Ruta de archivo que supera el límite (MAX_PATH, 260 caracteres)"
+explicacion:
+  sencillo: "Windows cuenta como «nombre» todo el camino: el disco, cada carpeta y el archivo. Si hay muchas carpetas una adentro de otra con nombres largos, se pasa del límite y no deja copiar, mover o abrir."
+  tecnico: "Muchas aplicaciones limitan la ruta completa a 260 caracteres (MAX_PATH). Las rutas largas solo funcionan en apps preparadas para ello, así que lo práctico es acortar la ruta."
+frases: ["el nombre del archivo es demasiado largo", "no me deja copiar porque el nombre es muy largo", "la ruta de acceso es demasiado larga", "no puedo mover una carpeta con muchas subcarpetas"]
+pasos:
+  - texto: "Acortá los nombres de las carpetas de más arriba (clic derecho > «Cambiar nombre»): por ejemplo, «Fotos de las vacaciones en la costa 2023» puede quedar «Costa 2023»."
+    abrir: "https://learn.microsoft.com/windows/win32/fileio/maximum-file-path-limitation"
+  - texto: "Otra opción: mové la carpeta a un lugar más «arriba», por ejemplo directo en Documentos o en la raíz del disco externo, así el camino queda más corto."
+  - texto: "Si pasa con OneDrive, también cuenta el largo del camino: aplicá lo mismo dentro de la carpeta OneDrive."
+    abrir: "https://support.microsoft.com/office/back-up-your-folders-with-onedrive-d61a7930-a6fb-4b95-b28a-6552e77c3057"
+fuentes:
+  - https://learn.microsoft.com/windows/win32/fileio/maximum-file-path-limitation
+  - https://support.microsoft.com/office/back-up-your-folders-with-onedrive-d61a7930-a6fb-4b95-b28a-6552e77c3057
+madurez: T0
+---
+id: ARC-021
+area: archivos
+titulo:
+  sencillo: "No puedo borrar ni mover un archivo porque dice que está en uso"
+  tecnico: "Archivo en uso o abierto en otro programa (incluido 0x8007018b de OneDrive)"
+explicacion:
+  sencillo: "Windows no deja borrar, mover o cambiar el nombre de un archivo mientras algún programa lo tiene abierto. A veces el que lo está usando es OneDrive, mientras lo sube a la nube."
+  tecnico: "Bloqueo por identificador abierto. En OneDrive, 0x8007018b indica que el archivo está en uso por la sincronización: esperar a que termine, cerrar OneDrive y reintentar."
+frases: ["no me deja borrar un archivo dice que está abierto", "el archivo está en uso por otro programa", "no puedo mover una carpeta porque está en uso", "onedrive error 0x8007018b"]
+pasos:
+  - texto: "Guardá y cerrá el programa donde tenías abierto ese archivo (Word, el visor de fotos, el reproductor). Probá de nuevo."
+    abrir: "https://support.microsoft.com/office/back-up-your-folders-with-onedrive-d61a7930-a6fb-4b95-b28a-6552e77c3057"
+  - texto: "Si el archivo está en OneDrive y ves las flechitas en círculo, esperá a que termine de sincronizar. Si sigue, cerrá OneDrive (tocá la nubecita y buscá la opción para salir), hacé lo que necesitabas y después volvé a abrirlo: Inicio, escribí «OneDrive» y abrilo."
+    abrir: "https://support.microsoft.com/onedrive/what-do-the-onedrive-error-codes-mean"
+  - texto: "Si no sabés qué programa lo tiene abierto, reiniciá la compu y probá apenas arranca."
+fuentes:
+  - https://support.microsoft.com/onedrive/what-do-the-onedrive-error-codes-mean
+  - https://support.microsoft.com/office/back-up-your-folders-with-onedrive-d61a7930-a6fb-4b95-b28a-6552e77c3057
+madurez: T0
+---
+id: ARC-022
+area: archivos
+titulo:
+  sencillo: "Quiero formatear un pendrive (borrarlo entero)"
+  tecnico: "Formatear una unidad extraíble desde Administración de discos"
+explicacion:
+  sencillo: "Formatear deja el pendrive vacío, como nuevo. ATENCIÓN: borra todo lo que tiene adentro. Antes, copiá a la compu lo que quieras conservar y fijate bien de elegir el pendrive y no otro disco."
+  tecnico: "Administración de discos > clic derecho en el volumen > Formatear. Formato rápido crea una tabla de archivos nueva; el formato completo sobrescribe. No se puede formatear el volumen de Windows."
+frases: ["formatear un pendrive", "borrar todo el pendrive", "dejar el pendrive como nuevo", "cómo formateo una memoria usb"]
+pasos:
+  - texto: "ADVERTENCIA: formatear borra TODO el contenido del pendrive. Primero copiá a la compu lo que quieras guardar."
+  - texto: "Hacé clic derecho en el botón Inicio y elegí «Administración de discos». Ubicá tu pendrive por el tamaño y la letra (el disco C: es Windows: no lo toques)."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/disk-management-in-windows"
+  - texto: "Clic derecho sobre el pendrive > «Formatear». Dejá las opciones como están, tocá «Aceptar» y confirmá."
+  - texto: "Si el pendrive aparece como «RAW» o sin formato y tiene archivos que necesitás, no lo formatees: escribile a PC Doctor «el pendrive o el disco externo no aparece»."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-server/backup-and-storage/troubleshoot-disk-management"
+fuentes:
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/disk-management-in-windows
+  - https://learn.microsoft.com/troubleshoot/windows-server/backup-and-storage/troubleshoot-disk-management
+madurez: T0
+---
+id: ARC-023
+area: archivos
+titulo:
+  sencillo: "Quiero cambiarle la letra a un disco o pendrive"
+  tecnico: "Cambiar la letra de unidad en Administración de discos"
+explicacion:
+  sencillo: "Windows le pone una letra a cada disco (C:, D:, E:). Se le puede cambiar la letra a un pendrive o a un disco externo, por ejemplo para que un programa lo encuentre siempre en la misma. No cambies la del disco donde está Windows."
+  tecnico: "Administración de discos > clic derecho en el volumen > Cambiar la letra y rutas de acceso de unidad > Cambiar > Asignar la letra de unidad siguiente. No se recomienda en volúmenes con Windows o aplicaciones."
+frases: ["cambiar la letra del pendrive", "el disco externo cambia de letra", "quiero que el disco sea la letra d", "cómo le cambio la letra a una unidad"]
+pasos:
+  - texto: "Hacé clic derecho en el botón Inicio y elegí «Administración de discos»."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/disk-management-in-windows"
+  - texto: "Clic derecho sobre el pendrive o disco externo > «Cambiar la letra y rutas de acceso de unidad...» > «Cambiar». Elegí la letra nueva de la lista, tocá «Aceptar» y confirmá con «Sí»."
+    abrir: "https://learn.microsoft.com/windows-server/storage/disk-management/change-a-drive-letter"
+  - texto: "No le cambies la letra al disco C: ni a uno donde tengas programas instalados: después pueden dejar de funcionar."
+fuentes:
+  - https://learn.microsoft.com/windows-server/storage/disk-management/change-a-drive-letter
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/disk-management-in-windows
+madurez: T0
+---
+id: ARC-024
+area: seguridad
+titulo:
+  sencillo: "Quiero ponerle contraseña a un pendrive"
+  tecnico: "Cifrar una unidad extraíble con BitLocker To Go"
+explicacion:
+  sencillo: "Con BitLocker se le puede poner una clave a un pendrive: si lo perdés, nadie puede ver lo que tiene. Pero si te olvidás la clave y perdés la clave de recuperación, vos tampoco vas a poder abrirlo nunca más."
+  tecnico: "BitLocker To Go cifra unidades USB, tarjetas SD y discos externos (NTFS, FAT16, FAT32, exFAT); se desbloquea con contraseña, tarjeta inteligente o clave de recuperación. Sin la información de recuperación los datos son irrecuperables."
+frases: ["ponerle clave a un pendrive", "proteger el pendrive con contraseña", "cifrar una memoria usb", "que nadie pueda ver lo que hay en mi pendrive"]
+pasos:
+  - texto: "Conectá el pendrive, abrí el Explorador de archivos, hacé clic derecho sobre el pendrive y elegí «Activar BitLocker». Si no aparece, ese pendrive puede no ser compatible (por ejemplo, por su tamaño o su formato)."
+    abrir: "https://learn.microsoft.com/windows/security/operating-system-security/data-protection/bitlocker/faq"
+  - texto: "Elegí desbloquear con contraseña y escribila dos veces. Inventá una que recuerdes: PC Doctor nunca te la va a pedir."
+  - texto: "MUY IMPORTANTE: guardá la clave de recuperación en tu cuenta de Microsoft, en un archivo en la compu o imprimila. Sin la contraseña ni esa clave, lo que haya en el pendrive se pierde para siempre."
+  - texto: "El cifrado puede tardar según el tamaño del pendrive. Después, cada vez que lo conectes te va a pedir la contraseña; en otra compu con Windows también se abre con ella."
+fuentes:
+  - https://learn.microsoft.com/windows/security/operating-system-security/data-protection/bitlocker/faq
+  - https://learn.microsoft.com/windows/security/book/operating-system-security-encryption-and-data-protection
+madurez: T0
+---
+id: ARC-025
+area: archivos
+titulo:
+  sencillo: "Me llegó un archivo que no sé con qué programa abrir"
+  tecnico: "Extensión de archivo desconocida: identificar el tipo y elegir aplicación"
+explicacion:
+  sencillo: "Lo que va después del punto en el nombre del archivo (.pdf, .docx, .mp3) dice qué tipo de archivo es y con qué programa se abre. Si la compu no sabe abrirlo, te pregunta con qué programa hacerlo."
+  tecnico: "La extensión define el tipo de archivo. Abrir con > Elegir otra aplicación, o buscar en Microsoft Store. Cambiar la extensión no convierte el archivo."
+frases: ["no sé con qué abrir este archivo", "me mandaron un archivo raro que no abre", "la compu pregunta cómo quiero abrir el archivo", "qué es un archivo que termina en punto algo"]
+pasos:
+  - texto: "Mirá cómo termina el nombre del archivo. Si no ves la terminación, en el Explorador tocá «Ver» > «Mostrar» > «Extensiones de nombre de archivo»."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/common-file-name-extensions-in-windows"
+  - texto: "Clic derecho sobre el archivo > «Abrir con» > «Elegir otra aplicación» y probá con alguna de la lista. Si no hay ninguna que sirva, en ese mismo menú buscá en Microsoft Store un programa para ese tipo."
+  - texto: "No le cambies la terminación al nombre para que abra: eso no transforma el archivo. Y si termina en .exe, .msi o .bat es un programa: no lo abras si no sabés de dónde vino; preguntale a PC Doctor."
+fuentes:
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/common-file-name-extensions-in-windows
+madurez: T0

@@ -1,0 +1,464 @@
+# Teclado, escritura y atajos: Bloq Num, Fn, luces del teclado, tildes con teclado en inglés, idioma que cambia solo, sugerencias y autocorrección, teclado táctil, atajos útiles, símbolos, Bluetooth, líquido derramado, tecla Windows, teclas rotas y tecla Copilot. Guiadas con fuente oficial.
+id: TEC-001
+area: basico
+titulo:
+  sencillo: "Los números de la derecha del teclado no escriben"
+  tecnico: "Teclado numérico desactivado (Bloq Num / Num Lock)"
+explicacion:
+  sencillo: "El bloque de números que está a la derecha del teclado tiene una tecla que lo prende y lo apaga: Bloq Num (en algunos teclados dice «Num Lock» o «NumLk»). Si está apagada, esos números no escriben."
+  tecnico: "Con Bloq Num desactivado el teclado numérico envía teclas de navegación en lugar de dígitos; si además están activas las Teclas del mouse, mueve el puntero."
+frases: ["los números del costado no andan", "no me escriben los números de la derecha", "el teclado numérico no funciona", "se me apagó el bloq num", "con los números de al lado no puedo poner el dni"]
+pasos:
+  - texto: "Apretá una vez la tecla Bloq Num (o «Num Lock») y probá escribir un número. Microsoft recuerda que hay teclados que necesitan Bloq Num activado para escribir números con ese bloque."
+    abrir: "https://support.microsoft.com/en-us/word/insert-ascii-or-unicode-latin-based-symbols-and-characters"
+  - texto: "Si en vez de escribir, esos números mueven la flechita del mouse, están activadas las «Teclas del mouse»: escribile a PC Doctor «los números del teclado mueven el mouse»."
+  - texto: "Para salir del paso, el Teclado en pantalla tiene una opción para mostrar un teclado numérico: abrilo, tocá «Opciones» y activá esa opción."
+    abrir: "https://support.microsoft.com/accessibility/windows/use-the-on-screen-keyboard-osk-to-type"
+derivar: "Si ninguna tecla del bloque de números responde aunque Bloq Num esté activado, escribile a PC Doctor «el mouse o el teclado no funcionan»."
+fuentes:
+  - https://support.microsoft.com/en-us/word/insert-ascii-or-unicode-latin-based-symbols-and-characters
+  - https://support.microsoft.com/accessibility/windows/use-the-on-screen-keyboard-osk-to-type
+madurez: T0
+---
+id: TEC-002
+area: programas
+titulo:
+  sencillo: "Escribí un texto entero en mayúsculas sin querer y no lo quiero escribir de nuevo"
+  tecnico: "Cambiar mayúsculas y minúsculas en Word (Mayús + F3)"
+explicacion:
+  sencillo: "Si te quedó un párrafo TODO EN MAYÚSCULAS porque estaba activado Bloq Mayús, Word lo puede pasar a minúsculas sin que tengas que borrarlo."
+  tecnico: "Word: pestaña Inicio > botón de cambio de mayúsculas y minúsculas (tipo oración, minúsculas, MAYÚSCULAS, cada palabra, invertido) o Mayús + F3 sobre la selección."
+frases: ["me quedó todo el texto en mayúscula", "escribí todo con bloq mayús y no me di cuenta", "pasar un texto de mayúsculas a minúsculas", "cómo cambio las mayúsculas sin volver a escribir"]
+pasos:
+  - texto: "Seleccioná con el mouse el texto que quedó en mayúsculas."
+  - texto: "Apretá Mayús + F3. Cada vez que lo apretás cambia entre minúsculas, MAYÚSCULAS y Mayúscula Al Principio De Cada Palabra. Soltá cuando quede como querés."
+    abrir: "https://support.microsoft.com/en-us/word/change-the-capitalization-or-case-of-text"
+  - texto: "Otra forma: en la pestaña Inicio, tocá el botón para cambiar mayúsculas y minúsculas y elegí, por ejemplo, la opción que deja mayúscula solo al principio de la oración."
+  - texto: "Si no te gustó cómo quedó, apretá Ctrl + Z para volver atrás. Para que no te vuelva a pasar, apretá una vez Bloq Mayús antes de seguir escribiendo."
+fuentes:
+  - https://support.microsoft.com/en-us/word/change-the-capitalization-or-case-of-text
+madurez: T0
+---
+id: TEC-003
+area: perifericos
+titulo:
+  sencillo: "Las teclas de volumen o de brillo no hacen nada (o hacen otra cosa)"
+  tecnico: "Tecla Fn: alternar entre teclas especiales y F1–F12"
+explicacion:
+  sencillo: "En muchas notebooks y teclados, las teclas de arriba sirven para dos cosas: subir el volumen o el brillo, o funcionar como F1, F2… La tecla Fn decide cuál de las dos hace. Si quedó trabada, parece que las teclas no andan."
+  tecnico: "La fila superior funciona como teclas especiales (volumen, brillo, multimedia, retroiluminación) o como F1–F12 según el estado de Fn; algunos teclados muestran un LED de Fn y permiten configurarlo con la app del fabricante."
+frases: ["no me anda la tecla para subir el volumen", "las teclas del brillo no funcionan", "aprieto f5 y me baja el volumen", "la tecla fn quedó trabada", "las teclas de arriba con dibujitos no hacen nada"]
+pasos:
+  - texto: "Mirá la fila de teclas de arriba: las que tienen dibujitos (un parlante, un sol) son las de volumen y brillo. Probá la tecla del dibujito sola y, si no hace nada, manteniendo apretada la tecla Fn."
+  - texto: "En algunos teclados la tecla Fn queda «trabada» y se prende una lucecita en ella: ahí las teclas de arriba funcionan como F1–F12. Apretá Fn una vez para destrabarla (la luz se apaga) y probá de nuevo."
+    abrir: "https://support.microsoft.com/en-us/surface/accessories/cover-keyboard/special-keys-and-function-keys-for-surface-keyboards-or-type-covers"
+  - texto: "Algunos fabricantes traen un programa propio para elegir qué hacen esas teclas (en los Surface, la app Surface > «Customize keyboard»). Buscalo en Inicio con el nombre de la marca de tu compu."
+derivar: "Si con Fn tampoco cambia el volumen, escribile a PC Doctor «no hay sonido»; si es el brillo, «la pantalla está muy oscura»."
+fuentes:
+  - https://support.microsoft.com/en-us/surface/accessories/cover-keyboard/special-keys-and-function-keys-for-surface-keyboards-or-type-covers
+madurez: T0
+---
+id: TEC-004
+area: perifericos
+titulo:
+  sencillo: "Quiero prender (o apagar) la luz de las teclas"
+  tecnico: "Retroiluminación del teclado"
+explicacion:
+  sencillo: "Muchas notebooks tienen teclas que se iluminan para escribir a oscuras. Se prenden, se apagan o cambian de intensidad con una tecla que tiene el dibujo de un teclado o de una lamparita. No todas las computadoras tienen esta luz."
+  tecnico: "Tecla de retroiluminación (cicla niveles, incluido apagado); en algunos modelos, brillo automático en Configuración > Bluetooth y dispositivos > Teclado."
+frases: ["cómo prendo la luz del teclado", "se apagó la luz de las teclas", "quiero que el teclado se ilumine de noche", "apagar las lucecitas del teclado de la notebook"]
+pasos:
+  - texto: "Buscá en la fila de arriba una tecla con el dibujo de un teclado con rayitas o una lamparita. Apretala varias veces (a veces junto con Fn): va pasando por los niveles de luz, incluido apagado."
+    abrir: "https://support.microsoft.com/en-us/surface/accessories/cover-keyboard/special-keys-and-function-keys-for-surface-keyboards-or-type-covers"
+  - texto: "Algunos modelos ajustan la luz solos según la luz del ambiente. Eso se activa en Configuración > Bluetooth y dispositivos > Teclado, si tu compu tiene esa opción."
+  - texto: "Si tu teclado tiene luces de colores (los «gamer»), escribile a PC Doctor «cambiar los colores de las luces del teclado»."
+derivar: "Si no encontrás ninguna tecla con ese dibujo, puede que tu teclado no tenga luz: fijate en el manual o la página del fabricante."
+fuentes:
+  - https://support.microsoft.com/en-us/surface/accessories/cover-keyboard/special-keys-and-function-keys-for-surface-keyboards-or-type-covers
+madurez: T0
+---
+id: TEC-005
+area: perifericos
+titulo:
+  sencillo: "Quiero cambiar los colores de las luces del teclado o apagarlas"
+  tecnico: "Iluminación dinámica (Dynamic Lighting) para dispositivos RGB"
+explicacion:
+  sencillo: "Los teclados y mouse con luces de colores se pueden manejar desde Windows: elegir el color, el brillo o apagarlas. Solo funciona con aparatos compatibles; los demás se manejan con el programa de la marca."
+  tecnico: "Configuración > Personalización > Iluminación dinámica (HID LampArray): brillo, efectos, ajustes por dispositivo y prioridad de controladores en segundo plano."
+frases: ["cambiar los colores de las luces del teclado", "las luces rgb del teclado no se apagan", "quiero el teclado de un solo color", "el teclado gamer cambia de colores solo"]
+pasos:
+  - texto: "Abrí Configuración > Personalización > Iluminación dinámica. Si tu teclado es compatible, aparece arriba como una tarjeta."
+    abrir: "ms-settings:personalization-lighting"
+  - texto: "Con el interruptor general podés prender o apagar el control de las luces desde Windows. Más abajo elegís el brillo y los colores o efectos; si tocás la tarjeta del teclado, cambiás solo los de ese aparato."
+    abrir: "https://support.microsoft.com/en-us/windows/hardware/input-devices/control-dynamic-lighting-devices-in-windows"
+  - texto: "Si cambiás algo y no pasa nada, puede que el programa de la marca del teclado tenga el control. En la sección de control de luz en segundo plano, arrastrá arriba de todo el que quieras que mande."
+derivar: "Si el teclado no aparece en esa página, sus luces solo se cambian con el programa del fabricante."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/hardware/input-devices/control-dynamic-lighting-devices-in-windows
+madurez: T0
+---
+id: TEC-006
+area: basico
+titulo:
+  sencillo: "Tengo un teclado en inglés y quiero escribir tildes, ñ, ¿ y ¡"
+  tecnico: "Distribución Estados Unidos-Internacional (teclas muertas y AltGr)"
+explicacion:
+  sencillo: "Los teclados en inglés no tienen la ñ ni las tildes a la vista. Si agregás el teclado «Estados Unidos-Internacional», podés escribirlas igual con combinaciones fáciles, sin comprar otro teclado."
+  tecnico: "US-International: el apóstrofo (') y la tilde (~) actúan como teclas muertas (' + vocal = á; ~ + n = ñ); AltGr (Alt derecha) + n = ñ, + / = ¿, + 1 = ¡."
+frases: ["mi teclado es en inglés y no tiene la ñ", "compré una notebook de afuera y no puedo poner tildes", "cómo pongo acentos con un teclado americano", "no me sale el signo de pregunta al revés"]
+pasos:
+  - texto: "Agregá el teclado «Estados Unidos-Internacional»: Configuración > Hora e idioma > Idioma y región, tocá los tres puntitos (…) al lado de tu idioma > «Opciones de idioma» > «Agregar un teclado»."
+    abrir: "ms-settings:regionlanguage"
+  - texto: "Para una vocal con tilde: apretá la tecla del apóstrofo (') y después la vocal: sale á, é, í, ó, ú. Para la ñ: apretá Mayús + la tecla que está a la izquierda del 1 (~) y después la n."
+    abrir: "https://learn.microsoft.com/en-us/globalization/keyboards/kbdusx.html"
+  - texto: "Otra forma: mantené apretada la tecla Alt de la derecha (AltGr) y tocá n para la ñ, la tecla / para ¿ o el 1 para ¡."
+  - texto: "Para pasar de un teclado a otro, mantené la tecla Windows y tocá la barra espaciadora, o elegilo en el indicador de idioma de abajo a la derecha."
+    abrir: "https://support.microsoft.com/en-us/windows/hardware/input-devices/manage-the-language-and-keyboard-input-layout-settings-in-windows"
+derivar: "Si tu teclado sí tiene la ñ dibujada pero no sale, escribile a PC Doctor «no me sale la arroba»."
+fuentes:
+  - https://learn.microsoft.com/en-us/globalization/keyboards/kbdusx.html
+  - https://support.microsoft.com/en-us/windows/hardware/input-devices/manage-the-language-and-keyboard-input-layout-settings-in-windows
+madurez: T0
+---
+id: TEC-007
+area: basico
+titulo:
+  sencillo: "El teclado se cambia de idioma solo mientras escribo"
+  tecnico: "Cambio involuntario de distribución (Windows + Barra espaciadora, Ctrl + Mayús)"
+explicacion:
+  sencillo: "Si tenés más de un teclado instalado, hay combinaciones de teclas que pasan de uno a otro. Apretarlas sin querer hace que de golpe las letras y los signos salgan cambiados. Abajo a la derecha se ve cuál está activo (por ejemplo, ESP o ENG)."
+  tecnico: "Windows + Barra espaciadora recorre las distribuciones instaladas y Ctrl + Mayús alterna entre ellas; el indicador de idioma de la bandeja muestra la activa. Quitar las distribuciones que no se usan evita el cambio."
+frases: ["de repente el teclado escribe cambiado", "abajo dice ENG y antes decía ESP", "se me cambia el idioma del teclado sin tocar nada", "en el medio de un texto empezaron a salir otros signos"]
+pasos:
+  - texto: "Mirá abajo a la derecha, al lado de la hora: hay unas letras que indican el teclado activo. Tocalas y elegí el tuyo (en Argentina suele ser Español, «Latinoamericano»)."
+    abrir: "https://support.microsoft.com/en-us/windows/hardware/input-devices/manage-the-language-and-keyboard-input-layout-settings-in-windows"
+  - texto: "Con el teclado: mantené la tecla Windows y tocá la barra espaciadora hasta que aparezca el tuyo. Ojo: Ctrl + Mayús también cambia de teclado cuando hay más de uno."
+    abrir: "https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows"
+  - texto: "Si el otro teclado no lo usás, sacalo y se termina el problema: Configuración > Hora e idioma > Idioma y región > tres puntitos (…) al lado del idioma > «Opciones de idioma». En «Teclados», tres puntitos al lado del que sobra > «Quitar»."
+    abrir: "ms-settings:regionlanguage"
+derivar: "Si querés tener dos teclados a propósito y alternarlos, escribile a PC Doctor «agregar el teclado en inglés»."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/hardware/input-devices/manage-the-language-and-keyboard-input-layout-settings-in-windows
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+madurez: T0
+---
+id: TEC-008
+area: basico
+titulo:
+  sencillo: "Me aparecen palabras sugeridas mientras escribo (o quiero que aparezcan)"
+  tecnico: "Sugerencias de texto con el teclado físico"
+explicacion:
+  sencillo: "Windows puede mostrar, arriba de lo que escribís, unas palabras sugeridas para terminar más rápido, como en el celular. Se usan si querés y se pueden prender o apagar."
+  tecnico: "Hora e idioma > Escritura: sugerencias de texto al escribir en el teclado físico y sugerencias de texto multilingües. Selección con flecha arriba, flechas laterales y Entrar; Esc descarta."
+frases: ["me salen palabras arriba cuando escribo", "quiero que la compu me sugiera palabras como el celular", "sacar las sugerencias de palabras del teclado", "aparece un cuadrito con palabras mientras tipeo"]
+pasos:
+  - texto: "Abrí Configuración > Hora e idioma > Escritura."
+    abrir: "ms-settings:typing"
+  - texto: "Activá (o apagá, si te molestan) la opción de mostrar sugerencias de texto al escribir en el teclado físico. Si escribís en más de un idioma, está también la de sugerencias multilingües."
+    abrir: "https://support.microsoft.com/en-us/accessibility/windows/enable-text-suggestions-in-windows"
+  - texto: "Para usar una sugerencia: hacé clic en ella, o apretá la flecha hacia arriba, movete con las flechas izquierda y derecha y apretá Entrar. Para ignorarlas, apretá Esc o hacé clic afuera."
+fuentes:
+  - https://support.microsoft.com/en-us/accessibility/windows/enable-text-suggestions-in-windows
+madurez: T0
+---
+id: TEC-009
+area: basico
+titulo:
+  sencillo: "Windows me cambia las palabras o me las subraya en rojo al escribir"
+  tecnico: "Autocorrección y resaltado de palabras mal escritas de Windows"
+explicacion:
+  sencillo: "Windows tiene dos opciones de escritura: una corrige sola las palabras que cree que están mal y otra las marca con una rayita roja. Si te cambia palabras que estaban bien, podés apagarlas."
+  tecnico: "Hora e idioma > Escritura: «Autocorregir palabras mal escritas» y «Resaltar palabras mal escritas»."
+frases: ["la compu me cambia las palabras sola", "windows me corrige lo que escribo y no quiero", "me subraya en rojo palabras que están bien", "escribo un nombre y lo cambia por otra palabra"]
+pasos:
+  - texto: "Abrí Configuración > Hora e idioma > Escritura."
+    abrir: "ms-settings:typing"
+  - texto: "Buscá las opciones para autocorregir palabras mal escritas y para resaltarlas. Apagá la que te moleste (o las dos) y probá escribir de nuevo."
+    abrir: "https://support.microsoft.com/en-us/windows/experience/backup-recovery/windows-backup-settings-catalog"
+derivar: "Si las palabras te las cambia Word y no Windows, escribile a PC Doctor «Word me cambia las palabras solo»."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/experience/backup-recovery/windows-backup-settings-catalog
+madurez: T0
+---
+id: TEC-010
+area: programas
+titulo:
+  sencillo: "Word me cambia las palabras solo mientras escribo"
+  tecnico: "Autocorrección de Word (Reemplazar texto mientras escribe)"
+explicacion:
+  sencillo: "Word trae una lista de «correcciones automáticas»: si escribís algo que parece un error, lo reemplaza solo. A veces cambia nombres, siglas o palabras que estaban bien."
+  tecnico: "Archivo > Opciones > Revisión > Opciones de Autocorrección > pestaña Autocorrección > Reemplazar texto mientras escribe."
+frases: ["word me cambia las palabras solo", "escribo una sigla y word la cambia", "word me corrige y pone otra palabra", "sacar la autocorrección de word"]
+pasos:
+  - texto: "Si te cambió una palabra recién, apretá Ctrl + Z enseguida: vuelve a como la escribiste."
+    abrir: "https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows"
+  - texto: "Para apagar los reemplazos: en Word, andá a Archivo > Opciones > Revisión y tocá «Opciones de Autocorrección»."
+    abrir: "https://support.microsoft.com/en-us/word/turn-autocorrect-on-or-off-in-word"
+  - texto: "En la pestaña Autocorrección, sacale la tilde a «Reemplazar texto mientras escribe» y aceptá."
+derivar: "Si lo que te molesta es el subrayado rojo de ortografía, escribile a PC Doctor «Word me subraya todo en rojo»."
+fuentes:
+  - https://support.microsoft.com/en-us/word/turn-autocorrect-on-or-off-in-word
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+madurez: T0
+---
+id: TEC-011
+area: basico
+titulo:
+  sencillo: "Me aparece solo un teclado en la pantalla"
+  tecnico: "Teclado táctil: ícono de la bandeja y aparición automática"
+explicacion:
+  sencillo: "Las compus con pantalla táctil traen un teclado que aparece en la pantalla para escribir con el dedo. Windows puede mostrarlo solo, o dejar un ícono abajo a la derecha. Se puede elegir que no aparezca."
+  tecnico: "Personalización > Barra de tareas > Iconos de la bandeja del sistema > Teclado táctil (Nunca / Siempre / Cuando no hay teclado conectado); Escritura > Teclado táctil: mostrar automáticamente sin teclado conectado."
+frases: ["me aparece un teclado en la pantalla solo", "toco para escribir y sale el teclado táctil", "sacar el iconito del teclado de abajo", "se abre un teclado en la pantalla que no pedí"]
+pasos:
+  - texto: "Hacé clic derecho en la barra de tareas (la de abajo) y elegí la configuración de la barra de tareas."
+    abrir: "ms-settings:taskbar"
+  - texto: "En «Iconos de la bandeja del sistema», buscá «Teclado táctil» y elegí la opción que lo oculta («Nunca»). También podés elegir que aparezca solo cuando no hay un teclado conectado."
+    abrir: "https://support.microsoft.com/en-us/windows/hardware/input-devices/enable-and-disable-the-touch-keyboard-in-windows"
+  - texto: "Si igual aparece solo, en Configuración > Escritura, dentro de «Teclado táctil», apagá la opción que lo muestra cuando no hay ningún teclado conectado."
+    abrir: "ms-settings:typing"
+derivar: "Si el que aparece es un teclado grande en una ventana, que se usa con el mouse, es el Teclado en pantalla: escribile a PC Doctor «un teclado en la pantalla»."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/hardware/input-devices/enable-and-disable-the-touch-keyboard-in-windows
+madurez: T0
+---
+id: TEC-012
+area: basico
+titulo:
+  sencillo: "El teclado de la pantalla me pone mayúscula o un punto solo"
+  tecnico: "Teclado táctil: mayúscula automática y punto con doble espacio"
+explicacion:
+  sencillo: "El teclado táctil (el que usás con el dedo) pone mayúscula al empezar cada oración y agrega un punto si tocás dos veces la barra espaciadora. Son ayudas que se pueden apagar."
+  tecnico: "Hora e idioma > Escritura > Teclado táctil: «Poner en mayúscula la primera letra de cada oración» y «Agregar un punto después de pulsar dos veces la barra espaciadora»; también sonidos de teclas."
+frases: ["el teclado táctil me pone mayúscula sola", "toco dos veces el espacio y aparece un punto", "no quiero que ponga mayúscula al principio", "el teclado de la tablet hace ruidito al escribir"]
+pasos:
+  - texto: "Abrí Configuración > Hora e idioma > Escritura y entrá en «Teclado táctil»."
+    abrir: "ms-settings:typing"
+  - texto: "Apagá la opción que pone mayúscula en la primera letra de cada oración y, si te molesta, la que agrega un punto al tocar dos veces la barra espaciadora."
+    abrir: "https://support.microsoft.com/en-us/windows/experience/backup-recovery/windows-backup-settings-catalog"
+  - texto: "Ahí mismo está la opción de reproducir sonidos al tocar las teclas, por si querés que deje de hacer ruido."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/experience/backup-recovery/windows-backup-settings-catalog
+madurez: T0
+---
+id: TEC-013
+area: basico
+titulo:
+  sencillo: "Quiero copiar y pegar usando el teclado"
+  tecnico: "Copiar, cortar y pegar (Ctrl + C, Ctrl + X, Ctrl + V)"
+explicacion:
+  sencillo: "Con tres combinaciones de teclas copiás un texto, una foto o un archivo y lo ponés en otro lado. Copiar deja el original donde estaba; cortar lo saca de ahí para moverlo."
+  tecnico: "Ctrl + C copia, Ctrl + X corta y Ctrl + V pega lo último del portapapeles; funcionan en la mayoría de las aplicaciones, aunque no en todas."
+frases: ["cómo copio y pego con el teclado", "qué teclas son para copiar", "control c control v cómo se usa", "quiero mover un texto de un lado a otro"]
+pasos:
+  - texto: "Seleccioná lo que querés copiar: arrastrá el mouse sobre el texto, o hacé un clic en el archivo."
+  - texto: "Apretá Ctrl + C para copiar (o Ctrl + X para cortar, si lo querés sacar de ahí)."
+    abrir: "https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows"
+  - texto: "Hacé clic donde lo querés poner y apretá Ctrl + V para pegar. Podés pegar las veces que quieras."
+  - texto: "Microsoft avisa que estos atajos andan casi siempre, pero hay programas donde no funcionan: ahí usá clic derecho > «Copiar» y «Pegar»."
+    abrir: "https://support.microsoft.com/windows/hardware/input-devices/windows-keyboard-tips-and-tricks"
+derivar: "Para pegar algo que copiaste antes, escribile a PC Doctor «cómo pego algo que copié antes»."
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+  - https://support.microsoft.com/windows/hardware/input-devices/windows-keyboard-tips-and-tricks
+madurez: T0
+---
+id: TEC-014
+area: basico
+titulo:
+  sencillo: "Quiero seleccionar todo el texto (o una parte) sin el mouse"
+  tecnico: "Seleccionar todo (Ctrl + A) y selección con Mayús + flechas"
+explicacion:
+  sencillo: "Para elegir todo un texto o todos los archivos de una carpeta hay un atajo, y con la tecla Mayús y las flechas podés marcar de a poquito, letra por letra o palabra por palabra."
+  tecnico: "Ctrl + A selecciona todo; Mayús + flechas selecciona caracteres o líneas; Ctrl + Mayús + flecha izquierda/derecha selecciona palabras."
+frases: ["cómo selecciono todo el texto de una", "marcar todo sin arrastrar el mouse", "seleccionar todos los archivos de una carpeta", "elegir una palabra sola con el teclado"]
+pasos:
+  - texto: "Hacé clic adentro del texto (o de la carpeta) y apretá Ctrl + A: queda todo seleccionado."
+    abrir: "https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows"
+  - texto: "Para marcar solo una parte: poné el cursor donde empieza, mantené apretada Mayús y movete con las flechas. Con Ctrl + Mayús + flechas vas de a una palabra."
+    abrir: "https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec"
+  - texto: "Con el texto marcado ya podés copiarlo (Ctrl + C), borrarlo o cambiarle la letra. Para desmarcar, hacé un clic en cualquier otro lado."
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+  - https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec
+madurez: T0
+---
+id: TEC-015
+area: basico
+titulo:
+  sencillo: "Quiero encontrar una palabra dentro de una página o un documento largo"
+  tecnico: "Buscar en la página (Ctrl + F)"
+explicacion:
+  sencillo: "En vez de leer toda una página buscando algo, apretás dos teclas, escribís la palabra y la compu te la marca en amarillo."
+  tecnico: "Ctrl + F abre la búsqueda de texto en navegadores y en la mayoría de los programas; en Chrome las coincidencias se resaltan en amarillo y se marcan en la barra de desplazamiento."
+frases: ["buscar una palabra en una página", "cómo encuentro algo en un texto largo", "hay una forma de buscar dentro de la página web", "quiero encontrar mi nombre en una lista larga"]
+pasos:
+  - texto: "Con la página o el documento abierto, apretá Ctrl + F. Aparece un cuadrito para escribir."
+    abrir: "https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows"
+  - texto: "Escribí la palabra y apretá Entrar. En Chrome, lo que coincide queda marcado en amarillo, y en la barra de la derecha aparecen marquitas donde está."
+    abrir: "https://support.google.com/chrome/answer/95440?hl=es-419&co=GENIE.Platform%3DDesktop"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+  - https://support.google.com/chrome/answer/95440?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: TEC-016
+area: basico
+titulo:
+  sencillo: "Quiero abrir mis carpetas rápido con el teclado"
+  tecnico: "Abrir el Explorador de archivos (Windows + E)"
+explicacion:
+  sencillo: "El Explorador de archivos es la ventana donde están tus carpetas: Documentos, Descargas, Imágenes. Se abre al toque con una combinación de teclas."
+  tecnico: "Windows + E abre el Explorador de archivos."
+frases: ["cómo abro las carpetas rápido", "atajo para abrir mis documentos", "abrir el explorador de archivos con el teclado", "dónde están mis carpetas sin ir al escritorio"]
+pasos:
+  - texto: "Mantené apretada la tecla Windows (la del logo de ventanita) y tocá la E."
+    abrir: "https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows"
+  - texto: "Se abre el Explorador de archivos: desde ahí entrás a tus carpetas."
+derivar: "Si buscás un archivo y no sabés dónde quedó, escribile a PC Doctor «no encuentro un documento que guardé»."
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+madurez: T0
+---
+id: TEC-017
+area: basico
+titulo:
+  sencillo: "Tengo muchas ventanas abiertas y quiero ver el escritorio"
+  tecnico: "Mostrar el escritorio (Windows + D, Windows + M)"
+explicacion:
+  sencillo: "Con una combinación de teclas todas las ventanas se esconden y ves el escritorio. Con la misma combinación vuelven a aparecer como estaban."
+  tecnico: "Windows + D muestra y oculta el escritorio; Windows + M minimiza todas las ventanas; Windows + coma echa un vistazo al escritorio."
+frases: ["quiero ver el escritorio y tengo todo abierto", "esconder todas las ventanas de una", "minimizar todo junto", "llegar a un ícono del escritorio sin cerrar nada"]
+pasos:
+  - texto: "Apretá Windows + D: se esconden todas las ventanas y ves el escritorio."
+    abrir: "https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows"
+  - texto: "Apretá Windows + D otra vez y todas las ventanas vuelven como estaban."
+  - texto: "Si solo querés espiar el escritorio un momento, mantené apretadas Windows + coma: al soltarlas vuelve todo."
+    abrir: "https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+  - https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec
+madurez: T0
+---
+id: TEC-018
+area: basico
+titulo:
+  sencillo: "Quiero pasar de una ventana a otra (o cerrarla) con el teclado"
+  tecnico: "Cambiar de ventana (Alt + Tab) y cerrar la ventana activa (Alt + F4)"
+explicacion:
+  sencillo: "Si tenés abiertos el correo, el navegador y un documento, podés saltar de uno a otro sin buscarlos abajo. Y hay otro atajo para cerrar la ventana que estás usando."
+  tecnico: "Alt + Tab alterna entre ventanas abiertas; Windows + Tab abre la Vista de tareas; Alt + F4 cierra la ventana activa (sin ventanas abiertas, ofrece apagar)."
+frases: ["pasar de una ventana a otra rápido", "cambiar entre programas abiertos con el teclado", "alt tab para qué sirve", "cerrar la ventana sin buscar la cruz"]
+pasos:
+  - texto: "Mantené apretada la tecla Alt y tocá Tab: aparecen todas las ventanas abiertas. Seguí tocando Tab (sin soltar Alt) hasta llegar a la que querés y soltá."
+    abrir: "https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows"
+  - texto: "Para ver todas las ventanas juntas en grande, apretá Windows + Tab y hacé clic en la que quieras."
+  - texto: "Para cerrar la ventana que estás usando, apretá Alt + F4. Ojo: si no queda ninguna ventana abierta, ese atajo ofrece apagar la compu: si no querés apagarla, no aceptes."
+    abrir: "https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+  - https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec
+madurez: T0
+---
+id: TEC-019
+area: basico
+titulo:
+  sencillo: "Deshice de más con Ctrl + Z y quiero recuperar lo que borré"
+  tecnico: "Rehacer (Ctrl + Y)"
+explicacion:
+  sencillo: "Si apretaste Ctrl + Z más veces de las que querías y se borró algo que estaba bien, se puede «rehacer»: vuelve a aparecer lo que deshiciste."
+  tecnico: "Ctrl + Y rehace la acción deshecha con Ctrl + Z."
+frases: ["apreté control z de más", "deshice algo que no quería deshacer", "cómo vuelvo para adelante después de deshacer", "se me borró el texto por apretar control z"]
+pasos:
+  - texto: "Apretá Ctrl + Y: vuelve lo último que deshiciste con Ctrl + Z."
+    abrir: "https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows"
+  - texto: "No sirve solo para texto: Ctrl + Y vuelve a hacer cualquier acción que hayas deshecho con Ctrl + Z, por ejemplo en una carpeta."
+derivar: "Si lo que perdiste es un archivo entero, escribile a PC Doctor «borré un archivo sin querer»."
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+madurez: T0
+---
+id: TEC-020
+area: basico
+titulo:
+  sencillo: "Quiero escribir símbolos como €, °, © que no están en el teclado"
+  tecnico: "Panel de símbolos (Windows + punto) y códigos Alt"
+explicacion:
+  sencillo: "Windows tiene un panel con símbolos y letras especiales para elegirlos con el mouse. Y si tu teclado tiene números a la derecha, también se pueden escribir con la tecla Alt y un número."
+  tecnico: "Windows + punto > Símbolos (puntuación, caracteres acentuados, etc.); códigos Alt con el teclado numérico: Alt + 0176 (°), Alt + 0128 (€), Alt + 0169 (©)."
+frases: ["cómo escribo el símbolo del euro", "poner el signo de grados en la compu", "dónde está el símbolo de copyright", "quiero poner un símbolo raro que no está en el teclado"]
+pasos:
+  - texto: "Hacé clic donde estás escribiendo y apretá Windows + punto (.). En el panel que se abre, elegí la sección «Símbolos» y buscá el que necesitás."
+    abrir: "https://support.microsoft.com/windows/hardware/input-devices/windows-keyboard-tips-and-tricks"
+  - texto: "Con el teclado numérico de la derecha (con Bloq Num activado): mantené apretada Alt, escribí el número y soltá Alt. 0176 da °, 0128 da € y 0169 da ©. Con los números de arriba de las letras no funciona."
+    abrir: "https://support.microsoft.com/en-us/word/insert-ascii-or-unicode-latin-based-symbols-and-characters"
+derivar: "Si lo que buscás son caritas o corazones, escribile a PC Doctor «poner emojis en el correo»."
+fuentes:
+  - https://support.microsoft.com/windows/hardware/input-devices/windows-keyboard-tips-and-tricks
+  - https://support.microsoft.com/en-us/word/insert-ascii-or-unicode-latin-based-symbols-and-characters
+madurez: T0
+---
+id: TEC-021
+area: perifericos
+titulo:
+  sencillo: "El teclado Bluetooth se desconecta o deja de escribir"
+  tecnico: "Teclado Bluetooth: pilas, re-emparejamiento e interferencias"
+explicacion:
+  sencillo: "Los teclados inalámbricos por Bluetooth se cortan casi siempre por pilas gastadas, porque quedaron conectados a otra compu o por tener muchos aparatos Bluetooth a la vez. Para ahorrar pilas también se «duermen» si no los usás un rato."
+  tecnico: "Revisar pilas, quitar y volver a emparejar (botón de emparejamiento 5–7 s), modo avión 10–15 s, reducir dispositivos Bluetooth simultáneos; hibernación tras 8–10 min de inactividad."
+frases: ["el teclado bluetooth se corta solo", "el teclado inalámbrico se desconecta a cada rato", "el teclado bluetooth tarda en escribir después de un rato", "se me desconectó el teclado bluetooth y no vuelve"]
+pasos:
+  - texto: "Revisá las pilas: que estén bien puestas, o cambialas por nuevas. Si el teclado es recargable, enchufalo con su cable."
+    abrir: "https://support.microsoft.com/en-us/topic/troubleshoot-problems-with-your-surface-mouse-or-keyboard-5afe478d-6402-d72b-93b9-e4235fd5c4cd"
+  - texto: "Abrí Bluetooth y dispositivos, quitá el teclado de la lista y volvé a agregarlo: mantené apretado su botón para emparejar unos 5 a 7 segundos y elegilo en «Agregar dispositivo» > «Bluetooth»."
+    abrir: "ms-settings:bluetooth"
+  - texto: "Si la luz del teclado titila tres veces y se apaga, quedó conectado a otra compu cercana: quitalo de esa y emparejalo con esta."
+  - texto: "Apagá los aparatos Bluetooth que no uses: tener muchos conectados a la vez puede causar cortes. También ayuda prender el modo avión 10 a 15 segundos y apagarlo."
+derivar: "Si el teclado no anda tampoco en otra compu, hay que reemplazarlo."
+fuentes:
+  - https://support.microsoft.com/en-us/topic/troubleshoot-problems-with-your-surface-mouse-or-keyboard-5afe478d-6402-d72b-93b9-e4235fd5c4cd
+madurez: T0
+---
+id: TEC-024
+area: perifericos
+titulo:
+  sencillo: "Se rompió una tecla y quiero usar otra en su lugar"
+  tecnico: "Reasignar teclas con PowerToys (Keyboard Manager)"
+explicacion:
+  sencillo: "Si una tecla dejó de andar, con un programa gratuito de Microsoft llamado PowerToys podés hacer que otra tecla que casi no usás escriba lo que hacía la rota, hasta que cambies el teclado."
+  tecnico: "PowerToys > Keyboard Manager > Remap a key: tecla de origen y «To send»; requiere PowerToys en ejecución y no actúa en la pantalla de inicio de sesión."
+frases: ["se me rompió una tecla del teclado", "quiero que otra tecla haga lo que hacía la rota", "la tecla de la a no anda y necesito escribir", "cambiar una tecla por otra en windows"]
+pasos:
+  - texto: "Instalá PowerToys desde la Microsoft Store (es de Microsoft)."
+    abrir: "https://learn.microsoft.com/windows/powertoys/install"
+  - texto: "Abrí PowerToys, entrá en «Keyboard Manager» y tocá «Remap a key» > «Add key remapping»."
+    abrir: "https://learn.microsoft.com/windows/powertoys/keyboard-manager"
+  - texto: "En la primera columna elegí la tecla que sí funciona y no usás; en «To send», la letra de la tecla rota. Tocá «OK»: el cambio funciona al instante."
+  - texto: "Para que el cambio funcione, PowerToys tiene que quedar abierto en segundo plano. No funciona en la pantalla donde ponés la contraseña para entrar."
+derivar: "Si son varias teclas o el teclado entero, escribile a PC Doctor «el mouse o el teclado no funcionan»."
+fuentes:
+  - https://learn.microsoft.com/windows/powertoys/keyboard-manager
+  - https://learn.microsoft.com/windows/powertoys/install
+madurez: T0
+---
+id: TEC-025
+area: basico
+titulo:
+  sencillo: "Toco sin querer la tecla de Copilot y se abre algo que no quiero"
+  tecnico: "Personalizar la tecla Copilot del teclado"
+explicacion:
+  sencillo: "Las compus nuevas traen una tecla Copilot (cerca de la barra espaciadora) que abre el asistente de Microsoft. Se puede cambiar lo que hace."
+  tecnico: "Configuración > Personalización > Entrada de texto > Personalizar la tecla Copilot del teclado; versiones nuevas permiten reasignarla a Ctrl derecha o Menú contextual."
+frases: ["se me abre copilot cuando toco una tecla", "qué es la tecla nueva al lado del espacio", "quiero que la tecla copilot haga otra cosa", "aprieto ctrl y se abre el asistente"]
+pasos:
+  - texto: "Abrí Configuración > Personalización > Entrada de texto y buscá la opción para personalizar la tecla Copilot del teclado."
+    abrir: "ms-settings:personalization-textinput-copilot-hardwarekey"
+  - texto: "Elegí qué querés que haga esa tecla entre las opciones que te muestra."
+    abrir: "https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows"
+  - texto: "En algunas compus, en Bluetooth y dispositivos > Teclado, se puede convertir la tecla en Ctrl derecha o en la tecla de menú. Si la marca de tu compu trae su propia opción para esa tecla, usá una sola de las dos."
+    abrir: "https://support.microsoft.com/en-us/accessibility/windows/copilot/understand-updates-to-the-copilot-key-on-windows-devices"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+  - https://support.microsoft.com/en-us/accessibility/windows/copilot/understand-updates-to-the-copilot-key-on-windows-devices
+madurez: T0
+

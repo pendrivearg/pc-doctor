@@ -1,0 +1,590 @@
+# Instalar, actualizar y recuperar Windows: pendrive de instalación, unidad de recuperación, instalación desde cero, restablecer, puntos de restauración, ESU, Windows 11, modo S, ediciones, licencia, particiones y Windows.old. Guiadas con fuente oficial.
+id: INS-001
+area: windows
+titulo:
+  sencillo: "Quiero armar un pendrive para instalar Windows 11"
+  tecnico: "Crear medios de instalación de Windows 11 (Media Creation Tool)"
+explicacion:
+  sencillo: >-
+    Microsoft tiene un programa gratis que descarga Windows 11 y lo copia en un pendrive para poder instalarlo o
+    reinstalarlo. Ojo: todo lo que tenga ese pendrive se borra, así que usá uno vacío o copiá antes lo que tenga.
+  tecnico: "Herramienta de creación de medios: USB de arranque (8 GB o más) o ISO; solo procesadores de 64 bits; requiere licencia de Windows 11 o equipo con Windows 10 que califique."
+frases: ["cómo hago un pendrive booteable de windows 11", "quiero bajar windows 11 en un pendrive", "dónde descargo la herramienta para crear el usb de windows", "necesito un pendrive para reinstalar windows"]
+pasos:
+  - texto: "ATENCIÓN: el programa BORRA todo lo que tenga el pendrive. Usá uno vacío de 8 GB o más, o copiá antes lo que tenga a otro lado."
+  - texto: "Entrá a la página oficial de descarga de Microsoft y, en la sección para crear medios de instalación de Windows 11, descargá la herramienta. Necesitás conexión a internet."
+    abrir: "https://www.microsoft.com/software-download/windows11"
+  - texto: "Abrí la herramienta (pide permiso de administrador), aceptá los términos y elegí el idioma y la edición. Usá el mismo idioma que vas a usar al instalar."
+  - texto: "Elegí crear los medios para otra PC, después la opción de unidad flash USB, seleccioná tu pendrive y esperá a que termine. Después ya podés usarlo para arrancar la PC donde vas a instalar."
+fuentes:
+  - https://www.microsoft.com/software-download/windows11
+madurez: T0
+---
+id: INS-002
+area: windows
+titulo:
+  sencillo: "Quiero hacer un pendrive de recuperación por si Windows deja de arrancar"
+  tecnico: "Crear una unidad de recuperación (recoverydrive.exe)"
+explicacion:
+  sencillo: >-
+    Una «unidad de recuperación» es un pendrive que te permite reinstalar Windows si un día la PC no arranca.
+    Conviene hacerla ahora, mientras la compu anda bien. Crearla borra todo lo que tenga el pendrive.
+  tecnico: "Unidad de recuperación con «Hacer copia de seguridad de los archivos del sistema»: incluye los archivos de Windows, las actualizaciones a la fecha y las personalizaciones del fabricante. Recomendado recrearla una vez por año."
+frases: ["cómo hago un usb de recuperación", "crear unidad de recuperación de windows", "quiero tener un pendrive por si se rompe windows", "pendrive de rescate de windows por si no arranca"]
+pasos:
+  - texto: "ATENCIÓN: crear la unidad BORRA todo lo que haya en el pendrive. Usá uno vacío o copiá antes lo que tenga."
+  - texto: "Tocá Inicio, escribí «Unidad de recuperación» y abrila. Dejá marcada la opción de hacer copia de seguridad de los archivos del sistema y tocá «Siguiente»."
+    abrir: "https://support.microsoft.com/windows/create-a-recovery-drive-abb4691b-5324-6d4a-8766-73fab304c246"
+  - texto: "Conectá el pendrive, elegilo en la lista, seguí y tocá el botón para crear la unidad. Puede tardar bastante: no lo desenchufes."
+  - texto: "Guardalo en un lugar seguro con una etiqueta. Microsoft recomienda volver a crearlo una vez por año para que tenga las actualizaciones nuevas."
+derivar: "Si un día la usás para reinstalar Windows, se borran tus archivos y programas: tené siempre una copia de tus cosas aparte."
+fuentes:
+  - https://support.microsoft.com/windows/create-a-recovery-drive-abb4691b-5324-6d4a-8766-73fab304c246
+  - https://support.microsoft.com/windows/experience/backup-recovery/recovery-options-in-windows
+madurez: T0
+---
+id: INS-003
+area: windows
+titulo:
+  sencillo: "Quiero instalar Windows desde cero (formatear)"
+  tecnico: "Instalación limpia de Windows 11 desde medios de instalación"
+explicacion:
+  sencillo: >-
+    Instalar desde cero deja la PC como recién comprada, pero BORRA TODO: fotos, documentos, programas y
+    configuraciones. Antes de empezar tenés que tener una copia de tus cosas en un disco externo o en la nube.
+  tecnico: "Arranque desde USB de instalación, «Instalar Windows 11», eliminación de las particiones del Disco 0 e instalación en el espacio sin asignar. La licencia se aplica al iniciar sesión con la cuenta Microsoft."
+frases: ["quiero formatear e instalar windows de cero", "instalación limpia de windows 11", "borrar todo el disco y poner windows nuevo", "cómo formateo la compu con el pendrive"]
+pasos:
+  - texto: "ATENCIÓN: esto BORRA TODO lo que hay en el disco. Primero copiá tus fotos, documentos y todo lo que quieras conservar en un disco externo, un pendrive o en OneDrive."
+  - texto: "Antes de empezar, fijate en Activación que tu licencia esté vinculada a tu cuenta Microsoft (o tené a mano la clave de producto). Si no lo está, Microsoft recomienda vincularla antes."
+    abrir: "ms-settings:activation"
+  - texto: "Con el pendrive de instalación hecho, arrancá la PC desde el pendrive (cómo se hace depende de la marca: fijate en la página del fabricante). Elegí idioma y teclado, y después «Instalar Windows 11», confirmando que se va a borrar todo."
+    abrir: "https://support.microsoft.com/windows/deployment/install-upgrade/reinstall-windows-with-the-installation-media"
+  - texto: "Si te pide clave de producto y no la tenés, elegí la opción de que no tenés clave y la edición que corresponde a tu licencia (Home o Pro). Al elegir dónde instalar, solo se tocan las particiones del «Disco 0»: no toques otros discos."
+  - texto: "Cuando termine, iniciá sesión con tu cuenta Microsoft para que se active la licencia y después devolvé tus archivos desde la copia."
+derivar: "Si en la PC hay información importante y no estás seguro de tener todo copiado, no lo hagas solo: pedile ayuda a alguien de confianza o a un técnico."
+fuentes:
+  - https://support.microsoft.com/windows/deployment/install-upgrade/reinstall-windows-with-the-installation-media
+  - https://www.microsoft.com/software-download/windows11
+madurez: T0
+---
+id: INS-004
+area: windows
+titulo:
+  sencillo: "Quise restablecer la PC y dice «Hubo un problema al restablecer el PC»"
+  tecnico: "Restablecer este equipo falla y no aplica cambios"
+explicacion:
+  sencillo: >-
+    A veces «Restablecer este equipo» no puede terminar y Windows vuelve a como estaba, sin cambios. Hay otras
+    formas de reinstalar Windows: algunas conservan tus cosas y otras no, así que hacé una copia antes.
+  tecnico: "Alternativas oficiales cuando el restablecimiento no es posible: reinstalar Windows con Windows Update (conserva archivos y apps), unidad de recuperación o medios de instalación creados en otra PC."
+frases: ["hubo un problema al restablecer el pc", "no me deja restablecer la compu", "restablecer de fábrica da error", "intenté resetear windows y dice que no se hicieron cambios"]
+pasos:
+  - texto: "Antes que nada, copiá tus fotos y documentos a un disco externo o a la nube: cualquier reinstalación tiene riesgo."
+  - texto: "En Recuperación, probá la opción para reinstalar la versión actual de Windows usando Windows Update (en Windows 11 22H2 o posterior). Conserva tus archivos, programas y configuraciones."
+    abrir: "ms-settings:recovery"
+  - texto: "Si eso tampoco funciona, Microsoft sugiere reinstalar con una unidad de recuperación o con un pendrive de instalación creado en otra computadora. Ojo: la unidad de recuperación borra archivos y programas."
+    abrir: "https://support.microsoft.com/windows/experience/backup-recovery/recovery-options-in-windows"
+  - texto: "Si vuelve a intentar restablecer, no apagues la PC aunque la pantalla quede negra un buen rato: apagarla a mano puede hacer que falle."
+    abrir: "https://support.microsoft.com/windows/experience/backup-recovery/reset-your-pc"
+derivar: "Si la PC es del trabajo o de la escuela, consultá primero con el área de sistemas."
+fuentes:
+  - https://support.microsoft.com/windows/experience/backup-recovery/recovery-options-in-windows
+  - https://support.microsoft.com/windows/experience/backup-recovery/reset-your-pc
+madurez: T0
+---
+id: INS-005
+area: windows
+titulo:
+  sencillo: "Al restablecer me pregunta «Descarga de la nube» o «Reinstalación local»: ¿cuál elijo?"
+  tecnico: "Restablecer este equipo: descarga en la nube frente a reinstalación local"
+explicacion:
+  sencillo: >-
+    Las dos reinstalan Windows. «Descarga de la nube» baja un Windows nuevo de internet, ya actualizado, y sirve si
+    el de la PC está dañado; necesita buena conexión. «Reinstalación local» usa lo que ya está en la PC: es más
+    rápida si tu internet es lento, pero puede quedar sin las últimas actualizaciones.
+  tecnico: "Cloud download: imagen nueva desde la nube con las últimas actualizaciones, recomendada si los archivos locales están dañados o faltan. Local reinstall: usa los archivos del equipo; más rápida con conexión lenta."
+frases: ["descarga de la nube o reinstalación local", "qué conviene al restablecer windows nube o local", "restablecer desde internet o desde la pc", "me pregunta cómo quiero reinstalar windows"]
+pasos:
+  - texto: "Antes de restablecer, copiá tus archivos importantes. Recordá: «Mantener mis archivos» conserva documentos y fotos, pero borra los programas; «Quitar todo» borra todo."
+  - texto: "Si Windows andaba muy mal o tira errores de archivos dañados, elegí «Descarga de la nube». Si tu internet es lento o tiene límite de datos, elegí «Reinstalación local»."
+    abrir: "https://support.microsoft.com/windows/experience/backup-recovery/reset-your-pc"
+  - texto: "Durante el proceso la pantalla puede quedar negra mucho tiempo (a veces más de 15 minutos) y la PC se reinicia sola: no la apagues. Si es portátil, dejala enchufada."
+derivar: "Si la reinstalación local falla, probá con «Descarga de la nube»."
+fuentes:
+  - https://support.microsoft.com/windows/experience/backup-recovery/reset-your-pc
+madurez: T0
+---
+id: INS-006
+area: windows
+titulo:
+  sencillo: "Quiero crear un punto de restauración antes de instalar algo"
+  tecnico: "Crear manualmente un punto de restauración del sistema"
+explicacion:
+  sencillo: >-
+    Un punto de restauración es como una foto de cómo está Windows hoy. Si después de instalar un programa o un
+    controlador algo se rompe, podés volver a esa foto sin perder tus documentos.
+  tecnico: "Propiedades del sistema > Protección del sistema > Crear (systempropertiesprotection.exe). Requiere la protección del sistema activada en la unidad."
+frases: ["cómo hago un punto de restauración", "crear punto de restauración a mano", "quiero guardar cómo está windows antes de instalar un programa", "hacer un punto de restauración antes de actualizar drivers"]
+pasos:
+  - texto: "Tocá Inicio, escribí «Crear un punto de restauración» y abrilo (o apretá Windows + R, escribí  systempropertiesprotection  y Enter)."
+    abrir: "https://support.microsoft.com/windows/system-protection-e9126e6e-fa64-4f5f-874d-9db90e57645a"
+  - texto: "En la pestaña «Protección del sistema», tocá «Crear...». Si el botón está gris, primero hay que activar la protección (escribile a PC Doctor «activar la protección del sistema»)."
+  - texto: "Poné un nombre que te ayude a reconocerlo, por ejemplo «antes de instalar la impresora», y tocá «Crear». Esperá el aviso de que se creó."
+  - texto: "Si más adelante necesitás volver a ese punto, escribile a PC Doctor «volver la compu a una fecha anterior»."
+fuentes:
+  - https://support.microsoft.com/windows/system-protection-e9126e6e-fa64-4f5f-874d-9db90e57645a
+  - https://support.microsoft.com/windows/experience/backup-recovery/system-restore
+madurez: T0
+---
+id: INS-007
+area: windows
+titulo:
+  sencillo: "No tengo puntos de restauración: quiero activar la protección del sistema"
+  tecnico: "Activar la Protección del sistema (puntos de restauración)"
+explicacion:
+  sencillo: >-
+    La «Protección del sistema» es lo que guarda los puntos de restauración. Microsoft avisa que no viene
+    activada de fábrica, pero recomienda activarla. Usa un poco de espacio del disco, que vos podés limitar.
+  tecnico: "Protección del sistema > Configurar > Activar protección del sistema; control deslizante de uso máximo de disco; Windows crea puntos automáticamente cuando hace falta."
+frases: ["la protección del sistema está desactivada", "no me aparecen puntos de restauración", "activar restaurar sistema", "el botón crear punto de restauración está gris"]
+pasos:
+  - texto: "Tocá Inicio, escribí «Crear un punto de restauración» y abrilo."
+    abrir: "https://support.microsoft.com/windows/system-protection-e9126e6e-fa64-4f5f-874d-9db90e57645a"
+  - texto: "En la pestaña «Protección del sistema», elegí el disco de Windows (suele ser C:) y tocá «Configurar...»."
+  - texto: "Marcá la opción para activar la protección del sistema. Con la barrita elegí cuánto espacio del disco puede usar como máximo y tocá «Aplicar»."
+  - texto: "Desde ahí Windows crea puntos de restauración solo cuando hace falta. Si querés uno ya, tocá «Crear...»."
+fuentes:
+  - https://support.microsoft.com/windows/system-protection-e9126e6e-fa64-4f5f-874d-9db90e57645a
+madurez: T0
+---
+id: INS-008
+area: windows
+titulo:
+  sencillo: "Quiero anotar mi PC con Windows 10 en las Actualizaciones de Seguridad Extendidas (ESU)"
+  tecnico: "Inscripción en ESU para consumidores de Windows 10"
+explicacion:
+  sencillo: >-
+    Si tu PC no puede pasar a Windows 11, podés seguir recibiendo arreglos de seguridad para Windows 10 hasta el
+    12 de octubre de 2027 inscribiéndola en ESU. Hay una opción gratis (sincronizar tu configuración con Copia de
+    seguridad de Windows), otra con 1.000 puntos de Microsoft Rewards y otra paga.
+  tecnico: "Requisitos: Windows 10 22H2 (Home, Pro, Pro Education o Workstations) con las últimas actualizaciones, paquete KB5126256 y cuenta Microsoft administradora (no infantil). Una licencia sirve para hasta 10 equipos. Solo actualizaciones de seguridad críticas e importantes, sin soporte técnico."
+frases: ["cómo me inscribo en las actualizaciones extendidas de windows 10", "dónde está el botón inscribirse ahora de windows 10", "esu gratis windows 10", "quiero seguir con windows 10 pero con seguridad"]
+pasos:
+  - texto: "Primero instalá todas las actualizaciones pendientes en Windows Update."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "En esa misma pantalla de Windows Update, tocá la opción para inscribirte en las actualizaciones extendidas (en inglés aparece como «Enroll now»). Si usás una cuenta local, te va a pedir que inicies sesión con una cuenta Microsoft."
+  - texto: "Elegí una de las opciones: sincronizar tu configuración con Copia de seguridad de Windows (gratis), canjear 1.000 puntos de Microsoft Rewards o hacer un pago único."
+    abrir: "https://www.microsoft.com/windows/extended-security-updates"
+  - texto: "ESU solo trae arreglos de seguridad: no agrega funciones nuevas ni soporte técnico. Las opciones pueden variar según la región."
+derivar: "Si el botón no aparece, revisá que tengas Windows 10 22H2 y todas las actualizaciones, y que la PC no esté administrada por una empresa o escuela."
+fuentes:
+  - https://www.microsoft.com/windows/extended-security-updates
+madurez: T0
+---
+id: INS-009
+area: windows
+titulo:
+  sencillo: "Quiero pasar de Windows 10 a Windows 11 gratis"
+  tecnico: "Actualización gratuita de Windows 10 a Windows 11 por Windows Update"
+explicacion:
+  sencillo: >-
+    Si tu PC cumple los requisitos, pasar de Windows 10 a Windows 11 es gratis y se hace desde Windows Update.
+    Tus archivos pasan al Windows nuevo, pero igual conviene hacer una copia antes. Si no te gusta, tenés 10 días
+    para volver a Windows 10.
+  tecnico: "Requiere Windows 10 versión 2004 o posterior y cumplir los requisitos mínimos (comprobables con PC Health Check). Windows Update > Buscar actualizaciones > Descargar e instalar. Algunas apps incompatibles se quitan. Reversión disponible 10 días."
+frases: ["cómo paso a windows 11 gratis", "windows update me ofrece windows 11", "quiero actualizar de windows 10 a 11 sin pagar", "es gratis pasar a windows 11"]
+pasos:
+  - texto: "Antes de actualizar, copiá tus fotos y documentos a un disco externo o a OneDrive."
+  - texto: "Abrí Windows Update y tocá «Buscar actualizaciones». Si hay actualizaciones pendientes, instalalas, reiniciá y volvé a buscar."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si aparece Windows 11 listo para tu PC, tocá «Descargar e instalar» y aceptá la licencia. Cuando pida reiniciar, tocá «Reiniciar ahora». Se reinicia varias veces: no la apagues."
+    abrir: "https://support.microsoft.com/windows/ways-to-install-windows-11-e0edbbfb-cfc5-4011-868b-2ce77ac7c70e"
+  - texto: "Si no aparece, puede que tu PC todavía no esté lista o no cumpla los requisitos. Revisalo con la aplicación PC Health Check de Microsoft."
+    abrir: "https://www.microsoft.com/windows/windows-11-specifications"
+  - texto: "Si después no te convence, durante 10 días podés volver a Windows 10 desde Recuperación."
+    abrir: "ms-settings:recovery"
+fuentes:
+  - https://support.microsoft.com/windows/deployment/install-upgrade/upgrade-to-windows-11-faq
+  - https://support.microsoft.com/windows/ways-to-install-windows-11-e0edbbfb-cfc5-4011-868b-2ce77ac7c70e
+  - https://www.microsoft.com/windows/windows-11-specifications
+madurez: T0
+---
+id: INS-010
+area: windows
+titulo:
+  sencillo: "Quiero pasar a Windows 11 con el Asistente de instalación"
+  tecnico: "Asistente para la instalación de Windows 11 (actualización en el mismo equipo)"
+explicacion:
+  sencillo: >-
+    El «Asistente para la instalación de Windows 11» es un programa oficial de Microsoft que actualiza la misma PC
+    que estás usando a Windows 11. Microsoft aconseja esperar a que Windows Update te lo ofrezca, pero el asistente
+    se puede usar antes si tu PC cumple los requisitos.
+  tecnico: "Requiere licencia de Windows 10/11, Windows 10 versión 2004 o posterior, 9 GB libres, procesador x64 y permisos de administrador. Resultados posibles: instalar, usar PC Health Check o requisitos no cumplidos."
+frases: ["asistente de instalación de windows 11", "quiero actualizar a windows 11 sin esperar a windows update", "programa de microsoft para pasar a windows 11", "cómo instalo windows 11 encima de windows 10"]
+pasos:
+  - texto: "Antes de actualizar, hacé una copia de tus archivos importantes."
+  - texto: "Necesitás Windows 10 versión 2004 o posterior y al menos 9 GB libres en el disco. Fijate tu versión en «Acerca de»."
+    abrir: "ms-settings:about"
+  - texto: "En la página oficial de descarga, bajá el «Asistente para la instalación de Windows 11» y abrilo (pide permiso de administrador)."
+    abrir: "https://www.microsoft.com/software-download/windows11"
+  - texto: "Si te ofrece instalar, aceptá la licencia para instalar y, cuando termine, tocá «Reiniciar ahora». La PC se reinicia varias veces: no la apagues; si es portátil, dejala enchufada."
+  - texto: "Si te pide usar PC Health Check, instalalo, hacé la revisión y volvé a cargar el asistente con su botón para actualizar. Si dice que no cumple los requisitos, Microsoft recomienda quedarse en Windows 10."
+    abrir: "https://support.microsoft.com/windows/ways-to-install-windows-11-e0edbbfb-cfc5-4011-868b-2ce77ac7c70e"
+fuentes:
+  - https://www.microsoft.com/software-download/windows11
+  - https://support.microsoft.com/windows/ways-to-install-windows-11-e0edbbfb-cfc5-4011-868b-2ce77ac7c70e
+madurez: T0
+---
+id: INS-011
+area: windows
+titulo:
+  sencillo: "Vi un truco en internet para poner Windows 11 en una PC que no es compatible"
+  tecnico: "Windows 11 en equipos que no cumplen los requisitos mínimos: no recomendado"
+explicacion:
+  sencillo: >-
+    Hay videos y programas que prometen instalar Windows 11 en PCs que no cumplen los requisitos. Microsoft no lo
+    recomienda: esas PCs pueden fallar, no tienen garantizadas las actualizaciones de seguridad, muestran una marca
+    de agua y los daños no los cubre la garantía. PC Doctor no te va a guiar por esos métodos.
+  tecnico: "Instalación no admitida: sin soporte, sin garantía de actualizaciones (incluidas las de seguridad), marca de agua en el escritorio y aviso en Configuración. Microsoft recomienda volver a Windows 10 de inmediato (opción «Volver», 10 días)."
+frases: ["truco para instalar windows 11 en pc no compatible", "saltear el tpm para poner windows 11", "instalé windows 11 con rufus y me sale una marca de agua", "conviene forzar windows 11 en una compu vieja"]
+pasos:
+  - texto: "No uses programas ni trucos para saltear los requisitos: Microsoft advierte que la PC puede no recibir actualizaciones de seguridad y quedar más expuesta."
+    abrir: "https://support.microsoft.com/windows/experience/compatibility/windows-11-on-devices-that-don-t-meet-minimum-system-requirements"
+  - texto: "Si ya lo instalaste así, Microsoft recomienda volver a Windows 10 enseguida: en Recuperación, usá «Volver». Solo está disponible 10 días después de actualizar."
+    abrir: "ms-settings:recovery"
+  - texto: "Si tu PC no cumple los requisitos, podés seguir con Windows 10 inscripto en las Actualizaciones de Seguridad Extendidas (escribile a PC Doctor «inscribirme en ESU»)."
+  - texto: "A veces la PC sí cumple y solo hay que activar el TPM o el Arranque seguro: escribile a PC Doctor «esta pc no puede ejecutar windows 11» para revisarlo."
+fuentes:
+  - https://support.microsoft.com/windows/experience/compatibility/windows-11-on-devices-that-don-t-meet-minimum-system-requirements
+  - https://www.microsoft.com/software-download/windows11
+madurez: T0
+---
+id: INS-012
+area: windows
+titulo:
+  sencillo: "La compu no me deja instalar programas que no sean de la Microsoft Store"
+  tecnico: "Windows en modo S: solo aplicaciones de Microsoft Store"
+explicacion:
+  sencillo: >-
+    Muchas notebooks económicas vienen con Windows «en modo S»: por seguridad, solo deja instalar aplicaciones de
+    la Microsoft Store y usa Microsoft Edge como navegador. No está roto: es así a propósito. Si necesitás un
+    programa que no está en la Store, hay que salir del modo S.
+  tecnico: "Modo S: solo apps de Microsoft Store, Edge como navegador predeterminado y Bing como buscador predeterminado; Windows Security como antivirus compatible. En Windows 11 solo existe para la edición Home."
+frases: ["no me deja instalar programas bajados de internet", "dice que solo puedo instalar apps de la store", "mi notebook tiene windows en modo s", "qué es windows 11 home en modo s"]
+pasos:
+  - texto: "Abrí Activación: si tu Windows está en modo S, ahí aparece una sección para cambiar a Windows sin modo S."
+    abrir: "ms-settings:activation"
+  - texto: "Antes de salir, buscá si el programa que necesitás está en la Microsoft Store: muchas veces está y no hace falta cambiar nada."
+  - texto: "Si de verdad necesitás programas de fuera de la Store, se puede salir del modo S gratis, pero NO tiene vuelta atrás. Escribile a PC Doctor «salir del modo S»."
+    abrir: "https://support.microsoft.com/windows/windows-10-and-windows-11-in-s-mode-faq-851057d6-1ee9-b9e5-c30b-93baebeebc85"
+fuentes:
+  - https://support.microsoft.com/windows/windows-10-and-windows-11-in-s-mode-faq-851057d6-1ee9-b9e5-c30b-93baebeebc85
+  - https://learn.microsoft.com/windows/whats-new/windows-11-requirements
+madurez: T0
+---
+id: INS-013
+area: windows
+titulo:
+  sencillo: "Quiero sacar Windows del modo S"
+  tecnico: "Salir del modo S (Activación > Ir a Store)"
+explicacion:
+  sencillo: >-
+    Salir del modo S es gratis y te deja instalar programas de cualquier lado. Pero es PARA SIEMPRE: después no
+    se puede volver al modo S. Desde ahí, cuidá más qué programas bajás.
+  tecnico: "Configuración > Sistema > Activación > sección «Switch to Windows 11 Pro» (o Home) > enlace «Go to the Store» > Obtener (nombres de la documentación en inglés). No usar «Upgrade your edition of Windows», que mantiene el modo S. Gratis, requiere internet e irreversible."
+frases: ["cómo salgo del modo s", "quitar el modo s de windows 11", "salir del modo s es gratis", "quiero instalar chrome y tengo modo s"]
+pasos:
+  - texto: "Pensalo bien: salir del modo S no tiene vuelta atrás. Si la PC es de una empresa o escuela, consultá antes con quien la administra."
+  - texto: "Abrí Activación. En la sección para cambiar a Windows (Home o Pro) sin modo S, tocá el enlace que lleva a la Store. No uses el enlace para actualizar la edición de Windows, porque te deja en modo S."
+    abrir: "ms-settings:activation"
+  - texto: "En la página de la Microsoft Store que se abre, tocá «Obtener» y confirmá. Es gratis y necesitás internet."
+    abrir: "https://support.microsoft.com/windows/windows-10-and-windows-11-in-s-mode-faq-851057d6-1ee9-b9e5-c30b-93baebeebc85"
+  - texto: "Desde ahora, bajá programas solo de sus páginas oficiales. Escribile a PC Doctor «instalar un programa sin riesgo de virus» para consejos."
+fuentes:
+  - https://support.microsoft.com/windows/windows-10-and-windows-11-in-s-mode-faq-851057d6-1ee9-b9e5-c30b-93baebeebc85
+  - https://learn.microsoft.com/windows/whats-new/windows-11-requirements
+madurez: T0
+---
+id: INS-014
+area: windows
+titulo:
+  sencillo: "Tengo Windows Home y quiero pasar a Windows Pro"
+  tecnico: "Actualización de edición Home a Pro (clave de producto o Microsoft Store)"
+explicacion:
+  sencillo: >-
+    Windows Pro trae algunas funciones extra pensadas para oficinas. Para pasar de Home a Pro hace falta una
+    licencia de Pro: se pone la clave en Activación o se compra en la Microsoft Store. Después no se puede volver
+    a Home cambiando la clave.
+  tecnico: "Home > Pro: solo ingresando manualmente la clave de producto (Activación > Cambiar clave de producto) o comprando la actualización en la Microsoft Store; requiere reinicio. Bajar de Pro a Home no es una ruta admitida."
+frases: ["cómo paso de windows home a pro", "quiero windows pro en vez de home", "tengo una clave de windows pro y tengo home instalado", "actualizar la edición de windows a profesional"]
+pasos:
+  - texto: "En Activación podés ver qué edición tenés (Home o Pro)."
+    abrir: "https://support.microsoft.com/windows/activation/reactivating-windows-after-a-hardware-change"
+  - texto: "Si ya tenés una clave de Windows Pro comprada en un lugar oficial, abrí Activación, tocá la opción para cambiar la clave de producto, escribila y seguí las instrucciones en pantalla. La PC se reinicia."
+    abrir: "ms-settings:activation"
+  - texto: "Si no tenés clave, la actualización a Pro se puede comprar en la Microsoft Store."
+    abrir: "https://learn.microsoft.com/windows/deployment/upgrade/windows-edition-upgrades"
+  - texto: "Antes de pagar, pensá si de verdad necesitás Pro: Microsoft no admite volver de Pro a Home con una clave."
+fuentes:
+  - https://learn.microsoft.com/windows/deployment/upgrade/windows-edition-upgrades
+  - https://support.microsoft.com/windows/activation/reactivating-windows-after-a-hardware-change
+madurez: T0
+---
+id: INS-015
+area: windows
+titulo:
+  sencillo: "¿Dónde encuentro la clave de producto de Windows?"
+  tecnico: "Clave de producto de 25 caracteres frente a licencia digital"
+explicacion:
+  sencillo: >-
+    La clave de producto es un código de 25 letras y números para activar Windows. Muchas PCs no la necesitan:
+    si Windows vino con la compu o lo actualizaste gratis, se activa con una «licencia digital» y no hay clave que
+    buscar. Si lo compraste aparte, la clave está en la caja, en el correo de compra o en tu cuenta.
+  tecnico: "Formato XXXXX-XXXXX-XXXXX-XXXXX-XXXXX. Licencia digital: activación sin clave (actualizaciones gratuitas desde 7, 8.1 o 10, compras en la app Microsoft Store). PC nueva: clave preinstalada o en el certificado de autenticidad (COA)."
+frases: ["no encuentro la clave de windows", "dónde está el número de serie de windows", "me piden la clave de producto para instalar windows", "perdí la clave de windows que compré"]
+pasos:
+  - texto: "Primero fijate en Activación si Windows ya está activado. Si dice que está activado con una licencia digital, no necesitás ninguna clave."
+    abrir: "ms-settings:activation"
+  - texto: "Si la PC vino con Windows, la clave viene cargada en la propia computadora; a veces también está en una etiqueta o en la caja. Si no aparece, consultá al fabricante."
+  - texto: "Si compraste Windows en caja, la clave está en una etiqueta o tarjeta adentro. Si lo compraste por internet, buscá el correo de confirmación de la compra. Si fue en la tienda online de Microsoft, también figura en el historial de pedidos de tu cuenta Microsoft."
+    abrir: "https://support.microsoft.com/windows/activation/find-your-windows-product-key"
+fuentes:
+  - https://support.microsoft.com/windows/activation/find-your-windows-product-key
+madurez: T0
+---
+id: INS-016
+area: windows
+titulo:
+  sencillo: "Quiero que mi licencia de Windows quede guardada en mi cuenta Microsoft"
+  tecnico: "Vincular la licencia digital de Windows con la cuenta Microsoft"
+explicacion:
+  sencillo: >-
+    Si vinculás tu licencia de Windows con tu cuenta Microsoft, el día que cambies una pieza grande (por ejemplo
+    la placa madre) o reinstales, vas a poder volver a activar Windows mucho más fácil. Conviene hacerlo ahora,
+    con Windows activado y funcionando.
+  tecnico: "Activación > «Add an account» (como administrador; nombres de la documentación en inglés). Mensaje esperado: «Windows is activated with a digital license linked to your Microsoft account». Habilita el solucionador de activación tras cambios de hardware."
+frases: ["vincular la licencia de windows a mi cuenta microsoft", "cómo guardo la licencia de windows en mi cuenta", "licencia digital vinculada a la cuenta", "quiero asegurarme de no perder la activación si cambio la placa"]
+pasos:
+  - texto: "Abrí Activación y leé el mensaje de estado. Si ya dice que Windows está activado con una licencia digital vinculada a tu cuenta Microsoft, no tenés que hacer nada."
+    abrir: "ms-settings:activation"
+  - texto: "Si solo dice que está activado con una licencia digital, revisá en «Tu información» que estés usando una cuenta Microsoft (aparece un correo arriba de «Administrador»)."
+    abrir: "ms-settings:yourinfo"
+  - texto: "Volvé a Activación, tocá la opción para agregar una cuenta e iniciá sesión con tu cuenta Microsoft. PC Doctor nunca te va a pedir esa contraseña: escribila solo en la ventana de Windows."
+    abrir: "https://support.microsoft.com/windows/activation/reactivating-windows-after-a-hardware-change"
+  - texto: "De paso, anotá qué edición tenés (Home o Pro), que aparece en esa misma pantalla: para reactivar, la edición tiene que ser la misma."
+fuentes:
+  - https://support.microsoft.com/windows/activation/reactivating-windows-after-a-hardware-change
+madurez: T0
+---
+id: INS-017
+area: windows
+titulo:
+  sencillo: "Cambié la placa madre (u otra pieza grande) y Windows dejó de estar activado"
+  tecnico: "Reactivar Windows después de un cambio de hardware (solucionador de activación)"
+explicacion:
+  sencillo: >-
+    Windows reconoce la PC por sus piezas. Si cambiaste algo grande, como la placa madre, cree que es otra
+    computadora y se desactiva. Si tu licencia estaba vinculada a tu cuenta Microsoft, se puede volver a activar
+    con el solucionador de problemas de activación.
+  tecnico: "Activación > Solucionar problemas > «I changed hardware on this device recently» > iniciar sesión con la cuenta vinculada > «This is the device I'm using right now» > Activar. La edición debe coincidir. Alternativas: cambiar la clave de producto o comprar una licencia."
+frases: ["cambié la placa madre y windows no está activado", "después de cambiar el motherboard me pide activar windows", "reactivar windows después de cambiar piezas", "cambié el disco y la placa y windows dice que no es original"]
+pasos:
+  - texto: "Conectá la PC a internet e iniciá sesión con una cuenta de administrador."
+  - texto: "Abrí Activación y tocá «Solucionar problemas». Elegí la opción que dice que cambiaste el hardware de este dispositivo hace poco y seguí."
+    abrir: "ms-settings:activation"
+  - texto: "Iniciá sesión con la cuenta Microsoft que tenía vinculada la licencia (escribí la contraseña solo en la ventana de Windows). En la lista, marcá el equipo que estás usando ahora y tocá «Activar»."
+    abrir: "https://support.microsoft.com/windows/activation/reactivating-windows-after-a-hardware-change"
+  - texto: "Si tu equipo no aparece, revisá que hayas entrado con la misma cuenta. Si tenés una clave de producto, podés usar la opción para cambiar la clave en Activación. Si no tenés licencia, desde ahí mismo se puede comprar en la Store."
+derivar: "Si nada de esto funciona, contactá al soporte de Microsoft. PC Doctor nunca activa Windows por vías no oficiales."
+fuentes:
+  - https://support.microsoft.com/windows/activation/reactivating-windows-after-a-hardware-change
+madurez: T0
+---
+id: INS-018
+area: windows
+titulo:
+  sencillo: "En el disco aparecen particiones raras, como «Partición de recuperación»"
+  tecnico: "Particiones del sistema en UEFI/GPT: EFI, MSR, Windows y recuperación"
+explicacion:
+  sencillo: >-
+    Es normal. Windows arma varias partes en el disco: una chiquita para arrancar, otra reservada, la de Windows
+    (C:) y una de recuperación con las herramientas para reparar la PC. No tienen letra y no se ven en el
+    Explorador. NO las borres: la PC puede dejar de arrancar o perder sus herramientas de reparación.
+  tecnico: "Diseño predeterminado UEFI: partición del sistema EFI (FAT32, 200 MB o más), MSR de 16 MB, partición de Windows (NTFS) y partición de recuperación con WinRE, ubicada después de la de Windows. Sin letra de unidad."
+frases: ["me aparecen particiones raras en el disco", "qué es la partición de recuperación", "puedo borrar la partición de recuperación", "en administración de discos hay partes sin letra", "partición del sistema efi qué es"]
+pasos:
+  - texto: "Podés ver las partes del disco en «Discos y volúmenes» (o en «Administración de discos»). Las que no tienen letra (sistema EFI, reservada y recuperación) son de Windows: dejalas como están."
+    abrir: "ms-settings:disksandvolumes"
+  - texto: "NO elimines ni formatees esas particiones: si las borrás, Windows puede no arrancar o quedarte sin las opciones de reparación. Microsoft explica para qué sirve cada una (en inglés)."
+    abrir: "https://learn.microsoft.com/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions"
+  - texto: "Esas particiones ocupan poco. Si lo que te preocupa es el espacio, escribile a PC Doctor «el disco está casi lleno»."
+derivar: "Si un programa o un técnico te propone borrar o unir particiones, pedí que primero haga una copia completa del disco."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions
+madurez: T0
+---
+id: INS-019
+area: archivos
+titulo:
+  sencillo: "Después de actualizar Windows tengo una carpeta «Windows.old» que ocupa muchísimo"
+  tecnico: "Eliminar la instalación anterior de Windows (Windows.old)"
+explicacion:
+  sencillo: >-
+    Cuando Windows se actualiza a una versión nueva, guarda la anterior en la carpeta «Windows.old» por si querés
+    volver atrás. A los 10 días se borra sola. Si la borrás antes, liberás espacio, pero ya NO vas a poder volver
+    a la versión anterior.
+  tecnico: "Configuración > Sistema > Almacenamiento > Archivos temporales > casilla «Previous version of Windows» > «Remove files» (nombres de la documentación en inglés). Requiere permisos de administrador; eliminación automática a los 10 días."
+frases: ["qué es la carpeta windows.old", "puedo borrar windows.old", "windows.old ocupa muchos gigas", "cómo elimino la versión anterior de windows"]
+pasos:
+  - texto: "ATENCIÓN: si la borrás, no vas a poder volver a la versión anterior de Windows. Si todavía no estás seguro de quedarte con la nueva, esperá: a los 10 días se borra sola."
+  - texto: "Si te faltan archivos después de actualizar, recuperalos ANTES de borrarla (escribile a PC Doctor «recuperar archivos de windows.old»)."
+  - texto: "Abrí Almacenamiento y entrá en «Archivos temporales»."
+    abrir: "ms-settings:storagesense"
+  - texto: "Marcá la casilla de la versión anterior de Windows y tocá el botón para quitar los archivos. Necesitás ser administrador."
+    abrir: "https://support.microsoft.com/windows/deployment/install-upgrade/delete-your-previous-version-of-windows"
+fuentes:
+  - https://support.microsoft.com/windows/deployment/install-upgrade/delete-your-previous-version-of-windows
+madurez: T0
+---
+id: INS-020
+area: archivos
+titulo:
+  sencillo: "Después de actualizar o reinstalar me faltan archivos: ¿están en Windows.old?"
+  tecnico: "Recuperar archivos de la carpeta Windows.old"
+explicacion:
+  sencillo: >-
+    Si después de una actualización grande te faltan documentos o fotos, muchas veces están guardados en la carpeta
+    «Windows.old» del disco C:. Solo duran 10 días desde la actualización, así que conviene copiarlos cuanto antes.
+  tecnico: "C:\\Windows.old\\Users\\<usuario>: requiere cuenta de administrador. Plazo de 10 días. No existe tras una instalación limpia desde medios ni tras «Restablecer este equipo»; una nueva instalación, actualización o restablecimiento la reemplaza."
+frases: ["recuperar archivos de windows.old", "después de actualizar windows desaparecieron mis documentos", "cómo saco mis fotos de la carpeta windows.old", "perdí el escritorio después de la actualización"]
+pasos:
+  - texto: "No reinstales, restablezcas ni actualices Windows de nuevo mientras tanto: eso borra la carpeta Windows.old y lo que tenga adentro."
+  - texto: "Con una cuenta de administrador, abrí el Explorador de archivos, entrá a «Este equipo» > disco C: > «Windows.old» > «Users» y abrí la carpeta con tu nombre de usuario. Si dice que no tenés permiso, tocá «Continuar»."
+    abrir: "https://support.microsoft.com/windows/deployment/install-upgrade/retrieve-files-from-the-windows-old-folder-after-a-windows-upgrade"
+  - texto: "Entrá a la carpeta donde estaban tus cosas (Documentos, Imágenes, Escritorio) y copiá lo que necesites a tu carpeta actual o a un pendrive."
+  - texto: "Si no existe la carpeta Windows.old, puede que hayas hecho una instalación limpia o un restablecimiento: en esos casos no se crea. Buscá en tus copias de seguridad o en OneDrive."
+derivar: "Si los archivos eran muy importantes y no aparecen, no sigas usando la PC para instalar cosas y consultá a un técnico en recuperación de datos."
+fuentes:
+  - https://support.microsoft.com/windows/deployment/install-upgrade/retrieve-files-from-the-windows-old-folder-after-a-windows-upgrade
+madurez: T0
+---
+id: INS-021
+area: windows
+titulo:
+  sencillo: "Al instalar Windows dice que no se puede instalar en este disco por el «estilo de partición GPT»"
+  tecnico: "«Windows no se puede instalar en este disco. El disco seleccionado no tiene el estilo de partición GPT»"
+explicacion:
+  sencillo: >-
+    Pasa cuando la PC arrancó desde el pendrive en el modo moderno (UEFI) pero el disco está preparado para el modo
+    antiguo. Se arregla arrancando en el otro modo o preparando el disco de nuevo, y esto último BORRA todo lo que tiene.
+  tecnico: "Arranque en UEFI con disco MBR. Opciones: arrancar en modo BIOS heredado, convertir con MBR2GPT conservando datos, o eliminar las particiones en el instalador para que lo reformatee como GPT (borra todo)."
+frases: ["windows no se puede instalar en este disco gpt", "el disco seleccionado no tiene el estilo de partición gpt", "error de partición mbr al instalar windows", "no me deja elegir el disco para instalar windows"]
+pasos:
+  - texto: "ATENCIÓN: la solución más común borra TODO el disco. Si tiene archivos que querés, cancelá la instalación y copialos primero."
+  - texto: "Arrancá desde el pendrive eligiendo en el menú de arranque la opción que empieza con «UEFI:» (por ejemplo «UEFI: USB»)."
+    abrir: "https://learn.microsoft.com/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode"
+  - texto: "En el instalador, elegí la instalación personalizada. En la pantalla para elegir dónde instalar, eliminá las particiones de ESE disco (fijate bien de no tocar otros discos) hasta que quede un solo espacio sin asignar. Elegilo y seguí: Windows lo prepara solo."
+    abrir: "https://learn.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-installing-using-the-mbr-or-gpt-partition-style"
+derivar: "Si no podés perder lo que tiene el disco, pedile ayuda a un técnico: Microsoft tiene una herramienta (MBR2GPT) para convertirlo sin borrar, pero no es para principiantes."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-installing-using-the-mbr-or-gpt-partition-style
+  - https://learn.microsoft.com/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode
+madurez: T0
+---
+id: INS-022
+area: windows
+titulo:
+  sencillo: "Voy a vender o regalar la compu y quiero borrar todo lo mío"
+  tecnico: "Restablecer este equipo con «Quitar todo» y limpieza de datos antes de entregar el equipo"
+explicacion:
+  sencillo: >-
+    Antes de vender o regalar la PC conviene restablecerla con «Quitar todo»: reinstala Windows y borra tus
+    archivos, programas y configuraciones. Si además elegís limpiar los datos, tarda más pero a otra persona le
+    cuesta mucho más recuperar tus archivos. Todo lo que no hayas copiado antes se pierde.
+  tecnico: "Restablecer este equipo > Quitar todo (Reset) + Clean data: borra y limpia la unidad; Microsoft aclara que no cumple normas de borrado gubernamentales ni de la industria. Con BitLocker, tener la clave de recuperación."
+frases: ["voy a vender la compu cómo borro todo", "quiero regalar la notebook sin dejar mis cosas", "borrar todos mis datos antes de vender la pc", "dejar la computadora limpia para otra persona"]
+pasos:
+  - texto: "ATENCIÓN: esto BORRA TODO. Primero copiá tus fotos, documentos y lo que quieras conservar a un disco externo, un pendrive o a la nube, y fijate que la copia abra bien."
+  - texto: "Si el disco está cifrado con BitLocker, tené a mano la clave de recuperación antes de empezar."
+    abrir: "https://support.microsoft.com/windows/experience/backup-recovery/reset-your-pc"
+  - texto: "En Recuperación, tocá «Restablecer el PC» y elegí «Quitar todo». En la configuración adicional, activá la opción para limpiar los datos: tarda más, pero hace más difícil recuperar tus archivos."
+    abrir: "ms-settings:recovery"
+  - texto: "Dejala enchufada. La pantalla puede quedar negra mucho tiempo y la PC se reinicia sola: no la apagues hasta que aparezca la pantalla de configuración inicial."
+derivar: "Si el disco tiene información muy delicada (por ejemplo de un trabajo o de bancos), consultá a un técnico: Microsoft aclara que esta limpieza no cumple normas oficiales de borrado."
+fuentes:
+  - https://support.microsoft.com/windows/experience/backup-recovery/reset-your-pc
+madurez: T0
+---
+id: INS-023
+area: windows
+titulo:
+  sencillo: "Quiero volver la PC a como estaba ayer con la restauración a un momento dado"
+  tecnico: "Restauración a un momento dado (Point-in-time restore)"
+explicacion:
+  sencillo: >-
+    Es una función nueva de Windows que guarda una «foto» completa del disco de Windows más o menos una vez por día
+    y la conserva hasta 3 días. Si algo se rompe, podés volver a ese momento. Ojo: se pierde TODO lo que hiciste
+    después en ese disco, incluidos archivos nuevos, programas y cambios de contraseña.
+  tecnico: "Configuración > Sistema > Recuperación > Point-in-time restore. Puntos cada ~24 h, retención de hasta 72 h, hasta 2 % del disco. Se restaura desde WinRE: Solucionar problemas > Point-in-time restore. Revierte toda la unidad de Windows; OneDrive y otras unidades no se tocan."
+frases: ["volver la compu a como estaba ayer", "restauración a un momento dado de windows 11", "quiero deshacer lo que pasó hoy en la compu", "restaurar windows de hace unas horas"]
+pasos:
+  - texto: "Para activarla: en Recuperación buscá la opción de restauración a un momento dado, tocá para ver o editar, aceptá el permiso y poné el interruptor en Activado."
+    abrir: "ms-settings:recovery"
+  - texto: "ATENCIÓN antes de restaurar: se pierde todo lo hecho en el disco de Windows después de ese momento (archivos nuevos, programas, configuraciones y contraseñas). Copiá antes a un pendrive o a OneDrive lo que hayas hecho desde entonces."
+  - texto: "Para restaurar: entrá al Entorno de recuperación de Windows, elegí «Solucionar problemas» y luego la restauración a un momento dado. Elegí el punto, revisalo y confirmá. Si pide la clave de BitLocker, tenela a mano."
+    abrir: "https://support.microsoft.com/windows/experience/backup-recovery/point-time-restore-for-windows"
+  - texto: "Enchufá la PC y no la apagues mientras restaura. Al terminar, volvé a instalar las actualizaciones de Windows, porque pueden haberse deshecho."
+    abrir: "ms-settings:windowsupdate"
+derivar: "Si necesitás volver más de 3 días atrás, usá «Restaurar sistema» (escribile a PC Doctor «volver la compu a una fecha anterior»)."
+fuentes:
+  - https://support.microsoft.com/windows/experience/backup-recovery/point-time-restore-for-windows
+  - https://support.microsoft.com/windows/experience/backup-recovery/recovery-options-in-windows
+madurez: T0
+---
+id: INS-024
+area: windows
+titulo:
+  sencillo: "Al activar Windows sale un código de error (0xC004C003, 0xC004F034, 0x803F7001…)"
+  tecnico: "Errores de activación de Windows: clave no válida, edición distinta o licencia no encontrada"
+explicacion:
+  sencillo: >-
+    Cuando Windows no se puede activar muestra un código. Los más comunes quieren decir que la clave ya se usó en
+    otras compus, que es de otra edición (por ejemplo de Pro y tenés Home) o que Windows no encuentra tu licencia,
+    muchas veces después de cambiar piezas. Cada caso tiene su salida.
+  tecnico: "0xC004C003: clave bloqueada por uso en varios equipos. 0xC004F034 / 0xC004F210 / 0xC004F212: clave o licencia de otra versión o edición. 0x803F7001: sin licencia válida. 0xC004F211 / 0xC004F213: cambio de hardware. 0xC004C060 / 0x803FA067: clave no utilizable o servidores ocupados."
+frases: ["error 0xc004c003 al activar windows", "dice que la clave de producto no es válida", "me sale el error 0x803f7001 en activación", "me tira un código raro cuando quiero activar windows"]
+pasos:
+  - texto: "Anotá el código que aparece. Abrí Activación y, si está, tocá «Solucionar problemas». Revisá también que tengas internet y la fecha y hora bien puestas."
+    abrir: "ms-settings:activation"
+  - texto: "Si dice que la clave no es válida o ya se usó (0xC004C003): si la compraste a un revendedor, reclamale a él; si Windows vino con la PC, consultá al fabricante. Si un técnico te arregló la compu, preguntale si hace falta una licencia nueva."
+    abrir: "https://support.microsoft.com/windows/activation/get-help-with-windows-activation-errors"
+  - texto: "Si la clave es de otra edición (0xC004F034 y parecidos), tiene que coincidir con la que tenés instalada: una clave de Pro no activa Home, y al revés."
+  - texto: "Si no encuentra licencia (0x803F7001) o cambiaste piezas (0xC004F213), escribile a PC Doctor «reactivar windows después de cambiar piezas». Si no tenés licencia, desde Activación se puede comprar en la Microsoft Store."
+derivar: "Si el código no está en la lista o nada funciona, contactá al soporte de Microsoft. PC Doctor nunca activa Windows con «activadores» ni claves no oficiales."
+fuentes:
+  - https://support.microsoft.com/windows/activation/get-help-with-windows-activation-errors
+madurez: T0
+---
+id: INS-025
+area: windows
+titulo:
+  sencillo: "Quiero reinstalar Windows encima sin perder mis archivos ni programas"
+  tecnico: "Reinstalación sobre el sistema actual desde los medios (setup.exe, «Change what to keep»)"
+explicacion:
+  sencillo: >-
+    Si Windows anda mal, se puede reinstalar «por encima» desde el pendrive o el ISO, eligiendo conservar tus
+    archivos y programas. Es una reparación profunda que no formatea, pero igual conviene hacer una copia antes.
+  tecnico: "Ejecutar setup.exe desde la raíz del medio dentro de Windows; «Change what to keep»: «Keep personal files and apps», «Keep personal files only» o «Keep nothing»."
+frases: ["reparar windows reinstalando sin formatear", "reinstalar windows conservando mis programas", "reinstalar windows con el pendrive sin borrar nada", "instalar windows encima del que tengo"]
+pasos:
+  - texto: "Hacé una copia de tus archivos importantes por las dudas."
+  - texto: "Con el pendrive de instalación conectado (o el ISO abierto con doble clic), abrí el Explorador de archivos, entrá a esa unidad y ejecutá «setup.exe». Aceptá el permiso."
+    abrir: "https://support.microsoft.com/windows/deployment/install-upgrade/reinstall-windows-with-the-installation-media"
+  - texto: "Cuando aparezca la opción para cambiar lo que se conserva, elegí conservar archivos personales y aplicaciones. ATENCIÓN: si elegís no conservar nada, se borra todo."
+  - texto: "Tocá «Instalar». La PC se reinicia varias veces: no la apagues."
+derivar: "Si Windows ya no arranca, esta opción no sirve: escribile a PC Doctor «la computadora no arranca»."
+fuentes:
+  - https://support.microsoft.com/windows/deployment/install-upgrade/reinstall-windows-with-the-installation-media
+  - https://support.microsoft.com/windows/ways-to-install-windows-11-e0edbbfb-cfc5-4011-868b-2ce77ac7c70e
+madurez: T0

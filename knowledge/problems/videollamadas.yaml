@@ -1,0 +1,500 @@
+# Videollamadas y reuniones: Google Meet y Microsoft Teams (personal y del trabajo). Unirse, cámara, micrófono, parlantes, eco, compartir pantalla, fondo, subtítulos, chat, cortes, agendar, grabar y salir. Guiadas con fuente oficial.
+id: VID-001
+area: programas
+titulo:
+  sencillo: "Me mandaron un enlace de Google Meet y no sé cómo entrar"
+  tecnico: "Unirse a una videoconferencia de Google Meet desde un vínculo, el Calendario o un código"
+explicacion:
+  sencillo: "Para entrar a una reunión de Meet desde la compu alcanza con tocar el enlace que te mandaron por correo o por chat. Se abre en el navegador, ves cómo salís en cámara y tocás «Unirse ahora». Si no estabas invitado, tenés que pedir permiso y esperar que te acepten."
+  tecnico: "Vínculo de la reunión, evento de Google Calendar («Unirse con Google Meet») o código en meet.google.com; si no figurás entre los invitados, se solicita acceso al organizador."
+frases: ["me pasaron un link de meet y no sé cómo entrar", "cómo me uno a una reunión de google meet", "toco el enlace de meet y no sé qué hacer", "tengo un código de reunión de meet dónde lo pongo"]
+pasos:
+  - texto: "Abrí el correo o el chat donde te mandaron la reunión y hacé clic en el enlace (empieza con meet.google.com)."
+  - texto: "Se abre una pantalla donde te ves en cámara. Revisá que estén prendidos el micrófono y la cámara y hacé clic en «Unirse ahora»."
+  - texto: "Si dice que tenés que solicitar la entrada, pedila y esperá: el organizador o alguien de la reunión te tiene que aceptar."
+  - texto: "Si te pasaron un código en vez de un enlace, entrá a meet.google.com, escribí el código donde lo pide y tocá «Unirse». Google lo explica acá."
+    abrir: "https://support.google.com/meet/answer/9303069?hl=es-419"
+fuentes:
+  - https://support.google.com/meet/answer/9303069?hl=es-419
+madurez: T0
+---
+id: VID-002
+area: programas
+titulo:
+  sencillo: "En la reunión de Google Meet no me ven"
+  tecnico: "La cámara no funciona en una reunión de Meet (pantalla negra o cámara tachada)"
+explicacion:
+  sencillo: "Si en Meet los demás no te ven, puede que la cámara esté apagada en la reunión, que otro programa la esté usando, que Meet esté usando otra cámara o que Windows o el navegador no le den permiso."
+  tecnico: "Causas habituales: cámara equivocada en Meet, otra app usando la cámara, tapa o interruptor de privacidad, permisos del sitio o de Windows (Privacidad y seguridad > Cámara)."
+frases: ["en la reunión de meet no me ven", "en meet sale todo negro donde debería estar yo", "en meet la camarita aparece tachada", "dice la cámara falló en google meet"]
+pasos:
+  - texto: "Fijate que la cámara no tenga una tapita corrida o un botón de privacidad apagado, y que en la reunión el botón de la cámara no esté tachado."
+  - texto: "Cerrá los otros programas que puedan usar la cámara (Zoom, Teams, WhatsApp, la app Cámara) y volvé a cargar la página de Meet."
+  - texto: "En Meet, tocá la flechita al lado del botón de la cámara y elegí la cámara correcta de la lista."
+  - texto: "Revisá que Windows deje usar la cámara: en «Privacidad y seguridad» > «Cámara», tienen que estar activados el acceso a la cámara y «Permitir que las apps accedan a la cámara»."
+    abrir: "ms-settings:privacy-webcam"
+  - texto: "Si todavía no te ven, seguí la guía de Google para la cámara en Meet."
+    abrir: "https://support.google.com/meet/answer/10621292?hl=es-419"
+fuentes:
+  - https://support.google.com/meet/answer/10621292?hl=es-419
+madurez: T0
+---
+id: VID-003
+area: programas
+titulo:
+  sencillo: "En Google Meet no me escuchan"
+  tecnico: "El micrófono no funciona en una reunión de Meet"
+explicacion:
+  sencillo: "Si en Meet los demás no te oyen, lo más común es que tengas el micrófono silenciado en la reunión, que Meet esté usando otro micrófono o que el navegador o Windows no le den permiso. Ojo: los demás te pueden silenciar, pero solo vos podés volver a activarlo."
+  tecnico: "Revisar «Activar micrófono», micrófono seleccionado en Meet, permiso del sitio, Sistema > Sonido > Micrófono en Windows y reiniciar Chrome (chrome://restart)."
+frases: ["en meet no me escuchan", "hablo en la reunión de meet y nadie me oye", "en google meet dicen que no tengo sonido", "me silenciaron en meet y no sé cómo hablar"]
+pasos:
+  - texto: "Mirá el botón del micrófono abajo en la reunión: si está tachado o en rojo, hacé clic en él para activarlo."
+  - texto: "Tocá la flechita al lado del micrófono y elegí el micrófono correcto (por ejemplo, el de tus auriculares). Hablá y fijate si se mueve la barrita."
+  - texto: "Revisá que Windows tenga el micrófono activado y con volumen en «Sonido»."
+    abrir: "ms-settings:sound"
+  - texto: "Si sigue igual, cerrá el navegador del todo, volvé a abrirlo y entrá otra vez a la reunión."
+  - texto: "Google tiene la guía completa para cuando no te escuchan en Meet."
+    abrir: "https://support.google.com/meet/answer/10620276?hl=es-419"
+fuentes:
+  - https://support.google.com/meet/answer/10620276?hl=es-419
+madurez: T0
+---
+id: VID-004
+area: audio
+titulo:
+  sencillo: "En Google Meet no escucho a nadie"
+  tecnico: "Sin audio de los participantes en Meet: bocina equivocada o sin sonido"
+explicacion:
+  sencillo: "Si en Meet ves que los demás hablan pero no los oís, muchas veces Meet está mandando el sonido a otro lado (por ejemplo, al monitor o a unos auriculares apagados)."
+  tecnico: "Elegir la «Bocina» correcta en Meet (evitar el monitor como salida), «Probar bocinas», revisar volumen y Bluetooth. Si el indicador azul del mosaico no se ilumina, el problema es del micrófono del otro."
+frases: ["en meet no escucho a nadie", "veo que hablan en la reunión pero no oigo nada", "en google meet no sale el sonido", "no escucho a los demás en la videollamada de meet"]
+pasos:
+  - texto: "Subí el volumen de la compu y, si usás auriculares Bluetooth, fijate que estén prendidos y conectados."
+  - texto: "En la reunión, tocá la flechita al lado del micrófono y, en «Bocina», elegí tus parlantes o auriculares (no el monitor). Usá «Probar bocinas» para escuchar un sonido de prueba."
+  - texto: "Mirá el cuadrito de quien habla: si no se ilumina en azul cuando habla, el problema es de su micrófono, no tuyo."
+  - texto: "Google lo explica acá."
+    abrir: "https://support.google.com/meet/answer/10620276?hl=es-419"
+fuentes:
+  - https://support.google.com/meet/answer/10620276?hl=es-419
+  - https://support.google.com/meet/answer/10409699?hl=es-419
+madurez: T0
+---
+id: VID-005
+area: audio
+titulo:
+  sencillo: "En la videollamada de Meet se escucha eco o un pitido"
+  tecnico: "Eco o acople en Google Meet"
+explicacion:
+  sencillo: "El eco pasa cuando el micrófono vuelve a agarrar el sonido que sale de tus parlantes. Con auriculares casi siempre se arregla."
+  tecnico: "Realimentación entre altavoces y micrófono; usar auriculares, bajar el volumen, silenciarse cuando no se habla y evitar combinaciones de altavoces y micrófono externos distintos."
+frases: ["en meet se escucha eco", "en la reunión de meet me escucho repetido", "hay un acople en la videollamada", "en meet se oye un pitido cuando hablo"]
+pasos:
+  - texto: "Usá auriculares en vez de los parlantes de la compu: es lo que más ayuda contra el eco."
+  - texto: "Bajá el volumen de los parlantes y silenciá tu micrófono cuando no estés hablando."
+  - texto: "Si hay dos compus o celulares en la misma reunión en la misma habitación, dejá uno solo con sonido."
+  - texto: "Si Meet detecta eco, aparece un puntito rojo en «Más opciones»: abrí «Solución de problemas y ayuda» y seguí lo que dice. Google lo explica acá."
+    abrir: "https://support.google.com/meet/answer/10620583?hl=es-419"
+fuentes:
+  - https://support.google.com/meet/answer/10620583?hl=es-419
+  - https://support.google.com/meet/answer/10409699?hl=es-419
+madurez: T0
+---
+id: VID-006
+area: programas
+titulo:
+  sencillo: "Quiero mostrar mi pantalla en una reunión de Google Meet"
+  tecnico: "Presentar la pantalla, una ventana o una pestaña en Meet"
+explicacion:
+  sencillo: "En Meet podés mostrarles a los demás lo que tenés en tu pantalla: toda la pantalla, una sola ventana o una pestaña del navegador."
+  tecnico: "«Presentar ahora» > Una pestaña / Una ventana / Tu pantalla completa > «Compartir»; «Detener presentación» para terminar. El organizador puede limitar quién presenta."
+frases: ["cómo comparto la pantalla en meet", "quiero mostrar un documento en la reunión de meet", "en google meet no me deja presentar", "cómo dejo de compartir la pantalla en meet"]
+pasos:
+  - texto: "Dentro de la reunión, abajo, hacé clic en «Presentar ahora»."
+  - texto: "Elegí qué mostrar: una pestaña, una ventana o tu pantalla completa, y tocá «Compartir». Si querés que se escuche un video, con pestaña de Chrome el sonido va solo; con ventana o pantalla, activá «Compartir también el audio del sistema»."
+  - texto: "Para terminar, hacé clic en «Detener presentación»."
+  - texto: "Si el botón no te deja, puede que el organizador haya limitado quién presenta; si no aparece la ventana que querés, fijate que no esté minimizada."
+    abrir: "https://support.google.com/meet/answer/16581830?hl=es-419"
+  - texto: "Google lo explica completo."
+    abrir: "https://support.google.com/meet/answer/9308856?hl=es-419"
+fuentes:
+  - https://support.google.com/meet/answer/9308856?hl=es-419
+  - https://support.google.com/meet/answer/16581830?hl=es-419
+madurez: T0
+---
+id: VID-007
+area: programas
+titulo:
+  sencillo: "Quiero que en Meet no se vea lo que hay atrás mío"
+  tecnico: "Desenfocar o reemplazar el fondo en Google Meet"
+explicacion:
+  sencillo: "Meet puede desenfocar lo que tenés atrás o poner una imagen de fondo, así no se ve tu casa. En compus viejas puede ponerla más lenta."
+  tecnico: "Antes de entrar: «Desenfocar» o «Fondos y efectos» en la vista propia. Durante: «Configuración de video» > «Desenfocar el fondo» o «Fondos y efectos». Requiere navegador compatible con WebGL y aceleración de gráficos."
+frases: ["cómo desenfoco el fondo en meet", "poner un fondo en la videollamada de meet", "que no se vea mi casa en la reunión de meet", "sacar el fondo borroso en google meet"]
+pasos:
+  - texto: "Antes de entrar, en la pantalla donde te ves, tocá el botón «Desenfocar» o «Fondos y efectos» (abajo a la derecha de tu imagen)."
+  - texto: "Si ya estás adentro, al lado del micrófono tocá «Configuración de video» y elegí «Desenfocar el fondo», o abrí «Fondos y efectos» para elegir una imagen."
+  - texto: "Para sacarlo, en ese mismo panel elegí «Desactivar efectos visuales»."
+  - texto: "Si no aparece la opción, puede que el navegador esté desactualizado o que falte la aceleración de gráficos. Google explica los requisitos."
+    abrir: "https://support.google.com/meet/answer/10058482?hl=es-419"
+fuentes:
+  - https://support.google.com/meet/answer/10058482?hl=es-419
+madurez: T0
+---
+id: VID-008
+area: programas
+titulo:
+  sencillo: "Quiero ver lo que dicen escrito en la reunión de Meet"
+  tecnico: "Subtítulos instantáneos en Google Meet"
+explicacion:
+  sencillo: "Meet puede mostrar abajo, escrito, lo que va diciendo cada uno. Sirve mucho si escuchás poco o hay ruido."
+  tecnico: "«Subtítulos y traducción» > «Activar subtítulos»; atajo c; idioma desde el menú a la izquierda de la bandeja de subtítulos."
+frases: ["poner subtítulos en meet", "quiero leer lo que dicen en la reunión de meet", "en google meet los subtítulos salen en otro idioma", "escucho poco y quiero ver las palabras en la videollamada"]
+pasos:
+  - texto: "Dentro de la reunión, abajo, poné el mouse sobre «Subtítulos y traducción» y hacé clic en «Activar subtítulos». También podés apretar la tecla C."
+  - texto: "Si salen en otro idioma, abrí el menú que está a la izquierda de los subtítulos y elegí el idioma que se está hablando."
+  - texto: "Google lo explica acá."
+    abrir: "https://support.google.com/meet/answer/15077804?hl=es-419"
+fuentes:
+  - https://support.google.com/meet/answer/15077804?hl=es-419
+madurez: T0
+---
+id: VID-009
+area: programas
+titulo:
+  sencillo: "Quiero escribir en el chat de la reunión de Meet"
+  tecnico: "Mensajes de chat durante una videoconferencia de Meet"
+explicacion:
+  sencillo: "En Meet podés mandar mensajes escritos a todos los de la reunión, por ejemplo un enlace o una pregunta. Ojo: según la cuenta, esos mensajes pueden desaparecer cuando termina la reunión."
+  tecnico: "Botón «Chat» abajo a la derecha > escribir > «Enviar». Si el chat continuo no está activo, los mensajes solo existen durante la llamada (o en la grabación)."
+frases: ["dónde está el chat en meet", "cómo escribo un mensaje en la reunión de meet", "quiero mandar un link en la videollamada de meet", "se borraron los mensajes del chat de meet"]
+pasos:
+  - texto: "Dentro de la reunión, abajo a la derecha, hacé clic en el botón «Chat»."
+  - texto: "Escribí el mensaje y tocá «Enviar». Lo ven todos los que están en la reunión."
+  - texto: "Si algo te importa, copialo antes de salir: si la cuenta no tiene activado el chat continuo, los mensajes se pierden al terminar. Google lo explica acá."
+    abrir: "https://support.google.com/meet/answer/9308979?hl=es-419"
+fuentes:
+  - https://support.google.com/meet/answer/9308979?hl=es-419
+madurez: T0
+---
+id: VID-010
+area: red
+titulo:
+  sencillo: "La reunión de Meet se corta o se congela"
+  tecnico: "Problemas de conexión y calidad en Google Meet (cortes, congelamientos, demoras)"
+explicacion:
+  sencillo: "Si en Meet la imagen se congela, las voces se cortan o te saca de la reunión, casi siempre es por la conexión a Internet o porque la compu está muy cargada."
+  tecnico: "Revisar estabilidad de red («Solución de problemas y ayuda»), cerrar apps y pestañas, pausar descargas, desconectar VPN, apagar la cámara o bajar la resolución (Configuración > Video)."
+frases: ["la reunión de meet se corta todo el tiempo", "en meet se me congela la imagen", "me saca de la videollamada de meet", "en meet se escucha entrecortado"]
+pasos:
+  - texto: "Cerrá los programas y pestañas que no uses, y pausá descargas, actualizaciones o copias a la nube mientras dura la reunión."
+  - texto: "Si podés, acercate al router o conectá la compu con cable. Si usás VPN, desconectala un rato."
+  - texto: "Si sigue cortándose, apagá tu cámara: así la reunión usa menos Internet y el sonido se estabiliza. También podés bajar la calidad del video en «Configuración» > «Video»."
+    abrir: "https://support.google.com/meet/answer/9302964?hl=es-419"
+  - texto: "Si te sacó, salí y volvé a entrar a la reunión. Google tiene la guía completa."
+    abrir: "https://support.google.com/meet/answer/16565148?hl=es-419"
+derivar: "Si Internet anda mal en todo, no solo en Meet, escribile a PC Doctor «Internet anda lento»."
+fuentes:
+  - https://support.google.com/meet/answer/16565148?hl=es-419
+  - https://support.google.com/meet/answer/10620583?hl=es-419
+  - https://support.google.com/meet/answer/9302964?hl=es-419
+madurez: T0
+---
+id: VID-011
+area: programas
+titulo:
+  sencillo: "Quiero armar una reunión de Google Meet e invitar a alguien"
+  tecnico: "Iniciar o programar una videoconferencia de Meet y compartir el vínculo"
+explicacion:
+  sencillo: "Podés armar una reunión de Meet al instante o dejarla preparada para otro día, y mandarles el enlace a los que quieras que entren."
+  tecnico: "Meet: «Nueva reunión» > «Inicia una reunión instantánea» o «Crear una reunión para más tarde». Calendar: «Crear» > «Evento» > «Agregar una videoconferencia de Google Meet» > «Guardar»."
+frases: ["cómo armo una reunión de meet", "quiero hacer una videollamada por meet con mi familia", "agendar una reunión de google meet para mañana", "cómo mando el link de meet a otra persona"]
+pasos:
+  - texto: "Entrá a meet.google.com con tu cuenta de Google y hacé clic en «Nueva reunión»."
+  - texto: "Para hablar ya, elegí «Inicia una reunión instantánea». Para otro momento, elegí «Crear una reunión para más tarde» y copiá el enlace que aparece."
+  - texto: "Mandá ese enlace por correo o WhatsApp a quienes quieras invitar. Si alguien no estaba invitado, va a pedir permiso para entrar y lo vas a tener que aceptar."
+  - texto: "Para que quede con día y hora, creá un evento en Google Calendar y agregale una videoconferencia de Google Meet. Google lo explica acá."
+    abrir: "https://support.google.com/meet/answer/9302870?hl=es-419"
+fuentes:
+  - https://support.google.com/meet/answer/9302870?hl=es-419
+  - https://support.google.com/meet/answer/10620582?hl=es-419
+madurez: T0
+---
+id: VID-012
+area: programas
+titulo:
+  sencillo: "Me mandaron una reunión de Teams y no sé cómo entrar"
+  tecnico: "Unirse a una reunión de Microsoft Teams desde el vínculo, el calendario o con ID y código de acceso"
+explicacion:
+  sencillo: "Para entrar a una reunión de Teams alcanza con tocar el enlace de la invitación. Si tenés Teams instalado se abre ahí; si no, podés entrar desde el navegador, a veces solo poniendo tu nombre. Puede que te dejen esperando en una «sala de espera» hasta que el organizador te acepte."
+  tecnico: "Vínculo de la invitación (abre la app o el navegador), Calendario > Unirse, o ID de reunión + código de acceso en microsoft.com/microsoft-teams/join-a-meeting. Posible espera en la sala de espera (lobby)."
+frases: ["me pasaron un link de teams y no sé cómo entrar", "cómo me uno a una reunión de teams", "no tengo teams y me invitaron a una reunión", "me quedé esperando en la reunión de teams y no me dejan pasar"]
+pasos:
+  - texto: "Abrí el correo o el mensaje con la invitación y hacé clic en el enlace de la reunión."
+  - texto: "Si tenés Teams, se abre solo. Si no, se abre en el navegador: si el organizador lo permite, escribí tu nombre para entrar."
+  - texto: "Antes de entrar, fijate con qué cuenta vas a entrar y tocá el botón para unirte. Si quedás esperando, es la sala de espera: el organizador te tiene que dejar pasar; si tarda mucho, avisale por otro lado."
+  - texto: "Si te dice que entres con otra cuenta, usá la cuenta a la que te mandaron la invitación. Microsoft explica qué hacer cuando no podés entrar."
+    abrir: "https://support.microsoft.com/en-us/teams/meetings/i-can-t-join-a-meeting-in-microsoft-teams"
+  - texto: "Si el enlace no anda pero en la invitación figuran el ID de la reunión y un código de acceso, se pueden escribir en la página de Teams para unirse. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/teams/meetings/join-a-meeting-in-microsoft-teams"
+fuentes:
+  - https://support.microsoft.com/teams/meetings/join-a-meeting-in-microsoft-teams
+  - https://support.microsoft.com/en-us/teams/meetings/i-can-t-join-a-meeting-in-microsoft-teams
+madurez: T0
+---
+id: VID-013
+area: seguridad
+titulo:
+  sencillo: "Teams me pide un código para entrar"
+  tecnico: "Código de acceso de la reunión o código de verificación de un solo uso en Teams"
+explicacion:
+  sencillo: "Teams puede pedirte dos tipos de código: el «código de acceso» de la reunión, que viene escrito en la invitación junto al ID, o un código que te mandan al correo para comprobar que sos vos. Ese código lo escribís vos en Teams y nunca se lo tenés que pasar a nadie."
+  tecnico: "ID de reunión + código de acceso de la invitación; verificación por código de un solo uso (OTP) enviado al correo; los códigos de cuenta Microsoft llegan desde @accountprotection.microsoft.com."
+frases: ["teams me pide un código para entrar a la reunión", "no me llega el código de teams al mail", "en teams me pide un código de acceso y no sé cuál es", "me llegó un código de microsoft que no pedí"]
+pasos:
+  - texto: "Si te pide el código de acceso de la reunión, buscalo en el correo de la invitación: suele estar junto al ID de la reunión. Si no lo tenés, pedíselo a quien organizó la reunión."
+    abrir: "https://support.microsoft.com/teams/meetings/join-a-meeting-in-microsoft-teams"
+  - texto: "Si te pide tu correo para verificarte, escribilo y esperá el código que llega a ese correo. Escribilo vos en Teams y después tocá para unirte. No se lo dictes ni se lo mandes a nadie."
+    abrir: "https://support.microsoft.com/en-us/teams/meetings/i-can-t-join-a-meeting-in-microsoft-teams"
+  - texto: "Si no te llega, mirá en la carpeta de correo no deseado y esperá un rato antes de pedir otro: pedirlo muchas veces seguidas puede bloquearlo más tiempo."
+  - texto: "Si te llega un código que vos no pediste, no hagas nada con él. Microsoft explica cómo manejar los códigos."
+    abrir: "https://support.microsoft.com/en-us/accounts-billing/manage/troubleshoot-microsoft-verification-code-issues"
+fuentes:
+  - https://support.microsoft.com/teams/meetings/join-a-meeting-in-microsoft-teams
+  - https://support.microsoft.com/en-us/teams/meetings/i-can-t-join-a-meeting-in-microsoft-teams
+  - https://support.microsoft.com/en-us/accounts-billing/manage/troubleshoot-microsoft-verification-code-issues
+madurez: T0
+---
+id: VID-014
+area: programas
+titulo:
+  sencillo: "El Teams del trabajo no me deja iniciar sesión"
+  tecnico: "Errores de inicio de sesión en Microsoft Teams (código de estado)"
+explicacion:
+  sencillo: "Cuando el Teams del trabajo no te deja entrar, abajo a la izquierda de la ventana suele aparecer un código de error. Con ese código se sabe si es la hora de la compu, la conexión o algo que tiene que revisar la gente de sistemas de tu trabajo."
+  tecnico: "Código de estado en la esquina inferior izquierda: 0xCAA20003 (fecha y hora), 0xCAA70007/0xCAA82EE2/0xCAA82EE7 (conexión), 0xCAA90018 (credenciales distintas de Windows), 0xCAA20004 (directivas de la organización)."
+frases: ["el teams del trabajo no me deja entrar", "teams no inicia sesión y sale un código raro", "no puedo entrar a teams con el mail de la empresa", "teams me tira error al iniciar sesión"]
+pasos:
+  - texto: "Anotá el código de error que aparece abajo a la izquierda de la ventana de Teams: te va a servir a vos y a la gente de sistemas."
+  - texto: "Revisá que la fecha y la hora de la compu estén bien: si están mal, Teams no puede conectarse de forma segura."
+    abrir: "ms-settings:dateandtime"
+  - texto: "Fijate que tengas Internet. Y asegurate de entrar con el correo de tu trabajo, que puede ser distinto del que usás para entrar a la compu."
+  - texto: "Si sigue igual, pasale el código al área de sistemas de tu trabajo: muchas veces el problema está en la cuenta de la empresa. Microsoft tiene la lista de códigos."
+    abrir: "https://support.microsoft.com/en-us/office/why-am-i-having-trouble-signing-in-to-microsoft-teams-a02f683b-61a3-4008-9447-ee60c5593b0f"
+fuentes:
+  - https://support.microsoft.com/en-us/office/why-am-i-having-trouble-signing-in-to-microsoft-teams-a02f683b-61a3-4008-9447-ee60c5593b0f
+madurez: T0
+---
+id: VID-015
+area: programas
+titulo:
+  sencillo: "En la reunión de Teams no me ven"
+  tecnico: "La cámara no funciona en Microsoft Teams"
+explicacion:
+  sencillo: "Si en Teams los demás no te ven, puede que otro programa esté usando la cámara, que Windows no le dé permiso a Teams o que Teams o Windows estén desactualizados."
+  tecnico: "Cerrar apps que usan la cámara, reconectar la webcam externa, actualizar Windows y Teams, llamada de prueba (Configuración > Dispositivos) y Privacidad y seguridad > Cámara con acceso para Microsoft Teams."
+frases: ["en la reunión de teams no me ven", "la cámara no anda en teams", "en teams me sale la imagen negra", "en teams no aparece mi cámara"]
+pasos:
+  - texto: "Cerrá los otros programas que puedan estar usando la cámara. Si la cámara es de las que se enchufan, desenchufala y volvé a enchufarla."
+  - texto: "Revisá que Windows deje usar la cámara: en «Privacidad y seguridad» > «Cámara», activá que las apps puedan usar la cámara y también Microsoft Teams. Si ya estaba activado, apagalo y prendelo, y reiniciá la compu."
+    abrir: "ms-settings:privacy-webcam"
+  - texto: "Actualizá Windows y Teams. En Teams, en «Configuración» > «Dispositivos», podés hacer una llamada de prueba para ver si la cámara anda."
+  - texto: "Si sigue sin verse, Microsoft tiene la guía completa."
+    abrir: "https://support.microsoft.com/teams/meetings/my-camera-isn-t-working-in-microsoft-teams"
+derivar: "Si la cámara tampoco anda en la app Cámara de Windows, el problema no es de Teams: escribile a PC Doctor «no funciona la cámara»."
+fuentes:
+  - https://support.microsoft.com/teams/meetings/my-camera-isn-t-working-in-microsoft-teams
+madurez: T0
+---
+id: VID-016
+area: programas
+titulo:
+  sencillo: "En Teams no me escuchan"
+  tecnico: "El micrófono no funciona en una reunión de Microsoft Teams"
+explicacion:
+  sencillo: "Si en Teams no te oyen, revisá primero que no estés silenciado en la reunión ni en los auriculares. Después, que Teams use el micrófono correcto y que Windows le dé permiso."
+  tecnico: "Micrófono silenciado (ícono tachado), silencio físico del auricular, Privacidad y seguridad > Micrófono para Teams, micrófono elegido en Configuración > Dispositivos y Sistema > Sonido > Entrada."
+frases: ["en teams no me escuchan", "hablo en la reunión de teams y no me oyen", "en teams el micrófono aparece tachado", "en teams dicen que no tengo micrófono"]
+pasos:
+  - texto: "Mirá el botón del micrófono en la reunión: si está tachado, hacé clic para activarlo. Fijate también que los auriculares o el micrófono no tengan su propio botón de silencio apretado."
+  - texto: "Durante la reunión, tocá la flechita al lado del micrófono y entrá a las opciones de audio para ver que esté elegido el micrófono correcto. Si no aparece, desenchufalo y volvé a enchufarlo."
+  - texto: "Revisá que Windows deje usar el micrófono: en «Privacidad y seguridad» > «Micrófono», activá el acceso, el permiso para las apps y el de Microsoft Teams. Después cerrá todo y reiniciá."
+    abrir: "ms-settings:privacy-microphone"
+  - texto: "En «Sonido», en la parte de entrada, elegí tu micrófono y fijate que el volumen no esté en silencio."
+    abrir: "ms-settings:sound"
+  - texto: "Microsoft tiene la guía completa, con la llamada de prueba de Teams."
+    abrir: "https://support.microsoft.com/teams/meetings/my-microphone-isn-t-working-in-microsoft-teams"
+fuentes:
+  - https://support.microsoft.com/teams/meetings/my-microphone-isn-t-working-in-microsoft-teams
+madurez: T0
+---
+id: VID-017
+area: audio
+titulo:
+  sencillo: "En Teams no escucho a nadie"
+  tecnico: "No se escucha a los participantes en Microsoft Teams (altavoz)"
+explicacion:
+  sencillo: "Si en Teams no oís a los demás, puede que Teams esté mandando el sonido a otro aparato, por ejemplo a unos auriculares apagados, o que el volumen de Windows esté en silencio."
+  tecnico: "Elegir el altavoz en Configuración > Dispositivos (o en las opciones de audio de la reunión), reconectar el dispositivo y revisar Sistema > Sonido > Salida y volumen."
+frases: ["en teams no escucho a nadie", "en la reunión de teams no se oye nada", "veo que hablan en teams pero no los escucho", "en teams no me suenan los auriculares"]
+pasos:
+  - texto: "Durante la reunión, tocá la flechita al lado del micrófono y abrí las opciones de audio: en el altavoz, elegí tus parlantes o auriculares."
+  - texto: "Si tu aparato no aparece, desenchufalo y volvé a enchufarlo. Si es Bluetooth, cargalo, desconectalo de otros aparatos y volvé a conectarlo."
+  - texto: "En «Sonido» de Windows, elegí dónde reproducir el sonido y fijate que el volumen no esté en silencio."
+    abrir: "ms-settings:sound"
+  - texto: "Antes de la próxima reunión podés hacer una llamada de prueba desde «Configuración» > «Dispositivos» de Teams. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/teams/meetings/my-speaker-isn-t-working-in-microsoft-teams"
+fuentes:
+  - https://support.microsoft.com/teams/meetings/my-speaker-isn-t-working-in-microsoft-teams
+madurez: T0
+---
+id: VID-018
+area: programas
+titulo:
+  sencillo: "Quiero mostrar mi pantalla en una reunión de Teams"
+  tecnico: "Compartir pantalla o ventana en una reunión de Microsoft Teams"
+explicacion:
+  sencillo: "En Teams podés mostrar a los demás toda tu pantalla o una sola ventana. Si vas a pasar un video, podés compartir también el sonido de la compu."
+  tecnico: "Controles de la reunión > Share > pantalla o ventana; activar Include sound antes de compartir; Stop sharing para terminar (nombres de la interfaz en inglés)."
+frases: ["cómo comparto la pantalla en teams", "quiero mostrar una presentación en la reunión de teams", "en teams no se escucha el video que comparto", "cómo dejo de compartir la pantalla en teams"]
+pasos:
+  - texto: "En los controles de la reunión, hacé clic en el botón de compartir."
+  - texto: "Elegí si querés mostrar toda la pantalla o una ventana. Si vas a pasar un video, activá antes la opción para incluir el sonido (ojo: también se van a oír tus notificaciones)."
+  - texto: "Para terminar, tocá el botón para dejar de compartir y volvés a la reunión."
+  - texto: "Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/teams/meetings/present-content-in-microsoft-teams-meetings"
+fuentes:
+  - https://support.microsoft.com/teams/meetings/present-content-in-microsoft-teams-meetings
+madurez: T0
+---
+id: VID-019
+area: programas
+titulo:
+  sencillo: "Quiero que en Teams no se vea lo que hay atrás mío"
+  tecnico: "Desenfocar o cambiar el fondo en una reunión de Microsoft Teams"
+explicacion:
+  sencillo: "Teams puede desenfocar lo que tenés atrás o poner una imagen de fondo. Ojo: no es infalible, algo de lo que hay atrás se puede llegar a ver."
+  tecnico: "Antes de entrar: Effects and avatars > Blur (Standard o Portrait) o fondo. Durante: More actions > Video effects and settings (nombres en inglés). No disponible en Linux ni en VDI optimizado."
+frases: ["cómo desenfoco el fondo en teams", "poner una imagen de fondo en la reunión de teams", "que no se vea mi casa en teams", "en teams no me aparece lo del fondo"]
+pasos:
+  - texto: "Antes de entrar a la reunión, en la pantalla donde te ves, tocá el botón de efectos y elegí desenfocar o una de las imágenes de fondo."
+  - texto: "Si ya estás adentro, en los controles de la reunión abrí el botón de los tres puntitos (más acciones), entrá a los efectos de video, elegí el desenfoque o el fondo, miralo con la vista previa y aplicalo."
+  - texto: "Para sacarlo, en ese mismo menú de efectos elegí la opción sin fondo. Si no te aparece la opción, puede que tu compu no la admita. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/teams/meetings/change-your-background-in-microsoft-teams-meetings"
+fuentes:
+  - https://support.microsoft.com/en-us/teams/meetings/change-your-background-in-microsoft-teams-meetings
+madurez: T0
+---
+id: VID-020
+area: programas
+titulo:
+  sencillo: "¿Cómo me silencio y vuelvo a hablar en Teams?"
+  tecnico: "Silenciar y activar el micrófono en Microsoft Teams (Ctrl + Mayús + M)"
+explicacion:
+  sencillo: "En una reunión de Teams conviene silenciarte cuando no hablás, así no se escuchan ruidos de tu casa. Se hace con el botón del micrófono o con el teclado."
+  tecnico: "Botón Micrófono en los controles; Ctrl + Mayús + M alterna; Windows + Alt + K desde la barra de tareas; mantener Ctrl + Espacio para hablar si está activado en Configuración > Privacidad."
+frases: ["cómo me silencio en teams", "cómo activo el micrófono en la reunión de teams", "atajo para silenciarme en teams", "quiero que no se escuche el ruido de mi casa en teams"]
+pasos:
+  - texto: "En la reunión, hacé clic en el botón del micrófono para silenciarte, y otra vez para volver a hablar. Cuando está tachado, nadie te escucha."
+  - texto: "Con el teclado: Ctrl + Mayús + M silencia y activa. También sirve Windows + Alt + K."
+  - texto: "Si te olvidás de activarlo, Teams tiene una opción para hablar mientras mantenés apretado Ctrl + barra espaciadora; se activa en la parte de privacidad de la configuración de Teams."
+  - texto: "Si el botón no responde, puede que la reunión o tu empresa lo limiten. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/teams/meetings/mute-and-unmute-your-mic-in-microsoft-teams"
+fuentes:
+  - https://support.microsoft.com/en-us/teams/meetings/mute-and-unmute-your-mic-in-microsoft-teams
+madurez: T0
+---
+id: VID-021
+area: programas
+titulo:
+  sencillo: "Quiero ver lo que dicen escrito en la reunión de Teams"
+  tecnico: "Subtítulos en directo en reuniones de Microsoft Teams"
+explicacion:
+  sencillo: "Teams puede mostrar escrito, abajo de la pantalla, lo que va diciendo cada uno. Sirve si escuchás poco o hay ruido. Los subtítulos no quedan guardados."
+  tecnico: "More actions > Captions (nombres en inglés). Idioma hablado en la configuración de subtítulos (lo cambian organizador o quien inició la transcripción). Teams no guarda los subtítulos; para registro, usar la transcripción."
+frases: ["poner subtítulos en teams", "quiero leer lo que dicen en la reunión de teams", "en teams los subtítulos salen mal o en otro idioma", "escucho poco y quiero ver las palabras en teams"]
+pasos:
+  - texto: "En los controles de la reunión, abrí el botón de los tres puntitos (más acciones) y elegí la opción de subtítulos."
+  - texto: "Si salen en otro idioma, pasá el mouse por los subtítulos y abrí su configuración para elegir el idioma que se habla. A veces solo lo puede cambiar el organizador."
+  - texto: "Salen mejor si los demás hablan de a uno, despacio y cerca del micrófono. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/teams/meetings/use-live-captions-in-microsoft-teams-meetings"
+fuentes:
+  - https://support.microsoft.com/en-us/teams/meetings/use-live-captions-in-microsoft-teams-meetings
+madurez: T0
+---
+id: VID-022
+area: programas
+titulo:
+  sencillo: "Quiero escribir en el chat de la reunión de Teams"
+  tecnico: "Chat de la reunión en Microsoft Teams"
+explicacion:
+  sencillo: "En Teams cada reunión tiene su propio chat para mandar mensajes escritos, enlaces o preguntas. Después de la reunión lo encontrás en la sección de chats."
+  tecnico: "Ícono Chat en los controles de la reunión > escribir > Send. Después: pestaña Chat, filtro de chats de reunión. El organizador o la empresa pueden limitarlo."
+frases: ["dónde está el chat en la reunión de teams", "cómo mando un mensaje en la reunión de teams", "dónde quedaron los mensajes de la reunión de teams", "en teams no me deja escribir en el chat de la reunión"]
+pasos:
+  - texto: "Durante la reunión, hacé clic en el botón del chat en los controles. Se abre un panel a un costado."
+  - texto: "Escribí el mensaje en el cuadro de abajo y tocá el botón de enviar."
+  - texto: "Cuando termina la reunión, el chat queda en la sección «Chat» de Teams con el nombre de la reunión. Si entraste como invitado sin cuenta, después ya no lo vas a poder ver."
+  - texto: "Si no te deja escribir, puede que el organizador haya limitado el chat. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/teams/meetings/chat-in-microsoft-teams-meetings"
+fuentes:
+  - https://support.microsoft.com/en-us/teams/meetings/chat-in-microsoft-teams-meetings
+madurez: T0
+---
+id: VID-023
+area: programas
+titulo:
+  sencillo: "¿Cómo salgo de la reunión de Teams?"
+  tecnico: "Salir de una reunión de Teams o finalizarla para todos"
+explicacion:
+  sencillo: "Para irte de una reunión de Teams se usa el botón para salir, arriba de la pantalla. Si organizaste la reunión, también podés terminarla para todos."
+  tecnico: "Controles de la reunión (parte superior) > Leave; los moderadores pueden usar la flecha junto a Leave > End meeting (nombres en inglés)."
+frases: ["cómo salgo de la reunión de teams", "cómo corto la videollamada de teams", "quiero terminar la reunión de teams para todos", "no encuentro el botón para salir de teams"]
+pasos:
+  - texto: "Los botones de la reunión están arriba de la pantalla. Hacé clic en el botón para salir y quedás afuera; la reunión sigue para los demás."
+  - texto: "Si sos quien presenta u organiza y querés terminarla para todos, tocá la flechita al lado del botón para salir y elegí la opción para finalizar la reunión."
+  - texto: "Microsoft explica todos los botones de la reunión."
+    abrir: "https://support.microsoft.com/en-us/teams/meetings/use-meeting-controls-in-microsoft-teams"
+fuentes:
+  - https://support.microsoft.com/en-us/teams/meetings/use-meeting-controls-in-microsoft-teams
+madurez: T0
+---
+id: VID-024
+area: programas
+titulo:
+  sencillo: "Quiero armar una reunión de Teams e invitar a alguien"
+  tecnico: "Programar una reunión en Microsoft Teams (uso personal) y compartir el vínculo"
+explicacion:
+  sencillo: "Con Teams (la versión para uso personal) podés dejar armada una reunión para un día y hora, invitar gente por su nombre, correo o teléfono, y mandarles el enlace."
+  tecnico: "Meet > Schedule a Meeting (o Calendar > New Meeting) > título, participantes, fecha y hora > Save; compartir con Share Link o Copy invite (nombres en inglés)."
+frases: ["cómo armo una reunión en teams", "agendar una reunión de teams para el viernes", "cómo invito a alguien a una reunión de teams", "cómo paso el link de la reunión de teams"]
+pasos:
+  - texto: "En Teams, a la izquierda, entrá a la sección para reunirse y elegí programar una reunión. También se puede desde el calendario con una reunión nueva."
+  - texto: "Poné un título, agregá a las personas (nombre, correo o teléfono) y elegí la fecha y la hora. Después tocá el botón para guardar."
+  - texto: "Para mandar el enlace, abrí la reunión desde las reuniones programadas o el calendario y usá la opción para compartir el vínculo o copiar la invitación; pegalo en un correo o WhatsApp."
+  - texto: "Microsoft lo explica paso a paso."
+    abrir: "https://support.microsoft.com/en-us/teams/personal/meetings-calls/schedule-a-meeting-in-microsoft-teams-personal"
+fuentes:
+  - https://support.microsoft.com/en-us/teams/personal/meetings-calls/schedule-a-meeting-in-microsoft-teams-personal
+madurez: T0
+---
+id: VID-025
+area: programas
+titulo:
+  sencillo: "Quiero grabar una reunión de Teams"
+  tecnico: "Grabar reuniones en Microsoft Teams (uso personal y trabajo)"
+explicacion:
+  sencillo: "Teams puede grabar la reunión, pero no siempre está permitido: en el Teams personal hace falta una suscripción de Microsoft 365 (Personal, Familia o Premium) y en el del trabajo depende de la licencia y de lo que habilite la empresa. Cuando alguien graba, a todos les aparece el aviso."
+  tecnico: "More actions > Start recording (nombres en inglés). Personal: requiere Microsoft 365 Personal/Familia/Premium; la grabación aparece en el chat de la reunión y dura 30 días. Trabajo: licencia y directiva de grabación; se guarda en OneDrive del organizador."
+frases: ["cómo grabo la reunión de teams", "en teams no me aparece la opción de grabar", "dónde quedó la grabación de la reunión de teams", "se borró la grabación de teams"]
+pasos:
+  - texto: "En los controles de la reunión, abrí el botón de los tres puntitos (más acciones) y elegí la opción para empezar a grabar. Elegí el idioma de la reunión y confirmá."
+  - texto: "Para terminar, volvé al botón de los tres puntitos y detené la grabación. Si se va quien la empezó, la grabación se corta."
+  - texto: "En el Teams personal, la grabación aparece en el chat de la reunión y dura 30 días: si la querés guardar, descargala antes."
+    abrir: "https://support.microsoft.com/en-us/teams/personal/meetings-calls/manage-meeting-and-call-recordings-in-microsoft-teams-personal"
+  - texto: "Si no te aparece la opción, tu cuenta no tiene permitido grabar: pedile al organizador que lo haga. En el trabajo, consultá con sistemas."
+    abrir: "https://support.microsoft.com/en-us/office/record-a-meeting-in-microsoft-teams-34dfbe7f-b07d-4a27-b4c6-de62f1348c24"
+fuentes:
+  - https://support.microsoft.com/en-us/teams/personal/meetings-calls/manage-meeting-and-call-recordings-in-microsoft-teams-personal
+  - https://support.microsoft.com/en-us/office/record-a-meeting-in-microsoft-teams-34dfbe7f-b07d-4a27-b4c6-de62f1348c24
+madurez: T0

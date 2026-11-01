@@ -1,0 +1,510 @@
+# Celular y PC: Vínculo Móvil (Android e iPhone), cable USB, Bluetooth, Quick Share, iPhone con Dispositivos Apple e iCloud, y Google Fotos. Guiadas con fuente oficial.
+id: CEL-001
+area: programas
+titulo:
+  sencillo: "Quiero conectar mi celular Android con la computadora"
+  tecnico: "Vincular Android con Vínculo Móvil (Phone Link) y Enlace a Windows"
+explicacion:
+  sencillo: "Con la aplicación Vínculo Móvil de Windows y la aplicación Enlace a Windows en el celular, podés ver mensajes, llamadas, notificaciones y fotos del Android en la compu. Los dos tienen que estar en el mismo Wi-Fi."
+  tecnico: "Requisitos: Windows 10 (oct. 2022+) u 11, Android 10+, misma red Wi-Fi y la misma cuenta de Microsoft en ambos. Emparejado por código QR; no admite cuentas profesionales o educativas."
+frases: ["quiero vincular el celular con la compu", "cómo conecto mi android a la computadora sin cable", "para qué sirve vínculo móvil", "enlazar el teléfono con windows"]
+pasos:
+  - texto: "En la compu, abrí Vínculo Móvil (buscalo en la barra de tareas) y entrá con tu cuenta de Microsoft. Elegí Android."
+    abrir: "ms-settings:mobile-devices-addphone-direct"
+  - texto: "En el celular, instalá o abrí la aplicación Enlace a Windows (Link to Windows) y entrá con la misma cuenta de Microsoft que usás en la compu."
+  - texto: "En la compu marcá que ya tenés la aplicación lista y elegí emparejar con código QR. En el celular, tocá la opción para vincular el teléfono con la PC y escaneá el código que aparece en la pantalla de la compu."
+  - texto: "Aceptá los permisos que te pida el celular. Fijate que el celular y la compu estén conectados al mismo Wi-Fi."
+  - texto: "Microsoft lo explica paso a paso."
+    abrir: "https://support.microsoft.com/windows/apps/phonelink/phone-link-requirements-and-setup"
+fuentes:
+  - https://support.microsoft.com/windows/apps/phonelink/phone-link-requirements-and-setup
+madurez: T0
+---
+id: CEL-002
+area: programas
+titulo:
+  sencillo: "Quiero conectar mi iPhone con la computadora"
+  tecnico: "Vincular iPhone con Vínculo Móvil (Phone Link) por Bluetooth"
+explicacion:
+  sencillo: "El iPhone también se puede vincular con Vínculo Móvil, pero por Bluetooth. Así ves los mensajes, las llamadas y las notificaciones del iPhone en la compu."
+  tecnico: "Requisitos: Windows 10 (mayo 2019+) u 11 con Bluetooth de baja energía (BLE) e iOS 16 o posterior. Emparejado con QR y la cámara del iPhone; luego permisos en Configuración > Bluetooth del iPhone."
+frases: ["vincular el iphone con la compu", "ver los mensajes del iphone en la computadora", "vínculo móvil funciona con iphone", "conectar el iphone a windows por bluetooth"]
+pasos:
+  - texto: "Poné el iPhone cerca de la compu y prendé el Bluetooth en los dos."
+    abrir: "ms-settings:bluetooth"
+  - texto: "En la compu abrí Vínculo Móvil y, donde te pide elegir el teléfono, tocá iPhone."
+    abrir: "ms-settings:mobile-devices-addphone-direct"
+  - texto: "Escaneá el código QR de la pantalla con la cámara del iPhone y seguí los pasos para emparejarlos por Bluetooth."
+  - texto: "En el iPhone, en Configuración > Bluetooth, tocá el nombre de tu compu y activá las opciones para compartir las notificaciones del sistema, mostrar notificaciones y sincronizar contactos: sin eso no llegan mensajes ni llamadas."
+  - texto: "Microsoft lo explica (pestaña de iPhone)."
+    abrir: "https://support.microsoft.com/windows/apps/phonelink/phone-link-requirements-and-setup"
+fuentes:
+  - https://support.microsoft.com/windows/apps/phonelink/phone-link-requirements-and-setup
+madurez: T0
+---
+id: CEL-003
+area: programas
+titulo:
+  sencillo: "Quiero leer y mandar los mensajes de texto del celular desde la compu"
+  tecnico: "Mensajes SMS/MMS en Vínculo Móvil"
+explicacion:
+  sencillo: "Con el celular vinculado, Vínculo Móvil muestra los mensajes de texto (SMS) de los últimos 30 días y te deja contestarlos con el teclado de la compu. Es para los SMS del celular, no para WhatsApp."
+  tecnico: "Android: SMS/MMS de los últimos 30 días, con imágenes; RCS solo en algunos Samsung. iPhone: solo los mensajes enviados o recibidos con la conexión Bluetooth activa; sin imágenes ni grupos."
+frases: ["contestar los mensajes de texto desde la compu", "ver los sms del celular en la computadora", "mandar un mensaje de texto desde la pc", "escribir mensajes del teléfono con el teclado de la compu"]
+pasos:
+  - texto: "Primero vinculá el celular con Vínculo Móvil. Si todavía no lo hiciste, escribile a PC Doctor «quiero conectar mi celular con la computadora»."
+  - texto: "En Vínculo Móvil, entrá a la sección de mensajes. Para uno nuevo, tocá el botón de mensaje nuevo, escribí el nombre o el número y elegí el contacto."
+  - texto: "Escribí el texto abajo y mandalo. En Android podés sumar una foto con el botón de imagen; en iPhone no se pueden mandar fotos ni mensajes de grupo desde la compu."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/apps/phonelink/send-and-receive-text-messages-from-your-pc"
+fuentes:
+  - https://support.microsoft.com/windows/apps/phonelink/send-and-receive-text-messages-from-your-pc
+madurez: T0
+---
+id: CEL-004
+area: programas
+titulo:
+  sencillo: "En la compu no aparecen todos los mensajes del celular"
+  tecnico: "Mensajes faltantes en Vínculo Móvil"
+explicacion:
+  sencillo: "Vínculo Móvil no muestra todo: en Android solo los SMS de los últimos 30 días y en iPhone solo los que llegaron mientras estaba conectado. Los mensajes de otras aplicaciones de chat tampoco aparecen."
+  tecnico: "Causas: app de mensajería de terceros como predeterminada, red lenta, límites de RCS (solo Samsung Messages), en iPhone historial limitado a la sesión Bluetooth y sin soporte de grupos."
+frases: ["no me aparecen los mensajes en vínculo móvil", "faltan mensajes del celular en la compu", "los mensajes viejos no se ven en la pc", "los mensajes de grupo del iphone no llegan a la compu"]
+pasos:
+  - texto: "Actualizá Vínculo Móvil desde Microsoft Store (buscá actualizaciones en la sección de biblioteca o descargas)."
+  - texto: "En Android, si usás otra aplicación de mensajes como principal, puede que algunos no se vean; los SMS comunes sí deberían aparecer. Con red lenta pueden tardar."
+  - texto: "En iPhone, dejá el iPhone cerca y con Bluetooth prendido: solo se ven los mensajes de mientras estuvo conectado, y los de grupo no se pueden mandar desde la compu."
+  - texto: "Microsoft lista las causas."
+    abrir: "https://support.microsoft.com/en-us/windows/apps/phonelink/troubleshooting-for-messages-in-the-phone-link"
+fuentes:
+  - https://support.microsoft.com/en-us/windows/apps/phonelink/troubleshooting-for-messages-in-the-phone-link
+  - https://support.microsoft.com/windows/apps/phonelink/send-and-receive-text-messages-from-your-pc
+madurez: T0
+---
+id: CEL-005
+area: programas
+titulo:
+  sencillo: "Quiero hacer y atender llamadas del celular desde la compu"
+  tecnico: "Llamadas en Vínculo Móvil (Bluetooth)"
+explicacion:
+  sencillo: "Con Vínculo Móvil podés llamar y atender usando los parlantes y el micrófono de la compu, sin agarrar el celular. Hace falta Bluetooth en los dos. No reemplaza al teléfono para emergencias."
+  tecnico: "Requiere Bluetooth en PC y teléfono (Android 10+ o iOS 15+). Configurar en Vínculo Móvil > Llamadas > Comenzar; marcador, búsqueda de contactos e historial (90 días en Android, 100 llamadas en iPhone)."
+frases: ["atender el celular desde la computadora", "llamar por teléfono desde la compu", "hablar por el celular con los parlantes de la pc", "cómo hago llamadas con vínculo móvil"]
+pasos:
+  - texto: "Prendé el Bluetooth de la compu y del celular, que ya tiene que estar vinculado con Vínculo Móvil."
+    abrir: "ms-settings:bluetooth"
+  - texto: "En Vínculo Móvil, entrá a la sección de llamadas y tocá el botón para empezar. Seguí las instrucciones: puede pedirte permisos y que confirmes que el PIN es el mismo en los dos aparatos. En el celular, tocá «Permitir»."
+    abrir: "https://support.microsoft.com/windows/apps/phonelink/setting-up-calls-in-the-phone-link"
+  - texto: "Para llamar: buscá el contacto por nombre o número, o marcá en el teclado numérico, y tocá el botón de marcar. Cuando te llamen, podés atender desde la compu."
+    abrir: "https://support.microsoft.com/windows/apps/make-and-receive-phone-calls-from-your-pc"
+  - texto: "Para emergencias usá directamente el celular: Microsoft aclara que Vínculo Móvil no reemplaza tu servicio de teléfono."
+fuentes:
+  - https://support.microsoft.com/windows/apps/phonelink/setting-up-calls-in-the-phone-link
+  - https://support.microsoft.com/windows/apps/make-and-receive-phone-calls-from-your-pc
+madurez: T0
+---
+id: CEL-006
+area: programas
+titulo:
+  sencillo: "Las llamadas del celular no funcionan en la compu"
+  tecnico: "Solución de problemas de llamadas en Vínculo Móvil"
+explicacion:
+  sencillo: "Si las llamadas no suenan en la compu o no se puede llamar, casi siempre es el Bluetooth o el modo «No molestar». Vínculo Móvil no pasa el audio a auriculares Bluetooth: usá los de cable o los parlantes."
+  tecnico: "No molestar silencia alertas; reconectar Bluetooth; desemparejar y volver a configurar Llamadas; optimización de batería de Enlace a Windows; apps en conflicto (Intel Unison, Virtoo); sin audio a auriculares Bluetooth."
+frases: ["no suenan las llamadas en la compu", "vínculo móvil no me deja llamar", "atiendo en la pc y no se escucha", "las llamadas se cortan en la computadora"]
+pasos:
+  - texto: "Fijate que «No molestar» esté apagado en la compu, porque silencia los avisos de llamadas. Después cerrá y volvé a abrir Vínculo Móvil."
+    abrir: "ms-settings:notifications"
+  - texto: "En el celular, apagá y prendé el Bluetooth. Si sigue igual, quitá el celular de la lista de Bluetooth de la compu (y la compu de la del celular) y volvé a configurar las llamadas desde Vínculo Móvil."
+    abrir: "ms-settings:bluetooth"
+  - texto: "En Android, en la información de la aplicación Enlace a Windows > Batería, elegí que no optimice la batería (el nombre cambia según la marca)."
+  - texto: "Si se escucha mal, desconectá otros aparatos Bluetooth (como el mouse); si hay eco, usá auriculares con cable. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/en-us/windows/apps/phonelink/troubleshooting-calls-in-the-phone-link"
+fuentes:
+  - https://support.microsoft.com/en-us/windows/apps/phonelink/troubleshooting-calls-in-the-phone-link
+madurez: T0
+---
+id: CEL-007
+area: programas
+titulo:
+  sencillo: "Quiero ver los avisos del celular en la pantalla de la compu"
+  tecnico: "Notificaciones del teléfono en Vínculo Móvil"
+explicacion:
+  sencillo: "Vínculo Móvil puede mostrar en la compu los avisos que te llegan al celular, así no tenés que estar mirando el teléfono mientras trabajás."
+  tecnico: "Notificaciones > Comenzar; Android: acceso a notificaciones para Enlace a Windows; iPhone: «Compartir notificaciones del sistema» en Bluetooth. Ajuste en Vínculo Móvil > Configuración > Características."
+frases: ["ver las notificaciones del celular en la compu", "que me avise la compu cuando me llega algo al teléfono", "los avisos del celular en la pantalla de la pc"]
+pasos:
+  - texto: "En Vínculo Móvil, entrá a la sección de notificaciones y tocá el botón para empezar."
+  - texto: "En Android: cuando te pida permisos, dejá que abra la configuración del celular, buscá Enlace a Windows en la lista y tocá «Permitir»."
+  - texto: "En iPhone: en Configuración > Bluetooth, tocá tu compu y activá la opción para compartir las notificaciones del sistema."
+  - texto: "Para apagarlas o ajustarlas, entrá a la configuración de Vínculo Móvil, en la parte de funciones. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/apps/phonelink/setting-up-notifications-in-the-phone-link"
+fuentes:
+  - https://support.microsoft.com/windows/apps/phonelink/setting-up-notifications-in-the-phone-link
+madurez: T0
+---
+id: CEL-008
+area: programas
+titulo:
+  sencillo: "No me llegan a la compu los avisos del celular"
+  tecnico: "Notificaciones que no aparecen en Vínculo Móvil"
+explicacion:
+  sencillo: "Si los avisos del celular dejaron de aparecer en la compu, suele ser el modo de concentración de Windows, el ahorro de batería o un permiso del celular que se desactivó."
+  tecnico: "Asistente de concentración/No molestar, ahorro de batería en la PC, acceso a notificaciones de Enlace a Windows (Android), «Compartir notificaciones del sistema» y alcance Bluetooth (iPhone). Android 15 oculta notificaciones sensibles."
+frases: ["no me aparecen las notificaciones del celular en la compu", "dejaron de llegar los avisos del teléfono a la pc", "vínculo móvil no muestra notificaciones"]
+pasos:
+  - texto: "En la compu, revisá que no esté activado «No molestar» o la concentración, y que la batería no esté baja o con ahorro de batería."
+    abrir: "ms-settings:notifications"
+  - texto: "En Android, buscá en la configuración «Acceso a notificaciones» (o parecido), apagá y prendé Enlace a Windows y tocá «Permitir»."
+  - texto: "En iPhone, dejá el Bluetooth prendido y el iPhone cerca, y revisá que esté activada la opción para compartir las notificaciones del sistema en Configuración > Bluetooth."
+  - texto: "Abrí la sección de notificaciones de Vínculo Móvil y esperá que se actualice. Algunos avisos con códigos se ven solo en el celular. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/en-US/Windows/Apps/PhoneLink/troubleshooting-notifications-in-the-phone-link"
+fuentes:
+  - https://support.microsoft.com/en-US/Windows/Apps/PhoneLink/troubleshooting-notifications-in-the-phone-link
+madurez: T0
+---
+id: CEL-009
+area: archivos
+titulo:
+  sencillo: "Quiero ver las fotos del celular en la compu sin enchufarlo"
+  tecnico: "Fotos y archivos del Android en el Explorador de archivos (Vínculo Móvil)"
+explicacion:
+  sencillo: "Con un Android vinculado y Windows 11, el celular aparece en el Explorador de archivos y podés ver sus fotos sin cable. Ojo: si borrás una foto ahí, se borra también del celular."
+  tecnico: "Configuración > Bluetooth y dispositivos > Dispositivos móviles > administrar dispositivos > mostrar el dispositivo móvil en el Explorador de archivos (Show mobile device in File Explorer). Reemplaza a la pestaña Fotos de Vínculo Móvil."
+frases: ["ver las fotos del celular en la compu sin cable", "el celular no aparece en el explorador de archivos", "abrir la galería del teléfono desde la pc", "quiero ver las fotos del android en la computadora"]
+pasos:
+  - texto: "Vinculá primero el Android con Vínculo Móvil. Después abrí Dispositivos móviles, entrá a la opción para administrar dispositivos y activá la opción para mostrar el dispositivo móvil en el Explorador de archivos."
+    abrir: "ms-settings:mobile-devices"
+  - texto: "Abrí el Explorador de archivos (Windows + E), tocá el celular en el panel de la izquierda y entrá a la carpeta de la cámara."
+  - texto: "Para quedarte con una foto en la compu, copiala o arrastrala a una carpeta tuya. No la borres desde ahí si la querés conservar: se borra también del celular."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/apps/phonelink/setting-up-photos-in-the-phone-link"
+fuentes:
+  - https://support.microsoft.com/windows/apps/phonelink/setting-up-photos-in-the-phone-link
+  - https://support.microsoft.com/en-us/windows/apps/phonelink/manage-mobile-devices-in-windows
+madurez: T0
+---
+id: CEL-010
+area: programas
+titulo:
+  sencillo: "Vínculo Móvil no se conecta con mi celular"
+  tecnico: "Solución de problemas de conexión de Vínculo Móvil (Android)"
+explicacion:
+  sencillo: "Para que se conecten, el celular y la compu tienen que estar en el mismo Wi-Fi de tu casa, con la misma cuenta de Microsoft y sin ahorro de batería que corte la aplicación."
+  tecnico: "Misma red Wi-Fi de confianza (no redes públicas; AP Isolation del router), ahorro/optimización de batería, misma cuenta de Microsoft (account.microsoft.com/devices), apps en segundo plano, reinicio o volver a vincular."
+frases: ["vínculo móvil no encuentra el celular", "el teléfono no se conecta con la compu", "dice que no se puede conectar al celular", "vínculo móvil se desconecta todo el tiempo"]
+pasos:
+  - texto: "Conectá el celular y la compu al mismo Wi-Fi de tu casa. En redes públicas (bares, hoteles) puede no funcionar."
+  - texto: "Apagá el ahorro de batería en la compu y en el celular. En Android, en la información de la aplicación Enlace a Windows > Batería, elegí que no la optimice."
+  - texto: "Fijate que en la compu y en Enlace a Windows uses la misma cuenta de Microsoft."
+  - texto: "Reiniciá el celular y cerrá y volvé a abrir Vínculo Móvil. Si sigue igual, desvinculalo y vinculalo de nuevo. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/apps/phonelink/troubleshooting-the-phone-link"
+fuentes:
+  - https://support.microsoft.com/windows/apps/phonelink/troubleshooting-the-phone-link
+madurez: T0
+---
+id: CEL-011
+area: programas
+titulo:
+  sencillo: "Quiero desconectar mi celular de la compu para siempre"
+  tecnico: "Quitar el teléfono de Vínculo Móvil, de Configuración y de Enlace a Windows"
+explicacion:
+  sencillo: "Si cambiaste de celular, vendés la compu o no querés que se vean más tus mensajes ahí, hay que quitar el celular en tres lugares: Vínculo Móvil, la Configuración de Windows y la aplicación del celular."
+  tecnico: "Vínculo Móvil > Configuración > Dispositivos > Quitar; Configuración > Bluetooth y dispositivos > Dispositivos móviles > administrar dispositivos > Quitar; cerrar sesión en Enlace a Windows y desemparejar Bluetooth."
+frases: ["desvincular el celular de la compu", "cambié de celular y quiero sacar el viejo de vínculo móvil", "que no se vean más mis mensajes en la computadora", "quitar el teléfono de la pc"]
+pasos:
+  - texto: "En Vínculo Móvil, entrá a la configuración, a la parte de dispositivos. En los tres puntitos del celular elegí quitar y confirmá."
+  - texto: "En Configuración de Windows, abrí Dispositivos móviles, entrá a la opción para administrar dispositivos y, si figura el celular, quitalo."
+    abrir: "ms-settings:mobile-devices"
+  - texto: "En el celular, abrí Enlace a Windows, entrá a su configuración o cuenta y cerrá sesión."
+  - texto: "Si estaban emparejados por Bluetooth, quitá el celular de la lista de Bluetooth de la compu y la compu de la del celular («Olvidar este dispositivo» en iPhone). Microsoft lo explica."
+    abrir: "https://support.microsoft.com/en-us/windows/apps/phonelink/remove-your-mobile-device-from-phone-link-link-to-windows-and-windows-settings"
+fuentes:
+  - https://support.microsoft.com/en-us/windows/apps/phonelink/remove-your-mobile-device-from-phone-link-link-to-windows-and-windows-settings
+madurez: T0
+---
+id: CEL-012
+area: archivos
+titulo:
+  sencillo: "Quiero pasar un archivo de la compu al celular (o al revés) sin cable"
+  tecnico: "Compartir archivos con Vínculo Móvil (Android)"
+explicacion:
+  sencillo: "Con un Android vinculado, podés mandar un documento o una foto de la compu al celular con «Compartir», y del celular a la compu con «Compartir» > Enlace a Windows."
+  tecnico: "PC → Android: clic derecho > Compartir > Vínculo Móvil (llega a Descargas > «Sent from your PC»). Android → PC: Compartir > Enlace a Windows – Enviar a PC (llega a Descargas, subcarpeta de Vínculo Móvil). Requiere Windows 11."
+frases: ["mandar un pdf de la compu al celular", "pasar un archivo del teléfono a la pc sin cable", "enviar un documento al celular desde la computadora", "compartir archivos con vínculo móvil"]
+pasos:
+  - texto: "Necesitás el Android vinculado con Vínculo Móvil y Windows 11."
+  - texto: "De la compu al celular: hacé clic derecho sobre el archivo, elegí «Compartir» y, entre las aplicaciones, Vínculo Móvil. En el celular queda en Descargas."
+  - texto: "Del celular a la compu: en el celular elegí el archivo, tocá «Compartir», elegí Enlace a Windows (enviar a la PC) y tocá tu compu. Esperá a que diga que se envió. En la compu queda en Descargas, en una carpeta de Vínculo Móvil."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/en-us/windows/apps/phonelink/seamlessly-transfer-content-between-your-devices"
+fuentes:
+  - https://support.microsoft.com/en-us/windows/apps/phonelink/seamlessly-transfer-content-between-your-devices
+madurez: T0
+---
+id: CEL-013
+area: perifericos
+titulo:
+  sencillo: "Quiero usar el celular como cámara para las videollamadas de la compu"
+  tecnico: "Usar el Android como cámara conectada en Windows 11"
+explicacion:
+  sencillo: "Si la compu no tiene cámara o es mala, Windows 11 puede usar la cámara de tu Android vinculado como si fuera una cámara web."
+  tecnico: "Windows 11, Android 10+ y Enlace a Windows 1.24022+. Configuración > Bluetooth y dispositivos > Dispositivos móviles > activar el uso como cámara conectada (Use as connected camera); se elige en cada aplicación."
+frases: ["usar el celular como cámara web", "mi compu no tiene cámara y quiero usar la del teléfono", "la cámara del celular para el zoom de la compu", "poner el teléfono como webcam"]
+pasos:
+  - texto: "Abrí Dispositivos móviles. Si el celular no está, usá la opción para agregar un dispositivo y vincularlo."
+    abrir: "ms-settings:mobile-devices"
+  - texto: "Elegí tu celular y activá la opción para usarlo como cámara conectada."
+  - texto: "En la aplicación de videollamadas (Zoom, Teams, etc.), entrá a su configuración y elegí el celular como cámara. También aparece en la configuración de cámaras de Windows."
+    abrir: "ms-settings:camera"
+  - texto: "Si el celular no pide permiso, dale permiso de cámara a Enlace a Windows en la configuración de aplicaciones del celular. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/en-us/windows/apps/phonelink/use-your-mobile-device-s-camera"
+fuentes:
+  - https://support.microsoft.com/en-us/windows/apps/phonelink/use-your-mobile-device-s-camera
+  - https://support.microsoft.com/en-us/windows/apps/phonelink/manage-mobile-devices-in-windows
+madurez: T0
+---
+id: CEL-014
+area: archivos
+titulo:
+  sencillo: "Quiero mandar o recibir un archivo del celular por Bluetooth"
+  tecnico: "Transferencia de archivos por Bluetooth en Windows"
+explicacion:
+  sencillo: "Si el celular y la compu están emparejados por Bluetooth, Windows tiene una ventanita para mandarle archivos al celular o recibir los que te manda. Sirve para cosas chicas, como una foto o un documento."
+  tecnico: "Configuración > Bluetooth y dispositivos > Dispositivos > Configuración relacionada > enviar o recibir archivos por Bluetooth (asistente de transferencia de archivos Bluetooth)."
+frases: ["mandar una foto al celular por bluetooth", "pasar un archivo por bluetooth de la compu al teléfono", "recibir en la compu algo que mando por bluetooth del celular", "cómo uso el bluetooth para pasar archivos"]
+pasos:
+  - texto: "Emparejá el celular con la compu por Bluetooth y dejalo prendido y cerca."
+    abrir: "ms-settings:bluetooth"
+  - texto: "En Configuración > Bluetooth y dispositivos > Dispositivos, bajá hasta la configuración relacionada y abrí la opción para enviar o recibir archivos por Bluetooth."
+  - texto: "Para mandar: elegí enviar archivos, tocá el celular, «Siguiente», buscá el archivo con «Examinar» y «Siguiente». Aceptá en el celular. Para recibir: elegí recibir archivos, mandalo desde el celular y al final elegí dónde guardarlo."
+  - texto: "Si no aparece esa opción, puede que la compu no tenga Bluetooth o le falte el controlador. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/hardware/bluetooth/send-and-receive-files-over-bluetooth-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/bluetooth/send-and-receive-files-over-bluetooth-in-windows
+madurez: T0
+---
+id: CEL-015
+area: archivos
+titulo:
+  sencillo: "Quiero pasar archivos del Android a la compu con el cable"
+  tecnico: "Transferencia de archivos por USB (MTP) en Android"
+explicacion:
+  sencillo: "Al enchufar el celular, por defecto solo se carga. Para ver sus archivos en la compu hay que tocar el aviso del celular y elegir transferir archivos."
+  tecnico: "Notificación «Cargando dispositivo mediante USB» > «Utilizar USB para lo siguiente» > transferencia de archivos (MTP); se abre una ventana en Windows para copiar."
+frases: ["conecto el celular y solo carga", "cómo veo los archivos del teléfono en la compu con el cable", "pasar videos del android a la computadora por usb", "poner el celular en modo transferencia de archivos"]
+pasos:
+  - texto: "Desbloqueá el celular y conectalo a la compu con el cable USB."
+  - texto: "En el celular, tocá el aviso «Cargando dispositivo mediante USB». Donde dice «Utilizar USB para lo siguiente», elegí la opción de transferir archivos (el nombre cambia un poco según la marca)."
+  - texto: "En la compu se abre una ventana con las carpetas del celular: arrastrá los archivos a una carpeta de la compu."
+  - texto: "Cuando termines, expulsá el celular en Windows y recién ahí desenchufá el cable. Google lo explica."
+    abrir: "https://support.google.com/android/answer/9064445?hl=es-419"
+fuentes:
+  - https://support.google.com/android/answer/9064445?hl=es-419
+madurez: T0
+---
+id: CEL-016
+area: perifericos
+titulo:
+  sencillo: "Enchufo el celular Android y la compu no lo reconoce"
+  tecnico: "Android no detectado por USB: cable, puerto y modo USB"
+explicacion:
+  sencillo: "Muchas veces el cable es el culpable: algunos cables solo sirven para cargar y no para pasar datos. También puede ser el puerto USB o que el celular esté bloqueado."
+  tecnico: "Comprobar modo de transferencia de archivos, cable de datos, otro puerto/otra PC, reinicio de ambos y actualización de Android."
+frases: ["la compu no reconoce mi celular", "enchufo el teléfono y no aparece en la pc", "el celular no aparece en este equipo", "el cable del celular no pasa archivos"]
+pasos:
+  - texto: "Desbloqueá el celular y fijate que en el aviso de USB esté elegida la transferencia de archivos y no solo la carga."
+  - texto: "Probá con otro cable: algunos solo cargan y no pasan datos. Probá también otro puerto de la compu, o el celular en otra compu, para saber cuál falla."
+  - texto: "Reiniciá la compu y el celular, y actualizá Android si hay una versión nueva."
+  - texto: "Si no anda con ningún cable, podés pasar las cosas sin cable con Google Drive, Google Fotos o Quick Share. Google lo explica."
+    abrir: "https://support.google.com/android/answer/9064445?hl=es-419"
+fuentes:
+  - https://support.google.com/android/answer/9064445?hl=es-419
+madurez: T0
+---
+id: CEL-017
+area: perifericos
+titulo:
+  sencillo: "Quiero cargar el celular enchufado a la compu"
+  tecnico: "Carga del teléfono por el puerto USB de la PC"
+explicacion:
+  sencillo: "El celular se puede cargar desde un puerto USB de la compu, pero la compu tiene que estar prendida y suele cargar más lento que el cargador de pared."
+  tecnico: "Carga por USB/USB-C desde la PC encendida; si no carga, revisar cable, adaptador, suciedad en el puerto y aviso «Verifica el accesorio de carga»."
+frases: ["puedo cargar el celular en la compu", "el celular no carga enchufado a la computadora", "cargar el teléfono por el usb de la notebook", "el celular carga muy lento en la compu"]
+pasos:
+  - texto: "Fijate que la compu esté prendida y enchufada. Conectá el celular a un puerto USB o USB-C con un cable en buen estado y esperá entre 10 y 15 minutos."
+  - texto: "Si no carga, desenchufá el cable del celular y volvé a conectarlo a los 10 segundos. Revisá que el puerto del celular no tenga pelusa."
+  - texto: "Probá otro cable u otro puerto. Si aparece «Verifica el accesorio de carga», el cable puede estar dañado o no ser compatible."
+  - texto: "Si sigue sin cargar, usá el cargador de pared. Google lo explica."
+    abrir: "https://support.google.com/android/answer/7662405?hl=es-419"
+fuentes:
+  - https://support.google.com/android/answer/7662405?hl=es-419
+madurez: T0
+---
+id: CEL-018
+area: archivos
+titulo:
+  sencillo: "Quiero pasar fotos entre el Android y la compu con Quick Share"
+  tecnico: "Quick Share para Windows (Google)"
+explicacion:
+  sencillo: "Quick Share es una aplicación gratis de Google para mandar fotos, videos y documentos entre un Android y una compu con Windows que estén cerca, sin cable."
+  tecnico: "Windows 10/11 de 64 bits, Android 6+, Bluetooth activado y misma red Wi-Fi, a menos de 5 m. Se descarga del sitio de Google (o versión Samsung en Microsoft Store); lo recibido va a Descargas."
+frases: ["usar quick share en la compu", "mandar fotos del android a la pc como nearby share", "pasar un video del celular a la compu sin cable con quick share", "compartir con dispositivos cercanos entre android y windows"]
+pasos:
+  - texto: "Instalá Quick Share para Windows desde el sitio de Google que indica la ayuda (no lo abras como administrador) y entrá con tu cuenta de Google."
+  - texto: "Prendé el Bluetooth en los dos aparatos, conectalos al mismo Wi-Fi y ponelos cerca."
+    abrir: "ms-settings:bluetooth"
+  - texto: "De la compu al celular: arrastrá el archivo a la ventana de Quick Share (o clic derecho > «Enviar con Quick Share»), elegí el celular y tocá «Compartir». Del celular a la compu: compartilo con Quick Share y en la compu tocá «Aceptar»."
+  - texto: "Lo que recibís en la compu queda en una carpeta de Quick Share dentro de Descargas. Google lo explica."
+    abrir: "https://support.google.com/android/answer/13801258?hl=es-419"
+fuentes:
+  - https://support.google.com/android/answer/13801258?hl=es-419
+madurez: T0
+---
+id: CEL-019
+area: perifericos
+titulo:
+  sencillo: "Conecto el iPhone a la compu y no me deja ver las fotos"
+  tecnico: "Alerta «¿Confiar en esta computadora?» e importación desde iPhone"
+explicacion:
+  sencillo: "La primera vez que enchufás el iPhone, el celular pregunta si confiás en la compu. Si no tocás «Confiar», la compu no puede ver las fotos."
+  tecnico: "Requiere la app Dispositivos Apple, desbloquear y confiar. Con Fotos de iCloud activado hay que descargar los originales al iPhone antes de importar."
+frases: ["el iphone pregunta si confío en esta computadora", "toqué no confiar en el iphone", "enchufo el iphone y no veo las fotos", "la compu no puede ver las fotos del iphone"]
+pasos:
+  - texto: "Instalá la app Dispositivos Apple desde Microsoft Store. Conectá el iPhone con el cable y desbloquealo."
+  - texto: "Cuando el iPhone pregunte si confiás en esta computadora, tocá «Confiar» (o «Permitir»)."
+    abrir: "https://support.apple.com/es-lamr/120267"
+  - texto: "Si tocaste «No confiar» sin querer: en el iPhone andá a Configuración > General > Transferir o restablecer > Restablecer > «Restablecer Localización y privacidad». La próxima vez que lo conectes te vuelve a preguntar."
+    abrir: "https://support.apple.com/es-lamr/109054"
+  - texto: "Si usás Fotos de iCloud, primero descargá en el iPhone los originales en resolución completa; si no, no se pueden importar. Después importalas con la app Fotos de Windows."
+fuentes:
+  - https://support.apple.com/es-lamr/120267
+  - https://support.apple.com/es-lamr/109054
+madurez: T0
+---
+id: CEL-020
+area: perifericos
+titulo:
+  sencillo: "La compu no reconoce mi iPhone"
+  tecnico: "iPhone no detectado en Windows (Dispositivos Apple)"
+explicacion:
+  sencillo: "Si enchufás el iPhone y no aparece, suele ser el cable, el puerto o que no le diste «Confiar». También ayuda tener Windows y el iPhone actualizados."
+  tecnico: "Comprobar barra lateral de Dispositivos Apple, alerta de confianza, cable de datos, otro puerto/PC, suciedad en el conector, actualizar Windows e iOS."
+frases: ["la compu no detecta el iphone", "enchufo el iphone y no aparece en dispositivos apple", "windows no reconoce mi iphone", "el iphone no suena al conectarlo a la compu"]
+pasos:
+  - texto: "Abrí la app Dispositivos Apple, conectá el iPhone desbloqueado y tocá «Confiar» si te lo pregunta. Fijate si aparece en la barra de la izquierda."
+  - texto: "Si no aparece, probá otro cable que sirva para datos y carga, otro puerto USB u otra compu. Si el iPhone no suena ni vibra al enchufarlo, revisá que el conector no tenga suciedad."
+  - texto: "Actualizá Windows y el iPhone a la última versión."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Apple lo explica. Si nada funciona, recomienda contactar al soporte técnico de Apple."
+    abrir: "https://support.apple.com/es-lamr/108643"
+fuentes:
+  - https://support.apple.com/es-lamr/108643
+madurez: T0
+---
+id: CEL-021
+area: archivos
+titulo:
+  sencillo: "Quiero hacer una copia de seguridad del iPhone en la compu"
+  tecnico: "Respaldo local del iPhone con la app Dispositivos Apple"
+explicacion:
+  sencillo: "La app Dispositivos Apple guarda en la compu una copia de todo el iPhone, por si lo perdés o se rompe. Después se puede devolver al mismo iPhone o a uno nuevo."
+  tecnico: "Dispositivos Apple > General > «Respalda todos los datos de tu iPhone en este equipo» > «Respaldar ahora»; opción «Encriptar respaldo local»; restaurar con «Restablecer respaldo»."
+frases: ["hacer backup del iphone en la pc", "guardar una copia del iphone en la computadora", "respaldar el iphone en windows", "copia de seguridad del iphone sin icloud"]
+pasos:
+  - texto: "Instalá la app Dispositivos Apple desde Microsoft Store, conectá el iPhone y tocá «Confiar» si te lo pide."
+  - texto: "En la app, elegí el iPhone en la barra de la izquierda y tocá «General». Marcá «Respalda todos los datos de tu iPhone en este equipo»."
+  - texto: "Si marcás «Encriptar respaldo local», vas a crear una clave: anotala en un lugar seguro, porque sin ella no se puede usar ese respaldo. PC Doctor no necesita saberla."
+  - texto: "Tocá «Respaldar ahora» y esperá a que termine sin desenchufarlo. Apple explica también cómo restaurarlo."
+    abrir: "https://support.apple.com/es-lamr/guide/devices-windows/mchla3c8ed03/windows"
+fuentes:
+  - https://support.apple.com/es-lamr/guide/devices-windows/mchla3c8ed03/windows
+madurez: T0
+---
+id: CEL-022
+area: programas
+titulo:
+  sencillo: "Quiero ver en la compu las fotos de iCloud del iPhone"
+  tecnico: "Fotos en iCloud con iCloud para Windows"
+explicacion:
+  sencillo: "Si tu iPhone guarda las fotos en iCloud, con la aplicación iCloud para Windows las ves en la compu, en el Explorador de archivos, sin enchufar nada."
+  tecnico: "iCloud para Windows (Microsoft Store) > Fotos > activar «Fotos en iCloud»; aparecen en el Explorador como «Fotos de iCloud» y se descargan al abrirlas. Alternativa: iCloud.com/photos."
+frases: ["ver las fotos de icloud en la computadora", "instalar icloud en windows", "bajar las fotos de icloud a la pc", "las fotos del iphone están en icloud y las quiero en la compu"]
+pasos:
+  - texto: "Instalá iCloud para Windows desde Microsoft Store y entrá con la misma cuenta de Apple de tu iPhone. Si Apple te pide verificar tu identidad, el código llega a tu iPhone: es solo para vos."
+    abrir: "https://support.apple.com/es-lamr/guide/icloud-windows/icwee190673a/icloud"
+  - texto: "En iCloud para Windows, tocá la flecha a la derecha de «Fotos en iCloud», activalo y tocá «Aceptar»."
+    abrir: "https://support.apple.com/es-lamr/guide/icloud-windows/icw9f0ba665f/icloud"
+  - texto: "Abrí el Explorador de archivos y tocá «Fotos de iCloud». Hacé doble clic en una foto para descargarla y verla."
+    abrir: "https://support.apple.com/es-lamr/108994"
+fuentes:
+  - https://support.apple.com/es-lamr/guide/icloud-windows/icwee190673a/icloud
+  - https://support.apple.com/es-lamr/guide/icloud-windows/icw9f0ba665f/icloud
+  - https://support.apple.com/es-lamr/108994
+madurez: T0
+---
+id: CEL-023
+area: seguridad
+titulo:
+  sencillo: "¿Dónde veo en la compu las contraseñas que guarda mi iPhone?"
+  tecnico: "Contraseñas de iCloud (Llavero) en Windows"
+explicacion:
+  sencillo: "Las claves que guarda el iPhone (el Llavero de iCloud) se pueden usar en la compu con la aplicación Contraseñas de iCloud, que viene con iCloud para Windows. Ahí se ven, se agregan y se cambian. PC Doctor nunca te va a pedir que le digas una clave."
+  tecnico: "iCloud para Windows > «Contraseñas y Llavero» (requiere autenticación de dos factores); app Contraseñas de iCloud y extensión para Chrome, Edge o Firefox."
+frases: ["ver las claves del iphone en la compu", "usar el llavero de icloud en windows", "las contraseñas del iphone en chrome de la pc", "dónde administro las contraseñas de icloud en la computadora"]
+pasos:
+  - texto: "Abrí iCloud para Windows, tocá la flecha a la derecha de «Contraseñas y Llavero» y activalo. Apple te va a pedir aprobarlo desde tu iPhone: hacelo vos ahí."
+    abrir: "https://support.apple.com/es-lamr/guide/icloud-windows/icw2babf5e03/icloud"
+  - texto: "Para usarlas en el navegador, en esa misma parte tocá «Instalar extensión» al lado de Chrome, Edge o Firefox. Ojo: el navegador deja de guardar claves por su cuenta."
+  - texto: "Para verlas, cambiarlas o borrarlas, abrí la aplicación Contraseñas de iCloud. Lo que cambies ahí se cambia también en el iPhone."
+    abrir: "https://support.apple.com/es-lamr/guide/icloud-windows/icwa812f1681/icloud"
+fuentes:
+  - https://support.apple.com/es-lamr/guide/icloud-windows/icw2babf5e03/icloud
+  - https://support.apple.com/es-lamr/guide/icloud-windows/icwa812f1681/icloud
+madurez: T0
+---
+id: CEL-024
+area: programas
+titulo:
+  sencillo: "Quiero ver en la compu las fotos del celular que están en Google Fotos"
+  tecnico: "Google Fotos en la web (photos.google.com): ver, descargar y subir"
+explicacion:
+  sencillo: "Si el celular tiene activada la copia de seguridad de Google Fotos, todas tus fotos se ven en la compu entrando a photos.google.com con tu cuenta de Google. Desde ahí también las podés bajar o subir otras."
+  tecnico: "Copia de seguridad en la app (Configuración de Fotos > Copia de seguridad); en la PC, photos.google.com: Más > Descargar; «Crear y agregar fotos» > «Importar fotos»."
+frases: ["ver google fotos en la computadora", "bajar una foto de google fotos a la pc", "subir fotos de la compu a google fotos", "dónde veo las fotos del celular en la compu con google"]
+pasos:
+  - texto: "En el celular, abrí Google Fotos, tocá tu foto de perfil > «Configuración de Fotos» > «Copia de seguridad» y fijate que esté activada."
+    abrir: "https://support.google.com/photos/answer/6193313?hl=es-419&co=GENIE.Platform%3DAndroid"
+  - texto: "En la compu, entrá a photos.google.com con la misma cuenta de Google. Arriba tenés la barra de búsqueda: probá escribir «playa» o «perro»."
+    abrir: "https://support.google.com/photos/answer/6220402?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Para bajar una foto a la compu: abrila, tocá el ícono «Más» y elegí «Descargar»."
+    abrir: "https://support.google.com/photos/answer/7652919?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Para subir fotos de la compu: arriba a la derecha tocá «Crear y agregar fotos» > «Importar fotos», elegilas y tocá «Abrir»."
+    abrir: "https://support.google.com/photos/answer/6193313?hl=es-419&co=GENIE.Platform%3DDesktop"
+fuentes:
+  - https://support.google.com/photos/answer/6220402?hl=es-419&co=GENIE.Platform%3DDesktop
+  - https://support.google.com/photos/answer/7652919?hl=es-419&co=GENIE.Platform%3DDesktop
+  - https://support.google.com/photos/answer/6193313?hl=es-419&co=GENIE.Platform%3DDesktop
+  - https://support.google.com/photos/answer/6193313?hl=es-419&co=GENIE.Platform%3DAndroid
+madurez: T0
+---
+id: CEL-025
+area: archivos
+titulo:
+  sencillo: "El celular se quedó sin espacio y quiero liberar lugar con Google Fotos"
+  tecnico: "«Libera espacio en este dispositivo» en Google Fotos"
+explicacion:
+  sencillo: "Google Fotos puede borrar del celular las fotos que ya tienen copia en tu cuenta. Siguen viéndose en la aplicación y en la compu, pero ya no ocupan lugar en el teléfono."
+  tecnico: "Google Fotos > foto de perfil > «Libera espacio en este dispositivo»; borra solo copias locales ya respaldadas (las de menos de 30 días pueden quedar). Sin conexión no se ven en la galería."
+frases: ["el celular dice almacenamiento lleno por las fotos", "liberar espacio del teléfono sin perder las fotos", "borrar fotos del celular que ya están en google fotos", "no me entran más fotos en el celular"]
+pasos:
+  - texto: "Antes que nada, fijate que la copia de seguridad de Google Fotos esté activada y al día. Podés ver tus fotos en la compu en photos.google.com."
+    abrir: "https://support.google.com/photos/answer/6193313?hl=es-419&co=GENIE.Platform%3DAndroid"
+  - texto: "En el celular, abrí Google Fotos, tocá tu foto de perfil y elegí «Libera espacio en este dispositivo»."
+  - texto: "Te dice cuánto lugar vas a recuperar. Tocá el botón para liberar: solo se borran del teléfono las que ya tienen copia."
+  - texto: "Después no las vas a ver en la galería del celular sin Internet, pero sí en Google Fotos. Google lo explica."
+    abrir: "https://support.google.com/photos/answer/6128843?hl=es-419&co=GENIE.Platform%3DAndroid"
+fuentes:
+  - https://support.google.com/photos/answer/6128843?hl=es-419&co=GENIE.Platform%3DAndroid
+  - https://support.google.com/photos/answer/6193313?hl=es-419&co=GENIE.Platform%3DAndroid
+madurez: T0

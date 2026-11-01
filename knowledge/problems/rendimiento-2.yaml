@@ -1,0 +1,518 @@
+# Rendimiento y mantenimiento de Windows: Administrador de tareas, procesos que consumen, disco, memoria virtual, limpieza, energía, monitores y registros. Guiadas con fuente oficial.
+id: REN-001
+area: rendimiento
+titulo:
+  sencillo: "Quiero ver qué programa está haciendo trabajar a la compu"
+  tecnico: "Administrador de tareas: pestañas Procesos y Rendimiento"
+explicacion:
+  sencillo: "El Administrador de tareas muestra cada programa abierto y cuánto usa del procesador, de la memoria, del disco y de la red. Sirve para descubrir cuál es el que pone pesada la compu."
+  tecnico: "Ctrl + Mayús + Esc. Procesos: aplicaciones y procesos en segundo plano con su consumo; Rendimiento: gráficos de uso total por recurso."
+frases: ["cómo veo qué programa me come la compu", "qué es lo que está consumiendo tanto en la pc", "abrir el administrador de tareas", "quiero saber qué programa usa más memoria"]
+pasos:
+  - texto: "Apretá Ctrl + Mayús + Esc. Si la ventana se abre chiquita, tocá «Más detalles» abajo."
+    abrir: "https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows"
+  - texto: "En «Procesos» está la lista de programas. Fijate en las columnas «CPU», «Memoria» y «Disco»: muestran cuánto usa cada uno en este momento."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-server/support-tools/support-tools-task-manager"
+  - texto: "En «Rendimiento» ves con gráficos el uso total del procesador, la memoria, el disco y la red."
+  - texto: "Si un programa que no estás usando aparece gastando mucho, cerralo. Microsoft lo explica entre sus consejos para que la compu ande mejor."
+    abrir: "https://support.microsoft.com/windows/tips-to-improve-pc-performance-in-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96"
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-server/support-tools/support-tools-task-manager
+  - https://support.microsoft.com/windows/tips-to-improve-pc-performance-in-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+madurez: T0
+---
+id: REN-002
+area: rendimiento
+titulo:
+  sencillo: "«Antimalware Service Executable» usa mucho procesador"
+  tecnico: "MsMpEng.exe (Antivirus de Microsoft Defender) con uso alto de CPU"
+explicacion:
+  sencillo: "Ese nombre es el antivirus de Windows (Microsoft Defender) trabajando. Cuando revisa la compu, después de actualizarse o al abrir programas nuevos, puede usar mucho procesador un rato. No hay que apagarlo: es lo que te protege."
+  tecnico: "Picos por análisis programados, análisis tras actualizaciones de inteligencia de seguridad, archivos complejos o conflictos con otro producto de seguridad."
+frases: ["el antimalware service executable me consume todo", "antimalware service executable usa mucho cpu", "el antivirus de windows me pone lenta la compu", "msmpeng.exe está al 100"]
+pasos:
+  - texto: "Si la compu recién se prendió o se actualizó, esperá unos minutos: el antivirus suele estar haciendo un análisis y después baja solo."
+    abrir: "https://learn.microsoft.com/defender-endpoint/schedule-antivirus-scans"
+  - texto: "Windows trata de revisar la compu cuando no la estás usando. Dejala prendida y enchufada un rato sin usarla para que termine tranquila."
+    abrir: "https://support.microsoft.com/windows/schedule-a-scan-in-microsoft-defender-antivirus-54b64e9c-880a-c6b6-2416-0eb330ed5d2d"
+  - texto: "Revisá que no tengas dos antivirus a la vez: chocan entre sí. Abrí Seguridad de Windows > «Protección antivirus y contra amenazas» y fijate cuál figura. Si instalaste otro, escribile a PC Doctor «tengo dos antivirus»."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "No lo desactives ni lo cierres a la fuerza. Si sigue alto todo el día durante varios días, escribile a PC Doctor «creo que tengo un virus»."
+    abrir: "https://learn.microsoft.com/defender-endpoint/troubleshoot-performance-issues"
+fuentes:
+  - https://learn.microsoft.com/defender-endpoint/troubleshoot-performance-issues
+  - https://learn.microsoft.com/defender-endpoint/schedule-antivirus-scans
+  - https://support.microsoft.com/windows/schedule-a-scan-in-microsoft-defender-antivirus-54b64e9c-880a-c6b6-2416-0eb330ed5d2d
+madurez: T0
+---
+id: REN-003
+area: rendimiento
+titulo:
+  sencillo: "El Administrador de tareas muestra el disco al 100 %"
+  tecnico: "Uso de disco sostenido al 100 %"
+explicacion:
+  sencillo: "Cuando el disco está al 100 %, todo tarda: abrir carpetas, programas o el navegador. Suele pasar un rato después de prender o mientras Windows trabaja. Si pasa siempre, hay que ver qué programa lo está usando."
+  tecnico: "Disco saturado de lecturas y escrituras (frecuente en discos rígidos). Identificar el proceso con el Administrador de tareas o el Monitor de recursos."
+frases: ["el disco está al 100 por ciento", "disco al 100 en el administrador de tareas", "el disco no baja del 100", "el uso del disco está siempre al máximo"]
+pasos:
+  - texto: "Apretá Ctrl + Mayús + Esc, entrá en «Procesos» y mirá la columna «Disco»: ahí ves qué programa lo está usando."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-server/support-tools/support-tools-task-manager"
+  - texto: "Cerrá los programas que no uses y reiniciá la compu (Inicio > Encendido > Reiniciar). Fijate si después baja."
+    abrir: "https://support.microsoft.com/windows/tips-to-improve-pc-performance-in-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96"
+  - texto: "Para ver más detalle: apretá Windows + R, escribí perfmon /res y apretá Enter. En la pestaña «Disco» del Monitor de recursos figura cada programa que está leyendo o escribiendo."
+    abrir: "https://learn.microsoft.com/windows-server/administration/windows-commands/perfmon"
+  - texto: "Si la compu tiene un disco rígido común (no SSD) y esto pasa siempre, escribile a PC Doctor «cambiar el disco por un SSD»."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-server/support-tools/support-tools-task-manager
+  - https://support.microsoft.com/windows/tips-to-improve-pc-performance-in-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96
+  - https://learn.microsoft.com/windows-server/administration/windows-commands/perfmon
+madurez: T0
+---
+id: REN-004
+area: rendimiento
+titulo:
+  sencillo: "«Host de servicio» aparece usando mucho en el Administrador de tareas"
+  tecnico: "svchost.exe (Service Host) con consumo alto"
+explicacion:
+  sencillo: "«Host de servicio» no es un virus: es la forma en que Windows hace funcionar sus servicios (actualizaciones, red, sonido y otros). Por eso hay muchos en la lista. Si uno gasta mucho, hay que ver qué servicio tiene adentro."
+  tecnico: "svchost.exe aloja servicios cargados desde DLL. Con más de 3,5 GB de RAM cada servicio corre en su propia instancia, así que el servicio que consume se identifica directamente."
+frases: ["service host usa mucho cpu", "host de servicio me consume la memoria", "qué es svchost y por qué hay tantos", "un host de servicio está al máximo"]
+pasos:
+  - texto: "Abrí el Administrador de tareas (Ctrl + Mayús + Esc). En «Procesos», tocá la flechita al lado del «Host de servicio» que más gasta: abajo aparece el nombre del servicio que está trabajando."
+    abrir: "https://learn.microsoft.com/windows/application-management/svchost-service-refactoring"
+  - texto: "Que haya muchos «Host de servicio» es normal: Windows pone cada servicio en el suyo para que, si uno falla, no arrastre a los demás."
+  - texto: "No detengas servicios desde la pestaña «Servicios»: Windows los necesita. Si el consumo alto sigue todo el día, escribile a PC Doctor «la computadora está lenta»."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-server/support-tools/support-tools-task-manager"
+fuentes:
+  - https://learn.microsoft.com/windows/application-management/svchost-service-refactoring
+  - https://learn.microsoft.com/troubleshoot/windows-server/support-tools/support-tools-task-manager
+madurez: T0
+---
+id: REN-005
+area: rendimiento
+titulo:
+  sencillo: "Hay aplicaciones que siguen funcionando aunque no las abra"
+  tecnico: "Permisos de aplicaciones en segundo plano"
+explicacion:
+  sencillo: "Algunas aplicaciones siguen trabajando escondidas, en «segundo plano», aunque no las tengas abiertas. Si no las necesitás, les podés decir que no lo hagan y la compu queda más liviana."
+  tecnico: "Windows 11: Aplicaciones > Aplicaciones instaladas > … > Opciones avanzadas > permisos de aplicaciones en segundo plano = Nunca. Windows 10: Privacidad > Aplicaciones en segundo plano."
+frases: ["apps que funcionan en segundo plano", "que las aplicaciones no queden andando escondidas", "desactivar las aplicaciones en segundo plano", "programas que siguen funcionando aunque los cierre"]
+pasos:
+  - texto: "Abrí Aplicaciones instaladas."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Buscá la aplicación, tocá los tres puntitos (…) y elegí «Opciones avanzadas». Si no aparece esa opción, esa aplicación no se maneja desde acá."
+  - texto: "En la parte de permisos de segundo plano, elegí «Nunca». Hacelo solo con aplicaciones que no usás seguido."
+  - texto: "En Windows 10 está en Privacidad > «Aplicaciones en segundo plano». Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/tips-to-improve-pc-performance-in-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96"
+fuentes:
+  - https://support.microsoft.com/windows/tips-to-improve-pc-performance-in-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96
+madurez: T0
+---
+id: REN-006
+area: rendimiento
+titulo:
+  sencillo: "Quiero desfragmentar u optimizar el disco"
+  tecnico: "Desfragmentar y optimizar unidades (desfragmentación en HDD, TRIM en SSD)"
+explicacion:
+  sencillo: "Windows ya ordena el disco solo, una vez por semana. En los discos rígidos junta los pedazos de los archivos; en los SSD hace otra limpieza distinta. Si querés, también lo podés hacer a mano."
+  tecnico: "Optimización programada semanal por defecto: desfragmenta discos rígidos y envía TRIM a los SSD."
+frases: ["cómo desfragmento el disco", "optimizar el disco duro", "hay que desfragmentar un ssd", "ordenar el disco para que ande más rápido"]
+pasos:
+  - texto: "Tocá la lupa de la barra de tareas, escribí «desfragmentar» y abrí «Desfragmentar y optimizar unidades»."
+  - texto: "Elegí el disco y tocá «Optimizar». En un disco rígido podés tocar antes «Analizar» para ver si hace falta."
+  - texto: "Fijate que la «Optimización programada» esté activada: así Windows lo sigue haciendo solo."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/defragment-optimize-your-data-drives-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/defragment-optimize-your-data-drives-in-windows
+madurez: T0
+---
+id: REN-007
+area: archivos
+titulo:
+  sencillo: "Quiero que Windows libere espacio solo, sin tener que acordarme"
+  tecnico: "Configurar la ejecución automática del Sensor de almacenamiento"
+explicacion:
+  sencillo: "El Sensor de almacenamiento borra solo los archivos temporales y, si querés, lo viejo de la Papelera y de Descargas. Viene apagado: lo podés prender y elegir cada cuánto trabaja."
+  tecnico: "Sistema > Almacenamiento > Sensor de almacenamiento: limpieza automática, frecuencia, Papelera, Descargas y contenido de OneDrive a solo en línea. Actúa solo en la unidad del sistema (C:)."
+frases: ["que la compu borre sola los temporales", "activar el sensor de almacenamiento", "limpieza automática del disco", "que se vacíe sola la papelera"]
+pasos:
+  - texto: "Abrí la configuración del Sensor de almacenamiento y activalo."
+    abrir: "ms-settings:storagepolicies"
+  - texto: "Elegí cada cuánto querés que trabaje. Si no cambiás nada, trabaja cuando queda poco espacio."
+  - texto: "Ojo antes de activar el borrado de Descargas o de la Papelera: lo que tenga más tiempo que el que elijas se borra. Pasá antes a otra carpeta lo que quieras guardar."
+  - texto: "Si usás OneDrive, puede dejar archivos «solo en línea»: no se borran, siguen en la nube. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/manage-drive-space-with-storage-sense-654f6ada-7bfc-45e5-966b-e24aded96ad5"
+fuentes:
+  - https://support.microsoft.com/windows/manage-drive-space-with-storage-sense-654f6ada-7bfc-45e5-966b-e24aded96ad5
+madurez: T0
+---
+id: REN-008
+area: archivos
+titulo:
+  sencillo: "Voy a borrar los archivos temporales: ¿qué casillas marco?"
+  tecnico: "Elegir categorías en Archivos temporales y en el Liberador de espacio en disco"
+explicacion:
+  sencillo: "Cuando limpiás los archivos temporales, Windows te muestra una lista de cosas para borrar, cada una con lo que ocupa. La mayoría se puede borrar sin problema, pero conviene leer cada casilla antes, porque algunas pueden incluir cosas tuyas."
+  tecnico: "Sistema > Almacenamiento > Archivos temporales (Windows 11) o Liberador de espacio en disco; por defecto vienen marcados archivos de programas descargados, temporales de Internet y miniaturas."
+frases: ["qué tildo para borrar los temporales", "qué casillas marco en el liberador de espacio", "es seguro borrar todos los archivos temporales", "qué son las miniaturas y los temporales de internet"]
+pasos:
+  - texto: "Abrí Almacenamiento y tocá «Archivos temporales». Esperá a que Windows calcule cuánto ocupa cada cosa."
+    abrir: "ms-settings:storagesense"
+  - texto: "Leé cada casilla antes de marcarla. Si en la lista ves «Descargas» o la Papelera, marcalas solo si ya revisaste lo que hay adentro y no necesitás nada."
+  - texto: "Cuando tengas marcado solo lo que querés borrar, tocá «Quitar archivos»."
+    abrir: "https://support.microsoft.com/windows/tips-to-improve-pc-performance-in-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96"
+  - texto: "En el Liberador de espacio en disco pasa lo mismo: vienen marcadas algunas casillas por defecto y podés desmarcar las que quieras conservar. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/disk-cleanup-in-windows-8a96ff42-5751-39ad-23d6-434b4d5b9a68"
+derivar: "Si lo que querés es que la limpieza se haga sola, escribile a PC Doctor «activar el sensor de almacenamiento»."
+fuentes:
+  - https://support.microsoft.com/windows/tips-to-improve-pc-performance-in-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96
+  - https://support.microsoft.com/windows/disk-cleanup-in-windows-8a96ff42-5751-39ad-23d6-434b4d5b9a68
+madurez: T0
+---
+id: REN-009
+area: rendimiento
+titulo:
+  sencillo: "Un programa dice que no hay memoria suficiente (memoria virtual)"
+  tecnico: "Archivo de paginación (memoria virtual) insuficiente o desactivado"
+explicacion:
+  sencillo: "Además de la memoria RAM, Windows usa un archivo en el disco como memoria de reserva. Si ese archivo está apagado o el disco está lleno, los programas pueden dar errores de memoria, colgarse o cerrarse."
+  tecnico: "Límite de confirmación = RAM + archivos de paginación. Administrado por el sistema (opción por defecto), crece hasta 3 × RAM o 4 GB si hay espacio libre en el disco."
+frases: ["dice que la memoria virtual es insuficiente", "el programa dice que no hay memoria", "qué es el archivo de paginación", "me desactivaron la memoria virtual"]
+pasos:
+  - texto: "Revisá que el disco C: tenga espacio libre: la memoria virtual crece usando el disco. Si está lleno, escribile a PC Doctor «el disco está casi lleno»."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/performance/introduction-to-the-page-file"
+  - texto: "Abrí Configuración > Sistema > Información (o apretá Windows + Pausa) y tocá «Configuración avanzada del sistema». En «Rendimiento», tocá «Configuración»."
+    abrir: "ms-settings:about"
+  - texto: "Pestaña «Opciones avanzadas» > «Memoria virtual» > «Cambiar». Lo normal es que esté marcado «Administrar automáticamente el tamaño del archivo de paginación para todas las unidades». Si alguien lo cambió, volvé a marcarlo, tocá «Aceptar» y reiniciá."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/performance/how-to-determine-the-appropriate-page-file-size-for-64-bit-versions-of-windows"
+  - texto: "Si aun así siguen los errores de memoria, Microsoft explica cómo poner un tamaño fijo más grande."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/performance/slow-page-file-growth-memory-allocation-errors"
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-client/performance/introduction-to-the-page-file
+  - https://learn.microsoft.com/troubleshoot/windows-client/performance/how-to-determine-the-appropriate-page-file-size-for-64-bit-versions-of-windows
+  - https://learn.microsoft.com/troubleshoot/windows-client/performance/slow-page-file-growth-memory-allocation-errors
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+madurez: T0
+---
+id: REN-010
+area: rendimiento
+titulo:
+  sencillo: "Quiero sacar las animaciones para que la compu vaya más rápida"
+  tecnico: "Opciones de rendimiento: Ajustar para obtener el mejor rendimiento"
+explicacion:
+  sencillo: "Windows usa sombras, animaciones y otros efectos que se ven lindos pero gastan recursos. En compus con poca potencia, sacarlos puede hacerlas más ágiles. Se ve más simple, pero funciona igual."
+  tecnico: "Opciones de rendimiento > Efectos visuales > Ajustar para obtener el mejor rendimiento."
+frases: ["sacar los efectos visuales de windows", "quitar las animaciones para que ande más rápido", "poner windows en modo rendimiento", "que windows se vea más simple pero ande mejor"]
+pasos:
+  - texto: "Tocá la lupa, escribí «rendimiento» y abrí «Ajustar la apariencia y rendimiento de Windows»."
+  - texto: "En la pestaña «Efectos visuales», elegí «Ajustar para obtener el mejor rendimiento» y tocá «Aceptar»."
+  - texto: "Microsoft lo explica entre sus consejos para que la compu ande mejor."
+    abrir: "https://support.microsoft.com/windows/tips-to-improve-pc-performance-in-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96"
+fuentes:
+  - https://support.microsoft.com/windows/tips-to-improve-pc-performance-in-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96
+madurez: T0
+---
+id: REN-011
+area: rendimiento
+titulo:
+  sencillo: "La compu se calienta y se pone lenta"
+  tecnico: "Pérdida de rendimiento por temperatura alta"
+explicacion:
+  sencillo: "Cuando la compu está muy caliente, puede andar más lenta. Dejarla enfriar y cerrar lo que más la exige suele ayudar."
+  tecnico: "Con temperatura alta el equipo reduce el rendimiento; las tareas exigentes (video, juegos) aumentan el calor."
+frases: ["la notebook se pone re caliente y se tilda", "cuando se calienta anda lentísima", "la compu quema y se pone lenta", "se recalienta y baja el rendimiento"]
+pasos:
+  - texto: "Llevala a un lugar más fresco y esperá unos cinco minutos para ver si vuelve a andar más rápido."
+    abrir: "https://support.microsoft.com/help/4023507"
+  - texto: "Cerrá un rato lo que más la exige, como videos o juegos: así se enfría."
+  - texto: "Si es notebook, enchufala cuando puedas."
+  - texto: "Abrí el Administrador de tareas (Ctrl + Mayús + Esc) y fijate si algún programa que no estás usando gasta mucho procesador."
+    abrir: "https://support.microsoft.com/windows/tips-to-improve-pc-performance-in-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96"
+derivar: "Si se calienta aunque no estés haciendo nada pesado, o el ventilador hace un ruido raro, puede necesitar una limpieza o una revisión por dentro: llevala a un técnico."
+fuentes:
+  - https://support.microsoft.com/help/4023507
+  - https://support.microsoft.com/windows/tips-to-improve-pc-performance-in-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96
+madurez: T0
+---
+id: REN-012
+area: rendimiento
+titulo:
+  sencillo: "El ventilador suena fuerte cuando uso el navegador"
+  tecnico: "Navegador con consumo alto: ahorro de energía en Edge y Chrome"
+explicacion:
+  sencillo: "Muchas pestañas, videos o páginas pesadas hacen trabajar al procesador, y el ventilador se acelera para enfriarlo. Edge y Chrome tienen un ahorro de energía que frena lo que hacen las pestañas que no estás mirando."
+  tecnico: "Edge: Ahorro de energía (antes «modo de eficiencia») en Sistema y rendimiento > Rendimiento. Chrome: Ahorro de energía en Rendimiento (solo con batería baja o desenchufado)."
+frases: ["el ventilador se acelera cuando abro chrome", "la compu hace ruido de turbina con el navegador", "cuando navego el cooler suena fuerte", "el edge hace que suene el ventilador"]
+pasos:
+  - texto: "En Edge: «Configuración y más» (…) > «Configuración» > «Sistema y rendimiento» > «Rendimiento», y activá el ahorro de energía (antes se llamaba «modo de eficiencia»)."
+    abrir: "https://support.microsoft.com/edge/learn-about-performance-features-in-microsoft-edge"
+  - texto: "En Chrome: tres puntitos («Más») > «Configuración» > «Rendimiento», y activá «Ahorro de energía». Ojo: en Chrome solo funciona con la notebook desenchufada o con poca batería."
+    abrir: "https://support.google.com/chrome/answer/12929150?hl=es-419"
+  - texto: "Si el ventilador sigue fuerte aunque cierres el navegador, escribile a PC Doctor «la compu se calienta y se pone lenta»."
+fuentes:
+  - https://support.microsoft.com/edge/learn-about-performance-features-in-microsoft-edge
+  - https://support.google.com/chrome/answer/12929150?hl=es-419
+madurez: T0
+---
+id: REN-013
+area: rendimiento
+titulo:
+  sencillo: "Quiero ver en detalle qué usa el disco, la memoria o Internet"
+  tecnico: "Monitor de recursos (perfmon /res)"
+explicacion:
+  sencillo: "El Monitor de recursos es como un Administrador de tareas más detallado: muestra en vivo qué programa usa el procesador, la memoria, el disco o la red."
+  tecnico: "Vista de recursos de Windows: pestañas Información general, CPU, Memoria, Disco y Red; filtro por proceso con las casillas."
+frases: ["abrir el monitor de recursos", "ver qué programa usa internet", "ver en detalle qué programa usa el disco", "resmon"]
+pasos:
+  - texto: "Apretá Windows + R, escribí perfmon /res y apretá Enter."
+    abrir: "https://learn.microsoft.com/windows-server/administration/windows-commands/perfmon"
+  - texto: "Arriba tenés pestañas para el procesador, la memoria, el disco y la red. Si marcás la casilla de un programa, la ventana te muestra solo lo que hace ese programa."
+    abrir: "https://learn.microsoft.com/training/modules/monitor-windows-server-performance/3-use-resource-monitor-to-review-current-resource-usage"
+  - texto: "Tené en cuenta que muestra lo que pasa en ese momento: miralo un rato antes de sacar conclusiones."
+fuentes:
+  - https://learn.microsoft.com/windows-server/administration/windows-commands/perfmon
+  - https://learn.microsoft.com/training/modules/monitor-windows-server-performance/3-use-resource-monitor-to-review-current-resource-usage
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+madurez: T0
+---
+id: REN-014
+area: windows
+titulo:
+  sencillo: "Quiero ver el historial de errores y cuelgues de la compu"
+  tecnico: "Monitor de confiabilidad (perfmon /rel)"
+explicacion:
+  sencillo: "Windows anota día por día los programas que se colgaron, los errores de Windows y lo que se instaló. En un gráfico podés ver desde cuándo empezaron los problemas."
+  tecnico: "Monitor de confiabilidad: índice de estabilidad e informe por día (errores de aplicaciones, de Windows, de hardware, varios e instalaciones de software)."
+frases: ["ver el historial de errores de la compu", "desde cuándo empezó a fallar la compu", "abrir el monitor de confiabilidad", "ver qué programas se colgaron"]
+pasos:
+  - texto: "Apretá Windows + R, escribí perfmon /rel y apretá Enter."
+    abrir: "https://learn.microsoft.com/windows-server/administration/windows-commands/perfmon"
+  - texto: "Cada columna es un día. Los íconos de error marcan fallas (programas que dejaron de funcionar, errores de Windows) y los de información, programas o actualizaciones que se instalaron."
+  - texto: "Tocá un día para ver abajo el detalle. Si los problemas empezaron justo después de instalar algo, ahí tenés una pista."
+    abrir: "https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749583(v=ws.10)"
+  - texto: "Si se repite siempre el mismo programa, actualizalo o escribile a PC Doctor «un programa se cierra solo»."
+fuentes:
+  - https://learn.microsoft.com/windows-server/administration/windows-commands/perfmon
+  - https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749583(v=ws.10)
+madurez: T0
+---
+id: REN-015
+area: windows
+titulo:
+  sencillo: "Abrí el Visor de eventos y está lleno de errores: ¿es grave?"
+  tecnico: "Visor de eventos (eventvwr): mensajes habituales del sistema"
+explicacion:
+  sencillo: "El Visor de eventos es un registro donde Windows anota muchísimos mensajes del sistema. Que aparezcan errores o advertencias no quiere decir por sí solo que la compu esté rota. Ojo: los estafadores telefónicos muestran esos mensajes normales para asustarte."
+  tecnico: "Registros de eventos de Windows (eventvwr). Las estafas de soporte técnico presentan mensajes normales del sistema como síntomas de problemas."
+frases: ["el visor de eventos tiene un montón de errores", "me llamaron y me dijeron que abra el visor de eventos", "qué es el visor de eventos", "hay errores rojos en el registro de windows"]
+pasos:
+  - texto: "Si alguien te llamó diciendo que es de Microsoft y te pidió abrir el Visor de eventos, cortá: es una estafa. Microsoft no te llama si vos no lo pediste."
+    abrir: "https://support.microsoft.com/windows/protect-yourself-from-tech-support-scams-2ebf91bd-f94c-2a8a-e541-f5c800d18435"
+  - texto: "Si lo querés mirar vos: apretá Windows + R, escribí eventvwr y apretá Enter."
+    abrir: "https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766401(v=ws.11)"
+  - texto: "Para algo más fácil de entender, usá el historial de confiabilidad: escribile a PC Doctor «ver el historial de errores de la compu»."
+fuentes:
+  - https://support.microsoft.com/windows/protect-yourself-from-tech-support-scams-2ebf91bd-f94c-2a8a-e541-f5c800d18435
+  - https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766401(v=ws.11)
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+madurez: T0
+---
+id: REN-016
+area: rendimiento
+titulo:
+  sencillo: "La búsqueda de Windows (indexación) usa mucho la compu"
+  tecnico: "SearchIndexer: rendimiento de la indización de Windows Search"
+explicacion:
+  sencillo: "Para encontrar archivos rápido, Windows arma una lista (un «índice») de todo lo que tenés. Mientras la arma usa procesador y disco, sobre todo después de copiar muchos archivos. Con muchísimos archivos o un correo de Outlook enorme, puede andar pesado."
+  tecnico: "El rendimiento depende de la cantidad de elementos indizados y del tamaño del índice; por encima de 400.000 elementos pueden aparecer problemas."
+frases: ["el searchindexer consume mucho", "la indexación de windows me pone lenta la pc", "la búsqueda de windows usa mucho disco", "windows search indexer al 100"]
+pasos:
+  - texto: "Si copiaste muchos archivos hace poco, dejá la compu prendida y enchufada unas horas: la indexación termina sola y se frena mientras la estás usando."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/shell-experience/windows-search-performance-issues"
+  - texto: "Para que indexe menos: Configuración > Privacidad y seguridad > la sección de búsqueda en Windows, y usá la opción para excluir una carpeta con muchísimos archivos que nunca buscás."
+  - texto: "Si la búsqueda anda mal o no termina nunca, en esa misma sección entrá en las opciones avanzadas de indexación > «Opciones avanzadas» > «Reconstruir». Puede tardar hasta un día."
+  - texto: "No apagues el servicio de búsqueda ni uses programas «optimizadores» que lo apagan: Microsoft recomienda no usarlos si querés buscar en la compu."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-client/shell-experience/windows-search-performance-issues
+madurez: T0
+---
+id: REN-017
+area: programas
+titulo:
+  sencillo: "No uso Copilot y lo quiero sacar de la compu"
+  tecnico: "Desinstalar la aplicación Microsoft Copilot"
+explicacion:
+  sencillo: "Copilot es el asistente con inteligencia artificial de Microsoft. Es una aplicación más: si no la usás, la podés desinstalar, y si algún día la querés, la volvés a bajar de la Microsoft Store."
+  tecnico: "Aplicaciones > Aplicaciones instaladas > Copilot > … > Desinstalar. La tecla Copilot se puede reasignar en Personalización > Entrada de texto."
+frases: ["quiero sacar copilot", "desinstalar copilot de windows", "se me abre copilot y no lo uso", "cómo quito la inteligencia artificial de la compu"]
+pasos:
+  - texto: "Abrí Aplicaciones instaladas, buscá «Copilot», tocá los tres puntitos (…) y elegí «Desinstalar»."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Si es una compu del trabajo, consultá antes con quien la administra. Si después lo querés de vuelta, buscalo en la Microsoft Store."
+    abrir: "https://learn.microsoft.com/windows/client-management/manage-windows-copilot"
+derivar: "Si lo que te molesta es que se abre al tocar una tecla nueva del teclado, escribile a PC Doctor «toco sin querer la tecla de Copilot»."
+fuentes:
+  - https://learn.microsoft.com/windows/client-management/manage-windows-copilot
+  - https://support.microsoft.com/windows/uninstall-or-remove-apps-and-programs-in-windows-4b55f974-2cc6-2d2b-d092-5905080eaf98
+madurez: T0
+---
+id: REN-018
+area: programas
+titulo:
+  sencillo: "La compu nueva vino con programas que no uso"
+  tecnico: "Desinstalar aplicaciones preinstaladas"
+explicacion:
+  sencillo: "Muchas compus vienen con juegos, programas de prueba y aplicaciones del fabricante. Los que no usás se pueden desinstalar para liberar espacio. Algunos son parte de Windows y no se pueden sacar."
+  tecnico: "Desinstalación desde Aplicaciones instaladas o Panel de control > Programas y características; las aplicaciones integradas de Windows no se pueden quitar."
+frases: ["la compu vino llena de programas que no uso", "sacar los programas que trae la notebook", "desinstalar los juegos que vinieron con la compu", "borrar los programas de fábrica"]
+pasos:
+  - texto: "Abrí Aplicaciones instaladas, buscá el programa, tocá los tres puntitos (…) > «Desinstalar» y seguí los pasos. Desinstalá solo lo que reconocés y sabés que no usás."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Si un programa no se deja sacar desde ahí, probá desde Panel de control > «Programas» > «Programas y características»: clic derecho > «Desinstalar»."
+    abrir: "https://support.microsoft.com/windows/uninstall-or-remove-apps-and-programs-in-windows-4b55f974-2cc6-2d2b-d092-5905080eaf98"
+  - texto: "Si te aparece un antivirus de prueba vencido, escribile a PC Doctor «el antivirus de prueba se venció»."
+fuentes:
+  - https://support.microsoft.com/windows/uninstall-or-remove-apps-and-programs-in-windows-4b55f974-2cc6-2d2b-d092-5905080eaf98
+  - https://support.microsoft.com/windows/tips-to-improve-pc-performance-in-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96
+madurez: T0
+---
+id: REN-019
+area: rendimiento
+titulo:
+  sencillo: "Quiero que la compu gaste menos energía sin tocar mil opciones"
+  tecnico: "Recomendaciones de energía (Sistema > Energía y batería)"
+explicacion:
+  sencillo: "Windows 11 junta en una sola pantalla los ajustes que más energía ahorran: el modo de energía, el brillo, cuándo se apaga la pantalla y cuándo se suspende la compu. Los aplicás de a uno."
+  tecnico: "Sistema > Energía y batería > Recomendaciones de energía; cada recomendación se aplica por separado y varía según el equipo."
+frases: ["recomendaciones de energía de windows", "que la compu consuma menos luz", "ahorrar energía en la pc", "configurar la energía como recomienda windows"]
+pasos:
+  - texto: "Abrí Recomendaciones de energía."
+    abrir: "ms-settings:energyrecommendations"
+  - texto: "Leé cada recomendación y aplicá las que quieras, por ejemplo que la pantalla se apague y la compu se suspenda después de unos minutos sin usarla."
+  - texto: "Algunas solo aparecen en notebooks o en equipos con sensores. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/power-battery/learn-more-about-energy-recommendations"
+derivar: "Si después la pantalla se apaga demasiado rápido, escribile a PC Doctor «la pantalla se apaga muy rápido»."
+fuentes:
+  - https://support.microsoft.com/windows/experience/power-battery/learn-more-about-energy-recommendations
+madurez: T0
+---
+id: REN-020
+area: seguridad
+titulo:
+  sencillo: "El antivirus se pone a revisar la compu justo cuando la estoy usando"
+  tecnico: "Programar el análisis de Microsoft Defender Antivirus (Programador de tareas)"
+explicacion:
+  sencillo: "El antivirus de Windows revisa la compu cada tanto y trata de hacerlo cuando no la usás. Si igual te agarra en medio del trabajo, le podés indicar un horario en el que la compu esté prendida pero sin uso."
+  tecnico: "Programador de tareas > Biblioteca > Microsoft > Windows > Windows Defender > «Windows Defender Scheduled Scan» > Desencadenadores > Nuevo."
+frases: ["el antivirus escanea cuando estoy trabajando", "cambiar el horario del análisis de windows defender", "programar el escaneo del antivirus", "que el antivirus revise la compu a la noche"]
+pasos:
+  - texto: "Tocá la lupa, escribí «Programador de tareas» y abrilo."
+    abrir: "https://support.microsoft.com/windows/schedule-a-scan-in-microsoft-defender-antivirus-54b64e9c-880a-c6b6-2416-0eb330ed5d2d"
+  - texto: "A la izquierda, abrí «Biblioteca del Programador de tareas» > «Microsoft» > «Windows» y elegí la carpeta «Windows Defender»."
+  - texto: "En el medio, hacé doble clic en «Windows Defender Scheduled Scan». Andá a la pestaña «Desencadenadores» y tocá «Nuevo»."
+  - texto: "Elegí cada cuánto y a qué hora querés el análisis (un horario en que la compu esté prendida pero no la uses) y tocá «Aceptar». No borres ni desactives esa tarea: es la revisión del antivirus."
+fuentes:
+  - https://support.microsoft.com/windows/schedule-a-scan-in-microsoft-defender-antivirus-54b64e9c-880a-c6b6-2416-0eb330ed5d2d
+madurez: T0
+---
+id: REN-021
+area: red
+titulo:
+  sencillo: "Windows usa mi Internet para compartir actualizaciones con otras compus"
+  tecnico: "Optimización de distribución: descargas de otros dispositivos y límites de ancho de banda"
+explicacion:
+  sencillo: "Windows puede bajar actualizaciones desde Microsoft y también desde otras compus, y compartir las que ya bajó. Podés limitarlo a las compus de tu casa o ponerle un tope para que no te frene Internet."
+  tecnico: "Windows Update > Opciones avanzadas > Optimización de distribución: descargas desde otros dispositivos, límites de descarga y subida, límite mensual de subida y monitor de actividad."
+frases: ["windows usa mi internet para actualizar otras compus", "las actualizaciones me consumen todo internet", "qué es la optimización de distribución", "limitar lo que baja windows update"]
+pasos:
+  - texto: "Abrí Optimización de distribución."
+    abrir: "ms-settings:delivery-optimization"
+  - texto: "En la opción para permitir descargas de otros dispositivos, elegí que sea solo con los dispositivos de tu red local (los de tu casa), o apagala. Las actualizaciones siguen llegando desde Microsoft."
+  - texto: "En las opciones avanzadas podés poner un límite a lo que usa para bajar y para subir, y un tope de subida por mes."
+  - texto: "En el monitor de actividad ves cuánto bajó y subió este mes. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/deployment/updates-lifecycle/delivery-optimization-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/deployment/updates-lifecycle/delivery-optimization-in-windows
+madurez: T0
+---
+id: REN-022
+area: archivos
+titulo:
+  sencillo: "OneDrive está sincronizando y me pone lenta la compu o Internet"
+  tecnico: "Pausar la sincronización de OneDrive"
+explicacion:
+  sencillo: "Cuando OneDrive sube o baja muchos archivos, usa Internet y el disco. Si necesitás la compu liviana un rato, lo podés pausar 2, 8 o 24 horas; después sigue solo."
+  tecnico: "Clic derecho en el ícono de OneDrive > pausar 2, 8 o 24 h. También se pausa solo con ahorro de batería o en redes de uso medido."
+frases: ["onedrive me consume todo internet", "pausar onedrive un rato", "onedrive está sincronizando y todo anda lento", "parar un rato la sincronización de onedrive"]
+pasos:
+  - texto: "Abajo a la derecha, hacé clic derecho en la nube de OneDrive (puede estar escondida bajo la flechita «^»)."
+    abrir: "https://support.microsoft.com/onedrive/how-to-pause-and-resume-onedrive-sync"
+  - texto: "Elegí pausar y por cuánto tiempo: 2, 8 o 24 horas. La nube queda marcada como en pausa."
+  - texto: "Cuando pasa ese tiempo, vuelve a sincronizar solo. Para seguir antes, tocá la nube y el botón de reanudar. Mientras está en pausa, los cambios no se suben a la nube."
+derivar: "Si OneDrive nunca termina de sincronizar, escribile a PC Doctor «OneDrive no sincroniza»."
+fuentes:
+  - https://support.microsoft.com/onedrive/how-to-pause-and-resume-onedrive-sync
+madurez: T0
+---
+id: REN-023
+area: archivos
+titulo:
+  sencillo: "Quiero encontrar los archivos grandes que me ocupan el disco"
+  tecnico: "Recomendaciones de limpieza: archivos grandes o sin usar"
+explicacion:
+  sencillo: "Windows te muestra en una lista los archivos más grandes y los que hace mucho no abrís, además de aplicaciones que no usás. Vos decidís qué borrar."
+  tecnico: "Sistema > Almacenamiento > Recomendaciones de limpieza: archivos temporales, archivos grandes o sin usar, archivos sincronizados con la nube y aplicaciones sin usar."
+frases: ["qué archivos ocupan más lugar", "encontrar los archivos grandes de la pc", "ver qué me llena el disco", "archivos viejos que no uso y ocupan espacio"]
+pasos:
+  - texto: "Abrí Recomendaciones de limpieza."
+    abrir: "ms-settings:storagerecommendations"
+  - texto: "Mirá la parte de archivos grandes o sin usar y marcá solo lo que estés seguro de que no necesitás."
+  - texto: "Ojo: lo que limpies se borra. Si dudás, pasalo antes a un pendrive o a un disco externo. Después tocá el botón para limpiar."
+    abrir: "https://support.microsoft.com/windows/disk-cleanup-in-windows-8a96ff42-5751-39ad-23d6-434b4d5b9a68"
+  - texto: "Ahí también aparecen aplicaciones que no usás. Para sacarlas, escribile a PC Doctor «la compu vino llena de programas que no uso»."
+fuentes:
+  - https://support.microsoft.com/windows/disk-cleanup-in-windows-8a96ff42-5751-39ad-23d6-434b4d5b9a68
+madurez: T0
+---
+id: REN-024
+area: seguridad
+titulo:
+  sencillo: "Tengo dos antivirus instalados y la compu anda pesada"
+  tecnico: "Varios productos antivirus en el mismo equipo"
+explicacion:
+  sencillo: "Tener dos antivirus funcionando a la vez no protege más: pueden chocar entre sí y poner lenta la compu. Cuando instalás otro antivirus, el de Windows se hace a un lado solo, y vuelve a prenderse si el otro se vence o lo desinstalás."
+  tecnico: "En Windows 10/11, con un antivirus de terceros activo, Microsoft Defender Antivirus pasa a deshabilitado automáticamente y se reactiva si el otro deja de proteger. Los conflictos entre productos afectan el rendimiento."
+frases: ["tengo dos antivirus", "instalé otro antivirus y ahora anda lenta la compu", "puedo tener el avast y el defender juntos", "qué antivirus está activo en mi compu"]
+pasos:
+  - texto: "Abrí Seguridad de Windows > «Protección antivirus y contra amenazas». Debajo de «¿Quién me protege?», tocá «Administrar proveedores» para ver qué antivirus está activo."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Si tenés más de un antivirus que no es de Microsoft (por ejemplo, uno de prueba que vino con la compu y otro que instalaste), quedate con uno solo y desinstalá el otro desde Aplicaciones instaladas."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "No desactives el Antivirus de Microsoft Defender: si desinstalás el otro, Windows lo vuelve a prender solo."
+    abrir: "https://learn.microsoft.com/defender-endpoint/microsoft-defender-antivirus-compatibility"
+derivar: "Si no sabés cuál de los dos dejar, escribile a PC Doctor «el antivirus de prueba se venció» o pasá el diagnóstico."
+fuentes:
+  - https://learn.microsoft.com/defender-endpoint/microsoft-defender-antivirus-compatibility
+  - https://learn.microsoft.com/defender-endpoint/troubleshoot-performance-issues
+madurez: T0
+---
+id: REN-025
+area: programas
+titulo:
+  sencillo: "Edge aparece funcionando aunque no lo abrí"
+  tecnico: "Aumento de inicio (startup boost) de Microsoft Edge"
+explicacion:
+  sencillo: "Edge deja una parte de sí mismo funcionando en segundo plano para abrir más rápido. Por eso puede aparecer en el Administrador de tareas aunque no lo hayas abierto. Usa muy pocos recursos, pero si preferís, se puede apagar."
+  tecnico: "Startup boost mantiene procesos mínimos de Edge en segundo plano tras iniciar sesión o cerrar el navegador; se activa o desactiva en edge://settings/system/manageSystem."
+frases: ["el edge aparece abierto aunque no lo uso", "microsoft edge en el administrador de tareas sin abrirlo", "edge queda funcionando en segundo plano", "por qué edge arranca solo con la compu"]
+pasos:
+  - texto: "Abrí Edge, escribí edge://settings/system/manageSystem en la barra de direcciones y apretá Enter."
+    abrir: "https://support.microsoft.com/edge/get-help-with-startup-boost"
+  - texto: "Buscá la opción de aumento de inicio (en inglés, «Startup boost») y apagala si no la querés. Edge va a tardar un poquito más en abrir."
+  - texto: "Si Edge se abre solo con páginas que no pediste, escribile a PC Doctor «el navegador se abre solo»."
+fuentes:
+  - https://support.microsoft.com/edge/get-help-with-startup-boost
+madurez: T0
+

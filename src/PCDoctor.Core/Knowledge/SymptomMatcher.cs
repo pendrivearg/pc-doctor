@@ -157,7 +157,7 @@ public sealed class SymptomMatcher
         (Rx(@" (notebook|laptop|portatil|bateria|pila) se (descarga|descargo|descargan) "), " bateria dura poco "),
     ];
 
-    private static readonly System.Text.RegularExpressions.Regex ChargingContext = Rx(@" (cargador|cargadores|bateria|baterias|enchufad[oa]|enchufe) ");
+    private static readonly System.Text.RegularExpressions.Regex ChargingContext = Rx(@" (cargador|cargadores|bateria|baterias|enchufad[oa]|enchufe|celular|celulares|telefono|movil|iphone) ");
     private static readonly System.Text.RegularExpressions.Regex ChargingVerb = Rx(@" (carga|cargar|cargando|cargue|cargo) ");
 
     private static System.Text.RegularExpressions.Regex Rx(string p) =>

@@ -1,0 +1,517 @@
+# Cuenta de Microsoft y privacidad: actividad rara, verificación en dos pasos, Authenticator, cuenta hackeada, permisos de Windows, Buscar mi dispositivo, firewall y protecciones del núcleo. Guiadas con fuente oficial.
+id: CMS-001
+area: seguridad
+titulo:
+  sencillo: "Quiero ver desde dónde entraron a mi cuenta de Microsoft"
+  tecnico: "Página de actividad reciente de la cuenta Microsoft"
+explicacion:
+  sencillo: "Microsoft guarda una lista de cuándo y desde dónde se usó tu cuenta (Hotmail, Outlook) en los últimos 30 días. Si ves algo que no fuiste vos, se puede avisar y proteger la cuenta. Ojo: el lugar que muestra es aproximado, y con datos del celular puede aparecer otra ciudad aunque hayas sido vos."
+  tecnico: "Actividad reciente (30 días): secciones «Actividad inusual» (Fui yo / No fui yo) y «Actividad reciente» (Proteger tu cuenta). Ubicación aproximada por IP."
+frases: ["quiero ver quién entró a mi hotmail", "ver los inicios de sesión de mi cuenta de microsoft", "en mi cuenta outlook aparece un ingreso desde otro país", "cómo sé si alguien usó mi cuenta de microsoft"]
+pasos:
+  - texto: "Entrá a la página de Seguridad de tu cuenta de Microsoft escribiendo vos la dirección en el navegador (no desde un enlace de un correo). Desde ahí abrí la actividad reciente."
+    abrir: "https://account.microsoft.com/security"
+  - texto: "Tocá cada entrada para ver el lugar, el aparato y el navegador o la aplicación que se usó."
+  - texto: "Si en «Actividad inusual» aparece algo que no hiciste, abrilo y elegí la opción que dice que no fuiste vos. Si está en «Actividad reciente», elegí la opción para proteger tu cuenta. Después cambiá la contraseña."
+    abrir: "https://support.microsoft.com/accounts-billing/security/what-is-the-recent-activity-page"
+derivar: "Nadie de Microsoft te va a pedir la contraseña ni te va a mandar un enlace para cambiarla. Si alguien lo hace, es una estafa."
+fuentes:
+  - https://support.microsoft.com/accounts-billing/security/what-is-the-recent-activity-page
+  - https://support.microsoft.com/accounts-billing/security/what-happens-if-there-s-an-unusual-sign-in-to-your-account
+madurez: T0
+---
+id: CMS-002
+area: seguridad
+titulo:
+  sencillo: "Microsoft me avisó de un «inicio de sesión inusual» en mi cuenta"
+  tecnico: "Alerta de actividad inusual en la cuenta Microsoft"
+explicacion:
+  sencillo: "Cuando alguien entra a tu cuenta desde un lugar o un aparato nuevo, Microsoft te manda un correo o un mensaje y a veces te pide un código para confirmar que sos vos. Puede pasar si viajaste o si estrenaste celular, pero también si alguien quiso entrar."
+  tecnico: "Detección de inicio de sesión desde ubicación o dispositivo nuevo; alerta por correo/SMS y posible verificación con código. Revisión en Actividad reciente."
+frases: ["me llegó un mail de actividad inusual en mi cuenta microsoft", "dice que detectaron un inicio de sesión raro en mi outlook", "microsoft me pide un código porque detectó actividad inusual", "me avisan que entraron a mi hotmail desde otro lado"]
+pasos:
+  - texto: "No toques los enlaces del aviso. Fijate primero quién lo manda: los avisos reales de la cuenta llegan de una dirección que termina en «@accountprotection.microsoft.com»."
+  - texto: "Entrá vos a tu cuenta escribiendo la dirección en el navegador y abrí la actividad reciente desde la página de Seguridad."
+    abrir: "https://account.microsoft.com/security"
+  - texto: "Si no fuiste vos, elegí la opción que dice que no fuiste vos (o la de proteger tu cuenta) y cambiá la contraseña."
+  - texto: "Si ya no podés entrar porque te cambiaron la contraseña, probá restablecerla. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accounts-billing/security/what-happens-if-there-s-an-unusual-sign-in-to-your-account"
+derivar: "Nadie legítimo te va a pedir por teléfono o por mensaje el código que te llega: no se lo des a nadie."
+fuentes:
+  - https://support.microsoft.com/accounts-billing/security/what-happens-if-there-s-an-unusual-sign-in-to-your-account
+  - https://support.microsoft.com/accounts-billing/security/what-is-the-recent-activity-page
+madurez: T0
+---
+id: CMS-003
+area: seguridad
+titulo:
+  sencillo: "¿Este correo es de verdad de Microsoft o es falso?"
+  tecnico: "Verificar correos del equipo de cuentas Microsoft"
+explicacion:
+  sencillo: "Los avisos reales de tu cuenta de Microsoft (códigos de seguridad, cambio de contraseña) llegan siempre de una dirección que termina en «@accountprotection.microsoft.com». Si te llega un código que no pediste, puede ser que alguien esté intentando entrar o que alguien se equivocó al escribir su correo."
+  tecnico: "Remitente legítimo: dominio @accountprotection.microsoft.com (verificable en los encabezados). Código no solicitado = posible intento de acceso."
+frases: ["me llegó un mail de microsoft y no sé si es verdadero", "cómo sé si un correo de microsoft es falso", "me mandaron un código de microsoft que no pedí", "un mail dice que es del equipo de cuentas microsoft"]
+pasos:
+  - texto: "Mirá la dirección completa de quien lo manda, no solo el nombre. Tiene que terminar exactamente en «@accountprotection.microsoft.com»."
+  - texto: "Fijate que el correo hable de tu cuenta y que vos hayas pedido el código. Si no pediste nada, no lo uses ni se lo pases a nadie."
+  - texto: "Ante la duda, no toques ningún enlace: entrá vos a tu cuenta escribiendo la dirección en el navegador y revisá si hay algo raro."
+    abrir: "https://account.microsoft.com/security"
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accounts-billing/security/can-i-trust-email-from-the-microsoft-account-team"
+derivar: "El soporte de Microsoft no manda enlaces para cambiar la contraseña ni pide tu clave. Si un mensaje te los pide, es una estafa."
+fuentes:
+  - https://support.microsoft.com/accounts-billing/security/can-i-trust-email-from-the-microsoft-account-team
+  - https://support.microsoft.com/accounts-billing/security/what-happens-if-there-s-an-unusual-sign-in-to-your-account
+madurez: T0
+---
+id: CMS-004
+area: seguridad
+titulo:
+  sencillo: "Quiero activar la verificación en dos pasos en mi cuenta de Microsoft"
+  tecnico: "Verificación en dos pasos de la cuenta Microsoft"
+explicacion:
+  sencillo: "Con la verificación en dos pasos, para entrar a tu cuenta no alcanza con la contraseña: también hace falta un código o la aprobación desde el celular. Así, aunque alguien sepa tu clave, no puede entrar. Antes de activarla, asegurate de tener varias formas de comprobar que sos vos, porque si perdés todas podés quedarte afuera hasta 30 días."
+  tecnico: "account.microsoft.com/security > administrar cómo inicio sesión > Seguridad adicional > Verificación en dos pasos > Activar. Se recomiendan tres métodos de seguridad."
+frases: ["quiero poner doble verificación en mi hotmail", "activar la verificación en dos pasos de microsoft", "que mi cuenta outlook pida un código además de la clave", "proteger mi cuenta de microsoft con el celular"]
+pasos:
+  - texto: "Antes que nada, revisá que tu cuenta tenga más de una forma de verificarte (otro correo, la aplicación Authenticator). Microsoft recomienda tener tres."
+  - texto: "Entrá a la página de Seguridad de tu cuenta y abrí la opción para administrar cómo iniciás sesión."
+    abrir: "https://account.microsoft.com/security"
+  - texto: "En la parte de seguridad adicional, buscá «Verificación en dos pasos», elegí activarla y seguí las instrucciones. Si usás la aplicación Authenticator, vas a tener que escanear un código con el celular."
+  - texto: "Si después algún programa viejo te dice que la contraseña es incorrecta, puede necesitar una contraseña de aplicación. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accounts-billing/security/how-to-use-two-step-verification-with-your-microsoft-account"
+fuentes:
+  - https://support.microsoft.com/accounts-billing/security/how-to-use-two-step-verification-with-your-microsoft-account
+madurez: T0
+---
+id: CMS-005
+area: seguridad
+titulo:
+  sencillo: "Quiero tener un código de recuperación por si pierdo el acceso a mi cuenta de Microsoft"
+  tecnico: "Código de recuperación de la cuenta Microsoft"
+explicacion:
+  sencillo: "El código de recuperación es un código largo (25 caracteres) que sirve para volver a entrar a tu cuenta si te olvidás la contraseña o si te la roban. Conviene imprimirlo y guardarlo en un lugar seguro, no en la compu ni en el celular con el que entrás."
+  tecnico: "Código de 25 caracteres generado en administrar cómo inicio sesión > Código de recuperación. Generar uno nuevo invalida el anterior; no se puede volver a ver el existente."
+frases: ["dónde saco el código de recuperación de microsoft", "quiero un código de respaldo para mi hotmail", "perdí el código de recuperación de mi cuenta outlook", "para qué sirve el código de recuperación de microsoft"]
+pasos:
+  - texto: "Entrá a la página de Seguridad de tu cuenta y abrí la opción para administrar cómo iniciás sesión."
+    abrir: "https://account.microsoft.com/security"
+  - texto: "Bajá hasta la parte del código de recuperación y elegí generar uno nuevo. Ojo: apenas creás uno nuevo, el anterior deja de funcionar."
+  - texto: "Imprimilo o anotalo en papel y guardalo en un lugar seguro. No lo guardes en el aparato con el que entrás a la cuenta y no se lo pases a nadie."
+  - texto: "Si un día lo necesitás, se usa desde la opción «¿Olvidaste tu contraseña?» al iniciar sesión. Microsoft lo explica paso a paso."
+    abrir: "https://support.microsoft.com/accounts-billing/manage/how-to-get-a-microsoft-account-recovery-code"
+derivar: "Nadie legítimo te va a pedir este código. Si no podés entrar a la cuenta para generarlo, usá el asistente de inicio de sesión de Microsoft."
+fuentes:
+  - https://support.microsoft.com/accounts-billing/manage/how-to-get-a-microsoft-account-recovery-code
+madurez: T0
+---
+id: CMS-006
+area: seguridad
+titulo:
+  sencillo: "Quiero instalar Microsoft Authenticator en el celular"
+  tecnico: "Instalar Microsoft Authenticator y agregar la cuenta personal"
+explicacion:
+  sencillo: "Microsoft Authenticator es una aplicación gratuita para el celular que te da los códigos para entrar a tu cuenta o te pide que apruebes el ingreso con un toque. No existe para la computadora: solo para celulares Android y iPhone."
+  tecnico: "Instalación desde Google Play o App Store; alta en account.microsoft.com/security > administrar cómo inicio sesión > Usar una aplicación; en el celular: + > Cuenta personal > Escanear un código QR."
+frases: ["cómo instalo el authenticator de microsoft", "me piden la aplicación microsoft authenticator", "bajar authenticator en el celular", "agregar mi cuenta hotmail al authenticator"]
+pasos:
+  - texto: "En el celular, abrí Google Play (Android) o la App Store (iPhone), buscá «Microsoft Authenticator» e instalalo. Bajalo solo de la tienda oficial."
+    abrir: "https://support.microsoft.com/authenticator/download-microsoft-authenticator"
+  - texto: "En la compu, entrá a la página de Seguridad de tu cuenta, abrí la opción para administrar cómo iniciás sesión y agregá una nueva forma de verificarte usando una aplicación. Va a aparecer un código cuadrado (QR)."
+    abrir: "https://account.microsoft.com/security"
+  - texto: "En el celular, abrí Authenticator, tocá el «+», elegí cuenta personal y escaneá el código de la pantalla. Si no lo podés escanear, hay una opción para escribir el código a mano."
+  - texto: "Microsoft lo explica con imágenes."
+    abrir: "https://support.microsoft.com/authenticator/how-to-add-your-accounts-to-microsoft-authenticator"
+fuentes:
+  - https://support.microsoft.com/authenticator/download-microsoft-authenticator
+  - https://support.microsoft.com/authenticator/how-to-add-your-accounts-to-microsoft-authenticator
+madurez: T0
+---
+id: CMS-007
+area: seguridad
+titulo:
+  sencillo: "Cambio de celular y no quiero perder lo que tengo en Microsoft Authenticator"
+  tecnico: "Copia de seguridad y restauración de Microsoft Authenticator"
+explicacion:
+  sencillo: "Authenticator puede guardar una copia de tus cuentas para pasarlas al celular nuevo, pero hay que activarla antes de cambiar. Solo funciona entre celulares del mismo tipo (de Android a Android o de iPhone a iPhone). Si cambiás de Android a iPhone o al revés, hay que volver a agregar las cuentas a mano."
+  tecnico: "Android: Configuración > Copia de seguridad en la nube con cuenta Microsoft personal. iPhone: iCloud Drive, Llavero e iCloud Backup. Restaurar con «Iniciar recuperación». Las credenciales sin contraseña y de trabajo no se respaldan."
+frases: ["cambié el celular y perdí el authenticator", "pasar microsoft authenticator al teléfono nuevo", "cómo hago copia de seguridad del authenticator", "me compré otro celular y no me llegan las aprobaciones de microsoft"]
+pasos:
+  - texto: "En el celular viejo, antes de cambiarlo: en Android, abrí Authenticator, tocá los tres puntos > Configuración y activá la copia de seguridad en la nube con tu cuenta de Microsoft. En iPhone, tené activados iCloud Drive, el Llavero de iCloud y la copia de iCloud."
+    abrir: "https://support.microsoft.com/authenticator/back-up-your-accounts-in-microsoft-authenticator"
+  - texto: "En el celular nuevo, instalá Authenticator y, antes de agregar ninguna cuenta, elegí la opción para recuperar desde la copia de seguridad. Entrá con la misma cuenta de Microsoft que usaste para la copia."
+    abrir: "https://support.microsoft.com/authenticator/restore-account-credentials-from-microsoft-authenticator"
+  - texto: "Si alguna cuenta dice que tenés que iniciar sesión para recuperarla, entrá de nuevo. El inicio sin contraseña y las cuentas del trabajo no se copian: se configuran otra vez."
+  - texto: "No borres nada del celular viejo hasta comprobar que en el nuevo todo funciona."
+fuentes:
+  - https://support.microsoft.com/authenticator/back-up-your-accounts-in-microsoft-authenticator
+  - https://support.microsoft.com/authenticator/restore-account-credentials-from-microsoft-authenticator
+madurez: T0
+---
+id: CMS-008
+area: seguridad
+titulo:
+  sencillo: "Quiero entrar a mi cuenta de Microsoft sin contraseña, aprobando desde el celular"
+  tecnico: "Cuenta Microsoft sin contraseña (passwordless)"
+explicacion:
+  sencillo: "Microsoft te deja quitar la contraseña de tu cuenta y entrar aprobando desde la aplicación Authenticator, con Windows Hello o con una llave de seguridad. Sin contraseña no hay nada que te puedan robar. Algunos programas y aparatos viejos todavía piden contraseña."
+  tecnico: "Administrar cómo inicio sesión > Cuenta sin contraseña > Activar; requiere Authenticator (u Outlook para Android). Se puede desactivar y volver a poner una contraseña."
+frases: ["quiero entrar a hotmail sin poner la contraseña", "sacar la contraseña de mi cuenta microsoft", "entrar a mi cuenta aprobando desde el celular", "qué es la cuenta sin contraseña de microsoft"]
+pasos:
+  - texto: "Primero instalá Microsoft Authenticator en el celular y agregá tu cuenta."
+    abrir: "https://support.microsoft.com/authenticator/how-to-add-your-accounts-to-microsoft-authenticator"
+  - texto: "En la compu, entrá a la página de Seguridad de tu cuenta y abrí la opción para administrar cómo iniciás sesión."
+    abrir: "https://account.microsoft.com/security"
+  - texto: "Buscá la parte de cuenta sin contraseña, elegí activarla, seguí los pasos y aprobá el aviso que te llega a Authenticator."
+  - texto: "Si cambiás o perdés el celular, quitá ese aparato de las opciones de seguridad avanzadas de tu cuenta. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accounts-billing/security/how-to-go-passwordless-with-your-microsoft-account"
+fuentes:
+  - https://support.microsoft.com/accounts-billing/security/how-to-go-passwordless-with-your-microsoft-account
+madurez: T0
+---
+id: CMS-009
+area: seguridad
+titulo:
+  sencillo: "Me hackearon la cuenta de Microsoft (Hotmail, Outlook)"
+  tecnico: "Recuperar una cuenta Microsoft comprometida"
+explicacion:
+  sencillo: "Si alguien entró a tu cuenta, hay que revisar la compu por si tiene un virus, cambiar la contraseña y revisar que no te hayan dejado configurado un reenvío de tus correos. Si ya no podés entrar, Microsoft tiene un formulario oficial de recuperación."
+  tecnico: "Examen completo con antivirus, cambio o restablecimiento de contraseña, revisión de cuentas conectadas, reenvío y respuestas automáticas; formulario de recuperación de cuenta si no hay acceso."
+frases: ["me hackearon el hotmail", "alguien entró a mi cuenta outlook y manda correos", "me robaron la cuenta de microsoft", "me cambiaron la contraseña de mi correo de microsoft"]
+pasos:
+  - texto: "Primero revisá la compu: abrí Seguridad de Windows > «Protección contra virus y amenazas» > «Opciones de examen», elegí «Examen completo» y «Examinar ahora»."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Cambiá la contraseña desde la página de Seguridad de tu cuenta. Si ya no podés entrar, usá la opción para restablecerla en la pantalla de inicio de sesión."
+    abrir: "https://account.microsoft.com/security"
+  - texto: "Ya adentro, revisá en Outlook que no haya un reenvío de correos, respuestas automáticas o cuentas conectadas que no pusiste vos. Microsoft explica dónde está cada cosa."
+    abrir: "https://support.microsoft.com/accounts-billing/manage/how-to-recover-a-hacked-or-compromised-microsoft-account"
+  - texto: "Si no podés recuperarla con el código de seguridad, completá el formulario oficial de recuperación, mejor desde una compu y un lugar donde usaste la cuenta antes (tu casa o el trabajo). Poné un correo de contacto distinto que sí puedas leer y todos los datos que recuerdes."
+    abrir: "https://support.microsoft.com/accounts-billing/manage/help-with-the-microsoft-account-recovery-form"
+derivar: "El soporte de Microsoft no puede darte la contraseña ni mandarte enlaces para cambiarla. Desconfiá de quien te ofrezca «recuperar la cuenta» por teléfono o por redes."
+fuentes:
+  - https://support.microsoft.com/accounts-billing/manage/how-to-recover-a-hacked-or-compromised-microsoft-account
+  - https://support.microsoft.com/accounts-billing/manage/help-with-the-microsoft-account-recovery-form
+  - https://support.microsoft.com/accounts-billing/manage/reset-a-forgotten-microsoft-account-password
+madurez: T0
+---
+id: CMS-010
+area: seguridad
+titulo:
+  sencillo: "Tengo que llenar el formulario de recuperación de mi cuenta de Microsoft"
+  tecnico: "Formulario de recuperación de cuenta Microsoft"
+explicacion:
+  sencillo: "Cuando no podés entrar y no te llega ningún código, Microsoft tiene un formulario con preguntas que solo vos deberías saber. Lo revisan y te contestan en unas 24 horas al correo de contacto que pongas. Se puede mandar hasta dos veces por día."
+  tecnico: "Formulario de recuperación: correo de contacto alternativo, contraseñas anteriores, asuntos de correos enviados, contactos; respuesta en 24 h, máximo dos intentos diarios. No aplica si la verificación en dos pasos está activa sin métodos alternativos."
+frases: ["el formulario de recuperación de microsoft me rechaza", "qué pongo en el formulario para recuperar mi hotmail", "no me llega ningún código y no puedo entrar a mi cuenta microsoft", "cómo lleno el formulario de recuperación de outlook"]
+pasos:
+  - texto: "Antes probá restablecer la contraseña desde la pantalla de inicio de sesión, con «¿Olvidaste tu contraseña?». Si no reconocés el correo o teléfono que te ofrece, no lo elijas."
+    abrir: "https://support.microsoft.com/accounts-billing/manage/reset-a-forgotten-microsoft-account-password"
+  - texto: "Si no hay caso, completá el formulario desde una compu y un lugar donde usaste la cuenta antes. Necesitás un correo de contacto que funcione: puede ser el de un familiar."
+    abrir: "https://support.microsoft.com/accounts-billing/manage/help-with-the-microsoft-account-recovery-form"
+  - texto: "Contestá con todo lo que recuerdes: contraseñas viejas, a quiénes les escribías, asuntos exactos de correos que mandaste. Si no estás seguro, adiviná: equivocarte no te resta."
+  - texto: "Esperá la respuesta en ese correo de contacto. Si no te aceptan, podés volver a intentarlo, como mucho dos veces por día."
+derivar: "Si tenías la verificación en dos pasos activa y perdiste todos los métodos, Microsoft avisa que no puede ayudarte con el formulario. Nunca le pagues a nadie que prometa recuperarte la cuenta."
+fuentes:
+  - https://support.microsoft.com/accounts-billing/manage/help-with-the-microsoft-account-recovery-form
+  - https://support.microsoft.com/accounts-billing/manage/reset-a-forgotten-microsoft-account-password
+madurez: T0
+---
+id: CMS-011
+area: seguridad
+titulo:
+  sencillo: "Quiero cerrar la sesión de mi cuenta de Microsoft en todos los aparatos"
+  tecnico: "Cerrar sesión en todas partes (cuenta Microsoft)"
+explicacion:
+  sencillo: "Si creés que alguien tiene tu cuenta abierta en otro lado, Microsoft te deja cerrar la sesión en todos los navegadores y aplicaciones de una vez. Puede tardar hasta 24 horas y no cierra la sesión de las consolas Xbox. Conviene hacerlo después de cambiar la contraseña."
+  tecnico: "Seguridad > Opciones de seguridad avanzadas > Cerrar sesión en todas partes; efectivo en hasta 24 h; excluye consolas Xbox."
+frases: ["cerrar mi hotmail en todas las compus", "cerrar la sesión de microsoft en todos lados", "dejé abierta mi cuenta outlook en otra compu", "sacar mi cuenta de microsoft de todos los dispositivos"]
+pasos:
+  - texto: "Si sospechás que alguien sabe tu contraseña, cambiala primero desde la página de Seguridad de tu cuenta."
+  - texto: "En esa misma página, abrí las opciones de seguridad avanzadas."
+    abrir: "https://account.microsoft.com/security"
+  - texto: "Bajá hasta la parte de cerrar sesión en todas partes y tocá el botón para cerrar sesión. Tené en cuenta que puede tardar hasta 24 horas."
+  - texto: "Si usás Xbox, cerrá la sesión de la consola aparte. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accounts-billing/manage/how-to-sign-out-of-your-microsoft-account-everywhere"
+fuentes:
+  - https://support.microsoft.com/accounts-billing/manage/how-to-sign-out-of-your-microsoft-account-everywhere
+  - https://support.microsoft.com/accounts-billing/security/what-is-the-recent-activity-page
+madurez: T0
+---
+id: CMS-012
+area: seguridad
+titulo:
+  sencillo: "Quiero cambiar el correo o el celular de seguridad de mi cuenta de Microsoft"
+  tecnico: "Información de seguridad de la cuenta Microsoft"
+explicacion:
+  sencillo: "La información de seguridad son las formas que tiene Microsoft de comprobar que sos vos: otro correo, la aplicación Authenticator o una llave de acceso. Si cambiaste de correo o de número, conviene agregar el nuevo antes de borrar el viejo, para no quedarte sin forma de entrar."
+  tecnico: "account.microsoft.com/security > administrar cómo inicio sesión > agregar un nuevo método; hasta 10 métodos. La opción de teléfono puede no estar disponible en algunas cuentas."
+frases: ["cambiar el teléfono de recuperación de mi hotmail", "cambiar el mail alternativo de mi cuenta microsoft", "los códigos de microsoft me llegan a un número viejo", "actualizar la información de seguridad de outlook"]
+pasos:
+  - texto: "Entrá a la página de Seguridad de tu cuenta y abrí la opción para administrar cómo iniciás sesión."
+    abrir: "https://account.microsoft.com/security"
+  - texto: "Elegí agregar una nueva forma de iniciar sesión o verificarte, poné el correo nuevo (o configurá Authenticator) y escribí el código que te llega ahí."
+  - texto: "Recién cuando el nuevo funciona, quitá el correo o el número viejo. Puede que en tu cuenta no aparezca la opción de agregar teléfono: en ese caso usá otro correo o Authenticator."
+    abrir: "https://support.microsoft.com/account-billing/microsoft-account-security-info-verification-codes-bf2505ca-cae5-c5b4-77d1-69d3343a5452"
+derivar: "Si reemplazás toda la información de seguridad de golpe, el cambio queda pendiente 30 días. Nadie legítimo te va a pedir los códigos que te llegan."
+fuentes:
+  - https://support.microsoft.com/account-billing/microsoft-account-security-info-verification-codes-bf2505ca-cae5-c5b4-77d1-69d3343a5452
+  - https://support.microsoft.com/accounts-billing/manage/what-does-security-info-change-is-still-pending-mean
+madurez: T0
+---
+id: CMS-013
+area: seguridad
+titulo:
+  sencillo: "Me dice «el cambio de información de seguridad está pendiente» y no puedo cambiar la contraseña"
+  tecnico: "Cambio de información de seguridad pendiente (30 días)"
+explicacion:
+  sencillo: "Cuando se reemplaza toda la información de seguridad de una cuenta, Microsoft espera 30 días antes de aplicar el cambio. Es para que, si fue un ladrón, el dueño de verdad tenga tiempo de darse cuenta. Mientras tanto no se puede cambiar la contraseña ni los alias, aunque casi todo lo demás sigue andando."
+  tecnico: "Período de espera de 30 días; bloquea contraseña, alias, medios de pago, controles parentales y el Almacén personal de OneDrive. Se cancela o denuncia desde la página de Seguridad."
+frases: ["dice que el cambio de información de seguridad está pendiente", "microsoft me hace esperar 30 días para cambiar el teléfono", "no me deja cambiar la contraseña porque hay un cambio pendiente", "yo no pedí cambiar la información de seguridad de mi hotmail"]
+pasos:
+  - texto: "Entrá a tu cuenta escribiendo vos la dirección en el navegador y abrí la página de Seguridad. Va a aparecer el aviso del cambio pendiente."
+    abrir: "https://account.microsoft.com/security"
+  - texto: "Si NO fuiste vos, en ese aviso elegí la opción para avisarle a Microsoft (está abajo de todo) y seguí los pasos."
+  - texto: "Si fuiste vos y querés frenarlo, elegí la opción para cancelar la solicitud; vas a necesitar acceso a tu información de seguridad. Si querés que se aplique, solo esperá los 30 días."
+    abrir: "https://support.microsoft.com/accounts-billing/manage/what-does-security-info-change-is-still-pending-mean"
+fuentes:
+  - https://support.microsoft.com/accounts-billing/manage/what-does-security-info-change-is-still-pending-mean
+madurez: T0
+---
+id: CMS-014
+area: basico
+titulo:
+  sencillo: "Quiero agregar otro correo a mi cuenta de Microsoft o sacar uno (alias)"
+  tecnico: "Alias de la cuenta Microsoft"
+explicacion:
+  sencillo: "Un alias es otra dirección de correo que usa la misma cuenta de Microsoft: misma bandeja, mismos contactos y misma contraseña. Sirve, por ejemplo, si querés una dirección nueva sin perder todo lo que tenés."
+  tecnico: "Tu información > administrar cómo inicio sesión > Agregar correo / Quitar. Los códigos por correo solo van al alias principal o a correos agregados para verificar."
+frases: ["quiero cambiar mi dirección de hotmail sin perder los mails", "agregar otro correo a mi cuenta microsoft", "qué es un alias de outlook", "borrar una dirección vieja de mi cuenta microsoft"]
+pasos:
+  - texto: "Entrá a tu cuenta de Microsoft y abrí la parte de tu información, donde se administra cómo iniciás sesión."
+    abrir: "https://account.microsoft.com/"
+  - texto: "Para sumar una dirección, elegí la opción para agregar un correo y seguí los pasos."
+  - texto: "Para sacar una, tocá «Quitar» al lado. Antes de borrar una dirección @hotmail u @outlook, pensalo bien: Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accounts-billing/manage/change-the-email-address-or-phone-number-for-your-microsoft-account"
+fuentes:
+  - https://support.microsoft.com/accounts-billing/manage/change-the-email-address-or-phone-number-for-your-microsoft-account
+madurez: T0
+---
+id: CMS-015
+area: seguridad
+titulo:
+  sencillo: "Quiero cerrar o borrar para siempre mi cuenta de Microsoft"
+  tecnico: "Cerrar una cuenta Microsoft"
+explicacion:
+  sencillo: "ATENCIÓN: cerrar la cuenta de Microsoft es casi definitivo. Pasado el plazo para arrepentirse (30 o 60 días, lo elegís vos), Microsoft borra tus correos, archivos y todo lo que tengas en esa cuenta, y no se puede recuperar. Si te la hackearon y la querés de vuelta, no la cierres: recuperala."
+  tecnico: "Cerrar la cuenta > confirmar > período de reapertura de 30 o 60 días > Marcar cuenta para cierre. Pasado ese plazo se eliminan datos y contenido. Requiere poder iniciar sesión."
+frases: ["quiero borrar mi cuenta de hotmail", "cómo elimino mi cuenta de microsoft", "dar de baja mi cuenta outlook", "cerrar para siempre mi cuenta microsoft"]
+pasos:
+  - texto: "Antes de seguir: guardá en otro lado los correos, fotos y archivos que quieras conservar. Lo que quede en la cuenta se va a borrar."
+  - texto: "Entrá a tu cuenta de Microsoft y, desde la página oficial para cerrar la cuenta, confirmá que es la cuenta correcta. Leé y marcá cada aviso de la lista."
+    abrir: "https://support.microsoft.com/accounts-billing/manage/how-to-close-your-microsoft-account"
+  - texto: "Elegí cuánto tiempo querés para arrepentirte (30 o 60 días), elegí el motivo y confirmá. Mientras no pase ese plazo, todavía la podés reabrir."
+derivar: "Si cambiaste toda tu información de seguridad hace poco, Microsoft no te deja cerrarla hasta que pasen 60 días."
+fuentes:
+  - https://support.microsoft.com/accounts-billing/manage/how-to-close-your-microsoft-account
+madurez: T0
+---
+id: CMS-016
+area: programas
+titulo:
+  sencillo: "Activé la verificación en dos pasos y un programa viejo dice que mi contraseña está mal"
+  tecnico: "Contraseña de aplicación para la cuenta Microsoft"
+explicacion:
+  sencillo: "Algunos programas o aparatos viejos (por ejemplo, el correo que viene en ciertos celulares o un Outlook muy antiguo) no saben pedir el código de la verificación en dos pasos. Para ellos, Microsoft te da una «contraseña de aplicación»: una clave larga que se pone una sola vez en ese programa."
+  tecnico: "Opciones de seguridad avanzadas > Contraseñas de aplicación (solo con verificación en dos pasos activa). Una por aplicación o dispositivo."
+frases: ["después de activar la doble verificación el mail del celular no anda", "dice contraseña incorrecta en un programa viejo con mi hotmail", "qué es una contraseña de aplicación de microsoft", "el outlook viejo no acepta mi clave"]
+pasos:
+  - texto: "Entrá a la página de Seguridad de tu cuenta y abrí las opciones de seguridad avanzadas. Bajá hasta la parte de contraseñas de aplicación."
+    abrir: "https://account.microsoft.com/security"
+  - texto: "Creá una contraseña nueva y copiala."
+  - texto: "Pegala en el programa o aparato donde antes ponías tu contraseña de siempre. Usá una distinta para cada programa y no se la des a nadie."
+    abrir: "https://support.microsoft.com/accounts-billing/manage/how-to-get-and-use-app-passwords"
+fuentes:
+  - https://support.microsoft.com/accounts-billing/manage/how-to-get-and-use-app-passwords
+  - https://support.microsoft.com/accounts-billing/security/how-to-use-two-step-verification-with-your-microsoft-account
+madurez: T0
+---
+id: CMS-017
+area: windows
+titulo:
+  sencillo: "No quiero que los programas sepan dónde estoy (ubicación)"
+  tecnico: "Servicios de ubicación de Windows"
+explicacion:
+  sencillo: "Windows puede saber más o menos dónde está la compu (por el Wi-Fi o la conexión) y dárselo a los programas que lo piden. Vos elegís si lo permitís y a cuáles. Cuando un programa usa tu ubicación, aparece un ícono abajo a la derecha."
+  tecnico: "Configuración > Privacidad y seguridad > Ubicación: servicios de ubicación, acceso de las aplicaciones y control por aplicación. Las aplicaciones de escritorio no se controlan una por una."
+frases: ["no quiero que la compu sepa dónde estoy", "sacar la ubicación de windows", "qué programas usan mi ubicación", "me aparece un ícono de ubicación abajo a la derecha"]
+pasos:
+  - texto: "Abrí la página de Ubicación en Configuración."
+    abrir: "ms-settings:privacy-location"
+  - texto: "Para que ningún programa la use, apagá el permiso para que las aplicaciones accedan a tu ubicación. Si querés dejarla para algunos, apagá solo los programas que no la necesitan."
+  - texto: "Ahí mismo ves cuándo la usó cada programa por última vez. Los programas comunes de escritorio no aparecen en esa lista: instalá solo programas de confianza."
+    abrir: "https://support.microsoft.com/windows/privacy/windows-location-service-and-privacy"
+fuentes:
+  - https://support.microsoft.com/windows/privacy/windows-location-service-and-privacy
+madurez: T0
+---
+id: CMS-018
+area: windows
+titulo:
+  sencillo: "Quiero elegir qué programas pueden ver mis contactos, mi cámara o mi micrófono"
+  tecnico: "Permisos de aplicaciones en Privacidad y seguridad"
+explicacion:
+  sencillo: "En Windows podés decidir qué aplicaciones pueden usar tus contactos, el calendario, la cámara o el micrófono. Hay un interruptor general y uno para cada aplicación."
+  tecnico: "Configuración > Privacidad y seguridad > permisos de aplicaciones (Contactos, Calendario, Cámara, Micrófono): interruptor general y por aplicación. No afecta a las aplicaciones de escritorio."
+frases: ["qué aplicaciones pueden ver mis contactos", "sacarle permisos a una aplicación en windows", "no quiero que las apps vean mi calendario", "revisar los permisos de privacidad de las aplicaciones"]
+pasos:
+  - texto: "Abrí la página de Contactos en Privacidad y seguridad."
+    abrir: "ms-settings:privacy-contacts"
+  - texto: "Con el interruptor general decidís si alguna aplicación puede usarlos. Abajo, apagá las aplicaciones que no quieras que los vean."
+  - texto: "Lo mismo podés hacer con el calendario, la cámara o el micrófono, desde la misma sección de Privacidad y seguridad."
+    abrir: "ms-settings:privacy"
+  - texto: "Los programas de escritorio no aparecen en esas listas: se configuran dentro de cada programa. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/privacy/windows-privacy-settings-that-apps-use"
+fuentes:
+  - https://support.microsoft.com/windows/privacy/windows-privacy-settings-that-apps-use
+madurez: T0
+---
+id: CMS-019
+area: windows
+titulo:
+  sencillo: "Quiero que Windows no guarde lo que hago (historial de actividad)"
+  tecnico: "Historial de actividad de Windows"
+explicacion:
+  sencillo: "Windows puede guardar en la compu una lista de los programas que usás, los archivos que abrís y las páginas que visitás. Lo podés apagar y borrar lo que ya guardó."
+  tecnico: "Configuración > Privacidad y seguridad > Historial de actividad: «Almacenar mi historial de actividad en este dispositivo» y «Borrar historial»."
+frases: ["que windows no guarde lo que hago", "borrar el historial de actividad de la compu", "no quiero que quede registro de los archivos que abro", "apagar el historial de actividad de windows"]
+pasos:
+  - texto: "Abrí la página de Historial de actividad."
+    abrir: "ms-settings:privacy-activityhistory"
+  - texto: "Apagá la opción para guardar tu historial de actividad en este dispositivo."
+  - texto: "Para borrar lo que ya había, tocá «Borrar historial» al lado de la opción para borrar el historial de esta cuenta."
+    abrir: "https://support.microsoft.com/windows/privacy/windows-activity-history-and-your-privacy"
+fuentes:
+  - https://support.microsoft.com/windows/privacy/windows-activity-history-and-your-privacy
+madurez: T0
+---
+id: CMS-020
+area: windows
+titulo:
+  sencillo: "Quiero borrar los datos que Windows le manda a Microsoft (datos de diagnóstico)"
+  tecnico: "Diagnóstico y comentarios: eliminar datos de diagnóstico"
+explicacion:
+  sencillo: "Windows le manda a Microsoft información técnica sobre cómo funciona la compu. Podés elegir mandar solo lo obligatorio y borrar lo que ya está guardado de esta compu. Borrar no frena lo que se mande de acá en adelante ni borra lo que está en tu cuenta de Microsoft."
+  tecnico: "Configuración > Privacidad y seguridad > Diagnóstico y comentarios: datos de diagnóstico obligatorios u opcionales; «Eliminar datos de diagnóstico» > Eliminar."
+frases: ["borrar los datos de diagnóstico de windows", "no quiero que windows mande tanta información a microsoft", "qué son los datos de diagnóstico opcionales", "windows me pide comentarios todo el tiempo"]
+pasos:
+  - texto: "Abrí la página de Diagnóstico y comentarios."
+    abrir: "ms-settings:privacy-feedback"
+  - texto: "En datos de diagnóstico, si querés mandar lo mínimo, apagá el envío de los datos opcionales."
+  - texto: "En la parte para eliminar datos de diagnóstico, tocá «Eliminar». Ahí también podés elegir cada cuánto te pide comentarios."
+    abrir: "https://support.microsoft.com/windows/privacy/diagnostics-feedback-and-privacy-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/privacy/diagnostics-feedback-and-privacy-in-windows
+madurez: T0
+---
+id: CMS-021
+area: seguridad
+titulo:
+  sencillo: "Me robaron o perdí la notebook y quiero encontrarla o bloquearla"
+  tecnico: "Buscar mi dispositivo (Windows)"
+explicacion:
+  sencillo: "Si la notebook tenía activado «Buscar mi dispositivo», podés verla en un mapa y bloquearla desde otra compu o el celular, entrando a tu cuenta de Microsoft. Tiene que haber estado activado antes de perderla, con la ubicación prendida y una cuenta de Microsoft."
+  tecnico: "Requiere Buscar mi dispositivo activado, ubicación activa, cuenta Microsoft personal con rol de administrador. account.microsoft.com/devices > Buscar mi dispositivo > Buscar / Bloquear."
+frases: ["me robaron la notebook y quiero encontrarla", "cómo bloqueo la compu que perdí", "activar buscar mi dispositivo en windows", "ver en el mapa dónde está mi notebook"]
+pasos:
+  - texto: "Si todavía la tenés, activalo ahora para el día que haga falta."
+    abrir: "ms-settings:findmydevice"
+  - texto: "Si ya la perdiste, desde otro aparato entrá a la página de dispositivos de tu cuenta de Microsoft, abrí la pestaña de Buscar mi dispositivo, elegí la notebook y tocá «Buscar»."
+    abrir: "https://account.microsoft.com/devices"
+  - texto: "Para bloquearla, en el mapa tocá «Bloquear» y seguí los pasos. Después cambiá la contraseña de tu cuenta."
+    abrir: "https://support.microsoft.com/accounts-billing/security/find-and-lock-a-lost-windows-device"
+  - texto: "Hacé la denuncia y avisale al seguro. El número de serie figura en la misma página de dispositivos."
+fuentes:
+  - https://support.microsoft.com/accounts-billing/security/find-and-lock-a-lost-windows-device
+madurez: T0
+---
+id: CMS-022
+area: seguridad
+titulo:
+  sencillo: "Quiero que la compu se bloquee sola cuando me alejo con el celular"
+  tecnico: "Bloqueo dinámico"
+explicacion:
+  sencillo: "Si el celular está conectado por Bluetooth a la compu, Windows puede bloquearse solo cuando te alejás con el celular en el bolsillo, en menos de un minuto. Es una ayuda extra: lo mejor sigue siendo bloquearla vos con Windows + L."
+  tecnico: "Configuración > Cuentas > Opciones de inicio de sesión > Bloqueo dinámico; requiere teléfono emparejado por Bluetooth. Bloquea cuando baja la señal y el equipo está inactivo."
+frases: ["que la compu se bloquee sola cuando me levanto", "bloquear la pc cuando me voy con el celular", "qué es el bloqueo dinámico de windows", "la compu se bloquea sola cuando me alejo"]
+pasos:
+  - texto: "Primero emparejá el celular con la compu por Bluetooth."
+    abrir: "ms-settings:bluetooth"
+  - texto: "Abrí las opciones de inicio de sesión, buscá «Bloqueo dinámico» en la configuración adicional y activalo."
+    abrir: "ms-settings:signinoptions-dynamiclock"
+  - texto: "Cuando te alejes con el celular, la compu se bloquea en menos de un minuto. Si se te bloquea sin querer, apagalo desde el mismo lugar."
+    abrir: "https://support.microsoft.com/en-us/help/4028111/windows-lock-your-windows-10-pc-automatically-when-you-step-away-from"
+fuentes:
+  - https://support.microsoft.com/en-us/help/4028111/windows-lock-your-windows-10-pc-automatically-when-you-step-away-from
+  - https://learn.microsoft.com/windows/security/identity-protection/hello-for-business/hello-feature-dynamic-lock
+madurez: T0
+---
+id: CMS-023
+area: seguridad
+titulo:
+  sencillo: "El firewall de Windows no deja que un programa se conecte"
+  tecnico: "Permitir una aplicación a través del Firewall de Windows"
+explicacion:
+  sencillo: "El firewall es una barrera que frena conexiones peligrosas. A veces frena un programa que sí es de confianza (un juego en red, un programa del trabajo). Se le puede dar permiso a ese programa solo, sin apagar el firewall. Hacelo únicamente con programas que conocés."
+  tecnico: "Seguridad de Windows > Firewall y protección de red > Permitir una aplicación a través del firewall > Cambiar la configuración > marcar la aplicación o Permitir otra aplicación."
+frases: ["el firewall bloquea un programa", "windows no deja que un juego se conecte a internet", "dar permiso a un programa en el firewall", "el firewall no deja entrar a un programa del trabajo"]
+pasos:
+  - texto: "Abrí Seguridad de Windows y entrá a «Firewall y protección de red»."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Tocá la opción para permitir una aplicación a través del firewall y después «Cambiar la configuración» (te puede pedir permiso de administrador)."
+  - texto: "Marcá la casilla del programa. Si no está en la lista, usá «Permitir otra aplicación» y buscalo. Nunca permitas un programa que no reconocés."
+    abrir: "https://support.microsoft.com/windows/security/firewall/risks-of-allowing-apps-through-windows-firewall"
+  - texto: "Cuando ya no lo uses, volvé y desmarcalo. No apagues el firewall para que el programa ande."
+fuentes:
+  - https://support.microsoft.com/windows/security/firewall/risks-of-allowing-apps-through-windows-firewall
+madurez: T0
+---
+id: CMS-024
+area: seguridad
+titulo:
+  sencillo: "Seguridad de Windows dice que la «Integridad de memoria» está desactivada"
+  tecnico: "Aislamiento del núcleo: integridad de memoria (HVCI)"
+explicacion:
+  sencillo: "La integridad de memoria es una protección que hace más difícil que un virus se meta en lo más profundo de Windows. A veces no se puede activar porque hay un controlador (driver) viejo que no es compatible con ella; la solución es actualizar ese controlador, no borrarlo a mano."
+  tecnico: "Seguridad de Windows > Seguridad del dispositivo > Detalles de aislamiento del núcleo > Integridad de memoria. Requiere virtualización activa en UEFI/BIOS; los controladores incompatibles impiden activarla."
+frases: ["dice que la integridad de memoria está desactivada", "no puedo activar el aislamiento del núcleo", "integridad de memoria controladores incompatibles", "seguridad de windows muestra un aviso en seguridad del dispositivo"]
+pasos:
+  - texto: "Abrí Seguridad de Windows, entrá a «Seguridad del dispositivo» y después a los detalles de aislamiento del núcleo."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Activá «Integridad de memoria». Si Windows te pide reiniciar, reiniciá."
+  - texto: "Si no te deja porque hay controladores incompatibles, anotá cuáles son y buscá una versión nueva en Windows Update o en la página del fabricante de ese aparato. Si no hay, quizás tengas que dejar de usar ese aparato o programa."
+    abrir: "https://support.microsoft.com/windows/security/windows-security/device-security-in-the-windows-security-app"
+derivar: "No borres controladores a mano para forzarla: Microsoft no lo recomienda. Si después de activarla algo deja de andar o la compu no arranca, pedí ayuda técnica."
+fuentes:
+  - https://support.microsoft.com/windows/security/windows-security/device-security-in-the-windows-security-app
+  - https://learn.microsoft.com/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity
+madurez: T0
+---
+id: CMS-025
+area: seguridad
+titulo:
+  sencillo: "¿Qué es la «Protección contra alteraciones» del antivirus de Windows?"
+  tecnico: "Protección contra alteraciones de Microsoft Defender"
+explicacion:
+  sencillo: "La protección contra alteraciones impide que un virus o un programa malicioso apague el antivirus de Windows o le cambie la configuración a escondidas. Conviene tenerla siempre activada."
+  tecnico: "Seguridad de Windows > Protección contra virus y amenazas > Configuración de antivirus y protección contra amenazas > Administrar la configuración > Protección contra alteraciones. En equipos administrados por una organización la controla el administrador."
+frases: ["qué es la protección contra alteraciones", "seguridad de windows dice que la protección contra alteraciones está desactivada", "activar la protección contra alteraciones", "un programa me pide desactivar la protección contra alteraciones"]
+pasos:
+  - texto: "Abrí Seguridad de Windows y entrá a «Protección contra virus y amenazas»."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "En la configuración de protección contra virus y amenazas, tocá «Administrar la configuración»."
+  - texto: "Buscá «Protección contra alteraciones» y dejala activada. Si la opción aparece gris, la compu la administra una empresa o colegio."
+    abrir: "https://learn.microsoft.com/defender-endpoint/manage-tamper-protection-individual-device"
+derivar: "Si un programa o una persona te pide apagarla, desconfiá: es lo que buscan los virus. Pasá el diagnóstico de PC Doctor o escribí «creo que tengo un virus»."
+fuentes:
+  - https://learn.microsoft.com/defender-endpoint/manage-tamper-protection-individual-device
+madurez: T0

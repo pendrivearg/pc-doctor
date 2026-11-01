@@ -1,0 +1,535 @@
+# Arranque, UEFI/BIOS y energía: inicio rápido, suspender e hibernar, tapa y botón, modos de energía, batería, recuperación y arranque. Guiadas con fuente oficial.
+id: ENE-001
+area: windows
+titulo:
+  sencillo: "Apagué la compu y el problema sigue igual: ¿apagar o reiniciar?"
+  tecnico: "Inicio rápido (Fast Startup): apagado híbrido frente a reinicio completo"
+explicacion:
+  sencillo: "Windows viene con el «inicio rápido»: cuando tocás «Apagar», en realidad guarda una parte de Windows en el disco para prender más rápido la próxima vez. Por eso, si algo anda mal, lo que sirve es «Reiniciar», que sí arranca Windows de cero."
+  tecnico: "Con Fast Startup, Apagar cierra la sesión e hiberna la sesión del kernel en hiberfil.sys (S4); Reiniciar hace un arranque completo. shutdown /s /t 0 fuerza un apagado completo."
+frases: ["apago la compu y el problema sigue igual", "qué diferencia hay entre apagar y reiniciar", "conviene sacar el inicio rápido de windows", "la compu no se apaga del todo"]
+pasos:
+  - texto: "Cuando algo ande raro, andá a Inicio > botón de encendido > «Reiniciar» (no «Apagar»). El reinicio no usa el inicio rápido: arranca Windows completo."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/deployment/fast-startup-causes-system-hibernation-shutdown-fail"
+  - texto: "Si alguna vez necesitás apagarla del todo, guardá lo que tengas abierto, apretá Windows + R, escribí «shutdown /s /t 0» y tocá «Aceptar»: se apaga en el acto, sin inicio rápido."
+  - texto: "El inicio rápido viene activado de fábrica y Microsoft no recomienda desactivarlo. Dejalo como está, salvo que un técnico te lo pida por un problema puntual."
+  - texto: "Microsoft explica cómo funcionan el apagado, la hibernación y el inicio rápido."
+    abrir: "https://learn.microsoft.com/windows/win32/power/system-power-states"
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-client/deployment/fast-startup-causes-system-hibernation-shutdown-fail
+  - https://learn.microsoft.com/windows/win32/power/system-power-states
+madurez: T0
+---
+id: ENE-002
+area: basico
+titulo:
+  sencillo: "¿Suspender o hibernar? No sé cuál usar"
+  tecnico: "Suspensión frente a hibernación"
+explicacion:
+  sencillo: "«Suspender» deja la compu dormida: gasta muy poquito y vuelve al instante donde estabas. «Hibernar» guarda todo en el disco y la deja casi apagada: gasta menos todavía, pero tarda un poco más en volver. Para un rato, suspendé; para muchas horas sin cargador, hiberná o apagá."
+  tecnico: "Suspensión: S3 o Modern Standby, con la memoria alimentada. Hibernación: S4, la memoria se guarda en hiberfil.sys y el consumo es casi el de apagado."
+frases: ["qué es mejor suspender o hibernar", "diferencia entre suspender y apagar la compu", "para qué sirve hibernar", "si la dejo suspendida gasta batería"]
+pasos:
+  - texto: "Para un rato (comer, una reunión): Inicio > botón de encendido > «Suspender». Se despierta tocando una tecla o el botón de encendido y aparece todo como lo dejaste."
+    abrir: "https://support.microsoft.com/windows/shut-down-sleep-or-hibernate-your-pc-2941d165-7d0a-a5e8-c5ad-8c972e8e6eff"
+  - texto: "Si la notebook va a quedar muchas horas sin poder cargarse, elegí «Hibernar» o «Apagar»: casi no gasta batería."
+  - texto: "Si no te aparece «Hibernar» en el menú, escribile a PC Doctor «no me aparece la opción hibernar»."
+  - texto: "Por las dudas, guardá lo importante antes de suspender o hibernar: si la batería se agota, Windows intenta guardar y apagar, pero mejor no arriesgar."
+fuentes:
+  - https://support.microsoft.com/windows/shut-down-sleep-or-hibernate-your-pc-2941d165-7d0a-a5e8-c5ad-8c972e8e6eff
+  - https://learn.microsoft.com/windows/win32/power/system-power-states
+madurez: T0
+---
+id: ENE-003
+area: windows
+titulo:
+  sencillo: "No me aparece la opción «Hibernar» al apagar"
+  tecnico: "Agregar Hibernar al menú de energía"
+explicacion:
+  sencillo: "Windows trae la opción «Hibernar» escondida. Se agrega desde las Opciones de energía del Panel de control. En algunas computadoras nuevas directamente no existe, y no es una falla."
+  tecnico: "Opciones de energía > Elegir el comportamiento del botón de inicio/apagado > Cambiar la configuración actualmente no disponible > Configuración de apagado > Hibernar. Requiere el archivo de hibernación (powercfg /hibernate on). No disponible en equipos InstantGo."
+frases: ["no me aparece la opción hibernar", "cómo agrego hibernar al menú de apagado", "en el botón de apagar no está hibernar", "quiero hibernar la notebook y no puedo"]
+pasos:
+  - texto: "Buscá «panel de control» en la lupa y abrilo. Entrá a «Sistema y seguridad» > «Opciones de energía» > «Elegir el comportamiento del botón de inicio/apagado» (en Windows 10 se llama «Elegir qué hacen los botones de inicio/apagado»)."
+    abrir: "https://support.microsoft.com/windows/shut-down-sleep-or-hibernate-your-pc-2941d165-7d0a-a5e8-c5ad-8c972e8e6eff"
+  - texto: "Tocá «Cambiar la configuración actualmente no disponible». Abajo, en «Configuración de apagado», marcá «Hibernar» y tocá «Guardar cambios». Desde ahora aparece en Inicio > botón de encendido."
+  - texto: "Si la casilla «Hibernar» no está, puede que la hibernación esté apagada. Buscá «cmd», hacé clic derecho en «Símbolo del sistema» > «Ejecutar como administrador», escribí «powercfg /hibernate on» y Enter. Después repetí el paso anterior."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/disable-and-re-enable-hibernation"
+  - texto: "Si aun así no aparece, tu computadora no ofrece hibernar (pasa en algunas con el modo de espera moderno). Para muchas horas sin usarla, apagala."
+fuentes:
+  - https://support.microsoft.com/windows/shut-down-sleep-or-hibernate-your-pc-2941d165-7d0a-a5e8-c5ad-8c972e8e6eff
+  - https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/disable-and-re-enable-hibernation
+madurez: T0
+---
+id: ENE-004
+area: archivos
+titulo:
+  sencillo: "Hay un archivo «hiberfil.sys» enorme ocupando el disco"
+  tecnico: "Archivo de hibernación (hiberfil.sys): desactivar o reducir"
+explicacion:
+  sencillo: "hiberfil.sys es el archivo donde Windows guarda la memoria para poder hibernar y para el inicio rápido. Puede ocupar varios gigas. Se puede sacar, pero entonces dejás de tener «Hibernar» y el inicio rápido."
+  tecnico: "hiberfil.sys (oculto, en la raíz de C:) tiene un tamaño cercano a la RAM. powercfg /hibernate off lo elimina y desactiva hibernación y suspensión híbrida; /type reduced deja uno más chico solo para el inicio rápido."
+frases: ["qué es hiberfil.sys", "un archivo de sistema me ocupa muchos gigas", "puedo borrar hiberfil.sys", "liberar espacio sacando la hibernación"]
+pasos:
+  - texto: "No intentes borrarlo a mano. Si te sobra espacio, lo mejor es dejarlo como está."
+  - texto: "Para sacarlo: buscá «cmd», clic derecho en «Símbolo del sistema» > «Ejecutar como administrador», escribí «powercfg /hibernate off» y Enter. El archivo desaparece, junto con la opción «Hibernar»."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/disable-and-re-enable-hibernation"
+  - texto: "Ojo en PCs de escritorio: si usás la «suspensión híbrida», sin este archivo podés perder lo que tenías abierto si se corta la luz mientras está suspendida."
+  - texto: "Término medio: con «powercfg /hibernate /type reduced» el archivo queda más chico y sigue sirviendo para el inicio rápido (sin «Hibernar»)."
+    abrir: "https://learn.microsoft.com/windows/win32/power/system-power-states"
+  - texto: "Si te arrepentís, el mismo comando con «on» lo vuelve a crear: «powercfg /hibernate on»."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/disable-and-re-enable-hibernation
+  - https://learn.microsoft.com/windows/win32/power/system-power-states
+madurez: T0
+---
+id: ENE-005
+area: windows
+titulo:
+  sencillo: "La compu nunca se suspende sola aunque no la toque"
+  tecnico: "Solicitudes de energía que impiden la suspensión (powercfg /requests)"
+explicacion:
+  sencillo: "Si dejás la compu sin tocar y nunca se duerme, casi siempre hay algo que «la mantiene despierta»: un video, una descarga, una llamada o un programa que lo pide. Windows te puede decir cuál es."
+  tecnico: "Las solicitudes de energía de aplicaciones y controladores impiden apagar la pantalla o suspender; powercfg /requests las lista."
+frases: ["la compu nunca se suspende sola", "dejo la pc sin tocar y no se duerme", "no entra en suspensión aunque la deje horas", "algo no deja que la compu se duerma"]
+pasos:
+  - texto: "Primero revisá en Energía que haya un tiempo puesto para suspender (y que no diga «Nunca»), tanto enchufada como con batería."
+    abrir: "ms-settings:powersleep"
+  - texto: "Cerrá lo que pueda estar reproduciendo o descargando (videos, música, juegos, descargas, llamadas) y dejala de nuevo sin tocar."
+  - texto: "Para encontrar al culpable: buscá «cmd», clic derecho en «Símbolo del sistema» > «Ejecutar como administrador», escribí «powercfg /requests» y Enter. Si en la lista aparece el nombre de un programa o un aparato, ese es el que no la deja dormir."
+    abrir: "https://learn.microsoft.com/windows-hardware/design/device-experiences/powercfg-command-line-options"
+  - texto: "Cerrá ese programa y probá otra vez. Si es un programa que usás siempre, buscá en sus opciones si tiene algo para no impedir la suspensión."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/design/device-experiences/powercfg-command-line-options
+  - https://support.microsoft.com/windows/power-settings-in-windows-11-0d6a2b6b-2e87-4611-9980-ac9ea2175734
+madurez: T0
+---
+id: ENE-006
+area: windows
+titulo:
+  sencillo: "Quiero suspender la compu y se apaga del todo"
+  tecnico: "Se apaga en lugar de suspenderse: acción del botón o tapa y estados disponibles (powercfg /a)"
+explicacion:
+  sencillo: "Si al suspender, cerrar la tapa o apretar el botón la compu se apaga del todo, puede ser que esté configurada para «Apagar», que la batería estuviera muy baja o que esa compu no tenga la suspensión disponible. Windows te puede decir qué modos tiene."
+  tecnico: "Acción del botón de inicio/apagado o de la tapa configurada en Apagar; apagado por batería crítica; o estados de suspensión no disponibles (powercfg /availablesleepstates)."
+frases: ["cuando la suspendo se apaga del todo", "cierro la tapa y se apaga en vez de dormirse", "no me aparece la opción suspender", "la pc se apaga cuando quiero que se duerma"]
+pasos:
+  - texto: "Panel de control > «Sistema y seguridad» > «Opciones de energía» > «Elegir el comportamiento del botón de inicio/apagado». Si el botón o la tapa dicen «Apagar», cambialos a «Suspender» y tocá «Guardar cambios»."
+    abrir: "https://support.microsoft.com/windows/shut-down-sleep-or-hibernate-your-pc-2941d165-7d0a-a5e8-c5ad-8c972e8e6eff"
+  - texto: "Si pasó con la batería casi vacía, es normal: Windows guarda lo tuyo y la apaga. Probá suspenderla enchufada."
+  - texto: "Para ver qué modos tiene tu compu: buscá «cmd», abrí «Símbolo del sistema», escribí «powercfg /a» y Enter. Muestra los modos de suspensión disponibles y, si falta alguno, intenta explicar por qué."
+    abrir: "https://learn.microsoft.com/windows-hardware/design/device-experiences/powercfg-command-line-options"
+  - texto: "Si la suspensión no figura como disponible, pasá el diagnóstico de PC Doctor y guardá lo que dice ese comando para mostrárselo a un técnico."
+fuentes:
+  - https://support.microsoft.com/windows/shut-down-sleep-or-hibernate-your-pc-2941d165-7d0a-a5e8-c5ad-8c972e8e6eff
+  - https://learn.microsoft.com/windows-hardware/design/device-experiences/powercfg-command-line-options
+madurez: T0
+---
+id: ENE-007
+area: windows
+titulo:
+  sencillo: "Quiero cerrar la tapa de la notebook sin que se duerma"
+  tecnico: "Acción al cerrar la tapa"
+explicacion:
+  sencillo: "Lo que hace la notebook al cerrar la tapa se puede elegir: suspenderse, hibernar, apagarse o no hacer nada. No hacer nada sirve, por ejemplo, si la usás cerrada con un monitor, teclado y mouse aparte."
+  tecnico: "Opciones de energía > Elegir el comportamiento del cierre de la tapa > Al cerrar la tapa (Con batería / Conectado)."
+frases: ["cierro la tapa y se suspende la notebook", "usar la notebook cerrada con un monitor", "que no se apague al bajar la tapa", "qué hace la notebook cuando cierro la tapa"]
+pasos:
+  - texto: "Buscá «panel de control» en la lupa y abrí «Sistema y seguridad» > «Opciones de energía» > «Elegir el comportamiento del cierre de la tapa»."
+    abrir: "https://support.microsoft.com/windows/shut-down-sleep-or-hibernate-your-pc-2941d165-7d0a-a5e8-c5ad-8c972e8e6eff"
+  - texto: "En «Al cerrar la tapa» elegí lo que quieras, por separado para «Con batería» y «Conectado». Para usarla cerrada con un monitor, en «Conectado» elegí la opción que no hace nada."
+  - texto: "Tocá «Guardar cambios»."
+  - texto: "Ojo: con esa opción, si la cerrás y la guardás en la mochila sigue prendida y gastando batería. Para guardarla, suspendela o apagala desde el menú de Inicio."
+fuentes:
+  - https://support.microsoft.com/windows/shut-down-sleep-or-hibernate-your-pc-2941d165-7d0a-a5e8-c5ad-8c972e8e6eff
+madurez: T0
+---
+id: ENE-008
+area: windows
+titulo:
+  sencillo: "Quiero elegir qué hace el botón de encendido"
+  tecnico: "Acción del botón de inicio/apagado"
+explicacion:
+  sencillo: "Al apretar una vez el botón de encendido con la compu prendida, Windows puede suspenderla, hibernarla, apagarla o no hacer nada. Eso se cambia en las Opciones de energía."
+  tecnico: "Opciones de energía > Elegir el comportamiento del botón de inicio/apagado > Al presionar el botón de inicio/apagado (Con batería / Conectado)."
+frases: ["aprieto el botón de prender y se suspende", "que el botón de encendido apague la compu", "cambiar lo que hace el botón de encendido", "toco el botón sin querer y se apaga"]
+pasos:
+  - texto: "Buscá «panel de control» en la lupa y abrí «Sistema y seguridad» > «Opciones de energía» > «Elegir el comportamiento del botón de inicio/apagado»."
+    abrir: "https://support.microsoft.com/windows/shut-down-sleep-or-hibernate-your-pc-2941d165-7d0a-a5e8-c5ad-8c972e8e6eff"
+  - texto: "En «Al presionar el botón de inicio/apagado» elegí lo que prefieras (por ejemplo «Suspender» o «Apagar»). En las notebooks hay un valor «Con batería» y otro «Conectado»."
+  - texto: "Tocá «Guardar cambios». Si en tu casa hay chicos que tocan el botón sin querer, «Suspender» es más seguro que «Apagar»: no se pierde lo que tenías abierto."
+fuentes:
+  - https://support.microsoft.com/windows/shut-down-sleep-or-hibernate-your-pc-2941d165-7d0a-a5e8-c5ad-8c972e8e6eff
+madurez: T0
+---
+id: ENE-009
+area: rendimiento
+titulo:
+  sencillo: "Quiero que la compu rinda más (o que gaste menos): el modo de energía"
+  tecnico: "Modo de energía de Windows 11 / control deslizante de Windows 10"
+explicacion:
+  sencillo: "Windows tiene tres modos: uno que ahorra energía, uno equilibrado y uno de máximo rendimiento. Se elige por separado para cuando está enchufada y cuando usa batería. Más rendimiento significa más consumo y, en notebooks, menos batería."
+  tecnico: "Configuración > Sistema > Energía y batería > Modo de energía (máxima eficiencia, equilibrado, máximo rendimiento), por separado Conectado / Con batería."
+frases: ["poner la compu en máximo rendimiento", "dónde elijo el modo de energía en windows 11", "quiero que la notebook rinda más enchufada", "modo ahorro o modo rendimiento en windows"]
+pasos:
+  - texto: "Abrí Configuración > Sistema > Energía y batería y buscá «Modo de energía»."
+    abrir: "ms-settings:powersleep"
+  - texto: "Elegí el modo para «Conectado» y para «Con batería»: el de mejor eficiencia ahorra batería, el equilibrado es el normal y el de mejor rendimiento saca todo lo que puede la compu."
+    abrir: "https://support.microsoft.com/en-us/windows/change-the-power-mode-for-your-windows-pc-c2aff038-22c9-f46d-5ca0-78696fdf2de8"
+  - texto: "En Windows 10: tocá el ícono de la batería en la barra de tareas y mové el control deslizante. No está en todas las PCs: depende del equipo y del fabricante."
+  - texto: "Si la opción está gris y no te deja cambiarla, escribile a PC Doctor «no me deja cambiar el modo de energía»."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/change-the-power-mode-for-your-windows-pc-c2aff038-22c9-f46d-5ca0-78696fdf2de8
+madurez: T0
+---
+id: ENE-010
+area: rendimiento
+titulo:
+  sencillo: "No me deja cambiar el modo de energía (está gris)"
+  tecnico: "Modo de energía bloqueado: ahorro de energía activo o plan de energía personalizado"
+explicacion:
+  sencillo: "Pasa por dos motivos: está prendido el ahorro de energía (mientras está activo no se puede cambiar el modo) o la compu tiene un plan de energía personalizado, por ejemplo uno que instaló el fabricante o un programa."
+  tecnico: "Con Ahorro de energía activo no se puede cambiar el modo de energía; con un plan personalizado hay que volver al plan Equilibrado (Panel de control > Opciones de energía)."
+frases: ["no me deja cambiar el modo de energía", "el modo de energía está gris", "no puedo poner máximo rendimiento", "el modo de energía no se puede tocar"]
+pasos:
+  - texto: "Fijate si está activo el ahorro de energía (en Configuración > Sistema > Energía y batería, o en el ícono de la batería abajo a la derecha). Apagalo y probá cambiar el modo."
+    abrir: "ms-settings:powersleep"
+  - texto: "Si sigue gris, buscá «panel de control» en la lupa > «Sistema y seguridad» > «Opciones de energía» y elegí el plan «Equilibrado»."
+    abrir: "https://support.microsoft.com/en-us/windows/change-the-power-mode-for-your-windows-pc-c2aff038-22c9-f46d-5ca0-78696fdf2de8"
+  - texto: "Volvé a Energía y batería y elegí el modo que quieras."
+  - texto: "Microsoft explica qué cambia mientras el ahorro de energía está activo."
+    abrir: "https://learn.microsoft.com/windows-hardware/design/component-guidelines/energy-saver"
+fuentes:
+  - https://support.microsoft.com/en-us/windows/change-the-power-mode-for-your-windows-pc-c2aff038-22c9-f46d-5ca0-78696fdf2de8
+  - https://learn.microsoft.com/windows-hardware/design/component-guidelines/energy-saver
+madurez: T0
+---
+id: ENE-011
+area: hardware
+titulo:
+  sencillo: "La batería no llega al 100 % aunque esté enchufada"
+  tecnico: "Carga inteligente (Smart charging) o límite de carga del fabricante"
+explicacion:
+  sencillo: "Muchas notebooks frenan la carga antes del 100 % a propósito, para que la batería dure más años. Si ves un corazoncito en el ícono de la batería, es eso: la batería no está rota."
+  tecnico: "Carga inteligente de Windows 11/10 (ícono de batería con corazón): la carga se pausa por debajo del 100 % para reducir el desgaste; cada fabricante la implementa y la controla a su manera."
+frases: ["la batería se queda en 80 y no carga más", "la notebook no carga al 100 por ciento", "la batería tiene un corazoncito", "enchufada no pasa del 80"]
+pasos:
+  - texto: "Mirá el ícono de la batería en la barra de tareas o en Configuración > Sistema > Energía y batería: si tiene un corazón, está activa la carga inteligente."
+    abrir: "ms-settings:powersleep"
+  - texto: "Si pasás el mouse por arriba del ícono, aparece un aviso de que la carga inteligente la frenó a propósito. Es normal aunque siga enchufada."
+    abrir: "https://support.microsoft.com/en-us/windows/experience/power-battery/use-smart-charging-in-windows"
+  - texto: "Conviene dejarla así. Si un día necesitás la batería llena (un viaje, muchas horas sin enchufe), la forma de apagarla depende de la marca: buscala en la página de ayuda o en la aplicación del fabricante."
+  - texto: "Si no ves el corazón y la carga igual no avanza, es otra cosa: escribile a PC Doctor «la notebook está enchufada pero no carga»."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/experience/power-battery/use-smart-charging-in-windows
+madurez: T0
+---
+id: ENE-012
+area: hardware
+titulo:
+  sencillo: "Quiero saber qué aplicación me gasta la batería"
+  tecnico: "Uso de la batería por aplicación y actividad en segundo plano"
+explicacion:
+  sencillo: "Windows anota cuánta batería gastó cada aplicación, incluso las que trabajan escondidas. Si una gasta mucho y no la usás, le podés quitar el permiso de funcionar en segundo plano."
+  tecnico: "Configuración > Sistema > Energía y batería > Uso de la batería > uso por aplicación; Más opciones > Administrar la actividad en segundo plano (Windows 11 24H2 o posterior)."
+frases: ["qué programa me come la batería", "ver cuánta batería usa cada aplicación", "una app me descarga la notebook", "qué aplicación gasta batería en segundo plano"]
+pasos:
+  - texto: "Abrí Configuración > Sistema > Energía y batería > «Uso de la batería». Abajo está la lista de aplicaciones y cuánto gastó cada una."
+    abrir: "ms-settings:batterysaver-usagedetails"
+  - texto: "Si una aplicación que casi no usás gasta mucho en segundo plano, tocá los tres puntitos («Más opciones») al lado de su nombre > administrar la actividad en segundo plano, y cambiá el permiso para que no funcione en segundo plano."
+    abrir: "https://support.microsoft.com/windows/experience/power-battery/battery-saving-tips-for-windows"
+  - texto: "No le quites el permiso a programas que necesitás que avisen solos (por ejemplo, el correo o WhatsApp): dejarían de mandarte notificaciones."
+fuentes:
+  - https://support.microsoft.com/windows/experience/power-battery/battery-saving-tips-for-windows
+madurez: T0
+---
+id: ENE-013
+area: rendimiento
+titulo:
+  sencillo: "Quiero usar el «Ahorro de energía» de Windows 11"
+  tecnico: "Ahorro de energía (Energy saver, Windows 11 24H2 o posterior)"
+explicacion:
+  sencillo: "En Windows 11 nuevo, el «Ahorro de energía» reemplazó al viejo ahorro de batería. Baja un poco el brillo y frena tareas de fondo para gastar menos. Se puede prender cuando quieras, hacer que se active solo con poca batería o dejarlo siempre, incluso enchufada."
+  tecnico: "Energy saver: se activa desde Configuración rápida, en forma automática según el porcentaje de batería, o siempre (también conectado). Reduce el brillo 30 %, desactiva la transparencia y bloquea el cambio de modo de energía; con batería baja limita apps en segundo plano, sincronización y descargas no críticas de Windows Update."
+frases: ["activar el ahorro de energía en windows 11", "que la compu gaste menos luz", "dónde está el ahorro de batería en windows 11", "con el ahorro de energía se oscurece la pantalla"]
+pasos:
+  - texto: "La forma rápida: tocá el ícono de la batería (o de energía) abajo a la derecha y activá «Ahorro de energía»."
+    abrir: "https://learn.microsoft.com/windows-hardware/design/component-guidelines/energy-saver"
+  - texto: "Para que se active solo o quede siempre prendido: Configuración > Sistema > Energía y batería > «Ahorro de energía». Ahí elegís el porcentaje de batería en que se enciende o la opción de usarlo siempre."
+    abrir: "ms-settings:powersleep"
+  - texto: "Mientras está activo, el brillo baja un 30 % (esa parte se puede desactivar) y no se puede cambiar el modo de energía."
+  - texto: "Con la batería baja y desenchufada, además frena aplicaciones en segundo plano y algunas sincronizaciones (OneDrive, OneNote): si algo no se actualiza, puede ser por esto."
+    abrir: "https://support.microsoft.com/windows/experience/power-battery/battery-saving-tips-for-windows"
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/design/component-guidelines/energy-saver
+  - https://support.microsoft.com/windows/experience/power-battery/battery-saving-tips-for-windows
+madurez: T0
+---
+id: ENE-014
+area: windows
+titulo:
+  sencillo: "¿Qué toco: «Actualizar y apagar» o «Actualizar y reiniciar»?"
+  tecnico: "Completar actualizaciones pendientes: reinicio completo frente a apagado con inicio rápido"
+explicacion:
+  sencillo: "Cuando Windows tiene actualizaciones listas, el botón de encendido muestra esas dos opciones y las dos instalan lo pendiente. Pero algunas actualizaciones solo terminan con un reinicio completo: si apagás y al otro día te sigue pidiendo actualizar, usá «Actualizar y reiniciar»."
+  tecnico: "Con el inicio rápido, Apagar es una hibernación y algunas actualizaciones solo se completan tras un inicio completo; Reiniciar las completa. Desde julio de 2026, Windows 11 24H2 o posterior agrupa los reinicios con la actualización de seguridad mensual."
+frases: ["actualizar y apagar o actualizar y reiniciar", "apago con actualizar y al otro día me sigue pidiendo", "la actualización no termina nunca de instalarse al apagar", "qué pasa si toco actualizar y apagar"]
+pasos:
+  - texto: "Guardá todo y cerrá los programas. Después andá a Inicio > botón de encendido > «Actualizar y reiniciar» y esperá a que vuelva a aparecer la pantalla de inicio."
+    abrir: "https://support.microsoft.com/en-us/servicing/os/windows/docs/2026/07/kb5121772-one-restart-a-month-for-windows-updates"
+  - texto: "Si siempre usás «Actualizar y apagar» y la actualización vuelve a aparecer, es por el inicio rápido: hay actualizaciones que solo se terminan de instalar reiniciando."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/updates-not-install-with-fast-startup"
+  - texto: "También podés ir a Configuración > Windows Update y tocar «Reiniciar ahora»."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Para que Windows no se reinicie mientras la usás, configurá tus horas activas en Windows Update > Opciones avanzadas."
+    abrir: "ms-settings:windowsupdate-activehours"
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/updates-not-install-with-fast-startup
+  - https://support.microsoft.com/en-us/servicing/os/windows/docs/2026/07/kb5121772-one-restart-a-month-for-windows-updates
+madurez: T0
+---
+id: ENE-015
+area: rendimiento
+titulo:
+  sencillo: "La compu tarda mucho en apagarse"
+  tecnico: "Apagado lento: aplicaciones o servicios que demoran el cierre, actualizaciones pendientes"
+explicacion:
+  sencillo: "Al apagar, Windows primero cierra todos los programas. Si alguno tarda en cerrarse o quedó trabado, o si Windows está instalando actualizaciones, el apagado se hace largo."
+  tecnico: "El apagado cierra las aplicaciones y las sesiones antes de hibernar el kernel (inicio rápido) o apagar; las demoras suelen venir de software o servicios de terceros o de actualizaciones pendientes. Se aísla con un arranque limpio (msconfig)."
+frases: ["la compu tarda mucho en apagarse", "se queda apagando un montón de tiempo", "queda la ruedita girando al apagar", "tarda años en apagarse la notebook"]
+pasos:
+  - texto: "Antes de apagar, guardá y cerrá vos los programas abiertos: Windows tiene que cerrarlos todos antes de terminar."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/kernel/distinguishing-fast-startup-from-wake-from-hibernation"
+  - texto: "Si en el botón de encendido aparecía «Actualizar y apagar», es esperable que tarde más: está instalando actualizaciones. Dejala terminar."
+    abrir: "https://support.microsoft.com/en-us/servicing/os/windows/docs/2026/07/kb5121772-one-restart-a-month-for-windows-updates"
+  - texto: "Si tarda siempre, probá un «arranque limpio» para ver si la culpa es de algún programa: buscá «msconfig» y abrí Configuración del sistema; en «Servicios» ocultá los de Microsoft y deshabilitá el resto; en «Inicio» abrí el Administrador de tareas y deshabilitá lo que arranca solo (anotá qué apagaste). Reiniciá y probá apagar."
+    abrir: "https://support.microsoft.com/topic/how-to-perform-a-clean-boot-in-windows-da2f9573-6eec-00ad-2f8a-a97a1807f3dd"
+  - texto: "Si así se apaga rápido, el culpable es uno de esos programas: volvé a activarlos de a poco hasta encontrarlo. Para dejar todo como antes, en msconfig elegí «Inicio normal», volvé a habilitar los servicios y los programas de inicio."
+  - texto: "Si no te animás a tocar msconfig, pedí ayuda: usado mal puede dejar la compu inestable."
+fuentes:
+  - https://support.microsoft.com/topic/how-to-perform-a-clean-boot-in-windows-da2f9573-6eec-00ad-2f8a-a97a1807f3dd
+  - https://learn.microsoft.com/windows-hardware/drivers/kernel/distinguishing-fast-startup-from-wake-from-hibernation
+  - https://support.microsoft.com/en-us/servicing/os/windows/docs/2026/07/kb5121772-one-restart-a-month-for-windows-updates
+madurez: T0
+---
+id: ENE-016
+area: windows
+titulo:
+  sencillo: "Necesito entrar a la BIOS (UEFI) y no llego a apretar la tecla"
+  tecnico: "Entrar a la configuración de firmware UEFI desde Windows"
+explicacion:
+  sencillo: "La «BIOS» o «UEFI» es la configuración interna de la placa de la compu. Como Windows prende muy rápido, muchas veces no da tiempo de apretar la tecla. Desde Windows se puede entrar sin apuro."
+  tecnico: "Inicio avanzado (Configuración > Sistema > Recuperación, o Mayús + Reiniciar) > Solucionar problemas > Opciones avanzadas > Configuración de firmware UEFI. Solo en equipos UEFI."
+frases: ["cómo entro a la bios", "no llego a apretar la tecla para entrar al setup", "entrar a la uefi desde windows", "qué tecla es para entrar a la bios"]
+pasos:
+  - texto: "IMPORTANTE: en la BIOS/UEFI no cambies nada que no conozcas. Si tu disco tiene BitLocker, antes tené a mano la clave de recuperación (escribile a PC Doctor «dónde encuentro la clave de recuperación de BitLocker»)."
+  - texto: "Guardá lo que tengas abierto. Andá a Configuración > Sistema > Recuperación y, en «Inicio avanzado», tocá «Reiniciar ahora». Otra forma: Inicio > botón de encendido, mantené apretada la tecla Mayús y tocá «Reiniciar»."
+    abrir: "ms-settings:recovery"
+  - texto: "En la pantalla azul que aparece, elegí «Solucionar problemas» > «Opciones avanzadas» > la opción de configuración de firmware UEFI, y confirmá con «Reiniciar»."
+    abrir: "https://learn.microsoft.com/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode"
+  - texto: "Si esa opción no aparece, tu PC no la ofrece (por ejemplo, si arranca en modo antiguo). Entonces apagala, prendela y apretá varias veces la tecla del fabricante: suele ser Esc, Supr, F1, F2, F10, F11 o F12, y muchas veces se indica en pantalla al prender."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode
+  - https://learn.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference
+  - https://support.microsoft.com/windows/recovery-options-in-windows-31ce2444-7de3-818c-d626-e3b5a3024da5
+madurez: T0
+---
+id: ENE-017
+area: windows
+titulo:
+  sencillo: "Quiero que la compu arranque desde un pendrive"
+  tecnico: "Menú de arranque y orden de arranque (boot order)"
+explicacion:
+  sencillo: "Para instalar Windows o usar un pendrive de rescate, la compu tiene que arrancar desde el pendrive y no desde el disco. Eso se elige en el menú de arranque de la placa, que se abre con una tecla al prender."
+  tecnico: "Menú de arranque del firmware (tecla del fabricante) o Inicio avanzado > Usar un dispositivo (solo UEFI); elegir la entrada UEFI del USB. El Arranque seguro puede ocultar medios no firmados."
+frases: ["arrancar la compu desde un pendrive", "cambiar el orden de arranque", "la pc no bootea desde el usb", "cómo hago para que arranque del pendrive"]
+pasos:
+  - texto: "Con el pendrive puesto, prendé la PC y apretá varias veces la tecla del menú de arranque o de configuración (suele ser F2, F12, Supr o Esc; muchas veces aparece en pantalla al prender)."
+    abrir: "https://www.microsoft.com/software-download/windows11"
+  - texto: "Elegí el pendrive en la lista. Si aparece dos veces, elegí el que dice «UEFI» (por ejemplo, «UEFI: USB»)."
+    abrir: "https://learn.microsoft.com/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode"
+  - texto: "Si Windows prende bien, también podés hacerlo desde ahí: Inicio > botón de encendido > Mayús + «Reiniciar» > «Usar un dispositivo», y elegí el pendrive."
+  - texto: "Si el pendrive no aparece en la lista, puede ser por el Arranque seguro. No lo desactives por tu cuenta: consultá la ayuda del fabricante de tu PC."
+  - texto: "Si cambiaste el orden de arranque, cuando termines volvé a poner el disco primero para que la PC arranque normal."
+fuentes:
+  - https://www.microsoft.com/software-download/windows11
+  - https://learn.microsoft.com/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode
+  - https://learn.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference
+madurez: T0
+---
+id: ENE-018
+area: seguridad
+titulo:
+  sencillo: "¿Mi compu tiene TPM 2.0? (lo pide Windows 11)"
+  tecnico: "Comprobar y habilitar TPM 2.0 (fTPM / PTT) en el firmware"
+explicacion:
+  sencillo: "El TPM es un chip de seguridad que Windows 11 exige en su versión 2.0. Casi todas las compus de los últimos años lo tienen, pero a veces viene apagado en la configuración de la placa."
+  tecnico: "Windows 11 requiere TPM 2.0 y firmware UEFI compatible con Arranque seguro. Comprobación: tpm.msc o Seguridad de Windows > Seguridad del dispositivo > Procesador de seguridad. Habilitación en UEFI: Intel PTT, AMD fTPM, Security Device Support o TPM State."
+frases: ["mi compu tiene tpm", "cómo sé si tengo tpm 2.0", "windows 11 me pide tpm", "activar el tpm en la bios"]
+pasos:
+  - texto: "Apretá Windows + R, escribí «tpm.msc» y tocá «Aceptar». Si dice que no encuentra un TPM compatible, puede estar desactivado. Si aparece la información del TPM, fijate que la versión de la especificación sea 2.0."
+    abrir: "https://support.microsoft.com/windows/enable-tpm-2-0-on-your-pc-1fd5a332-360d-4f46-a1e7-ae6b0c90645c"
+  - texto: "Otra forma: abrí Seguridad de Windows > «Seguridad del dispositivo». Si no aparece la sección del procesador de seguridad, el TPM puede estar apagado."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "IMPORTANTE antes de activarlo: en la BIOS/UEFI no cambies otras opciones, y si tu disco tiene BitLocker tené a mano la clave de recuperación."
+  - texto: "Entrá a la UEFI (escribile a PC Doctor «entrar a la BIOS desde Windows»). Buscá en menús como «Advanced», «Security» o «Trusted Computing» una opción llamada «Intel PTT», «AMD fTPM», «Security Device Support» o «TPM State», activala y guardá. Si no la encontrás, mirá la ayuda del fabricante."
+fuentes:
+  - https://support.microsoft.com/windows/enable-tpm-2-0-on-your-pc-1fd5a332-360d-4f46-a1e7-ae6b0c90645c
+  - https://learn.microsoft.com/windows/whats-new/windows-11-requirements
+madurez: T0
+---
+id: ENE-019
+area: seguridad
+titulo:
+  sencillo: "Me avisan que los certificados del Arranque seguro vencen en 2026"
+  tecnico: "Vencimiento de los certificados de Secure Boot de 2011 y paso a los de 2023"
+explicacion:
+  sencillo: "El Arranque seguro usa unos «certificados» de Microsoft de 2011 que empezaron a vencer en junio de 2026. La mayoría de las compus reciben los nuevos solas por Windows Update. Si una no los tiene, igual prende y funciona, pero deja de recibir protecciones nuevas para el arranque."
+  tecnico: "Las CA de Secure Boot de 2011 vencen desde junio de 2026 y se reemplazan por las CA 2023 vía Windows Update; algunos equipos necesitan además una actualización de firmware del fabricante. Estado en Seguridad de Windows > Seguridad del dispositivo > Arranque seguro."
+frases: ["vencen los certificados del arranque seguro", "secure boot certificados 2026", "dice que hay que actualizar el arranque seguro", "aviso amarillo en arranque seguro en seguridad de windows"]
+pasos:
+  - texto: "Instalá todas las actualizaciones de Windows y reiniciá cuando te lo pida: los certificados nuevos llegan por ahí."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Para ver cómo está tu compu: Seguridad de Windows > «Seguridad del dispositivo» > «Arranque seguro». Si está en verde y dice que ya se aplicaron todas las actualizaciones, no hay que hacer nada. Si está en amarillo o rojo, leé el mensaje."
+    abrir: "https://support.microsoft.com/en-us/topic/secure-boot-certificate-update-status-in-the-windows-security-app-5ce39986-7dd2-4852-8c21-ef30dd04f046"
+  - texto: "Si el mensaje dice que tu equipo no admite la actualización automática por limitaciones de hardware o firmware, consultá al fabricante si hay una actualización de BIOS/UEFI para tu modelo."
+    abrir: "https://support.microsoft.com/en-us/servicing/os/secure-boot/2026/02/when-secure-boot-certificates-expire-on-windows-devices"
+  - texto: "No desactives el Arranque seguro para «esquivar» el vencimiento: Microsoft lo desaconseja porque deja la compu mucho menos protegida."
+fuentes:
+  - https://support.microsoft.com/en-us/servicing/os/secure-boot/2026/02/when-secure-boot-certificates-expire-on-windows-devices
+  - https://support.microsoft.com/en-us/topic/secure-boot-certificate-update-status-in-the-windows-security-app-5ce39986-7dd2-4852-8c21-ef30dd04f046
+madurez: T0
+---
+id: ENE-020
+area: windows
+titulo:
+  sencillo: "Quiero entrar a las opciones de recuperación de Windows"
+  tecnico: "Inicio avanzado y Entorno de recuperación de Windows (WinRE)"
+explicacion:
+  sencillo: "Windows tiene una «sala de reparaciones» que se abre antes de que arranque: desde ahí se pueden desinstalar actualizaciones, volver a un punto anterior, iniciar en modo seguro o restablecer la compu."
+  tecnico: "Inicio avanzado (Configuración > Sistema > Recuperación > Reiniciar ahora, o Mayús + Reiniciar) arranca WinRE: Solucionar problemas > Opciones avanzadas (Desinstalar actualizaciones, Restaurar sistema, Configuración de inicio) o Restablecer este equipo."
+frases: ["cómo entro al inicio avanzado", "abrir las opciones de recuperación de windows", "entrar a solucionar problemas antes de que arranque windows", "reiniciar con shift para reparar"]
+pasos:
+  - texto: "Guardá todo. Andá a Configuración > Sistema > Recuperación y, en «Inicio avanzado», tocá «Reiniciar ahora»."
+    abrir: "ms-settings:recovery"
+  - texto: "Si no podés entrar a tu usuario: en la pantalla de inicio de sesión tocá el botón de encendido, mantené apretada la tecla Mayús y elegí «Reiniciar»."
+    abrir: "https://learn.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference"
+  - texto: "En la pantalla azul, entrá a «Solucionar problemas» > «Opciones avanzadas». Ahí están, entre otras, «Desinstalar actualizaciones» y «Restaurar sistema». «Restablecer este equipo» es lo último: reinstala Windows."
+    abrir: "https://support.microsoft.com/windows/recovery-options-in-windows-31ce2444-7de3-818c-d626-e3b5a3024da5"
+  - texto: "Si te pide la clave de recuperación de BitLocker, escribile a PC Doctor «dónde encuentro la clave de recuperación de BitLocker»."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference
+  - https://support.microsoft.com/windows/recovery-options-in-windows-31ce2444-7de3-818c-d626-e3b5a3024da5
+madurez: T0
+---
+id: ENE-021
+area: windows
+titulo:
+  sencillo: "La compu entra siempre a «Reparación automática» y no sale de ahí"
+  tecnico: "Bucle de reparación automática (Startup Repair) en WinRE"
+explicacion:
+  sencillo: "Si Windows no logra arrancar dos veces seguidas, abre solo la reparación automática. Cuando no puede arreglarlo, avisa que no pudo reparar el equipo y, al reiniciar, vuelve a empezar. Desde esa pantalla hay otras herramientas para probar."
+  tecnico: "Tras dos inicios fallidos consecutivos WinRE ejecuta Reparación automática; si no corrige, se repite. Opciones: desconectar periféricos, Desinstalar actualizaciones, Restaurar sistema/punto en el tiempo, Restablecer; Srttrail.txt registra el diagnóstico."
+frases: ["la compu entra siempre a reparación automática", "dice que la reparación automática no pudo reparar el equipo", "se queda en un bucle de reparación", "cada vez que prendo intenta reparar y no arranca"]
+pasos:
+  - texto: "Desenchufá todo lo que no haga falta (pendrives, discos externos, impresora, tarjetas de memoria), tocá «Apagar» y prendela de nuevo."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/performance/windows-boot-issues-troubleshooting"
+  - texto: "Si vuelve a fallar, en esa pantalla tocá «Opciones avanzadas» > «Solucionar problemas» > «Opciones avanzadas». Si empezó después de una actualización, probá «Desinstalar actualizaciones»; si no, «Restaurar sistema»."
+    abrir: "https://support.microsoft.com/windows/recovery-options-in-windows-31ce2444-7de3-818c-d626-e3b5a3024da5"
+  - texto: "Si te pide la clave de recuperación de BitLocker, la mayoría de estas opciones no funcionan sin ella: buscala en tu cuenta de Microsoft desde el celular (escribile a PC Doctor «dónde encuentro la clave de BitLocker»)."
+  - texto: "Antes de usar «Restablecer este equipo», rescatá tus fotos y documentos con el pendrive de PC Doctor (escribí «la computadora no arranca»)."
+derivar: "Si nada de esto funciona, puede haber una falla del disco o de los archivos de arranque: un técnico puede revisarlo con las herramientas avanzadas de recuperación."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/manufacture/desktop/windows-re-troubleshooting-features
+  - https://support.microsoft.com/windows/recovery-options-in-windows-31ce2444-7de3-818c-d626-e3b5a3024da5
+  - https://learn.microsoft.com/troubleshoot/windows-client/performance/windows-boot-issues-troubleshooting
+madurez: T0
+---
+id: ENE-022
+area: windows
+titulo:
+  sencillo: "Al prender aparece «Preparando reparación automática»"
+  tecnico: "Conmutación automática a WinRE por inicio incompleto"
+explicacion:
+  sencillo: "Windows muestra ese cartel cuando el arranque anterior no terminó bien, por ejemplo si se cortó la luz o se apagó mientras arrancaba. Muchas veces no hay ningún daño y a la vuelta siguiente arranca normal."
+  tecnico: "El cargador marca el inicio y Windows borra la marca antes del inicio de sesión; si no se borra (fallo o corte de energía durante el arranque), el siguiente inicio entra a WinRE. Puede ser un falso positivo."
+frases: ["al prender dice preparando reparación automática", "se cortó la luz y ahora dice reparación automática", "se queda diagnosticando el equipo", "aparece reparación automática después de un apagón"]
+pasos:
+  - texto: "Dejala trabajar unos minutos sin tocarla: está revisando el arranque."
+    abrir: "https://learn.microsoft.com/windows-hardware/manufacture/desktop/windows-re-troubleshooting-features"
+  - texto: "Si te muestra opciones, probá primero «Continuar» (o apagar y volver a prender). Si fue por un corte de luz, suele arrancar normal."
+  - texto: "Antes de volver a prender, sacá pendrives, discos externos y tarjetas de memoria."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/performance/windows-boot-issues-troubleshooting"
+  - texto: "Si aparece cada vez que la prendés, escribile a PC Doctor «la compu entra siempre a reparación automática»."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/manufacture/desktop/windows-re-troubleshooting-features
+  - https://learn.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference
+  - https://learn.microsoft.com/troubleshoot/windows-client/performance/windows-boot-issues-troubleshooting
+madurez: T0
+---
+id: ENE-023
+area: hardware
+titulo:
+  sencillo: "Al prender dice que no encuentra el disco («No bootable device»)"
+  tecnico: "El firmware no detecta un disco de arranque (fase PreBoot)"
+explicacion:
+  sencillo: "Antes de Windows, la placa busca un disco para arrancar. Si no lo encuentra, muestra un cartel en inglés como «No bootable device» o «Boot device not found». Puede ser un pendrive puesto, el orden de arranque cambiado o un disco que falla."
+  tecnico: "Fallo en la fase PreBoot: el firmware no encuentra un disco de sistema válido. Revisar periféricos, presencia del disco en el firmware y orden de arranque; si el disco no aparece, sospechar hardware."
+frases: ["dice no bootable device al prender", "la compu no encuentra el disco al arrancar", "sale boot device not found", "dice que no hay disco de arranque"]
+pasos:
+  - texto: "Sacá pendrives, discos externos, tarjetas de memoria y CD, y prendé de nuevo."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/performance/windows-boot-issues-troubleshooting"
+  - texto: "Entrá a la configuración de la placa apretando la tecla del fabricante apenas la prendés (Esc, Supr, F1, F2, F10, F11 o F12) y fijate si el disco aparece en la lista de arranque. Mirá sin cambiar otras opciones."
+    abrir: "https://learn.microsoft.com/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode"
+  - texto: "Si el disco aparece pero no está primero en el orden de arranque, ponelo primero, guardá y reiniciá."
+    abrir: "https://www.microsoft.com/software-download/windows11"
+  - texto: "Si el disco no aparece en ningún lado, es probable que sea un problema físico (el disco o su conexión). No reinstales Windows: si tus archivos son importantes, primero hay que rescatarlos."
+derivar: "Cuando el disco no figura en la configuración de la placa, hace falta revisar el hardware: un técnico puede ver si es el disco, el cable o la placa, y recuperar lo que se pueda."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-client/performance/windows-boot-issues-troubleshooting
+  - https://learn.microsoft.com/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode
+  - https://www.microsoft.com/software-download/windows11
+madurez: T0
+---
+id: ENE-024
+area: hardware
+titulo:
+  sencillo: "La notebook se descarga estando suspendida o en la mochila"
+  tecnico: "Consumo en Modern Standby (S0 de bajo consumo)"
+explicacion:
+  sencillo: "Muchas notebooks modernas, al suspenderse, quedan como un celular: con la pantalla apagada pero conectadas, haciendo tareas cortas de vez en cuando (correo, actualizaciones). Por eso pierden algo de batería aunque estén «dormidas»."
+  tecnico: "Modern Standby mantiene el sistema en S0 de bajo consumo con actividad periódica de red y mantenimiento; la hibernación (S4) o el apagado consumen casi nada. powercfg /sleepstudy informa la actividad de los últimos 3 días."
+frases: ["la notebook se descarga suspendida", "la dejo dormida y al otro día no tiene batería", "la saco de la mochila y está caliente", "pierde batería con la tapa cerrada"]
+pasos:
+  - texto: "Si la vas a guardar muchas horas sin cargador, usá «Hibernar» o «Apagar» en vez de «Suspender». Si no tenés «Hibernar» (algunas no lo traen), apagala."
+    abrir: "https://support.microsoft.com/windows/shut-down-sleep-or-hibernate-your-pc-2941d165-7d0a-a5e8-c5ad-8c972e8e6eff"
+  - texto: "En Configuración > Sistema > Energía y batería revisá los tiempos de suspensión e hibernación: si tu notebook tiene la opción de hibernar después de un rato, conviene usarla."
+    abrir: "ms-settings:powersleep"
+  - texto: "Para ver qué hizo mientras dormía: abrí «Símbolo del sistema», escribí «powercfg /sleepstudy» y Enter. Guarda un informe (archivo .html) en la carpeta que muestra la ventana, con la actividad de los últimos 3 días. Es técnico: podés mostrárselo a un técnico."
+    abrir: "https://learn.microsoft.com/windows-hardware/design/device-experiences/powercfg-command-line-options"
+  - texto: "Microsoft explica cómo funciona este modo de suspensión."
+    abrir: "https://learn.microsoft.com/windows-hardware/design/device-experiences/modern-standby"
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/design/device-experiences/modern-standby
+  - https://support.microsoft.com/windows/shut-down-sleep-or-hibernate-your-pc-2941d165-7d0a-a5e8-c5ad-8c972e8e6eff
+  - https://learn.microsoft.com/windows-hardware/design/device-experiences/powercfg-command-line-options
+madurez: T0
+---
+id: ENE-025
+area: windows
+titulo:
+  sencillo: "Toco «Apagar» y vuelve a la pantalla de bloqueo"
+  tecnico: "El apagado híbrido (inicio rápido) falla y regresa a la pantalla de bloqueo"
+explicacion:
+  sencillo: "Si al tocar «Apagar» la compu no se apaga y vuelve a la pantalla de bloqueo, puede ser una falla del inicio rápido: al apagar, Windows intenta guardar una parte del sistema y algo se lo impide."
+  tecnico: "Con Fast Startup, el apagado hiberna la sesión del kernel; si falla la carga del controlador de volcado (evento 45, DumpFilters en CrashControl), vuelve a la pantalla de bloqueo. Alternativa: shutdown /s /t 0 (apagado completo)."
+frases: ["toco apagar y vuelve a la pantalla de bloqueo", "la compu no se apaga, vuelve al inicio de sesión", "le doy apagar y aparece la pantalla con la hora", "no se apaga y vuelve a pedirme el pin"]
+pasos:
+  - texto: "Para apagarla igual: guardá todo, apretá Windows + R, escribí «shutdown /s /t 0» y tocá «Aceptar». Así se apaga completa, sin inicio rápido."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/deployment/fast-startup-causes-system-hibernation-shutdown-fail"
+  - texto: "«Reiniciar» no usa el inicio rápido, así que debería funcionar normal."
+  - texto: "La corrección de fondo que da Microsoft toca el registro de Windows: no la hagas por tu cuenta."
+derivar: "La solución oficial revisa el registro (valor DumpFilters en CrashControl) y el evento 45 del registro del sistema: pedíselo a un técnico de confianza."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-client/deployment/fast-startup-causes-system-hibernation-shutdown-fail
+madurez: T0

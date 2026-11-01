@@ -1,0 +1,460 @@
+# Servicios de Google en la PC: Drive, Documentos y Hojas de cálculo, YouTube, Maps, Calendario, Traductor y cuenta de Google. Guiadas con la ayuda oficial de Google (support.google.com, es-419).
+id: GOO-001
+area: archivos
+titulo:
+  sencillo: "Quiero subir un archivo o una carpeta a Google Drive"
+  tecnico: "Subir archivos y carpetas a Google Drive desde el navegador"
+explicacion:
+  sencillo: "Google Drive es un lugar en Internet, dentro de tu cuenta de Google, donde podés guardar documentos y fotos para tenerlos a mano desde cualquier compu o celular."
+  tecnico: "drive.google.com > Nuevo > Subir archivo / Subir carpeta."
+frases: ["cómo subo un archivo al drive", "quiero guardar unas fotos en google drive", "pasar una carpeta de la compu al drive", "subir documentos a la nube de google"]
+pasos:
+  - texto: "En el navegador, entrá a drive.google.com con tu cuenta de Google."
+  - texto: "Arriba a la izquierda, tocá el botón «Nuevo» y elegí «Subir archivo» o «Subir carpeta»."
+    abrir: "https://support.google.com/drive/answer/2424368?hl=es-419"
+  - texto: "Buscá en la compu el archivo o la carpeta, elegilo y esperá a que termine de subir antes de cerrar la ventana."
+fuentes:
+  - https://support.google.com/drive/answer/2424368?hl=es-419
+madurez: T0
+---
+id: GOO-002
+area: archivos
+titulo:
+  sencillo: "Quiero bajar a la compu un archivo que tengo en Google Drive"
+  tecnico: "Descargar uno o varios archivos de Google Drive"
+explicacion:
+  sencillo: "Lo que está en Drive vive en Internet. Si lo querés tener en la compu (por ejemplo para pasarlo a un pendrive), hay que descargarlo."
+  tecnico: "drive.google.com > seleccionar (Ctrl + clic para varios) > clic derecho > Descargar."
+frases: ["cómo bajo un archivo del drive", "quiero descargar unas fotos de google drive a la compu", "pasar algo del drive a la computadora", "no puedo arrastrar el archivo del drive al escritorio"]
+pasos:
+  - texto: "Entrá a drive.google.com y hacé clic sobre el archivo que querés bajar. Para elegir varios, mantené apretada la tecla Ctrl mientras hacés clic en cada uno."
+  - texto: "Hacé clic derecho sobre lo que elegiste y tocá «Descargar». Google aclara que no se puede arrastrar el archivo directamente al escritorio."
+    abrir: "https://support.google.com/drive/answer/2423534?hl=es-419"
+  - texto: "El archivo queda en la carpeta Descargas de la compu."
+fuentes:
+  - https://support.google.com/drive/answer/2423534?hl=es-419
+madurez: T0
+---
+id: GOO-003
+area: archivos
+titulo:
+  sencillo: "Quiero compartir un archivo de Google Drive con otra persona"
+  tecnico: "Compartir archivos de Drive por correo o con un vínculo"
+explicacion:
+  sencillo: "Desde Drive podés darle permiso a otra persona para ver o cambiar un archivo, sin mandárselo pegado en un correo. Vos elegís si solo lo puede mirar o también modificar."
+  tecnico: "Compartir > agregar correo > rol (Lector, Comentarista, Editor); o «Acceso general» + Copiar vínculo."
+frases: ["cómo le comparto un archivo del drive a mi hija", "quiero mandar un link de google drive", "compartir una carpeta del drive con alguien", "que otra persona pueda ver mi documento de drive"]
+pasos:
+  - texto: "En Drive, elegí el archivo y tocá el botón «Compartir»."
+    abrir: "https://support.google.com/drive/answer/2494822?hl=es-419"
+  - texto: "Escribí el correo de la persona y elegí qué puede hacer: «Lector» (solo mirar), «Comentarista» (mirar y comentar) o «Editor» (cambiarlo). Después tocá «Enviar»."
+  - texto: "Si preferís mandar un enlace por WhatsApp: en «Acceso general» elegí «Cualquier persona que tenga el vínculo», tocá «Copiar vínculo» y después «Listo». Ojo: cualquiera que reciba ese enlace podrá abrirlo."
+fuentes:
+  - https://support.google.com/drive/answer/2494822?hl=es-419
+madurez: T0
+---
+id: GOO-004
+area: archivos
+titulo:
+  sencillo: "Google Drive dice que no tengo más espacio para subir archivos"
+  tecnico: "Liberar espacio en Drive: archivos más grandes, duplicados y papelera"
+explicacion:
+  sencillo: "El espacio gratis de tu cuenta de Google se comparte entre Drive, Gmail y Fotos. Cuando se llena, Drive no deja subir nada más. Se puede liberar lugar borrando lo que ya no usás."
+  tecnico: "Cuota compartida de 15 GB; Drive > Almacenamiento ordena por tamaño; duplicados «(1)» o «Copia de»; vaciar papelera."
+frases: ["el drive no me deja subir nada porque está lleno", "cómo veo qué ocupa tanto lugar en google drive", "se me llenó el drive", "tengo archivos repetidos en el drive y quiero liberar espacio"]
+pasos:
+  - texto: "En Drive, en el menú de la izquierda, entrá a «Almacenamiento»: ahí ves los archivos ordenados del más pesado al más liviano."
+    abrir: "https://support.google.com/drive/answer/6374270?hl=es-419"
+  - texto: "Buscá copias repetidas: Google sugiere ordenar por nombre y fijarse en los que dicen «(1)» o empiezan con «Copia de». Antes de borrar, asegurate de que no lo necesitás o de tenerlo guardado en otro lado."
+  - texto: "Vaciá la papelera de Drive: lo que está ahí sigue ocupando lugar. Ojo: lo que se borra de la papelera ya no se puede recuperar. El espacio puede tardar de 48 a 72 horas en actualizarse."
+  - texto: "Si el aviso aparece también en el correo, escribile a PC Doctor «gmail dice que me quedé sin espacio»."
+fuentes:
+  - https://support.google.com/drive/answer/6374270?hl=es-419
+madurez: T0
+---
+id: GOO-005
+area: archivos
+titulo:
+  sencillo: "Borré un archivo de Google Drive y lo quiero recuperar"
+  tecnico: "Restablecer archivos desde la Papelera de Drive"
+explicacion:
+  sencillo: "Lo que borrás en Drive no desaparece enseguida: queda 30 días en la «Papelera» y desde ahí se puede devolver a su lugar."
+  tecnico: "drive.google.com > Papelera > clic derecho > Restablecer (30 días)."
+frases: ["borré algo del drive sin querer", "cómo recupero un documento que eliminé de google drive", "dónde está la papelera del drive", "desapareció un archivo del drive"]
+pasos:
+  - texto: "Entrá a drive.google.com y, en el panel de la izquierda, tocá «Papelera»."
+    abrir: "https://support.google.com/drive/answer/2405957?hl=es-419"
+  - texto: "Hacé clic derecho sobre el archivo que querés y elegí «Restablecer». Vuelve a su lugar."
+  - texto: "Hacelo pronto: los archivos quedan 30 días en la papelera y después se borran para siempre."
+fuentes:
+  - https://support.google.com/drive/answer/2405957?hl=es-419
+madurez: T0
+---
+id: GOO-006
+area: archivos
+titulo:
+  sencillo: "Quiero tener Google Drive como una carpeta más en la compu"
+  tecnico: "Instalar y usar Google Drive para computadoras en Windows"
+explicacion:
+  sencillo: "«Drive para computadoras» es un programa gratis de Google que muestra tus archivos de Drive dentro del Explorador de archivos, como si fuera una carpeta más."
+  tecnico: "GoogleDriveSetup.exe; acceso desde la bandeja del sistema; carpeta Google Drive con «Mi unidad» en el Explorador."
+frases: ["quiero el drive en el explorador de archivos", "cómo instalo google drive en la pc", "drive para computadoras", "quiero ver mis archivos del drive sin abrir el navegador"]
+pasos:
+  - texto: "Desde la página de ayuda de Google, tocá el botón de descarga para Windows. Se baja un archivo llamado GoogleDriveSetup.exe: abrilo y seguí los pasos del asistente. Bajalo solo desde la página oficial de Google."
+    abrir: "https://support.google.com/drive/answer/10838124?hl=es-419"
+  - texto: "Al abrirlo por primera vez, tocá «Comenzar» y «Acceder», y entrá con tu cuenta de Google."
+  - texto: "Después abrí el Explorador de archivos y buscá la carpeta de Google Drive: adentro está «Mi unidad», con tus archivos. El ícono del programa queda abajo a la derecha, junto al reloj (si no lo ves, tocá la flechita «^»)."
+fuentes:
+  - https://support.google.com/drive/answer/10838124?hl=es-419
+madurez: T0
+---
+id: GOO-007
+area: programas
+titulo:
+  sencillo: "Quiero escribir un documento o hacer una planilla gratis con Google"
+  tecnico: "Crear un archivo en Documentos o en Hojas de cálculo de Google"
+explicacion:
+  sencillo: "Si no tenés Word ni Excel, Google tiene «Documentos» (para escribir) y «Hojas de cálculo» (planillas) gratis en el navegador. Solo necesitás una cuenta de Google."
+  tecnico: "docs.google.com > En blanco; sheets.google.com > Nueva (o docs.google.com/create y sheets.google.com/create)."
+frases: ["no tengo word y necesito escribir una carta", "cómo hago una planilla en google", "quiero usar documentos de google", "hacer una hoja de cálculo gratis sin excel"]
+pasos:
+  - texto: "Para escribir: entrá a docs.google.com y, arriba a la izquierda, en «Iniciar un nuevo documento», tocá «En blanco»."
+    abrir: "https://support.google.com/docs/answer/7068618?hl=es-419"
+  - texto: "Para una planilla: entrá a sheets.google.com y tocá el botón «Nueva» (el signo más). Se abre una hoja vacía para escribir textos y números."
+    abrir: "https://support.google.com/docs/answer/6000292?hl=es-419"
+  - texto: "Si te equivocás, usá «Deshacer» arriba. Para que otra persona lo vea, escribile a PC Doctor «compartir un archivo de google drive»."
+fuentes:
+  - https://support.google.com/docs/answer/7068618?hl=es-419
+  - https://support.google.com/docs/answer/6000292?hl=es-419
+madurez: T0
+---
+id: GOO-008
+area: programas
+titulo:
+  sencillo: "Quiero pasar un documento de Google a Word o a PDF"
+  tecnico: "Descargar desde Documentos u Hojas de cálculo de Google (.docx, .xlsx, PDF)"
+explicacion:
+  sencillo: "Un documento hecho en Google se puede bajar a la compu como archivo de Word o como PDF, por ejemplo para imprimirlo o mandarlo por correo. Las planillas se pueden bajar como Excel."
+  tecnico: "Archivo > Descargar > elegir formato (Documentos: .docx; Hojas de cálculo: .xlsx); o Archivo > Imprimir > Guardar como PDF."
+frases: ["cómo paso el documento de google a word", "guardar un google docs como pdf", "descargar la planilla de google como excel", "me pidieron el documento en word y lo tengo en google"]
+pasos:
+  - texto: "Abrí el documento o la planilla. Arriba, tocá «Archivo» y después la opción de descarga («Descargar»)."
+    abrir: "https://support.google.com/docs/answer/49114?hl=es-419"
+  - texto: "Elegí el tipo de archivo que necesitás: Google indica que un documento se puede guardar como .docx (Word) y una planilla como .xlsx (Excel). También está PDF. Queda en la carpeta Descargas."
+    abrir: "https://support.google.com/docs/answer/6055139?hl=es-419"
+  - texto: "Si el documento es muy grande y el PDF no sale: en Chrome, «Archivo» > «Imprimir», en «Destino» elegí «Guardar como PDF» y tocá «Guardar»."
+fuentes:
+  - https://support.google.com/docs/answer/49114?hl=es-419
+  - https://support.google.com/docs/answer/6055139?hl=es-419
+madurez: T0
+---
+id: GOO-009
+area: programas
+titulo:
+  sencillo: "Quiero usar los documentos de Google aunque no tenga Internet"
+  tecnico: "Acceso sin conexión a Documentos, Hojas de cálculo y Presentaciones"
+explicacion:
+  sencillo: "Se puede dejar preparado Drive para seguir escribiendo sin Internet. Hay que activarlo antes, mientras todavía tenés conexión, y funciona en Chrome o Edge."
+  tecnico: "Requiere Chrome o Edge (no incógnito) y la extensión «Google Docs Offline»; Drive > Configuración > Sin conexión; «Disponible sin conexión» por archivo."
+frases: ["quiero trabajar en google docs sin internet", "se me corta internet y no puedo abrir el documento de google", "usar las planillas de google sin conexión", "dejar un documento del drive disponible sin conexión"]
+pasos:
+  - texto: "Con Internet funcionando, abrí Drive en Chrome o Edge (no en ventana de incógnito). Arriba a la derecha tocá el engranaje de configuración y activá «Sin conexión». Si te lo pide, instalá la extensión «Google Docs Offline»."
+    abrir: "https://support.google.com/docs/answer/6388102?hl=es-419"
+  - texto: "Para un archivo en particular: en la pantalla principal de Documentos o Hojas de cálculo, tocá «Más» (los tres puntitos) junto al archivo y elegí «Disponible sin conexión»."
+  - texto: "Para saber si quedó listo, abrí el archivo y tocá el ícono de estado que está al lado del título."
+fuentes:
+  - https://support.google.com/docs/answer/6388102?hl=es-419
+madurez: T0
+---
+id: GOO-010
+area: programas
+titulo:
+  sencillo: "Me mandaron un Word o un Excel y lo quiero abrir con Google"
+  tecnico: "Abrir y editar archivos de Office en Documentos y Hojas de cálculo de Google"
+explicacion:
+  sencillo: "Si no tenés Office instalado, podés abrir y modificar archivos de Word o Excel con Documentos y Hojas de cálculo de Google, desde Drive."
+  tecnico: "Doble clic en el archivo de Office en Drive; en Chrome, Modo de compatibilidad con Office (extensión «Edición de documentos de Office»)."
+frases: ["no tengo word y me mandaron un archivo docx", "abrir un excel con google", "cómo edito un word en google drive", "me llegó un archivo de word y no lo puedo abrir"]
+pasos:
+  - texto: "Subí el archivo a Drive (si no sabés cómo, escribile a PC Doctor «subir un archivo a google drive»)."
+  - texto: "En Drive, hacé doble clic sobre el archivo de Word o Excel: se abre en Documentos o en Hojas de cálculo de Google y lo podés modificar."
+    abrir: "https://support.google.com/docs/answer/6055139?hl=es-419"
+  - texto: "Si después lo tenés que devolver en Word o Excel, escribile a PC Doctor «pasar un documento de google a word»."
+fuentes:
+  - https://support.google.com/docs/answer/6055139?hl=es-419
+madurez: T0
+---
+id: GOO-011
+area: programas
+titulo:
+  sencillo: "YouTube dice «Se produjo un error» y el video no arranca"
+  tecnico: "Errores de reproducción de YouTube en el navegador"
+explicacion:
+  sencillo: "A veces YouTube muestra un cartel de error en vez del video. Suele arreglarse recargando, revisando Internet o desactivando un bloqueador de anuncios."
+  tecnico: "«Se produjo un error al cargar la página» / «Se produjo un error. Actualiza la página...»: recargar, iniciar sesión, navegador actualizado, quitar bloqueadores, borrar caché y cookies."
+frases: ["youtube me dice que se produjo un error", "el video de youtube no carga y sale un cartel", "youtube no me reproduce nada", "la pantalla del video queda negra en youtube"]
+pasos:
+  - texto: "Recargá la página (tecla F5). Si sigue igual, esperá un rato y probá de nuevo: a veces el problema es de YouTube."
+    abrir: "https://support.google.com/youtube/answer/3037019?hl=es-419"
+  - texto: "Fijate que Internet ande en otras páginas y que tengas la sesión iniciada en YouTube."
+  - texto: "Si tenés un bloqueador de anuncios u otra extensión, probá el video en una ventana de incógnito (Ctrl + Mayús + N en Chrome), que abre sin extensiones. Si ahí anda, la culpa es de la extensión."
+  - texto: "Si sigue fallando, reiniciá el navegador o la compu y actualizá el navegador. También podés borrar la caché y las cookies: escribile a PC Doctor «borrar la caché del navegador»."
+fuentes:
+  - https://support.google.com/youtube/answer/3037019?hl=es-419
+madurez: T0
+---
+id: GOO-012
+area: programas
+titulo:
+  sencillo: "Los videos de YouTube se traban o se quedan cargando"
+  tecnico: "Reproducción entrecortada en YouTube: conexión y calidad del video"
+explicacion:
+  sencillo: "Si el video se frena cada tanto con la ruedita girando, casi siempre es que la conexión no alcanza para la calidad elegida. Bajar la calidad suele ayudar."
+  tecnico: "Almacenamiento en búfer por ancho de banda insuficiente (1080p ≈ 5 Mbps); bajar la resolución, reiniciar el router, revisar extensiones."
+frases: ["el video de youtube se traba a cada rato", "youtube se queda cargando con la ruedita", "los videos se cortan y vuelven a arrancar", "youtube anda a los saltos"]
+pasos:
+  - texto: "Bajá la calidad del video: tocá el engranaje del reproductor, «Calidad», y elegí un número más bajo (por ejemplo 480p)."
+    abrir: "https://support.google.com/youtube/answer/91449?hl=es-419"
+  - texto: "Reiniciá la conexión a Internet (por ejemplo, apagando y prendiendo el módem). Google indica que para ver en 1080p hacen falta unos 5 Mbps de velocidad."
+    abrir: "https://support.google.com/youtube/answer/3037019?hl=es-419"
+  - texto: "Reiniciá el navegador o la compu y probá de nuevo."
+  - texto: "Si se traba todo Internet y no solo YouTube, escribile a PC Doctor «internet anda lento»."
+fuentes:
+  - https://support.google.com/youtube/answer/3037019?hl=es-419
+  - https://support.google.com/youtube/answer/91449?hl=es-419
+madurez: T0
+---
+id: GOO-013
+area: programas
+titulo:
+  sencillo: "Los videos de YouTube se ven borrosos"
+  tecnico: "Cambiar la calidad (resolución) de un video de YouTube"
+explicacion:
+  sencillo: "YouTube baja la calidad sola si la conexión es lenta, y eso hace que se vea borroso. Podés elegir una calidad más alta a mano. Si el video se grabó en baja calidad, no se puede mejorar."
+  tecnico: "Configuración (engranaje) > Calidad; la calidad automática depende de la conexión, el tamaño del reproductor y el video original."
+frases: ["youtube se ve borroso", "cómo pongo youtube en alta calidad", "los videos se ven pixelados", "quiero ver youtube en hd en la compu"]
+pasos:
+  - texto: "En el video, abajo a la derecha, tocá el engranaje («Configuración») y después «Calidad»."
+    abrir: "https://support.google.com/youtube/answer/91449?hl=es-419"
+  - texto: "Elegí un número más alto (por ejemplo 720p o 1080p). Si después se traba, volvé a bajarla."
+  - texto: "Si no aparecen calidades altas, puede ser que el video se haya grabado así, o que el navegador no las admita: probá con otro video o con el navegador actualizado."
+fuentes:
+  - https://support.google.com/youtube/answer/91449?hl=es-419
+madurez: T0
+---
+id: GOO-014
+area: programas
+titulo:
+  sencillo: "Quiero poner (o sacar) los subtítulos en YouTube"
+  tecnico: "Activar subtítulos y cambiar su tamaño y estilo en YouTube"
+explicacion:
+  sencillo: "Muchos videos de YouTube tienen subtítulos que se prenden y apagan con un botón. También se pueden agrandar o cambiar de color para leerlos mejor."
+  tecnico: "Botón Subtítulos del reproductor; Configuración > Subtítulos > Opciones (fuente, color, tamaño, fondo)."
+frases: ["cómo pongo subtítulos en youtube", "quiero sacar los subtítulos del video", "los subtítulos de youtube son muy chiquitos", "youtube me muestra letras abajo y no las quiero"]
+pasos:
+  - texto: "Abajo a la derecha del video, tocá el botón «Subtítulos» para activarlos; tocalo de nuevo para sacarlos. Si el botón no está, ese video no tiene subtítulos."
+    abrir: "https://support.google.com/youtube/answer/100078?hl=es-419"
+  - texto: "Para agrandarlos o cambiarles el color: engranaje («Configuración») > «Subtítulos» > «Opciones». Ahí elegís tamaño, color y fondo."
+  - texto: "Queda así para los próximos videos. Para volver a como estaba, usá «Restablecer» en esas mismas opciones."
+fuentes:
+  - https://support.google.com/youtube/answer/100078?hl=es-419
+madurez: T0
+---
+id: GOO-015
+area: programas
+titulo:
+  sencillo: "Quiero borrar lo que vi en YouTube (o que no se guarde)"
+  tecnico: "Ver, borrar o pausar el historial de reproducciones de YouTube"
+explicacion:
+  sencillo: "YouTube guarda la lista de videos que viste y la usa para recomendarte otros. Podés borrar algunos, todos, o pausarlo para que no anote nada más."
+  tecnico: "Mi actividad > Historial de YouTube > Administrar historial; BORRAR; Controles > Desactivar."
+frases: ["borrar el historial de youtube", "no quiero que youtube guarde lo que miro", "cómo borro un video que vi en youtube", "youtube me recomienda cosas por lo que vio mi nieto"]
+pasos:
+  - texto: "Entrá a myactivity.google.com con tu cuenta, tocá «Historial de YouTube» y después «Administrar historial»: ahí está la lista de lo que viste."
+    abrir: "https://support.google.com/youtube/answer/95725?hl=es-419"
+  - texto: "Para sacar un solo video, tocá la cruz (×) al lado. Para borrar muchos, tocá «BORRAR» y elegí el período. Ojo: no se puede deshacer, también se borran las búsquedas de ese período y las recomendaciones pueden cambiar."
+  - texto: "Para que deje de anotar: en esa misma página, en la pestaña «Controles», elegí «Desactivar»."
+fuentes:
+  - https://support.google.com/youtube/answer/95725?hl=es-419
+madurez: T0
+---
+id: GOO-016
+area: programas
+titulo:
+  sencillo: "YouTube no me deja ver un video porque dice que tiene restricción de edad"
+  tecnico: "Videos con restricción de edad en YouTube"
+explicacion:
+  sencillo: "Algunos videos son solo para mayores de 18. Para verlos hay que tener la sesión iniciada con una cuenta de una persona adulta, y mirarlos en la página de YouTube."
+  tecnico: "Requiere sesión iniciada y edad ≥ 18; no se reproducen incrustados en sitios de terceros; en la UE, EEE, Suiza, Reino Unido y Australia puede pedirse verificación adicional."
+frases: ["youtube me pide confirmar la edad", "dice que el video tiene restricción de edad", "no me deja ver un video porque dice que puede ser inapropiado", "youtube pide iniciar sesión para ver un video"]
+pasos:
+  - texto: "Iniciá sesión en YouTube con tu cuenta de Google (arriba a la derecha, «Acceder»). Sin sesión iniciada, esos videos no se pueden ver."
+    abrir: "https://support.google.com/youtube/answer/10070779?hl=es-419"
+  - texto: "Si el video está metido dentro de otra página, abrilo directamente en youtube.com: Google indica que estos videos no se ven incrustados en otros sitios."
+  - texto: "Si la cuenta es de un menor de 18, YouTube no lo va a mostrar. Google indica que el pedido extra de documentos para verificar la edad solo se aplica en la Unión Europea, Suiza, el Reino Unido y Australia."
+fuentes:
+  - https://support.google.com/youtube/answer/10070779?hl=es-419
+madurez: T0
+---
+id: GOO-017
+area: seguridad
+titulo:
+  sencillo: "Quiero que YouTube no muestre videos para adultos en la compu"
+  tecnico: "Modo restringido de YouTube en el navegador"
+explicacion:
+  sencillo: "El «Modo restringido» de YouTube oculta videos que pueden no ser apropiados para chicos. Se activa en cada navegador que uses en la compu."
+  tecnico: "Foto de perfil > Modo restringido > Activar modo restringido; se aplica por navegador y por perfil."
+frases: ["que youtube no muestre cosas feas a los chicos", "activar el modo restringido de youtube", "quiero filtrar youtube para mi nieto", "youtube dice modo restringido activado y no veo algunos videos"]
+pasos:
+  - texto: "Entrá a youtube.com con tu cuenta. Arriba a la derecha, tocá tu foto de perfil y, abajo del menú, elegí «Modo restringido»."
+    abrir: "https://support.google.com/youtube/answer/174084?hl=es-419"
+  - texto: "En el cuadrito que aparece, tocá «Activar modo restringido» (el mismo botón sirve para sacarlo)."
+  - texto: "Repetilo en cada navegador de la compu (por ejemplo Chrome y Edge), y en cada perfil si hay varios: se configura por separado. Para algo más completo, escribile a PC Doctor «controlar lo que usan los chicos en la computadora»."
+fuentes:
+  - https://support.google.com/youtube/answer/174084?hl=es-419
+madurez: T0
+---
+id: GOO-018
+area: seguridad
+titulo:
+  sencillo: "Quiero configurar YouTube Kids para mis nietos o hijos en la compu"
+  tecnico: "Controles parentales de YouTube Kids en computadora"
+explicacion:
+  sencillo: "YouTube Kids es la versión de YouTube para chicos. Los padres pueden elegir qué tipo de videos ve el chico según su edad y apagar la búsqueda o que los videos sigan solos."
+  tecnico: "Candado > problema de multiplicación > Configuración; o YouTube > Configuración > Centro familiar; nivel de contenido, búsqueda, reproducción automática, historial."
+frases: ["cómo configuro youtube kids en la compu", "quiero que mi nieto solo vea videos para su edad", "youtube kids pide resolver una multiplicación", "sacar la búsqueda de youtube kids"]
+pasos:
+  - texto: "En YouTube Kids, tocá el candado de la esquina, resolvé la multiplicación (o poné la clave que vos elegiste para YouTube Kids) y entrá a «Configuración»."
+    abrir: "https://support.google.com/youtubekids/answer/6172308?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Otra forma: en YouTube, con tu cuenta, tocá tu foto > «Configuración» > «Centro familiar» y elegí el perfil del chico."
+  - texto: "En «Configuración de contenido» tocá «EDITAR» y elegí el nivel según la edad. También podés desactivar la búsqueda (así solo ve videos verificados; ojo, se borran sus historiales) y activar «Inhabilitar la reproducción automática»."
+fuentes:
+  - https://support.google.com/youtubekids/answer/6172308?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: GOO-019
+area: basico
+titulo:
+  sencillo: "Quiero saber cómo llegar a una dirección con Google Maps"
+  tecnico: "Obtener indicaciones y rutas en Google Maps (computadora)"
+explicacion:
+  sencillo: "Google Maps te dice el camino entre dos lugares, cuánto se tarda y qué colectivo o tren tomar, o cómo ir caminando o en auto."
+  tecnico: "Cómo llegar > origen y destino > En automóvil / Transporte público / A pie / En bicicleta; rutas alternativas en gris; Opciones para evitar peajes."
+frases: ["cómo llego a una dirección con google maps", "qué colectivo me lleva a tal lugar", "ver el camino en el mapa desde la compu", "cuánto tardo caminando hasta el hospital"]
+pasos:
+  - texto: "Entrá a Google Maps en el navegador y tocá el botón «Cómo llegar»."
+    abrir: "https://support.google.com/maps/answer/144339?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Escribí de dónde salís y adónde vas (una dirección o el nombre de un lugar)."
+  - texto: "Elegí cómo vas: «En automóvil», «Transporte público», «A pie» o «En bicicleta». La mejor ruta aparece en azul y las otras en gris, cada una con su tiempo."
+  - texto: "Si vas en auto y querés evitar peajes o autopistas, tocá «Opciones» y marcá la casilla."
+fuentes:
+  - https://support.google.com/maps/answer/144339?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: GOO-020
+area: basico
+titulo:
+  sencillo: "Quiero imprimir el recorrido de Google Maps o pasarlo al celular"
+  tecnico: "Imprimir indicaciones o enviarlas al teléfono desde Google Maps"
+explicacion:
+  sencillo: "Después de buscar cómo llegar, Google Maps te deja imprimir el camino en papel, con el mapa o solo el texto, o mandarlo a tu celular."
+  tecnico: "Cómo llegar > elegir ruta > ícono Imprimir > Imprimir con mapas / Imprimir texto únicamente; Enviar al teléfono (misma cuenta en ambos)."
+frases: ["imprimir el camino de google maps", "quiero llevar las indicaciones en papel", "pasar la ruta del mapa al celular", "cómo imprimo un mapa de google"]
+pasos:
+  - texto: "En Google Maps, buscá el recorrido con «Cómo llegar» y elegí la ruta."
+    abrir: "https://support.google.com/maps/answer/7101463?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Tocá el ícono de «Imprimir» y elegí «Imprimir con mapas» o «Imprimir texto únicamente». Después tocá «Imprimir»."
+  - texto: "Para mandarlo al celular, tocá «Enviar al teléfono» y elegí tu teléfono o tu correo. Tiene que estar la misma cuenta de Google en la compu y en el celular."
+fuentes:
+  - https://support.google.com/maps/answer/7101463?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: GOO-021
+area: basico
+titulo:
+  sencillo: "Quiero anotar un turno o un cumpleaños en el Calendario de Google"
+  tecnico: "Crear un evento en el Calendario de Google (computadora)"
+explicacion:
+  sencillo: "El Calendario de Google es una agenda en Internet: anotás algo en la compu y también lo ves en el celular si tiene la misma cuenta."
+  tecnico: "calendar.google.com > Crear > título, fecha y hora > Guardar; creación rápida haciendo clic en el día."
+frases: ["cómo anoto un turno en el calendario de google", "agendar el turno del médico en google", "agregar un evento en google calendar", "quiero usar la agenda de google en la compu"]
+pasos:
+  - texto: "Entrá a calendar.google.com con tu cuenta. Arriba a la izquierda, tocá «Crear»."
+    abrir: "https://support.google.com/calendar/answer/72143?hl=es-419"
+  - texto: "Poné un título (por ejemplo «Turno con el médico»), la fecha y la hora, y tocá «Guardar» arriba."
+  - texto: "Más rápido: hacé clic en el espacio del día que querés, escribí el título y el horario, y tocá «Guardar»."
+fuentes:
+  - https://support.google.com/calendar/answer/72143?hl=es-419
+madurez: T0
+---
+id: GOO-022
+area: basico
+titulo:
+  sencillo: "Quiero que el Calendario de Google me avise antes de un turno"
+  tecnico: "Notificaciones (recordatorios) de eventos en el Calendario de Google"
+explicacion:
+  sencillo: "Cada evento del Calendario puede tener un aviso, por ejemplo un día antes o media hora antes. En la compu, el aviso aparece si el Calendario está abierto en el navegador y le diste permiso."
+  tecnico: "Editar evento > Notificaciones > Agregar notificación; predeterminadas en Configuración del calendario; permitir notificaciones de calendar.google.com en el navegador."
+frases: ["que google calendar me avise del turno", "poner un recordatorio en el calendario de google", "el calendario no me avisa de nada", "quiero que me avise un día antes del cumpleaños"]
+pasos:
+  - texto: "Abrí el evento en el Calendario y tocá «Editar evento». En «Notificaciones», cambiá el tiempo de aviso o tocá «Agregar notificación» para sumar otro. Después, «Guardar»."
+    abrir: "https://support.google.com/calendar/answer/37242?hl=es-419"
+  - texto: "Si el navegador te pregunta si «calendar.google.com» puede mostrar notificaciones, permitilo. Y dejá el Calendario abierto en una pestaña."
+  - texto: "Si no te llegan los avisos, en Chrome revisá «Configuración» > «Privacidad y seguridad» > «Configuración de sitios» > «Notificaciones» y agregá calendar.google.com."
+fuentes:
+  - https://support.google.com/calendar/answer/37242?hl=es-419
+madurez: T0
+---
+id: GOO-023
+area: basico
+titulo:
+  sencillo: "Quiero traducir un texto o una frase con el Traductor de Google"
+  tecnico: "Traducir texto escrito con el Traductor de Google en el navegador"
+explicacion:
+  sencillo: "El Traductor de Google pasa palabras o textos de un idioma a otro. Escribís o pegás el texto y aparece traducido; también lo podés escuchar."
+  tecnico: "translate.google.com: idioma de origen (o detección) y de destino; hasta 5000 caracteres; Escuchar, Copiar traducción."
+frases: ["cómo uso el traductor de google", "traducir una carta del inglés al español", "quiero saber qué dice un texto en italiano", "pasar una frase al portugués"]
+pasos:
+  - texto: "Abrí el Traductor de Google (translate.google.com). Arriba elegí de qué idioma traducís (o dejá que lo detecte solo) y a qué idioma."
+    abrir: "https://support.google.com/translate/answer/6142478?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Escribí o pegá el texto en el cuadro de la izquierda (hasta 5000 letras por vez). La traducción aparece a la derecha."
+  - texto: "Junto a la traducción tenés «Escuchar», para oírla, y «Copiar traducción», para pegarla donde quieras. Para traducir una página web entera, escribile a PC Doctor «traducir una página»."
+fuentes:
+  - https://support.google.com/translate/answer/6142478?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: GOO-024
+area: basico
+titulo:
+  sencillo: "Google, Gmail o YouTube me aparecen en otro idioma"
+  tecnico: "Cambiar el idioma de preferencia de la cuenta de Google en la Web"
+explicacion:
+  sencillo: "El idioma de las páginas de Google se elige en tu cuenta de Google. Si quedó en inglés u otro idioma, se puede volver a poner en español."
+  tecnico: "myaccount.google.com/language > Idioma > Editar > seleccionar; afecta los servicios web, no las apps del celular."
+frases: ["gmail me quedó en inglés", "youtube está en otro idioma", "cómo pongo google en español", "se me cambió el idioma de la cuenta de google"]
+pasos:
+  - texto: "Entrá a myaccount.google.com/language (si te lo pide, iniciá sesión)."
+    abrir: "https://support.google.com/accounts/answer/32047?hl=es-419"
+  - texto: "Tocá «Idioma» y después «Editar». Buscá «Español», elegilo y tocá «Seleccionar»."
+  - texto: "Cerrá el navegador y volvé a abrirlo para que tome el cambio. Si lo que está en otro idioma es toda la compu, escribile a PC Doctor «windows está en otro idioma»."
+fuentes:
+  - https://support.google.com/accounts/answer/32047?hl=es-419
+madurez: T0
+---
+id: GOO-025
+area: basico
+titulo:
+  sencillo: "Quiero sacar mi cuenta de Google de esta compu"
+  tecnico: "Salir de una cuenta de Google y quitarla de la página de acceso"
+explicacion:
+  sencillo: "Si usaste tu Gmail en una compu que no es tuya, o la vas a regalar, conviene cerrar la sesión y quitar la cuenta de la lista para que nadie más entre con ella. Eso no borra tu cuenta: solo la saca de esta compu."
+  tecnico: "Foto de perfil > Salir / Salir de todas las cuentas > Quitar una cuenta > Quitar; repetir en cada navegador."
+frases: ["cerrar mi gmail en una compu ajena", "quiero sacar mi cuenta de google de esta computadora", "en la compu aparece la cuenta de google de otra persona", "cómo quito una cuenta de la lista para elegir cuenta de google"]
+pasos:
+  - texto: "En el navegador, entrá a myaccount.google.com. Arriba a la derecha tocá tu foto o tu inicial y elegí «Salir» (o «Salir de todas las cuentas»)."
+    abrir: "https://support.google.com/accounts/answer/1721977?hl=es-419"
+  - texto: "En la pantalla que aparece, tocá «Quitar una cuenta» y después «Quitar» junto a la cuenta que querés sacar."
+  - texto: "Hacé lo mismo en cada navegador de la compu donde la hayas usado (por ejemplo Chrome y Edge). Si te preocupa que alguien la siga usando en otro aparato, escribile a PC Doctor «ver en qué aparatos está abierta mi cuenta de google»."
+fuentes:
+  - https://support.google.com/accounts/answer/1721977?hl=es-419
+madurez: T0

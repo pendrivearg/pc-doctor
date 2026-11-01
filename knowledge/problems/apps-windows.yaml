@@ -1,0 +1,488 @@
+# Aplicaciones que vienen con Windows 11 (Copilot, Paint, Bloc de notas, nuevo Outlook, To Do, Obtener ayuda, PC Health Check) y suscripciones de Microsoft 365: plan, renovación, cobros, compartir y Office de pago único. Guiadas con fuente oficial.
+id: APW-001
+area: programas
+titulo:
+  sencillo: "¿Qué es Copilot y cómo lo abro?"
+  tecnico: "Microsoft Copilot en Windows: abrir desde la barra de tareas, la tecla Copilot o Windows + C"
+explicacion:
+  sencillo: "Copilot es el asistente con inteligencia artificial de Microsoft: le escribís (o le hablás) una pregunta y te contesta, te ayuda a redactar un texto o te guía en la configuración de Windows. Las compus nuevas con Windows 11 ya lo traen; si no está, se baja de la Microsoft Store."
+  tecnico: "App Microsoft Copilot (Microsoft Store). Acceso: barra de tareas o Inicio, tecla Copilot o Windows + C. Con cuenta Microsoft personal suma historial de chats, creación de imágenes y voz."
+frases: ["qué es copilot", "cómo abro copilot", "para qué sirve el copilot de windows", "quiero usar la inteligencia artificial de microsoft", "dónde está copilot en mi compu"]
+pasos:
+  - texto: "Buscá el ícono de Copilot en la barra de abajo o en Inicio y tocalo. También podés apretar la tecla Copilot del teclado (si tu compu la tiene) o Windows + C."
+  - texto: "Si no aparece, buscá «Microsoft Copilot» en la Microsoft Store e instalalo."
+  - texto: "Entrá con tu cuenta de Microsoft (la del Hotmail u Outlook) cuando te lo pida: así guarda tus conversaciones. Escribí tu pregunta abajo y apretá Enter. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/welcome-to-copilot-on-windows-675708af-8c16-4675-afeb-85a5a476ccb0"
+  - texto: "Si no lo usás y te molesta, escribile a PC Doctor «no uso Copilot y lo quiero sacar»."
+fuentes:
+  - https://support.microsoft.com/windows/welcome-to-copilot-on-windows-675708af-8c16-4675-afeb-85a5a476ccb0
+  - https://learn.microsoft.com/windows/client-management/manage-windows-copilot
+madurez: T0
+---
+id: APW-002
+area: programas
+titulo:
+  sencillo: "Pagué Microsoft 365 y quiero que me devuelvan la plata"
+  tecnico: "Reembolso de Microsoft 365 Basic, Personal o Familia: cancelar primero en Servicios y suscripciones"
+explicacion:
+  sencillo: "Si te cobraron Microsoft 365 y no lo querías, primero hay que cancelar la suscripción: recién ahí Microsoft te dice si te corresponde la devolución. Si lo pagaste por Google Play o la App Store, la devolución la maneja esa tienda."
+  tecnico: "Para evaluar el reembolso de Microsoft 365 Basic/Personal/Familia hay que cancelar desde Servicios y suscripciones > Administrar > Cancelar. Compras vía Google Play o App Store: soporte de esa tienda. Al cancelar, OneDrive vuelve a 5 GB."
+frases: ["quiero que microsoft me devuelva la plata", "me cobraron office 365 y no lo quiero", "pedir reembolso de microsoft 365", "me arrepentí de pagar microsoft 365"]
+pasos:
+  - texto: "Entrá a «Servicios y suscripciones» con la cuenta de Microsoft con la que pagaste. Buscá Microsoft 365 y tocá «Administrar»."
+    abrir: "https://account.microsoft.com/services"
+  - texto: "Elegí la opción para cancelar y seguí los pasos: ahí te muestra si te corresponde la devolución. Si en cambio ves la opción para activar la facturación periódica, ya no se renueva y no hace falta cancelar."
+  - texto: "Ojo: al cancelar, tu espacio en OneDrive baja a 5 GB (y en el plan Familia, también el de las personas con las que lo compartías)."
+  - texto: "Si lo pagaste desde el celular con Google Play o la App Store, pedí la devolución en esa tienda. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accounts-billing/request-a-return-exchange-or-refund-for-microsoft-products"
+fuentes:
+  - https://support.microsoft.com/accounts-billing/request-a-return-exchange-or-refund-for-microsoft-products
+madurez: T0
+---
+id: APW-003
+area: programas
+titulo:
+  sencillo: "Un familiar me invitó a usar su Microsoft 365 Familia"
+  tecnico: "Aceptar una invitación para compartir Microsoft 365 Familia"
+explicacion:
+  sencillo: "Quien paga Microsoft 365 Familia puede compartirlo con otras personas. Si te llegó la invitación por correo, la aceptás con tu cuenta de Microsoft y después instalás Word, Excel y los demás sin pagar nada."
+  tecnico: "Correo de invitación > Aceptar > Unirse ahora al grupo familiar > iniciar sesión (o crear cuenta Microsoft) > instalar las apps de Microsoft 365. Si ya estás en otro grupo familiar, hay que salir de él primero."
+frases: ["me invitaron a microsoft 365 familia", "mi hijo me compartió el office", "cómo acepto la invitación de microsoft 365", "me llegó un mail para unirme a la familia de microsoft"]
+pasos:
+  - texto: "Abrí el correo de invitación y tocá el botón para aceptar. Después tocá el botón para unirte al grupo familiar."
+  - texto: "Entrá con tu cuenta de Microsoft (Hotmail, Outlook). Si no tenés, te pide crear una."
+  - texto: "Tocá el botón para empezar a usar las aplicaciones de Microsoft 365, elegí instalar y seguí los pasos."
+    abrir: "https://support.microsoft.com/office/someone-invited-you-to-share-their-microsoft-365-subscription-6a6c098e-1934-4436-9a94-69c92590da5b"
+  - texto: "Si te dice que ya estás en otro grupo familiar de Microsoft, primero tenés que salir de ese para poder unirte."
+fuentes:
+  - https://support.microsoft.com/office/someone-invited-you-to-share-their-microsoft-365-subscription-6a6c098e-1934-4436-9a94-69c92590da5b
+madurez: T0
+---
+id: APW-004
+area: programas
+titulo:
+  sencillo: "Quiero escribir un texto encima de una foto con Paint"
+  tecnico: "Paint: herramienta Texto"
+explicacion:
+  sencillo: "Paint viene con Windows y sirve para escribirle algo a una imagen, por ejemplo un saludo o una flecha con una aclaración."
+  tecnico: "Paint > herramienta Texto: clic en el lienzo crea un cuadro de texto; fuente, tamaño y color en la barra. Guardar como PNG, JPEG, BMP o GIF."
+frases: ["poner letras en una foto", "escribir sobre una imagen en paint", "agregar un texto a una foto", "cómo pongo un cartel en una foto con paint"]
+pasos:
+  - texto: "Abrí Paint (buscalo en Inicio) y abrí la foto que querés usar."
+  - texto: "Arriba, elegí la herramienta «Texto». Hacé clic en la foto donde quieras escribir: aparece un recuadro."
+  - texto: "Escribí tu texto y, en la barra de arriba, elegí la letra, el tamaño y el color."
+  - texto: "Guardá con «Guardar como» y elegí el formato (por ejemplo, JPEG o PNG). Microsoft lo explica en las preguntas frecuentes de Paint."
+    abrir: "https://www.microsoft.com/windows/paint"
+fuentes:
+  - https://www.microsoft.com/windows/paint
+madurez: T0
+---
+id: APW-005
+area: programas
+titulo:
+  sencillo: "Quiero sacarle el fondo a una foto"
+  tecnico: "Paint: quitar el fondo (eliminación de fondo con IA)"
+explicacion:
+  sencillo: "El Paint de Windows 11 actualizado puede borrar el fondo de una foto con un solo clic: deja solo a la persona o el objeto principal."
+  tecnico: "Botón de quitar fondo en la barra de Paint; detección automática del sujeto, en toda la imagen o en una selección rectangular. Disponible en versiones recientes de Paint (desde 11.2306.30.0)."
+frases: ["sacarle el fondo a una foto", "borrar el fondo de una imagen", "dejar solo la persona en la foto", "quitar el fondo con paint"]
+pasos:
+  - texto: "Abrí la foto en Paint."
+  - texto: "Tocá el botón para quitar el fondo en la barra de arriba: Paint detecta solo a la persona u objeto y borra lo de atrás."
+  - texto: "Si querés sacar el fondo solo de una parte, primero marcá esa zona con la selección rectangular y después tocá el mismo botón."
+  - texto: "Guardá con «Guardar como» (podés elegir PNG, JPEG y otros formatos). Si no ves el botón, actualizá Windows y Paint: viene en las versiones nuevas."
+    abrir: "https://www.microsoft.com/windows/paint"
+fuentes:
+  - https://www.microsoft.com/windows/paint
+  - https://blogs.windows.com/windows-insider/2023/09/07/background-removal-in-paint-begins-rolling-out-to-windows-insiders/
+madurez: T0
+---
+id: APW-006
+area: programas
+titulo:
+  sencillo: "Quiero achicar una imagen o cortarle un pedazo con Paint"
+  tecnico: "Paint: Cambiar tamaño (píxeles o porcentaje) y Recortar una selección"
+explicacion:
+  sencillo: "Con Paint podés hacer más chica una imagen (por ejemplo, para mandarla o subirla a una página) y quedarte solo con la parte que te interesa."
+  tecnico: "Paint > Cambiar tamaño: por porcentaje o píxeles. Recortar: herramienta Seleccionar sobre la zona a conservar > Recortar."
+frases: ["achicar una imagen", "la foto es muy grande para subirla", "cambiar el tamaño de una imagen con paint", "cortar un pedazo de una imagen en paint"]
+pasos:
+  - texto: "Abrí Paint (buscalo en Inicio) y abrí la imagen."
+  - texto: "Para achicarla: tocá «Cambiar tamaño» y poné el tamaño nuevo en porcentaje (por ejemplo, 50 para la mitad) o en píxeles."
+  - texto: "Para quedarte con una parte: elegí «Seleccionar», marcá con el mouse lo que querés conservar y tocá «Recortar»."
+  - texto: "Guardá con «Guardar como» y elegí el formato. Microsoft lo explica en las preguntas frecuentes de Paint."
+    abrir: "https://www.microsoft.com/windows/paint"
+fuentes:
+  - https://www.microsoft.com/windows/paint
+madurez: T0
+---
+id: APW-007
+area: programas
+titulo:
+  sencillo: "El Bloc de notas me abre todo en pestañas"
+  tecnico: "Pestañas en el Bloc de notas de Windows 11"
+explicacion:
+  sencillo: "El Bloc de notas nuevo funciona como el navegador: cada archivo se abre en una pestaña arriba, dentro de la misma ventana. Si preferís ventanas separadas, se puede cambiar."
+  tecnico: "Bloc de notas con pestañas: varios archivos en una ventana, arrastrar una pestaña la saca a otra ventana; la configuración de la app define si los archivos abren en pestaña nueva o ventana nueva. Indicador de cambios sin guardar."
+frases: ["el bloc de notas tiene pestañas", "se me abren todos los txt en la misma ventana", "quiero el bloc de notas en ventanas separadas", "cómo uso las pestañas del bloc de notas"]
+pasos:
+  - texto: "Cada archivo abierto aparece como una pestaña arriba. Tocá una pestaña para pasar de un archivo a otro."
+  - texto: "Para ver un archivo en su propia ventana, arrastrá su pestaña hacia afuera de la ventana."
+  - texto: "Si querés que cada archivo se abra siempre en una ventana nueva, entrá a la configuración del Bloc de notas y cambiá la opción de cómo se abren los archivos."
+  - texto: "Las pestañas con cambios sin guardar tienen una marca. Al cerrarlas, el Bloc de notas te pregunta si querés guardar."
+fuentes:
+  - https://blogs.windows.com/windows-insider/2023/01/19/tabs-in-notepad-begins-rolling-out-to-windows-insiders/
+  - https://blogs.windows.com/windows-insider/2023/08/31/new-updates-for-snipping-tool-and-notepad-for-windows-insiders/
+madurez: T0
+---
+id: APW-008
+area: archivos
+titulo:
+  sencillo: "Cerré el Bloc de notas sin guardar: ¿perdí lo que escribí?"
+  tecnico: "Bloc de notas: restauración automática de la sesión (pestañas y contenido sin guardar)"
+explicacion:
+  sencillo: "El Bloc de notas de Windows 11 recuerda lo que tenías abierto: al volver a abrirlo, te muestra las mismas pestañas con el texto que no habías guardado. Igual conviene guardarlo como archivo apenas lo recuperes."
+  tecnico: "Desde Bloc de notas 11.2307.22.0 se guarda el estado de la sesión: restaura pestañas abiertas y contenido sin guardar. No modifica archivos; se puede desactivar en la configuración de la app."
+frases: ["cerré el bloc de notas sin guardar", "perdí lo que escribí en el bloc de notas", "recuperar un texto del bloc de notas", "se apagó la compu y tenía algo escrito en el bloc de notas"]
+pasos:
+  - texto: "Volvé a abrir el Bloc de notas: si la función está activada, aparecen las pestañas que tenías, con el texto sin guardar."
+  - texto: "Apenas lo veas, guardalo con «Guardar como»: la copia que recuerda el Bloc de notas no es un archivo guardado."
+  - texto: "Si no aparece nada, revisá en la configuración del Bloc de notas que esté activada la opción de abrir el contenido de la sesión anterior. Desde ahí en adelante, lo que escribas se recupera."
+fuentes:
+  - https://blogs.windows.com/windows-insider/2023/08/31/new-updates-for-snipping-tool-and-notepad-for-windows-insiders/
+madurez: T0
+---
+id: APW-009
+area: programas
+titulo:
+  sencillo: "Las aplicaciones Correo y Calendario de Windows dejaron de funcionar"
+  tecnico: "Fin de soporte de Correo, Calendario y Contactos (31/12/2024): migrar al nuevo Outlook para Windows"
+explicacion:
+  sencillo: "Desde el 31 de diciembre de 2024, las aplicaciones Correo y Calendario de Windows ya no mandan ni reciben nada. Las reemplaza el nuevo Outlook, que es gratis y muestra juntos tus correos de Hotmail, Gmail o Yahoo."
+  tecnico: "Windows Mail, Calendar y People sin soporte desde el 31/12/2024. Reemplazo: Outlook para Windows (nuevo Outlook) desde la Microsoft Store o con «Abrir Outlook» en Correo. Correos, eventos y contactos locales se pueden exportar."
+frases: ["la aplicación correo de windows no anda más", "el calendario de windows no sincroniza", "no me llegan los mails a la app correo", "me dice que pase al nuevo outlook"]
+pasos:
+  - texto: "Abrí la aplicación Correo: en el aviso que aparece, tocá «Abrir Outlook». También podés bajar «Outlook» desde la Microsoft Store."
+  - texto: "Seguí los pasos de la pantalla para agregar tu cuenta (Hotmail, Gmail, Yahoo): en Outlook ves todos tus correos en un solo lugar."
+  - texto: "Si tenías correos o contactos guardados solo en la compu, Microsoft explica cómo exportarlos desde Correo e importarlos en el nuevo Outlook."
+    abrir: "https://support.microsoft.com/office/outlook-for-windows-the-future-of-mail-calendar-and-people-on-windows-11-715fc27c-e0f4-4652-9174-47faa751b199"
+fuentes:
+  - https://support.microsoft.com/office/outlook-for-windows-the-future-of-mail-calendar-and-people-on-windows-11-715fc27c-e0f4-4652-9174-47faa751b199
+madurez: T0
+---
+id: APW-010
+area: programas
+titulo:
+  sencillo: "Quiero hacer una lista de cosas para hacer (o de compras) en la compu"
+  tecnico: "Microsoft To Do: listas, recordatorios, Mi día y listas compartidas"
+explicacion:
+  sencillo: "Microsoft To Do es una app de listas: anotás lo que tenés que hacer, le ponés un recordatorio y la podés compartir con tu familia. Si entrás con tu cuenta de Microsoft, las mismas tareas se ven en Outlook."
+  tecnico: "To Do: Nueva lista, tareas con recordatorio («Recordarme»), Mi día, compartir con vínculo de invitación. Tareas guardadas en Exchange Online, sincronizadas con Outlook con la misma cuenta."
+frases: ["hacer una lista de tareas en la compu", "anotar lo que tengo que hacer", "lista del súper en la computadora", "compartir una lista de compras con mi familia"]
+pasos:
+  - texto: "Abrí Microsoft To Do y entrá con tu cuenta de Microsoft (la misma de tu correo)."
+  - texto: "En el menú de listas, tocá «Nueva lista» y ponele un nombre (por ejemplo, «Supermercado»). Escribí cada cosa como una tarea."
+    abrir: "https://support.microsoft.com/todo/create-and-share-lists"
+  - texto: "Para que te avise: tocá una tarea y elegí la opción de recordatorio (el ícono de la campanita)."
+    abrir: "https://support.microsoft.com/outlook/create-and-manage-task-lists-with-my-day-in-outlook"
+  - texto: "Para compartir la lista: tocá el ícono de compartir arriba a la derecha, creá el vínculo de invitación, copialo y mandáselo por correo o mensaje."
+fuentes:
+  - https://support.microsoft.com/todo/create-and-share-lists
+  - https://support.microsoft.com/todo/plan-and-connect-with-microsoft-to-do
+  - https://support.microsoft.com/outlook/create-and-manage-task-lists-with-my-day-in-outlook
+madurez: T0
+---
+id: APW-011
+area: programas
+titulo:
+  sencillo: "La aplicación Mapas de Windows no anda o no la encuentro"
+  tecnico: "App Mapas de Windows retirada (julio de 2025)"
+explicacion:
+  sencillo: "Microsoft retiró la aplicación Mapas: desde julio de 2025 dejó de funcionar y ya no se puede volver a instalar. Las compus nuevas ya no la traen. No es una falla de tu computadora."
+  tecnico: "Maps quedó obsoleta en abril de 2025; en julio de 2025 salió de la Microsoft Store con una actualización final que la deja sin funcionar. No viene preinstalada desde Windows 11 24H2. Alternativa de Microsoft: Bing Maps en el navegador."
+frases: ["la app mapas de windows no funciona", "desapareció mapas de la compu", "no puedo instalar mapas de windows", "dónde están los mapas de windows"]
+pasos:
+  - texto: "Usá los mapas desde el navegador: Microsoft sugiere Bing Maps (www.bing.com/maps)."
+  - texto: "Si la aplicación vieja todavía te aparece y no la querés, podés desinstalarla: Configuración > Aplicaciones > Aplicaciones instaladas, buscá «Mapas», tocá «...» > «Desinstalar»."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Microsoft lo explica (en inglés)."
+    abrir: "https://learn.microsoft.com/windows/whats-new/deprecated-features-resources"
+fuentes:
+  - https://learn.microsoft.com/windows/whats-new/deprecated-features-resources
+  - https://learn.microsoft.com/windows/whats-new/deprecated-features
+madurez: T0
+---
+id: APW-012
+area: programas
+titulo:
+  sencillo: "No encuentro WordPad en la compu"
+  tecnico: "WordPad eliminado desde Windows 11 24H2"
+explicacion:
+  sencillo: "Microsoft sacó WordPad de Windows 11 en las versiones nuevas. Para textos simples se usa el Bloc de notas, y para documentos con formato (.doc o .rtf), Word."
+  tecnico: "WordPad (wordpad.exe, write.exe) quitado de todas las ediciones desde Windows 11 24H2; sin lector RTF integrado. Recomendado: Word para .doc/.rtf y Bloc de notas para .txt."
+frases: ["no encuentro el wordpad", "desapareció wordpad", "con qué abro un archivo rtf", "dónde está el wordpad en windows 11"]
+pasos:
+  - texto: "Para escribir textos simples (.txt), usá el Bloc de notas: buscalo en Inicio."
+  - texto: "Para documentos con formato (.doc, .docx o .rtf), usá Microsoft Word. Si no tenés Office, escribile a PC Doctor «¿me conviene Office 2024 o Microsoft 365?»."
+  - texto: "Microsoft lo explica (en inglés)."
+    abrir: "https://learn.microsoft.com/windows/whats-new/deprecated-features-resources"
+fuentes:
+  - https://learn.microsoft.com/windows/whats-new/deprecated-features-resources
+  - https://learn.microsoft.com/windows/whats-new/deprecated-features
+madurez: T0
+---
+id: APW-013
+area: basico
+titulo:
+  sencillo: "Quiero que alguien de Microsoft me ayude (app Obtener ayuda)"
+  tecnico: "Obtener ayuda: búsqueda, solucionadores y contacto con soporte (chat o devolución de llamada)"
+explicacion:
+  sencillo: "Windows trae la aplicación «Obtener ayuda»: le contás el problema, te muestra soluciones y, si no alcanza, te deja chatear con alguien de Microsoft o pedir que te llamen."
+  tecnico: "Obtener ayuda (cuenta Microsoft personal): búsqueda, solucionadores, Contactar con soporte > producto > Confirmar > chat en el navegador, devolución de llamada con número de solicitud o pedido de reparación. Opciones según horario, producto y suscripción."
+frases: ["quiero hablar con microsoft", "cómo contacto al soporte de windows", "chatear con alguien de microsoft", "que me llame alguien de microsoft para ayudarme"]
+pasos:
+  - texto: "Abrí la aplicación «Obtener ayuda» (buscala en Inicio). Conviene haber entrado a Windows con tu cuenta de Microsoft."
+  - texto: "Escribí tu problema en el cuadro de búsqueda. Probá primero las soluciones y los solucionadores que te muestra."
+  - texto: "Si sigue igual, tocá el botón para contactar al soporte, elegí el producto (por ejemplo, Windows) y confirmá."
+  - texto: "Elegí cómo: chat en el navegador o que te llamen (te dan un número de solicitud). Las opciones cambian según el horario y el producto."
+    abrir: "https://support.microsoft.com/windows/get-help-for-microsoft-personal-account-users-aaf7f74b-026e-489b-a102-0570dfbfb192"
+fuentes:
+  - https://support.microsoft.com/windows/get-help-for-microsoft-personal-account-users-aaf7f74b-026e-489b-a102-0570dfbfb192
+madurez: T0
+---
+id: APW-014
+area: windows
+titulo:
+  sencillo: "Windows me muestra consejos y sugerencias que no quiero"
+  tecnico: "Desactivar «consejos y sugerencias» y la experiencia de bienvenida (Sistema > Notificaciones > Configuración adicional)"
+explicacion:
+  sencillo: "Windows a veces muestra avisos con consejos, sugerencias o una pantalla de bienvenida después de actualizar. Se pueden apagar, y también los avisos de cualquier aplicación que te moleste."
+  tecnico: "Configuración > Sistema > Notificaciones > Configuración adicional: casillas de la experiencia de bienvenida tras actualizaciones y de consejos y sugerencias. Notificaciones por app en la misma página. La app Sugerencias (Tips) está obsoleta."
+frases: ["me aparecen consejos de windows todo el tiempo", "sacar las sugerencias de windows", "no quiero la pantalla de bienvenida después de actualizar", "windows me recomienda cosas que no pedí"]
+pasos:
+  - texto: "Abrí Configuración > Sistema > Notificaciones."
+    abrir: "ms-settings:notifications"
+  - texto: "Abajo, abrí «Configuración adicional» y destildá la casilla de consejos y sugerencias, y la de la experiencia de bienvenida después de las actualizaciones."
+  - texto: "Si una aplicación en particular te llena de avisos, en la misma página, en la lista de aplicaciones, apagá sus notificaciones. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/help/4014934"
+fuentes:
+  - https://support.microsoft.com/help/4014934
+  - https://learn.microsoft.com/windows/whats-new/deprecated-features
+madurez: T0
+---
+id: APW-015
+area: windows
+titulo:
+  sencillo: "Quiero una revisión rápida de cómo está mi compu (app PC Health Check)"
+  tecnico: "PC Health Check: Windows Update, almacenamiento, tiempo de inicio, batería y requisitos de Windows 11"
+explicacion:
+  sencillo: "PC Health Check es una aplicación gratis de Microsoft que te muestra en una sola pantalla si Windows está al día, cuánto lugar queda en el disco, cuánto tarda en arrancar y cómo está la batería de la notebook."
+  tecnico: "PC Health Check: elegibilidad para Windows 11, copia y sincronización con cuenta Microsoft, estado de Windows Update, capacidad de batería (equipos de más de 3 años), almacenamiento, tiempo de inicio y especificaciones del equipo."
+frases: ["quiero revisar el estado de mi compu", "para qué sirve pc health check", "chequeo general de la computadora", "cómo está la salud de mi notebook"]
+pasos:
+  - texto: "Buscá «PC Health Check» en la barra de abajo y abrila. Si no la tenés, Microsoft explica cómo instalarla."
+    abrir: "https://support.microsoft.com/windows/experience/compatibility/how-to-use-the-pc-health-check-app"
+  - texto: "Mirá cada sección: si Windows está actualizado, cuánto lugar libre queda en el disco, cuánto tarda en arrancar y, en notebooks de más de 3 años, cuánta capacidad le queda a la batería."
+  - texto: "Cada sección tiene un botón que te lleva a donde se corrige (por ejemplo, abrir Windows Update o administrar los programas que arrancan con la compu)."
+  - texto: "Si algo te aparece marcado y no sabés qué hacer, contale a PC Doctor lo que dice."
+fuentes:
+  - https://support.microsoft.com/windows/experience/compatibility/how-to-use-the-pc-health-check-app
+madurez: T0
+---
+id: APW-016
+area: programas
+titulo:
+  sencillo: "¿Qué plan de Microsoft 365 (Office) tengo y hasta cuándo?"
+  tecnico: "Ver la suscripción en Servicios y suscripciones y el producto en Archivo > Cuenta"
+explicacion:
+  sencillo: "En la página de tu cuenta de Microsoft figura qué plan tenés (Personal, Familia, Basic) y si vence en una fecha o se renueva solo. En Word o Excel también podés ver qué Office tenés instalado."
+  tecnico: "account.microsoft.com/services > Servicios y suscripciones: fecha de vencimiento o renovación periódica (flecha circular) con próximo cargo. En las apps: Archivo > Cuenta > Información del producto."
+frases: ["qué office tengo", "cuándo se me vence el office", "no sé qué plan de microsoft 365 pago", "mi office es 365 o es de pago único"]
+pasos:
+  - texto: "Entrá a «Servicios y suscripciones» con tu cuenta de Microsoft. Ahí aparece el nombre de tu plan."
+    abrir: "https://account.microsoft.com/services"
+  - texto: "Si figura una fecha de vencimiento, se termina ese día salvo que la renueves. Si ves una flechita circular, se renueva sola y te muestra cuándo y cuánto es el próximo cobro."
+    abrir: "https://support.microsoft.com/help/2eb89f06-bd1c-4f57-9269-f1cbab894341"
+  - texto: "Desde Word o Excel: tocá «Cuenta» (o «Archivo» > «Cuenta»). En «Información del producto» aparece el nombre de tu Office."
+    abrir: "https://support.microsoft.com/office/about-office-what-version-of-office-am-i-using-932788b8-a3ce-44bf-bb09-e334518b8b19"
+fuentes:
+  - https://support.microsoft.com/help/2eb89f06-bd1c-4f57-9269-f1cbab894341
+  - https://support.microsoft.com/office/about-office-what-version-of-office-am-i-using-932788b8-a3ce-44bf-bb09-e334518b8b19
+madurez: T0
+---
+id: APW-017
+area: programas
+titulo:
+  sencillo: "Quiero renovar Microsoft 365"
+  tecnico: "Renovar Microsoft 365: clave de producto en microsoft365.com/setup o facturación periódica"
+explicacion:
+  sencillo: "Microsoft 365 se renueva de dos formas: cargando la clave de una tarjeta que compraste en un comercio, o dejando que se cobre solo con tu medio de pago en la página de tu cuenta."
+  tecnico: "Clave de 25 caracteres en microsoft365.com/setup con la misma cuenta Microsoft (extiende el tiempo, hasta 5 años en total; no suma instalaciones ni almacenamiento). O activar la facturación periódica en Servicios y suscripciones > Administrar."
+frases: ["se me vence el office y lo quiero renovar", "compré una tarjeta de office 365 en el negocio", "cómo renuevo microsoft 365", "cargar la clave para renovar office"]
+pasos:
+  - texto: "Si compraste una tarjeta o caja en un comercio: buscá la clave de 25 caracteres (en la tarjeta, debajo de la parte para raspar, o en el correo de la compra)."
+  - texto: "Entrá a microsoft365.com/setup con la MISMA cuenta de Microsoft de tu suscripción, elegí tu país y cargá la clave. Al terminar te muestra la nueva fecha de vencimiento. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/topic/58f3d0f8-15c4-4ad8-8c5f-16d682e8b545"
+  - texto: "Si preferís que se cobre solo: en «Servicios y suscripciones», tocá «Administrar» y activá la facturación periódica (si ves «Renovar», tocalo). Seguí los pasos para el pago."
+    abrir: "https://account.microsoft.com/services"
+fuentes:
+  - https://support.microsoft.com/topic/58f3d0f8-15c4-4ad8-8c5f-16d682e8b545
+  - https://support.microsoft.com/office/turn-recurring-billing-on-or-off-for-microsoft-365-for-home-c7c0bc32-9744-4acf-9818-815d5c96cc59
+madurez: T0
+---
+id: APW-018
+area: programas
+titulo:
+  sencillo: "No quiero que Microsoft 365 se renueve solo (o cancelar la prueba gratis)"
+  tecnico: "Desactivar la facturación periódica de Microsoft 365 / cancelar la prueba gratuita"
+explicacion:
+  sencillo: "Si apagás la renovación automática, no te vuelven a cobrar y seguís usando Microsoft 365 hasta la fecha de vencimiento. Con la prueba gratis pasa lo mismo: si la cancelás dentro de los 30 días, no te cobran."
+  tecnico: "Servicios y suscripciones > Administrar > desactivar facturación periódica; acceso hasta la fecha de vencimiento (también para quienes comparten Familia). Prueba: enlace Cancelar dentro de los 30 días; si figura «Pagado con: Ninguno», vence sin cobro."
+frases: ["que no me cobren más el office", "sacar la renovación automática de microsoft 365", "cancelar la prueba gratis de microsoft 365", "no quiero que se renueve el office solo"]
+pasos:
+  - texto: "Entrá a «Servicios y suscripciones» con la cuenta de Microsoft que tiene la suscripción. Buscala y tocá «Administrar»."
+    abrir: "https://account.microsoft.com/services"
+  - texto: "Elegí la opción para desactivar la facturación periódica y seguí los pasos hasta confirmar. Si esa opción no está, ya vence sola en la fecha que figura."
+    abrir: "https://support.microsoft.com/office/turn-recurring-billing-on-or-off-for-microsoft-365-for-home-c7c0bc32-9744-4acf-9818-815d5c96cc59"
+  - texto: "Si es la prueba gratis y ves «Cancelar», tocalo: dentro de los 30 días no te cobran."
+    abrir: "https://support.microsoft.com/office/cancel-your-free-trial-of-microsoft-365-family-6334375a-a4ac-4047-9d6c-26c278a79a4e"
+  - texto: "Vas a poder seguir usándolo hasta la fecha de vencimiento (y tu familia también, si era el plan Familia)."
+fuentes:
+  - https://support.microsoft.com/office/turn-recurring-billing-on-or-off-for-microsoft-365-for-home-c7c0bc32-9744-4acf-9818-815d5c96cc59
+  - https://support.microsoft.com/office/cancel-your-free-trial-of-microsoft-365-family-6334375a-a4ac-4047-9d6c-26c278a79a4e
+madurez: T0
+---
+id: APW-019
+area: programas
+titulo:
+  sencillo: "Quiero cambiar la tarjeta con la que pago Microsoft 365"
+  tecnico: "Cambiar el método de pago de una suscripción (Administrar > Cambiar forma de pago)"
+explicacion:
+  sencillo: "Si se te venció la tarjeta o querés pagar con otra, se cambia vos mismo en la página oficial de tu cuenta de Microsoft. Los datos de la tarjeta cargalos solo ahí; PC Doctor nunca te los pide."
+  tecnico: "Servicios y suscripciones > Administrar > Cambiar forma de pago; elegir o agregar un método. Requiere facturación periódica activa. Suscripciones prepagas: no se puede cambiar; al vencer se compra una nueva."
+frases: ["cambiar la tarjeta de microsoft 365", "se me venció la tarjeta con la que pago office", "pagar office con otra tarjeta", "actualizar el medio de pago de microsoft"]
+pasos:
+  - texto: "Entrá a «Servicios y suscripciones» con la cuenta que tiene la suscripción, buscala y tocá «Administrar»."
+    abrir: "https://account.microsoft.com/services"
+  - texto: "Elegí la opción para cambiar la forma de pago. Tocá un medio de pago de la lista o la opción para agregar uno nuevo, y seguí los pasos."
+    abrir: "https://support.microsoft.com/account-billing/change-your-microsoft-subscription-payment-method-and-options-39ab4bc1-01f9-fc28-c3a5-49e87b6e7611"
+  - texto: "Si no aparece la opción, puede ser que la facturación periódica esté apagada. Si es una suscripción prepaga, no se cambia: cuando venza, comprás una nueva."
+  - texto: "Si te da error al cargar la tarjeta, consultá con tu banco."
+fuentes:
+  - https://support.microsoft.com/account-billing/change-your-microsoft-subscription-payment-method-and-options-39ab4bc1-01f9-fc28-c3a5-49e87b6e7611
+madurez: T0
+---
+id: APW-020
+area: seguridad
+titulo:
+  sencillo: "Me apareció un cobro de Microsoft en la tarjeta y no sé qué es"
+  tecnico: "Investigar un cargo de Microsoft desconocido"
+explicacion:
+  sencillo: "Muchas veces es una suscripción que se renueva sola, una compra de alguien de la familia o un cobro rechazado que se volvió a pasar. Revisalo en la página oficial de tu cuenta; si no lo reconocés, llamá a tu banco."
+  tecnico: "Causas: suscripción con facturación periódica, compras de familiares con la misma tarjeta, cargo rechazado reprocesado, preventa o pedido dividido, compras dentro de apps o juegos. Si no es autorizado: avisar al banco que la tarjeta puede estar comprometida."
+frases: ["me cobró microsoft y no compré nada", "cargo de microsoft en el resumen de la tarjeta", "me aparece msbill en la tarjeta", "un débito de microsoft que no reconozco"]
+pasos:
+  - texto: "Entrá a tu historial de pedidos con tu cuenta de Microsoft y fijate si el cobro coincide con alguna compra."
+    abrir: "https://account.microsoft.com/billing/orders"
+  - texto: "Mirá también tus suscripciones: lo más común es una que se renueva sola. Si no la querés, escribile a PC Doctor «no quiero que Microsoft 365 se renueve solo»."
+    abrir: "https://account.microsoft.com/services"
+  - texto: "Preguntá en tu casa si alguien compró algo (un juego, algo dentro de una app) con tu tarjeta."
+  - texto: "Si no lo reconocés, llamá a tu banco al número que figura en tu tarjeta y avisá que puede estar comprometida: reclamar el cobro solo no frena cobros futuros. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/help/10623"
+fuentes:
+  - https://support.microsoft.com/help/10623
+madurez: T0
+---
+id: APW-021
+area: programas
+titulo:
+  sencillo: "Quiero compartir mi Microsoft 365 Familia con mi familia"
+  tecnico: "Compartir Microsoft 365 Familia: invitación por correo o vínculo (hasta 5 personas)"
+explicacion:
+  sencillo: "Si pagás Microsoft 365 Familia, podés invitar hasta 5 personas para que tengan Word, Excel y su propio espacio en OneDrive. Se comparte con una invitación, nunca pasando la clave."
+  tecnico: "Página de uso compartido de la suscripción > Compartir > invitación por correo o vínculo copiado. Aceptación dentro de 48 horas (pendiente mientras tanto). No se comparten almacenamiento extendido ni funciones de IA del titular."
+frases: ["compartir el office con mi familia", "cómo invito a mi hija a microsoft 365", "agregar a alguien a mi plan familia de office", "cuántas personas pueden usar mi microsoft 365"]
+pasos:
+  - texto: "Entrá a «Servicios y suscripciones» con tu cuenta y abrí el uso compartido de Microsoft 365 Familia. Tocá «Compartir» (si no aparece, puede que no seas el titular)."
+    abrir: "https://account.microsoft.com/services"
+  - texto: "Invitá por correo (poné su dirección) o creá un vínculo, copialo y mandáselo por mail o mensaje."
+  - texto: "La otra persona tiene que aceptar dentro de las 48 horas, con su cuenta de Microsoft (o creando una). Después puede instalar las aplicaciones."
+    abrir: "https://support.microsoft.com/help/b389b9ce-3ae3-4a82-9017-39d79972fcba"
+  - texto: "No compartas tu clave de producto: usá siempre la invitación."
+fuentes:
+  - https://support.microsoft.com/help/b389b9ce-3ae3-4a82-9017-39d79972fcba
+madurez: T0
+---
+id: APW-022
+area: programas
+titulo:
+  sencillo: "Me regalaron una tarjeta de Microsoft y quiero cargarla"
+  tecnico: "Canjear una tarjeta regalo o código en la cuenta Microsoft (redeem.microsoft.com)"
+explicacion:
+  sencillo: "Las tarjetas de regalo de Microsoft (o de Xbox) se cargan en tu cuenta de Microsoft y el saldo te sirve para comprar en la Store. El código cargalo vos en la página oficial; no se lo pases a nadie."
+  tecnico: "redeem.microsoft.com > Canjear código > iniciar sesión > escribir o pegar el código. Si se compró un código equivocado, reclamar al comercio."
+frases: ["cargar una tarjeta de regalo de microsoft", "canjear un código de xbox en la compu", "me regalaron saldo para la microsoft store", "dónde pongo el código de la tarjeta de microsoft"]
+pasos:
+  - texto: "Entrá a la página oficial de canje de Microsoft (redeem.microsoft.com), tocá la opción para canjear e iniciá sesión con la cuenta donde querés el saldo."
+  - texto: "Escribí o pegá el código de la tarjeta y seguí los pasos. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/help/10604"
+  - texto: "Si compraste un código equivocado, reclamale al comercio donde lo compraste."
+fuentes:
+  - https://support.microsoft.com/help/10604
+madurez: T0
+---
+id: APW-023
+area: programas
+titulo:
+  sencillo: "¿Me conviene Office 2024 (pago único) o Microsoft 365 (suscripción)?"
+  tecnico: "Diferencias entre Office 2024/2021 de compra única y Microsoft 365"
+explicacion:
+  sencillo: "Office 2024 se paga una sola vez y se instala en una sola computadora; recibe arreglos de seguridad pero no funciones nuevas. Microsoft 365 se paga por mes o por año, se usa en todos tus aparatos (hasta 5 con la sesión abierta a la vez), trae espacio en OneDrive y siempre está al día."
+  tecnico: "Office 2024: pago único, un PC o Mac, sin almacenamiento en la nube, solo actualizaciones de seguridad. Microsoft 365: mensual o anual, todos los dispositivos (5 sesiones simultáneas), 1 TB (Personal) o 2 TB (Familia), funciones nuevas continuas y soporte."
+frases: ["office 2024 o microsoft 365 cuál conviene", "quiero comprar el office de una sola vez", "diferencia entre office 365 y office 2021", "no quiero pagar office todos los meses"]
+pasos:
+  - texto: "Si usás Word y Excel en una sola compu y no querés pagar todos los meses, Office 2024 (pago único) puede alcanzar."
+  - texto: "Si querés usarlo en varios aparatos (compu, celular, tablet), compartirlo o tener espacio en OneDrive, conviene Microsoft 365."
+  - texto: "Microsoft compara las dos opciones."
+    abrir: "https://support.microsoft.com/office/what-s-the-difference-between-microsoft-365-and-office-2024-ed447ebf-6060-46f9-9e90-a239bd27eb96"
+fuentes:
+  - https://support.microsoft.com/office/what-s-the-difference-between-microsoft-365-and-office-2024-ed447ebf-6060-46f9-9e90-a239bd27eb96
+madurez: T0
+---
+id: APW-024
+area: programas
+titulo:
+  sencillo: "Se me venció Microsoft 365: ¿pierdo mis documentos?"
+  tecnico: "Qué pasa al vencer Microsoft 365: modo de funcionalidad reducida, OneDrive a 5 GB, buzón de Outlook.com"
+explicacion:
+  sencillo: "Tus documentos no se borran: Word y Excel los siguen abriendo e imprimiendo, pero no te dejan editar ni crear nuevos hasta que renueves. Lo delicado es OneDrive: si tenías más de 5 GB, queda en solo lectura y, con el tiempo, Microsoft puede congelar la cuenta y borrar archivos."
+  tecnico: "Apps en modo de funcionalidad reducida (ver e imprimir). OneDrive vuelve a 5 GB: sobre el límite, solo lectura; a los 3 meses se congela; a los 6, los archivos pueden eliminarse. Outlook.com sobre la cuota: no envía ni recibe. Miembros de Familia pierden los beneficios."
+frases: ["se me venció el office y no puedo editar", "word me deja ver pero no escribir", "venció mi microsoft 365 y tengo miedo de perder todo", "onedrive quedó en solo lectura"]
+pasos:
+  - texto: "Fijate la fecha de vencimiento en «Servicios y suscripciones»."
+    abrir: "https://account.microsoft.com/services"
+  - texto: "Si lo querés seguir usando, renovalo (escribile a PC Doctor «quiero renovar Microsoft 365»). Mientras tanto, podés usar Office gratis en el navegador."
+  - texto: "Si no vas a renovar y tenés más de 5 GB en OneDrive, bajate a la compu o a un disco externo lo que quieras conservar antes de que pasen los 6 meses. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/help/2eb89f06-bd1c-4f57-9269-f1cbab894341"
+fuentes:
+  - https://support.microsoft.com/help/2eb89f06-bd1c-4f57-9269-f1cbab894341
+madurez: T0
+---
+id: APW-025
+area: programas
+titulo:
+  sencillo: "Tengo Microsoft 365 (u Office) pagado y lo quiero instalar en otra compu"
+  tecnico: "Instalar o reinstalar Microsoft 365 u Office 2024 desde m365.cloud.microsoft/apps"
+explicacion:
+  sencillo: "Lo que pagaste queda guardado en tu cuenta de Microsoft: para instalarlo en otra compu, entrás con esa cuenta y lo bajás. Con Microsoft 365 podés usarlo en todos tus aparatos; Office 2024 de pago único va en una sola compu (se puede pasar a una nueva)."
+  tecnico: "m365.cloud.microsoft/apps > Iniciar sesión > Instalar aplicaciones > Instalar. Canjear antes la clave si vino con el producto. Suscripción: todos los dispositivos, 5 sesiones a la vez. Pago único: un equipo, transferible por falla o equipo nuevo."
+frases: ["instalar el office en la compu nueva", "pasar mi office a otra computadora", "cómo bajo el office que ya pagué", "reinstalar office después de formatear"]
+pasos:
+  - texto: "Si tu Office vino con una clave y nunca la cargaste, canjeala primero con la misma cuenta de Microsoft que vas a usar."
+  - texto: "En la compu nueva, entrá a m365.cloud.microsoft/apps, iniciá sesión con tu cuenta de Microsoft y tocá la opción para instalar las aplicaciones."
+    abrir: "https://support.microsoft.com/office/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658"
+  - texto: "Abrí el instalador que se descarga y, si Windows pregunta si permitís cambios, tocá «Sí». Esperá el mensaje de que Office quedó instalado."
+  - texto: "Office 2024 de pago único se usa en una sola compu: si cambiaste de computadora, lo podés pasar a la nueva."
+fuentes:
+  - https://support.microsoft.com/office/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658
+madurez: T0

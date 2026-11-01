@@ -1,0 +1,513 @@
+# Pantalla, sonido y personalización: pantalla de bloqueo, protector, Windows destacado, puntero, fuentes, escala, brillo y color, proyección, mezclador, salida rápida, sonido espacial, Bluetooth, micrófono y reproducción automática. Guiadas con fuente oficial.
+id: PNS-001
+area: basico
+titulo:
+  sencillo: "Quiero cambiar la foto que aparece cuando la compu está bloqueada"
+  tecnico: "Fondo de la pantalla de bloqueo (Imagen, Presentación o Windows destacado)"
+explicacion:
+  sencillo: "La pantalla de bloqueo es la que ves antes de poner la clave. Le podés poner una foto tuya, varias fotos que vayan pasando o las imágenes que manda Microsoft."
+  tecnico: "Configuración > Personalización > Pantalla de bloqueo > Personalizar la pantalla de bloqueo: Windows destacado, Imagen o Presentación (carpetas)."
+frases: ["cambiar la foto de la pantalla de bloqueo", "quiero poner una foto de mis nietos cuando prendo la compu", "la imagen que aparece antes de poner la clave", "poner varias fotos en la pantalla de inicio"]
+pasos:
+  - texto: "Abrí Pantalla de bloqueo (Configuración > Personalización > Pantalla de bloqueo)."
+    abrir: "ms-settings:lockscreen"
+  - texto: "Donde dice «Personalizar la pantalla de bloqueo», elegí «Imagen» para una sola foto o «Presentación» para que vayan pasando las fotos de una carpeta. Después tocá la foto o agregá la carpeta."
+  - texto: "Si querés que la misma foto se vea también donde ponés la clave, dejá activada la opción para mostrar la imagen de la pantalla de bloqueo en la pantalla de inicio de sesión."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/personalization/customize-the-lock-screen-in-windows"
+derivar: "Si lo que querés cambiar es la foto del escritorio (la de atrás de los íconos), escribile a PC Doctor «quiero cambiar la foto de fondo de la pantalla»."
+fuentes:
+  - https://support.microsoft.com/windows/experience/personalization/customize-the-lock-screen-in-windows
+madurez: T0
+---
+id: PNS-002
+area: basico
+titulo:
+  sencillo: "En la pantalla de bloqueo aparecen datos curiosos, noticias o el clima y no los quiero"
+  tecnico: "Datos curiosos, sugerencias y widgets de la pantalla de bloqueo"
+explicacion:
+  sencillo: "Windows puede mostrar en la pantalla de bloqueo frases, datos curiosos y cuadritos con el clima u otras cosas. Si te molestan, se pueden sacar y dejar solo la foto."
+  tecnico: "Personalización > Pantalla de bloqueo: desmarcar «datos curiosos, sugerencias, trucos y más» (con Imagen o Presentación) y apagar o quitar Widgets."
+frases: ["sacar las noticias de la pantalla de bloqueo", "aparecen frases y datos curiosos cuando bloqueo la compu", "quiero que la pantalla de bloqueo muestre solo la foto", "sacar el clima de la pantalla de bloqueo"]
+pasos:
+  - texto: "Abrí Pantalla de bloqueo."
+    abrir: "ms-settings:lockscreen"
+  - texto: "Si tenés puesta «Imagen» o «Presentación», desmarcá la casilla de datos curiosos, sugerencias y trucos que aparece debajo."
+  - texto: "Más abajo, en «Widgets», apagá el interruptor para que no aparezca ningún cuadrito. Si querés dejar alguno, tocá los tres puntitos del que no querés y quitalo."
+  - texto: "Con «Windows destacado» siempre pueden aparecer sugerencias: si no las querés, cambiá a «Imagen». Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/personalization/customize-the-lock-screen-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/personalization/customize-the-lock-screen-in-windows
+  - https://learn.microsoft.com/windows/configuration/windows-spotlight/
+madurez: T0
+---
+id: PNS-003
+area: basico
+titulo:
+  sencillo: "La foto del escritorio cambia sola todos los días"
+  tecnico: "Windows destacado (Windows spotlight) como fondo de escritorio"
+explicacion:
+  sencillo: "Después de algunas actualizaciones, Windows puede poner «Windows destacado»: una foto distinta cada día, elegida por Microsoft, a veces con sugerencias. Si preferís una foto fija, se cambia en un minuto."
+  tecnico: "Windows destacado cambia la imagen a diario en el fondo y la pantalla de bloqueo; desde KB5046633 (Windows 11) puede quedar como fondo predeterminado. Se cambia en Personalización > Fondo."
+frases: ["el fondo de pantalla cambia solo", "cada día aparece una foto distinta en el escritorio", "me cambiaron la foto del escritorio sin que yo hiciera nada", "quiero que el fondo quede fijo"]
+pasos:
+  - texto: "Abrí Fondo (Configuración > Personalización > Fondo)."
+    abrir: "ms-settings:personalization-background"
+  - texto: "En «Personalizar el fondo», cambiá «Windows destacado» por «Imagen» y elegí la foto que quieras."
+  - texto: "Si también cambia sola la foto de la pantalla de bloqueo, hacé lo mismo en Pantalla de bloqueo."
+    abrir: "ms-settings:lockscreen"
+  - texto: "Al revés: si te gusta que cambie, elegí «Windows destacado» en esas mismas listas. Microsoft lo explica."
+    abrir: "https://learn.microsoft.com/windows/configuration/windows-spotlight/"
+fuentes:
+  - https://learn.microsoft.com/windows/configuration/windows-spotlight/
+  - https://support.microsoft.com/windows/experience/personalization/customize-the-lock-screen-in-windows
+madurez: T0
+---
+id: PNS-004
+area: basico
+titulo:
+  sencillo: "Quiero poner o cambiar el protector de pantalla"
+  tecnico: "Configuración del protector de pantalla"
+explicacion:
+  sencillo: "El protector de pantalla es una animación o fotos que aparecen cuando no tocás la compu por un rato. Se elige cuál, cuántos minutos espera y si al volver te pide la clave."
+  tecnico: "Personalización > Pantalla de bloqueo > Protector de pantalla: lista de protectores, «Esperar» (minutos) y pedir inicio de sesión al reanudar."
+frases: ["poner el protector de pantalla", "quiero que aparezcan fotos cuando no uso la compu", "cambiar la animación que sale cuando dejo la compu quieta", "que pida la clave cuando vuelvo del protector"]
+pasos:
+  - texto: "Abrí Pantalla de bloqueo y, más abajo, en la parte de configuraciones relacionadas, tocá «Protector de pantalla»."
+    abrir: "ms-settings:lockscreen"
+  - texto: "En la ventana que se abre, elegí un protector de la lista (por ejemplo, «Fotos») y en «Esperar» poné cuántos minutos tiene que pasar sin usar la compu."
+  - texto: "Si elegiste «Fotos», tocá «Configuración...» para elegir las fotos. Si querés que al volver te pida la clave, marcá la casilla de mostrar la pantalla de inicio de sesión al reanudar. Tocá «Aceptar»."
+  - texto: "Microsoft lo explica (y recomienda usar la suspensión si lo que buscás es ahorrar energía)."
+    abrir: "https://support.microsoft.com/windows/experience/configure-a-screen-saver-in-windows"
+derivar: "Si lo que te pasa es que la pantalla se apaga muy rápido, escribile a PC Doctor «la pantalla se apaga muy rápido»."
+fuentes:
+  - https://support.microsoft.com/windows/experience/configure-a-screen-saver-in-windows
+madurez: T0
+---
+id: PNS-005
+area: basico
+titulo:
+  sencillo: "Quiero cambiar el dibujo de la flechita del mouse"
+  tecnico: "Esquema de punteros (Propiedades del mouse > Punteros)"
+explicacion:
+  sencillo: "Además del tamaño y el color, Windows trae varios «esquemas»: juegos de flechitas con otro estilo (por ejemplo, en negro o más gruesas). También se puede cambiar una sola, como el relojito de espera."
+  tecnico: "Bluetooth y dispositivos > Mouse > Configuración adicional del mouse > Propiedades del mouse > Punteros: Esquema o Personalizar > Examinar."
+frases: ["cambiar el estilo de la flecha del mouse", "poner otro dibujo al cursor", "cambiar el relojito de espera del mouse", "quiero la flechita negra en vez de blanca"]
+pasos:
+  - texto: "Abrí Mouse (Configuración > Bluetooth y dispositivos > Mouse) y, en configuraciones relacionadas, tocá «Configuración adicional del mouse»."
+    abrir: "ms-settings:mousetouchpad"
+  - texto: "En la ventana «Propiedades del mouse», andá a la pestaña «Punteros» y elegí otro estilo en la lista «Esquema». Vas a ver cómo queda cada flechita."
+  - texto: "Para cambiar una sola, elegila en la lista de abajo («Personalizar»), tocá «Examinar», elegí el dibujo y «Abrir». Al final tocá «Aceptar». Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/hardware/input-devices/change-mouse-settings"
+derivar: "Si lo que necesitás es una flechita más grande o de otro color para verla mejor, escribile a PC Doctor «no veo bien la flechita del mouse»."
+fuentes:
+  - https://support.microsoft.com/windows/hardware/input-devices/change-mouse-settings
+madurez: T0
+---
+id: PNS-006
+area: basico
+titulo:
+  sencillo: "Quiero ver qué tipos de letra tengo en la compu (o borrar uno que no uso)"
+  tecnico: "Fuentes instaladas: ver, buscar y desinstalar (Personalización > Fuentes)"
+explicacion:
+  sencillo: "Las «fuentes» son los tipos de letra que podés usar en Word y en otros programas. Windows tiene una lista donde ves todas, cómo se ven y las buscás por nombre. Las que instalaste y no usás se pueden desinstalar."
+  tecnico: "Configuración > Personalización > Fuentes > Fuentes disponibles: búsqueda, vista previa por tamaño y estilo; Opciones > Desinstalar."
+frases: ["qué letras tengo instaladas", "ver las tipografías de la compu", "cómo sé si tengo una letra instalada", "desinstalar una tipografía que bajé", "tengo demasiadas letras en la lista de word"]
+pasos:
+  - texto: "Abrí Fuentes (Configuración > Personalización > Fuentes)."
+    abrir: "ms-settings:fonts"
+  - texto: "En «Fuentes disponibles» está la lista. Escribí el nombre en el buscador para encontrar una y tocala para ver cómo se ve, en distintos tamaños y estilos."
+  - texto: "Para borrar una que instalaste y no usás, entrá en esa fuente, tocá las opciones y elegí «Desinstalar». Si no sabés de dónde salió una letra, mejor no la toques."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/personalization/manage-fonts-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/personalization/manage-fonts-in-windows
+madurez: T0
+---
+id: PNS-007
+area: basico
+titulo:
+  sencillo: "Bajé un tipo de letra y quiero usarlo en Word"
+  tecnico: "Instalar una fuente (.ttf u .otf) o desde Microsoft Store"
+explicacion:
+  sencillo: "Para usar una letra nueva hay que instalarla en Windows. Una vez instalada, aparece en Word y en los demás programas que la admiten. Conviene bajarlas solo de lugares de confianza."
+  tecnico: "Archivo TrueType (.ttf) u OpenType (.otf): extraer si viene en .zip, clic derecho > Instalar o Instalar para todos los usuarios. También desde Fuentes > Microsoft Store."
+frases: ["instalar una fuente nueva", "bajé una letra linda y no aparece en word", "cómo agrego una tipografía", "quiero una letra que no tengo en la compu"]
+pasos:
+  - texto: "Si la letra vino en un archivo .zip, hacé clic derecho sobre él y elegí «Extraer todo». Adentro tiene que haber un archivo que termine en .ttf u .otf."
+  - texto: "Hacé clic derecho en ese archivo y elegí «Instalar» (o «Instalar para todos los usuarios» si la compu la usan varias personas). Si Windows te pregunta si permitís cambios, decí que sí solo si confiás en dónde la bajaste."
+  - texto: "Cerrá y volvé a abrir Word: la letra tendría que aparecer en la lista. Si no aparece, fijate en Fuentes si quedó instalada; no todos los programas aceptan todas las letras."
+    abrir: "ms-settings:fonts"
+  - texto: "También podés conseguir letras desde Fuentes, con la opción para obtener más fuentes en Microsoft Store. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/personalization/manage-fonts-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/personalization/manage-fonts-in-windows
+madurez: T0
+---
+id: PNS-008
+area: windows
+titulo:
+  sencillo: "Con dos monitores, en uno se ve todo enorme y en el otro chiquito"
+  tecnico: "Escala por pantalla (Sistema > Pantalla > Escala y diseño > Escala)"
+explicacion:
+  sencillo: "Cada monitor tiene su propio tamaño de letras e íconos (la «escala»). Si conectaste una pantalla nueva o la notebook a un monitor grande, puede que uno quede con todo gigante y el otro con todo diminuto. Se ajusta cada uno por separado."
+  tecnico: "Sistema > Pantalla: seleccionar la pantalla en el esquema y ajustar Escala (preferentemente la «Recomendada») en Escala y diseño."
+frases: ["en un monitor todo se ve grande y en el otro chico", "la notebook y el monitor muestran distinto tamaño", "cambiar el tamaño de las letras en un solo monitor", "al conectar el monitor nuevo todo quedó gigante"]
+pasos:
+  - texto: "Abrí Pantalla (Configuración > Sistema > Pantalla). Arriba aparecen los monitores como rectángulos con números: tocá el que querés cambiar."
+    abrir: "ms-settings:display"
+  - texto: "Bajá hasta «Escala y diseño» y, en «Escala», elegí otro tamaño. Conviene empezar por el que dice «(Recomendado)»."
+  - texto: "Repetí con el otro monitor hasta que los dos se vean cómodos. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/hardware/display-graphics/change-your-screen-resolution-and-layout-in-windows"
+derivar: "Si la imagen se ve estirada o con bordes negros, escribile a PC Doctor «la pantalla se ve estirada o con bordes negros»."
+fuentes:
+  - https://support.microsoft.com/windows/hardware/display-graphics/change-your-screen-resolution-and-layout-in-windows
+madurez: T0
+---
+id: PNS-009
+area: windows
+titulo:
+  sencillo: "Algunos programas se ven borrosos desde que conecté otro monitor"
+  tecnico: "Aplicaciones borrosas al cambiar de pantalla o de escala"
+explicacion:
+  sencillo: "Cuando conectás o desconectás un monitor, o cambiás el tamaño de las letras, algunos programas viejos quedan borrosos porque se «estiran». Casi siempre se arregla cerrando sesión y volviendo a entrar."
+  tecnico: "Apps que no son per-monitor DPI aware se escalan con la configuración de la pantalla principal; cerrar sesión, igualar la escala entre monitores y reiniciar la app."
+frases: ["algunos programas se ven borrosos", "las letras de word se ven desenfocadas en el monitor", "desde que enchufé el monitor un programa se ve borroso", "un programa se ve como estirado y borroso"]
+pasos:
+  - texto: "Cerrá el programa que se ve borroso y volvé a abrirlo."
+  - texto: "Si sigue igual, guardá lo que estés haciendo, cerrá sesión en Windows y volvé a entrar."
+  - texto: "Si te pasa seguido, poné la misma escala en todos los monitores (por ejemplo, 125 % en los dos) en Pantalla > «Escala y diseño», y volvé a cerrar sesión."
+    abrir: "ms-settings:display"
+  - texto: "Microsoft lo explica para Office."
+    abrir: "https://support.microsoft.com/office/office-apps-appear-the-wrong-size-or-blurry-on-external-monitors-bc9f7279-4e42-4b15-a949-46ab8bcfe44f"
+fuentes:
+  - https://support.microsoft.com/office/office-apps-appear-the-wrong-size-or-blurry-on-external-monitors-bc9f7279-4e42-4b15-a949-46ab8bcfe44f
+  - https://support.microsoft.com/windows/hardware/display-graphics/change-your-screen-resolution-and-layout-in-windows
+madurez: T0
+---
+id: PNS-010
+area: windows
+titulo:
+  sencillo: "El brillo de la pantalla cambia solo"
+  tecnico: "Brillo automático por iluminación y brillo según el contenido"
+explicacion:
+  sencillo: "Algunas notebooks suben o bajan el brillo solas, según la luz del lugar o lo que se ve en la pantalla (por ejemplo, para ahorrar batería). Si te molesta, se apaga."
+  tecnico: "Sistema > Pantalla > Brillo: «Cambiar el brillo automáticamente cuando cambie la iluminación» y «Cambiar el brillo según el contenido» (Desactivado / Siempre / Solo con batería)."
+frases: ["el brillo cambia solo", "la pantalla se oscurece y se aclara sola", "la notebook baja el brillo sola cuando abro algo oscuro", "quiero que el brillo quede fijo"]
+pasos:
+  - texto: "Abrí Pantalla (Configuración > Sistema > Pantalla) y desplegá «Brillo»."
+    abrir: "ms-settings:display"
+  - texto: "Apagá la opción que cambia el brillo automáticamente cuando cambia la iluminación."
+  - texto: "Si ahí aparece la opción de cambiar el brillo según el contenido, ponela en «Desactivado» (o «Solo con batería» si querés ahorrar cuando está desenchufada)."
+  - texto: "Si estas opciones no aparecen, tu pantalla no las tiene. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/hardware/display-graphics/change-display-brightness-and-color-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/display-graphics/change-display-brightness-and-color-in-windows
+madurez: T0
+---
+id: PNS-011
+area: windows
+titulo:
+  sencillo: "Los colores de la pantalla no se ven bien y quiero ajustarlos"
+  tecnico: "Calibrar la pantalla (Perfil de color > Calibrar pantalla)"
+explicacion:
+  sencillo: "Windows trae un asistente que te guía paso a paso para ajustar los colores de la pantalla mirando unas imágenes de prueba. Al terminar, guarda esos ajustes."
+  tecnico: "Sistema > Pantalla > Perfil de color > Calibrar pantalla: crea un perfil de color nuevo; en monitores externos con HDR deriva a la app Calibración HDR de Windows."
+frases: ["calibrar los colores del monitor", "los colores de la pantalla se ven raros", "las fotos se ven con otros colores en la compu", "ajustar el color de la pantalla"]
+pasos:
+  - texto: "Abrí Pantalla. Si tenés más de un monitor, elegí arriba el que querés ajustar."
+    abrir: "ms-settings:display"
+  - texto: "Entrá en «Perfil de color» y tocá «Calibrar pantalla». Seguí los pasos de la pantalla mirando las imágenes de prueba."
+  - texto: "Al terminar, Windows crea un perfil de color nuevo para esa pantalla. Si el monitor tiene HDR, te va a mandar a la app de calibración HDR de Windows."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/hardware/display-graphics/change-display-brightness-and-color-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/display-graphics/change-display-brightness-and-color-in-windows
+madurez: T0
+---
+id: PNS-012
+area: windows
+titulo:
+  sencillo: "La pantalla tiene un tono raro aunque la luz nocturna está apagada"
+  tecnico: "Perfil de color incorrecto o administración automática del color"
+explicacion:
+  sencillo: "Si la pantalla se ve amarillenta, rosada o lavada y la luz nocturna no está prendida, puede ser que esté cargado un «perfil de color» equivocado. Se puede volver al que corresponde."
+  tecnico: "Sistema > Pantalla > Perfil de color: establecer el perfil adecuado, quitar perfiles agregados y probar «Administrar automáticamente el color de las aplicaciones»."
+frases: ["la pantalla tiene un color raro", "todo se ve amarillento y no es la luz nocturna", "la pantalla quedó rosada", "después de calibrar los colores quedaron mal"]
+pasos:
+  - texto: "Primero fijate que la luz nocturna esté apagada y no tenga horario programado."
+    abrir: "ms-settings:nightlight"
+  - texto: "Abrí Pantalla, elegí el monitor que se ve raro y entrá en «Perfil de color». Elegí otro perfil de la lista y usá la opción para establecerlo. Si agregaste uno a mano o al calibrar, desplegalo y quitalo."
+    abrir: "ms-settings:display"
+  - texto: "Si tu pantalla lo permite, probá activar la opción de administrar automáticamente el color de las aplicaciones."
+  - texto: "En un monitor de escritorio, revisá también los botones del propio monitor (su menú de color). Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/hardware/display-graphics/change-display-brightness-and-color-in-windows"
+derivar: "Si la pantalla se ve amarilla solo de noche, escribile a PC Doctor «la pantalla se ve amarillenta de noche»."
+fuentes:
+  - https://support.microsoft.com/windows/hardware/display-graphics/change-display-brightness-and-color-in-windows
+madurez: T0
+---
+id: PNS-013
+area: windows
+titulo:
+  sencillo: "La pantalla se puso en blanco y negro (o con colores raros) de golpe"
+  tecnico: "Filtro de color activado con Windows + Ctrl + C"
+explicacion:
+  sencillo: "Si la pantalla quedó de repente sin colores o con los colores cambiados, casi seguro se activó un «filtro de color», a veces apretando sin querer Windows + Ctrl + C. No es que se rompió el monitor: se apaga en un momento."
+  tecnico: "Accesibilidad > Filtros de color; el atajo Windows + Ctrl + C los activa o desactiva si el atajo está habilitado en Configuración."
+frases: ["la pantalla se puso en blanco y negro", "se fueron los colores de la pantalla", "la pantalla quedó gris de repente", "apreté unas teclas y la pantalla cambió de color"]
+pasos:
+  - texto: "Probá apretar Windows + Ctrl + C: si fue el atajo, los colores vuelven enseguida."
+    abrir: "https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows"
+  - texto: "Si no vuelven, abrí Filtros de color (Configuración > Accesibilidad > Filtros de color) y apagá el interruptor «Filtros de color»."
+    abrir: "ms-settings:easeofaccess-colorfilter"
+  - texto: "Para que no vuelva a pasar sin querer, en esa misma página apagá el atajo de teclado de los filtros de color. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/use-color-filters-in-windows-43893e44-b8b3-2e27-1a29-b0c15ef0e5ce"
+derivar: "Si lo que ves es la pantalla amarillenta, escribile a PC Doctor «la pantalla se ve amarillenta»."
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+  - https://support.microsoft.com/windows/use-color-filters-in-windows-43893e44-b8b3-2e27-1a29-b0c15ef0e5ce
+madurez: T0
+---
+id: PNS-014
+area: windows
+titulo:
+  sencillo: "Aprieto Windows + K y no aparece la tele (o no se conecta)"
+  tecnico: "Fallas al proyectar a una pantalla inalámbrica (Miracast)"
+explicacion:
+  sencillo: "Para mandar la imagen sin cables, la compu y la tele (o el adaptador) tienen que ser compatibles con «Miracast» y la compu tiene que tener el Wi-Fi prendido. Si no aparece o se corta, hay algunas cosas para revisar."
+  tecnico: "Compatibilidad Miracast (Win + K), Wi-Fi activo, adaptador Miracast HDMI, controladores y firmware, reinicio, quitar y volver a agregar en «Pantallas inalámbricas y bases»."
+frases: ["no me aparece la tele para conectar sin cable", "la pantalla inalámbrica no se conecta", "dice que conecte una pantalla con cable", "se corta la imagen en la tele sin cables"]
+pasos:
+  - texto: "Apretá Windows + K. Si aparece un aviso de que hay que conectar la pantalla con cable, tu compu no admite Miracast: vas a necesitar un cable HDMI."
+  - texto: "Fijate que el Wi-Fi de la compu esté prendido (abajo a la derecha, en el ícono de red) y que la tele esté prendida y admita Miracast. Si la tele no lo admite, existe un adaptador Miracast que se enchufa en su entrada HDMI."
+  - texto: "Reiniciá la compu y la tele, y probá de nuevo."
+  - texto: "Si antes funcionaba, quitala de la lista: en Bluetooth y dispositivos > Dispositivos, en la parte de pantallas inalámbricas, elegila, quitá el dispositivo y volvé a conectarla con Windows + K."
+    abrir: "ms-settings:connecteddevices"
+  - texto: "Si sigue sin andar, buscá actualizaciones de la tele o del adaptador en la página del fabricante. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/hardware/display-graphics/fix-connections-to-wireless-displays-or-docks-in-windows"
+derivar: "Si querés saber cómo pasar la imagen a la tele con cable, escribile a PC Doctor «quiero ver la compu en la tele»."
+fuentes:
+  - https://support.microsoft.com/windows/hardware/display-graphics/fix-connections-to-wireless-displays-or-docks-in-windows
+madurez: T0
+---
+id: PNS-015
+area: windows
+titulo:
+  sencillo: "Quiero ver en mi compu la pantalla de otra computadora, sin cables"
+  tecnico: "Proyectar en este PC (característica opcional Pantalla inalámbrica)"
+explicacion:
+  sencillo: "Tu compu puede funcionar como una «tele inalámbrica»: otra compu le manda la imagen por Miracast. Para eso hay que agregarle a Windows una función que se llama «Pantalla inalámbrica»."
+  tecnico: "Instalar la característica opcional Pantalla inalámbrica, abrir la app y configurar Sistema > Proyectar en este PC como detectable; el otro equipo se conecta con Windows + K."
+frases: ["usar mi notebook como pantalla de la otra compu", "proyectar en esta pc", "pasar la imagen de una compu a otra sin cable", "quiero que la otra compu se vea en la mía"]
+pasos:
+  - texto: "En la compu que va a recibir la imagen, abrí Proyectar en este PC (Configuración > Sistema). Tocá «Características opcionales», después el botón para ver características, buscá «pantalla inalámbrica», marcala y seguí los pasos para instalarla."
+    abrir: "ms-settings:project"
+  - texto: "Cuando termine, volvé a Proyectar en este PC, elegí cómo querés que se pueda encontrar la compu, y abrí la app «Pantalla inalámbrica» buscándola en la barra de tareas. Tiene que quedar abierta."
+  - texto: "Las dos compus tienen que tener el Wi-Fi prendido. En la otra compu, apretá Windows + K y elegí esta. Microsoft lo explica (hace falta Windows 11 22H2 o posterior)."
+    abrir: "https://support.microsoft.com/windows/hardware/display-graphics/screen-mirroring-and-projecting-to-your-pc-or-wireless-display"
+derivar: "Si no aparece al apretar Windows + K, escribile a PC Doctor «no aparece la pantalla inalámbrica»."
+fuentes:
+  - https://support.microsoft.com/windows/hardware/display-graphics/screen-mirroring-and-projecting-to-your-pc-or-wireless-display
+  - https://support.microsoft.com/windows/hardware/display-graphics/fix-connections-to-wireless-displays-or-docks-in-windows
+madurez: T0
+---
+id: PNS-016
+area: audio
+titulo:
+  sencillo: "Quiero bajar el volumen de un solo programa sin tocar los demás"
+  tecnico: "Mezclador de volumen por aplicación"
+explicacion:
+  sencillo: "Cada programa tiene su propio volumen. Así podés, por ejemplo, bajar la música y dejar fuerte la videollamada, o silenciar el navegador sin silenciar todo."
+  tecnico: "Sistema > Sonido > Mezclador de volumen > Aplicaciones: volumen y silencio por aplicación."
+frases: ["bajar el volumen de un solo programa", "la música tapa la videollamada", "silenciar solo el navegador", "el juego suena más fuerte que la música"]
+pasos:
+  - texto: "Abrí el programa que querés ajustar (por ejemplo, el navegador con la música) y dejalo sonando."
+  - texto: "Abrí el Mezclador de volumen (Configuración > Sistema > Sonido > Mezclador de volumen). En «Aplicaciones» aparece cada programa con su barrita: subila o bajala, o tocá el parlantito para silenciarlo."
+    abrir: "ms-settings:apps-volume"
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/hardware/audio/fix-app-audio-not-working-while-system-sounds-work-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/audio/fix-app-audio-not-working-while-system-sounds-work-in-windows
+madurez: T0
+---
+id: PNS-017
+area: audio
+titulo:
+  sencillo: "Quiero que un programa suene por los auriculares y el resto por los parlantes"
+  tecnico: "Dispositivo de salida por aplicación (Mezclador de volumen)"
+explicacion:
+  sencillo: "Windows deja elegir por dónde suena cada programa. Por ejemplo, la videollamada por los auriculares y la música por los parlantes. También pasa al revés: un programa puede quedar mandando el sonido a un aparato que ya no usás."
+  tecnico: "Mezclador de volumen > Aplicaciones > Dispositivo de salida por aplicación; puede diferir del predeterminado del sistema."
+frases: ["que zoom suene por los auriculares y la música por los parlantes", "un programa suena por otro lado", "todo suena menos un programa", "elegir por dónde sale el sonido de cada programa"]
+pasos:
+  - texto: "Con los dos aparatos conectados, abrí el programa y dejalo sonando."
+  - texto: "Abrí el Mezclador de volumen y, en «Aplicaciones», desplegá el programa. En «Dispositivo de salida» elegí por dónde querés que suene."
+    abrir: "ms-settings:apps-volume"
+  - texto: "Si un programa no suena y los demás sí, revisá ahí mismo que no esté silenciado ni mandando el sonido a otro aparato. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/hardware/audio/fix-app-audio-not-working-while-system-sounds-work-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/audio/fix-app-audio-not-working-while-system-sounds-work-in-windows
+madurez: T0
+---
+id: PNS-018
+area: audio
+titulo:
+  sencillo: "Quiero pasar el sonido de los parlantes a los auriculares rápido"
+  tecnico: "Elegir la salida de sonido desde la configuración rápida de la barra de tareas"
+explicacion:
+  sencillo: "No hace falta entrar a Configuración cada vez: desde el ícono del parlante, abajo a la derecha, podés elegir en dos toques por dónde sale el sonido."
+  tecnico: "Configuración rápida > flecha a la derecha del control de volumen («Seleccionar una salida de sonido»); el elegido queda como predeterminado."
+frases: ["cambiar rápido de parlantes a auriculares", "elegir por dónde sale el sonido desde la barra", "pasar el sonido a la tele sin entrar a configuración", "tengo que cambiar la salida de sonido a cada rato"]
+pasos:
+  - texto: "Abajo a la derecha, tocá el ícono del parlante (el del volumen)."
+  - texto: "A la derecha de la barrita del volumen hay una flechita («Seleccionar una salida de sonido»). Tocala y elegí de la lista el aparato por el que querés escuchar."
+  - texto: "Con el teclado es más rápido todavía: Windows + Ctrl + V abre directo esa lista de salidas de sonido."
+    abrir: "https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows"
+  - texto: "Si el aparato no aparece en la lista, fijate en Sonido que esté conectado y elegilo en «Salida». Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/hardware/audio/fix-sound-or-audio-problems-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/audio/fix-sound-or-audio-problems-in-windows
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+madurez: T0
+---
+id: PNS-019
+area: audio
+titulo:
+  sencillo: "Quiero sonido envolvente en los auriculares para películas y juegos"
+  tecnico: "Sonido espacial (Windows Sonic para auriculares)"
+explicacion:
+  sencillo: "El «sonido espacial» hace que en los auriculares parezca que el sonido viene de distintos lados, como en el cine. Windows trae uno gratis y en la Microsoft Store hay otros."
+  tecnico: "Sistema > Sonido > Salida > (dispositivo) > Sonido espacial: Windows Sonic para auriculares; alternativas Dolby Access o DTS Sound Unbound."
+frases: ["poner sonido envolvente en los auriculares", "activar sonido 3d en la compu", "quiero que el juego suene como en el cine", "qué es windows sonic"]
+pasos:
+  - texto: "Abrí Sonido y, en «Salida», tocá tus auriculares para entrar en sus propiedades."
+    abrir: "ms-settings:sound"
+  - texto: "En «Sonido espacial», elegí «Windows Sonic para auriculares». Si aparece «Aplicar», tocalo, y probá con una película o un juego."
+  - texto: "Si querés otras opciones, en la Microsoft Store están Dolby Access y DTS Sound Unbound. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/hardware/drivers/how-to-turn-on-spatial-sound-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/drivers/how-to-turn-on-spatial-sound-in-windows
+madurez: T0
+---
+id: PNS-020
+area: audio
+titulo:
+  sencillo: "Cuando hago una videollamada, se baja solo el volumen de todo lo demás"
+  tecnico: "Atenuación automática en comunicaciones (Sonido > pestaña Comunicaciones)"
+explicacion:
+  sencillo: "Windows, cuando detecta una llamada, baja o silencia los demás sonidos (la música, un video). Viene así de fábrica, pero se puede cambiar para que no toque nada."
+  tecnico: "Panel de control > Sonido > pestaña Comunicaciones: silenciar, reducir (80 % por defecto) o no hacer nada; el volumen se restaura al cerrar la comunicación."
+frases: ["cuando entro a zoom se baja la música", "en las llamadas se baja el volumen de todo", "el volumen baja solo cuando hablo por la compu", "la música queda bajita durante la videollamada"]
+pasos:
+  - texto: "Abrí Sonido y, abajo de todo, entrá a la configuración de sonido adicional (en inglés, «More sound settings»). Se abre una ventana chica."
+    abrir: "ms-settings:sound"
+  - texto: "En esa ventana, andá a la pestaña «Comunicaciones». Ahí elegís qué hace Windows cuando hay una llamada: marcá la opción que no hace nada con el volumen y tocá «Aceptar»."
+  - texto: "Si después de cortar el volumen no volvió, subilo en el Mezclador de volumen."
+    abrir: "ms-settings:apps-volume"
+  - texto: "Microsoft lo describe (en inglés)."
+    abrir: "https://learn.microsoft.com/windows/win32/coreaudio/stream-attenuation"
+fuentes:
+  - https://learn.microsoft.com/windows/win32/coreaudio/stream-attenuation
+  - https://support.microsoft.com/windows/hardware/audio/fix-sound-or-audio-problems-in-windows
+madurez: T0
+---
+id: PNS-021
+area: audio
+titulo:
+  sencillo: "Los auriculares Bluetooth se conectan pero el sonido se corta"
+  tecnico: "Audio Bluetooth entrecortado: alcance, interferencia USB 3.0, solucionador y controlador"
+explicacion:
+  sencillo: "Si los auriculares o el parlante Bluetooth andan pero el sonido se entrecorta, suele ser la distancia, algo que interfiere (como un pendrive o disco cerca) o el controlador del Bluetooth de la compu."
+  tecnico: "Alcance e interferencias (dispositivos USB 3.0 sin blindaje), solucionador de Bluetooth (Obtener ayuda), actualizar o reinstalar el controlador del adaptador."
+frases: ["el sonido bluetooth se entrecorta", "los auriculares inalámbricos se cortan a cada rato", "el parlante bluetooth hace saltos", "la música se corta en los auriculares"]
+pasos:
+  - texto: "Acercá los auriculares a la compu y alejalos de pendrives o discos USB enchufados cerca (algunos aparatos USB interfieren con el Bluetooth)."
+  - texto: "Apagá los auriculares, esperá unos segundos y prendelos de nuevo."
+  - texto: "Si sigue igual, en Configuración > Sistema > Solucionar problemas > Otros solucionadores, ejecutá el de Bluetooth."
+    abrir: "ms-settings:troubleshoot"
+  - texto: "Si no mejora, actualizá el controlador del Bluetooth desde el Administrador de dispositivos o buscalo en la página del fabricante de la compu. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/fix-bluetooth-problems-in-windows-723e092f-03fa-858b-5c80-131ec3fba75c"
+derivar: "Si no se conectan para nada, escribile a PC Doctor «los auriculares Bluetooth no se conectan»."
+fuentes:
+  - https://support.microsoft.com/windows/fix-bluetooth-problems-in-windows-723e092f-03fa-858b-5c80-131ec3fba75c
+madurez: T0
+---
+id: PNS-022
+area: audio
+titulo:
+  sencillo: "En las videollamadas se escucha todo el ruido de mi casa"
+  tecnico: "Ruido de fondo en el micrófono: supresión de ruido (Teams) y Enfoque de voz (Windows Studio Effects)"
+explicacion:
+  sencillo: "El micrófono capta también la tele, el perro o la calle. Muchos programas de videollamada tienen una opción para «suprimir el ruido», y algunas compus nuevas traen además un filtro de Windows que deja pasar solo tu voz."
+  tecnico: "Teams: Configuración > Dispositivos > Supresión de ruido (también desde Más acciones > Configuración de audio en la reunión). Windows Studio Effects: Enfoque de voz, requiere NPU; se activa desde el icono Studio Effects de la configuración rápida."
+frases: ["en zoom se escucha el ruido de la casa", "el micrófono agarra el ruido de la calle", "me dicen que se escucha la tele de fondo", "sacar el ruido de fondo del micrófono"]
+pasos:
+  - texto: "En Teams: tocá los tres puntitos («Configuración y más») > «Configuración» > «Dispositivos» y activá «Supresión de ruido». Durante una reunión también está en «Más acciones» > «Configuración» > «Configuración de audio»."
+    abrir: "https://support.microsoft.com/office/reduce-background-noise-in-microsoft-teams-meetings-1a9c6819-137d-4b3b-a1c8-4ab20b234c0d"
+  - texto: "Si usás otro programa (Zoom, Meet, WhatsApp), buscá en su configuración de audio una opción parecida para reducir el ruido de fondo."
+  - texto: "Si tu compu es de las nuevas con procesador para IA, tocá el ícono de red o de volumen (abajo a la derecha) y fijate si aparece «Studio Effects»: ahí está el enfoque de voz («Voice focus»), que deja pasar tu voz y baja el ruido. Si no aparece, tu compu no lo tiene."
+    abrir: "https://support.microsoft.com/windows/ai/ai-features/windows-studio-effects"
+derivar: "Si lo que pasa es que no te escuchan o te escuchan bajito, escribile a PC Doctor «en las videollamadas me escuchan muy bajito»."
+fuentes:
+  - https://support.microsoft.com/office/reduce-background-noise-in-microsoft-teams-meetings-1a9c6819-137d-4b3b-a1c8-4ab20b234c0d
+  - https://support.microsoft.com/windows/ai/ai-features/windows-studio-effects
+madurez: T0
+---
+id: PNS-023
+area: audio
+titulo:
+  sencillo: "En las videollamadas me escuchan muy bajito"
+  tecnico: "Volumen de entrada del micrófono"
+explicacion:
+  sencillo: "El micrófono tiene su propio volumen. Si está bajo, los demás te escuchan despacio aunque vos hables fuerte. Se puede probar y subir."
+  tecnico: "Sistema > Sonido > Entrada > (micrófono) > Propiedades: Iniciar prueba y control «Volumen de entrada»."
+frases: ["me escuchan bajito", "en zoom no me oyen bien", "el micrófono capta muy despacio", "subir el volumen del micrófono"]
+pasos:
+  - texto: "Abrí Sonido y, en «Entrada», tocá la flechita al lado de tu micrófono para entrar en sus propiedades."
+    abrir: "ms-settings:sound"
+  - texto: "Subí el «Volumen de entrada»."
+  - texto: "Tocá «Iniciar prueba», hablá normal, después «Detener prueba» y escuchá la grabación para ver si mejoró. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/hardware/drivers/how-to-set-up-and-test-microphones-in-windows"
+derivar: "Si no te escuchan para nada, escribile a PC Doctor «no funciona el micrófono»."
+fuentes:
+  - https://support.microsoft.com/windows/hardware/drivers/how-to-set-up-and-test-microphones-in-windows
+madurez: T0
+---
+id: PNS-024
+area: audio
+titulo:
+  sencillo: "Los parlantes o el micrófono desaparecieron de la lista de sonido"
+  tecnico: "Dispositivo de audio deshabilitado (Uso del dispositivo: habilitar)"
+explicacion:
+  sencillo: "Si alguien deshabilitó los parlantes o el micrófono, Windows deja de usarlos y a veces ni los muestra. Se pueden volver a habilitar desde la ventana clásica de Sonido."
+  tecnico: "Sonido > Más opciones de configuración de sonido > Reproducción o Grabación > Propiedades > Uso del dispositivo: «Usar este dispositivo (habilitar)»."
+frases: ["desaparecieron los parlantes de la lista", "el micrófono no aparece en sonido", "deshabilité el sonido sin querer", "habilitar los parlantes otra vez"]
+pasos:
+  - texto: "Abrí Sonido y, abajo de todo, entrá a la configuración de sonido adicional. Se abre una ventana chica."
+    abrir: "ms-settings:sound"
+  - texto: "En la pestaña «Reproducción» (parlantes) o «Grabación» (micrófono), elegí el aparato y tocá «Propiedades»."
+  - texto: "Abajo, en «Uso del dispositivo», elegí la opción para usar este dispositivo (habilitar) y tocá «Aceptar». Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/hardware/audio/fix-sound-or-audio-problems-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/audio/fix-sound-or-audio-problems-in-windows
+madurez: T0
+---
+id: PNS-025
+area: archivos
+titulo:
+  sencillo: "Cada vez que enchufo el pendrive o el celular se abre una ventana sola"
+  tecnico: "Reproducción automática (AutoPlay)"
+explicacion:
+  sencillo: "La «Reproducción automática» es la ventanita que pregunta qué hacer cuando conectás un pendrive, una tarjeta o el celular. La podés apagar o elegir que haga siempre lo mismo."
+  tecnico: "Bluetooth y dispositivos > Reproducción automática: interruptor general y acción predeterminada para unidades extraíbles y tarjetas de memoria."
+frases: ["se abre una ventana sola al enchufar el pendrive", "no quiero que me pregunte qué hacer con el celular", "que el pendrive abra la carpeta solo", "desactivar la reproducción automática"]
+pasos:
+  - texto: "Abrí Reproducción automática (Configuración > Bluetooth y dispositivos > Reproducción automática)."
+    abrir: "ms-settings:autoplay"
+  - texto: "Si no querés que aparezca nada, apagá el interruptor de Reproducción automática."
+  - texto: "Si preferís que haga siempre lo mismo, dejala prendida y elegí qué hacer para «Unidad extraíble» (pendrive) y «Tarjeta de memoria», por ejemplo abrir la carpeta para ver los archivos. Microsoft lo menciona."
+    abrir: "https://support.microsoft.com/windows/apps/how-to-install-programs-from-a-disc"
+fuentes:
+  - https://support.microsoft.com/windows/apps/how-to-install-programs-from-a-disc
+madurez: T0
