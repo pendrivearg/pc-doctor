@@ -1,0 +1,506 @@
+# Vida digital cotidiana: crear cuentas, contraseñas, PDF (firmar, completar, anotar), escanear con el celular, pagar seguro, QR, billeteras, compras y suscripciones de Google Play y Apple, Google One, iCloud, Keep, Maps y Fotos. Guiadas con fuente oficial de Microsoft, Google y Apple.
+id: VDG-001
+area: basico
+titulo:
+  sencillo: "Quiero crearle una cuenta de Google (Gmail) a mi mamá o a un abuelo"
+  tecnico: "Crear una Cuenta de Google para uso personal"
+explicacion:
+  sencillo: "Con una cuenta de Google se usa Gmail, YouTube, Google Fotos y el Play Store del celular, y es gratis. Lo mejor es crearla con la persona al lado, con sus datos reales, y que la contraseña la elija ella."
+  tecnico: "Acceso a la Cuenta de Google > Crear cuenta > Para uso personal; datos básicos, dirección de Gmail (o correo/teléfono existente), contraseña y luego información de recuperación."
+frases: ["quiero hacerle un mail a mi vieja", "crear una cuenta de gmail para mi abuelo", "abrirle una cuenta de google a un familiar mayor", "cómo se saca una cuenta de gmail nueva"]
+pasos:
+  - texto: "Sentate con la persona: la cuenta es suya, así que el nombre y la fecha de nacimiento tienen que ser los de ella, reales."
+  - texto: "Entrá a la página de acceso de Google, tocá «Crear cuenta» y en el menú que se despliega elegí «Para uso personal»."
+    abrir: "https://support.google.com/accounts/answer/27441?hl=es-419"
+  - texto: "Completá los datos. Elegí una de las direcciones de Gmail que te sugiere o escribí una propia, y después la contraseña: que la invente la persona (si querés ideas, escribile a PC Doctor «cómo invento una contraseña segura»)."
+  - texto: "Agregá un teléfono o un correo de recuperación: si algún día se olvida la clave, es la forma de volver a entrar."
+  - texto: "Anotá la dirección de Gmail que quedó. Si la contraseña se escribe en papel, guardala en un lugar privado, nunca pegada a la compu."
+    abrir: "https://support.google.com/accounts/answer/32040?hl=es-419"
+fuentes:
+  - https://support.google.com/accounts/answer/27441?hl=es-419
+  - https://support.google.com/accounts/answer/32040?hl=es-419
+madurez: T0
+---
+id: VDG-002
+area: basico
+titulo:
+  sencillo: "Quiero crear una cuenta de Microsoft (Outlook o Hotmail) nueva"
+  tecnico: "Crear una cuenta de Microsoft gratuita"
+explicacion:
+  sencillo: "Con una cuenta de Microsoft entrás a Outlook, OneDrive y otros servicios de Microsoft con un solo usuario y contraseña. Se puede crear con un correo que ya tengas o sacando una dirección nueva de Outlook.com."
+  tecnico: "Crear cuenta gratuita desde la página de soporte o desde outlook.com; una dirección ya usada en otra cuenta de Microsoft no se puede reutilizar."
+frases: ["quiero hacerme un hotmail", "sacar una cuenta de outlook nueva", "crear cuenta de microsoft gratis", "abrir un correo de outlook para mi papá"]
+pasos:
+  - texto: "Abrí la página de Microsoft que explica cómo crear una cuenta y tocá el botón para crear una cuenta gratis."
+    abrir: "https://support.microsoft.com/account-billing/how-to-create-a-new-microsoft-account-a84675c3-3e9e-17cf-2911-3d56b15c0aaf"
+  - texto: "Podés usar un correo que ya tengas o sacar una dirección nueva de Outlook.com. Seguí los pasos con los datos reales de quien la va a usar."
+  - texto: "Si no te deja crearla, probá con otro método (por ejemplo, con un correo en vez de un número de teléfono) o desde otro aparato."
+  - texto: "Ojo: una dirección que ya se usó en otra cuenta de Microsoft no se puede volver a usar, aunque esa cuenta se haya cerrado hace mucho. Si es para un chico, un padre o tutor tiene que entrar para terminar la configuración."
+fuentes:
+  - https://support.microsoft.com/account-billing/how-to-create-a-new-microsoft-account-a84675c3-3e9e-17cf-2911-3d56b15c0aaf
+madurez: T0
+---
+id: VDG-003
+area: seguridad
+titulo:
+  sencillo: "¿Cómo invento una contraseña segura que no me olvide?"
+  tecnico: "Crear una contraseña segura (recomendaciones de Google)"
+explicacion:
+  sencillo: "Una buena clave es larga, mezcla letras, números y símbolos, y no tiene datos tuyos que otro pueda adivinar. Armarla a partir de una frase que solo vos conocés ayuda a recordarla."
+  tecnico: "Al menos 12 caracteres, letras, números y símbolos ASCII; sin datos personales ni patrones (1234, qwerty); una distinta por cuenta importante; guardarla en un lugar seguro o en un administrador de contraseñas confiable."
+frases: ["qué contraseña pongo para que no me la roben", "inventar una clave difícil", "mi contraseña es mi fecha de cumpleaños, está mal", "cómo hago una clave segura que me acuerde"]
+pasos:
+  - texto: "Que tenga 12 caracteres o más y mezcle letras, números y símbolos (en Google no se pueden usar letras con tilde)."
+    abrir: "https://support.google.com/accounts/answer/32040?hl=es-419"
+  - texto: "No uses nombres de hijos, nietos o mascotas, fechas importantes, tu dirección o tu teléfono, ni cosas como «1234», «contraseña» o «qwerty»."
+  - texto: "Para recordarla, armala con una frase que signifique algo para vos; por ejemplo, con la primera letra de cada palabra de una oración."
+  - texto: "Usá una clave distinta para cada cuenta importante (el correo, el banco). Si la anotás en papel, guardala bajo llave; también podés dejar que la guarde un administrador de contraseñas confiable."
+  - texto: "No se la digas a nadie: PC Doctor nunca te la va a pedir."
+fuentes:
+  - https://support.google.com/accounts/answer/32040?hl=es-419
+madurez: T0
+---
+id: VDG-004
+area: seguridad
+titulo:
+  sencillo: "Edge me sugiere una contraseña rara al registrarme: ¿la uso?"
+  tecnico: "Generador de contraseñas de Microsoft Edge"
+explicacion:
+  sencillo: "Cuando te creás una cuenta en una página, Edge puede proponerte una contraseña larga y difícil. Si la aceptás, Edge la guarda y la completa sola la próxima vez, así no tenés que acordártela."
+  tecnico: "Password Generator: sugerencia en el campo de contraseña de formularios de registro o de cambio de clave; se guarda en el administrador de contraseñas y se sincroniza; clic derecho > «Suggest strong password»."
+frases: ["edge me propone una contraseña larguísima", "el navegador me inventa una clave", "aceptar la contraseña sugerida por edge", "me sale una contraseña sugerida al registrarme"]
+pasos:
+  - texto: "Cuando te registres o cambies la clave en una página, hacé clic en el casillero de la contraseña: Edge muestra debajo una contraseña sugerida."
+    abrir: "https://support.microsoft.com/edge/use-password-generator-to-create-more-secure-passwords-in-microsoft-edge"
+  - texto: "Si te sirve, elegila y terminá de enviar el formulario. Edge la guarda y la completa sola la próxima vez (y en tus otros aparatos, si tenés las contraseñas sincronizadas)."
+  - texto: "Si no aparece la sugerencia, hacé clic derecho en el casillero de la contraseña y elegí la opción para sugerir una contraseña segura."
+  - texto: "Si preferís inventarla vos, Edge te muestra mientras escribís qué tan fuerte es."
+fuentes:
+  - https://support.microsoft.com/edge/use-password-generator-to-create-more-secure-passwords-in-microsoft-edge
+madurez: T0
+---
+id: VDG-005
+area: archivos
+titulo:
+  sencillo: "Me mandaron un PDF para firmar y no tengo impresora"
+  tecnico: "Firmar a mano alzada un PDF en Chrome o Edge"
+explicacion:
+  sencillo: "Chrome y Edge dejan dibujar sobre un PDF con el mouse, así ponés tu firma y guardás una copia firmada sin imprimir. Es una firma dibujada: si te piden una «firma digital» con certificado, eso es otra cosa."
+  tecnico: "Visor PDF de Chrome: Dibujar > lápiz > firma > Listo > Descargar «Con tus cambios». Edge: entrada manuscrita (inking) en la barra de herramientas del PDF."
+frases: ["firmar un pdf sin imprimirlo", "poner mi firma en un pdf en la compu", "me pidieron que firme un documento por mail", "cómo firmo un archivo pdf con el mouse"]
+pasos:
+  - texto: "Abrí el PDF con Chrome. Arriba elegí «Dibujar» y después el lápiz; podés elegir el tamaño y el color."
+    abrir: "https://support.google.com/chrome/answer/16215622?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Acercá la página y dibujá tu firma con el mouse o el panel táctil. Si sale mal, usá la goma o «Deshacer». Al terminar, tocá «Listo»."
+  - texto: "Para guardarlo, tocá «Descargar» y elegí «Con tus cambios». Ese archivo, ya firmado, es el que mandás."
+  - texto: "En Edge también se puede: abrí el PDF y usá la herramienta de dibujo (entrada manuscrita) de la barra que aparece arriba del PDF."
+    abrir: "https://learn.microsoft.com/deployedge/microsoft-edge-pdf"
+fuentes:
+  - https://support.google.com/chrome/answer/16215622?hl=es-419&co=GENIE.Platform%3DDesktop
+  - https://learn.microsoft.com/deployedge/microsoft-edge-pdf
+madurez: T0
+---
+id: VDG-006
+area: archivos
+titulo:
+  sencillo: "Tengo que completar un formulario en PDF desde la compu"
+  tecnico: "Completar los campos de un formulario PDF en Microsoft Edge"
+explicacion:
+  sencillo: "Muchos formularios en PDF (de un trámite, de la obra social) traen casilleros para escribir. Edge los deja completar y guardar sin imprimir. Algunos formularios de tipo viejo o especial no funcionan en el navegador."
+  tecnico: "Edge: opción de edición (Edit) en la barra superior del PDF, completar campos, Guardar. Relleno básico de formularios; los formularios XFA y con JavaScript no son compatibles."
+frases: ["llenar un pdf en la computadora", "escribir en los casilleros de un pdf", "rellenar la planilla pdf del trámite", "el pdf tiene campos para llenar y no sé cómo"]
+pasos:
+  - texto: "Abrí el PDF con Edge. En la barra de arriba del PDF elegí la opción para editar (si Edge está en inglés, dice «Edit»)."
+    abrir: "https://www.microsoft.com/en-us/edge/learning-center/how-to-use-pdf-reader-in-microsoft-edge"
+  - texto: "Hacé clic en cada casillero en blanco y escribí tus datos."
+  - texto: "Al terminar, tocá «Guardar» en la barra de arriba, elegí la carpeta y el nombre, y guardá. Ese es el archivo que mandás."
+  - texto: "Si no te deja escribir, puede ser un formulario de un tipo que Edge no admite (XFA o con programación JavaScript). Pedile a quien te lo mandó otra versión."
+    abrir: "https://learn.microsoft.com/deployedge/microsoft-edge-pdf"
+fuentes:
+  - https://www.microsoft.com/en-us/edge/learning-center/how-to-use-pdf-reader-in-microsoft-edge
+  - https://learn.microsoft.com/deployedge/microsoft-edge-pdf
+madurez: T0
+---
+id: VDG-007
+area: archivos
+titulo:
+  sencillo: "Quiero marcar con resaltador o dejar una nota en un PDF"
+  tecnico: "Resaltado y notas de texto en el lector PDF de Edge"
+explicacion:
+  sencillo: "En Edge podés pintar con resaltador partes de un PDF y dejar comentarios, como harías con una birome en el papel. Además, Edge te lo puede leer en voz alta."
+  tecnico: "Lector PDF de Edge: seleccionar texto > clic derecho > Resaltar (color) o Agregar comentario; Leer en voz alta; guardar desde la barra superior."
+frases: ["resaltar un texto en un pdf", "pintar con color una parte del pdf", "dejar una nota en un pdf", "hacer anotaciones en un archivo pdf"]
+pasos:
+  - texto: "Abrí el PDF con Edge y seleccioná con el mouse el texto que querés marcar."
+    abrir: "https://learn.microsoft.com/deployedge/microsoft-edge-pdf"
+  - texto: "Hacé clic derecho sobre lo seleccionado, elegí la opción de resaltar y el color que quieras."
+  - texto: "Para dejar una nota: seleccioná el texto, clic derecho > «Agregar comentario», escribí y tocá la tilde para guardarla."
+  - texto: "Antes de cerrar, tocá «Guardar» en la barra de arriba del PDF para que las marcas queden en el archivo."
+    abrir: "https://www.microsoft.com/en-us/edge/learning-center/how-to-use-pdf-reader-in-microsoft-edge"
+fuentes:
+  - https://learn.microsoft.com/deployedge/microsoft-edge-pdf
+  - https://www.microsoft.com/en-us/edge/learning-center/how-to-use-pdf-reader-in-microsoft-edge
+madurez: T0
+---
+id: VDG-008
+area: archivos
+titulo:
+  sencillo: "Quiero escanear un papel con el celular Android (con Google Drive)"
+  tecnico: "Escanear documentos a PDF con la app Google Drive (Android)"
+explicacion:
+  sencillo: "No hace falta escáner: la app Google Drive del celular le saca una foto al papel, la recorta y la guarda como PDF en tu Drive. Después la podés ver o bajar desde la compu."
+  tecnico: "App Google Drive: botón Cámara > captura > recortar, girar, filtro, Agregar páginas > Listo > nombre, formato PDF o JPG, Ubicación > Guardar."
+frases: ["escanear un documento con el celular", "pasar un papel a pdf con el teléfono", "no tengo escáner y necesito mandar un papel", "sacarle foto a una receta y mandarla en pdf"]
+pasos:
+  - texto: "Abrí la app Google Drive en el celular y tocá el botón «Cámara», abajo a la derecha."
+    abrir: "https://support.google.com/drive/answer/3145835?hl=es-419&co=GENIE.Platform%3DAndroid"
+  - texto: "Apuntá al papel (una línea azul marca lo que se va a recortar) y sacá la foto. Podés recortar, girar, cambiar el filtro y tocar «Agregar» para sumar otra hoja."
+  - texto: "Tocá «Listo», poné un nombre, elegí el formato .pdf y tocá «Guardar». Con «Ubicación» elegís la carpeta donde queda."
+  - texto: "Para tenerlo en la compu, entrá a Google Drive desde el navegador y descargalo (escribile a PC Doctor «bajar un archivo de Google Drive»)."
+fuentes:
+  - https://support.google.com/drive/answer/3145835?hl=es-419&co=GENIE.Platform%3DAndroid
+madurez: T0
+---
+id: VDG-009
+area: archivos
+titulo:
+  sencillo: "Quiero escanear un papel con el iPhone"
+  tecnico: "Escanear documentos con la app Notas (iPhone)"
+explicacion:
+  sencillo: "La app Notas del iPhone funciona como escáner: apuntás la cámara al papel, lo recorta solo y lo guarda dentro de una nota."
+  tecnico: "Notas > nota > Archivo adjunto (clip) > Escanear documentos (o Más > Escanear); captura automática o manual; Conservar; Listo."
+frases: ["escanear con el iphone", "pasar un documento a pdf con el iphone", "usar las notas del iphone como escáner", "sacar una copia de un papel con el iphone"]
+pasos:
+  - texto: "Abrí Notas y entrá a una nota (o creá una nueva). Tocá el botón de adjuntar (el clip) y elegí «Escanear documentos». En algunas versiones está en «Más» > «Escanear»."
+    abrir: "https://support.apple.com/es-lamr/108963"
+  - texto: "Apuntá la cámara al papel. Se escanea solo; si no, tocá el botón para sacar la foto o un botón de volumen. Ajustá las esquinas y tocá «Conservar»."
+  - texto: "Agregá más hojas si hace falta y tocá «Listo». El documento queda guardado en la nota."
+  - texto: "Si además lo tenés que firmar, escribile a PC Doctor «firmar un documento en el iPhone»."
+fuentes:
+  - https://support.apple.com/es-lamr/108963
+madurez: T0
+---
+id: VDG-010
+area: archivos
+titulo:
+  sencillo: "Quiero firmar un documento desde el iPhone"
+  tecnico: "Firmar un documento escaneado con Marcado en Notas (iPhone)"
+explicacion:
+  sencillo: "Si escaneaste un papel con Notas, lo podés firmar ahí mismo con el dedo, sin imprimir nada."
+  tecnico: "Notas > documento escaneado > Marcado > Agregar > Firma (guardada o nueva) > ubicar y ajustar > Listo."
+frases: ["firmar un papel con el iphone", "poner mi firma en un documento desde el celular de apple", "firmar con el dedo en el iphone", "agregar una firma en las notas del iphone"]
+pasos:
+  - texto: "Abrí Notas y tocá el documento escaneado que está dentro de la nota."
+    abrir: "https://support.apple.com/es-lamr/108963"
+  - texto: "Tocá «Marcado», después «Agregar» y «Firma». Usá una firma guardada o creá una nueva con el dedo."
+  - texto: "Ajustá el tamaño del recuadro, ubicalo donde va la firma y tocá «Listo»."
+  - texto: "Si preferís firmar a mano alzada: en «Marcado» elegí una herramienta y firmá con el dedo."
+fuentes:
+  - https://support.apple.com/es-lamr/108963
+madurez: T0
+---
+id: VDG-011
+area: seguridad
+titulo:
+  sencillo: "¿Cómo sé si una página es segura para pagar?"
+  tecnico: "Indicador de conexión segura (HTTPS) en Chrome y Edge"
+explicacion:
+  sencillo: "Al lado de la dirección, el navegador muestra un ícono que dice si la conexión es segura. Pero «segura» solo quiere decir que los datos viajan protegidos: una página falsa también puede tenerlo. Por eso hay que mirar bien la dirección."
+  tecnico: "HTTPS con certificado válido. Chrome: símbolo de estado a la izquierda de la URL (seguro, no seguro, peligroso). Edge: ícono de conexión (segura, no completamente segura, configuración obsoleta, sitio sospechoso)."
+frases: ["cómo sé si una página es confiable para pagar", "qué significa el candadito al lado de la dirección", "la página dice no seguro", "es seguro poner la tarjeta en esta página"]
+pasos:
+  - texto: "Mirá a la izquierda de la dirección de la página: hacé clic en el ícono para ver si la conexión es segura."
+    abrir: "https://support.google.com/chrome/answer/95617?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Si dice «No seguro», «Peligroso» o que la conexión no es completamente segura, no pongas datos personales ni de tarjeta."
+    abrir: "https://support.microsoft.com/edge/securely-browse-the-web-in-microsoft-edge"
+  - texto: "Aunque diga que es segura, leé con atención el nombre de la página: tiene que ser el sitio verdadero (por ejemplo, el de tu banco) y no uno parecido."
+  - texto: "Ante la duda, no pagues: entrá escribiendo vos la dirección que conocés, o llamá a tu banco al número que figura en la tarjeta."
+    abrir: "https://support.microsoft.com/security/protecting-yourself-from-identity-theft-online"
+fuentes:
+  - https://support.google.com/chrome/answer/95617?hl=es-419&co=GENIE.Platform%3DDesktop
+  - https://support.microsoft.com/edge/securely-browse-the-web-in-microsoft-edge
+  - https://support.microsoft.com/security/protecting-yourself-from-identity-theft-online
+madurez: T0
+---
+id: VDG-012
+area: seguridad
+titulo:
+  sencillo: "Voy a comprar por Internet por primera vez: ¿qué tengo que cuidar?"
+  tecnico: "Precauciones para compras y pagos en línea"
+explicacion:
+  sencillo: "Antes de pagar, fijate que la dirección empiece con «https» y que sea la página verdadera. No entres desde enlaces que te llegan por mensaje y evitá pagar desde una compu pública o un Wi-Fi público."
+  tecnico: "HTTPS y candado o ícono de conexión segura; verificar el dominio; no usar enlaces de mensajes o ventanas emergentes; evitar equipos públicos y Wi-Fi público para datos sensibles."
+frases: ["primera vez que compro por internet", "consejos para pagar online sin que me estafen", "puedo pagar con el wifi del bar", "me mandaron un link para pagar"]
+pasos:
+  - texto: "Entrá a la tienda escribiendo vos la dirección o desde tus favoritos, no desde un enlace que te llegó por mensaje o desde una ventanita que se abrió sola."
+    abrir: "https://support.microsoft.com/security/protecting-yourself-from-identity-theft-online"
+  - texto: "Antes de poner datos, fijate que la dirección empiece con «https», que el navegador la muestre como conexión segura y que sea la página verdadera, no una copia."
+  - texto: "No pagues desde una compu pública ni conectado a un Wi-Fi público: su seguridad puede no ser confiable."
+  - texto: "Si un mensaje o una oferta te apura, frená. Ante la duda, no pagues y llamá a tu banco al número que figura en la tarjeta."
+  - texto: "Si ya pagaste y creés que la página era falsa, escribile a PC Doctor «compré en una página falsa»."
+fuentes:
+  - https://support.microsoft.com/security/protecting-yourself-from-identity-theft-online
+madurez: T0
+---
+id: VDG-013
+area: seguridad
+titulo:
+  sencillo: "Quiero leer un código QR con el celular sin caer en una trampa"
+  tecnico: "Escanear códigos QR con la cámara del iPhone o Google Lens (Android)"
+explicacion:
+  sencillo: "Un código QR es un cuadradito que, cuando le apuntás con la cámara, te lleva a una página. Antes de abrirla, el celular te muestra el enlace: es el momento de mirar adónde te lleva."
+  tecnico: "iPhone: app Cámara o Lector de códigos del Centro de control. Android: Chrome > Google Lens > Busca con la cámara. Verificar la URL y el estado de la conexión antes de ingresar datos."
+frases: ["cómo leo un código qr", "escanear el qr del menú del restaurante", "el qr me pide datos de la tarjeta", "apuntar la cámara a un código qr"]
+pasos:
+  - texto: "En el iPhone: abrí la Cámara, apuntá al código hasta que aparezca en la pantalla y tocá el enlace que se muestra."
+    abrir: "https://support.apple.com/es-lamr/102680"
+  - texto: "En Android: abrí Chrome, una pestaña nueva, tocá el ícono de Google Lens en la barra de búsqueda y «Busca con la cámara». Poné el código dentro del cuadro y tocá el enlace."
+    abrir: "https://support.google.com/chrome/answer/15086890?hl=es-419&co=GENIE.Platform%3DAndroid"
+  - texto: "Antes de seguir, leé la dirección de la página que se abrió y el ícono de seguridad: si no es el sitio que esperabas, cerrala."
+    abrir: "https://support.google.com/chrome/answer/95617?hl=es-419"
+  - texto: "Si la página te pide claves, códigos o los datos de la tarjeta, no los pongas. Ante la duda, no pagues y llamá a tu banco al número que figura en la tarjeta."
+fuentes:
+  - https://support.apple.com/es-lamr/102680
+  - https://support.google.com/chrome/answer/15086890?hl=es-419&co=GENIE.Platform%3DAndroid
+  - https://support.google.com/chrome/answer/95617?hl=es-419
+madurez: T0
+---
+id: VDG-014
+area: programas
+titulo:
+  sencillo: "¿Qué es la Billetera de Google (Google Wallet)?"
+  tecnico: "Billetera de Google: qué es y qué necesita"
+explicacion:
+  sencillo: "Es una app del celular Android que guarda tarjetas, entradas, pases y otros carnets, para pagar acercando el teléfono en los negocios que aceptan pago sin contacto. La app Google Pay ahora se llama Billetera de Google."
+  tecnico: "Requiere Cuenta de Google, Android 9 o posterior, bloqueo de pantalla y, para pagar sin contacto, NFC activado y Google Pay como app de pagos predeterminada."
+frases: ["qué es google wallet", "pagar con el celular android en el negocio", "la app google pay ahora se llama billetera", "para qué sirve la billetera de google"]
+pasos:
+  - texto: "Leé qué es y qué se puede guardar en la ayuda oficial de Google."
+    abrir: "https://support.google.com/wallet/answer/11951709?hl=es-419"
+  - texto: "Para usarla hace falta un celular con Android 9 o más nuevo, una cuenta de Google, el bloqueo de pantalla configurado y, para pagar acercando el teléfono, el NFC activado."
+    abrir: "https://support.google.com/wallet/answer/12059331?hl=es-419"
+  - texto: "La tarjeta la cargás vos, con calma, en la app de tu celular. PC Doctor nunca te va a pedir los datos de tu tarjeta."
+  - texto: "Google no te pide contraseñas, PIN ni datos bancarios: si alguien te llama o te escribe para «ayudarte a configurarla» y te pide eso, es una estafa. Cortá y llamá a tu banco al número de la tarjeta."
+    abrir: "https://support.google.com/googlepay/answer/10223857?hl=es-419"
+fuentes:
+  - https://support.google.com/wallet/answer/11951709?hl=es-419
+  - https://support.google.com/wallet/answer/12059331?hl=es-419
+  - https://support.google.com/googlepay/answer/10223857?hl=es-419
+madurez: T0
+---
+id: VDG-015
+area: programas
+titulo:
+  sencillo: "¿Qué es Apple Pay y es seguro?"
+  tecnico: "Apple Pay: requisitos y privacidad"
+explicacion:
+  sencillo: "Apple Pay permite pagar con el iPhone o el Apple Watch en negocios, apps y páginas. El comercio no recibe el número real de tu tarjeta: el teléfono usa un número propio y un código distinto en cada compra."
+  tecnico: "Requiere dispositivo compatible actualizado, tarjeta de un emisor participante, cuenta de Apple y Face ID, Touch ID o código. Número de cuenta de dispositivo y código de seguridad dinámico; Apple no almacena el número original."
+frases: ["qué es apple pay", "pagar con el iphone en el súper", "es seguro pagar con apple pay", "perdí el iphone y tenía apple pay"]
+pasos:
+  - texto: "Para usarlo necesitás un aparato de Apple actualizado, una tarjeta de un banco que lo acepte y el bloqueo con Face ID, Touch ID o código. La tarjeta se agrega desde la app Wallet."
+    abrir: "https://support.apple.com/es-lamr/108398"
+  - texto: "Cada pago se confirma con tu cara, tu huella o tu código, y Apple no guarda el número original de la tarjeta."
+    abrir: "https://support.apple.com/es-lamr/101554"
+  - texto: "Si perdés el iPhone, con «Encontrar» podés ponerlo en Modo perdido (suspende Apple Pay) o borrarlo. También podés llamar a tu banco para suspender la tarjeta."
+  - texto: "PC Doctor nunca te va a pedir los datos de tu tarjeta ni tus códigos."
+fuentes:
+  - https://support.apple.com/es-lamr/108398
+  - https://support.apple.com/es-lamr/101554
+madurez: T0
+---
+id: VDG-016
+area: programas
+titulo:
+  sencillo: "Compré algo en Google Play por error y quiero que me devuelvan la plata"
+  tecnico: "Solicitar un reembolso de Google Play"
+explicacion:
+  sencillo: "Si compraste una app, un juego o algo dentro de una app por error (o lo compró un nieto con tu celular), podés pedir el reembolso desde la página de Google Play. Conviene hacerlo rápido."
+  tecnico: "play.google.com > foto de perfil > Pagos y suscripciones > Historial de pedidos y presupuesto > Informar un problema. Compras dentro de apps con más de 48 h: contactar al desarrollador; cargos no autorizados: dentro de 120 días."
+frases: ["mi nieto compró algo en un juego del celular", "me cobraron una compra dentro de una app", "devolución de una compra del play store", "compré una app sin querer"]
+pasos:
+  - texto: "En la compu entrá a play.google.com, tocá tu foto de perfil (arriba a la derecha) y elegí «Pagos y suscripciones» > «Historial de pedidos y presupuesto»."
+    abrir: "https://support.google.com/googleplay/answer/15574897?hl=es-419"
+  - texto: "En esa compra, hacé clic en «Informar un problema», elegí la opción que corresponde, aclará en el formulario que querés el reembolso y tocá «Enviar»."
+  - texto: "La respuesta suele llegar en un día (puede tardar hasta cuatro). Mandar varias veces el mismo pedido no lo apura. Si no ves la compra, quizás se hizo con otra cuenta de Google."
+  - texto: "Si es una compra dentro de una app y pasaron más de 48 horas, escribile a quien hizo la app. Si nadie de tu familia la hizo, denunciala dentro de los 120 días."
+    abrir: "https://support.google.com/googleplay/answer/2479637?hl=es-419"
+fuentes:
+  - https://support.google.com/googleplay/answer/15574897?hl=es-419
+  - https://support.google.com/googleplay/answer/2479637?hl=es-419
+madurez: T0
+---
+id: VDG-017
+area: programas
+titulo:
+  sencillo: "Quiero dar de baja una suscripción que pago por Google Play"
+  tecnico: "Cancelar una suscripción en Google Play"
+explicacion:
+  sencillo: "Muchas apps cobran todos los meses por Google Play. Borrar la app NO corta el cobro: hay que cancelar la suscripción. Igual la podés seguir usando hasta que termine el período que ya pagaste."
+  tecnico: "Suscripciones de Google Play > Administrar > Cancelar suscripción > motivo > Continuar. Desinstalar la app no cancela; el acceso sigue hasta el fin del período pago."
+frases: ["borré la app y me siguen cobrando", "cancelar una suscripción del play store", "darme de baja de una app que cobra todos los meses", "cómo dejo de pagar una app del celular"]
+pasos:
+  - texto: "En la compu, entrá a tus suscripciones de Google Play (play.google.com/store/account/subscriptions) con tu cuenta de Google."
+    abrir: "https://support.google.com/googleplay/answer/7018481?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "En la suscripción que querés dar de baja, hacé clic en «Administrar» y después en «Cancelar suscripción»."
+  - texto: "Elegí un motivo y tocá «Continuar». La seguís teniendo hasta que se termine lo que ya pagaste."
+  - texto: "Desde el celular Android: en Google Play andá a tus suscripciones, elegí la suscripción y tocá «Cancelar suscripción»."
+    abrir: "https://support.google.com/googleplay/answer/7018481?hl=es-419"
+fuentes:
+  - https://support.google.com/googleplay/answer/7018481?hl=es-419&co=GENIE.Platform%3DDesktop
+  - https://support.google.com/googleplay/answer/7018481?hl=es-419
+madurez: T0
+---
+id: VDG-018
+area: programas
+titulo:
+  sencillo: "Quiero que no se pueda comprar nada en Google Play sin mi permiso"
+  tecnico: "Verificación de compras en Google Play"
+explicacion:
+  sencillo: "Google Play puede pedir tu contraseña, tu huella o tu cara antes de cada compra. Así, si un nieto juega con tu celular, no puede comprar nada sin que vos lo autorices."
+  tecnico: "Google Play > foto de perfil > Pagos y suscripciones > Verificación de compras > Frecuencia (o Requisito) de verificación: Siempre, Cada 30 minutos o Nunca; verificación biométrica opcional."
+frases: ["que los chicos no compren en los jueguitos", "pedir contraseña para comprar en el play store", "evitar compras sin querer en el celular", "que el celular no compre solo en las apps"]
+pasos:
+  - texto: "Abrí la app Google Play, tocá tu foto de perfil arriba a la derecha y entrá a «Pagos y suscripciones» > «Verificación de compras»."
+    abrir: "https://support.google.com/googleplay/answer/1626831?hl=es-419"
+  - texto: "Entrá a «Frecuencia de verificación» (o «Requisito de verificación», según el país), elegí «Siempre» y confirmá el cambio. El celular te puede pedir tu contraseña de Google: escribila vos ahí."
+  - texto: "Si preferís usar la huella o la cara, en esa misma sección activá la verificación biométrica."
+  - texto: "Si ya se hizo una compra que no querías, escribile a PC Doctor «reembolso de Google Play»."
+fuentes:
+  - https://support.google.com/googleplay/answer/1626831?hl=es-419
+madurez: T0
+---
+id: VDG-019
+area: programas
+titulo:
+  sencillo: "Quiero ver y cancelar las suscripciones que pago con Apple"
+  tecnico: "Ver o cancelar suscripciones de Apple (iPhone o PC con Windows)"
+explicacion:
+  sencillo: "Lo que pagás todos los meses con tu cuenta de Apple (Apple Music o apps, por ejemplo) se ve y se cancela en un solo lugar, desde el iPhone o desde la compu."
+  tecnico: "iPhone: Configuración > nombre > Suscripciones. Windows: app Apple Music o Apple TV > nombre > Ver mi cuenta > Suscripciones > Administrar > Editar > Cancelar suscripción. También en account.apple.com."
+frases: ["me cobra apple todos los meses y no sé qué es", "cancelar una suscripción del iphone", "dar de baja apple music", "ver qué suscripciones tengo en apple"]
+pasos:
+  - texto: "En el iPhone: Configuración > tocá tu nombre > «Suscripciones». Elegí la suscripción y tocá «Cancelar suscripción» (quizás tengas que bajar para verlo)."
+    abrir: "https://support.apple.com/es-lamr/118428"
+  - texto: "En la PC con Windows: abrí la app Apple Music o Apple TV, hacé clic en tu nombre abajo de la barra lateral y elegí «Ver mi cuenta». Junto a «Suscripciones» tocá «Administrar», buscá la suscripción, «Editar» y «Cancelar suscripción»."
+  - texto: "Si no aparece el botón para cancelar, o ves en rojo la fecha en que vence, esa suscripción ya está cancelada."
+  - texto: "Si es una prueba gratis, cancelala por lo menos 24 horas antes de que termine."
+fuentes:
+  - https://support.apple.com/es-lamr/118428
+madurez: T0
+---
+id: VDG-020
+area: programas
+titulo:
+  sencillo: "Compré algo en el App Store y quiero que me devuelvan la plata"
+  tecnico: "Solicitar un reembolso de una compra de Apple (reportaproblem.apple.com)"
+explicacion:
+  sencillo: "Algunas compras de apps, suscripciones o contenido de Apple se pueden reclamar para que te devuelvan la plata. Se pide desde una página de Apple, desde la compu o el celular."
+  tecnico: "reportaproblem.apple.com > Me gustaría > Solicitar un reembolso > motivo > Siguiente > elemento > Enviar; actualización en 24 a 48 horas."
+frases: ["devolución de una app del iphone", "me cobraron una compra del app store por error", "reclamar un cobro de apple", "pedir un reembolso a apple"]
+pasos:
+  - texto: "Entrá a reportaproblem.apple.com con tu cuenta de Apple (lo explica la ayuda oficial)."
+    abrir: "https://support.apple.com/es-lamr/118223"
+  - texto: "Tocá «Me gustaría» y elegí «Solicitar un reembolso». Elegí el motivo y tocá «Siguiente»."
+  - texto: "Elegí la app, la suscripción o lo que compraste y tocá «Enviar». Vas a tener una respuesta en 24 a 48 horas."
+  - texto: "Si no encontrás el cobro, buscá en tu correo el recibo de Apple para ver con qué cuenta se hizo. Si todavía está pendiente, esperá a que te llegue el recibo y volvé a intentar."
+  - texto: "Si nadie de tu familia hizo esa compra, no esperes: llamá a tu banco al número que figura en la tarjeta."
+fuentes:
+  - https://support.apple.com/es-lamr/118223
+madurez: T0
+---
+id: VDG-021
+area: archivos
+titulo:
+  sencillo: "¿Qué es Google One? ¿Tengo que pagar más espacio de Google?"
+  tecnico: "Google One: almacenamiento pago de la Cuenta de Google"
+explicacion:
+  sencillo: "Tu cuenta de Google trae 15 GB gratis, compartidos entre Gmail, Drive y Google Fotos. Google One es el plan pago para tener más espacio; se renueva solo hasta que lo cancelás."
+  tecnico: "one.google.com > Actualizar > plan > Siguiente > Suscribirse. Cancelar: Configuración > Cancelar membresía. Las suscripciones no vencen: se renuevan hasta cancelarlas."
+frases: ["qué es google one", "google me ofrece pagar más almacenamiento", "dar de baja google one", "me cobran google one todos los meses"]
+pasos:
+  - texto: "Antes de pagar, fijate si podés liberar lugar: escribile a PC Doctor «Google Drive dice que no tengo espacio»."
+  - texto: "Para comprar más: entrá a one.google.com con tu cuenta, a la izquierda hacé clic en «Actualizar», elegí el tamaño, revisá el precio y la fecha de pago, «Siguiente» y «Suscribirse»."
+    abrir: "https://support.google.com/googleone/answer/2375123?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Para darlo de baja: en one.google.com, «Configuración» > «Cancelar membresía» > «Cancelar»."
+  - texto: "Ojo: si cancelás y tenés guardado más de lo que entra en el plan gratis, Gmail, Fotos y Drive pueden dejar de funcionar bien hasta que liberes lugar."
+fuentes:
+  - https://support.google.com/googleone/answer/2375123?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: VDG-022
+area: archivos
+titulo:
+  sencillo: "El iPhone me avisa que el almacenamiento de iCloud está lleno"
+  tecnico: "Administrar y liberar el almacenamiento de iCloud"
+explicacion:
+  sencillo: "Cuando iCloud se llena, el iPhone deja de hacer copias de seguridad, las fotos nuevas no se suben y no te llegan correos de iCloud. Se puede liberar lugar o pasar a un plan pago (iCloud+)."
+  tecnico: "Configuración > nombre > iCloud > Almacenamiento / Administrar almacenamiento de la cuenta; Recomendaciones para ti; borrar respaldos, adjuntos de Mensajes, archivos de iCloud Drive; icloud.com; iCloud+."
+frases: ["icloud lleno", "me sale que no hay espacio en icloud", "el iphone no hace copia porque icloud está lleno", "liberar espacio de icloud"]
+pasos:
+  - texto: "En el iPhone: Configuración > tocá tu nombre > iCloud > «Almacenamiento» (o «Administrar almacenamiento de la cuenta») para ver qué ocupa más."
+    abrir: "https://support.apple.com/es-lamr/108922"
+  - texto: "Probá primero «Recomendaciones para ti», en la pantalla de iCloud, y seguí las indicaciones."
+  - texto: "Podés borrar respaldos de aparatos que ya no usás, adjuntos grandes de Mensajes o archivos de iCloud Drive. Ojo: lo que borrás de Fotos se borra de todos tus aparatos; guardá antes una copia."
+  - texto: "Desde la compu también podés borrar fotos, archivos y correos entrando a icloud.com."
+  - texto: "Si igual no alcanza, podés pasar a iCloud+, que es el plan pago con más espacio."
+fuentes:
+  - https://support.apple.com/es-lamr/108922
+madurez: T0
+---
+id: VDG-023
+area: programas
+titulo:
+  sencillo: "Quiero anotar cosas o hacer la lista del súper en Google Keep"
+  tecnico: "Crear notas y listas en Google Keep (keep.google.com)"
+explicacion:
+  sencillo: "Google Keep es un anotador gratis de Google: se usa desde el navegador entrando con tu cuenta de Google, y sirve para notas sueltas o listas con casillas para tildar."
+  tecnico: "keep.google.com > Crear una nota > título y texto > Listo; Nueva lista > elementos > Cerrar."
+frases: ["cómo se usa google keep", "anotar la lista del súper en la compu", "hacer una lista con casillas para tildar", "un anotador de google"]
+pasos:
+  - texto: "Entrá a keep.google.com con tu cuenta de Google."
+    abrir: "https://support.google.com/keep/answer/2888246?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Hacé clic en «Crear una nota», escribí un título y el texto, y tocá «Listo»."
+  - texto: "Para una lista con casillas, arriba hacé clic en «Nueva lista», poné el título y los elementos, y tocá «Cerrar»."
+  - texto: "Para corregir una nota, hacé clic en ella, cambiá lo que quieras y tocá «Listo»."
+fuentes:
+  - https://support.google.com/keep/answer/2888246?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: VDG-024
+area: programas
+titulo:
+  sencillo: "Quiero mandarle a un familiar dónde estoy con Google Maps"
+  tecnico: "Compartir la ubicación en tiempo real con Google Maps (Android)"
+explicacion:
+  sencillo: "Google Maps puede mostrarle a alguien de confianza dónde estás, durante el tiempo que elijas. Lo podés cortar cuando quieras."
+  tecnico: "Maps > foto de perfil > Compartir ubicación > Compartir con alguien más > duración > contacto > Compartir; sin Gmail: vínculo de hasta 24 h; Detener."
+frases: ["mandar mi ubicación a mi hija", "compartir dónde estoy en google maps", "que mi familia vea dónde ando", "mandar la ubicación en tiempo real"]
+pasos:
+  - texto: "En el celular, abrí Google Maps (con tu cuenta iniciada). Tocá tu foto o tu inicial > «Compartir ubicación» > «Compartir con alguien más»."
+    abrir: "https://support.google.com/maps/answer/15437054?hl=es-419&co=GENIE.Platform%3DAndroid"
+  - texto: "Elegí por cuánto tiempo, tocá a la persona (tiene que estar en tus contactos de Google con su Gmail) y tocá «Compartir»."
+  - texto: "Si la persona no tiene Gmail, tocá «Copiar en el portapapeles» y mandale el vínculo: sirve hasta 24 horas."
+  - texto: "Para cortar: tu foto o inicial > «Compartir ubicación» > tocá a la persona > «Detener». Compartí tu ubicación solo con gente de confianza."
+fuentes:
+  - https://support.google.com/maps/answer/15437054?hl=es-419&co=GENIE.Platform%3DAndroid
+madurez: T0
+---
+id: VDG-025
+area: archivos
+titulo:
+  sencillo: "Quiero compartir un álbum de fotos con la familia en Google Fotos"
+  tecnico: "Crear y compartir un álbum compartido en Google Fotos (web)"
+explicacion:
+  sencillo: "En vez de mandar las fotos una por una, armás un álbum y lo compartís: los que invites ven todas las fotos juntas y pueden sumar las suyas."
+  tecnico: "photos.google.com > seleccionar fotos > Agregar a un álbum > Álbum compartido > Nuevo álbum compartido > título > Compartir > Enviar; Más > Opciones > Quitar persona."
+frases: ["compartir las fotos del cumple con la familia", "hacer un álbum compartido en google fotos", "mandar muchas fotos juntas a mis hijos", "que la familia pueda subir fotos a un álbum"]
+pasos:
+  - texto: "Entrá a photos.google.com con tu cuenta. A la izquierda hacé clic en «Fotos», pasá el mouse sobre una foto y hacé clic en «Seleccionar»; marcá todas las que quieras."
+    abrir: "https://support.google.com/photos/answer/6131416?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Arriba hacé clic en el botón para agregar a un álbum, elegí «Álbum compartido» > «Nuevo álbum compartido» y ponele un título."
+  - texto: "Arriba a la derecha tocá «Compartir», elegí con quién y hacé clic en «Enviar»."
+  - texto: "Ojo: quien tenga acceso al álbum puede ver las fotos y agregar más. Para sacar a alguien: abrí el álbum > «Más» > «Opciones», buscá a la persona > «Más» > «Quitar persona»."
+fuentes:
+  - https://support.google.com/photos/answer/6131416?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0

@@ -1,0 +1,474 @@
+# Word paso a paso: tablas, índice, encabezado y pie, columnas, interlineado, sangría, listas, saltos y hojas en blanco, estilos, letra predeterminada, brocha, comentarios, reemplazar, contar palabras, sobres, etiquetas, combinar correspondencia, dictado, imágenes, marca de agua, bordes, PDF a Word y dónde guardar. Guiadas con fuente oficial.
+id: WRD-001
+area: programas
+titulo:
+  sencillo: "Quiero hacer una tabla en Word"
+  tecnico: "Insertar una tabla en Word"
+explicacion:
+  sencillo: "Una tabla son casilleros en filas y columnas, como una grilla. Sirve para listas de precios, horarios o planillas chicas. Elegís cuántas filas y columnas querés y Word la dibuja sola."
+  tecnico: "Insertar > Tabla: cuadrícula o Insertar tabla (columnas y filas); también Convertir texto en tabla. Edición en Diseño de tabla / Disposición."
+frases: ["cómo hago una tabla en word", "hacer un cuadro con casilleros en el documento", "armar una grilla con filas y columnas en word", "quiero hacer una lista de precios en cuadritos"]
+pasos:
+  - texto: "Hacé clic donde querés la tabla. En la pestaña «Insertar», tocá «Tabla»."
+    abrir: "https://support.microsoft.com/es-es/office/insertar-una-tabla-a138f745-73ef-4879-b99a-2f3d38be612a"
+  - texto: "Pasá el mouse por la cuadrícula hasta marcar la cantidad de columnas y filas que necesitás, y hacé clic. La tabla aparece en el documento."
+  - texto: "Si la querés más grande, en el mismo menú elegí «Insertar tabla» y escribí el número de columnas y de filas."
+  - texto: "Para escribir, hacé clic en cada casillero. Las opciones para cambiarle el aspecto aparecen arriba cuando estás dentro de la tabla."
+fuentes:
+  - https://support.microsoft.com/es-es/office/insertar-una-tabla-a138f745-73ef-4879-b99a-2f3d38be612a
+madurez: T0
+---
+id: WRD-002
+area: programas
+titulo:
+  sencillo: "Me faltan (o me sobran) filas en una tabla de Word"
+  tecnico: "Insertar o eliminar filas y columnas de una tabla en Word"
+explicacion:
+  sencillo: "A una tabla ya hecha se le pueden agregar renglones o columnas en el lugar que quieras, y también sacar los que sobran, sin tener que hacerla de nuevo."
+  tecnico: "Diseño de tabla (Disposición) > Filas y columnas > Insertar encima/debajo/a la izquierda/a la derecha; clic derecho > Eliminar > Eliminar filas/columnas."
+frases: ["agregar un renglón a la tabla de word", "me quedé sin filas en la tabla", "sumar una columna más al cuadro", "borrar una fila que sobra en la tabla"]
+pasos:
+  - texto: "Hacé clic en un casillero que esté al lado de donde querés la fila o la columna nueva."
+    abrir: "https://support.microsoft.com/es-es/word/add-a-cell-row-or-column-to-a-table-in-word"
+  - texto: "Arriba, en la pestaña de la tabla que aparece (de disposición o diseño de tabla), buscá el grupo «Filas y columnas» y elegí «Insertar encima» o «Insertar debajo» para una fila, o «Insertar a la izquierda» o «Insertar a la derecha» para una columna."
+  - texto: "Si necesitás varias filas de una vez, primero seleccioná esa misma cantidad de filas y después tocá insertar."
+  - texto: "Para sacar una fila o columna: clic derecho en un casillero de ella, tocá «Eliminar» y elegí «Eliminar filas» o «Eliminar columnas»."
+    abrir: "https://support.microsoft.com/es-es/word/delete-a-row-column-or-cell-from-a-table"
+fuentes:
+  - https://support.microsoft.com/es-es/word/add-a-cell-row-or-column-to-a-table-in-word
+  - https://support.microsoft.com/es-es/word/delete-a-row-column-or-cell-from-a-table
+madurez: T0
+---
+id: WRD-003
+area: programas
+titulo:
+  sencillo: "Quiero poner un índice automático en Word"
+  tecnico: "Insertar y actualizar una tabla de contenido"
+explicacion:
+  sencillo: "Word puede armar solo el índice con los títulos y el número de página de cada uno. Para eso, los títulos tienen que estar marcados con el estilo «Título 1», «Título 2», etc."
+  tecnico: "Estilos de título (Título 1–3) + Referencias > Tabla de contenido > tabla automática; clic derecho > Actualizar campo."
+frases: ["hacer el índice de un trabajo en word", "que el índice se arme solo con las páginas", "el índice no se actualiza con los números de página", "poner tabla de contenido en la monografía"]
+pasos:
+  - texto: "Primero marcá los títulos: seleccioná cada título y en la pestaña «Inicio», en los estilos, elegí «Título 1» (y «Título 2» para los subtítulos). Solo lo que tenga estilo de título entra al índice."
+    abrir: "https://support.microsoft.com/es-es/office/insertar-una-tabla-de-contenido-882e8564-0edb-435e-84b5-1d8552ccf0c0"
+  - texto: "Hacé clic donde querés el índice (normalmente al principio). En la pestaña «Referencias», tocá «Tabla de contenido» y elegí una de las automáticas (no la «manual»)."
+  - texto: "Si después cambiás el texto o se mueven las páginas: clic derecho sobre el índice > «Actualizar campo» y elegí actualizar toda la tabla."
+fuentes:
+  - https://support.microsoft.com/es-es/office/insertar-una-tabla-de-contenido-882e8564-0edb-435e-84b5-1d8552ccf0c0
+madurez: T0
+---
+id: WRD-004
+area: programas
+titulo:
+  sencillo: "Quiero poner algo escrito arriba o abajo de todas las hojas en Word"
+  tecnico: "Insertar, editar o quitar encabezado y pie de página"
+explicacion:
+  sencillo: "El encabezado es lo que se repite arriba de cada hoja (por ejemplo, el nombre del colegio) y el pie de página lo que se repite abajo. Lo escribís una vez y aparece en todas."
+  tecnico: "Insertar > Encabezado / Pie de página > estilo integrado o Editar; Cerrar encabezado y pie de página (Esc); Primera página diferente; Quitar encabezado/pie."
+frases: ["poner el nombre arriba de todas las hojas", "que se repita un texto abajo de cada página", "cómo pongo el membrete en word", "sacar lo que está escrito arriba de todas las hojas"]
+pasos:
+  - texto: "En la pestaña «Insertar», tocá «Encabezado» (arriba) o «Pie de página» (abajo) y elegí un estilo de la lista."
+    abrir: "https://support.microsoft.com/es-es/office/insertar-un-encabezado-o-pie-de-p%C3%A1gina-b87ee4df-abc1-41f8-995b-b39f6d99c7ed"
+  - texto: "Escribí el texto. Cuando termines, tocá «Cerrar encabezado y pie de página» o apretá Esc. Para cambiarlo después, hacé doble clic sobre él."
+  - texto: "Si no lo querés en la primera hoja (la carátula), marcá «Primera página diferente»."
+  - texto: "Para sacarlo: «Insertar» > «Encabezado» (o «Pie de página») > «Quitar encabezado» (o «Quitar pie de página»)."
+fuentes:
+  - https://support.microsoft.com/es-es/office/insertar-un-encabezado-o-pie-de-p%C3%A1gina-b87ee4df-abc1-41f8-995b-b39f6d99c7ed
+madurez: T0
+---
+id: WRD-005
+area: programas
+titulo:
+  sencillo: "Quiero escribir en dos columnas, como en el diario"
+  tecnico: "Columnas de estilo periodístico en Word"
+explicacion:
+  sencillo: "Word puede repartir el texto en dos o tres columnas, como un diario o un folleto. Se puede hacer en todo el documento o solo en una parte."
+  tecnico: "Disposición > Columnas (todo el documento o párrafos seleccionados); Más columnas para formato personalizado."
+frases: ["escribir en dos columnas en word", "armar un folleto con columnas", "que el texto quede como en el diario", "dividir la hoja en dos columnas de texto"]
+pasos:
+  - texto: "Para todo el documento: en la pestaña de disposición de la página (según la versión se llama «Disposición» o «Diseño»), tocá «Columnas» y elegí cuántas querés."
+    abrir: "https://support.microsoft.com/es-es/office/create-newsletter-columns-3a00e688-253d-456e-9481-661fdd5b724b"
+  - texto: "Para una sola parte: primero seleccioná esos párrafos y después usá el mismo botón «Columnas»."
+  - texto: "Si querés otro ancho o más columnas, en esa misma lista elegí «Más columnas» y armá el formato a tu gusto."
+fuentes:
+  - https://support.microsoft.com/es-es/office/create-newsletter-columns-3a00e688-253d-456e-9481-661fdd5b724b
+madurez: T0
+---
+id: WRD-006
+area: programas
+titulo:
+  sencillo: "Los renglones en Word quedan muy separados (o muy pegados)"
+  tecnico: "Interlineado y espacio entre párrafos en Word"
+explicacion:
+  sencillo: "El interlineado es el espacio entre un renglón y otro. Aparte, Word deja un espacio extra entre párrafos. Las dos cosas se pueden cambiar, en todo el documento o solo en una parte."
+  tecnico: "Inicio > Espaciado entre líneas y párrafos > Opciones de interlineado (Interlineado, Antes/Después); Diseño > Espaciado entre párrafos > Sin espacio entre párrafos."
+frases: ["los renglones quedan muy separados en word", "me piden interlineado doble", "cómo pongo interlineado 1,5", "hay mucho espacio entre un párrafo y otro"]
+pasos:
+  - texto: "Seleccioná el texto que querés cambiar (Ctrl + A si es todo). En la pestaña «Inicio», tocá el botón de espaciado entre líneas y párrafos y elegí «Opciones de interlineado»."
+    abrir: "https://support.microsoft.com/es-es/word/change-the-line-spacing-in-word"
+  - texto: "En «Interlineado» elegí la medida que te pidan (sencillo, 1,5, doble). En los cuadros de espacio antes y después cambiás la separación entre párrafos. Tocá «Aceptar»."
+  - texto: "Para sacar el espacio entre párrafos en todo el documento: en la pestaña de diseño, tocá «Espaciado entre párrafos» y elegí «Sin espacio entre párrafos»."
+fuentes:
+  - https://support.microsoft.com/es-es/word/change-the-line-spacing-in-word
+madurez: T0
+---
+id: WRD-007
+area: programas
+titulo:
+  sencillo: "Quiero que el primer renglón de cada párrafo empiece más adentro"
+  tecnico: "Sangría de primera línea y sangría francesa en Word"
+explicacion:
+  sencillo: "La sangría es ese espacio al principio del primer renglón de un párrafo. Se hace con la tecla Tab o desde las opciones de párrafo. También existe la sangría «francesa», que deja el primer renglón afuera y mete los demás (se usa en bibliografías)."
+  tecnico: "Tab al inicio del párrafo; cuadro Párrafo > Sangría > Especial: Primera línea / Francesa, En; Establecer como predeterminado."
+frases: ["cómo hago la sangría en word", "que el párrafo empiece más corrido", "poner sangría francesa en la bibliografía", "dejar un espacio al principio de cada párrafo"]
+pasos:
+  - texto: "La forma rápida: poné el cursor al principio del párrafo y apretá la tecla Tab. Cuando apretás Entrar, el párrafo siguiente sigue con la sangría."
+    abrir: "https://support.microsoft.com/es-es/word/training/indent-the-first-line-of-a-paragraph"
+  - texto: "Para una medida exacta: seleccioná los párrafos y abrí la ventana de «Párrafo» (la flechita chica en la esquina del grupo «Párrafo», en la pestaña «Inicio»)."
+    abrir: "https://support.microsoft.com/es-es/word/adjust-indents-and-spacing"
+  - texto: "En «Sangría», en la lista «Especial», elegí «Primera línea» (o «Francesa») y escribí la medida en el cuadro de al lado. Mirá cómo queda en la vista previa y tocá «Aceptar»."
+fuentes:
+  - https://support.microsoft.com/es-es/word/adjust-indents-and-spacing
+  - https://support.microsoft.com/es-es/word/training/indent-the-first-line-of-a-paragraph
+madurez: T0
+---
+id: WRD-008
+area: programas
+titulo:
+  sencillo: "La numeración de mi lista en Word sigue de antes o empieza en cualquier número"
+  tecnico: "Reiniciar o establecer el valor de una lista numerada"
+explicacion:
+  sencillo: "A veces Word continúa la numeración de una lista anterior (empieza en 5 en vez de 1) o se mezcla. Se arregla desde el menú del número, sin escribir los números a mano, porque a mano después se desordena más."
+  tecnico: "Clic derecho en el número > Reiniciar en 1 / Establecer valor de numeración."
+frases: ["la lista de word empieza en 4 en vez de 1", "se me desordenaron los números de la lista", "quiero que la numeración vuelva a empezar en uno", "word sigue numerando de la lista anterior"]
+pasos:
+  - texto: "Hacé doble clic sobre los números de la lista para seleccionarlos."
+    abrir: "https://support.microsoft.com/es-es/word/change-the-numbering-in-a-numbered-list"
+  - texto: "Hacé clic derecho en el número desde donde querés que arranque de nuevo y elegí «Reiniciar en 1»."
+  - texto: "Si querés que empiece en otro número: clic derecho > «Establecer valor de numeración» y elegí el número con las flechitas."
+  - texto: "No borres ni escribas los números a mano: Word se pierde y la lista se desordena más cuando la cambiás después."
+fuentes:
+  - https://support.microsoft.com/es-es/word/change-the-numbering-in-a-numbered-list
+madurez: T0
+---
+id: WRD-009
+area: programas
+titulo:
+  sencillo: "Quiero que lo que sigue empiece en una hoja nueva en Word"
+  tecnico: "Insertar un salto de página"
+explicacion:
+  sencillo: "En vez de apretar Entrar muchas veces hasta llegar a la otra hoja (que después se desacomoda), conviene poner un «salto de página»: lo que sigue siempre empieza arriba de una hoja nueva."
+  tecnico: "Insertar > Salto de página; ver y borrar saltos con Inicio > Mostrar u ocultar."
+frases: ["empezar un capítulo en una hoja nueva", "aprieto enter mil veces para pasar a la otra hoja", "cortar la página y seguir en la siguiente", "que el título quede arriba de la hoja siguiente"]
+pasos:
+  - texto: "Hacé clic justo donde querés que termine la hoja."
+    abrir: "https://support.microsoft.com/es-es/word/insert-a-page-break-in-word"
+  - texto: "En la pestaña «Insertar», tocá «Salto de página». Lo que estaba después del cursor pasa al principio de la hoja siguiente."
+  - texto: "Para ver dónde hay saltos (y borrar uno), en «Inicio» tocá «Mostrar u ocultar»: seleccioná el salto y borralo."
+    abrir: "https://support.microsoft.com/es-es/word/training/insert-a-page-break"
+fuentes:
+  - https://support.microsoft.com/es-es/word/insert-a-page-break-in-word
+  - https://support.microsoft.com/es-es/word/training/insert-a-page-break
+madurez: T0
+---
+id: WRD-010
+area: programas
+titulo:
+  sencillo: "Me queda una hoja en blanco en Word y no se borra"
+  tecnico: "Eliminar una página en blanco en Word"
+explicacion:
+  sencillo: "Las hojas en blanco suelen venir de renglones vacíos, de un salto de página o, si está al final, de una marca de párrafo que Word no deja borrar. Mostrando las marcas se ve qué la causa."
+  tecnico: "Ctrl + Mayús + 8 para ver marcas; borrar párrafos vacíos o saltos; al final, párrafo final a 1 pt; saltos de sección «Página siguiente»."
+frases: ["no puedo borrar la última hoja en blanco", "me sale una página vacía al final del word", "se imprime una hoja en blanco de más", "hay una hoja vacía en el medio del documento"]
+pasos:
+  - texto: "Apretá Ctrl + Mayús + 8 para ver las marcas de párrafo (¶). Así ves si en esa hoja hay renglones vacíos o un salto de página."
+    abrir: "https://support.microsoft.com/es-es/word/delete-a-blank-page"
+  - texto: "Seleccioná esas marcas vacías o el salto de página que sobra y apretá Suprimir."
+  - texto: "Si la hoja en blanco está al final y queda una sola marca ¶ que no se borra: seleccionala, en el cuadro de tamaño de letra escribí 01 y apretá Entrar. Así entra en la hoja anterior."
+  - texto: "Si todavía no entra, achicá un poco el margen de abajo. Después volvé a apretar Ctrl + Mayús + 8 para ocultar las marcas."
+fuentes:
+  - https://support.microsoft.com/es-es/word/delete-a-blank-page
+madurez: T0
+---
+id: WRD-011
+area: programas
+titulo:
+  sencillo: "Quiero que los títulos de mi documento tengan el formato de título de Word"
+  tecnico: "Aplicar y modificar estilos de título (Título 1, Título 2)"
+explicacion:
+  sencillo: "Word trae «estilos» ya armados para los títulos. Usarlos en vez de solo agrandar la letra hace que todos los títulos queden iguales y que después puedas armar el índice automático."
+  tecnico: "Inicio > galería de Estilos (Título 1, Título 2; botón Más); clic derecho > Actualizar título para que coincida con la selección."
+frases: ["todos los títulos me quedan distintos en word", "dónde están los estilos de título", "poner título 1 y título 2", "cambiar la letra de todos los títulos de una vez"]
+pasos:
+  - texto: "Seleccioná el texto del título. En la pestaña «Inicio», en la galería de estilos, tocá «Título 1» (o «Título 2» para un subtítulo). Si no lo ves, abrí la flechita «Más» de la galería."
+    abrir: "https://support.microsoft.com/es-es/word/add-a-heading-in-a-word-document"
+  - texto: "Repetí con cada título. Así quedan todos iguales."
+  - texto: "Para cambiarles el aspecto a todos juntos: cambiale la letra o el color a uno, hacé clic derecho en ese estilo de la galería y elegí «Actualizar título para que coincida con la selección»."
+fuentes:
+  - https://support.microsoft.com/es-es/word/add-a-heading-in-a-word-document
+madurez: T0
+---
+id: WRD-012
+area: programas
+titulo:
+  sencillo: "Cada vez que abro Word tengo que cambiar la letra"
+  tecnico: "Cambiar la fuente y el tamaño predeterminados en Word"
+explicacion:
+  sencillo: "Word arranca siempre con la misma letra y tamaño. Si siempre usás otra (por ejemplo, Arial 12), la podés dejar como predeterminada para que todos los documentos nuevos empiecen así."
+  tecnico: "Inicio > iniciador del cuadro Fuente (Ctrl + D) > Establecer como predeterminado > Todos los documentos basados en la plantilla Normal. Si no se conserva: permisos de Normal.dotm o complementos."
+frases: ["que word arranque siempre con arial 12", "cambiar la letra que viene por defecto en word", "todos los documentos nuevos empiezan con calibri", "dejar fijo el tamaño de letra en word"]
+pasos:
+  - texto: "En Word, apretá Ctrl + D (o en la pestaña «Inicio», tocá la flechita chica en la esquina del grupo «Fuente»)."
+    abrir: "https://support.microsoft.com/es-es/word/change-the-default-font-in-word"
+  - texto: "Elegí la letra y el tamaño que querés, y tocá «Establecer como predeterminado»."
+  - texto: "Elegí «Todos los documentos basados en la plantilla Normal» y tocá «Aceptar» dos veces."
+  - texto: "Si al volver a abrir Word no se guardó, Microsoft explica qué revisar (puede ser un complemento o un permiso del archivo de la plantilla). Si es la compu del trabajo, consultá con quien la administra."
+fuentes:
+  - https://support.microsoft.com/es-es/word/change-the-default-font-in-word
+madurez: T0
+---
+id: WRD-013
+area: programas
+titulo:
+  sencillo: "Quiero que un texto quede con el mismo formato que otro (la brocha)"
+  tecnico: "Copiar formato (Format Painter) en Word"
+explicacion:
+  sencillo: "La brocha copia cómo se ve un texto (letra, tamaño, color, negrita) y lo pasa a otro texto, sin tener que cambiar cada cosa a mano."
+  tecnico: "Inicio > Portapapeles > Copiar formato; doble clic para varias veces; Esc para terminar; Alt + Ctrl + C / Alt + Ctrl + V."
+frases: ["para qué sirve la brocha de word", "copiar el formato de un texto a otro", "que este párrafo quede igual que el de arriba", "pasar la misma letra y color a otra parte"]
+pasos:
+  - texto: "Seleccioná el texto que ya tiene el formato que te gusta."
+    abrir: "https://support.microsoft.com/es-es/word/use-the-format-painter"
+  - texto: "En la pestaña «Inicio», en el grupo «Portapapeles», tocá el botón de la brocha. El cursor se convierte en una brocha."
+  - texto: "Pasá la brocha arrastrando sobre el texto que querés cambiar: queda con el mismo formato. Funciona una sola vez."
+  - texto: "Si lo querés aplicar en varios lugares, hacé doble clic en la brocha en vez de un clic. Cuando termines, apretá Esc."
+fuentes:
+  - https://support.microsoft.com/es-es/word/use-the-format-painter
+madurez: T0
+---
+id: WRD-014
+area: programas
+titulo:
+  sencillo: "Quiero dejar una notita al costado del texto en Word (o borrar las que hay)"
+  tecnico: "Insertar, responder y eliminar comentarios en Word"
+explicacion:
+  sencillo: "Los comentarios son notitas que aparecen al costado de la hoja, sin cambiar el texto. Sirven para corregir un trabajo o dejar una duda. Si te mandaron un documento con comentarios, se pueden borrar de a uno o todos juntos."
+  tecnico: "Revisar > Nuevo comentario; responder desde el globo; Revisar > Comentarios > Eliminar > Eliminar todos los comentarios del documento."
+frases: ["dejar un comentario al costado en word", "cómo borro los globitos del costado del documento", "sacar todos los comentarios del word", "agregar una nota al margen del texto"]
+pasos:
+  - texto: "Seleccioná el texto sobre el que querés comentar. En la pestaña «Revisar», tocá «Nuevo comentario» y escribí tu nota. Aparece al costado de la hoja."
+    abrir: "https://support.microsoft.com/es-es/word/insert-delete-or-change-a-comment"
+  - texto: "Para contestar un comentario, usá el botón de responder del propio comentario y escribí."
+  - texto: "Para borrar uno: en «Revisar», en el grupo «Comentarios», andá con «Siguiente» hasta ese comentario y tocá «Eliminar»."
+  - texto: "Para borrar todos juntos: tocá la flechita de «Eliminar» y elegí «Eliminar todos los comentarios del documento»."
+derivar: "Si lo que ves son tachones y textos de colores, escribile a PC Doctor «Word me tacha lo que borro»."
+fuentes:
+  - https://support.microsoft.com/es-es/word/insert-delete-or-change-a-comment
+madurez: T0
+---
+id: WRD-015
+area: programas
+titulo:
+  sencillo: "Quiero cambiar una palabra por otra en todo el documento de una vez"
+  tecnico: "Buscar y reemplazar texto en Word"
+explicacion:
+  sencillo: "Si escribiste mal un nombre muchas veces, Word lo puede cambiar en todo el documento de un saque, o de a uno para que vayas revisando."
+  tecnico: "Inicio > Reemplazar (Ctrl + H): Buscar / Reemplazar por; Buscar siguiente, Reemplazar, Reemplazar todos."
+frases: ["cambiar un nombre en todo el documento", "escribí mal una palabra en todo el word", "reemplazar una palabra por otra en word", "corregir el mismo error en todas las hojas de una vez"]
+pasos:
+  - texto: "Apretá Ctrl + H (o en la pestaña «Inicio», tocá «Reemplazar», a la derecha)."
+    abrir: "https://support.microsoft.com/es-es/word/training/find-and-replace-text-in-word"
+  - texto: "En el primer cuadro escribí la palabra que querés cambiar y en «Reemplazar por» la palabra nueva."
+  - texto: "Lo más seguro es ir de a uno: tocá «Buscar siguiente» y, si corresponde, «Reemplazar». Si estás seguro, «Reemplazar todos» los cambia todos juntos."
+fuentes:
+  - https://support.microsoft.com/es-es/word/training/find-and-replace-text-in-word
+madurez: T0
+---
+id: WRD-016
+area: programas
+titulo:
+  sencillo: "¿Cuántas palabras tiene mi texto de Word?"
+  tecnico: "Ver el recuento de palabras en Word"
+explicacion:
+  sencillo: "Word cuenta las palabras solo mientras escribís y lo muestra abajo de todo, en la barrita de la ventana. También puede contar solo una parte o decirte cuántos caracteres hay."
+  tecnico: "Barra de estado: recuento de palabras (de la selección y del total); clic para ver caracteres, líneas y párrafos. En Word para la web, en la vista de edición."
+frases: ["cuántas palabras tiene mi trabajo", "me piden máximo 500 palabras", "contar los caracteres de un texto en word", "dónde veo el número de palabras"]
+pasos:
+  - texto: "Mirá la barrita de abajo de la ventana de Word: ahí dice cuántas palabras tiene el documento."
+    abrir: "https://support.microsoft.com/es-es/word/training/show-word-count"
+  - texto: "Para contar solo una parte, seleccioná ese texto: abajo aparecen las palabras de lo seleccionado y las del total."
+  - texto: "Si necesitás la cantidad de caracteres, los renglones o los párrafos, hacé clic sobre ese número de palabras de abajo."
+fuentes:
+  - https://support.microsoft.com/es-es/word/training/show-word-count
+madurez: T0
+---
+id: WRD-017
+area: programas
+titulo:
+  sencillo: "Quiero imprimir la dirección en un sobre con Word"
+  tecnico: "Crear e imprimir un sobre en Word"
+explicacion:
+  sencillo: "Word tiene una opción para escribir la dirección y el remitente y mandarlos a la impresora en el lugar justo del sobre. Conviene probar primero, porque cada impresora pone el sobre de una forma distinta."
+  tecnico: "Correspondencia > Sobres: Dirección, Remite (Omitir), Opciones (tamaño y Opciones de impresión: orientación de alimentación), Imprimir o Agregar al documento."
+frases: ["imprimir un sobre con la dirección", "cómo pongo el sobre en la impresora", "escribir el remitente en un sobre desde la compu", "me sale la dirección torcida en el sobre"]
+pasos:
+  - texto: "En la pestaña «Correspondencia», tocá «Sobres». Escribí la dirección de quien lo recibe y, en el remite, la tuya (o marcá «Omitir» para no ponerla)."
+    abrir: "https://support.microsoft.com/es-es/word/create-and-print-a-single-envelope-in-word"
+  - texto: "Tocá «Opciones»: elegí el tamaño del sobre y, en «Opciones de impresión», fijate cómo hay que poner el sobre en la impresora (de qué lado y para qué lado)."
+  - texto: "Hacé una prueba antes: poné un sobre como indican las opciones de impresión e imprimí. Si sale torcido o al revés, cambiá esas opciones y probá de nuevo."
+  - texto: "Cuando salga bien, imprimilo, o tocá «Agregar al documento» para guardarlo e imprimirlo después."
+fuentes:
+  - https://support.microsoft.com/es-es/word/create-and-print-a-single-envelope-in-word
+madurez: T0
+---
+id: WRD-018
+area: programas
+titulo:
+  sencillo: "Quiero imprimir etiquetas autoadhesivas con Word"
+  tecnico: "Crear e imprimir una hoja de etiquetas en Word"
+explicacion:
+  sencillo: "Word sabe las medidas de muchas hojas de etiquetas que venden en librerías. Elegís la marca y el modelo que figura en el paquete, escribís el texto y llena la hoja."
+  tecnico: "Correspondencia > Etiquetas > Opciones (proveedor y número de producto); Dirección; Página completa de la misma etiqueta; Imprimir o Nuevo documento."
+frases: ["imprimir etiquetas en word", "tengo una hoja de etiquetas y no sé cómo imprimirla", "hacer etiquetas con mi dirección", "que entren las etiquetas justo en cada cuadradito"]
+pasos:
+  - texto: "En la pestaña «Correspondencia», tocá «Etiquetas»."
+    abrir: "https://support.microsoft.com/es-es/office/create-and-print-labels-82086c07-2afa-4982-9d7d-9c9141d5035b"
+  - texto: "Tocá «Opciones» y elegí el proveedor (la marca) y el número de producto que dice el paquete de etiquetas. Aceptá."
+  - texto: "Escribí el texto en el cuadro «Dirección» y elegí «Página completa de la misma etiqueta»."
+  - texto: "Tocá «Imprimir», o «Nuevo documento» si antes querés revisarla o cambiarle algo. Conviene probar primero en una hoja común."
+fuentes:
+  - https://support.microsoft.com/es-es/office/create-and-print-labels-82086c07-2afa-4982-9d7d-9c9141d5035b
+madurez: T0
+---
+id: WRD-019
+area: programas
+titulo:
+  sencillo: "Quiero hacer la misma carta para muchas personas con el nombre de cada una"
+  tecnico: "Combinar correspondencia con una planilla de Excel"
+explicacion:
+  sencillo: "La «combinación de correspondencia» junta una carta de Word con una lista de Excel: Word arma una carta por persona y pone en cada una el nombre, la dirección o lo que tenga la lista."
+  tecnico: "Origen de datos en Excel (encabezados de columna, primera hoja); Correspondencia > Editar lista de destinatarios > Insertar campo de combinación > Vista previa de resultados > Finalizar y combinar."
+frases: ["hacer cartas con el nombre de cada uno", "combinar correspondencia con excel", "mandar la misma invitación a muchos con su nombre", "poner los nombres de una lista de excel en una carta"]
+pasos:
+  - texto: "Prepará la lista en Excel: en la primera fila, el título de cada columna (por ejemplo «Nombre», «Dirección»), y todos los datos en la primera hoja de la planilla."
+    abrir: "https://support.microsoft.com/es-es/word/mail-merge-using-an-excel-spreadsheet"
+  - texto: "En Word, escribí la carta. En la pestaña «Correspondencia», elegí los destinatarios buscando esa planilla. Con «Editar lista de destinatarios» podés destildar a quien no quieras."
+  - texto: "Poné el cursor donde va el nombre y usá «Insertar campo de combinación» para elegir la columna. Repetí con lo que necesites."
+  - texto: "Revisá cómo queda cada carta con la vista previa de resultados. Al final, usá «Finalizar y combinar» para imprimir."
+fuentes:
+  - https://support.microsoft.com/es-es/word/mail-merge-using-an-excel-spreadsheet
+madurez: T0
+---
+id: WRD-020
+area: programas
+titulo:
+  sencillo: "Quiero dictarle a Word en vez de escribir"
+  tecnico: "Dictado en Word (Microsoft 365)"
+explicacion:
+  sencillo: "Word tiene un botón de micrófono para dictar: hablás y el texto aparece en el documento. Los signos se dicen («punto», «coma»). Solo viene con la suscripción de Microsoft 365 y necesita Internet y micrófono."
+  tecnico: "Inicio > Dictado (requiere Microsoft 365); comandos «punto», «coma», «nuevo párrafo», «Detener dictado»; engranaje > Lenguaje hablado: Español."
+frases: ["dónde está el micrófono para dictar en word", "word no escribe lo que digo en español", "dictar una carta directamente en word", "word me escribe en inglés cuando dicto"]
+pasos:
+  - texto: "Abrí el documento y en la pestaña «Inicio» tocá «Dictado». Si te pide permiso para usar el micrófono, aceptá."
+    abrir: "https://support.microsoft.com/es-es/word/dictate-your-documents-in-word"
+  - texto: "Cuando el botón se active, hablá con normalidad. Para los signos decí «punto», «coma» o «nuevo párrafo»."
+  - texto: "Si escribe en otro idioma, tocá el engranaje del dictado y en «Lenguaje hablado» elegí español."
+  - texto: "Para terminar, decí «Detener dictado». Si no ves el botón, tu Word puede no tener Microsoft 365: ahí podés usar el dictado de Windows (escribile a PC Doctor «quiero escribir hablando»)."
+fuentes:
+  - https://support.microsoft.com/es-es/word/dictate-your-documents-in-word
+madurez: T0
+---
+id: WRD-021
+area: programas
+titulo:
+  sencillo: "En Word la foto se me mueve sola cuando escribo"
+  tecnico: "Ajuste de texto, posición y anclaje de imágenes en Word"
+explicacion:
+  sencillo: "Cada foto está «pegada» a un párrafo. Cuando escribís arriba, el párrafo baja y la foto se va con él. Se puede elegir que la foto quede quieta en un lugar de la hoja o que acompañe al texto."
+  tecnico: "Opciones de diseño: Con ajuste de texto (Cuadrado, Delante del texto); Mover con texto / Corregir posición en la página; Ver más > Bloquear anclaje. No disponible En línea con el texto."
+frases: ["la imagen salta para otro lado cuando escribo", "la foto se me corre de lugar en el word", "quiero que la imagen quede fija en la hoja", "el texto no rodea la foto"]
+pasos:
+  - texto: "Hacé clic en la foto. Al lado aparece un botoncito de «Opciones de diseño»: tocalo."
+    abrir: "https://support.microsoft.com/es-es/word/wrap-text-and-move-pictures-in-word"
+  - texto: "Si querés que el texto la rodee y que suba o baje junto con el texto, elegí «Cuadrado» y marcá «Mover con texto»."
+  - texto: "Si querés que quede quieta en un lugar de la hoja, elegí «Delante del texto» y marcá «Corregir posición en la página»."
+  - texto: "Para que no se escape aunque borres texto cerca, en ese mismo menú tocá «Ver más» y activá «Bloquear anclaje». (Si la foto está «En línea con el texto», primero elegí otro ajuste.)"
+fuentes:
+  - https://support.microsoft.com/es-es/word/wrap-text-and-move-pictures-in-word
+madurez: T0
+---
+id: WRD-022
+area: programas
+titulo:
+  sencillo: "Quiero poner una marca de agua (como «BORRADOR») en el fondo de las hojas"
+  tecnico: "Insertar una marca de agua en Word"
+explicacion:
+  sencillo: "La marca de agua es un texto o un logo clarito que se ve atrás del texto en todas las hojas, por ejemplo «CONFIDENCIAL» o el logo de un negocio."
+  tecnico: "Diseño > Marca de agua: predefinidas o Marca de agua personalizada (texto o imagen). Word para la web no las inserta."
+frases: ["poner borrador de fondo en el word", "marca de agua en el documento", "poner el logo clarito atrás del texto", "que diga confidencial en todas las hojas"]
+pasos:
+  - texto: "En la pestaña de diseño, tocá «Marca de agua» y elegí una de las que vienen (por ejemplo BORRADOR o CONFIDENCIAL)."
+    abrir: "https://support.microsoft.com/es-es/word/training/insert-a-watermark"
+  - texto: "Para un texto tuyo o un logo: «Marca de agua» > «Marca de agua personalizada» y elegí texto o imagen."
+  - texto: "Si usás Word desde el navegador, ahí no se pueden poner: abrí el documento en Word de la compu."
+fuentes:
+  - https://support.microsoft.com/es-es/word/training/insert-a-watermark
+madurez: T0
+---
+id: WRD-023
+area: programas
+titulo:
+  sencillo: "Quiero ponerle un marco o borde a la hoja en Word"
+  tecnico: "Bordes de página en Word"
+explicacion:
+  sencillo: "Word puede dibujar un marco alrededor de toda la hoja: una línea simple, de colores o con dibujitos. Queda lindo en carátulas, diplomas o carteles."
+  tecnico: "Diseño > Bordes de página: estilo, color, ancho o arte; Opciones (distancia al borde); Aplicar a; Ninguno para quitar."
+frases: ["ponerle un marco a la hoja de word", "borde alrededor de la carátula", "hacer un diploma con borde", "sacar el recuadro que tiene la hoja"]
+pasos:
+  - texto: "En la pestaña de diseño, tocá «Bordes de página»."
+    abrir: "https://support.microsoft.com/es-es/word/training/add-a-border-to-a-page"
+  - texto: "Elegí cómo lo querés: estilo de línea, color, ancho o un borde con dibujitos (arte). Tocá «Aceptar»."
+  - texto: "Si querés separarlo más o menos del borde del papel, entrá en «Opciones», cambiá la distancia y aceptá."
+  - texto: "Para sacarlo, volvé a «Bordes de página» y elegí «Ninguno»."
+fuentes:
+  - https://support.microsoft.com/es-es/word/training/add-a-border-to-a-page
+madurez: T0
+---
+id: WRD-024
+area: archivos
+titulo:
+  sencillo: "Me mandaron un PDF y lo quiero cambiar en Word"
+  tecnico: "Abrir y editar un PDF en Word (conversión)"
+explicacion:
+  sencillo: "Word puede abrir un PDF y pasarlo a un documento que se puede cambiar. Hace una copia: el PDF original no se toca. Funciona mejor con PDF que son casi todo texto; el diseño puede quedar un poco distinto."
+  tecnico: "Archivo > Abrir > PDF: Word convierte una copia (el original no se modifica); Guardar como Word o PDF. Mejor con contenido de texto; puede no coincidir página por página."
+frases: ["pasar un pdf a word", "quiero editar un pdf que me mandaron", "convertir un pdf para poder escribir", "cambiar algo de un pdf sin programas raros"]
+pasos:
+  - texto: "Abrí Word y andá a «Archivo» > «Abrir». Buscá el PDF (si no aparece, usá «Examinar»)."
+    abrir: "https://support.microsoft.com/es-es/word/training/edit-a-pdf"
+  - texto: "Word avisa que va a hacer una copia y convertirla. Aceptá: el PDF original no se cambia."
+  - texto: "Hacé los cambios. Revisá que no se haya corrido nada: los renglones o las hojas pueden cortarse en otro lugar."
+  - texto: "Guardalo con «Guardar como», como documento de Word o de nuevo como PDF."
+derivar: "Si lo que querés es pasar un Word a PDF, escribile a PC Doctor «guardar un documento como PDF»."
+fuentes:
+  - https://support.microsoft.com/es-es/word/training/edit-a-pdf
+madurez: T0
+---
+id: WRD-025
+area: archivos
+titulo:
+  sencillo: "Word me quiere guardar todo en OneDrive y yo lo quiero en la compu"
+  tecnico: "Guardar en el equipo de forma predeterminada en Office"
+explicacion:
+  sencillo: "Word muchas veces propone guardar en OneDrive (la nube). Si preferís que guarde en la compu, se puede elegir cada vez con «Guardar como» o dejarlo así de fábrica en las opciones."
+  tecnico: "Archivo > Opciones > Guardar > Guardar en el equipo de forma predeterminada; Ubicación de archivo local predeterminada (Examinar); Guardar como para un archivo puntual."
+frases: ["word me guarda todo en la nube", "quiero guardar el documento en mi compu y no en onedrive", "cada vez que guardo me manda a onedrive", "que word guarde en documentos de la compu"]
+pasos:
+  - texto: "Para un documento puntual, usá «Guardar como» y elegí una carpeta de la compu en vez de OneDrive."
+    abrir: "https://support.microsoft.com/es-es/office/customize-the-save-experience-in-office-786200a7-f5f2-4d26-a3ae-b78c60dd5d3b"
+  - texto: "Para que sea siempre así: en Word, andá a «Archivo» > «Opciones» > «Guardar»."
+  - texto: "Marcá «Guardar en el equipo de forma predeterminada» y en «Ubicación de archivo local predeterminada» elegí la carpeta con «Examinar». Aceptá."
+derivar: "Si lo que pasa es que tus carpetas de la compu están dentro de OneDrive, escribile a PC Doctor «mis cosas del Escritorio ahora están en OneDrive»."
+fuentes:
+  - https://support.microsoft.com/es-es/office/customize-the-save-experience-in-office-786200a7-f5f2-4d26-a3ae-b78c60dd5d3b
+madurez: T0

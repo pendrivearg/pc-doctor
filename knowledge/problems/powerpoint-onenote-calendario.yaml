@@ -1,0 +1,478 @@
+# PowerPoint (Diseñador, transiciones, animaciones, música, video, exportar, imprimir, tamaño, plantillas), OneNote (blocs, secciones, búsqueda, compartir), calendario y contactos de Outlook. Guiadas con fuente oficial.
+id: PPT-001
+area: programas
+titulo:
+  sencillo: "Quiero que PowerPoint me sugiera un diseño lindo para la diapositiva"
+  tecnico: "Diseñador de PowerPoint (Sugerencias de diseño)"
+explicacion:
+  sencillo: "PowerPoint tiene un ayudante, el «Diseñador», que mira lo que pusiste en la diapositiva (título, fotos) y te propone varias formas prolijas de acomodarlo. Elegís la que te guste y listo."
+  tecnico: "Designer / Design Suggestions (pestaña Diseño): requiere Microsoft 365, conexión a internet, experiencias conectadas opcionales activadas y un tema integrado."
+frases: ["que powerpoint me arme el diseño de la diapositiva", "dónde está el diseñador de powerpoint", "ideas de diseño para mi presentación", "no me aparecen las sugerencias de diseño en powerpoint"]
+pasos:
+  - texto: "Abrí la presentación, andá a la pestaña «Diseño» y tocá el botón de sugerencias de diseño («Diseñador»). La primera vez puede pedirte permiso: aceptalo."
+  - texto: "A la derecha aparece un panel con ideas. Tocá la que te guste y la diapositiva cambia. Si no te convence, apretá Ctrl + Z para deshacer."
+  - texto: "Si no aparecen ideas: revisá que tengas internet, usá uno de los temas que trae PowerPoint, y no pongas más de cuatro fotos ni cuadros de texto de más en esa diapositiva. Además, es una función de Microsoft 365 (suscripción)."
+  - texto: "Si sigue sin ideas, en «Archivo» > «Cuenta», en la parte de privacidad de la cuenta, entrá a administrar la configuración y activá las experiencias conectadas opcionales. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/powerpoint/create-professional-slide-layouts-with-designer"
+fuentes:
+  - https://support.microsoft.com/en-us/powerpoint/create-professional-slide-layouts-with-designer
+madurez: T0
+---
+id: PPT-002
+area: programas
+titulo:
+  sencillo: "Quiero que las diapositivas pasen con un efecto"
+  tecnico: "Transiciones entre diapositivas"
+explicacion:
+  sencillo: "Una «transición» es el efecto que se ve cuando pasás de una diapositiva a la siguiente: que se desvanezca, que se deslice, etc. Se puede poner en una o en todas."
+  tecnico: "Pestaña Transiciones: galería de efectos, Opciones de efectos, Duración (grupo Intervalos), Aplicar a todo; «Ninguna» la quita. Una transición por diapositiva."
+frases: ["que las diapositivas pasen con efecto", "poner transiciones en power point", "sacar el efecto entre diapositivas", "que todas las diapositivas pasen igual"]
+pasos:
+  - texto: "Tocá la diapositiva (en la lista de la izquierda) y andá a la pestaña «Transiciones». Elegí un efecto: se ve una muestra al instante."
+  - texto: "Con «Opciones de efectos» elegís hacia dónde se mueve. En «Duración» ponés cuántos segundos dura (más número, más lento)."
+  - texto: "Si querés el mismo efecto en todas, tocá «Aplicar a todo». Para sacarlo, elegí «Ninguna» en la galería."
+  - texto: "Microsoft lo explica paso a paso."
+    abrir: "https://support.microsoft.com/en-us/powerpoint/training/add-change-or-remove-transitions-between-slides"
+fuentes:
+  - https://support.microsoft.com/en-us/powerpoint/training/add-change-or-remove-transitions-between-slides
+madurez: T0
+---
+id: PPT-003
+area: programas
+titulo:
+  sencillo: "Quiero que un texto o una foto aparezca con movimiento en PowerPoint"
+  tecnico: "Animaciones de texto u objetos"
+explicacion:
+  sencillo: "Las «animaciones» hacen que un título, una foto o una lista aparezca, se mueva o desaparezca dentro de la misma diapositiva, por ejemplo cuando hacés clic."
+  tecnico: "Pestaña Animaciones: efecto, Opciones de efectos, Inicio (Al hacer clic / Con la anterior / Después de la anterior), Duración, Retraso y Panel de animación."
+frases: ["que el texto aparezca de a poco en powerpoint", "animar una foto en la presentación", "que las cosas entren con un clic", "cambiar el orden de las animaciones"]
+pasos:
+  - texto: "Tocá el texto o la foto que querés animar, andá a la pestaña «Animaciones» y elegí un efecto. Con «Opciones de efectos» elegís la variante."
+  - texto: "En «Inicio» elegí cuándo arranca: al hacer clic, junto con la anterior o después de la anterior. «Duración» y «Retraso» cambian la velocidad y la espera."
+  - texto: "Para ver todas las animaciones y cambiarlas de orden, tocá «Panel de animación» y arrastralas hacia arriba o hacia abajo."
+  - texto: "Microsoft lo explica con ejemplos."
+    abrir: "https://support.microsoft.com/en-us/powerpoint/training/animate-text-or-objects"
+fuentes:
+  - https://support.microsoft.com/en-us/powerpoint/training/animate-text-or-objects
+madurez: T0
+---
+id: PPT-004
+area: programas
+titulo:
+  sencillo: "Quiero poner música de fondo en mi presentación de PowerPoint"
+  tecnico: "Audio que se reproduce en segundo plano en varias diapositivas"
+explicacion:
+  sencillo: "Podés poner una canción que tengas guardada en la compu para que suene sola durante la presentación, aunque vayas pasando de diapositiva."
+  tecnico: "Insertar > Audio > Audio en mi PC; pestaña Reproducción > Reproducir en segundo plano. Detener tras N diapositivas: Panel de animación > Efectos > Detener la reproducción > Después de."
+frases: ["poner una canción de fondo en el powerpoint", "que la música siga cuando paso de diapositiva", "la música se corta al cambiar de diapositiva", "agregar música a la presentación de fotos"]
+pasos:
+  - texto: "La canción tiene que estar guardada en la compu (si es de internet, primero hay que bajarla). En la primera diapositiva, andá a «Insertar» > «Audio» > «Audio en mi PC», buscá la canción y tocá «Insertar»."
+  - texto: "Tocá el parlantito que apareció en la diapositiva, andá a la pestaña «Reproducción» y elegí «Reproducir en segundo plano». Así arranca sola y sigue sonando al pasar de diapositiva."
+  - texto: "Si querés que se corte después de algunas diapositivas: en «Animaciones» abrí el «Panel de animación», hacé doble clic en el audio y, en la pestaña de efectos, en la parte de detener la reproducción, elegí «Después de» y poné cuántas diapositivas."
+  - texto: "Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/office/play-music-across-multiple-slides-in-your-slide-show-in-powerpoint-b01ded6a-28c8-473a-971a-6dfa92cc9367"
+derivar: "Si la música no se escucha al presentar, escribile a PC Doctor «el video o la música de PowerPoint no se reproduce»."
+fuentes:
+  - https://support.microsoft.com/en-us/office/play-music-across-multiple-slides-in-your-slide-show-in-powerpoint-b01ded6a-28c8-473a-971a-6dfa92cc9367
+madurez: T0
+---
+id: PPT-005
+area: programas
+titulo:
+  sencillo: "Quiero poner un video de YouTube en una diapositiva"
+  tecnico: "Insertar un video en línea (YouTube) en PowerPoint"
+explicacion:
+  sencillo: "Podés meter un video de YouTube dentro de la presentación copiando su dirección. Ojo: el video no queda guardado en el archivo, se ve desde internet, así que al presentar hace falta conexión."
+  tecnico: "Insert > Video > Online Video, pegando la URL (Microsoft 365, 2024, 2021, 2019). Se reproduce desde el sitio; sujeto a los Términos de uso del proveedor; no todos los videos permiten insertarse."
+frases: ["poner un video de youtube en el powerpoint", "meter un video de internet en la presentación", "cómo pego un link de youtube en una diapositiva", "el video de youtube no me deja ponerlo en power point"]
+pasos:
+  - texto: "En el navegador, abrí el video de YouTube y copiá la dirección de arriba (la barra de direcciones)."
+  - texto: "En PowerPoint, elegí la diapositiva y andá a «Insertar», tocá el botón de video y elegí la opción de video en línea. Pegá la dirección y tocá «Insertar»."
+  - texto: "Para que se vea al presentar, la compu tiene que tener internet. Algunos videos no permiten que se los ponga en otro lado: si no deja, es por eso."
+  - texto: "El uso del video queda sujeto a las condiciones de YouTube: usá videos que tengas permiso de mostrar. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/powerpoint/training/insert-a-video-from-youtube-or-another-site"
+derivar: "Si el video ya está puesto pero no se reproduce, escribile a PC Doctor «el video o la música de PowerPoint no se reproduce»."
+fuentes:
+  - https://support.microsoft.com/en-us/powerpoint/training/insert-a-video-from-youtube-or-another-site
+madurez: T0
+---
+id: PPT-006
+area: programas
+titulo:
+  sencillo: "Quiero convertir mi presentación de PowerPoint en un video"
+  tecnico: "Exportar una presentación como video (MP4)"
+explicacion:
+  sencillo: "PowerPoint puede convertir la presentación en un video común (MP4) que se puede ver en otras compus o compartir, sin necesidad de tener PowerPoint."
+  tecnico: "File > Export > Create a Video: calidad (4K a 480p), segundos por diapositiva (5 por defecto) o intervalos grabados; tipo MPEG-4 (.mp4) o Windows Media (.wmv). Puede tardar horas."
+frases: ["pasar el powerpoint a video", "guardar la presentación como mp4", "hacer un video con las diapositivas para mandar por whatsapp", "convertir las fotos del power point en un video"]
+pasos:
+  - texto: "Guardá primero la presentación. Después andá a «Archivo» > «Exportar» y elegí la opción para crear un video."
+  - texto: "En la primera lista elegí la calidad (Full HD 1080p sirve para casi todo; las más bajas ocupan menos lugar). En la segunda, cuántos segundos se ve cada diapositiva: vienen 5."
+  - texto: "Tocá el botón para crear el video, elegí la carpeta y el nombre, y en el tipo de archivo dejá «MPEG-4» (MP4). Tocá «Guardar»."
+  - texto: "Abajo, en la barra de estado, ves el avance. Puede tardar bastante (hasta horas si es larga): mientras tanto podés seguir usando PowerPoint. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/powerpoint/turn-your-presentation-into-a-video"
+fuentes:
+  - https://support.microsoft.com/en-us/powerpoint/turn-your-presentation-into-a-video
+madurez: T0
+---
+id: PPT-007
+area: programas
+titulo:
+  sencillo: "Quiero imprimir las diapositivas con mis notas abajo"
+  tecnico: "Imprimir páginas de notas en PowerPoint"
+explicacion:
+  sencillo: "Lo que escribís en el espacio de notas de cada diapositiva se puede imprimir: sale una diapositiva por hoja con tus notas debajo, ideal para tenerlas en la mano al hablar."
+  tecnico: "Archivo > Imprimir > Configuración: segundo desplegable (Diseño de impresión) > Páginas de notas."
+frases: ["imprimir el powerpoint con las notas", "que salgan mis notas debajo de cada diapositiva", "imprimir lo que escribí abajo de las diapositivas", "cómo imprimo el guion de la presentación"]
+pasos:
+  - texto: "Andá a «Archivo» > «Imprimir» y elegí tu impresora."
+  - texto: "En «Configuración», abrí la segunda lista (la que dice cómo se imprime cada hoja; normalmente muestra «Diapositivas de página completa») y elegí «Páginas de notas»."
+  - texto: "Poné cuántas copias querés y tocá «Imprimir». Sale una diapositiva por hoja con sus notas abajo."
+  - texto: "Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/powerpoint/print-your-handouts-notes-or-slides"
+fuentes:
+  - https://support.microsoft.com/en-us/powerpoint/print-your-handouts-notes-or-slides
+madurez: T0
+---
+id: PPT-008
+area: programas
+titulo:
+  sencillo: "Quiero imprimir varias diapositivas en una misma hoja"
+  tecnico: "Imprimir documentos (varias diapositivas por página) en PowerPoint"
+explicacion:
+  sencillo: "Para no gastar tanto papel, PowerPoint puede poner varias diapositivas chiquitas en cada hoja. Hay un modelo de 3 por hoja que trae renglones al costado para que la gente anote."
+  tecnico: "Archivo > Imprimir > Configuración > Diseño de impresión > Documentos (p. ej. 3 diapositivas, con líneas para notas); color, escala de grises o blanco y negro puro en el último desplegable."
+frases: ["imprimir varias diapositivas por hoja", "poner 6 diapositivas en una hoja", "imprimir el powerpoint para repartir", "imprimir las diapositivas en blanco y negro para ahorrar tinta"]
+pasos:
+  - texto: "Andá a «Archivo» > «Imprimir» y elegí tu impresora."
+  - texto: "En «Configuración», abrí la segunda lista (la que normalmente dice «Diapositivas de página completa») y, en la parte de documentos, elegí cuántas diapositivas por hoja querés. La de 3 trae renglones para anotar."
+  - texto: "Para ahorrar tinta, en la última lista de «Configuración» elegí «Escala de grises» en vez de «Color». Después tocá «Imprimir»."
+  - texto: "Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/powerpoint/print-your-handouts-notes-or-slides"
+fuentes:
+  - https://support.microsoft.com/en-us/powerpoint/print-your-handouts-notes-or-slides
+madurez: T0
+---
+id: PPT-009
+area: programas
+titulo:
+  sencillo: "Quiero cambiar las diapositivas a formato ancho (16:9) o cuadrado (4:3)"
+  tecnico: "Cambiar el tamaño de diapositiva (Estándar 4:3 / Panorámica 16:9)"
+explicacion:
+  sencillo: "Las diapositivas pueden ser más cuadradas (4:3, como las teles viejas) o más anchas (16:9, como las pantallas de ahora). Se cambia para toda la presentación de una vez."
+  tecnico: "Diseño > Personalizar > Tamaño de diapositiva: Estándar (4:3), Panorámica (16:9) o personalizado; al escalar ofrece Maximizar o Asegurar ajuste (Ensure Fit). Aplica a toda la presentación."
+frases: ["cambiar las diapositivas a 16:9", "la presentación se ve cuadrada con bordes negros", "pasar el powerpoint a formato ancho", "cambiar el tamaño de las diapositivas"]
+pasos:
+  - texto: "Andá a la pestaña «Diseño». Bien a la derecha está el botón «Tamaño de diapositiva»."
+  - texto: "Elegí «Estándar (4:3)» o «Panorámica (16:9)». Si querés otra medida, usá la opción de tamaño personalizado."
+  - texto: "Si PowerPoint te pregunta qué hacer con lo que ya está puesto: «Maximizar» lo agranda (puede quedar algo cortado) y la opción de asegurar el ajuste lo achica para que entre todo. Revisá las diapositivas después."
+  - texto: "Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/powerpoint/change-the-size-of-your-powerpoint-slides"
+fuentes:
+  - https://support.microsoft.com/en-us/powerpoint/change-the-size-of-your-powerpoint-slides
+madurez: T0
+---
+id: PPT-010
+area: programas
+titulo:
+  sencillo: "Quiero usar una plantilla con diseño ya hecho en PowerPoint"
+  tecnico: "Crear una presentación desde una plantilla y aplicarla a diapositivas existentes"
+explicacion:
+  sencillo: "Una plantilla es una presentación con colores, letras y fondos ya armados. Podés empezar desde una, o pasarle sus diapositivas viejas para que tomen ese diseño."
+  tecnico: "Archivo > Nuevo: buscar o elegir plantilla > Crear. Para aplicarla a una presentación existente: copiar las diapositivas y pegarlas en la nueva con Use Destination Theme (opciones de pegado)."
+frases: ["usar una plantilla en powerpoint", "dónde consigo diseños para la presentación", "quiero que mi presentación tenga un diseño lindo de fondo", "pasar mis diapositivas a otra plantilla"]
+pasos:
+  - texto: "Andá a «Archivo» > «Nuevo». Elegí una de las plantillas que aparecen o escribí en el buscador lo que querés (por ejemplo «cumpleaños» o «escuela»)."
+  - texto: "Tocá la plantilla para verla y después «Crear». Se abre una presentación nueva con ese diseño."
+  - texto: "Si ya tenías diapositivas hechas: abrí tu presentación vieja, seleccioná las diapositivas de la izquierda (Ctrl + A para todas) y copialas con Ctrl + C."
+  - texto: "Volvé a la presentación nueva, hacé clic derecho en la columna de la izquierda y, en las opciones de pegado, elegí la de usar el tema de destino: tus diapositivas toman el diseño de la plantilla. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/powerpoint/apply-a-template-to-an-existing-presentation"
+fuentes:
+  - https://support.microsoft.com/en-us/powerpoint/apply-a-template-to-an-existing-presentation
+madurez: T0
+---
+id: PPT-011
+area: programas
+titulo:
+  sencillo: "Quiero pasar el PowerPoint a PDF, con varias diapositivas por hoja o más liviano"
+  tecnico: "Exportar a PDF desde PowerPoint con opciones (intervalo, documentos, tamaño mínimo)"
+explicacion:
+  sencillo: "Además de guardar la presentación como PDF, PowerPoint te deja elegir qué diapositivas van, poner varias por hoja o achicar el archivo para mandarlo por correo."
+  tecnico: "Archivo > Exportar > Crear documento PDF/XPS > Publicar. Optimizar para: Estándar o Tamaño mínimo. Opciones: intervalo de diapositivas, Publicar qué (diapositivas, documentos, esquema), diapositivas por página."
+frases: ["pasar el powerpoint a pdf con varias diapositivas por hoja", "el pdf de la presentación pesa mucho para mandarlo", "guardar solo algunas diapositivas en pdf", "convertir la presentación a pdf para el profesor"]
+pasos:
+  - texto: "Andá a «Archivo» > «Exportar» y elegí la opción de crear un documento PDF/XPS. Tocá el botón de crear."
+  - texto: "Elegí la carpeta y el nombre. Si lo vas a mandar por correo, marcá la opción de tamaño mínimo; si lo vas a imprimir, dejá la estándar."
+  - texto: "Tocá «Opciones...» si querés: elegir solo algunas diapositivas (desde/hasta), cambiar lo que se publica a documentos para poner varias diapositivas por hoja, o incluir las ocultas. Tocá «Aceptar»."
+  - texto: "Tocá «Publicar». Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/powerpoint/training/save-powerpoint-presentations-as-pdf-files"
+fuentes:
+  - https://support.microsoft.com/en-us/powerpoint/training/save-powerpoint-presentations-as-pdf-files
+madurez: T0
+---
+id: PPT-012
+area: programas
+titulo:
+  sencillo: "Quiero empezar un cuaderno nuevo en OneNote"
+  tecnico: "Crear un bloc de notas nuevo en OneNote"
+explicacion:
+  sencillo: "En OneNote cada «bloc de notas» es como un cuaderno aparte: uno para recetas, otro para la facultad, otro para trámites. Si lo creás en OneDrive lo podés abrir desde cualquier compu o celular con internet, y nadie más lo ve salvo que lo compartas."
+  tecnico: "OneNote para Windows: Archivo > Nuevo, elegir ubicación (OneDrive o Este PC). Se crea con una sección y una página en blanco."
+frases: ["crear un cuaderno nuevo en onenote", "armar otro bloc de notas en onenote", "quiero separar mis notas en cuadernos distintos", "dónde se guarda el bloc nuevo de onenote"]
+pasos:
+  - texto: "En OneNote, andá a «Archivo» > «Nuevo»."
+  - texto: "Elegí dónde guardarlo. Conviene OneDrive: así lo ves también en el celular o en otra compu. Ponele un nombre y seguí los pasos que aparecen."
+  - texto: "El bloc nuevo aparece en tu lista de blocs y ya trae una sección con una página en blanco para empezar a escribir."
+  - texto: "Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/onenote/onenote-help-and-learning/create-a-new-notebook"
+fuentes:
+  - https://support.microsoft.com/en-us/onenote/onenote-help-and-learning/create-a-new-notebook
+madurez: T0
+---
+id: PPT-013
+area: programas
+titulo:
+  sencillo: "No entiendo las secciones y páginas de OneNote: quiero agregar una"
+  tecnico: "Agregar secciones y páginas en OneNote"
+explicacion:
+  sencillo: "OneNote se ordena como una carpeta escolar: el bloc es el cuaderno, las «secciones» son las pestañas de colores (por tema) y adentro de cada sección van las «páginas», que son las hojas donde escribís."
+  tecnico: "Nueva sección: clic derecho en la lista de secciones o botón al pie de la lista. Agregar página: botón en la lista de páginas; el título se escribe en el encabezado de la página. Las páginas se reordenan arrastrando."
+frases: ["agregar una pestaña nueva en onenote", "cómo hago una hoja nueva en onenote", "para qué sirven las secciones de onenote", "ordenar las páginas de onenote"]
+pasos:
+  - texto: "Para una sección nueva (un tema nuevo): hacé clic derecho en la lista de secciones y elegí «Nueva sección», o usá el botón al pie de esa lista. Escribí el nombre y apretá Enter. Ya trae una página en blanco."
+  - texto: "Para una página nueva dentro de la sección: tocá «Agregar página». Arriba de la página, en la línea del título, escribí el nombre y apretá Enter."
+  - texto: "Para cambiar el orden, arrastrá la página en la lista hasta donde la quieras."
+  - texto: "Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-US/OneNote/onenote-help-and-learning/basic-tasks-in-onenote-on-windows"
+fuentes:
+  - https://support.microsoft.com/en-US/OneNote/onenote-help-and-learning/basic-tasks-in-onenote-on-windows
+madurez: T0
+---
+id: PPT-014
+area: programas
+titulo:
+  sencillo: "Anoté algo en OneNote y no lo encuentro"
+  tecnico: "Buscar en las notas de OneNote"
+explicacion:
+  sencillo: "OneNote tiene un buscador que revisa todos tus blocs a la vez: escribís una palabra que te acuerdes y te muestra las páginas donde aparece."
+  tecnico: "Cuadro de búsqueda (lupa) a la derecha de las pestañas de sección; Ctrl + E busca en todos los blocs, Ctrl + F solo en la página actual; el alcance se cambia con la flecha junto a la lupa."
+frases: ["no encuentro una nota en onenote", "buscar una palabra en todas mis notas", "dónde está el buscador de onenote", "anoté un teléfono en onenote y no sé en qué página"]
+pasos:
+  - texto: "Apretá Ctrl + E (o tocá la lupa que está a la derecha de las pestañas de las secciones) y escribí una palabra que te acuerdes de la nota."
+  - texto: "Te aparecen las páginas donde está esa palabra: tocá una para abrirla. Cuando termines, apretá Esc."
+  - texto: "Si no aparece, tocá la flechita al lado de la lupa y elegí la opción de buscar en todos los blocs. Para buscar solo en la página que tenés abierta, usá Ctrl + F."
+  - texto: "Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/onenote/onenote-help-and-learning/search-notes-in-onenote"
+fuentes:
+  - https://support.microsoft.com/en-us/onenote/onenote-help-and-learning/search-notes-in-onenote
+madurez: T0
+---
+id: PPT-015
+area: programas
+titulo:
+  sencillo: "Quiero compartir mi bloc de OneNote con otra persona"
+  tecnico: "Compartir un bloc de notas de OneNote (invitar o enlace)"
+explicacion:
+  sencillo: "Podés invitar a alguien a ver o a escribir en tu bloc de OneNote, por ejemplo para armar la lista del viaje en familia. Para eso el bloc tiene que estar guardado en OneDrive."
+  tecnico: "Requiere bloc en OneDrive o SharePoint. Share > Share Entire Notebook: invitar por correo con permiso de edición o de lectura; o copiar un vínculo (cualquiera que lo tenga ve todo el bloc)."
+frases: ["compartir el onenote con mi familia", "que otra persona pueda escribir en mi bloc de notas", "mandar el link del bloc de onenote", "onenote dice que suba el bloc para compartirlo"]
+pasos:
+  - texto: "El bloc tiene que estar en OneDrive. Si te aparece un aviso pidiendo subir el bloc para compartirlo, elegí la cuenta y seguí los pasos."
+  - texto: "Arriba a la derecha tocá «Compartir» y elegí compartir todo el bloc. Escribí el correo de la persona."
+  - texto: "Al lado del nombre elegí si puede editar o solo ver. Si querés, agregá un mensaje y tocá «Enviar»: le llega un correo con la invitación."
+  - texto: "También podés copiar un vínculo, pero ojo: cualquiera que lo reciba (aunque se lo reenvíen) puede ver todo el bloc. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/onenote/onenote-help-and-learning/how-to-share-a-onenote-notebook"
+fuentes:
+  - https://support.microsoft.com/en-us/onenote/onenote-help-and-learning/how-to-share-a-onenote-notebook
+madurez: T0
+---
+id: PPT-016
+area: programas
+titulo:
+  sencillo: "Quiero anotar un turno o una cita en el calendario de Outlook"
+  tecnico: "Crear una cita en el calendario de Outlook (clásico)"
+explicacion:
+  sencillo: "Una «cita» es algo que anotás solo para vos en el calendario, como el turno del médico. Outlook te avisa un rato antes (de entrada, 15 minutos)."
+  tecnico: "Outlook clásico: Calendario > Nueva cita (Ctrl + N; Ctrl + Mayús + A desde otra carpeta): Asunto, Ubicación, inicio y fin; Aviso en el grupo Opciones; Guardar y cerrar. Agregar asistentes la convierte en reunión."
+frases: ["anotar un turno en el calendario de outlook", "agendar el médico en outlook", "cómo pongo una cita en outlook", "que outlook me avise antes del turno"]
+pasos:
+  - texto: "En Outlook, andá al Calendario y tocá «Nueva cita» (o apretá Ctrl + N). Desde el correo también podés apretar Ctrl + Mayús + A."
+  - texto: "Escribí de qué se trata (el asunto), el lugar, y la hora de inicio y de fin. Si necesitás una hora exacta, hacé clic en el horario y escribila."
+  - texto: "Outlook te avisa 15 minutos antes. Para cambiarlo, usá la lista del aviso (recordatorio) en la parte de opciones; «Ninguno» lo apaga. Después tocá «Guardar y cerrar»."
+  - texto: "Si en vez de algo tuyo querés invitar a otras personas, eso es una reunión. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/outlook/create-or-schedule-an-appointment"
+fuentes:
+  - https://support.microsoft.com/en-us/outlook/create-or-schedule-an-appointment
+madurez: T0
+---
+id: PPT-017
+area: programas
+titulo:
+  sencillo: "Quiero invitar a otras personas a una reunión desde el calendario de Outlook"
+  tecnico: "Programar una reunión con asistentes en el nuevo Outlook u Outlook.com"
+explicacion:
+  sencillo: "Desde el calendario de Outlook podés armar una reunión y mandarle la invitación por correo a cada persona. A ellos les llega y la pueden aceptar; si querés, se le agrega un enlace de Teams para hacerla por videollamada."
+  tecnico: "Nuevo Outlook / Outlook.com: Calendario > Nuevo evento > título > Invitar asistentes (Asistente para programación) > fecha y hora > ubicación > interruptor de reunión de Teams > Enviar."
+frases: ["mandar una invitación de reunión por outlook", "invitar gente a una reunión en el calendario", "armar una reunión en outlook con varias personas", "agendar una reunión y que les llegue a todos"]
+pasos:
+  - texto: "En el calendario de Outlook tocá «Nuevo evento» y escribí un título."
+  - texto: "En la parte de invitar asistentes, escribí el nombre o el correo de cada persona y elegila de las sugerencias."
+  - texto: "Elegí la fecha y la hora de inicio y de fin, y poné el lugar. Si va a ser por videollamada, dejá prendido el interruptor de reunión de Teams; si es en persona, apagalo."
+  - texto: "Tocá «Enviar»: a cada invitado le llega la invitación por correo. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/outlook/calendar/schedule-a-meeting-or-event-in-outlook"
+derivar: "Si la reunión es por Teams y no sabés cómo entrar, escribile a PC Doctor «me mandaron una reunión de Teams y no sé cómo entrar»."
+fuentes:
+  - https://support.microsoft.com/en-us/outlook/calendar/schedule-a-meeting-or-event-in-outlook
+madurez: T0
+---
+id: PPT-018
+area: programas
+titulo:
+  sencillo: "Quiero que un evento se repita todas las semanas en el calendario de Outlook"
+  tecnico: "Eventos y reuniones periódicas en Outlook"
+explicacion:
+  sencillo: "Si algo pasa siempre (la clase de los martes, la pastilla de cada mes, un cumpleaños), no hace falta anotarlo una y otra vez: se marca como «repetido» y Outlook lo pone solo en todas las fechas."
+  tecnico: "Nuevo Outlook / Outlook.com: Nuevo evento > Periódico (Recurring) > ventana Repetir > Guardar > Guardar/Enviar. Outlook clásico: opción Periodicidad del grupo Opciones."
+frases: ["que el evento se repita todas las semanas en outlook", "anotar algo que pasa todos los meses en el calendario", "poner un cumpleaños que se repita cada año en outlook", "reunión de todos los lunes en outlook"]
+pasos:
+  - texto: "En el calendario tocá «Nuevo evento», poné el título, la fecha y la hora (y los invitados, si hay)."
+  - texto: "Tocá la opción para que se repita. En la ventana que aparece elegí cada cuánto (por ejemplo, cada semana o cada mes) y tocá «Guardar»."
+  - texto: "Terminá tocando «Enviar» (o el botón de guardar, si no invitaste a nadie). En el Outlook clásico, la misma opción está en la parte de opciones de la cita, con el nombre de periodicidad."
+  - texto: "Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/outlook/calendar/schedule-a-meeting-or-event-in-outlook"
+fuentes:
+  - https://support.microsoft.com/en-us/outlook/calendar/schedule-a-meeting-or-event-in-outlook
+  - https://support.microsoft.com/en-us/outlook/create-or-schedule-an-appointment
+madurez: T0
+---
+id: PPT-019
+area: programas
+titulo:
+  sencillo: "Me llegó una invitación a una reunión por correo y no sé cómo aceptarla"
+  tecnico: "Responder a una convocatoria de reunión (RSVP) en Outlook.com / Outlook en la web"
+explicacion:
+  sencillo: "Cuando alguien te invita a una reunión desde Outlook, te llega un correo especial. Desde ahí avisás si vas, si no vas o si tal vez vas, sin tener que escribir un correo aparte."
+  tecnico: "Lista de mensajes > RSVP > Aceptar / Rechazar; Más opciones: Provisional, Responder con nota, Responder sin correo, Proponer nueva hora."
+frases: ["cómo acepto una invitación de reunión en outlook", "me invitaron a una reunión por mail y no sé qué apretar", "decir que no voy a una reunión de outlook", "proponer otro horario para la reunión"]
+pasos:
+  - texto: "En la lista de correos, buscá la invitación y tocá «RSVP» (no hace falta abrirla). Fijate dónde cae en tu calendario."
+  - texto: "Tocá «Aceptar» si vas o «Rechazar» si no vas."
+  - texto: "Si no estás seguro o querés otro horario, entrá a «Más opciones»: ahí podés responder «Provisional», mandar una nota o proponer una nueva hora."
+  - texto: "Microsoft lo explica acá (Outlook.com y Outlook en la web)."
+    abrir: "https://support.microsoft.com/en-au/outlook/rsvp-instantly-in-outlook-on-the-web"
+fuentes:
+  - https://support.microsoft.com/en-au/outlook/rsvp-instantly-in-outlook-on-the-web
+madurez: T0
+---
+id: PPT-020
+area: programas
+titulo:
+  sencillo: "Las citas de Outlook aparecen con la hora corrida"
+  tecnico: "Zona horaria del calendario de Outlook mal configurada"
+explicacion:
+  sencillo: "Si todas las reuniones te aparecen una o varias horas antes o después, puede ser que el calendario de Outlook esté en otra zona horaria. Outlook muestra cada reunión en la hora de la zona que tenga configurada, así que hay que elegir la de Argentina (Buenos Aires)."
+  tecnico: "Elementos guardados en UTC y mostrados en la zona configurada. Nuevo Outlook: Configuración > Calendario > Vista > Zonas horarias. Clásico: Archivo > Opciones > Calendario > Zonas horarias."
+frases: ["las reuniones de outlook aparecen con otra hora", "el calendario de outlook tiene la hora mal", "las citas me salen tres horas corridas", "cambiar la zona horaria del calendario de outlook"]
+pasos:
+  - texto: "Nuevo Outlook: tocá la ruedita de «Configuración» > «Calendario» > «Vista». En la parte de zonas horarias, abrí la lista para mostrar el calendario en una zona horaria y elegí la de Buenos Aires. Tocá «Guardar»."
+  - texto: "Outlook clásico: andá a «Archivo» > «Opciones» > «Calendario». En «Zonas horarias», elegí la de Buenos Aires en la lista de zona horaria."
+  - texto: "Volvé al calendario y fijate si las citas ya muestran la hora correcta. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/outlook/getstarted/manage-time-zone-settings-in-outlook"
+derivar: "Si también la hora del reloj de Windows está mal, escribile a PC Doctor «la hora de la computadora está mal»."
+fuentes:
+  - https://support.microsoft.com/en-us/outlook/getstarted/manage-time-zone-settings-in-outlook
+madurez: T0
+---
+id: PPT-021
+area: programas
+titulo:
+  sencillo: "Quiero que mi familia vea mi calendario de Outlook"
+  tecnico: "Compartir el calendario en Outlook.com"
+explicacion:
+  sencillo: "Podés compartir tu calendario de Outlook con otra persona para que vea tus citas, o incluso para que pueda anotar cosas. Y si te arrepentís, se lo podés sacar cuando quieras."
+  tecnico: "Outlook.com: Calendar > Share calendar > elegir calendario > correo > permiso Can view all details o Can edit > Share. Quitar: clic derecho en el calendario > Sharing and permissions."
+frases: ["compartir mi calendario de outlook con mi esposa", "que otra persona vea mis citas de outlook", "dejar de compartir el calendario", "dar permiso para que anoten en mi calendario"]
+pasos:
+  - texto: "Abrí el Calendario desde el panel del costado y, arriba, tocá «Compartir calendario». Elegí cuál calendario compartir."
+  - texto: "Escribí el nombre o el correo de la persona y elegí el permiso: que pueda ver todos los detalles, o que también pueda editar. Tocá «Compartir»."
+  - texto: "Para dejar de compartirlo: en la lista de la izquierda, hacé clic derecho en el calendario, entrá a la opción de uso compartido y permisos, elegí a la persona y tocá el ícono para quitarla."
+  - texto: "Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/outlook/share-your-calendar-in-outlook-com"
+fuentes:
+  - https://support.microsoft.com/en-us/outlook/share-your-calendar-in-outlook-com
+madurez: T0
+---
+id: PPT-022
+area: programas
+titulo:
+  sencillo: "Quiero que aparezcan los feriados de Argentina en el calendario de Outlook"
+  tecnico: "Agregar los días festivos de un país al calendario de Outlook"
+explicacion:
+  sencillo: "Outlook puede cargar solo los feriados de tu país en el calendario, así no te agendás nada un día que no se trabaja."
+  tecnico: "Nuevo Outlook / Outlook.com: Agregar calendario > Días festivos > país. Clásico: Archivo > Opciones > Calendario > Agregar días festivos (datos 2016-2026 en Microsoft 365/2019/2016); repetirlo duplica los eventos."
+frases: ["poner los feriados en el calendario de outlook", "que outlook muestre los feriados de argentina", "agregar los días feriados al calendario", "outlook no tiene los feriados"]
+pasos:
+  - texto: "Nuevo Outlook u Outlook.com: en el calendario, en el panel que está debajo de la grilla del calendario, tocá «Agregar calendario» y después la opción de feriados (días festivos). Elegí tu país (Argentina)."
+  - texto: "Outlook clásico: andá a «Archivo» > «Opciones» > «Calendario» y tocá el botón para agregar días festivos. Marcá tu país y tocá «Aceptar». No lo hagas dos veces, porque se duplican."
+  - texto: "En el Outlook clásico, los feriados que trae llegan hasta 2026. Para quitarlos en el nuevo Outlook: clic derecho sobre el calendario de feriados > «Quitar». Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/outlook/calendar/add-holidays-to-your-calendar-in-outlook"
+fuentes:
+  - https://support.microsoft.com/en-us/outlook/calendar/add-holidays-to-your-calendar-in-outlook
+madurez: T0
+---
+id: PPT-023
+area: programas
+titulo:
+  sencillo: "Quiero guardar a alguien en mis contactos de Outlook"
+  tecnico: "Agregar un contacto en Outlook (Personas)"
+explicacion:
+  sencillo: "En Outlook podés guardar el nombre, el teléfono y el correo de una persona para no tener que acordarte la dirección. También podés guardar directamente a alguien que te mandó un correo."
+  tecnico: "Nuevo Outlook: Personas > Inicio > Nuevo contacto > Guardar; desde un correo: tarjeta de perfil > Más opciones > Agregar a contactos. Clásico: Personas > Nuevo contacto > Guardar y cerrar."
+frases: ["agregar un contacto en outlook", "guardar el correo de alguien en outlook", "agendar a una persona que me mandó un mail en outlook", "dónde están los contactos en outlook"]
+pasos:
+  - texto: "Abrí «Personas» en la barra del costado de Outlook y tocá «Nuevo contacto»."
+  - texto: "Completá lo que tengas: nombre, apellido, teléfono, correo. Tocá «Guardar» (en el Outlook clásico, «Guardar y cerrar»)."
+  - texto: "Para guardar a alguien que te escribió: abrí su correo, tocá su nombre, en la tarjeta que aparece tocá el botón de más opciones y elegí agregar a contactos. Completá y guardá."
+  - texto: "Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/outlook/people/add-find-edit-or-delete-a-contact-in-outlook"
+fuentes:
+  - https://support.microsoft.com/en-us/outlook/people/add-find-edit-or-delete-a-contact-in-outlook
+madurez: T0
+---
+id: PPT-024
+area: programas
+titulo:
+  sencillo: "Tengo mis contactos en un archivo y los quiero pasar a Outlook"
+  tecnico: "Importar contactos a Outlook desde un archivo .csv"
+explicacion:
+  sencillo: "Si tenés tus contactos guardados en un archivo (por ejemplo, uno que bajaste de otro correo o una planilla guardada como .csv), Outlook los puede cargar todos juntos en vez de escribirlos de a uno."
+  tecnico: "Nuevo Outlook: Personas > Importar contactos > Examinar > Importar. Outlook.com: Personas > Administrar contactos > Importar contactos. Clásico: Archivo > Abrir y exportar > Importar o exportar > Valores separados por comas. Usar CSV con codificación UTF-8."
+frases: ["pasar mis contactos de un archivo a outlook", "importar contactos a outlook", "cargar un archivo csv de contactos", "tengo los contactos en una planilla y los quiero en outlook"]
+pasos:
+  - texto: "Nuevo Outlook: abrí «Personas» y, arriba, tocá «Importar contactos». En Outlook.com está dentro de «Administrar contactos»."
+  - texto: "Tocá «Examinar», buscá el archivo .csv, tocá «Abrir» y después «Importar»."
+  - texto: "Outlook clásico: «Archivo» > «Abrir y exportar» > «Importar o exportar», elegí importar desde otro programa o archivo y después la opción de valores separados por comas. Elegí qué hacer con los repetidos, la carpeta «Contactos» y terminá."
+  - texto: "Si los nombres salen con letras raras (acentos o eñes mal), cancelá: el archivo tiene que estar guardado con codificación UTF-8. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/outlook/people/import-or-export-contacts-in-outlook-using-a-csv-file"
+fuentes:
+  - https://support.microsoft.com/en-us/outlook/people/import-or-export-contacts-in-outlook-using-a-csv-file
+madurez: T0
+---
+id: PPT-025
+area: programas
+titulo:
+  sencillo: "Quiero armar un grupo de contactos en Outlook para escribirles a todos juntos"
+  tecnico: "Crear una lista de contactos (grupo de contactos) en Outlook"
+explicacion:
+  sencillo: "Una «lista de contactos» junta varias direcciones bajo un solo nombre, por ejemplo «Familia» o «Consorcio». Así, para mandarles un correo a todos, ponés solo ese nombre en vez de escribir cada dirección."
+  tecnico: "Nuevo Outlook / Outlook.com: Personas > flecha junto a Nuevo contacto > Nueva lista de contactos > nombre y destinatarios > Crear. Clásico: Personas > Nuevo grupo de contactos > Agregar miembros > Guardar y cerrar."
+frases: ["armar un grupo de contactos en outlook", "crear una lista para mandar el mismo mail a varios", "lista de distribución en outlook", "agregar a alguien al grupo de contactos de outlook"]
+pasos:
+  - texto: "Nuevo Outlook u Outlook.com: abrí «Personas», tocá la flechita al lado de «Nuevo contacto» y elegí la opción de nueva lista de contactos."
+  - texto: "Ponele un nombre a la lista y agregá las personas escribiendo su nombre o su correo. Tocá «Crear»."
+  - texto: "Outlook clásico: en «Personas», tocá «Nuevo grupo de contactos», poné el nombre, usá el botón para agregar miembros y al final «Guardar y cerrar»."
+  - texto: "Para sumar a alguien después, en las listas de contactos pasá el mouse sobre la lista, tocá el lapicito para editar, agregá la persona y guardá. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/en-us/outlook/people/create-edit-or-delete-a-contact-list-or-contact-group-in-outlook"
+fuentes:
+  - https://support.microsoft.com/en-us/outlook/people/create-edit-or-delete-a-contact-list-or-contact-group-in-outlook
+madurez: T0

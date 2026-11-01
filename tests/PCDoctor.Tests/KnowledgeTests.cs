@@ -47,6 +47,7 @@ public class KnowledgeTests
         "batterysaver-usagedetails", "connecteddevices", "delivery-optimization", "energyrecommendations", "mobile-devices-addphone-direct",
         "personalization-lighting", "personalization-textinput-copilot-hardwarekey", "privacy", "privacy-activityhistory", "privacy-contacts",
         "privacy-feedback", "signinoptions-dynamiclock", "storagerecommendations", "windowsupdate-activehours",
+        "easeofaccess-eyecontrol", "network-cellular", "remotedesktop", "savelocations", "speech",
     ];
 
     [Fact]

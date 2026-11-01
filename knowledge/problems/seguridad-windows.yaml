@@ -1,0 +1,526 @@
+# La app Seguridad de Windows y sus avisos: íconos de estado, cuentas, dispositivo, firewall, exámenes, cuarentena, exclusiones, UAC, Sandbox, archivos y macros bloqueados. Guiadas con fuente oficial; nunca apagar protecciones.
+id: WSEC-001
+area: seguridad
+titulo:
+  sencillo: "¿Qué significan el tilde verde, el signo amarillo y la cruz roja en Seguridad de Windows?"
+  tecnico: "Íconos de estado de la página Inicio de Seguridad de Windows"
+explicacion:
+  sencillo: "En Seguridad de Windows cada parte (antivirus, firewall, cuentas y demás) tiene un dibujito. El tilde verde quiere decir que está todo bien. El signo amarillo, que hay una recomendación para mirar cuando puedas. La cruz roja, que hay algo que atender ya."
+  tecnico: "Página Inicio: verde = protegido, sin acciones recomendadas; amarillo = recomendación de seguridad; rojo = requiere atención inmediata. Áreas: virus y amenazas, cuentas, firewall y red, control de aplicaciones y navegador, seguridad del dispositivo, rendimiento y estado, opciones de familia, historial de protección."
+frases: ["qué significa el tilde verde en seguridad de windows", "me aparece un signo amarillo en seguridad de windows", "hay una cruz roja en el escudito de windows", "qué quieren decir los colores del antivirus de windows"]
+pasos:
+  - texto: "Abrí Seguridad de Windows (buscala en Inicio) y mirá la página de inicio: cada sección tiene su ícono."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Tilde verde: no hay que hacer nada. Signo amarillo: tocá esa sección, leé la recomendación y seguila con calma. Cruz roja: entrá ya a esa sección y hacé lo que te indica."
+    abrir: "https://support.microsoft.com/windows/security/windows-security/windows-security-app-overview"
+  - texto: "Si la cruz roja está en la parte de virus y amenazas, escribile a PC Doctor «el antivirus de Windows dice que encontró una amenaza»."
+  - texto: "En una compu de una empresa o colegio puede haber secciones que no aparecen o no se pueden cambiar: eso lo maneja el encargado de sistemas."
+fuentes:
+  - https://support.microsoft.com/windows/security/windows-security/windows-security-app-overview
+madurez: T0
+---
+id: WSEC-002
+area: seguridad
+titulo:
+  sencillo: "El antivirus encontró una amenaza y dice «Se requiere una acción»"
+  tecnico: "Historial de protección: estado «Amenaza encontrada - acción necesaria»"
+explicacion:
+  sencillo: "El antivirus de Windows encontró algo sospechoso, pero no lo tocó: espera que decidas vos. Si no sabés qué es, lo más seguro es mandarlo a cuarentena, donde queda encerrado y no puede hacer daño."
+  tecnico: "Estado Threat found - action needed en el Historial de protección: acciones Cuarentena o Permitir en el dispositivo. Ver los detalles requiere permisos de administrador. Recomendación de Microsoft: ante la duda, Cuarentena."
+frases: ["el antivirus dice se requiere una acción", "amenaza encontrada acción necesaria", "defender me pregunta qué hago con una amenaza", "me salió un aviso del antivirus esperando que elija algo"]
+pasos:
+  - texto: "Abrí Seguridad de Windows > «Protección antivirus y contra amenazas» > «Historial de protección». Tocá el aviso que pide una acción para ver los detalles (puede pedirte permiso de administrador)."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "En las acciones, elegí la de poner en cuarentena. Si no estás seguro de qué es, siempre cuarentena: es lo que recomienda Microsoft."
+    abrir: "https://support.microsoft.com/windows/security/windows-security/protection-history-in-the-windows-security-app"
+  - texto: "No elijas permitirlo en el dispositivo salvo que sepas con certeza que ese archivo es tuyo y confiable: si era un virus, tus datos y tu compu quedan en riesgo."
+  - texto: "Después, revisá toda la compu: escribile a PC Doctor «creo que tengo un virus»."
+fuentes:
+  - https://support.microsoft.com/windows/security/windows-security/protection-history-in-the-windows-security-app
+madurez: T0
+---
+id: WSEC-003
+area: seguridad
+titulo:
+  sencillo: "¿Qué es «Protección de cuentas» en Seguridad de Windows?"
+  tecnico: "Protección de cuentas: cuenta Microsoft, Windows Hello y bloqueo dinámico"
+explicacion:
+  sencillo: "Es la parte de Seguridad de Windows que junta todo lo que cuida tu forma de entrar a la compu: la cuenta de Microsoft, el ingreso con PIN, huella o cara (Windows Hello) y el bloqueo automático cuando te alejás."
+  tecnico: "Protección de cuentas (windowsdefender://account/): estado de la cuenta Microsoft (no aparece con cuentas profesionales o educativas), Windows Hello y bloqueo dinámico, con enlaces a Configuración > Cuentas > Opciones de inicio de sesión."
+frases: ["qué es protección de cuentas en seguridad de windows", "seguridad de windows me dice algo de mi cuenta", "dónde configuro la huella desde seguridad de windows", "protección de cuentas me pide configurar windows hello"]
+pasos:
+  - texto: "Abrí Seguridad de Windows y entrá en «Protección de cuentas». Ahí ves tu cuenta de Microsoft, Windows Hello y el bloqueo dinámico, cada uno con un enlace a su configuración."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Si te recomienda Windows Hello, podés configurar un PIN, la huella o la cara en las opciones de inicio de sesión."
+    abrir: "ms-settings:signinoptions"
+  - texto: "Para que la compu se bloquee sola cuando te alejás con el celular, escribile a PC Doctor «quiero que la compu se bloquee sola cuando me alejo»."
+  - texto: "Si entrás con una cuenta del trabajo o del colegio, la parte de la cuenta de Microsoft no aparece: es normal."
+    abrir: "https://support.microsoft.com/windows/security/windows-security/account-protection-in-the-windows-security-app"
+fuentes:
+  - https://support.microsoft.com/windows/security/windows-security/account-protection-in-the-windows-security-app
+madurez: T0
+---
+id: WSEC-004
+area: seguridad
+titulo:
+  sencillo: "Seguridad del dispositivo dice que «no se admite la seguridad de hardware estándar»"
+  tecnico: "Nivel de seguridad de hardware en Seguridad del dispositivo"
+explicacion:
+  sencillo: "Abajo de todo, en «Seguridad del dispositivo», Windows dice qué tan protegida está la compu por su hardware. Si dice que no cumple el nivel estándar, falta alguna pieza: por ejemplo, el chip de seguridad (TPM 2.0) o el Arranque seguro. La compu funciona igual, pero con menos protección."
+  tecnico: "Mensajes: cumple seguridad de hardware estándar (integridad de memoria/aislamiento del núcleo admitidos, TPM 2.0, Arranque seguro, DEP, UEFI MAT); mejorada (integridad de memoria activada); Secured-core (además protección SMM); «Standard hardware security not supported» si falla algún requisito."
+frases: ["no se admite la seguridad de hardware estándar", "seguridad del dispositivo dice que no cumple los requisitos", "qué significa seguridad de hardware estándar", "mi compu no tiene seguridad de hardware mejorada"]
+pasos:
+  - texto: "Abrí Seguridad de Windows > «Seguridad del dispositivo» y bajá hasta el final: ahí está el mensaje sobre el nivel de seguridad de hardware."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Si no cumple el estándar, mirá en esa misma pantalla si falta el procesador de seguridad (TPM) o si el Arranque seguro aparece apagado. Microsoft sugiere activar esas funciones en la BIOS/UEFI o consultar al fabricante."
+    abrir: "https://support.microsoft.com/windows/security/windows-security/device-security-in-the-windows-security-app"
+  - texto: "Para el chip de seguridad, escribile a PC Doctor «¿mi compu tiene TPM 2.0?»; para el arranque, «el Arranque seguro está desactivado»."
+derivar: "Tocar la BIOS/UEFI es para alguien con experiencia: si tenés BitLocker, tené a mano la clave de recuperación y no cambies otras opciones. Ante la duda, pedí ayuda técnica."
+fuentes:
+  - https://support.microsoft.com/windows/security/windows-security/device-security-in-the-windows-security-app
+madurez: T0
+---
+id: WSEC-005
+area: seguridad
+titulo:
+  sencillo: "Seguridad de Windows muestra un problema con el «procesador de seguridad» (TPM)"
+  tecnico: "Solución de problemas del procesador de seguridad y Borrar TPM"
+explicacion:
+  sencillo: "El procesador de seguridad (TPM) es un chip que guarda claves secretas de la compu, como las del PIN o del cifrado del disco. Si Windows muestra un error de ese chip, a veces alcanza con reiniciar o actualizar la BIOS. La opción «Borrar TPM» es delicada: borra esas claves y se pueden perder datos."
+  tecnico: "Seguridad del dispositivo > Detalles del procesador de seguridad > Solución de problemas del procesador de seguridad. Mensajes: actualización de firmware necesaria, TPM deshabilitado, almacenamiento o atestación no disponible (sugiere borrar), registro de arranque medido ausente (reiniciar). Borrar TPM pierde las claves (PIN, tarjetas inteligentes virtuales, datos cifrados); requiere administrador."
+frases: ["hay un problema con el tpm reinicie el dispositivo", "seguridad de windows me pide borrar el tpm", "error en el procesador de seguridad", "dice que hace falta actualizar el firmware del procesador de seguridad"]
+pasos:
+  - texto: "Abrí Seguridad de Windows > «Seguridad del dispositivo» > los detalles del procesador de seguridad, y leé el mensaje en la solución de problemas."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Si dice que reinicies, reiniciá. Si habla de una actualización de firmware o de que el TPM está deshabilitado, buscá en la página del fabricante de tu compu una actualización de BIOS/UEFI, o pedí ayuda técnica."
+    abrir: "https://support.microsoft.com/windows/security/windows-security/device-security-in-the-windows-security-app"
+  - texto: "IMPORTANTE: no toques «Borrar TPM» sin antes hacer una copia de tus datos y tener a mano la clave de recuperación de BitLocker si la usás. Se pierden las claves del chip, como el PIN para entrar. En una compu del trabajo o del colegio, no lo borres nunca sin que te lo indique sistemas."
+    abrir: "https://learn.microsoft.com/windows/security/hardware-security/tpm/initialize-and-configure-ownership-of-the-tpm"
+  - texto: "Si después de reiniciar el problema sigue, Microsoft aconseja contactar al fabricante de la compu."
+fuentes:
+  - https://support.microsoft.com/windows/security/windows-security/device-security-in-the-windows-security-app
+  - https://learn.microsoft.com/windows/security/hardware-security/tpm/initialize-and-configure-ownership-of-the-tpm
+madurez: T0
+---
+id: WSEC-006
+area: seguridad
+titulo:
+  sencillo: "Seguridad de Windows avisa que la «Protección basada en reputación» está desactivada"
+  tecnico: "Configuración de protección basada en reputación (SmartScreen)"
+explicacion:
+  sencillo: "Son los controles que revisan si un programa, un archivo o una página son conocidos como peligrosos antes de que los abras. Si alguno está apagado, Windows te muestra el signo amarillo. Conviene tenerlos encendidos."
+  tecnico: "Control de aplicaciones y navegador > Protección basada en reputación: Comprobar aplicaciones y archivos, SmartScreen para Microsoft Edge, Protección contra suplantación de identidad, Bloqueo de aplicaciones potencialmente no deseadas, SmartScreen para aplicaciones de Microsoft Store."
+frases: ["la protección basada en reputación está desactivada", "aviso amarillo en control de aplicaciones y navegador", "smartscreen para microsoft edge está apagado", "activar comprobar aplicaciones y archivos"]
+pasos:
+  - texto: "Abrí Seguridad de Windows > «Control de aplicaciones y navegador» y entrá en la configuración de la protección basada en reputación."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Encendé los interruptores que estén apagados: «Comprobar aplicaciones y archivos», «SmartScreen para Microsoft Edge», el bloqueo de aplicaciones potencialmente no deseadas y el de aplicaciones de Microsoft Store. Puede pedir permiso de administrador."
+    abrir: "https://support.microsoft.com/windows/security/windows-security/app-browser-control-in-the-windows-security-app"
+  - texto: "Si un programa o una persona te pidió apagarlos para instalar algo, desconfiá: es lo que buscan los virus y las estafas."
+  - texto: "Si los interruptores están grises, la compu la administra una empresa o colegio: consultá con sistemas."
+fuentes:
+  - https://support.microsoft.com/windows/security/windows-security/app-browser-control-in-the-windows-security-app
+madurez: T0
+---
+id: WSEC-007
+area: seguridad
+titulo:
+  sencillo: "Windows me avisó que escribí mi contraseña en un lugar peligroso o en el Bloc de notas"
+  tecnico: "Protección contra suplantación de identidad (Windows 11)"
+explicacion:
+  sencillo: "Windows 11 puede cuidar la contraseña con la que entrás a la compu: te avisa si la escribís en una página falsa, si la usás repetida en otros sitios o si la guardás escrita en el Bloc de notas o en Word. Si te avisó, lo más seguro es cambiarla."
+  tecnico: "Control de aplicaciones y navegador > Protección basada en reputación > Protección contra suplantación de identidad: aviso por sitio malicioso (activo por defecto), reutilización de contraseña y almacenamiento no seguro (Bloc de notas, Microsoft 365). Solo protege la contraseña escrita de inicio de sesión de Windows 11, no el PIN."
+frases: ["windows me avisó que escribí mi contraseña en un sitio peligroso", "aviso por guardar la contraseña en el bloc de notas", "windows dice que reutilicé mi contraseña", "me salió que cambie la contraseña por suplantación de identidad"]
+pasos:
+  - texto: "Si el aviso salió mientras escribías tu clave en una página, cerrá esa página: puede ser una copia falsa para robártela."
+  - texto: "Cambiá la contraseña de tu cuenta desde un lugar seguro. Escribile a PC Doctor «quiero cambiar la contraseña de la computadora». Nunca se la dictes a nadie."
+  - texto: "Si la tenías anotada en el Bloc de notas o en un documento, borrá esa nota. Es mejor guardarla en un administrador de contraseñas."
+    abrir: "https://support.microsoft.com/windows/security/windows-security/app-browser-control-in-the-windows-security-app"
+  - texto: "Para ver qué avisos tenés activados: Seguridad de Windows > «Control de aplicaciones y navegador» > configuración de la protección basada en reputación > «Protección contra suplantación de identidad»."
+    abrir: "ms-settings:windowsdefender"
+fuentes:
+  - https://support.microsoft.com/windows/security/windows-security/app-browser-control-in-the-windows-security-app
+madurez: T0
+---
+id: WSEC-008
+area: seguridad
+titulo:
+  sencillo: "¿Qué es la «Protección contra vulnerabilidades» y tengo que tocar algo?"
+  tecnico: "Protección contra vulnerabilidades (Exploit protection)"
+explicacion:
+  sencillo: "Es una protección que ya viene configurada y le pone «trabas» a Windows y a los programas para que un virus no pueda aprovechar sus fallas. No hace falta configurar nada: lo mejor es dejarla como viene."
+  tecnico: "Exploit protection aplica automáticamente mitigaciones (DEP, ASLR, CFG, SEHOP, etc.) al sistema y a las aplicaciones; viene preconfigurada. Algunas mitigaciones pueden tener problemas de compatibilidad con ciertas aplicaciones."
+frases: ["qué es la protección contra vulnerabilidades", "para qué sirve exploit protection", "un tutorial me dice que cambie la protección contra vulnerabilidades", "configuración del sistema en protección contra vulnerabilidades"]
+pasos:
+  - texto: "Está en Seguridad de Windows > «Control de aplicaciones y navegador» > «Protección contra vulnerabilidades». Podés mirarla, pero no hace falta cambiar nada."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Microsoft explica que viene preparada para la mayoría de la gente. No cambies esas opciones por tu cuenta ni porque te lo pide un video o un programa."
+    abrir: "https://support.microsoft.com/windows/security/windows-security/app-browser-control-in-the-windows-security-app"
+  - texto: "Cambiarlas mal puede hacer que algún programa deje de abrir: hasta las empresas las prueban antes de aplicarlas."
+    abrir: "https://learn.microsoft.com/defender-endpoint/exploit-protection"
+derivar: "Si alguien ya cambió esa configuración y ahora un programa no abre, pedí ayuda técnica para dejarla como venía."
+fuentes:
+  - https://support.microsoft.com/windows/security/windows-security/app-browser-control-in-the-windows-security-app
+  - https://learn.microsoft.com/defender-endpoint/exploit-protection
+madurez: T0
+---
+id: WSEC-009
+area: seguridad
+titulo:
+  sencillo: "En el firewall aparecen «Red de dominio», «Red privada» y «Red pública»: ¿qué son?"
+  tecnico: "Perfiles de red del Firewall de Windows"
+explicacion:
+  sencillo: "El firewall tiene tres «modos» según dónde estés conectado. Red pública: bares, hoteles o aeropuertos; es la más estricta. Red privada: tu casa, si confiás en los que se conectan. Red de dominio: solo para compus de una empresa. Lo correcto es que el firewall esté activado en las tres."
+  tecnico: "Perfiles: dominio (se aplica solo si el equipo está unido a un dominio y ve un controlador; no se elige a mano), privado (redes de confianza), público (predeterminado para redes no identificadas, más restrictivo). Las reglas se asignan por perfil. Microsoft no recomienda deshabilitar el firewall."
+frases: ["qué es red de dominio en el firewall", "en el firewall dice red privada y red pública", "cuál de las tres redes del firewall estoy usando", "el firewall tiene tres redes y no sé cuál activar"]
+pasos:
+  - texto: "Abrí Seguridad de Windows > «Firewall y protección de red». Vas a ver las tres redes, y Windows marca a cuál estás conectado ahora."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Las tres tienen que tener el firewall activado. Si alguna figura desactivada, tocala y encendé el firewall de Microsoft Defender. Apagarlo deja la compu más expuesta."
+    abrir: "https://support.microsoft.com/topic/ec0844f7-aebd-0583-67fe-601ecf5d774f"
+  - texto: "Si dice «Red de dominio» y no estás en una empresa, no te preocupes: esa solo se usa en compus de trabajo."
+    abrir: "https://learn.microsoft.com/windows/security/operating-system-security/network-security/windows-firewall/"
+  - texto: "Para elegir si tu Wi-Fi es pública o privada, escribile a PC Doctor «¿pongo mi red como pública o privada?»."
+fuentes:
+  - https://learn.microsoft.com/windows/security/operating-system-security/network-security/windows-firewall/
+  - https://support.microsoft.com/topic/ec0844f7-aebd-0583-67fe-601ecf5d774f
+madurez: T0
+---
+id: WSEC-010
+area: seguridad
+titulo:
+  sencillo: "Al abrir un programa, el firewall pregunta si le permito el acceso a la red"
+  tecnico: "Aviso del Firewall de Windows al iniciar una aplicación de red"
+explicacion:
+  sencillo: "La primera vez que un programa quiere recibir conexiones de la red, el firewall te pregunta si lo dejás. Si decís que no o cerrás el cartel, Windows lo bloquea y no vuelve a preguntar. Solo conviene permitirlo si es un programa que conocés y necesita la red (un juego en línea, un programa del trabajo)."
+  tecnico: "Sin regla de permiso previa, al primer intento de escucha se muestra un diálogo; con permisos de administrador, «No» o cancelar crea reglas de bloqueo (TCP y UDP); sin permisos, se crean reglas de bloqueo elija lo que elija. Las reglas pueden aplicarse solo al perfil privado."
+frases: ["el firewall me preguntó si permito el acceso a un programa", "cartel del firewall al abrir un juego", "le di cancelar al firewall y ahora el programa no se conecta", "windows defender firewall bloqueó algunas características de esta aplicación"]
+pasos:
+  - texto: "Mirá qué programa es. Si no lo reconocés o no lo abriste vos, no lo permitas."
+  - texto: "Si es un programa de confianza, permitile el acceso solo en redes privadas (tu casa), no en las públicas, salvo que de verdad lo necesites afuera."
+    abrir: "https://learn.microsoft.com/windows/security/operating-system-security/network-security/windows-firewall/rules"
+  - texto: "Si le diste «Cancelar» por error, el programa queda bloqueado y el cartel no vuelve a salir. Para darle permiso después, escribile a PC Doctor «el firewall de Windows no deja que un programa se conecte»."
+    abrir: "https://support.microsoft.com/topic/ec0844f7-aebd-0583-67fe-601ecf5d774f"
+  - texto: "No apagues el firewall para que un programa ande."
+fuentes:
+  - https://learn.microsoft.com/windows/security/operating-system-security/network-security/windows-firewall/rules
+  - https://support.microsoft.com/topic/ec0844f7-aebd-0583-67fe-601ecf5d774f
+madurez: T0
+---
+id: WSEC-011
+area: seguridad
+titulo:
+  sencillo: "Quiero revisar con el antivirus un pendrive o una carpeta"
+  tecnico: "Examen personalizado de Microsoft Defender Antivirus"
+explicacion:
+  sencillo: "Si te prestaron un pendrive o te pasaron una carpeta con archivos, podés pedirle al antivirus de Windows que revise solo eso, sin esperar un examen de toda la compu."
+  tecnico: "Protección antivirus y contra amenazas > Opciones de examen > Examen personalizado (windowsdefender://customscan/) > elegir la unidad o carpeta."
+frases: ["revisar un pendrive con el antivirus", "pasarle el antivirus a una carpeta sola", "me prestaron un pendrive y quiero ver si tiene virus", "analizar el disco externo con defender"]
+pasos:
+  - texto: "Enchufá el pendrive y esperá que aparezca en el Explorador de archivos."
+  - texto: "Abrí Seguridad de Windows > «Protección antivirus y contra amenazas» > «Opciones de examen». Elegí «Examen personalizado» y tocá el botón para empezar."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Se abre una ventana: elegí el pendrive (o la carpeta) y aceptá. Esperá a que termine y leé el resultado."
+    abrir: "https://support.microsoft.com/windows/security/threat-malware-protection/virus-and-threat-protection-in-the-windows-security-app"
+  - texto: "Si encontró algo, no abras los archivos del pendrive y escribile a PC Doctor «el antivirus de Windows dice que encontró una amenaza»."
+fuentes:
+  - https://support.microsoft.com/windows/security/threat-malware-protection/virus-and-threat-protection-in-the-windows-security-app
+madurez: T0
+---
+id: WSEC-012
+area: seguridad
+titulo:
+  sencillo: "Quiero revisar un solo archivo con el antivirus antes de abrirlo"
+  tecnico: "Examinar un archivo o carpeta con Microsoft Defender desde el clic derecho"
+explicacion:
+  sencillo: "Antes de abrir algo que te mandaron o que bajaste, podés hacerle clic derecho y pedirle al antivirus de Windows que lo revise. Tarda unos segundos."
+  tecnico: "Explorador de archivos > clic derecho > Examinar con Microsoft Defender (en Windows 11 puede estar dentro de «Mostrar más opciones»). El resultado se ve en Seguridad de Windows."
+frases: ["cómo le paso el antivirus a un archivo solo", "revisar un adjunto antes de abrirlo", "clic derecho para escanear un archivo con defender", "no encuentro la opción de examinar con microsoft defender"]
+pasos:
+  - texto: "Abrí el Explorador de archivos (Windows + E) y buscá el archivo, por ejemplo en Descargas."
+  - texto: "Hacé clic derecho sobre el archivo y elegí la opción para examinarlo con Microsoft Defender. En Windows 11, si no la ves, tocá primero «Mostrar más opciones»."
+    abrir: "https://support.microsoft.com/windows/security/windows-security/stay-protected-with-the-windows-security-app"
+  - texto: "Se abre Seguridad de Windows con el resultado. Si encontró algo, no lo abras. Si dice que está limpio, igual pensá si confiás en quien te lo mandó."
+fuentes:
+  - https://support.microsoft.com/windows/security/windows-security/stay-protected-with-the-windows-security-app
+madurez: T0
+---
+id: WSEC-013
+area: seguridad
+titulo:
+  sencillo: "Un programa o un video me dice que agregue una «exclusión» al antivirus"
+  tecnico: "Exclusiones de Microsoft Defender Antivirus: riesgos y qué no excluir"
+explicacion:
+  sencillo: "Una exclusión le dice al antivirus «esto no lo revises». Es un agujero en la protección: si ahí se mete un virus, el antivirus no lo ve. Casi nunca hace falta, y menos si te lo pide una página, un video, un juego «gratis» o alguien por teléfono."
+  tecnico: "Administrar la configuración > Agregar o quitar exclusiones (Archivo, Carpeta, Tipo de archivo, Proceso). Microsoft desaconseja excluir la unidad del sistema, Usuarios, carpetas Temp, carpetas de programas y extensiones como .exe, .zip, .js o .bat; usar ruta completa."
+frases: ["agregar una exclusión en windows defender", "me piden excluir una carpeta del antivirus", "poner un programa en excepciones del antivirus", "el instalador dice que lo agregue a las exclusiones de seguridad de windows"]
+pasos:
+  - texto: "Si te lo pide un programa «crackeado», un activador, un video o alguien que te llama: no lo hagas. Es una trampa típica para que un virus pase sin ser visto."
+    abrir: "https://learn.microsoft.com/defender-endpoint/defender-endpoint-exclusions-common-mistakes"
+  - texto: "Nunca excluyas el disco entero, tu carpeta de usuario, las carpetas temporales ni tipos de archivo como .exe o .zip: Microsoft lo desaconseja aunque confíes en el programa."
+  - texto: "Si un programa de confianza de verdad lo necesita (por ejemplo, uno del trabajo), que lo configure el técnico, solo para ese archivo y con su ubicación completa."
+  - texto: "Para revisar exclusiones que ya existan: Seguridad de Windows > «Protección antivirus y contra amenazas» > «Administrar la configuración» > «Agregar o quitar exclusiones». Si hay alguna que no reconocés, elegila y tocá «Quitar»."
+    abrir: "ms-settings:windowsdefender"
+fuentes:
+  - https://learn.microsoft.com/defender-endpoint/defender-endpoint-exclusions-common-mistakes
+  - https://support.microsoft.com/windows/security/threat-malware-protection/virus-and-threat-protection-in-the-windows-security-app
+madurez: T0
+---
+id: WSEC-014
+area: seguridad
+titulo:
+  sencillo: "El antivirus se llevó un archivo mío y quiero recuperarlo"
+  tecnico: "Restaurar un elemento en cuarentena desde el Historial de protección"
+explicacion:
+  sencillo: "Cuando el antivirus encuentra algo sospechoso, muchas veces no lo borra: lo encierra en «cuarentena». Se puede devolver, pero solo conviene si estás totalmente seguro de que el archivo es confiable. Si era un virus, lo estarías soltando otra vez."
+  tecnico: "Historial de protección > filtro de elementos en cuarentena > Restaurar (requiere administrador). El archivo vuelve a su ubicación original; Defender lo detecta de nuevo como «Amenaza encontrada - acción necesaria» y hay que elegir Permitir en el dispositivo."
+frases: ["el antivirus me borró un archivo", "recuperar un archivo de la cuarentena", "defender se llevó un programa que necesito", "sacar algo de la cuarentena de windows"]
+pasos:
+  - texto: "ANTES de seguir: si el archivo vino de una página que no es la oficial, de un correo, o es un «crack» o activador, no lo restaures. Lo más probable es que sea peligroso."
+  - texto: "Abrí Seguridad de Windows > «Protección antivirus y contra amenazas» > «Historial de protección». Filtrá los elementos en cuarentena y tocá el que querés."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "En las acciones, elegí «Restaurar». Te va a pedir permiso de administrador."
+    abrir: "https://learn.microsoft.com/defender-endpoint/restore-quarantined-files-microsoft-defender-antivirus"
+  - texto: "El archivo vuelve a su lugar, pero el antivirus lo va a detectar de nuevo y te va a pedir que decidas. Solo si estás seguro, elegí permitirlo en el dispositivo."
+    abrir: "https://support.microsoft.com/windows/security/windows-security/protection-history-in-the-windows-security-app"
+derivar: "Si tenés dudas, dejalo en cuarentena y consultá a un técnico de confianza: es mejor perder un archivo que infectar la compu."
+fuentes:
+  - https://support.microsoft.com/windows/security/windows-security/protection-history-in-the-windows-security-app
+  - https://learn.microsoft.com/defender-endpoint/restore-quarantined-files-microsoft-defender-antivirus
+madurez: T0
+---
+id: WSEC-015
+area: seguridad
+titulo:
+  sencillo: "Le di «Permitir» a una amenaza en el antivirus y me arrepentí"
+  tecnico: "Quitar un elemento de Amenazas permitidas"
+explicacion:
+  sencillo: "Si alguna vez le dijiste al antivirus que dejara pasar algo, queda anotado en «Amenazas permitidas» y no lo vuelve a frenar. Lo podés sacar de esa lista para que el antivirus vuelva a actuar."
+  tecnico: "Protección antivirus y contra amenazas > Amenazas actuales > Amenazas permitidas > seleccionar > No permitir. En la próxima detección, Defender actúa sobre el elemento."
+frases: ["permití un virus sin querer", "le di permitir a una amenaza en defender", "cómo deshago lo que permití en el antivirus", "dónde están las amenazas permitidas"]
+pasos:
+  - texto: "Abrí Seguridad de Windows > «Protección antivirus y contra amenazas». En la parte de amenazas actuales, buscá «Amenazas permitidas»."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Tocá el elemento que ya no querés permitir y elegí «No permitir». Desde ahí, el antivirus lo vuelve a frenar cuando lo encuentra."
+    abrir: "https://support.microsoft.com/windows/security/threat-malware-protection/virus-and-threat-protection-in-the-windows-security-app"
+  - texto: "Para que lo encuentre ya, hacé un examen completo desde «Opciones de examen» y después mirá el «Historial de protección»."
+    abrir: "https://support.microsoft.com/windows/security/windows-security/protection-history-in-the-windows-security-app"
+fuentes:
+  - https://support.microsoft.com/windows/security/threat-malware-protection/virus-and-threat-protection-in-the-windows-security-app
+  - https://support.microsoft.com/windows/security/windows-security/protection-history-in-the-windows-security-app
+madurez: T0
+---
+id: WSEC-016
+area: seguridad
+titulo:
+  sencillo: "El antivirus de Windows me muestra avisos de resumen todo el tiempo"
+  tecnico: "Notificaciones adicionales de Microsoft Defender Antivirus"
+explicacion:
+  sencillo: "Además de avisar cuando encuentra algo peligroso, el antivirus manda avisos «de resumen»: que terminó un examen, qué revisó, etc. Esos avisos extra se pueden apagar. Los importantes, los de cuando encuentra una amenaza, siguen apareciendo igual."
+  tecnico: "Configuración de protección antivirus y contra amenazas > Notificaciones > Cambiar la configuración de notificaciones: desactivar las notificaciones adicionales (mejoradas). Las críticas (detección y corrección de amenazas) no se desactivan."
+frases: ["defender me llena de notificaciones", "me avisa todo el tiempo que terminó de revisar la compu", "sacar los avisos de resumen del antivirus", "el antivirus de windows me manda muchos mensajes"]
+pasos:
+  - texto: "Antes de cerrar un aviso, leelo: si dice que encontró una amenaza, no es para ignorar. En ese caso escribile a PC Doctor «el antivirus de Windows dice que encontró una amenaza»."
+  - texto: "Para los avisos de resumen: abrí Seguridad de Windows > «Protección antivirus y contra amenazas» > su configuración, bajá hasta «Notificaciones» y tocá la opción para cambiar la configuración de notificaciones."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Apagá solo los avisos adicionales. Microsoft aclara que los avisos importantes, como los de amenazas encontradas, siguen apareciendo igual."
+    abrir: "https://learn.microsoft.com/defender-endpoint/configure-notifications-microsoft-defender-antivirus"
+fuentes:
+  - https://learn.microsoft.com/defender-endpoint/configure-notifications-microsoft-defender-antivirus
+madurez: T0
+---
+id: WSEC-017
+area: seguridad
+titulo:
+  sencillo: "Me sale «¿Quieres permitir que esta aplicación haga cambios en el dispositivo?»"
+  tecnico: "Control de cuentas de usuario (UAC): aviso de consentimiento"
+explicacion:
+  sencillo: "Es el Control de cuentas de usuario: Windows oscurece la pantalla y te pregunta antes de que un programa haga cambios importantes en la compu. Si decís «Sí», el programa recibe permisos de administrador; si decís «No», el cambio no se hace y no se rompe nada."
+  tecnico: "UAC: elevación con el token de administrador en el escritorio seguro. Aviso de consentimiento (administradores) o de credenciales (usuarios estándar). Fondo gris: aplicación de Windows o editor verificado; amarillo: sin firma o no confiable."
+frases: ["me pregunta si quiero permitir que esta aplicación haga cambios", "se oscurece la pantalla y me pide sí o no", "qué es el control de cuentas de usuario", "le doy sí o no al cartel de windows que pide permiso"]
+pasos:
+  - texto: "Mirá el nombre del programa y del fabricante que muestra el cartel. Si lo acabás de abrir vos (por ejemplo, un instalador que bajaste de la página oficial), podés decir «Sí»."
+    abrir: "https://learn.microsoft.com/windows/security/application-security/application-control/user-account-control/"
+  - texto: "Decí «No» si el cartel apareció solo sin que abrieras nada, si no reconocés el programa, o si alguien por teléfono o por mensaje te pide que aceptes."
+  - texto: "Fijate el color: si el cartel es amarillo, el programa no tiene firma o no es de confianza conocida. Pensalo dos veces."
+    abrir: "https://learn.microsoft.com/windows/security/application-security/application-control/user-account-control/how-it-works"
+  - texto: "Decir «No» es seguro: solo hace que ese programa no pueda hacer el cambio."
+fuentes:
+  - https://learn.microsoft.com/windows/security/application-security/application-control/user-account-control/
+  - https://learn.microsoft.com/windows/security/application-security/application-control/user-account-control/how-it-works
+madurez: T0
+---
+id: WSEC-018
+area: seguridad
+titulo:
+  sencillo: "Windows me pide la contraseña de un administrador para instalar algo"
+  tecnico: "UAC: aviso de credenciales en una cuenta de usuario estándar"
+explicacion:
+  sencillo: "Si tu usuario es «estándar» (no administrador), Windows pide que el dueño o encargado de la compu escriba su clave para permitir cambios importantes. Es una protección: así nadie instala cosas sin permiso."
+  tecnico: "Credential prompt: un usuario estándar debe ingresar credenciales de un administrador local para elevar. Microsoft recomienda que la cuenta principal sea de usuario estándar."
+frases: ["me pide la contraseña del administrador para instalar", "no puedo instalar nada porque no soy administrador", "windows pide usuario y clave de administrador", "mi usuario no tiene permiso para hacer cambios"]
+pasos:
+  - texto: "Es normal: la cuenta con la que entrás no es de administrador. Microsoft recomienda justamente usar así la compu, porque es más segura."
+    abrir: "https://learn.microsoft.com/windows/security/application-security/application-control/user-account-control/how-it-works"
+  - texto: "Pedile a quien administra la compu (un familiar, tu técnico o sistemas del trabajo) que escriba su clave, si está de acuerdo con ese cambio."
+  - texto: "Nunca le pases esa clave a alguien que te llama o te escribe para «arreglarte» la compu, y no la escribas en un cartel que apareció solo."
+    abrir: "https://learn.microsoft.com/windows/security/application-security/application-control/user-account-control/"
+fuentes:
+  - https://learn.microsoft.com/windows/security/application-security/application-control/user-account-control/how-it-works
+  - https://learn.microsoft.com/windows/security/application-security/application-control/user-account-control/
+madurez: T0
+---
+id: WSEC-019
+area: seguridad
+titulo:
+  sencillo: "¿Qué es Windows Sandbox y cómo lo activo?"
+  tecnico: "Windows Sandbox: escritorio aislado y descartable; requisitos"
+explicacion:
+  sencillo: "Es como una «compu de prueba» dentro de tu compu: se abre en una ventana, ahí podés probar un programa o un archivo dudoso, y al cerrarla se borra todo lo que hiciste, sin tocar tu Windows. Solo viene en Windows Pro, Enterprise y Education, no en Home."
+  tecnico: "Windows Sandbox: máquina virtual liviana y descartable aislada por hipervisor; cada inicio es limpio. Red habilitada por defecto. Requisitos: AMD64 o Arm64, virtualización activada en BIOS/UEFI, 4 GB de RAM (8 recomendados), 1 GB libre, 2 núcleos. Se activa en Características de Windows."
+frases: ["qué es windows sandbox", "quiero probar un programa sin que toque mi compu", "no me aparece windows sandbox", "abrir un archivo dudoso en un lugar aislado"]
+pasos:
+  - texto: "Fijate tu edición de Windows: si dice «Home», Sandbox no está disponible."
+    abrir: "ms-settings:about"
+  - texto: "Buscá en Inicio «Activar o desactivar las características de Windows», marcá «Windows Sandbox» y tocá «Aceptar». Reiniciá si te lo pide. Después aparece en el menú Inicio."
+    abrir: "https://learn.microsoft.com/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-install"
+  - texto: "Si la opción no está, la compu no cumple algún requisito: al menos 4 GB de memoria, 2 núcleos, 1 GB libre y la virtualización activada en la BIOS/UEFI."
+  - texto: "Adentro tiene Internet y acceso a tu red, así que un programa malo podría intentar llegar a otras compus de tu casa. Para saber si un archivo tiene virus, es más fácil revisarlo con el antivirus."
+    abrir: "https://learn.microsoft.com/windows/security/application-security/application-isolation/windows-sandbox/"
+derivar: "Activar la virtualización en la BIOS/UEFI es para alguien con experiencia: si no sabés, pedí ayuda técnica y no cambies otras opciones."
+fuentes:
+  - https://learn.microsoft.com/windows/security/application-security/application-isolation/windows-sandbox/
+  - https://learn.microsoft.com/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-install
+madurez: T0
+---
+id: WSEC-020
+area: seguridad
+titulo:
+  sencillo: "En las propiedades de un archivo aparece una casilla «Desbloquear»: ¿la marco?"
+  tecnico: "Marca de la web (Mark of the Web) y casilla Desbloquear"
+explicacion:
+  sencillo: "Windows le pone una marca a lo que bajás de Internet o te llega por correo, para tratarlo con más cuidado. Por eso algunos archivos muestran avisos o se abren limitados. La casilla «Desbloquear» saca esa marca: hacelo solo con archivos en los que confiás de verdad. Ante la duda, no lo desbloquees."
+  tecnico: "MOTW (Zone.Identifier) en archivos de zona Internet o Sitios restringidos (descargas, adjuntos), solo en NTFS. Propiedades > General > Desbloquear lo elimina (equivale a Unblock-File)."
+frases: ["el archivo dice que procede de otro equipo y podría bloquearse", "qué es la casilla desbloquear en propiedades", "el archivo que bajé está bloqueado", "tengo que desbloquear un archivo descargado"]
+pasos:
+  - texto: "Preguntate: ¿sabés quién te lo mandó y lo estabas esperando? Si no, no lo desbloquees y borralo."
+  - texto: "Revisalo antes con el antivirus: clic derecho y la opción para examinarlo con Microsoft Defender."
+    abrir: "https://support.microsoft.com/windows/security/windows-security/stay-protected-with-the-windows-security-app"
+  - texto: "Solo si confiás en el archivo: clic derecho > «Propiedades». En la pestaña «General», marcá «Desbloquear» y tocá «Aceptar»."
+    abrir: "https://learn.microsoft.com/microsoft-365-apps/security/internet-macros-blocked"
+  - texto: "Si la casilla no aparece (pasa con archivos en carpetas de red), no busques otras formas de desbloquearlo: consultá con sistemas o con quien te lo mandó."
+fuentes:
+  - https://learn.microsoft.com/microsoft-365-apps/security/internet-macros-blocked
+  - https://support.microsoft.com/windows/security/windows-security/stay-protected-with-the-windows-security-app
+madurez: T0
+---
+id: WSEC-021
+area: seguridad
+titulo:
+  sencillo: "Word o Excel avisa que bloqueó las macros por un «riesgo de seguridad»"
+  tecnico: "Bloqueo predeterminado de macros VBA en archivos de Internet"
+explicacion:
+  sencillo: "Las macros son pequeños programas dentro de un archivo de Office. Los delincuentes las usan mucho para meter virus, por eso Office las bloquea en los archivos que llegan por correo o que bajás de Internet. Si no esperabas un archivo con macros, lo más seguro es dejarlo así."
+  tecnico: "Office para Windows (Access, Excel, PowerPoint, Project, Publisher, Visio, Word) bloquea macros VBA en archivos con MOTW; la barra RIESGO DE SEGURIDAD no ofrece Habilitar contenido. Desbloqueo por archivo: Propiedades > General > Desbloquear; alternativas: ubicación de confianza o editor de confianza."
+frases: ["excel dice que bloqueó las macros", "riesgo de seguridad macros bloqueadas en word", "la planilla que me mandaron no funciona porque bloquea las macros", "cómo habilito las macros de un archivo que me llegó por mail"]
+pasos:
+  - texto: "Si el archivo vino de alguien que no conocés o de un correo inesperado (una factura, un envío, una multa), no lo desbloquees: cerralo y borralo. Es una forma muy común de meter virus."
+  - texto: "Muchas veces podés leer el archivo igual sin las macros: probá usarlo así."
+  - texto: "Solo si sabés quién lo hizo y confiás (por ejemplo, una planilla del trabajo que siempre usás): cerralo, clic derecho sobre el archivo > «Propiedades», en «General» marcá «Desbloquear», «Aceptar» y volvé a abrirlo."
+    abrir: "https://learn.microsoft.com/microsoft-365-apps/security/internet-macros-blocked"
+  - texto: "No cambies la configuración de macros de Office para habilitarlas todas. Si pasa con muchos archivos del trabajo, que lo resuelva sistemas."
+fuentes:
+  - https://learn.microsoft.com/microsoft-365-apps/security/internet-macros-blocked
+madurez: T0
+---
+id: WSEC-022
+area: seguridad
+titulo:
+  sencillo: "El antivirus de Windows da error al buscar actualizaciones"
+  tecnico: "Falla de la actualización de inteligencia de seguridad de Microsoft Defender"
+explicacion:
+  sencillo: "El antivirus baja seguido la información de los virus nuevos («inteligencia de seguridad»). Si esa actualización falla, el antivirus queda atrasado y no reconoce lo más nuevo. Suele deberse a Internet, a Windows Update o a que hay otro antivirus instalado."
+  tecnico: "Error «Protection definition update failed» o «Signature Update failed»; códigos 0x8024402c, 0x80240022, 0x80004002, 0x80070422, 0x80072efd, 0x80070005, 0x80072f78, 0x80072ee2, 0x8007001B. Causas: conectividad o proxy, otro antivirus registrado (Defender deshabilitado), Windows Update. Paquete manual en microsoft.com/wdsi/defenderupdates."
+frases: ["no se actualiza la inteligencia de seguridad", "error al actualizar el windows defender", "falló la actualización de definiciones del antivirus", "buscar actualizaciones de protección da error"]
+pasos:
+  - texto: "Revisá que tengas Internet y probá de nuevo: Seguridad de Windows > «Protección antivirus y contra amenazas» > las actualizaciones de protección > «Buscar actualizaciones»."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Esa información también llega por Windows Update: entrá, buscá actualizaciones e instalá lo que haya."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si tenés otro antivirus instalado, el de Windows queda desactivado y no se actualiza: es normal. Lo que tiene que estar al día es el otro."
+    abrir: "https://learn.microsoft.com/defender-endpoint/troubleshoot-security-intelligence-not-updated"
+  - texto: "Si sigue fallando, Microsoft ofrece el paquete para descargarlo e instalarlo a mano desde su página oficial: elegí el de tu Windows (64 bits, 32 bits o ARM)."
+    abrir: "https://www.microsoft.com/wdsi/defenderupdates"
+derivar: "Si Windows Update también falla, anotá el código de error que aparece y escribíselo a PC Doctor."
+fuentes:
+  - https://learn.microsoft.com/defender-endpoint/troubleshoot-security-intelligence-not-updated
+  - https://www.microsoft.com/wdsi/defenderupdates
+  - https://support.microsoft.com/windows/security/threat-malware-protection/virus-and-threat-protection-in-the-windows-security-app
+madurez: T0
+---
+id: WSEC-023
+area: seguridad
+titulo:
+  sencillo: "Seguridad de Windows dice que el antivirus de Microsoft está apagado porque uso otro"
+  tecnico: "Microsoft Defender deshabilitado por otro antivirus; examen periódico limitado"
+explicacion:
+  sencillo: "Si instalaste otro antivirus, el de Windows se apaga solo para no chocar. No es una falla. Mientras el otro esté activo y al día, estás protegido; si lo desinstalás o se vence, el de Windows vuelve a prenderse solo."
+  tecnico: "Con un antivirus compatible registrado, Defender se desactiva y la sección de virus y amenazas muestra el producto activo con un enlace. Opciones del Antivirus de Microsoft Defender > examen periódico limitado: detecta poco, no reemplaza al antivirus principal."
+frases: ["dice que el antivirus de microsoft defender está desactivado", "seguridad de windows muestra el nombre de otro antivirus", "qué es el examen periódico de defender", "se apagó el defender cuando instalé otro antivirus"]
+pasos:
+  - texto: "Abrí Seguridad de Windows > «Protección antivirus y contra amenazas»: ahí aparece el antivirus que te está protegiendo y un enlace para abrirlo. Fijate que esté activo y actualizado."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Si querés una revisión extra liviana, debajo del otro antivirus abrí las opciones del Antivirus de Microsoft Defender y activá el examen periódico. Ojo: revisa de vez en cuando y detecta mucho menos; no reemplaza al antivirus principal."
+    abrir: "https://learn.microsoft.com/defender-endpoint/limited-periodic-scanning-microsoft-defender-antivirus"
+  - texto: "Si el otro antivirus se venció o no lo querés más, desinstalalo desde Aplicaciones instaladas: el de Windows se vuelve a activar solo."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "No tengas dos antivirus completos funcionando a la vez: escribile a PC Doctor «tengo dos antivirus instalados»."
+fuentes:
+  - https://learn.microsoft.com/defender-endpoint/limited-periodic-scanning-microsoft-defender-antivirus
+  - https://learn.microsoft.com/defender-endpoint/microsoft-defender-security-center-antivirus
+  - https://support.microsoft.com/windows/security/windows-security/windows-security-app-overview
+madurez: T0
+---
+id: WSEC-024
+area: seguridad
+titulo:
+  sencillo: "Seguridad de Windows avisa que la protección en la nube o el envío de muestras está desactivado"
+  tecnico: "Protección proporcionada en la nube y Envío automático de muestras"
+explicacion:
+  sencillo: "Son dos ayudas del antivirus. La protección en la nube le permite consultar a Microsoft para reconocer virus nuevísimos en segundos; el envío automático de muestras manda archivos sospechosos para analizarlos. Si están apagadas, la compu queda menos protegida: Microsoft recomienda tenerlas encendidas."
+  tecnico: "Administrar la configuración > Protección proporcionada en la nube / Envío automático de muestras. Sin la nube no funcionan el bloqueo a primera vista y otras funciones. Con envío de muestras seguras, los archivos con posibles datos personales piden confirmación. Si aparecen atenuadas, las administra una directiva."
+frases: ["la protección en la nube está desactivada", "envío automático de muestras desactivado", "aviso amarillo de protección proporcionada en la nube", "qué es el envío de muestras de defender"]
+pasos:
+  - texto: "Abrí Seguridad de Windows > «Protección antivirus y contra amenazas» y, en su configuración, tocá «Administrar la configuración»."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Encendé «Protección proporcionada en la nube» y «Envío automático de muestras»."
+    abrir: "https://learn.microsoft.com/defender-endpoint/cloud-protection-configure"
+  - texto: "Si te preocupa la privacidad: cuando un archivo puede tener datos personales, Windows te pregunta antes de mandarlo."
+    abrir: "https://support.microsoft.com/windows/security/threat-malware-protection/virus-and-threat-protection-in-the-windows-security-app"
+  - texto: "Si los interruptores están grises, la compu la administra una empresa o colegio: consultá con sistemas."
+fuentes:
+  - https://learn.microsoft.com/defender-endpoint/cloud-protection-configure
+  - https://support.microsoft.com/windows/security/threat-malware-protection/virus-and-threat-protection-in-the-windows-security-app
+madurez: T0
+---
+id: WSEC-025
+area: seguridad
+titulo:
+  sencillo: "Seguridad de Windows me pide configurar OneDrive para la «recuperación de datos de ransomware»"
+  tecnico: "Recuperación de datos de ransomware con OneDrive"
+explicacion:
+  sencillo: "El ransomware es un virus que secuestra tus archivos y pide plata. Windows te ofrece tener copia de tus archivos importantes en OneDrive para poder recuperarlos si pasa. El aviso es una recomendación: no quiere decir que tengas un virus."
+  tecnico: "Protección contra ransomware > Recuperación de datos de ransomware > Configurar: vincula OneDrive; tras un ataque guía la restauración desde OneDrive y avisa si hay problemas con la copia."
+frases: ["seguridad de windows me pide configurar onedrive", "qué es la recuperación de datos de ransomware", "aviso de configurar onedrive en protección contra ransomware", "para qué quiere onedrive el antivirus"]
+pasos:
+  - texto: "Abrí Seguridad de Windows > «Protección antivirus y contra amenazas» > «Protección contra ransomware» y entrá a administrarla."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "En «Recuperación de datos de ransomware», tocá «Configurar» y seguí los pasos para entrar o vincular tu OneDrive."
+    abrir: "https://learn.microsoft.com/defender-endpoint/microsoft-defender-security-center-antivirus"
+  - texto: "Listo: si algún día un virus secuestra tus archivos, Windows te guía para recuperarlos desde OneDrive, y te avisa si la copia tiene problemas."
+    abrir: "https://support.microsoft.com/windows/security/threat-malware-protection/virus-and-threat-protection-in-the-windows-security-app"
+derivar: "Si ya te están pidiendo plata por tus archivos, escribile a PC Doctor «mis archivos no abren y me piden plata»."
+fuentes:
+  - https://learn.microsoft.com/defender-endpoint/microsoft-defender-security-center-antivirus
+  - https://support.microsoft.com/windows/security/threat-malware-protection/virus-and-threat-protection-in-the-windows-security-app
+madurez: T0

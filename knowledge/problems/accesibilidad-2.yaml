@@ -1,0 +1,512 @@
+# Accesibilidad a fondo: Narrador (encenderlo, voz, velocidad, comandos, leer páginas, describir imágenes, braille), acceso por voz, subtítulos en otro idioma, voces de lectura, Lupa (vistas y lectura), control ocular, efectos visuales, menú de accesibilidad, ayudas antes de iniciar sesión, Lector inmersivo (Word, OneNote, Edge), contraste personalizado y teclado en pantalla sin clic. Guiadas con fuente oficial.
+id: ACX-001
+area: basico
+titulo:
+  sencillo: "Quiero que la compu me lea la pantalla en voz alta (y que arranque sola)"
+  tecnico: "Activar el Narrador e iniciarlo automáticamente"
+explicacion:
+  sencillo: "El Narrador es el lector de pantalla de Windows: dice en voz alta lo que hay en la pantalla y lo que vas tocando. Sirve si no ves bien o no ves. Se prende con el teclado y se puede dejar para que arranque solo cada vez que entrás."
+  tecnico: "Windows + Ctrl + Enter activa o desactiva el Narrador; Windows + Ctrl + N abre su configuración («Usar Narrador»). En «Mostrar toda la configuración»: iniciar después del inicio de sesión (usuario) o antes del inicio de sesión (todos)."
+frases: ["quiero que la compu me lea lo que hay en la pantalla", "veo muy poco y necesito que la compu me hable", "prender el lector de pantalla de windows", "que el narrador arranque solo cuando prendo la compu"]
+pasos:
+  - texto: "Apretá a la vez Windows + Ctrl + Enter: el Narrador empieza a hablar. El mismo atajo lo apaga."
+  - texto: "La primera vez se abre «Inicio del Narrador». Ahí está «Inicio rápido», un tutorial corto para aprender lo básico (se puede volver a abrir cuando quieras)."
+  - texto: "Para que arranque solo: apretá Windows + Ctrl + N, desplegá «Mostrar toda la configuración» al lado de «Usar Narrador» y marcá la opción de iniciar el Narrador después de iniciar sesión."
+    abrir: "ms-settings:easeofaccess-narrator"
+  - texto: "Microsoft lo explica en su guía del Narrador."
+    abrir: "https://support.microsoft.com/accessibility/windows/narrator/chapter-1-introducing-narrator"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/narrator/chapter-1-introducing-narrator
+madurez: T0
+---
+id: ACX-002
+area: basico
+titulo:
+  sencillo: "La voz del Narrador no me gusta o suena muy robótica"
+  tecnico: "Cambiar la voz del Narrador y agregar voces naturales"
+explicacion:
+  sencillo: "El Narrador puede hablar con distintas voces. Además de las que vienen, se pueden agregar «voces naturales», que suenan más parecidas a una persona."
+  tecnico: "Configuración del Narrador (Windows + Ctrl + N) > «Elige una voz»; «Agregar» para voces naturales (vista previa e instalación). Narrador + Alt + Más/Menos cambia de voz."
+frases: ["la voz del narrador suena como un robot", "cambiar la voz que lee la pantalla", "quiero una voz más natural para el narrador", "el narrador habla con una voz que no entiendo bien"]
+pasos:
+  - texto: "Apretá Windows + Ctrl + N para abrir la configuración del Narrador."
+    abrir: "ms-settings:easeofaccess-narrator"
+  - texto: "En «Elige una voz», elegí otra de la lista y escuchá cómo suena."
+  - texto: "Para una voz más natural, tocá «Agregar», elegí una voz, escuchala con la vista previa e instalala. Puede tardar un poco en descargarse."
+  - texto: "Con el Narrador prendido también podés pasar de una voz a otra con la tecla del Narrador + Alt + Más (+) o Menos (−). La tecla del Narrador es Bloq Mayús o Insert."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/narrator/chapter-7-customizing-narrator"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/narrator/chapter-7-customizing-narrator
+  - https://support.microsoft.com/accessibility/windows/narrator/chapter-2-narrator-basics
+madurez: T0
+---
+id: ACX-003
+area: basico
+titulo:
+  sencillo: "El Narrador habla muy rápido (o muy lento, o muy fuerte)"
+  tecnico: "Velocidad, tono y volumen del Narrador"
+explicacion:
+  sencillo: "Se puede hacer que el Narrador hable más despacio, más rápido, más fuerte o más bajo, con el teclado o desde su configuración. Esto no cambia el volumen del resto de la compu."
+  tecnico: "Narrador + Más/Menos: velocidad. Narrador + Ctrl + Más/Menos: volumen. En configuración: «Velocidad», «Tono» y «Volumen». Tecla del Narrador: Bloq Mayús o Insert."
+frases: ["el narrador habla demasiado rápido y no le entiendo", "hacer que la voz de la compu lea más despacio", "el narrador habla muy bajito", "bajarle el volumen a la voz que lee"]
+pasos:
+  - texto: "Con el Narrador prendido, la «tecla del Narrador» es Bloq Mayús o Insert (la que prefieras)."
+  - texto: "Más rápido: tecla del Narrador + Más (+). Más lento: tecla del Narrador + Menos (−)."
+  - texto: "Más fuerte: tecla del Narrador + Ctrl + Más (+). Más bajo: tecla del Narrador + Ctrl + Menos (−)."
+  - texto: "También podés elegirlo con calma en la configuración del Narrador (Windows + Ctrl + N): debajo de la voz, en «Velocidad», «Tono» y «Volumen»."
+    abrir: "ms-settings:easeofaccess-narrator"
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/narrator/chapter-2-narrator-basics"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/narrator/chapter-2-narrator-basics
+  - https://support.microsoft.com/accessibility/windows/narrator/chapter-7-customizing-narrator
+madurez: T0
+---
+id: ACX-004
+area: basico
+titulo:
+  sencillo: "Uso el Narrador y no sé cómo moverme ni hacer que se calle"
+  tecnico: "Comandos básicos del Narrador"
+explicacion:
+  sencillo: "Con el Narrador la compu se maneja con el teclado: unas pocas teclas alcanzan para moverte, abrir cosas, repetir lo último y hacer que deje de hablar."
+  tecnico: "Tab/flechas para moverse, Enter para activar, Ctrl para callar, Narrador + X repite, Narrador + T lee el título, Narrador + W lee la ventana, Narrador + 1 aprendizaje de entrada."
+frases: ["cómo hago callar al narrador un momento", "no sé qué teclas usar con el narrador", "quiero que el narrador repita lo que dijo", "moverme por la pantalla con el lector de pantalla"]
+pasos:
+  - texto: "Para que se calle en el momento, apretá Ctrl. La «tecla del Narrador» es Bloq Mayús o Insert."
+  - texto: "Para moverte usá Tab o las flechas; para abrir o activar lo que te leyó, Enter. Con Alt + Tab pasás de un programa a otro y te dice el nombre de cada uno."
+  - texto: "Narrador + X repite lo último que dijo; Narrador + T lee el título de la ventana y Narrador + W la ventana entera; Narrador + F12 dice la hora y la fecha."
+  - texto: "Para practicar sin miedo, Narrador + 1 hace que te diga qué hace cada tecla que tocás; volvé a apretarlo para salir."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/narrator/chapter-2-narrator-basics"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/narrator/chapter-2-narrator-basics
+madurez: T0
+---
+id: ACX-005
+area: basico
+titulo:
+  sencillo: "Uso el Narrador y quiero que me lea una página de Internet"
+  tecnico: "Narrador en páginas web: resumen, modo de examen y lectura continua"
+explicacion:
+  sencillo: "En una página web, el Narrador te puede decir de un vistazo qué tiene, saltar de título en título o de enlace en enlace, y leerte el texto seguido sin que tengas que ir línea por línea."
+  tecnico: "Narrador + S: resumen de la página (dos veces: enlaces populares). Modo de examen (Narrador + Barra espaciadora): H títulos, K vínculos, P párrafos (con Mayús, hacia atrás). Narrador + R lee desde la posición actual; Ctrl detiene."
+frases: ["el narrador no me lee la página entera", "quiero escuchar una nota del diario con el narrador", "saltar de título en título con el lector de pantalla", "cómo hago que el narrador lea una página web"]
+pasos:
+  - texto: "Abrí la página. Apretá la tecla del Narrador (Bloq Mayús o Insert) + S: te dice cuántos enlaces, zonas y títulos tiene. Si lo apretás dos veces rápido, te muestra una lista de los enlaces más usados."
+  - texto: "Fijate que esté activo el «modo de examen» (Narrador + Barra espaciadora lo prende o lo apaga). Con él, H salta al título siguiente, K al enlace siguiente y P lee el párrafo siguiente; con Mayús van hacia atrás."
+  - texto: "Para que lea de corrido desde donde estás, apretá Narrador + R. Para que se calle, Ctrl."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/narrator/chapter-3-using-scan-mode"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/narrator/chapter-3-using-scan-mode
+  - https://support.microsoft.com/accessibility/windows/narrator/chapter-4-reading-text
+  - https://support.microsoft.com/accessibility/windows/narrator/chapter-2-narrator-basics
+madurez: T0
+---
+id: ACX-006
+area: basico
+titulo:
+  sencillo: "El Narrador repite cada letra que escribo y me marea"
+  tecnico: "Eco de teclado y nivel de detalle del Narrador"
+explicacion:
+  sencillo: "Se puede elegir qué dice el Narrador mientras escribís (cada letra, cada palabra o nada) y cuántos detalles agrega al leer, para que hable solo lo que te sirve."
+  tecnico: "Configuración del Narrador: «Hacer que Narrador anuncie cuando escribo» (letras, palabras, teclas de función, de navegación, de alternancia, modificadoras); «Nivel de detalle» de 1 (solo texto) a 5. Narrador + 2 alterna el eco de caracteres."
+frases: ["el narrador dice cada letra que toco", "que el narrador no lea lo que escribo", "el narrador habla de más y dice demasiados detalles", "quiero que el narrador lea las palabras enteras al escribir"]
+pasos:
+  - texto: "Apretá Windows + Ctrl + N para abrir la configuración del Narrador."
+    abrir: "ms-settings:easeofaccess-narrator"
+  - texto: "Buscá «Hacer que Narrador anuncie cuando escribo», desplegá todas sus opciones y marcá o desmarcá lo que quieras escuchar: «Letras, números y signos de puntuación», «Palabras», las teclas de función, las de navegación, Bloq Mayús y las teclas como Mayús o Alt."
+  - texto: "Atajo rápido: tecla del Narrador (Bloq Mayús o Insert) + 2 activa o apaga que diga cada letra."
+  - texto: "Si te parece que habla de más al leer, en «Nivel de detalle» elegí un número más bajo (1 es «Solo texto»)."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/narrator/chapter-7-customizing-narrator"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/narrator/chapter-7-customizing-narrator
+madurez: T0
+---
+id: ACX-007
+area: basico
+titulo:
+  sencillo: "Quiero que el Narrador me diga qué hay en una foto"
+  tecnico: "Descripción de imágenes y vínculos con el Narrador (Narrador + Ctrl + D)"
+explicacion:
+  sencillo: "Cuando el Narrador llega a una foto que no tiene texto, te puede leer una descripción de lo que muestra. En un enlace, te puede decir adónde lleva. Para hacerlo, normalmente manda la imagen a Microsoft."
+  tecnico: "Narrador + Ctrl + D describe la imagen o el destino del vínculo con el foco; la imagen se envía a Microsoft (en Copilot+ PC con Snapdragon, descripción en el dispositivo con modelos de IA). Se desactiva en la configuración del Narrador, en la administración de datos y servicios."
+frases: ["el narrador dice imagen y no me dice qué es", "que la compu me describa una foto", "soy ciego y quiero saber qué hay en una imagen", "a dónde lleva este enlace, que me lo diga el narrador"]
+pasos:
+  - texto: "Con el Narrador prendido, llegá hasta la imagen (con Tab o las flechas) y apretá la tecla del Narrador (Bloq Mayús o Insert) + Ctrl + D. Te lee una descripción de la imagen; si estás sobre un enlace, te dice adónde lleva."
+  - texto: "Tené en cuenta que, para describirla, la imagen se manda a Microsoft. En algunas Copilot+ PC (con procesador Snapdragon) la descripción se hace en la propia compu y es más detallada."
+  - texto: "Si no querés que se manden imágenes, abrí la configuración del Narrador (Windows + Ctrl + N) y apagá ese servicio en la parte de administración de datos y servicios."
+    abrir: "ms-settings:easeofaccess-narrator"
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/narrator/chapter-2-narrator-basics"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/narrator/chapter-2-narrator-basics
+madurez: T0
+---
+id: ACX-008
+area: perifericos
+titulo:
+  sencillo: "Quiero usar mi línea braille con la computadora"
+  tecnico: "Pantalla braille con el Narrador"
+explicacion:
+  sencillo: "El Narrador puede mostrar el texto en una pantalla (línea) braille y recibir lo que escribís en ella. Hay que descargar una vez el complemento de braille y agregar tu pantalla."
+  tecnico: "Configuración del Narrador > «Usar una pantalla braille con el Narrador» > «Descargar e instalar Braille» (requiere reiniciar) > «Activar braille» > «Agregar una pantalla braille» (fabricante y conexión USB o puerto serie; Bluetooth no compatible)."
+frases: ["conectar mi pantalla braille a la compu", "uso línea braille y quiero que funcione con windows", "el narrador no muestra nada en mi braille", "configurar braille en windows"]
+pasos:
+  - texto: "Apretá Windows + Ctrl + N y elegí «Usar una pantalla braille con el Narrador»."
+    abrir: "ms-settings:easeofaccess-narrator"
+  - texto: "Tocá «Descargar e instalar Braille» y esperá: puede tardar. Cuando termine, reiniciá la compu (sin reiniciar no funciona) y volvé a esa misma parte de la configuración."
+  - texto: "Activá «Activar braille», tocá «Agregar una pantalla braille» y elegí la marca y la conexión. Solo funciona por USB o puerto serie, no por Bluetooth."
+  - texto: "Ahí mismo podés elegir el idioma y el tipo de braille (grado 1, grado 2 o de 8 puntos). Si además usás JAWS o NVDA, puede hacer falta elegir otro controlador de la pantalla."
+  - texto: "Microsoft lo explica, con la lista de pantallas compatibles."
+    abrir: "https://support.microsoft.com/accessibility/windows/narrator/chapter-8-using-narrator-with-braille"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/narrator/chapter-8-using-narrator-with-braille
+madurez: T0
+---
+id: ACX-009
+area: basico
+titulo:
+  sencillo: "Con el acceso por voz quiero abrir, cambiar y cerrar programas"
+  tecnico: "Acceso por voz: órdenes para ventanas y aplicaciones"
+explicacion:
+  sencillo: "Una vez que el acceso por voz está andando, podés abrir un programa, pasar a otro, agrandar o achicar la ventana y cerrarla solo diciéndolo. Las órdenes dependen del idioma que elegiste para el acceso por voz."
+  tecnico: "Voice access (Windows 11 22H2+): Open/Close/Switch to [programa], Minimize/Maximize window, Go to desktop, Scroll [dirección]. En español la página oficial las muestra como «Abrir», «Cerrar», «Ir a», «Minimizar ventana», «Maximizar ventana», «Ir al escritorio»."
+frases: ["abrir el word diciéndolo en voz alta", "cambiar de programa hablando", "cerrar una ventana con la voz", "bajar en la página sin tocar el mouse, hablando"]
+pasos:
+  - texto: "Con el acceso por voz escuchando, decí «Abrir» y el nombre del programa (por ejemplo, «Abrir Calculadora»). Si no lo encuentra, abre la búsqueda de Windows con resultados numerados: decí el número, o «Cancelar»."
+  - texto: "Para pasar a otro programa decí «Ir a» y su nombre; para cerrarlo, «Cerrar» y su nombre. «Minimizar ventana» y «Maximizar ventana» achican o agrandan la que estás usando, e «Ir al escritorio» te lleva al escritorio."
+  - texto: "Para bajar o subir en una página, dejá la flechita del mouse sobre lo que querés mover y pedile que se desplace hacia abajo o hacia arriba. Si lo tenés configurado en inglés, las órdenes son «Open», «Switch to», «Close», «Scroll down»."
+  - texto: "Microsoft lo explica, con todas las órdenes."
+    abrir: "https://support.microsoft.com/accessibility/windows/voice-access/use-voice-to-work-with-windows-and-apps"
+derivar: "Si todavía no activaste el acceso por voz, escribile a PC Doctor «manejar la compu con la voz»."
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/voice-access/use-voice-to-work-with-windows-and-apps
+madurez: T0
+---
+id: ACX-010
+area: basico
+titulo:
+  sencillo: "Con el acceso por voz no puedo hacer clic en un botón que no tiene nombre"
+  tecnico: "Acceso por voz: superposición de números"
+explicacion:
+  sencillo: "Si un botón o un ícono no tiene un nombre que puedas decir, el acceso por voz le pone un número a cada cosa que se puede tocar: decís el número y hace clic ahí."
+  tecnico: "Voice access: «Hacer clic en [elemento]»; «Mostrar números» (Show numbers) etiqueta los elementos; «[número]» o «Hacer clic en [número]»; «Ocultar números» o «Cancelar». Para lo que no recibe número, superposición de cuadrícula."
+frases: ["el acceso por voz no encuentra el botón que quiero", "hacer clic diciendo un número", "aparecen numeritos en la pantalla cuando hablo", "cómo toco un ícono con la voz"]
+pasos:
+  - texto: "Si el botón tiene un nombre visible, decí «Hacer clic en» y ese nombre. No hace falta decirlo entero: alcanza con una parte."
+  - texto: "Si no tiene nombre, decí «Mostrar números»: aparece un número sobre cada cosa que se puede tocar. Decí el número (o «Hacer clic en» y el número) y hace clic ahí. En inglés es «Show numbers»."
+  - texto: "Para sacar los números sin elegir nada, decí «Ocultar números» o «Cancelar»."
+  - texto: "Si lo que querés tocar no recibe número, se puede usar la cuadrícula para llevar la flechita a cualquier lugar de la pantalla. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/voice-access/use-voice-to-interact-with-items-on-the-screen"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/voice-access/use-voice-to-interact-with-items-on-the-screen
+madurez: T0
+---
+id: ACX-011
+area: basico
+titulo:
+  sencillo: "Los subtítulos en vivo escriben en otro idioma (o quiero que traduzcan)"
+  tecnico: "Subtítulos en vivo: cambiar el idioma y traducción en Copilot+ PC"
+explicacion:
+  sencillo: "Los subtítulos en vivo de Windows escriben en un idioma por vez. Si escriben en inglés lo que se dice en castellano, hay que cambiarles el idioma. Algunas compus nuevas (Copilot+ PC) además pueden traducir, pero solo al inglés o al chino."
+  tecnico: "Engranaje de la ventana de subtítulos > «Cambiar idioma» > «Continuar» > «Descargar». En 23H2 o anterior: «Idioma de subtítulos» > «Agregar un idioma» (Idioma y región, reconocimiento de voz mejorado). Traducción: Copilot+ PC con 24H2 o posterior; destino inglés (más de 40 idiomas) o chino simplificado (27)."
+frases: ["los subtítulos de la compu salen en inglés", "los subtítulos en vivo no entienden castellano", "cambiar el idioma de los subtítulos de windows", "que la compu traduzca lo que dicen en un video en otro idioma"]
+pasos:
+  - texto: "Abrí los subtítulos en vivo (Windows + Ctrl + L). En su ventanita tocá el engranaje > «Cambiar idioma», elegí el idioma (por ejemplo, español), tocá «Continuar» y, si te lo pide, «Descargar». Te avisa cuando está listo."
+  - texto: "Si tu Windows 11 es 23H2 o anterior: engranaje > «Idioma de subtítulos» > «Agregar un idioma». Se abre Idioma y región para agregar un idioma que tenga reconocimiento de voz; después elegilo en «Idioma de subtítulos»."
+    abrir: "ms-settings:regionlanguage"
+  - texto: "Traducir: solo en una Copilot+ PC con Windows 11 24H2 o más nuevo, y la página de Microsoft solo menciona traducción al inglés o al chino simplificado. Aparece sola cuando el idioma de salida de los subtítulos es uno de esos."
+  - texto: "Microsoft lo explica, con la lista de idiomas."
+    abrir: "https://support.microsoft.com/accessibility/windows/use-live-captions-to-better-understand-audio"
+derivar: "Si todavía no usaste los subtítulos en vivo, escribile a PC Doctor «quiero subtítulos en todo lo que se escucha»."
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/use-live-captions-to-better-understand-audio
+madurez: T0
+---
+id: ACX-012
+area: basico
+titulo:
+  sencillo: "La voz que me lee los textos habla en otro idioma o con acento raro"
+  tecnico: "Idioma y voces de texto a voz (Hora e idioma > Voz)"
+explicacion:
+  sencillo: "Las funciones que leen en voz alta (el Lector inmersivo, la lectura en voz alta de Word o de Edge) usan las voces instaladas en Windows. Si no hay una voz en español, leen con una voz de otro idioma. Se agrega el idioma con su voz y listo."
+  tecnico: "Hora e idioma > Idioma y región > Agregar un idioma (marcar texto a voz); Hora e idioma > Voz: idioma de voz, opción de reconocer acentos no nativos, voz predeterminada y velocidad."
+frases: ["la voz que lee los textos habla en inglés", "la compu lee el español con acento gringo", "agregar una voz en español a la compu", "el leer en voz alta pronuncia todo mal"]
+pasos:
+  - texto: "Abrí Hora e idioma > Idioma y región y fijate que «Español» esté en la lista. Si no está, tocá «Agregar un idioma», elegí la variante de español que quieras y, al instalarla, dejá marcada la opción de texto a voz."
+    abrir: "ms-settings:regionlanguage"
+  - texto: "Después abrí Hora e idioma > Voz: en el idioma de voz elegí español, y más abajo, en las voces, elegí una en español y la velocidad que te resulte cómoda."
+    abrir: "ms-settings:speech"
+  - texto: "Si hablás con un acento distinto del idioma elegido, ahí mismo podés activar que reconozca acentos no nativos."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/en-us/education/learning-accelerators/download-languages-and-voices-for-immersive-reader-read-mode-and-read-aloud"
+fuentes:
+  - https://support.microsoft.com/en-us/education/learning-accelerators/download-languages-and-voices-for-immersive-reader-read-mode-and-read-aloud
+madurez: T0
+---
+id: ACX-013
+area: basico
+titulo:
+  sencillo: "La lupa me agranda toda la pantalla y me pierdo"
+  tecnico: "Vistas de la Lupa: pantalla completa, lente y acoplada"
+explicacion:
+  sencillo: "La Lupa no tiene por qué agrandar toda la pantalla. Puede funcionar como una lupa de mano que sigue al mouse, o mostrar lo agrandado en una franja fija y dejar el resto normal. También puede invertir los colores para cansar menos la vista."
+  tecnico: "Con la Lupa activa: Ctrl + Alt + F pantalla completa, Ctrl + Alt + L lente, Ctrl + Alt + D acoplada, Ctrl + Alt + M alterna vistas, Ctrl + Alt + I invierte colores. Windows + Más/Menos zoom, Windows + Esc cierra."
+frases: ["la lupa agranda todo y no sé dónde estoy", "quiero que la lupa agrande solo un pedacito", "usar la lupa como una lupa de verdad", "poner la lupa con fondo negro y letras blancas"]
+pasos:
+  - texto: "Prendé la Lupa con Windows + Más (+)."
+  - texto: "Apretá Ctrl + Alt + L para la vista de lente: agranda solo un recuadro alrededor del mouse, como una lupa de mano que vas moviendo."
+  - texto: "Apretá Ctrl + Alt + D para la vista acoplada: lo agrandado se ve en una franja fija en un borde y el resto de la pantalla queda normal. Ctrl + Alt + F vuelve a pantalla completa, y Ctrl + Alt + M pasa de una vista a otra."
+  - texto: "Si el fondo blanco te encandila, Ctrl + Alt + I invierte los colores; el mismo atajo los vuelve a la normalidad. Para cerrar la Lupa, Windows + Esc."
+  - texto: "Microsoft lista todos los atajos de la Lupa."
+    abrir: "https://support.microsoft.com/en-us/accessibility/windows/magnifier/keyboard-shortcuts-for-magnifier"
+fuentes:
+  - https://support.microsoft.com/en-us/accessibility/windows/magnifier/keyboard-shortcuts-for-magnifier
+madurez: T0
+---
+id: ACX-014
+area: basico
+titulo:
+  sencillo: "Quiero que la Lupa, además de agrandar, me lea el texto en voz alta"
+  tecnico: "Lectura con la Lupa (Magnifier reading)"
+explicacion:
+  sencillo: "La Lupa de Windows puede leer en voz alta el texto, sin tener que prender el Narrador. Sirve si ves algo pero te cansa leer."
+  tecnico: "Con la Lupa activa: Ctrl + Alt + Enter inicia, pausa y reanuda; Ctrl + Alt + clic lee desde ese punto; Ctrl + Alt + K / H oración siguiente / anterior; cualquier tecla detiene. Tecla modificadora en Configuración > Accesibilidad > Lupa > Lectura."
+frases: ["que la lupa me lea lo que estoy viendo", "la lupa puede leer en voz alta", "agrandar y escuchar el texto a la vez", "me canso de leer aunque use la lupa"]
+pasos:
+  - texto: "Prendé la Lupa con Windows + Más (+)."
+  - texto: "Apretá Ctrl + Alt + Enter: empieza a leer desde donde está el cursor. El mismo atajo pausa y sigue. Para que lea desde un lugar, mantené apretadas Ctrl + Alt y hacé clic ahí."
+  - texto: "Ctrl + Alt + K lee la oración siguiente y Ctrl + Alt + H la anterior. Para que deje de leer, apretá cualquier tecla."
+  - texto: "Si usás también el Narrador, conviene cambiar la tecla de la lectura en Accesibilidad > Lupa, en la parte «Lectura»."
+    abrir: "ms-settings:easeofaccess-magnifier"
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/magnifier/how-to-use-magnifier-reading"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/magnifier/how-to-use-magnifier-reading
+madurez: T0
+---
+id: ACX-015
+area: perifericos
+titulo:
+  sencillo: "Quiero manejar la computadora con la mirada"
+  tecnico: "Control ocular (Eye control) de Windows"
+explicacion:
+  sencillo: "Con un aparato especial que sigue los ojos (un «rastreador ocular»), Windows se puede manejar mirando: hacer clic, escribir con un teclado en pantalla y hasta hacer que la compu diga una frase. Sin ese aparato no funciona."
+  tecnico: "Requiere eye tracker compatible (Tobii, EyeTech TM5 Mini). Configuración > Accesibilidad > Control ocular. Launchpad: clic, desplazamiento, mouse preciso, teclado (solo distribución EN-US), texto a voz; selección fijando la mirada (tiempo de permanencia)."
+frases: ["manejar la compu con los ojos", "mi papá no puede mover las manos y quiere usar la compu", "usar la computadora mirando la pantalla", "tengo un tobii y quiero que windows lo use"]
+pasos:
+  - texto: "Necesitás un rastreador ocular compatible (por ejemplo, de Tobii o el EyeTech TM5 Mini). Instalá el programa del fabricante, ponelo debajo de la pantalla y hacé la calibración: mirá cada punto hasta que explote y guardá un perfil para cada persona."
+  - texto: "Abrí Accesibilidad > «Control ocular» y activalo. Aparece el «launchpad», una barra con botones que se eligen fijando la mirada un momento."
+    abrir: "ms-settings:easeofaccess-eyecontrol"
+  - texto: "Para hacer clic: fijá la mirada en el botón de clic izquierdo y después mirá el lugar donde querés hacer clic. Para cancelar, mirá fuera de la pantalla. También tiene botones para desplazarte, escribir y hacer que la compu lea en voz alta lo que escribiste."
+  - texto: "Si se activan cosas solas (por ejemplo, mirando una película), pausá el control ocular desde el launchpad. Ojo: su teclado solo viene con la distribución en inglés de EE. UU."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/eye-control/eye-control-basics-in-windows"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/eye-control/get-started-with-eye-control-in-windows
+  - https://support.microsoft.com/accessibility/windows/eye-control/eye-control-basics-in-windows
+madurez: T0
+---
+id: ACX-016
+area: basico
+titulo:
+  sencillo: "Las barras para bajar en las ventanas desaparecen y no las encuentro"
+  tecnico: "Mostrar siempre las barras de desplazamiento"
+explicacion:
+  sencillo: "Windows 11 esconde las barras de desplazamiento (las que sirven para bajar o subir) hasta que acercás el mouse. Si te cuesta encontrarlas, podés hacer que se vean siempre."
+  tecnico: "Configuración > Accesibilidad > Efectos visuales > «Mostrar siempre las barras de desplazamiento»."
+frases: ["no veo la barra para bajar en la ventana", "la barrita del costado aparece y desaparece", "quiero que la barra de desplazamiento quede siempre a la vista", "no encuentro cómo bajar en una lista sin la ruedita"]
+pasos:
+  - texto: "Abrí Accesibilidad > «Efectos visuales»."
+    abrir: "ms-settings:easeofaccess-visualeffects"
+  - texto: "Activá «Mostrar siempre las barras de desplazamiento». Desde ahora quedan a la vista en las ventanas, aunque no acerques el mouse."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/make-it-easier-to-focus-on-tasks"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/make-it-easier-to-focus-on-tasks
+madurez: T0
+---
+id: ACX-017
+area: basico
+titulo:
+  sencillo: "Las ventanas que se deslizan y aparecen de a poco me marean"
+  tecnico: "Desactivar los efectos de animación (Accesibilidad)"
+explicacion:
+  sencillo: "Windows hace que las ventanas y los menús se deslicen o aparezcan despacito. A algunas personas eso les molesta o las distrae. Se puede apagar y todo aparece de una."
+  tecnico: "Configuración > Accesibilidad > Efectos visuales > «Efectos de animación» desactivado: ventanas y menús sin deslizamiento ni fundido."
+frases: ["las animaciones de windows me marean", "que las ventanas aparezcan de golpe sin efecto", "me distrae cuando los menús se deslizan", "sacar el movimiento de las ventanas por la vista"]
+pasos:
+  - texto: "Abrí Accesibilidad > «Efectos visuales»."
+    abrir: "ms-settings:easeofaccess-visualeffects"
+  - texto: "Apagá «Efectos de animación». Las ventanas y los menús dejan de deslizarse y de aparecer de a poco."
+  - texto: "Si lo que buscás es que la compu ande más rápido, escribile a PC Doctor «sacar las animaciones para que ande más rápido»."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/make-it-easier-to-focus-on-tasks"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/make-it-easier-to-focus-on-tasks
+madurez: T0
+---
+id: ACX-018
+area: basico
+titulo:
+  sencillo: "El menú Inicio y la barra de abajo se ven transparentes y me cuesta leerlos"
+  tecnico: "Desactivar los efectos de transparencia"
+explicacion:
+  sencillo: "Windows pone algunos fondos medio transparentes, y lo que hay detrás se mezcla con las letras. Si se apaga la transparencia, los fondos quedan lisos y se lee mejor."
+  tecnico: "Configuración > Accesibilidad > Efectos visuales > «Efectos de transparencia» desactivado: fondos de ventanas más opacos."
+frases: ["el menú inicio es transparente y no leo bien", "se ve el fondo de pantalla a través de las ventanas", "quiero los fondos de las ventanas lisos", "sacar la transparencia de windows para leer mejor"]
+pasos:
+  - texto: "Abrí Accesibilidad > «Efectos visuales»."
+    abrir: "ms-settings:easeofaccess-visualeffects"
+  - texto: "Apagá «Efectos de transparencia». Los fondos de las ventanas quedan más sólidos y se distinguen mejor las letras."
+  - texto: "Si además necesitás colores más marcados, escribile a PC Doctor «quiero más contraste en la pantalla»."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/make-it-easier-to-focus-on-tasks"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/make-it-easier-to-focus-on-tasks
+madurez: T0
+---
+id: ACX-019
+area: basico
+titulo:
+  sencillo: "Quiero prender la lupa o el Narrador rápido, sin buscar en Configuración"
+  tecnico: "Menú de Accesibilidad en la configuración rápida (Windows + A)"
+explicacion:
+  sencillo: "En el panel que se abre abajo a la derecha (donde están el Wi-Fi y el volumen) hay un botón de Accesibilidad con las ayudas más usadas. Con un toque las prendés o apagás, sin entrar a Configuración."
+  tecnico: "Windows + A abre la configuración rápida; el botón Accesibilidad despliega seis opciones con interruptor (Lupa, Filtros de color, Narrador, Audio mono, Subtítulos en vivo, Teclas especiales) y un acceso a más configuración, donde se elige qué mostrar."
+frases: ["un atajo para prender la lupa rápido", "dónde está el botón de accesibilidad de abajo", "prender y apagar el narrador sin entrar a configuración", "tener a mano las opciones de accesibilidad"]
+pasos:
+  - texto: "Apretá Windows + A para abrir la configuración rápida y elegí el botón de «Accesibilidad»."
+  - texto: "Aparecen interruptores para la Lupa, los filtros de color, el Narrador, el audio mono, los subtítulos en vivo y las teclas especiales. Tocá el que quieras para prenderlo o apagarlo."
+  - texto: "Abajo de esa lista hay un botón para ir a más opciones de accesibilidad; desde ahí también podés cambiar qué ayudas aparecen en el menú."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/en-us/accessibility/windows/use-a-screen-reader-and-keyboard-to-navigate-the-windows-accessibility-flyout"
+fuentes:
+  - https://support.microsoft.com/en-us/accessibility/windows/use-a-screen-reader-and-keyboard-to-navigate-the-windows-accessibility-flyout
+madurez: T0
+---
+id: ACX-020
+area: basico
+titulo:
+  sencillo: "Necesito la lupa o el Narrador desde la pantalla donde pongo la clave"
+  tecnico: "Accesibilidad antes de iniciar sesión (Lupa y Narrador para todos los usuarios)"
+explicacion:
+  sencillo: "Si no ves bien, la pantalla para entrar a Windows también puede ser difícil. Se puede usar el botón de accesibilidad de esa pantalla, o dejar configurado que la Lupa o el Narrador arranquen solos antes de iniciar sesión."
+  tecnico: "Pantalla de inicio de sesión: ícono de Accesibilidad (abajo a la derecha) con interruptor del Narrador. Lupa (Windows + Ctrl + M): iniciar antes del inicio de sesión. Narrador (Windows + Ctrl + N) > «Mostrar toda la configuración» > «Iniciar el Narrador antes de iniciar sesión para todos los usuarios»."
+frases: ["no veo nada en la pantalla donde pongo la clave", "que la lupa ya esté prendida antes de entrar a windows", "el narrador no habla en la pantalla de inicio", "necesito ayuda para ver al prender la compu, antes de entrar"]
+pasos:
+  - texto: "En la pantalla para entrar, abajo a la derecha, tocá el ícono de accesibilidad: ahí podés prender el Narrador en ese momento. Se apaga solo cuando salís de esa pantalla."
+  - texto: "Para que la Lupa ya esté prendida antes de entrar: apretá Windows + Ctrl + M, desplegá la opción de la Lupa y marcá la de iniciarla antes de iniciar sesión. Vale para todos los que usan la compu."
+    abrir: "ms-settings:easeofaccess-magnifier"
+  - texto: "Para el Narrador: Windows + Ctrl + N > «Mostrar toda la configuración» y marcá «Iniciar el Narrador antes de iniciar sesión para todos los usuarios»."
+    abrir: "ms-settings:easeofaccess-narrator"
+  - texto: "Microsoft lo explica para la Lupa y para el Narrador."
+    abrir: "https://support.microsoft.com/accessibility/windows/magnifier/chapter-1-introducing-magnifier"
+derivar: "Si lo que no anda es el teclado para poner la clave, escribile a PC Doctor «no tengo teclado para poner la clave»."
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/magnifier/chapter-1-introducing-magnifier
+  - https://support.microsoft.com/accessibility/windows/narrator/chapter-1-introducing-narrator
+madurez: T0
+---
+id: ACX-021
+area: basico
+titulo:
+  sencillo: "Quiero que Word me lea el documento y verlo más cómodo para leer"
+  tecnico: "Lector inmersivo y Lectura en voz alta en Word"
+explicacion:
+  sencillo: "El «Lector inmersivo» de Word muestra el documento a pantalla completa, con renglones más cortos, más espacio entre letras y el color de fondo que prefieras. Además te lo puede leer en voz alta, marcando cada palabra mientras la dice."
+  tecnico: "Word de escritorio: Vista > Lector inmersivo (Ancho de columna, Color de página, Foco de línea, Espaciado de texto, Sílabas, Lectura en voz alta). Lectura en voz alta: Ctrl + Alt + Barra espaciadora inicia o sale, Ctrl + Barra espaciadora pausa, Alt + flecha derecha/izquierda velocidad."
+frases: ["que word me lea el documento en voz alta", "me cuesta leer las cartas largas en word", "poner la hoja de word con otro color de fondo para leer", "leer en word renglón por renglón"]
+pasos:
+  - texto: "Abrí el documento y en la pestaña «Vista» elegí «Lector inmersivo». Se abre a pantalla completa."
+  - texto: "Arriba podés cambiar el «Ancho de columna», el «Color de página», el «Espaciado de texto» y el «Foco de línea» (muestra de a 1, 3 o 5 renglones)."
+  - texto: "Tocá «Lectura en voz alta» para que lo lea marcando cada palabra. Con el engranaje cambiás la voz y la velocidad. Atajos: Ctrl + Barra espaciadora pausa o sigue; Alt + flecha derecha o izquierda la hace más rápida o más lenta."
+  - texto: "Para salir: «Cerrar Lector inmersivo». Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/word/use-immersive-reader-in-word"
+fuentes:
+  - https://support.microsoft.com/accessibility/word/use-immersive-reader-in-word
+madurez: T0
+---
+id: ACX-022
+area: basico
+titulo:
+  sencillo: "Quiero que OneNote me lea mis notas en voz alta"
+  tecnico: "Lector inmersivo en OneNote"
+explicacion:
+  sencillo: "OneNote tiene un «Lector inmersivo» que lee la página en voz alta y deja agrandar la letra, separar más las letras y cambiar el color de fondo. Hasta puede traducir el texto a otro idioma."
+  tecnico: "OneNote (Microsoft 365, 2024, 2021, 2016 y web): Vista > Lector inmersivo; Reproducir; clic en una palabra para empezar desde ahí; opciones de voz (velocidad y voz), opciones de texto, foco de línea, traducir."
+frases: ["que onenote me lea lo que anoté", "escuchar mis notas de onenote", "agrandar la letra para leer en onenote", "onenote lector inmersivo cómo se usa"]
+pasos:
+  - texto: "En OneNote, abrí la página y elegí «Vista» > «Lector inmersivo»."
+  - texto: "Tocá el botón de reproducir para que lea los párrafos en voz alta. Para empezar desde otro lugar, hacé clic en la palabra donde querés que arranque."
+  - texto: "En las opciones de voz podés elegir la voz y la velocidad; en las de texto, el tamaño de la letra, el espacio entre letras, el tipo de letra y el color de fondo."
+  - texto: "Microsoft lo explica (OneNote para Windows 10 ya no tiene soporte desde octubre de 2025)."
+    abrir: "https://support.microsoft.com/en-us/topic/use-immersive-reader-for-onenote-10712138-b4ed-4513-958d-d9a1b3038170"
+fuentes:
+  - https://support.microsoft.com/en-us/topic/use-immersive-reader-for-onenote-10712138-b4ed-4513-958d-d9a1b3038170
+madurez: T0
+---
+id: ACX-023
+area: basico
+titulo:
+  sencillo: "Quiero que Edge me lea una página o me la muestre limpia y con letra grande"
+  tecnico: "Modo de lectura y Leer en voz alta en Microsoft Edge"
+explicacion:
+  sencillo: "Microsoft Edge tiene un modo de lectura que deja solo el texto de la nota, sin publicidad ni menús, con la letra y el fondo que quieras. Desde ahí también te la puede leer en voz alta."
+  tecnico: "Edge: F9 o ícono del modo de lectura en la barra de direcciones (se habilita en Configuración > Apariencia > Barra de herramientas). Leer en voz alta en la barra del modo de lectura (o Más herramientas): reproducir, párrafo anterior/siguiente, opciones de voz. Preferencias de texto: fuente, tamaño, ancho de columna y tema."
+frases: ["que edge me lea la nota en voz alta", "ver una página de edge sin tanta cosa alrededor", "agrandar la letra de una nota en edge para leerla", "en edge quiero escuchar una página en vez de leerla"]
+pasos:
+  - texto: "En Microsoft Edge, abrí la página y apretá F9 (o tocá el ícono del modo de lectura en la barra de direcciones). Si el ícono no está, se activa desde el menú de los tres puntos > Configuración > Apariencia, en la barra de herramientas."
+  - texto: "Para que te la lea, tocá «Leer en voz alta» en la barra de arriba. Aparecen botones para reproducir, saltar de párrafo y las opciones de voz, donde elegís la voz y la velocidad. Para parar, pausa o la X."
+  - texto: "Para leer más cómodo, tocá el ícono de configuración de esa barra y, en la apariencia, cambiá el tipo de letra, el tamaño (mové la barrita a la derecha para agrandarla), el ancho de la columna y el color de fondo."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/edge/use-immersive-reader-in-microsoft-edge"
+fuentes:
+  - https://support.microsoft.com/edge/use-immersive-reader-in-microsoft-edge
+  - https://support.microsoft.com/accessibility/windows/make-it-easier-to-focus-on-tasks
+madurez: T0
+---
+id: ACX-024
+area: basico
+titulo:
+  sencillo: "Puse alto contraste pero quiero elegir yo los colores"
+  tecnico: "Personalizar un tema de contraste"
+explicacion:
+  sencillo: "Los temas de contraste vienen con colores fijos, pero se pueden cambiar: por ejemplo, fondo negro con letras amarillas y enlaces celestes. Se guarda con un nombre para usarlo siempre."
+  tecnico: "Configuración > Accesibilidad > Temas de contraste > elegir tema > «Editar»: Fondo, Texto, Hipervínculos, Texto inactivo, Texto seleccionado, Texto de botón (paleta + brillo, «Listo») > «Guardar como» > «Guardar y aplicar»."
+frases: ["cambiar los colores del alto contraste", "quiero fondo negro y letras amarillas en toda la compu", "armar mis propios colores de contraste", "en alto contraste no distingo los enlaces"]
+pasos:
+  - texto: "Abrí Temas de contraste y elegí en la lista el tema que más se acerque a lo que querés."
+    abrir: "ms-settings:easeofaccess-highcontrast"
+  - texto: "Tocá «Editar», debajo de la lista. Para «Fondo», «Texto», «Hipervínculos», «Texto inactivo», «Texto seleccionado» y «Texto de botón», elegí un color de la paleta, ajustá el brillo con la barrita y tocá «Listo»."
+  - texto: "Al terminar, tocá «Guardar como», ponele un nombre y elegí «Guardar y aplicar»."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/change-color-contrast-in-windows"
+derivar: "Si querés poner o sacar el alto contraste, escribile a PC Doctor «quiero más contraste en la pantalla»."
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/change-color-contrast-in-windows
+madurez: T0
+---
+id: ACX-025
+area: basico
+titulo:
+  sencillo: "No puedo hacer clic, pero quiero escribir con el teclado de la pantalla"
+  tecnico: "Teclado en pantalla: mantener el puntero sobre las teclas o escanearlas"
+explicacion:
+  sencillo: "El teclado en pantalla se puede usar sin hacer clic: dejás la flechita quieta sobre una tecla y se escribe sola. Si usás un pulsador (switch), el teclado va recorriendo las teclas y vos lo apretás cuando llega a la que querés."
+  tecnico: "Teclado en pantalla > «Opciones»: «Mantener el puntero sobre las teclas» (duración), escanear las teclas (velocidad de escaneo; con dispositivo de conmutación o clic simulado), «Usar predicción de texto», «Activar teclado numérico», «Usar sonido de clic»."
+frases: ["no puedo hacer clic y quiero escribir", "escribir dejando el mouse quieto sobre las letras", "uso un pulsador para manejar la compu y quiero escribir", "que el teclado de la pantalla escriba sin apretar el botón"]
+pasos:
+  - texto: "Abrí Accesibilidad > Teclado y activá «Teclado en pantalla»."
+    abrir: "ms-settings:easeofaccess-keyboard"
+  - texto: "En el teclado que aparece, tocá la tecla «Opciones»."
+  - texto: "Elegí «Mantener el puntero sobre las teclas» y mové la barrita de la duración: la tecla se escribe cuando dejás la flechita encima ese tiempo, sin hacer clic. Sirve con mouse o con joystick."
+  - texto: "Si usás un pulsador, elegí la opción de escanear las teclas y ajustá la velocidad. Ahí también podés activar la predicción de texto, así escribís menos letras."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/use-the-on-screen-keyboard-osk-to-type"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/use-the-on-screen-keyboard-osk-to-type
+madurez: T0

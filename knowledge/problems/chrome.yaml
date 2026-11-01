@@ -1,0 +1,475 @@
+# Google Chrome: perfiles, invitado, cuenta, extensiones, Lens, lectura, inicio, buscador, predeterminado, notificaciones, ventanas emergentes, letra, actualizar, instalar y desinstalar, celular, protección e historial. Guiadas con fuente oficial (support.google.com, es-419).
+id: CHR-001
+area: programas
+titulo:
+  sencillo: "Quiero que otra persona de la casa tenga su propio Chrome"
+  tecnico: "Agregar un perfil de Chrome"
+explicacion:
+  sencillo: "Chrome permite tener «perfiles»: cada persona tiene sus propios favoritos, historial, contraseñas y configuración, separados de los tuyos. Es como tener un Chrome para cada uno en la misma compu."
+  tecnico: "Ícono de perfil > Agregar perfil de Chrome; nombre, foto y esquema de colores; con Cuenta de Google el perfil toma el nombre de la cuenta."
+frases: ["quiero un chrome para mi nieto aparte del mío", "agregar otro perfil en chrome", "que mi señora tenga sus favoritos separados en chrome", "crear un usuario nuevo en google chrome"]
+pasos:
+  - texto: "Abrí Chrome y tocá el ícono de perfil, arriba a la derecha (un circulito con una foto o una inicial). Elegí «Agregar perfil de Chrome»."
+    abrir: "https://support.google.com/chrome/answer/2364824?hl=es-419"
+  - texto: "Si la otra persona entra con su cuenta de Google, el perfil toma el nombre de esa cuenta. Si no, ponele vos un nombre."
+  - texto: "Elegí una foto y un color distinto para cada perfil: así se reconoce enseguida de quién es cada ventana. Después se puede cambiar desde el ícono de perfil > «Personalizar el perfil»."
+  - texto: "Ojo: los perfiles no tienen clave. Compartí la compu solo con gente de confianza, porque cualquiera puede pasar a otro perfil y ver qué páginas visitó esa persona."
+fuentes:
+  - https://support.google.com/chrome/answer/2364824?hl=es-419
+madurez: T0
+---
+id: CHR-002
+area: programas
+titulo:
+  sencillo: "Chrome se abrió con el perfil de otra persona y quiero pasar al mío"
+  tecnico: "Cambiar de perfil de Chrome e identificar cada perfil"
+explicacion:
+  sencillo: "Si en la compu hay varios perfiles de Chrome, cada ventana pertenece a uno. Si ves favoritos o páginas que no son tuyas, seguramente estás en el perfil de otra persona: no se borró nada, solo hay que cambiar."
+  tecnico: "Ícono de perfil > elegir el perfil; Administrar perfiles de Chrome > Más > Editar para cambiar nombre, foto o tema de color."
+frases: ["el chrome me abre con las cosas de mi hija", "cómo paso a mi perfil de chrome", "no me aparecen mis favoritos porque estoy en otro perfil", "cambiar de usuario en chrome"]
+pasos:
+  - texto: "Tocá el ícono de perfil, arriba a la derecha de Chrome, y elegí tu perfil en la lista."
+    abrir: "https://support.google.com/chrome/answer/2364824?hl=es-419"
+  - texto: "Para no confundirte más: ícono de perfil > «Administrar perfiles de Chrome». En tu perfil tocá «Más» (los tres puntitos) > «Editar» y poné un nombre, una foto o un color bien distintos. Se guarda solo."
+  - texto: "Si en ningún perfil aparecen tus favoritos, escribile a PC Doctor «desaparecieron mis favoritos»."
+fuentes:
+  - https://support.google.com/chrome/answer/2364824?hl=es-419
+madurez: T0
+---
+id: CHR-003
+area: programas
+titulo:
+  sencillo: "Quiero borrar un perfil de Chrome que ya no se usa"
+  tecnico: "Eliminar un perfil de Chrome"
+explicacion:
+  sencillo: "Si un perfil de Chrome quedó de alguien que ya no usa la compu, se puede borrar. Ojo: se borran de esta compu sus favoritos, su historial, sus contraseñas guardadas y su configuración."
+  tecnico: "Ícono de perfil > Administrar perfiles de Chrome > Más > Borrar; elimina de la computadora favoritos, historial, contraseñas y configuración de ese perfil."
+frases: ["sacar un perfil de chrome que sobra", "eliminar el perfil de chrome de mi sobrino", "tengo perfiles viejos en chrome y los quiero borrar", "borrar un usuario de google chrome"]
+pasos:
+  - texto: "Antes de borrar, preguntale a la persona dueña de ese perfil si necesita algo de ahí (favoritos o contraseñas), porque se borran de esta compu."
+  - texto: "Tocá el ícono de perfil, arriba a la derecha. En «Otros perfiles de Chrome», elegí «Administrar perfiles de Chrome»."
+    abrir: "https://support.google.com/chrome/answer/2364824?hl=es-419"
+  - texto: "En el perfil que querés quitar, tocá «Más» (los tres puntitos de su esquina) > «Borrar», y confirmá otra vez con «Borrar»."
+fuentes:
+  - https://support.google.com/chrome/answer/2364824?hl=es-419
+madurez: T0
+---
+id: CHR-004
+area: programas
+titulo:
+  sencillo: "Me piden la compu prestada y no quiero que vean mis cosas de Chrome"
+  tecnico: "Navegar en Chrome como invitado"
+explicacion:
+  sencillo: "El modo invitado abre un Chrome vacío para otra persona: no ve tus favoritos, tus contraseñas ni tu historial, y cuando lo cierra se borra lo que hizo. El modo incógnito, en cambio, es para vos en tu propia compu."
+  tecnico: "Ícono de perfil > perfil de invitado; al cerrar se borran historial, cookies y datos de sitios. Los sitios, el proveedor de Internet o la empresa pueden seguir viendo la actividad."
+frases: ["prestar la compu sin que vean mi chrome", "abrir chrome como invitado", "una visita quiere usar internet en mi compu", "modo invitado de google chrome"]
+pasos:
+  - texto: "Abrí Chrome, tocá el ícono de perfil (arriba a la derecha) y abrí el perfil de invitado. Se abre una ventana aparte, sin tus cosas."
+    abrir: "https://support.google.com/chrome/answer/6130773?hl=es-419"
+  - texto: "Dejá que la otra persona use esa ventana. Tus favoritos y contraseñas no aparecen ahí."
+  - texto: "Cuando termine, cerrá la ventana de invitado con «Cerrar» (arriba a la derecha), o desde el ícono de perfil > «Cerrar las ventanas de la sesión de invitado». Se borran el historial y las cookies de esa sesión."
+  - texto: "Ojo: invitado no hace invisible a nadie. Las páginas que visita y quien da el Internet pueden ver lo que hace."
+fuentes:
+  - https://support.google.com/chrome/answer/6130773?hl=es-419
+madurez: T0
+---
+id: CHR-005
+area: programas
+titulo:
+  sencillo: "Quiero salir de mi cuenta de Google en Chrome (o Chrome dice que mi cuenta tiene un error)"
+  tecnico: "Salir de Chrome, quitar la cuenta y borrar los datos guardados en la cuenta"
+explicacion:
+  sencillo: "Si entraste a Chrome con tu cuenta de Google, podés salir cuando quieras. Lo que Chrome guardó en tu cuenta sigue en tu cuenta de Google; si también lo querés borrar, hay una página aparte para eso."
+  tecnico: "Ícono de perfil > Salir de Chrome; con la cuenta en estado de error, Quitar la cuenta de Chrome. Datos en la cuenta: chrome.google.com/data > Borrar datos."
+frases: ["salir de mi cuenta en chrome", "desconectar chrome de mi cuenta de google", "chrome dice que hay un error con mi cuenta", "borrar lo que chrome guardó en mi cuenta"]
+pasos:
+  - texto: "En Chrome, tocá el ícono de perfil (arriba a la derecha) > «Salir de Chrome»."
+    abrir: "https://support.google.com/chrome/answer/185277?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Si ahí aparece un error con tu cuenta, o ya habías cerrado Gmail, usá «Quitar la cuenta de Chrome». Después podés volver a entrar con «Acceder a Chrome»."
+  - texto: "Si además querés borrar lo que Chrome guardó en tu cuenta de Google: abrí Chrome, escribí chrome.google.com/data en la barra de direcciones y tocá «Borrar datos». Ojo: eso borra lo que Chrome guardó en tu cuenta de Google; hacelo solo si estás seguro."
+  - texto: "Si usaste tu cuenta en una compu ajena y querés sacarla del todo, escribile a PC Doctor «sacar mi cuenta de google de esta compu»."
+fuentes:
+  - https://support.google.com/chrome/answer/185277?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: CHR-006
+area: programas
+titulo:
+  sencillo: "Quiero agregarle una extensión a Chrome"
+  tecnico: "Instalar una extensión desde Chrome Web Store"
+explicacion:
+  sencillo: "Las extensiones son agregados que le suman funciones a Chrome. Las seguras se bajan de la tienda oficial de Google, Chrome Web Store. Instalá solo las que necesites y que sean de alguien en quien confíes."
+  tecnico: "Chrome Web Store > Agregar a Chrome > revisar permisos > Agregar extensión. No disponible en Incógnito ni como invitado; en equipos administrados puede estar bloqueado."
+frases: ["cómo instalo una extensión en chrome", "agregar un complemento al chrome", "me dijeron que baje una extensión para chrome", "dónde está la tienda de extensiones de chrome"]
+pasos:
+  - texto: "Abrí Chrome Web Store (la tienda de extensiones de Google) en una ventana normal: en incógnito o como invitado no se pueden instalar."
+    abrir: "https://support.google.com/chrome_webstore/answer/2664769?hl=es-419"
+  - texto: "Buscá la extensión, abrila y tocá «Agregar a Chrome»."
+  - texto: "Chrome te muestra qué permisos pide. Leelos: si te parece demasiado para lo que hace, no la instales. Si estás de acuerdo, tocá «Agregar extensión»."
+  - texto: "Para usarla, tocá su ícono a la derecha de la barra de direcciones. En la compu del trabajo puede que no te deje instalar: consultá con quien la administra."
+fuentes:
+  - https://support.google.com/chrome_webstore/answer/2664769?hl=es-419
+madurez: T0
+---
+id: CHR-007
+area: programas
+titulo:
+  sencillo: "No encuentro el botoncito de una extensión en Chrome"
+  tecnico: "Fijar o dejar de fijar extensiones en la barra de herramientas"
+explicacion:
+  sencillo: "Las extensiones que instalás quedan guardadas en un botón con forma de pieza de rompecabezas, a la derecha de la barra de direcciones. Las que usás seguido se pueden «fijar» para tenerlas siempre a la vista."
+  tecnico: "Ícono de extensiones (rompecabezas) > Fijar; clic derecho > Dejar de fijar. Más > Extensiones > Administrar extensiones para activar o desactivar."
+frases: ["no veo el ícono de la extensión en chrome", "la extensión desapareció de la barra de arriba", "qué es el rompecabezas que aparece en chrome", "quiero tener la extensión a mano arriba"]
+pasos:
+  - texto: "Tocá el ícono del rompecabezas, a la derecha de la barra de direcciones. Ahí están tus extensiones."
+    abrir: "https://support.google.com/chrome_webstore/answer/2664769?hl=es-419"
+  - texto: "Al lado de la que querés tener a mano, tocá el ícono de «Fijar» (un alfiler). Algunas extensiones no tienen esa opción."
+  - texto: "Para sacar un ícono de la barra sin borrar la extensión: clic derecho sobre el ícono > «Dejar de fijar». Sigue disponible en el rompecabezas."
+  - texto: "Si no aparece en la lista, entrá a «Más» (tres puntitos) > «Extensiones» > «Administrar extensiones» y revisá que su interruptor esté activado."
+fuentes:
+  - https://support.google.com/chrome_webstore/answer/2664769?hl=es-419
+madurez: T0
+---
+id: CHR-008
+area: seguridad
+titulo:
+  sencillo: "Una extensión de Chrome puede leer todas las páginas que visito y no me gusta"
+  tecnico: "Acceso a sitios de una extensión: Al seleccionar, En sitios específicos o En todos los sitios"
+explicacion:
+  sencillo: "Muchas extensiones piden permiso para «leer y cambiar» los datos de las páginas que visitás. Podés limitarlas para que solo funcionen cuando las tocás o en las páginas que vos elijas."
+  tecnico: "Administrar extensiones > Detalles > acceso a sitios: Al seleccionar, En sitios específicos (Agregar) o En todos los sitios."
+frases: ["la extensión pide leer y cambiar mis datos", "limitar en qué páginas funciona una extensión", "no quiero que la extensión vea la página del banco", "permisos de las extensiones de chrome"]
+pasos:
+  - texto: "En Chrome: «Más» (tres puntitos) > «Extensiones» > «Administrar extensiones». En la extensión, tocá «Detalles»."
+    abrir: "https://support.google.com/chrome_webstore/answer/2664769?hl=es-419"
+  - texto: "Buscá la opción que le permite leer y cambiar los datos de los sitios y elegí «Al seleccionar» (solo funciona cuando la tocás) o «En sitios específicos»."
+  - texto: "Si elegiste «En sitios específicos», tocá «Agregar» y escribí las páginas donde sí querés que funcione."
+  - texto: "Si no confiás en esa extensión, mejor quitala: en «Administrar extensiones», «Quitar» y confirmá con «Quitar». Si apareció sola, escribile a PC Doctor «tengo extensiones raras»."
+fuentes:
+  - https://support.google.com/chrome_webstore/answer/2664769?hl=es-419
+madurez: T0
+---
+id: CHR-009
+area: programas
+titulo:
+  sencillo: "Quiero buscar algo que veo en una foto o en una página con Google Lens"
+  tecnico: "Buscar con Google Lens en Chrome (computadora)"
+explicacion:
+  sencillo: "Con Google Lens podés buscar en Google algo que estás viendo (una planta, un mueble, un texto) sin tener que escribirlo: lo marcás con el mouse y Chrome te muestra resultados al costado."
+  tecnico: "Clic derecho en imagen > Buscar con Google Lens; Más > Buscar esta pestaña con Google Lens; resultados en el panel lateral. Requiere Google como motor de búsqueda predeterminado."
+frases: ["buscar una foto en google desde chrome", "qué es esta planta que vi en una página", "cómo uso google lens en la compu", "buscar con la imagen en vez de escribir"]
+pasos:
+  - texto: "Para una imagen: hacé clic derecho sobre la foto y elegí «Buscar con Google Lens»."
+    abrir: "https://support.google.com/chrome/answer/15086890?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Para cualquier parte de la página: «Más» (tres puntitos) > «Buscar esta pestaña con Google Lens», o clic derecho en la página y la misma opción. En el panel del costado, tocá algo, marcá un texto o arrastrá el mouse sobre la parte que te interesa."
+  - texto: "Para cerrarlo, apretá Esc o tocá «Cerrar». Si no aparece la opción, revisá que Google sea el buscador de Chrome."
+  - texto: "Ojo: para buscar, Chrome manda a Google una captura de la página. No lo uses sobre páginas con datos privados, como la del banco."
+fuentes:
+  - https://support.google.com/chrome/answer/15086890?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: CHR-010
+area: programas
+titulo:
+  sencillo: "Una página tiene tanta propaganda que no puedo leer la nota"
+  tecnico: "Modo de lectura de Chrome"
+explicacion:
+  sencillo: "El modo de lectura de Chrome muestra solo el texto de la nota, sin tanta publicidad, y te deja agrandar la letra, cambiar los colores y ocultar las imágenes."
+  tecnico: "Clic derecho > Abrir en modo de lectura, o Alt + Mayús + R; tamaño de fuente, tema de color, fuente, espaciado, vínculos e imágenes."
+frases: ["leer una nota sin tanta publicidad", "no puedo leer la noticia por los anuncios", "modo lectura en chrome", "agrandar solo el texto de una noticia"]
+pasos:
+  - texto: "Abrí la nota que querés leer, hacé clic derecho en la página y elegí «Abrir en modo de lectura». También: Alt + Mayús + R, o «Más» > «Más herramientas» > «Modo de lectura»."
+    abrir: "https://support.google.com/chrome/answer/14218344?hl=es-419"
+  - texto: "Arriba a la derecha del modo de lectura tenés botones para disminuir, aumentar o restablecer el tamaño de la letra."
+  - texto: "En «Configuración» (también arriba a la derecha) podés cambiar el tema de color, la fuente, el espacio entre líneas y ocultar vínculos e imágenes."
+  - texto: "Si el modo de lectura se te abre solo, puede ser que otro programa use el mismo atajo de teclado."
+fuentes:
+  - https://support.google.com/chrome/answer/14218344?hl=es-419
+madurez: T0
+---
+id: CHR-011
+area: basico
+titulo:
+  sencillo: "Quiero que Chrome me lea en voz alta una página"
+  tecnico: "Leer en voz alta desde el modo de lectura de Chrome"
+explicacion:
+  sencillo: "Chrome puede leerte en voz alta el texto de una página, desde el modo de lectura. Podés pausar, ir para adelante o atrás y elegir la velocidad y la voz."
+  tecnico: "Modo de lectura > Reproducir, Pausar, Anterior, Siguiente, Velocidad de reproducción; Configuración > Selección de voz; Momento destacado de voz."
+frases: ["que chrome me lea la página en voz alta", "escuchar una noticia en vez de leerla", "no veo bien y quiero escuchar el texto de la página", "chrome que hable lo que dice la página"]
+pasos:
+  - texto: "Abrí la página, hacé clic derecho y elegí «Abrir en modo de lectura» (o apretá Alt + Mayús + R)."
+    abrir: "https://support.google.com/chrome/answer/14218344?hl=es-419"
+  - texto: "Arriba a la derecha del modo de lectura, tocá «Reproducir». Con los botones de al lado pausás, vas a la parte anterior o a la siguiente, y cambiás la velocidad."
+  - texto: "Para cambiar la voz o el idioma: «Configuración» > «Selección de voz». En «Momento destacado de voz» elegís si te va marcando la palabra o la oración que lee."
+  - texto: "Si no se escucha nada, revisá el volumen de la compu. Si no hay sonido en ningún programa, escribile a PC Doctor «no tengo sonido»."
+fuentes:
+  - https://support.google.com/chrome/answer/14218344?hl=es-419
+madurez: T0
+---
+id: CHR-012
+area: programas
+titulo:
+  sencillo: "Quiero que Chrome arranque siempre en la misma página (o con las pestañas de antes)"
+  tecnico: "Configuración «Al iniciar» y botón de página principal de Chrome"
+explicacion:
+  sencillo: "Podés elegir qué muestra Chrome cuando lo abrís: una pestaña nueva, las pestañas que tenías abiertas o las páginas que vos quieras. También podés poner un botón con una casita para volver a tu página preferida."
+  tecnico: "Configuración > Al iniciar: Abrir la página Nueva pestaña / Continuar la sesión desde donde la dejaste / Abrir una página específica o un conjunto de páginas. Diseño > Mostrar el botón de la Página principal."
+frases: ["que chrome abra con las pestañas que tenía", "poner el diario como página de inicio en chrome", "la casita de inicio en chrome", "cuando abro chrome quiero que arranque en google"]
+pasos:
+  - texto: "En Chrome: «Más» (tres puntitos) > «Configuración» > a la izquierda, «Al iniciar»."
+    abrir: "https://support.google.com/chrome/answer/95314?hl=es-419"
+  - texto: "Elegí «Continuar la sesión desde donde la dejaste» para que vuelvan tus pestañas, «Abrir una página específica o un conjunto de páginas» para que abra siempre tus páginas, o «Abrir la página Nueva pestaña»."
+  - texto: "Para tener el botón de la casita: en «Configuración» > «Diseño», activá «Mostrar el botón de la Página principal» y elegí «Página Nueva pestaña» o escribí la dirección que quieras. Aparece a la izquierda de la barra de direcciones."
+  - texto: "Si la página de inicio cambia sola, puede ser un programa no deseado: escribile a PC Doctor «me cambiaron la página de inicio»."
+fuentes:
+  - https://support.google.com/chrome/answer/95314?hl=es-419
+madurez: T0
+---
+id: CHR-013
+area: programas
+titulo:
+  sencillo: "Quiero elegir con qué buscador busca Chrome"
+  tecnico: "Cambiar el motor de búsqueda predeterminado de Chrome"
+explicacion:
+  sencillo: "Cuando escribís algo en la barra de arriba de Chrome, se busca en el buscador que esté elegido (Google, Bing u otro). Lo podés cambiar cuando quieras."
+  tecnico: "Configuración > Motor de búsqueda > Cambiar. Si cambia solo o no se puede cambiar, puede haber software malicioso; en equipos administrados lo define el administrador."
+frases: ["chrome busca con bing y quiero google", "cambiar el buscador de la barra de chrome", "cuando escribo arriba me busca en otra página", "poner google como buscador en chrome"]
+pasos:
+  - texto: "En Chrome: «Más» (tres puntitos) > «Configuración» > «Motor de búsqueda»."
+    abrir: "https://support.google.com/chrome/answer/95426?hl=es-419"
+  - texto: "Al lado de «Motor de búsqueda», tocá «Cambiar» y elegí el que quieras usar."
+  - texto: "Si el buscador se cambia solo o no te deja cambiarlo, puede haber un programa malicioso. Escribile a PC Doctor «dejar chrome como recién instalado». En la compu del trabajo, lo puede fijar la empresa."
+fuentes:
+  - https://support.google.com/chrome/answer/95426?hl=es-419
+madurez: T0
+---
+id: CHR-014
+area: programas
+titulo:
+  sencillo: "Quiero que los enlaces se abran en Chrome y no en otro navegador"
+  tecnico: "Establecer Chrome como navegador predeterminado en Windows"
+explicacion:
+  sencillo: "Cuando tocás un enlace en un correo o en un documento, Windows lo abre con el navegador «predeterminado». Si querés que siempre sea Chrome, se elige en la Configuración de Windows."
+  tecnico: "Windows 11: Configuración > Aplicaciones > Aplicaciones predeterminadas > Google Chrome > Establecer como predeterminado. Windows 10: Aplicaciones predeterminadas > Navegador web."
+frases: ["los links se me abren en edge y quiero chrome", "poner chrome como navegador principal", "que todo se abra con google chrome", "hacer que chrome sea el navegador de siempre"]
+pasos:
+  - texto: "En Windows 11: «Configuración» > «Aplicaciones» > «Aplicaciones predeterminadas». En el buscador de esa página escribí Chrome y elegí «Google Chrome»."
+    abrir: "ms-settings:defaultapps"
+  - texto: "Tocá «Establecer como predeterminado», al lado de «Establecer Google Chrome como navegador predeterminado». Revisá la lista de abajo para ver que se aplicó."
+    abrir: "https://support.google.com/chrome/answer/95417?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "En Windows 10: «Configuración» > «Aplicaciones» > «Aplicaciones predeterminadas». En «Navegador web», tocá el navegador que aparece y elegí «Google Chrome»."
+fuentes:
+  - https://support.google.com/chrome/answer/95417?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: CHR-015
+area: programas
+titulo:
+  sencillo: "Una página me llena de avisos en la esquina de la pantalla"
+  tecnico: "Bloquear notificaciones de sitios en Chrome"
+explicacion:
+  sencillo: "Si alguna vez tocaste «Permitir» cuando una página te ofreció notificaciones, esa página te puede mandar avisos. Se pueden bloquear desde la configuración de Chrome."
+  tecnico: "Configuración > Privacidad y seguridad > Configuración de sitios > Notificaciones: predeterminado, notificaciones más discretas, listas «Pueden enviar» y «No pueden enviar notificaciones»."
+frases: ["me aparecen avisos de una página en la esquina", "una página me manda notificaciones todo el tiempo", "cómo saco las notificaciones de un sitio en chrome", "acepté notificaciones de una página sin querer"]
+pasos:
+  - texto: "En Chrome: «Más» (tres puntitos) > «Configuración» > «Privacidad y seguridad» > «Configuración de sitios» > «Notificaciones»."
+    abrir: "https://support.google.com/chrome/answer/3220216?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Para bloquear una página: al lado de «No pueden enviar notificaciones», tocá «Agregar», escribí la dirección de la página y tocá «Agregar» otra vez."
+  - texto: "Arriba de esa pantalla podés elegir qué pasa con las páginas nuevas; si querés que molesten menos, activá «Usar notificaciones más discretas»."
+  - texto: "Si los avisos vienen de Windows o de otros programas, escribile a PC Doctor «demasiadas notificaciones»."
+fuentes:
+  - https://support.google.com/chrome/answer/3220216?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: CHR-016
+area: programas
+titulo:
+  sencillo: "La página del banco o de un trámite no abre una ventana porque Chrome la bloquea"
+  tecnico: "Permitir ventanas emergentes de un sitio en Chrome"
+explicacion:
+  sencillo: "Chrome bloquea las ventanas emergentes para frenar la propaganda, pero algunas páginas serias (bancos, trámites) las usan para mostrar un comprobante o un formulario. Se pueden permitir solo para esa página."
+  tecnico: "Ícono de ventana emergente bloqueada en la barra de direcciones > Siempre permitir ventanas emergentes y redireccionamientos; Configuración de sitios > Ventanas emergentes y redireccionamientos."
+frases: ["chrome bloquea la ventana del banco", "no se abre el comprobante porque dice ventana emergente bloqueada", "permitir ventanas emergentes en una página", "la página del trámite no abre la otra ventana"]
+pasos:
+  - texto: "Entrá a la página donde no se abrió la ventana. En la barra de direcciones aparece un ícono de ventana emergente bloqueada: tocalo."
+    abrir: "https://support.google.com/chrome/answer/95472?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Tocá el enlace de la ventana que querés ver. Para que esa página siempre pueda abrirlas, elegí «Siempre permitir ventanas emergentes y redireccionamientos de» esa página y tocá «Listo»."
+  - texto: "Hacelo solo con páginas que conocés. La lista se revisa en «Configuración» > «Privacidad y seguridad» > «Configuración de sitios» > «Ventanas emergentes y redireccionamientos»."
+  - texto: "Si se te abren ventanas de propaganda solas, escribile a PC Doctor «se abren ventanas de propaganda»."
+fuentes:
+  - https://support.google.com/chrome/answer/95472?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: CHR-017
+area: basico
+titulo:
+  sencillo: "En Chrome quiero la letra más grande en todas las páginas (o una sola quedó agrandada)"
+  tecnico: "Tamaño de fuente, zoom predeterminado y niveles de zoom por sitio en Chrome"
+explicacion:
+  sencillo: "Chrome deja agrandar la letra o todo lo que se ve en todas las páginas a la vez. Además recuerda el zoom de cada página: si agrandaste una, la próxima vez se va a ver igual de grande."
+  tecnico: "Configuración > Diseño > Tamaño de fuente / Zoom de página; Configuración de sitios > Configuración adicional de contenido > Niveles de zoom."
+frases: ["agrandar la letra de chrome para siempre", "una sola página se ve gigante en chrome", "tamaño de fuente en google chrome", "chrome se acuerda del zoom de una página y no quiero"]
+pasos:
+  - texto: "En Chrome: «Más» (tres puntitos) > «Configuración» > «Diseño». En «Tamaño de fuente» elegí uno más grande, o en «Zoom de página» elegí un porcentaje mayor para agrandar todo."
+    abrir: "https://support.google.com/chrome/answer/96810?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Algunas páginas no dejan cambiar solo la letra: en esas usá el zoom (Ctrl + Más para agrandar, Ctrl + Menos para achicar)."
+  - texto: "Si una página sola quedó grande o chica: «Configuración» > «Privacidad y seguridad» > «Configuración de sitios» > «Configuración adicional de contenido» > «Niveles de zoom», y tocá la X al lado de esa página."
+  - texto: "Si lo que se ve chico es todo Windows y no solo Chrome, escribile a PC Doctor «las letras se ven muy chicas»."
+fuentes:
+  - https://support.google.com/chrome/answer/96810?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: CHR-018
+area: programas
+titulo:
+  sencillo: "Chrome no se actualiza o da un error al actualizar"
+  tecnico: "Errores de actualización de Chrome (3, 4, 7, 10, 11, 12; actualizaciones inhabilitadas)"
+explicacion:
+  sencillo: "A veces Chrome no puede actualizarse porque algo bloquea la descarga (un antivirus o un control parental), porque la compu necesita reiniciarse o porque Windows es muy viejo. Se puede revisar paso a paso."
+  tecnico: "Errores 3/11: servidor no disponible; 4/10: no inicia la verificación; 7/12: falla la descarga. Revisar antivirus, firewall o control parental (tools.google.com, dl.google.com), modo de compatibilidad, requisitos, reinstalar."
+frases: ["chrome no se quiere actualizar", "me sale error al actualizar chrome", "la actualización de google chrome falla", "chrome dice que el administrador desactivó las actualizaciones"]
+pasos:
+  - texto: "Reiniciá la compu y probá otra vez: «Más» (tres puntitos) > «Ayuda» > «Acerca de Google Chrome»."
+    abrir: "https://support.google.com/chrome/answer/111996?hl=es-419"
+  - texto: "Si tenés antivirus, firewall o control parental, revisá que permitan las actualizaciones de Chrome (las direcciones tools.google.com y dl.google.com no tienen que estar bloqueadas)."
+  - texto: "Si dice que el administrador inhabilitó las actualizaciones, es una compu manejada por una empresa o escuela: consultá con quien la administra."
+  - texto: "Chrome necesita Windows 10 o posterior. Si nada funciona, Google sugiere desinstalarlo y volver a instalarlo desde la página oficial: escribile a PC Doctor «quiero desinstalar Google Chrome»."
+fuentes:
+  - https://support.google.com/chrome/answer/111996?hl=es-419
+madurez: T0
+---
+id: CHR-019
+area: programas
+titulo:
+  sencillo: "Quiero desinstalar Google Chrome"
+  tecnico: "Desinstalar Chrome en Windows 11 y 10"
+explicacion:
+  sencillo: "Chrome se desinstala como cualquier programa, desde la Configuración de Windows. Al hacerlo podés elegir si también se borran tus favoritos y tu historial de esta compu."
+  tecnico: "Configuración > Aplicaciones > Aplicaciones instaladas > Google Chrome > Desinstalar; casilla «Eliminar también los datos de navegación» borra el perfil local."
+frases: ["sacar google chrome de la compu", "desinstalar el navegador de google", "quiero eliminar chrome de la computadora", "cómo borro el chrome"]
+pasos:
+  - texto: "Cerrá todas las ventanas de Chrome."
+  - texto: "En Windows 11: «Configuración» > «Aplicaciones» > «Aplicaciones instaladas». Buscá Google Chrome, tocá los tres puntitos > «Desinstalar», otra vez «Desinstalar» y aceptá con «Sí». En Windows 10, la lista se llama «Aplicaciones y características»."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Ojo con la casilla «Eliminar también los datos de navegación»: si la marcás, se borran de esta compu tus favoritos y tu historial. Dejala sin marcar si pensás volver a instalarlo."
+    abrir: "https://support.google.com/chrome/answer/95319?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Si usabas tu cuenta de Google en Chrome, parte de tu información sigue guardada en la cuenta."
+fuentes:
+  - https://support.google.com/chrome/answer/95319?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: CHR-020
+area: programas
+titulo:
+  sencillo: "Quiero instalar Chrome (o no se termina de instalar)"
+  tecnico: "Instalar o reinstalar Chrome en Windows y errores de instalación"
+explicacion:
+  sencillo: "Chrome se baja gratis de la página oficial de Google. Si la instalación falla, casi siempre es por falta de espacio en el disco, un antivirus que la frena o porque Windows está en «modo S»."
+  tecnico: "Instalador de google.com/chrome; errores 0x80070070 (disco lleno), 4 (ya hay una versión más nueva), 7/12/13/31/35/57/102/103 (causa desconocida); instalador sin conexión; modo S."
+frases: ["cómo instalo google chrome", "chrome no se termina de instalar", "me da error al instalar chrome", "volver a instalar chrome"]
+pasos:
+  - texto: "Bajá el instalador solo de la página oficial, google.com/chrome. Abrí el archivo, y si Windows pregunta si permitís cambios, tocá «Sí». Seguí las instrucciones."
+    abrir: "https://support.google.com/chrome/answer/95346?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Si da error 0x80070070, el disco está lleno: liberá espacio y probá de nuevo."
+    abrir: "ms-settings:storagesense"
+  - texto: "Con otros errores: revisá que Internet ande bien, bajá el instalador otra vez y usá el archivo nuevo. Si tenés un antivirus de otra marca, puede estar frenando la instalación."
+    abrir: "https://support.google.com/chrome/answer/6315198?hl=es-419"
+  - texto: "Si Windows dice que solo deja instalar aplicaciones de Microsoft Store, está en «modo S»: escribile a PC Doctor «salir del modo S». En la compu del trabajo, quizás necesites permiso del administrador."
+fuentes:
+  - https://support.google.com/chrome/answer/95346?hl=es-419&co=GENIE.Platform%3DDesktop
+  - https://support.google.com/chrome/answer/6315198?hl=es-419
+madurez: T0
+---
+id: CHR-021
+area: programas
+titulo:
+  sencillo: "Quiero instalar Chrome en el celular"
+  tecnico: "Instalar Chrome en Android (Play Store) o iPhone (App Store)"
+explicacion:
+  sencillo: "Chrome también existe para el celular y es gratis. Se baja de la tienda de aplicaciones: Play Store en Android o App Store en iPhone."
+  tecnico: "Android 10 o posterior: Play Store > Chrome > Instalar. iOS 18 o posterior: App Store > Chrome > Obtener."
+frases: ["bajar chrome en el celular", "instalar google chrome en el iphone", "no tengo chrome en el teléfono", "poner chrome en el android"]
+pasos:
+  - texto: "En Android: abrí «Play Store», buscá Chrome y tocá «Instalar». Cuando termine, «Abrir». Hace falta Android 10 o más nuevo."
+    abrir: "https://support.google.com/chrome/answer/95346?hl=es-419&co=GENIE.Platform%3DAndroid"
+  - texto: "En iPhone: abrí la «App Store», buscá Chrome y tocá «Obtener». Si te pide la contraseña de tu ID de Apple, escribila vos en el celular (nunca se la pases a nadie). Hace falta iOS 18 o más nuevo."
+    abrir: "https://support.google.com/chrome/answer/95346?hl=es-419&co=GENIE.Platform%3DiOS"
+  - texto: "Para ver en el celular los mismos favoritos que en la compu, escribile a PC Doctor «tener los mismos favoritos en el celular»."
+fuentes:
+  - https://support.google.com/chrome/answer/95346?hl=es-419&co=GENIE.Platform%3DAndroid
+  - https://support.google.com/chrome/answer/95346?hl=es-419&co=GENIE.Platform%3DiOS
+madurez: T0
+---
+id: CHR-022
+area: programas
+titulo:
+  sencillo: "Estoy viendo una página en la compu y la quiero abrir en el celular"
+  tecnico: "Enviar una pestaña a tus dispositivos o compartirla con código QR"
+explicacion:
+  sencillo: "Chrome puede mandar la página que estás viendo directo al Chrome de tu celular, o mostrarte un código QR para escanearlo con la cámara del teléfono."
+  tecnico: "Más > Transmitir, guardar y compartir > Enviar a tus dispositivos (misma Cuenta de Google en ambos) o Crear código QR."
+frases: ["pasar una página de la compu al celular", "mandar la pestaña al teléfono", "abrir en el celular lo que estoy viendo en chrome", "sacar un código qr de una página en chrome"]
+pasos:
+  - texto: "Para mandarla: tenés que haber entrado a Chrome con la misma cuenta de Google en la compu y en el celular."
+    abrir: "https://support.google.com/chrome/answer/10051760?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "En la compu: «Más» (tres puntitos) > «Transmitir, guardar y compartir» > «Enviar a tus dispositivos» (o clic derecho en la pestaña) y elegí tu celular. Se abre sola en el Chrome del teléfono."
+  - texto: "Sin cuenta: «Más» > «Transmitir, guardar y compartir» > «Crear código QR», y apuntale con la cámara del celular al código que aparece."
+fuentes:
+  - https://support.google.com/chrome/answer/10051760?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: CHR-023
+area: seguridad
+titulo:
+  sencillo: "Quiero que Chrome me cuide más de las páginas truchas"
+  tecnico: "Navegación segura: Protección mejorada en Chrome"
+explicacion:
+  sencillo: "Chrome tiene tres niveles de protección contra páginas, descargas y extensiones peligrosas. La «Protección mejorada» es la que más te cuida: también te avisa si usás una contraseña que se filtró."
+  tecnico: "Configuración > Privacidad y seguridad > Seguridad > Navegación segura: Protección mejorada / Protección estándar / Sin protección. La mejorada envía URL y muestras a Google para su análisis."
+frases: ["activar la protección mejorada de chrome", "que chrome me avise de páginas truchas", "navegación segura de google chrome", "chrome dice que estoy sin protección"]
+pasos:
+  - texto: "En Chrome: «Más» (tres puntitos) > «Configuración» > «Privacidad y seguridad» > «Seguridad»."
+    abrir: "https://support.google.com/chrome/answer/9890866?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "En «Navegación segura», elegí «Protección mejorada». Nunca dejes «Sin protección»."
+  - texto: "Para saber: con la protección mejorada, Chrome manda a Google las direcciones y una muestra de las páginas o descargas sospechosas para revisarlas. Google dice que lo usa solo por seguridad."
+fuentes:
+  - https://support.google.com/chrome/answer/9890866?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: CHR-024
+area: programas
+titulo:
+  sencillo: "Quiero borrar el historial de Chrome (todo o una sola página)"
+  tecnico: "Ver y borrar el historial de navegación de Chrome"
+explicacion:
+  sencillo: "Chrome guarda la lista de páginas que visitaste. Podés borrar una sola o todas. Si tenés Chrome conectado a tu cuenta con el historial sincronizado, se borra también en tus otros aparatos."
+  tecnico: "Más > Historial > Historial (casilla > Borrar > Quitar); Más > Borrar datos de navegación > Todos > Historial de navegación > Borrar datos."
+frases: ["borrar las páginas que visité en chrome", "borrar una sola página del historial de chrome", "limpiar el historial de google chrome", "que no quede registro de las páginas que entré"]
+pasos:
+  - texto: "Para borrar una sola página: «Más» (tres puntitos) > «Historial» > «Historial». Marcá la casilla de la página, tocá «Borrar» (arriba a la derecha) y después «Quitar»."
+    abrir: "https://support.google.com/chrome/answer/95589?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Para borrar todo: «Más» > «Borrar datos de navegación». En el período elegí «Todos» y marcá «Historial de navegación»."
+  - texto: "Ojo antes de tocar «Borrar datos»: dejá marcado solo lo que quieras borrar. Si el historial está sincronizado con tu cuenta, se borra también en tus otros aparatos."
+  - texto: "Lo que buscaste en Google se guarda aparte, en tu cuenta de Google, y se borra desde ahí."
+fuentes:
+  - https://support.google.com/chrome/answer/95589?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: CHR-025
+area: rendimiento
+titulo:
+  sencillo: "Cuando vuelvo a una pestaña de Chrome se vuelve a cargar sola"
+  tecnico: "Ahorro de memoria: mantener sitios siempre activos y ver el uso de memoria por pestaña"
+explicacion:
+  sencillo: "Para que la compu no se ponga lenta, Chrome «duerme» las pestañas que no estás mirando y libera memoria. Cuando volvés, la página se carga de nuevo. Podés pedirle que no lo haga con las páginas que te importan."
+  tecnico: "Configuración > Rendimiento > Ahorro de memoria (Moderado, Equilibrado, Máximo) y «Mantener estos sitios siempre activos»; Diseño > «Mostrar el uso de memoria de la pestaña»."
+frases: ["la pestaña de chrome se recarga sola cuando vuelvo", "chrome me recarga la página que tenía abierta", "que chrome no duerma una página", "ver cuánta memoria gasta cada pestaña de chrome"]
+pasos:
+  - texto: "En Chrome: «Más» (tres puntitos) > «Configuración» > «Rendimiento»."
+    abrir: "https://support.google.com/chrome/answer/12929150?hl=es-419"
+  - texto: "A la derecha de «Mantener estos sitios siempre activos», tocá «Agregar». Elegí «Agregar sitios actuales» para marcar pestañas abiertas, o «Agregar sitios manualmente» para escribir la dirección, y confirmá con «Agregar»."
+  - texto: "Si te pasa con muchas páginas, en «Ahorro de memoria» elegí «Moderado»: las pestañas tardan más en dormirse."
+  - texto: "Para ver cuánta memoria gasta cada pestaña: «Configuración» > «Diseño» y activá «Mostrar el uso de memoria de la pestaña». Lo ves al pasar el mouse por encima de la pestaña."
+fuentes:
+  - https://support.google.com/chrome/answer/12929150?hl=es-419
+madurez: T0

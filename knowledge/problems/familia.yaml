@@ -1,0 +1,500 @@
+# Familia, chicos y control parental: Microsoft Family Safety (tiempo de pantalla, horarios, apps, filtros web, actividad, compras, consentimiento, grupo familiar), Google Family Link, cuenta de Google para menores, YouTube supervisado, SafeSearch, ciberacoso y grooming. Guiadas con fuente oficial.
+id: FAMX-001
+area: seguridad
+titulo:
+  sencillo: "Quiero que mi hijo use la compu solo un rato por día"
+  tecnico: "Family Safety: límites de tiempo de pantalla en Windows"
+explicacion:
+  sencillo: "Con Microsoft Family Safety elegís cuántas horas por día puede usar la compu el chico. Funciona si él entra a Windows con su propia cuenta de Microsoft y está en tu grupo familiar."
+  tecnico: "account.microsoft.com/family > miembro > pestaña Windows > día > límite y franjas; Activar límites / Desactivar límites. Solo organizadores."
+frases: ["que mi nieto use la compu dos horas por día nomás", "ponerle un máximo de horas a la computadora de mi hijo", "cómo hago que la compu se bloquee cuando se le acaba el tiempo al nene", "limitar las horas de pantalla en windows"]
+pasos:
+  - texto: "El chico tiene que entrar a la compu con su propia cuenta de Microsoft y estar en tu grupo familiar. Para armarlo, escribile a PC Doctor «quiero que un familiar tenga su propio usuario en la compu»."
+    abrir: "ms-settings:family-group"
+  - texto: "Entrá a la página de familia de Microsoft con tu cuenta (tenés que ser «Organizador») y tocá la tarjeta del chico."
+    abrir: "https://account.microsoft.com/family"
+  - texto: "Elegí la pestaña «Windows». Si no ves límites, tocá «Activar límites». Tocá un día y poné cuántas horas puede usar la compu; con las casillas o «Todos los días» lo copiás a los demás días. Al terminar, tocá «Terminado»."
+    abrir: "https://support.microsoft.com/es-es/family-safety/set-screen-time-limits-across-devices"
+  - texto: "Lo mismo se hace desde la app Microsoft Family Safety en tu celular: tocá al chico y elegí «Windows»."
+fuentes:
+  - https://support.microsoft.com/es-es/family-safety/set-screen-time-limits-across-devices
+madurez: T0
+---
+id: FAMX-002
+area: seguridad
+titulo:
+  sencillo: "Quiero que la compu de los chicos se pueda usar solo en ciertos horarios"
+  tecnico: "Family Safety: franjas horarias por día en Windows"
+explicacion:
+  sencillo: "Además de las horas totales, podés elegir en qué horario se puede usar la compu, por ejemplo de 17 a 20, y que el fin de semana sea distinto."
+  tecnico: "Programación de tiempo de pantalla por día (intervalos y total) en la pestaña Windows de Family Safety; programación distinta por día o igual toda la semana."
+frases: ["que la compu no se pueda usar de noche", "que mi hijo use la computadora solo después del colegio", "poner un horario distinto el fin de semana para los chicos", "que no use la compu después de las diez"]
+pasos:
+  - texto: "Entrá a la página de familia de Microsoft con tu cuenta de organizador y tocá la tarjeta del chico."
+    abrir: "https://account.microsoft.com/family"
+  - texto: "En la pestaña «Windows», tocá un día para agregar el horario permitido (desde qué hora y hasta qué hora) y el total de horas. Tocá «Terminado»."
+    abrir: "https://support.microsoft.com/es-es/family-safety/set-screen-time-limits-across-devices"
+  - texto: "Podés usar el mismo horario toda la semana o uno distinto cada día. Si un día querés darle más tiempo, cambialo desde ahí mismo."
+  - texto: "Solo funciona en compus conectadas a tu grupo familiar y con el chico usando su propia cuenta."
+fuentes:
+  - https://support.microsoft.com/es-es/family-safety/set-screen-time-limits-across-devices
+madurez: T0
+---
+id: FAMX-003
+area: seguridad
+titulo:
+  sencillo: "Mi nieto se pasa horas en la Xbox y quiero ponerle un límite"
+  tecnico: "Family Safety: límites de tiempo en Xbox"
+explicacion:
+  sencillo: "Microsoft Family Safety también pone límites de tiempo en la consola Xbox, igual que en la compu. Ojo: el tiempo sigue corriendo mientras el chico tenga la sesión abierta en la consola."
+  tecnico: "Family Safety > miembro > pestaña Xbox > límites por día; el tiempo cuenta mientras la sesión esté iniciada."
+frases: ["mi nieto juega a la play de microsoft todo el día", "poner horario a la xbox de mi hijo", "limitar el tiempo de juego en la xbox", "la xbox no corta nunca"]
+pasos:
+  - texto: "El chico tiene que entrar a la Xbox con su cuenta de Microsoft, la misma que está en tu grupo familiar."
+  - texto: "Entrá a la página de familia de Microsoft con tu cuenta de organizador (o a la app Microsoft Family Safety), tocá al chico y elegí la pestaña «Xbox»."
+    abrir: "https://account.microsoft.com/family"
+  - texto: "Tocá un día y poné el horario y las horas permitidas. Si no aparecen límites, tocá «Activar límites»."
+    abrir: "https://support.microsoft.com/es-es/family-safety/set-screen-time-limits-across-devices"
+  - texto: "Pedile que cierre la sesión cuando deja de jugar: si queda abierta, el tiempo sigue contando."
+fuentes:
+  - https://support.microsoft.com/es-es/family-safety/set-screen-time-limits-across-devices
+madurez: T0
+---
+id: FAMX-004
+area: seguridad
+titulo:
+  sencillo: "Quiero limitar un juego o un programa en especial, no toda la compu"
+  tecnico: "Family Safety: límites de aplicaciones y juegos"
+explicacion:
+  sencillo: "Podés dejar que el chico use la compu para la escuela todo lo que necesite, pero ponerle un tiempo máximo a un juego o a una aplicación en particular."
+  tecnico: "Family Safety > miembro > plataforma > Aplicaciones, características y juegos > Límites de aplicaciones y juegos > app > tiempo diario y franja."
+frases: ["que juegue al minecraft solo una hora", "limitar un solo juego en la compu de mi hijo", "poner tiempo a una aplicación nada más", "mi nieto se pasa el día en un jueguito de la compu"]
+pasos:
+  - texto: "Entrá a la página de familia de Microsoft con tu cuenta de organizador, buscá al chico y elegí la plataforma (Windows, Xbox o celular)."
+    abrir: "https://account.microsoft.com/family"
+  - texto: "Andá a la pestaña «Aplicaciones, características y juegos» y activá «Límites de aplicaciones y juegos»."
+    abrir: "https://support.microsoft.com/es-es/family-safety/set-app-and-game-limits"
+  - texto: "Tocá el juego o la app y elegí cuánto tiempo por día y en qué horario la puede usar. Podés poner lo mismo todos los días o distinto según el día."
+  - texto: "Si el juego aparece dos veces es porque está instalado en dos aparatos: poné el límite en cada uno."
+fuentes:
+  - https://support.microsoft.com/es-es/family-safety/set-app-and-game-limits
+madurez: T0
+---
+id: FAMX-005
+area: seguridad
+titulo:
+  sencillo: "Quiero que mi hijo no pueda abrir un juego o una aplicación"
+  tecnico: "Family Safety: bloquear o desbloquear una aplicación"
+explicacion:
+  sencillo: "Si no querés que el chico use un programa o juego, lo podés bloquear desde tu cuenta. Cuando quieras, lo desbloqueás de la misma manera."
+  tecnico: "Family Safety > miembro > plataforma > Aplicaciones, características y juegos > ⋮ > Bloquear aplicación / Desbloquear aplicación. Solo organizadores."
+frases: ["bloquear un juego en la compu de mi nieto", "que mi hijo no pueda abrir una aplicación", "desbloquear un programa que bloqueé con family safety", "prohibir un jueguito en la computadora del nene"]
+pasos:
+  - texto: "Entrá a la página de familia de Microsoft con tu cuenta de organizador y tocá la tarjeta del chico."
+    abrir: "https://account.microsoft.com/family"
+  - texto: "Elegí la pestaña del aparato («Windows», «Xbox» o el celular) y después «Aplicaciones, características y juegos»."
+    abrir: "https://support.microsoft.com/es-es/family-safety/block-or-unblock-apps-with-microsoft-family-safety"
+  - texto: "Al lado del juego o la app, tocá los tres puntitos y elegí «Bloquear aplicación». Para devolvérsela, los mismos tres puntitos > «Desbloquear aplicación»."
+  - texto: "Hay que hacerlo con cada app, en cada aparato y para cada chico."
+fuentes:
+  - https://support.microsoft.com/es-es/family-safety/block-or-unblock-apps-with-microsoft-family-safety
+madurez: T0
+---
+id: FAMX-006
+area: seguridad
+titulo:
+  sencillo: "Quiero que mi hijo no entre a páginas para adultos en internet"
+  tecnico: "Family Safety: filtrar sitios web y búsquedas en Microsoft Edge"
+explicacion:
+  sencillo: "Family Safety puede bloquear páginas para adultos y filtrar las búsquedas de Bing cuando el chico navega con Microsoft Edge entrando con su cuenta."
+  tecnico: "Family Safety > miembro > Edge > Filtrar sitios web y búsquedas inapropiados; funciona en Edge con sesión iniciada (Windows, Xbox, móvil)."
+frases: ["bloquear páginas porno en la compu de mi hijo", "filtro de internet para los chicos en edge", "que mi nieto no pueda ver páginas de adultos", "activar el filtro web de microsoft family"]
+pasos:
+  - texto: "Entrá a tu cuenta de Microsoft, elegí «Family Safety» en el menú de la izquierda, buscá al chico y tocá «Ir a la información general»."
+    abrir: "https://account.microsoft.com/family"
+  - texto: "Elegí «Edge» como plataforma y activá «Filtrar sitios web y búsquedas inapropiados»."
+    abrir: "https://support.microsoft.com/es-es/family-safety/filter-websites-and-searches-using-microsoft-family-safety"
+  - texto: "El filtro funciona cuando el chico navega con Microsoft Edge entrando con su cuenta de Microsoft. Por eso, con el filtro activado, los otros navegadores quedan bloqueados para que no lo pueda esquivar."
+fuentes:
+  - https://support.microsoft.com/es-es/family-safety/filter-websites-and-searches-using-microsoft-family-safety
+madurez: T0
+---
+id: FAMX-007
+area: seguridad
+titulo:
+  sencillo: "Quiero bloquear (o permitir) una página puntual para mi hijo"
+  tecnico: "Family Safety: sitios bloqueados, sitios permitidos y «solo sitios permitidos»"
+explicacion:
+  sencillo: "Además del filtro general, podés agregar páginas que querés bloquear siempre, o páginas que siempre van a estar permitidas. Para los más chicos, podés hacer que solo puedan entrar a las páginas que vos elegiste."
+  tecnico: "Family Safety > miembro > Edge > Sitios bloqueados / Sitios permitidos; Usar solo sitios web permitidos."
+frases: ["bloquear una página en especial para mi hijo", "que mi nieto solo pueda entrar a las páginas del colegio", "el filtro le bloquea una página de la escuela", "agregar una página permitida en family safety"]
+pasos:
+  - texto: "Entrá a la página de familia de Microsoft con tu cuenta de organizador, tocá al chico y elegí «Edge»."
+    abrir: "https://account.microsoft.com/family"
+  - texto: "Escribí la dirección de la página en «Sitios bloqueados» (para que no entre nunca) o en «Sitios permitidos» (para que pueda entrar siempre)."
+    abrir: "https://support.microsoft.com/es-es/family-safety/filter-websites-and-searches-using-microsoft-family-safety"
+  - texto: "Para un chico chiquito, activá «Usar solo sitios web permitidos»: solo va a poder entrar a las páginas de tu lista."
+fuentes:
+  - https://support.microsoft.com/es-es/family-safety/filter-websites-and-searches-using-microsoft-family-safety
+madurez: T0
+---
+id: FAMX-008
+area: seguridad
+titulo:
+  sencillo: "En la cuenta de mi hijo no abre Chrome (u otro navegador)"
+  tecnico: "Family Safety bloquea navegadores no compatibles con el filtro web"
+explicacion:
+  sencillo: "Cuando activás el filtro de páginas de Family Safety, Windows bloquea los navegadores que no son Microsoft Edge, para que el chico no pueda saltearse el filtro. Si querés, un adulto puede desbloquear ese navegador."
+  tecnico: "Con el filtrado web activo, los exploradores no compatibles se bloquean; se desbloquean desde los filtros de aplicaciones y juegos (Desbloquear aplicación)."
+frases: ["a mi hijo no le abre el chrome", "en la cuenta del nene chrome está bloqueado", "dice que necesita permiso para usar google chrome", "family safety no deja usar otro navegador"]
+pasos:
+  - texto: "Es a propósito: el filtro de páginas solo funciona en Microsoft Edge, así que Family Safety bloquea los otros navegadores para que no se pueda esquivar."
+    abrir: "https://support.microsoft.com/es-es/family-safety/filter-websites-and-searches-using-microsoft-family-safety"
+  - texto: "Lo más seguro es que el chico use Microsoft Edge entrando con su cuenta."
+  - texto: "Si igual querés permitir Chrome, entrá a la página de familia con tu cuenta de organizador, tocá al chico, pestaña «Windows» > «Aplicaciones, características y juegos», y en los tres puntitos al lado de Chrome elegí «Desbloquear aplicación». Ojo: en Chrome no va a tener el filtro de Microsoft."
+    abrir: "https://support.microsoft.com/es-es/family-safety/block-or-unblock-apps-with-microsoft-family-safety"
+fuentes:
+  - https://support.microsoft.com/es-es/family-safety/filter-websites-and-searches-using-microsoft-family-safety
+  - https://support.microsoft.com/es-es/family-safety/block-or-unblock-apps-with-microsoft-family-safety
+madurez: T0
+---
+id: FAMX-009
+area: seguridad
+titulo:
+  sencillo: "Quiero ver qué hace mi hijo en la compu y cuánto tiempo"
+  tecnico: "Family Safety: informe de actividades"
+explicacion:
+  sencillo: "Family Safety te puede mostrar cuánto tiempo usó el chico la compu o la Xbox, qué juegos y programas abrió, qué páginas visitó y qué buscó en Bing. Sirve para charlar con él, no para espiarlo a escondidas."
+  tecnico: "Family Safety > miembro > Informe de actividades (Windows, Xbox, Seguridad web, Móvil): apps y juegos, web y búsqueda, tiempo en pantalla. Solo organizadores."
+frases: ["ver qué páginas visitó mi hijo", "saber cuánto tiempo estuvo mi nieto en la compu", "qué juegos usó el nene hoy", "ver lo que buscó mi hija en internet"]
+pasos:
+  - texto: "Entrá a la página de familia de Microsoft con tu cuenta de organizador y tocá la tarjeta del chico."
+    abrir: "https://account.microsoft.com/family"
+  - texto: "Activá el «Informe de actividades» en cada plataforma que quieras ver: Windows, Xbox, Seguridad web o celular."
+    abrir: "https://support.microsoft.com/es-es/family-safety/view-device-and-app-use-with-family-safety-activity-reporting"
+  - texto: "Elegí la plataforma y mirá «Aplicaciones, características y juegos», las páginas y búsquedas, y el tiempo de pantalla de cada día y de la semana."
+  - texto: "Las páginas solo se registran si el chico navega con un navegador compatible (Edge) entrando con su cuenta."
+fuentes:
+  - https://support.microsoft.com/es-es/family-safety/view-device-and-app-use-with-family-safety-activity-reporting
+madurez: T0
+---
+id: FAMX-010
+area: basico
+titulo:
+  sencillo: "Quiero sacar a alguien de mi grupo familiar de Microsoft"
+  tecnico: "Quitar miembros o abandonar el grupo familiar de Microsoft"
+explicacion:
+  sencillo: "El organizador del grupo familiar puede sacar a una persona, o salir él mismo. Quien sale pierde lo que se compartía, como Microsoft 365 Familia y los controles de Family Safety."
+  tecnico: "account.microsoft.com/family > ⋮ > Quitar del grupo familiar / Abandonar grupo familiar; en menores, antes Quitar consentimiento."
+frases: ["sacar a alguien de mi familia de microsoft", "quitar a mi nieto del grupo familiar", "salir del grupo familiar de microsoft", "borrar el grupo de familia de microsoft"]
+pasos:
+  - texto: "Entrá a la página de familia de Microsoft con tu cuenta. Solo un «Organizador» puede sacar a otros."
+    abrir: "https://account.microsoft.com/family"
+  - texto: "Tocá los tres puntitos al lado del nombre de la persona, elegí «Quitar del grupo familiar» y confirmá con «Quitar». Si es un menor y no aparece esa opción, primero elegí «Quitar consentimiento para la cuenta de este menor»."
+    abrir: "https://support.microsoft.com/es-es/family-safety/how-to-leave-a-microsoft-family-group"
+  - texto: "Para salir vos, tocá los tres puntitos al lado de tu nombre > «Abandonar grupo familiar» > «Quitar». Para borrar el grupo entero, primero sacá a todos los demás y después salí vos."
+  - texto: "Ojo: quien sale pierde Microsoft 365 Familia compartido y los controles de Family Safety."
+fuentes:
+  - https://support.microsoft.com/es-es/family-safety/how-to-leave-a-microsoft-family-group
+madurez: T0
+---
+id: FAMX-011
+area: seguridad
+titulo:
+  sencillo: "Quiero que mi hijo me pida permiso antes de comprar en la Microsoft Store o la Xbox"
+  tecnico: "Family Safety: aprobación de compras y límites de gasto"
+explicacion:
+  sencillo: "Podés hacer que cada compra del chico en la Microsoft Store o en la Xbox necesite tu aprobación, o darle una cantidad de plata en su cuenta para que no gaste más que eso."
+  tecnico: "Family Safety > miembro > Gastos: Métodos de pago de menores, Requerir aprobación para cada compra, saldo de la cuenta Microsoft, notificaciones y actividad de gasto."
+frases: ["mi hijo compró un juego en la xbox sin avisar", "que mi nieto no pueda comprar en la tienda de microsoft", "aprobar las compras de mi hijo en la microsoft store", "le cobraron a mi tarjeta una compra del nene en un juego"]
+pasos:
+  - texto: "Entrá a la página de familia de Microsoft con tu cuenta de organizador y abrí la página de «Gastos» del chico. En la app Microsoft Family Safety: tocá su nombre, bajá hasta el final y elegí «Administrar gastos»."
+    abrir: "https://account.microsoft.com/family"
+  - texto: "Activá «Requerir aprobación para cada compra». Así, cada vez que quiera comprar algo te llega un aviso al celular y a las notificaciones de Family Safety."
+    abrir: "https://support.microsoft.com/es-es/account-billing/require-kids-to-ask-before-buying-from-the-microsoft-store-online-f30d6801-165d-9f86-3fe7-063245c0449b"
+  - texto: "Otra opción, sin tarjeta: ponerle una cantidad de plata en su cuenta con «Agregar dinero». Solo puede gastar eso; la cuenta nunca queda en negativo."
+  - texto: "Activá también los avisos de cada compra y revisá la «actividad de gasto» para ver en qué se fue la plata."
+fuentes:
+  - https://support.microsoft.com/es-es/account-billing/require-kids-to-ask-before-buying-from-the-microsoft-store-online-f30d6801-165d-9f86-3fe7-063245c0449b
+madurez: T0
+---
+id: FAMX-012
+area: seguridad
+titulo:
+  sencillo: "Soy adulto y la compu me pone límites como si fuera un chico"
+  tecnico: "Configuración de Family Safety aplicada a un adulto"
+explicacion:
+  sencillo: "A veces a un adulto le aparecen límites de tiempo o páginas bloqueadas de Family Safety. Pasa si sos «Miembro» de un grupo familiar (el organizador maneja tus ajustes) o si la compu quedó con ajustes viejos de un grupo anterior."
+  tecnico: "Miembro de grupo familiar: solo el organizador cambia los ajustes. Sin grupo u organizador con ajustes residuales: ejecutar la tarea FamilySafetyRefreshTask y reiniciar."
+frases: ["me aparece control parental y soy grande", "la compu me bloquea páginas como si fuera un nene", "family safety me pone límite de tiempo a mí", "me sale que tengo que pedirle permiso a un adulto y soy adulto"]
+pasos:
+  - texto: "Fijate en qué grupo familiar estás y con qué papel: entrá a la página de familia de Microsoft con tu cuenta."
+    abrir: "https://account.microsoft.com/family"
+  - texto: "Si sos «Miembro», solo el organizador puede sacarte los filtros y los límites: pedile que los desactive en tu cuenta, o que te saque del grupo."
+    abrir: "https://support.microsoft.com/es-es/family-safety/family-safety-settings-enforced-on-adults"
+  - texto: "Si no estás en ningún grupo, o sos organizador y la compu igual te limita: apretá Windows + R, escribí cmd y aceptá. En la ventana negra escribí schtasks /run /tn Microsoft\\Windows\\Shell\\FamilySafetyRefreshTask, apretá Enter y reiniciá la compu."
+  - texto: "Si te sigue pasando, escribile a PC Doctor «sacar a alguien de mi grupo familiar de Microsoft»."
+fuentes:
+  - https://support.microsoft.com/es-es/family-safety/family-safety-settings-enforced-on-adults
+madurez: T0
+---
+id: FAMX-013
+area: seguridad
+titulo:
+  sencillo: "A mi nieto la cuenta de Microsoft le pide permiso de un adulto"
+  tecnico: "Consentimiento parental para cuentas Microsoft de menores"
+explicacion:
+  sencillo: "Si la cuenta de Microsoft es de un menor de edad, Microsoft pide que un adulto dé su permiso por correo. Es una exigencia de las leyes de protección de chicos. Lo da un padre, madre o tutor desde su propia cuenta."
+  tecnico: "Solicitud de consentimiento por correo al adulto; el adulto inicia sesión y aprueba; se gestiona en Administrar permisos. Se vuelve a pedir si se quita el consentimiento o lo exige la normativa."
+frases: ["a mi nieto le pide el permiso de los padres para entrar", "la cuenta de microsoft de mi hijo dice que necesita un adulto", "me llegó un mail para dar permiso a la cuenta de mi hija", "qué es el consentimiento parental de microsoft"]
+pasos:
+  - texto: "Cuando el chico entra, le pide el correo de un adulto. Poné el de su padre, madre o tutor (por ejemplo, el tuyo)."
+    abrir: "https://support.microsoft.com/es-es/family-safety/managing-parental-consent"
+  - texto: "Al adulto le llega un correo: tocá el enlace, entrá con tu propia cuenta de Microsoft y aprobá el pedido. No le pases tu clave al chico: el permiso se da desde tu cuenta."
+  - texto: "Si en realidad el chico no es menor y la fecha de nacimiento está mal, Microsoft tiene una herramienta para corregirla desde esa misma página."
+  - texto: "Para revisar o quitar un permiso que diste, usá «Administrar permisos». Solo lo puede quitar el adulto que lo dio."
+fuentes:
+  - https://support.microsoft.com/es-es/family-safety/managing-parental-consent
+madurez: T0
+---
+id: FAMX-014
+area: seguridad
+titulo:
+  sencillo: "Mi hijo no puede entrar al Minecraft u otro juego: dice que el padre bloqueó el acceso"
+  tecnico: "Cuenta de menor sin consentimiento para aplicaciones de terceros"
+explicacion:
+  sencillo: "Si al chico le aparece que su padre bloqueó el acceso a juegos y aplicaciones que no son de Microsoft, es porque al dar el permiso para su cuenta no se marcó la opción de apps de otras empresas. El adulto que dio el permiso lo puede habilitar."
+  tecnico: "Error «Tu padre ha bloqueado el acceso a los juegos y aplicaciones que no publica Microsoft»: account.live.com/mk > Administrar el acceso de este menor a aplicaciones de terceros > Habilitar acceso."
+frases: ["mi hijo no puede entrar al minecraft con su cuenta", "dice que tu padre bloqueó el acceso a los juegos", "mi nieto no puede jugar porque falta un permiso", "el juego no deja entrar al nene con la cuenta de microsoft"]
+pasos:
+  - texto: "Lo tiene que hacer el adulto que dio el permiso original para la cuenta del chico (aunque haya otro organizador en la familia)."
+    abrir: "https://support.microsoft.com/es-es/family-safety/my-child-is-not-able-to-access-3rd-party-apps"
+  - texto: "Entrá con tu cuenta de Microsoft a la página de cuentas de menores que indica Microsoft (account.live.com/mk). Vas a ver la lista de chicos de los que sos responsable."
+  - texto: "Junto al chico, elegí «Administrar el acceso de este menor a aplicaciones de terceros» y tocá «Habilitar acceso». Para volver a bloquearlo, «Deshabilitar acceso»."
+  - texto: "Si no ves al chico en la lista, el permiso lo dio otro adulto u otra cuenta. Si no aparece «Habilitar acceso», el acceso ya está habilitado y el problema es otro."
+fuentes:
+  - https://support.microsoft.com/es-es/family-safety/my-child-is-not-able-to-access-3rd-party-apps
+madurez: T0
+---
+id: FAMX-015
+area: seguridad
+titulo:
+  sencillo: "Puse límites con Family Safety pero en la compu del chico no funcionan"
+  tecnico: "Family Safety: límites o filtros que no se aplican en Windows"
+explicacion:
+  sencillo: "Los límites solo funcionan si el chico entra a la compu con su cuenta, que esté en tu grupo familiar y que no sea administrador. Si su usuario es administrador, puede cambiar o romper los controles."
+  tecnico: "Requisitos: cuenta del menor en el grupo, cuenta verificada (Cuentas > Comprobar) y tipo de cuenta Usuario estándar; probar quitar y volver a agregar los límites; zona horaria correcta."
+frases: ["el control parental no le hace nada a mi hijo", "family safety no bloquea la compu del nene", "mi nieto sigue usando la compu después de la hora", "los límites de microsoft family no se aplican"]
+pasos:
+  - texto: "Fijate que el chico entre a la compu con su propia cuenta y que esa cuenta esté en tu grupo familiar."
+    abrir: "ms-settings:family-group"
+  - texto: "Su usuario tiene que ser estándar, no administrador. Entrando con tu cuenta de adulto, en la lista de otras cuentas elegí la del chico, tocá «Cambiar tipo de cuenta» y elegí usuario estándar (no administrador)."
+    abrir: "ms-settings:otherusers"
+  - texto: "Si su cuenta de Microsoft venció, que entre con ella en la compu y vaya a Configuración > Cuentas: si aparece «Comprobar», que lo toque y siga los pasos."
+    abrir: "https://support.microsoft.com/es-es/family-safety/troubleshooting-microsoft-family-safety"
+  - texto: "Probá sacar los límites de tiempo y volver a ponerlos desde la página de familia. Y asegurate de que solo los adultos conozcan las claves de sus cuentas."
+    abrir: "https://account.microsoft.com/family"
+fuentes:
+  - https://support.microsoft.com/es-es/family-safety/troubleshooting-microsoft-family-safety
+madurez: T0
+---
+id: FAMX-016
+area: seguridad
+titulo:
+  sencillo: "Quiero crearle una cuenta de Google a mi hijo o nieto menor de 13 años"
+  tecnico: "Cuenta de Google para un menor administrada con Family Link"
+explicacion:
+  sencillo: "Un chico menor de 13 años (o la edad que corresponda en el país) no puede tener una cuenta de Google común: se la crea un padre o madre, que da su permiso y después la supervisa con la app Family Link."
+  tecnico: "Creación de Cuenta de Google para menor con consentimiento parental (Android, app Family Link o accounts.google.com/signup); queda supervisada con Family Link."
+frases: ["crearle un mail de google a mi nieto de 10 años", "mi hijo es chico y quiere un gmail", "cuenta de google para un nene menor de 13", "google no lo deja crear la cuenta porque es menor"]
+pasos:
+  - texto: "Hacelo vos, como padre o madre, y con tu propia cuenta de Google a mano: Google te va a pedir que entres con ella para dar tu permiso."
+    abrir: "https://support.google.com/families/answer/7103338?hl=es-419"
+  - texto: "Desde la app Family Link en tu celular: arriba a la izquierda tocá el perfil y elegí «Agregar hijo o hija». Seguí los pasos de la pantalla."
+  - texto: "Desde la compu también se puede: en la página para crear una cuenta de Google, completá el nombre del chico, su fecha de nacimiento y el correo que quiera, y seguí las instrucciones."
+  - texto: "Al final elegís cómo dar tu consentimiento. Si usás una tarjeta de crédito, Google no cobra nada, pero puede aparecer un cargo de verificación temporal que suele desaparecer en unas 48 horas."
+fuentes:
+  - https://support.google.com/families/answer/7103338?hl=es-419
+  - https://support.google.com/families/answer/7101025?hl=es-419
+madurez: T0
+---
+id: FAMX-017
+area: seguridad
+titulo:
+  sencillo: "Mi hijo ya tiene cuenta de Google y quiero supervisarla"
+  tecnico: "Agregar supervisión de Family Link a una Cuenta de Google existente"
+explicacion:
+  sencillo: "Si el chico o adolescente ya tiene su cuenta de Google, podés sumarle la supervisión de Family Link. Él tiene que estar de acuerdo y tener el celular al lado tuyo mientras lo configuran."
+  tecnico: "Configuración > Google > Todos los servicios > Controles parentales (Android) o Configuración > Cuentas > Controles parentales (Chromebook); requiere consentimiento del menor y mismo país."
+frases: ["quiero supervisar la cuenta de google de mi hijo adolescente", "mi hija ya tiene gmail y quiero controlarlo", "agregar family link a una cuenta que ya existe", "cómo pongo control de padres en el celular de mi hijo"]
+pasos:
+  - texto: "Necesitás tu propia cuenta de Google y ser mayor de edad. Tu hijo tiene que vivir en el mismo país que vos, aceptar la supervisión y estar con su celular al lado tuyo."
+    abrir: "https://support.google.com/families/answer/9055704?hl=es-419"
+  - texto: "En el celular Android del chico: abrí «Configuración», tocá «Google» y después «Todos los servicios». En «Niños y familia», tocá «Controles parentales» y después «Comenzar»."
+  - texto: "Elegí la cuenta del chico y seguí los pasos. Él va a tener que dar su consentimiento durante el proceso."
+  - texto: "Después instalá la app Family Link en tu celular para manejar sus límites y permisos. Ojo: un menor de 18 no puede sacar la supervisión sin tu aprobación."
+fuentes:
+  - https://support.google.com/families/answer/9055704?hl=es-419
+madurez: T0
+---
+id: FAMX-018
+area: seguridad
+titulo:
+  sencillo: "Quiero limitar cuánto usa el celular mi hijo con Family Link"
+  tecnico: "Family Link: límite diario, bloquear ahora y tiempo extra"
+explicacion:
+  sencillo: "Con Family Link podés decidir cuántas horas por día puede usar el chico su celular Android o su Chromebook, bloquearlo en el momento y regalarle un rato más si hace falta."
+  tecnico: "Family Link > hijo > Tiempo de uso > Límites de tiempo > Límite diario / Programa semanal; Bloquear; Tiempo extra. Android 7+ y ChromeOS."
+frases: ["mi nieto está todo el día con el celular", "poner horas de uso al celular del nene con family link", "bloquear el celular de mi hijo desde el mío", "darle un rato más de celular a mi hija"]
+pasos:
+  - texto: "Abrí Family Link, elegí a tu hijo arriba a la izquierda y tocá «Tiempo de uso» abajo a la izquierda."
+    abrir: "https://support.google.com/families/answer/7103340?hl=es-419"
+  - texto: "En «Límites de tiempo», activá «Límite diario» y tocá «Programa semanal»: elegí cada día y cuánto tiempo puede usarlo. Si querés lo mismo toda la semana, usá «Aplicar a todos los días de la semana»."
+  - texto: "Para bloquearlo ya, en «Tiempo de uso», debajo del nombre del dispositivo, tocá «Bloquear» (y «Desbloquear» para devolvérselo)."
+  - texto: "Para darle un rato más, tocá «Tiempo extra», elegí cuánto y tocá «Listo». Esto funciona en celulares Android y Chromebooks; no en la compu con Windows."
+fuentes:
+  - https://support.google.com/families/answer/7103340?hl=es-419
+madurez: T0
+---
+id: FAMX-019
+area: seguridad
+titulo:
+  sencillo: "Quiero que mi hijo me pida permiso antes de bajar apps o comprar en Google Play"
+  tecnico: "Family Link: aprobación de compras y descargas en Google Play"
+explicacion:
+  sencillo: "Podés hacer que, cada vez que el chico quiera bajar una app o comprar algo en Google Play, te llegue un pedido para que vos lo apruebes o lo rechaces."
+  tecnico: "Family Link > hijo > Controles > Google Play > Requerir aprobación para (Todo el contenido / Solo contenido pagado / Solo compras directas desde apps / Nunca)."
+frases: ["que mi hijo no baje juegos sin preguntarme", "aprobar las aplicaciones que quiere mi nieto", "mi hija compró algo en el play store sin permiso", "me llegó un pedido de mi hijo para bajar una app"]
+pasos:
+  - texto: "Abrí Family Link, elegí a tu hijo y tocá «Controles» y después «Google Play»."
+    abrir: "https://support.google.com/families/answer/7039872?hl=es-419"
+  - texto: "En «Requerir aprobación para», elegí qué querés aprobar: «Todo el contenido» (lo más seguro), «Solo contenido pagado», «Solo compras directas desde apps» o «Nunca»."
+  - texto: "Si el chico pide algo gratis con «Preguntar por mensaje», te llega un aviso al celular: abrilo y tocá «Aprobar solicitud» o «Rechazar». Si es algo pago, lo aprobás en el celular del chico, escribiendo vos mismo la clave de tu cuenta."
+  - texto: "Desde ahí mismo también podés elegir la clasificación máxima de apps y juegos que puede bajar."
+    abrir: "https://support.google.com/families/answer/7103028?hl=es-419"
+fuentes:
+  - https://support.google.com/families/answer/7039872?hl=es-419
+  - https://support.google.com/families/answer/7103028?hl=es-419
+madurez: T0
+---
+id: FAMX-020
+area: seguridad
+titulo:
+  sencillo: "Puse Family Link pero en la compu con Windows mi hijo hace lo que quiere"
+  tecnico: "Family Link no supervisa computadoras Windows ni Mac"
+explicacion:
+  sencillo: "Family Link solo controla celulares Android y Chromebooks. En una compu con Windows el chico puede entrar con su cuenta de Google, pero los límites de tiempo, el bloqueo de apps y los filtros de Chrome no se aplican. Para la compu se usa el control parental de Microsoft."
+  tecnico: "Family Link no admite computadoras (excepto Chromebook) ni iPhone/iPad; en navegadores no se aplican límites de tiempo, ubicación, actividad, bloqueo de apps ni restricciones de Chrome."
+frases: ["family link no funciona en la computadora", "mi hijo entra a su gmail en la compu y no tiene límites", "el control de google no anda en windows", "en la notebook no se aplica el family link"]
+pasos:
+  - texto: "Google aclara que las computadoras que no son Chromebook (Windows o Mac) no se pueden supervisar con Family Link."
+    abrir: "https://support.google.com/families/answer/9116646?hl=es-419"
+  - texto: "Si tu hijo entra a Google desde un navegador, no corren los límites de tiempo, el bloqueo de apps ni las restricciones de sitios de Chrome. Lo que sí podés decidir es si te tiene que pedir permiso para entrar: en Family Link, elegí al chico y tocá «Controles» > «Configuración de la cuenta» > «Controles para acceder»."
+    abrir: "https://support.google.com/families/answer/9043123?hl=es-419"
+  - texto: "Para poner horarios y filtros en la compu con Windows, usá Microsoft Family Safety con una cuenta de Microsoft para el chico. Escribile a PC Doctor «control parental»."
+fuentes:
+  - https://support.google.com/families/answer/9116646?hl=es-419
+  - https://support.google.com/families/answer/9043123?hl=es-419
+madurez: T0
+---
+id: FAMX-021
+area: seguridad
+titulo:
+  sencillo: "Quiero que Google no le muestre cosas para adultos a mi nieto cuando busca"
+  tecnico: "SafeSearch en la Búsqueda de Google"
+explicacion:
+  sencillo: "SafeSearch es un filtro de Google que esconde desnudos, violencia fuerte y otras cosas explícitas en los resultados de búsqueda. Funciona solo en la Búsqueda de Google, no en otros buscadores ni dentro de otras páginas."
+  tecnico: "google.com/safesearch: Filtrar, Desenfocar o Desactivado; en cuentas de Family Link queda bloqueado en Filtrar y solo lo cambia el padre."
+frases: ["activar el filtro de google para los chicos", "que en google no aparezcan fotos de desnudos", "qué es safesearch", "mi nieto busca en google y le salen cosas feas"]
+pasos:
+  - texto: "Entrá a la configuración de SafeSearch de Google (google.com/safesearch) en el navegador que usa el chico."
+    abrir: "https://support.google.com/websearch/answer/510?hl=es-419"
+  - texto: "Elegí «Filtrar»: bloquea los resultados explícitos. «Desenfocar» solo borronea las imágenes y «Desactivado» muestra todo."
+  - texto: "Si el chico tiene una cuenta supervisada con Family Link, el filtro ya viene puesto y trabado: solo vos lo podés cambiar, en Family Link > «Controles» > «Búsqueda de Google»."
+    abrir: "https://support.google.com/families/answer/7086922?hl=es-419"
+  - texto: "Si ves un candadito arriba a la derecha, la opción está bloqueada por la cuenta, la escuela o la red."
+fuentes:
+  - https://support.google.com/websearch/answer/510?hl=es-419
+  - https://support.google.com/families/answer/7086922?hl=es-419
+madurez: T0
+---
+id: FAMX-022
+area: seguridad
+titulo:
+  sencillo: "Quiero que mi hijo use YouTube común pero con una cuenta supervisada"
+  tecnico: "Cuenta infantil supervisada en YouTube (families.youtube.com)"
+explicacion:
+  sencillo: "Para chicos que ya quieren dejar YouTube Kids, Google tiene cuentas supervisadas de YouTube: el padre elige un nivel de contenido y quedan apagados los comentarios, subir videos y las compras."
+  tecnico: "Cuenta infantil supervisada de YouTube: parámetro de contenido «Niños mayores», «Adolescentes» o «Adolescentes mayores»; se configura en families.youtube.com o con Family Link."
+frases: ["mi nieto ya es grande para youtube kids", "pasar a mi hijo de youtube kids a youtube normal", "youtube supervisado para un chico de 11 años", "elegir qué videos ve mi hijo en youtube común"]
+pasos:
+  - texto: "El chico tiene que tener su propia cuenta de Google (si no la tiene, escribile a PC Doctor «crear una cuenta de google para mi hijo»)."
+    abrir: "https://support.google.com/youtube/answer/10314074?hl=es-419"
+  - texto: "Desde la compu: entrá a families.youtube.com con tu cuenta de Google de padre o madre, elegí al chico de tu grupo familiar y seguí los pasos."
+  - texto: "Elegí el nivel de contenido: «Niños mayores» (en general, desde 9 años), «Adolescentes» (desde 13) o «Adolescentes mayores» (desde 16). Lo podés cambiar cuando quieras."
+    abrir: "https://support.google.com/youtube/answer/10315823?hl=es-419"
+  - texto: "Con esta cuenta el chico no puede comentar, subir videos, hacer transmisiones ni comprar."
+    abrir: "https://support.google.com/youtube/answer/10314940?hl=es-419"
+fuentes:
+  - https://support.google.com/youtube/answer/10314074?hl=es-419
+  - https://support.google.com/youtube/answer/10315823?hl=es-419
+  - https://support.google.com/youtube/answer/10314940?hl=es-419
+madurez: T0
+---
+id: FAMX-023
+area: seguridad
+titulo:
+  sencillo: "Un adulto desconocido le escribe a mi hijo o nieto y me preocupa"
+  tecnico: "Sospecha de grooming o abuso en línea: denuncia"
+explicacion:
+  sencillo: "Si un adulto busca ganarse la confianza de un chico por internet, le pide fotos, que guarde secretos o que se vean, puede ser «grooming», un tipo de abuso. Lo primero es la seguridad del chico: no lo retes, guardá las pruebas y hacé la denuncia."
+  tecnico: "Ante sospecha de abuso, explotación o grooming: denuncia policial inmediata; Google ofrece un formulario de denuncia de grooming para sus productos y opciones de denuncia por producto."
+frases: ["un grande le escribe a mi nieta por internet", "a mi hijo le pidieron fotos por el chat", "creo que alguien está engañando a mi hija por internet", "qué hago si un desconocido acosa a mi nieto en un juego"]
+pasos:
+  - texto: "Hablá con el chico con calma y sin retarlo: que sepa que hizo bien en contarlo. Que no responda más ni mande nada a esa persona."
+  - texto: "No borres nada: guardá capturas de pantalla de los mensajes, el nombre de usuario o perfil, y las fechas."
+  - texto: "Si creés que el chico corre peligro, hacé la denuncia en la policía enseguida. Google lo indica así."
+    abrir: "https://support.google.com/families/answer/7182800?hl=es-419"
+  - texto: "Después, denunciá y bloqueá a esa persona en la aplicación donde pasó. Si fue en un servicio de Google (Gmail, Chat, Drive, YouTube), Google explica cómo denunciarlo en esa misma página."
+fuentes:
+  - https://support.google.com/families/answer/7182800?hl=es-419
+madurez: T0
+---
+id: FAMX-024
+area: seguridad
+titulo:
+  sencillo: "A mi hijo lo están molestando o burlando por internet"
+  tecnico: "Ciberacoso: pruebas, bloqueo y denuncia"
+explicacion:
+  sencillo: "El ciberacoso son burlas, amenazas o humillaciones por chat, redes o videos. Al chico le hace mucho daño. Se puede bloquear a quien molesta, denunciarlo en la página y, si hay amenazas, hacer la denuncia ante las autoridades."
+  tecnico: "Bloquear y denunciar al usuario en la plataforma; en YouTube, denunciar videos, canales o comentarios y moderar comentarios; contactar a las autoridades locales."
+frases: ["le hacen bullying a mi nieto por internet", "le dejan comentarios feos a mi hija en sus videos", "se burlan de mi hijo en las redes", "mi hijo recibe amenazas por el chat"]
+pasos:
+  - texto: "Escuchá al chico sin retarlo ni sacarle el celular de castigo: lo importante es que siga contándote. Que no conteste las agresiones."
+  - texto: "Guardá pruebas: capturas de pantalla con los mensajes, los nombres de usuario y las fechas."
+  - texto: "Bloqueá a quien lo molesta y denuncialo en la página. En YouTube se pueden denunciar videos, canales y comentarios, y el chico puede borrar o revisar los comentarios de su canal antes de que se publiquen."
+    abrir: "https://support.google.com/youtube/answer/2802272?hl=es-419"
+  - texto: "Si hay amenazas o el acoso sigue, hacé la denuncia ante las autoridades. Google recomienda consultarlas enseguida."
+    abrir: "https://support.google.com/families/answer/7182800?hl=es-419"
+fuentes:
+  - https://support.google.com/youtube/answer/2802272?hl=es-419
+  - https://support.google.com/families/answer/7182800?hl=es-419
+madurez: T0
+---
+id: FAMX-025
+area: seguridad
+titulo:
+  sencillo: "Mi hijo cumplió 13 y quiere sacar el control de Family Link"
+  tecnico: "Detener la supervisión de Family Link"
+explicacion:
+  sencillo: "La supervisión de Family Link se puede sacar cuando el chico cumple 13 años (o la edad que corresponda en el país). Si es menor de 18, necesita que vos lo apruebes, y a los dos les llega un aviso."
+  tecnico: "Family Link > hijo > Controles > Configuración de la cuenta > Acerca de la supervisión > Detener supervisión."
+frases: ["mi hijo cumplió 13 y quiere sacar el family link", "cómo dejo de supervisar la cuenta de mi hija", "sacar el control parental de google", "mi nieto dice que ya es grande para el family link"]
+pasos:
+  - texto: "Recién se puede sacar cuando el chico cumple 13 años (o la edad que fije el país). Si es menor de 18, siempre hace falta tu aprobación."
+    abrir: "https://support.google.com/families/answer/9055704?hl=es-419"
+  - texto: "En tu celular, abrí Family Link, elegí la cuenta del chico y tocá «Controles» > «Configuración de la cuenta» > «Acerca de la supervisión»."
+  - texto: "Seguí las instrucciones y tocá «Detener supervisión». A los dos les va a llegar un aviso."
+fuentes:
+  - https://support.google.com/families/answer/9055704?hl=es-419
+madurez: T0

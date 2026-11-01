@@ -1,0 +1,495 @@
+# Redes (3): seguridad del Wi-Fi (WPA3, red no segura), Wi-Fi 6/7, QR, direcciones aleatorias, DNS y DNS cifrado, IPv6, datos móviles y eSIM, proxy automático, Escritorio remoto, Asistencia rápida, Wake on LAN, red de invitados y comandos ping/tracert/nslookup. Guiadas con fuente oficial.
+id: NETX-001
+area: red
+titulo:
+  sencillo: "Windows dice que mi Wi-Fi no es seguro porque usa un estándar de seguridad antiguo"
+  tecnico: "Aviso de red Wi-Fi no segura (WEP o TKIP)"
+explicacion:
+  sencillo: "Ese aviso aparece cuando el Wi-Fi usa una protección vieja (WEP o TKIP) que tiene fallas conocidas. Por ahora Windows te deja conectarte igual, pero Microsoft avisa que más adelante lo va a dejar de permitir, así que conviene arreglarlo en el router."
+  tecnico: "La red usa WEP o TKIP, con vulnerabilidades conocidas. Solución: configurar el router en WPA3 (o un modo más nuevo) o reemplazarlo; Windows dejará de admitir esos estándares."
+frases: ["me sale que la red wifi no es segura", "dice que mi wifi usa un estándar de seguridad antiguo", "aviso de red no segura en windows", "el wifi de mi casa figura como no seguro"]
+pasos:
+  - texto: "Si hay otra red Wi-Fi cerca en la que confíes, desconectate de esta y conectate a esa."
+    abrir: "ms-settings:network-wifi"
+  - texto: "Si es el Wi-Fi de tu casa, hay que entrar a la configuración del router y cambiar la seguridad a una más nueva, como WPA3. Si no sabés hacerlo, pedíselo a quien te instaló Internet."
+  - texto: "Si el router es muy viejo y no tiene esa opción, lo mejor es cambiarlo por uno más nuevo. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/wi-fi-network-not-secure-in-windows"
+derivar: "La empresa que te da Internet suele poder cambiar la seguridad del router o darte uno más nuevo."
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/wi-fi-network-not-secure-in-windows
+madurez: T0
+---
+id: NETX-002
+area: red
+titulo:
+  sencillo: "¿Qué es WPA3 y cómo sé si mi compu lo puede usar?"
+  tecnico: "Compatibilidad del adaptador con WPA3-Personal/Enterprise"
+explicacion:
+  sencillo: "WPA3 es la protección más nueva para el Wi-Fi: hace más difícil que alguien adivine la clave o espíe la conexión. Para usarla, tanto el router como el Wi-Fi de la compu tienen que ser compatibles. Si el router tiene WPA2 y WPA3, Windows prueba primero con WPA3."
+  tecnico: "netsh wlan show drivers > «Authentication and cipher supported in infrastructure mode»: buscar WPA3 Personal / WPA3 Enterprise. Indica lo que soporta el adaptador, no lo que usa la conexión actual."
+frases: ["qué es wpa3", "mi compu es compatible con wpa3", "diferencia entre wpa2 y wpa3", "cómo sé si mi placa de wifi soporta wpa3"]
+pasos:
+  - texto: "Buscá «cmd» en Inicio y abrí el Símbolo del sistema."
+  - texto: "Escribí exactamente netsh wlan show drivers y apretá Enter."
+  - texto: "En la parte de autenticación y cifrado admitidos, fijate si aparece «WPA3 Personal». Si aparece, tu compu lo puede usar; después depende de que el router también lo tenga."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/faster-and-more-secure-wi-fi-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/faster-and-more-secure-wi-fi-in-windows
+madurez: T0
+---
+id: NETX-003
+area: red
+titulo:
+  sencillo: "¿Mi compu tiene Wi-Fi 6 o Wi-Fi 7?"
+  tecnico: "Ver tipos de radio admitidos (802.11ax/802.11be) y banda de la conexión"
+explicacion:
+  sencillo: "Wi-Fi 6, 6E y 7 son las versiones más nuevas del Wi-Fi: más rápidas y mejores cuando hay muchos aparatos conectados. Para aprovecharlas, la compu y el router tienen que ser compatibles. Windows te deja ver qué admite tu compu."
+  tecnico: "netsh wlan show drivers > «Radio types supported»: 802.11ax (Wi-Fi 6/6E), 802.11be (Wi-Fi 7). En las propiedades de la red Wi-Fi, «Network band (channel)» muestra la banda en uso."
+frases: ["mi compu tiene wifi 6", "cómo sé si mi notebook tiene wifi 7", "compré un router wifi 6 y no sé si la compu lo aprovecha", "qué versión de wifi tiene mi compu"]
+pasos:
+  - texto: "Buscá «cmd» en Inicio, abrí el Símbolo del sistema, escribí exactamente netsh wlan show drivers y apretá Enter."
+  - texto: "En los tipos de radio admitidos: si dice 802.11ax tu compu tiene Wi-Fi 6 o 6E; si dice 802.11be, tiene Wi-Fi 7."
+  - texto: "Para ver en qué banda estás conectado ahora, entrá en Wi-Fi, abrí las propiedades de tu red y mirá la banda de red (canal)."
+    abrir: "ms-settings:network-wifi"
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/faster-and-more-secure-wi-fi-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/faster-and-more-secure-wi-fi-in-windows
+madurez: T0
+---
+id: NETX-004
+area: red
+titulo:
+  sencillo: "Quiero conectarme a un Wi-Fi escaneando un código QR"
+  tecnico: "Conexión Wi-Fi mediante código QR con la app Cámara (Windows 11)"
+explicacion:
+  sencillo: "En bares o consultorios a veces hay un cartel con un código QR para conectarse al Wi-Fi. En Windows 11, si la compu tiene cámara, la podés usar para leerlo y conectarte sin escribir la clave."
+  tecnico: "App Cámara > modo código de barras; el enlace del QR abre Configuración para agregar y conectar la red (Windows 11)."
+frases: ["conectarme al wifi con el código qr", "escanear el qr del wifi con la compu", "en el bar hay un qr para el wifi y quiero usarlo en la notebook", "leer un código qr de wifi con la cámara de la notebook"]
+pasos:
+  - texto: "Abrí la aplicación Cámara y cambiá al modo de código de barras (el ícono del código)."
+  - texto: "Apuntá la cámara al código QR del Wi-Fi hasta que aparezca un enlace, y tocalo: se abre Configuración."
+  - texto: "Confirmá que querés agregar y conectarte a esa red. Podés elegir si querés que se conecte sola cuando esté cerca."
+  - texto: "Si es una red de un lugar público, dejala como red pública. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/connect-to-a-wi-fi-network-in-windows-1f881677-b569-0cd5-010d-e3cd3579d263"
+fuentes:
+  - https://support.microsoft.com/windows/connect-to-a-wi-fi-network-in-windows-1f881677-b569-0cd5-010d-e3cd3579d263
+madurez: T0
+---
+id: NETX-005
+area: red
+titulo:
+  sencillo: "Quiero pasarle el Wi-Fi a una visita sin dictarle la clave letra por letra"
+  tecnico: "Compartir la red Wi-Fi desde las propiedades de la red (QR o contraseña)"
+explicacion:
+  sencillo: "Desde una compu que ya está conectada a tu Wi-Fi podés mostrar la clave para que otro aparato se conecte. Si el otro aparato lo permite, se puede conectar escaneando un código QR."
+  tecnico: "Windows 11: Red e Internet > Propiedades > «Mostrar» junto a la contraseña de la red; el otro dispositivo escanea el código QR si lo admite o ingresa la contraseña."
+frases: ["quiero pasarle el wifi a una visita", "compartir el wifi con un qr desde la compu", "mi nieto quiere conectarse al wifi y no le quiero dictar la clave", "cómo comparto mi wifi con alguien que vino a casa"]
+pasos:
+  - texto: "En la compu que ya está conectada, entrá en Red e Internet, abrí las propiedades de tu Wi-Fi y tocá «Mostrar» junto a la contraseña de la red."
+    abrir: "ms-settings:network-wifi"
+  - texto: "Si aparece un código QR, la otra persona lo puede escanear con la cámara del celular, si su aparato lo permite. Si no, que escriba la clave cuando se la pida."
+  - texto: "Cerrá esa ventana cuando termine, para que la clave no quede a la vista. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/connect-to-a-wi-fi-network-in-windows-1f881677-b569-0cd5-010d-e3cd3579d263"
+derivar: "Si te visitan seguido, una red de invitados evita compartir la clave de tu Wi-Fi principal: escribile a PC Doctor «red de invitados»."
+fuentes:
+  - https://support.microsoft.com/windows/connect-to-a-wi-fi-network-in-windows-1f881677-b569-0cd5-010d-e3cd3579d263
+madurez: T0
+---
+id: NETX-006
+area: red
+titulo:
+  sencillo: "No quiero que me sigan el rastro cuando uso el Wi-Fi de bares o shoppings"
+  tecnico: "Direcciones de hardware aleatorias (MAC aleatoria)"
+explicacion:
+  sencillo: "Cada compu tiene un «número de serie» de red (la dirección MAC) que se ve cuando busca Wi-Fi. En lugares públicos lo pueden usar para saber por dónde andás. Windows puede usar números al azar para que sea más difícil seguirte."
+  tecnico: "Wi-Fi > «Direcciones de hardware aleatorias» (para todas las redes) o, por red, en Administrar redes conocidas. Se aplica en la próxima conexión."
+frases: ["que no me rastreen por el wifi", "qué es la dirección de hardware aleatoria", "activar mac aleatoria en windows", "privacidad en el wifi del shopping"]
+pasos:
+  - texto: "Para todas las redes: entrá en Wi-Fi y activá la opción de direcciones de hardware aleatorias."
+    abrir: "ms-settings:network-wifi"
+  - texto: "Para una sola red: entrá en «Administrar redes conocidas», elegí la red y activá ahí la misma opción. Se aplica la próxima vez que te conectes."
+    abrir: "ms-settings:network-wifisettings"
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/connect-to-a-wi-fi-network-in-windows-1f881677-b569-0cd5-010d-e3cd3579d263"
+fuentes:
+  - https://support.microsoft.com/windows/connect-to-a-wi-fi-network-in-windows-1f881677-b569-0cd5-010d-e3cd3579d263
+madurez: T0
+---
+id: NETX-007
+area: red
+titulo:
+  sencillo: "Me dijeron que cambie el DNS de la computadora"
+  tecnico: "Configurar servidores DNS manualmente (IPv4)"
+explicacion:
+  sencillo: "El DNS es como la «guía telefónica» que traduce el nombre de una página a su dirección. Normalmente lo da el router solo. Se puede poner otro a mano, por ejemplo si un técnico te lo indicó."
+  tecnico: "Red e Internet > Wi-Fi > Administrar redes conocidas > red (o Ethernet) > Editar asignación > Manual > IPv4 > DNS preferido y alternativo > Guardar."
+frases: ["cómo cambio el dns en windows", "me dijeron que ponga otro dns", "quiero poner el dns de google en la compu", "dónde se cambia el servidor dns"]
+pasos:
+  - texto: "Anotá cómo está antes de tocar nada. Si usás Wi-Fi, entrá en «Administrar redes conocidas» y elegí tu red; si usás cable, entrá en Ethernet."
+    abrir: "ms-settings:network-wifisettings"
+  - texto: "Junto a la asignación de IP (o de servidor DNS), tocá «Editar», elegí «Manual» y activá IPv4."
+  - texto: "Escribí el DNS preferido y el alternativo que te indicaron y tocá «Guardar». Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9"
+derivar: "Si después de cambiarlo no abren las páginas, volvé a dejarlo en automático: escribile a PC Doctor «volver el DNS a automático»."
+fuentes:
+  - https://support.microsoft.com/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9
+madurez: T0
+---
+id: NETX-008
+area: red
+titulo:
+  sencillo: "Toqué la configuración de IP o DNS y ahora no anda Internet"
+  tecnico: "Restaurar la asignación automática (DHCP)"
+explicacion:
+  sencillo: "Si alguien puso a mano la dirección o el DNS y quedó mal, la compu se queda sin Internet. Lo recomendado para una casa es dejar que el router lo configure solo («automático»)."
+  tecnico: "Editar asignación de IP/DNS > Automático (DHCP) > Guardar. Microsoft recomienda DHCP."
+frases: ["cambié el dns y se fue internet", "volver la ip a automático", "puse una ip a mano y ahora no tengo internet", "cómo dejo el dns como estaba"]
+pasos:
+  - texto: "Si usás Wi-Fi, entrá en «Administrar redes conocidas» y elegí tu red. Si usás cable, entrá en Ethernet."
+    abrir: "ms-settings:network-wifisettings"
+  - texto: "Junto a la asignación de IP (y también la de DNS, si aparece aparte), tocá «Editar» y elegí «Automático (DHCP)»."
+  - texto: "Tocá «Guardar» y probá abrir una página. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9"
+fuentes:
+  - https://support.microsoft.com/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9
+madurez: T0
+---
+id: NETX-009
+area: red
+titulo:
+  sencillo: "Quiero que las consultas de DNS vayan cifradas (DNS sobre HTTPS)"
+  tecnico: "DNS over HTTPS (DoH) en el cliente DNS de Windows 11"
+explicacion:
+  sencillo: "Cada vez que entrás a una página, la compu pregunta su dirección. Normalmente esa pregunta viaja «a la vista». Con DNS sobre HTTPS viaja cifrada, así es más difícil espiarla. En Windows 11 se activa solo con servidores DNS que Windows reconoce (como los de Cloudflare, Google o Quad9). Windows 10 no lo tiene."
+  tecnico: "Edición manual de DNS > DNS over HTTPS: «On (automatic template)»/«On (manual template)» o «Encrypted only», según la versión. Requiere un servidor de la lista de DoH conocidos (Cloudflare 1.1.1.1, Google 8.8.8.8, Quad9 9.9.9.9). Respaldo a texto sin formato opcional."
+frases: ["activar dns sobre https en windows 11", "quiero el dns cifrado", "qué es dns over https", "cómo pongo doh en la compu"]
+pasos:
+  - texto: "Entrá en tu red (Wi-Fi en «Administrar redes conocidas», o Ethernet), tocá «Editar» junto a la asignación de IP o DNS y elegí «Manual» con IPv4 activado."
+    abrir: "ms-settings:network-wifisettings"
+  - texto: "Escribí en DNS preferido y alternativo direcciones de un servicio compatible (por ejemplo 1.1.1.1 y 1.0.0.1 de Cloudflare, o 8.8.8.8 y 8.8.4.4 de Google)."
+  - texto: "En «DNS sobre HTTPS», elegí la opción que lo activa (según tu versión, la de plantilla automática o la de solo cifrado). Si dejás apagado el respaldo sin cifrar, cuando falle el cifrado no se resuelven las páginas. Tocá «Guardar»."
+    abrir: "https://support.microsoft.com/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9"
+  - texto: "Microsoft lista los servidores que Windows reconoce para el DNS cifrado."
+    abrir: "https://learn.microsoft.com/windows-server/networking/dns/doh-client-support"
+derivar: "Si después no abren las páginas, volvé la asignación a «Automático (DHCP)»."
+fuentes:
+  - https://support.microsoft.com/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9
+  - https://learn.microsoft.com/windows-server/networking/dns/doh-client-support
+madurez: T0
+---
+id: NETX-010
+area: red
+titulo:
+  sencillo: "Me dijeron que desactive el IPv6 para que ande Internet"
+  tecnico: "No deshabilitar IPv6; preferir IPv4 si hace falta"
+explicacion:
+  sencillo: "IPv6 es una parte de Windows que maneja las conexiones modernas. Microsoft recomienda NO desactivarlo, porque hay partes de Windows que pueden dejar de funcionar. Si Internet anda raro, la causa casi nunca es esa."
+  tecnico: "IPv6 es parte obligatoria de Windows desde Vista. Microsoft no recomienda deshabilitarlo ni desvincularlo del adaptador; si se necesita, usar «Preferir IPv4 sobre IPv6» en las directivas de prefijos."
+frases: ["me dijeron que saque el ipv6", "desactivar ipv6 en windows sirve", "destildar protocolo de internet versión 6", "el técnico me dijo que apague el ipv6"]
+pasos:
+  - texto: "No desactives IPv6 ni lo destildes en las propiedades del adaptador: Microsoft avisa que algunos componentes de Windows pueden dejar de funcionar."
+  - texto: "Si ya lo destildaste y no notaste mejora, volvé a marcar «Protocolo de Internet versión 6 (TCP/IPv6)» en las propiedades del adaptador."
+  - texto: "Si un técnico necesita que la compu use IPv4 primero, Microsoft explica la alternativa recomendada (preferir IPv4 sobre IPv6) en lugar de desactivarlo."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-server/networking/configure-ipv6-in-windows"
+derivar: "Si Internet sigue fallando, pasá el diagnóstico de PC Doctor para buscar la causa real."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-server/networking/configure-ipv6-in-windows
+madurez: T0
+---
+id: NETX-011
+area: red
+titulo:
+  sencillo: "Mi notebook tiene lugar para chip: quiero usar Internet del celular sin Wi-Fi"
+  tecnico: "Conexión de datos móviles (celular) en Windows"
+explicacion:
+  sencillo: "Algunas notebooks traen lugar para un chip (SIM) o una eSIM, como un celular. Con un plan de datos se conectan a Internet en cualquier lado. Windows trata esa conexión como «de uso medido» para gastar menos."
+  tecnico: "Configuración > Red e Internet > Celular. La opción «Let Windows keep me connected» conecta por datos cuando no hay otra red. Conexión de uso medido por defecto."
+frases: ["mi notebook tiene ranura para chip", "usar datos móviles en la notebook", "puse un chip en la notebook y quiero conectarme", "notebook con sim cómo me conecto"]
+pasos:
+  - texto: "Entrá en Red e Internet > Celular. Si esa sección no aparece, la compu no tiene datos móviles."
+    abrir: "ms-settings:network-cellular"
+  - texto: "Activá la opción para que Windows mantenga la conexión: así usa los datos cuando no estás en otra red."
+  - texto: "Ojo con el consumo: los datos se cobran según tu plan. Microsoft explica todas las opciones."
+    abrir: "https://support.microsoft.com/windows/cellular-settings-in-windows-905568ff-7f31-3013-efc7-3f396ac92cd7"
+fuentes:
+  - https://support.microsoft.com/windows/cellular-settings-in-windows-905568ff-7f31-3013-efc7-3f396ac92cd7
+madurez: T0
+---
+id: NETX-012
+area: red
+titulo:
+  sencillo: "Quiero que la notebook use los datos del chip cuando el Wi-Fi anda mal"
+  tecnico: "Usar datos móviles cuando la señal Wi-Fi es mala"
+explicacion:
+  sencillo: "Si la notebook tiene chip, Windows puede pasarse solo a los datos móviles cuando el Wi-Fi está flojo. Es cómodo, pero puede gastar datos de tu plan."
+  tecnico: "Celular > «Use cellular whenever Wi-Fi is poor» (Windows 11); en Windows 10, «When Wi-Fi is poor» o «Always»."
+frases: ["que use el chip cuando el wifi está flojo", "pasar a datos móviles si se cae el wifi", "la notebook gasta datos del chip estando en wifi", "usar datos en vez de wifi en la notebook"]
+pasos:
+  - texto: "Entrá en Red e Internet > Celular."
+    abrir: "ms-settings:network-cellular"
+  - texto: "Activá (o desactivá, si no querés gastar datos) la opción de usar datos móviles cuando el Wi-Fi sea deficiente."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/cellular-settings-in-windows-905568ff-7f31-3013-efc7-3f396ac92cd7"
+fuentes:
+  - https://support.microsoft.com/windows/cellular-settings-in-windows-905568ff-7f31-3013-efc7-3f396ac92cd7
+madurez: T0
+---
+id: NETX-013
+area: red
+titulo:
+  sencillo: "Me voy de viaje al exterior y no quiero que la notebook gaste roaming"
+  tecnico: "Opciones de itinerancia de datos (roaming) en la conexión celular"
+explicacion:
+  sencillo: "Fuera del país, usar datos móviles puede salir muy caro. Windows tiene una opción para que la notebook no use datos cuando está en roaming."
+  tecnico: "Celular > opciones de itinerancia de datos (roaming) > «Don't roam»."
+frases: ["no quiero gastar roaming con la notebook", "desactivar roaming en windows", "viajo afuera y tengo chip en la notebook", "la notebook me puede cobrar roaming"]
+pasos:
+  - texto: "Antes de viajar, entrá en Red e Internet > Celular."
+    abrir: "ms-settings:network-cellular"
+  - texto: "En las opciones de itinerancia (roaming) de datos, elegí la que dice que no use itinerancia."
+  - texto: "Si en el viaje usás otro plan o eSIM, podés elegirlo ahí mismo. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/cellular-settings-in-windows-905568ff-7f31-3013-efc7-3f396ac92cd7"
+fuentes:
+  - https://support.microsoft.com/windows/cellular-settings-in-windows-905568ff-7f31-3013-efc7-3f396ac92cd7
+madurez: T0
+---
+id: NETX-014
+area: red
+titulo:
+  sencillo: "La notebook me pide el PIN del chip"
+  tecnico: "PIN de la SIM en Windows (usar, cambiar, quitar, desbloquear)"
+explicacion:
+  sencillo: "El chip puede tener un PIN, igual que en el celular, para que nadie use tus datos si te roban la notebook. Si lo ponés mal tres veces, el chip se bloquea y hace falta un código de la empresa de telefonía."
+  tecnico: "Celular > Mobile operator settings > Security: Use SIM PIN, Change SIM PIN, Remove SIM PIN. Tras 3 intentos fallidos aparece «Unblock SIM PIN» (código del operador)."
+frases: ["la notebook me pide el pin del chip", "bloqueé el chip de la notebook", "sacar el pin de la sim en windows", "puse mal el pin de la sim tres veces"]
+pasos:
+  - texto: "Escribí el PIN del chip vos mismo cuando Windows lo pida (suele venir en la tarjeta donde vino el chip). No se lo pases a nadie."
+  - texto: "Para cambiarlo o quitarlo: entrá en Celular > configuración del operador móvil y buscá la sección de seguridad del PIN de la SIM."
+    abrir: "ms-settings:network-cellular"
+  - texto: "Si se bloqueó por poner mal el PIN tres veces, aparece la opción de desbloquearlo: necesitás el código que te da la empresa de telefonía. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/cellular-settings-in-windows-905568ff-7f31-3013-efc7-3f396ac92cd7"
+derivar: "Para el código de desbloqueo, llamá a tu empresa de telefonía."
+fuentes:
+  - https://support.microsoft.com/windows/cellular-settings-in-windows-905568ff-7f31-3013-efc7-3f396ac92cd7
+madurez: T0
+---
+id: NETX-015
+area: red
+titulo:
+  sencillo: "Puse el chip en la notebook pero no navega: me dicen que configure el APN"
+  tecnico: "Agregar un APN de Internet en la conexión celular"
+explicacion:
+  sencillo: "El APN es un dato de la empresa de telefonía que le dice a la notebook cómo conectarse a sus datos. Casi siempre se pone solo, pero a veces hay que cargarlo a mano con lo que te indique la empresa."
+  tecnico: "Celular > Mobile operator settings > Add APN (Windows 11); en Windows 10, Advanced options > Add an APN. Datos provistos por el operador."
+frases: ["configurar el apn en la notebook", "el chip no navega en la notebook", "me piden poner el apn en windows", "datos móviles no funcionan en la notebook"]
+pasos:
+  - texto: "Pedile a tu empresa de telefonía los datos del APN para computadoras (nombre del APN y los demás datos que correspondan)."
+  - texto: "Entrá en Celular > configuración del operador móvil y tocá la opción para agregar un APN. Copiá los datos tal cual te los dieron y guardá."
+    abrir: "ms-settings:network-cellular"
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/cellular-settings-in-windows-905568ff-7f31-3013-efc7-3f396ac92cd7"
+derivar: "Si con el APN correcto sigue sin navegar, consultá a tu empresa de telefonía si el plan incluye datos."
+fuentes:
+  - https://support.microsoft.com/windows/cellular-settings-in-windows-905568ff-7f31-3013-efc7-3f396ac92cd7
+madurez: T0
+---
+id: NETX-016
+area: red
+titulo:
+  sencillo: "Quiero usar una eSIM en la notebook"
+  tecnico: "Agregar, usar y eliminar perfiles eSIM en Windows"
+explicacion:
+  sencillo: "La eSIM es un chip «virtual» que viene adentro de algunas notebooks: en vez de poner una tarjeta, cargás un perfil con un código o QR que te da la empresa de telefonía. Si borrás un perfil, puede que tengas que pedirle a la empresa que te lo vuelva a dar."
+  tecnico: "Cellular > eSIM profiles > Add profile > código de activación o QR del operador > Download; luego elegir el perfil y «Use». Eliminar puede requerir que el operador vuelva a emitirlo."
+frases: ["agregar una esim en la notebook", "mi notebook tiene esim cómo la uso", "la empresa me dio un qr para la esim de la compu", "cómo sé si mi notebook tiene esim"]
+pasos:
+  - texto: "Para saber si tu notebook tiene eSIM: entrá en Red e Internet > Celular y abrí la lista para elegir qué SIM usar para datos; si aparece «eSIM» o algo parecido, la tiene."
+    abrir: "ms-settings:network-cellular"
+  - texto: "Para agregarla: en Celular > Perfiles eSIM, tocá «Agregar perfil», elegí la opción de escribir el código de activación de tu operador y escaneá el QR con la cámara o escribí el código. Seguí los pasos y tocá «Descargar»."
+  - texto: "Para usarla: en Perfiles eSIM elegí el perfil y tocá «Usar». Windows avisa que el uso de datos puede tener costo."
+  - texto: "No borres un perfil si lo vas a seguir usando: volver a cargarlo puede requerir llamar a la empresa. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/use-an-esim-to-get-a-cellular-data-connection-on-your-windows-pc-0e255714-f8be-b9ef-9e84-f75b05ed98a3"
+fuentes:
+  - https://support.microsoft.com/windows/use-an-esim-to-get-a-cellular-data-connection-on-your-windows-pc-0e255714-f8be-b9ef-9e84-f75b05ed98a3
+  - https://support.microsoft.com/windows/cellular-settings-in-windows-905568ff-7f31-3013-efc7-3f396ac92cd7
+madurez: T0
+---
+id: NETX-017
+area: red
+titulo:
+  sencillo: "En el trabajo me dieron una dirección de «script» para configurar el proxy"
+  tecnico: "Configuración automática del proxy (detección automática o script de configuración)"
+explicacion:
+  sencillo: "Algunas empresas hacen pasar Internet por una computadora intermedia (proxy). En vez de cargar todo a mano, te dan una dirección de configuración que Windows usa sola. Solo usá datos que te haya dado el área de sistemas de tu trabajo."
+  tecnico: "Proxy > Automatic proxy setup: «Automatically detect settings» o «Use setup script» > Set up > dirección del script > Save. Si hay VPN, su proxy se configura aparte."
+frases: ["me pasaron una dirección de script para el proxy", "configurar proxy automático en windows", "el trabajo me pide usar un script de configuración", "dónde pongo la dirección del pac"]
+pasos:
+  - texto: "Entrá en Red e Internet > Proxy."
+    abrir: "ms-settings:network-proxy"
+  - texto: "Si te dijeron que se configura solo, activá la detección automática. Si te dieron una dirección, junto a usar script de configuración tocá «Configurar», activalo, escribí la dirección exacta y tocá «Guardar»."
+  - texto: "No pongas direcciones de proxy que te hayan mandado desconocidos: todo lo que navegues pasaría por ahí. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/use-a-proxy-server-in-windows-03096c53-0554-4ffe-b6ab-8b1deee8dae1"
+derivar: "Si no sabés qué poner, consultá al área de sistemas de tu trabajo."
+fuentes:
+  - https://support.microsoft.com/windows/use-a-proxy-server-in-windows-03096c53-0554-4ffe-b6ab-8b1deee8dae1
+madurez: T0
+---
+id: NETX-018
+area: seguridad
+titulo:
+  sencillo: "¿Qué es el Escritorio remoto y es peligroso activarlo?"
+  tecnico: "Escritorio remoto (RDP): riesgos y buenas prácticas"
+explicacion:
+  sencillo: "El Escritorio remoto permite manejar tu compu desde otro aparato, como si estuvieras sentado adelante. Si no lo necesitás, no lo actives: abre una «puerta» en tu compu. Solo activalo en redes de confianza (tu casa) y con contraseñas fuertes. Windows Home no puede recibir conexiones de Escritorio remoto."
+  tecnico: "Habilitar RDP abre un puerto accesible en la red local. Activar solo en redes de confianza, con autenticación a nivel de red (NLA) y cuentas con contraseñas fuertes. Solo ediciones Pro/Enterprise/Education actúan como host."
+frases: ["qué es el escritorio remoto", "es peligroso activar el escritorio remoto", "desactivar escritorio remoto en windows", "alguien me dijo que active el escritorio remoto"]
+pasos:
+  - texto: "Si no lo usás, dejalo apagado. Para revisarlo, entrá en Sistema > Escritorio remoto."
+    abrir: "ms-settings:remotedesktop"
+  - texto: "Activalo solo si vos lo necesitás (por ejemplo, para entrar desde otra compu tuya) y nunca porque te lo pidió alguien por teléfono o mensaje."
+  - texto: "Si lo usás, dejá activada la autenticación a nivel de red y fijate que todas las cuentas con acceso tengan contraseñas fuertes. Microsoft lo explica."
+    abrir: "https://learn.microsoft.com/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-allow-access"
+derivar: "Si alguien desconocido te pidió activarlo o instalar un programa para manejar tu compu, cortá y escribile a PC Doctor «me llamaron de Microsoft»."
+fuentes:
+  - https://learn.microsoft.com/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-allow-access
+madurez: T0
+---
+id: NETX-019
+area: red
+titulo:
+  sencillo: "Quiero entrar desde la notebook a la compu de escritorio de mi casa"
+  tecnico: "Conectarse a otra PC con Conexión a Escritorio remoto"
+explicacion:
+  sencillo: "Con el Escritorio remoto podés usar desde la notebook los programas y archivos de la compu de escritorio. La compu a la que entrás tiene que estar prendida, conectada a la red y tener Windows Pro (Windows Home no puede recibir conexiones)."
+  tecnico: "Host: Sistema > Escritorio remoto > activar (requiere administrador; Pro/Enterprise/Education). Cliente: «Conexión a Escritorio remoto» o Windows App > nombre del equipo o IP > Conectar > credenciales."
+frases: ["entrar a la compu de escritorio desde la notebook", "conectarme a otra compu de mi casa a distancia", "usar escritorio remoto entre dos compus", "conexión a escritorio remoto cómo se usa"]
+pasos:
+  - texto: "En la compu a la que querés entrar: Sistema > Escritorio remoto, activalo y confirmá. Solo aparece en Windows Pro o superior."
+    abrir: "ms-settings:remotedesktop"
+  - texto: "Anotá el nombre de esa compu (figura en la misma pantalla) y dejala prendida y conectada."
+  - texto: "En la notebook, buscá «Conexión a Escritorio remoto» en Inicio, escribí el nombre de la otra compu y tocá «Conectar». Poné vos el usuario y la contraseña de esa compu."
+  - texto: "Activalo solo en la red de tu casa y apagalo cuando no lo uses. Microsoft lo explica."
+    abrir: "https://learn.microsoft.com/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-allow-access"
+fuentes:
+  - https://learn.microsoft.com/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-allow-access
+madurez: T0
+---
+id: NETX-020
+area: seguridad
+titulo:
+  sencillo: "Quiero que un familiar me ayude con la compu a distancia"
+  tecnico: "Asistencia rápida (Quick Assist): compartir pantalla con alguien de confianza"
+explicacion:
+  sencillo: "Asistencia rápida es un programa de Windows para que alguien de confianza vea tu pantalla y te ayude desde su casa. Él te pasa un código, vos lo escribís y das permiso. Usalo solo con gente que vos llamaste: Microsoft nunca te llama por su cuenta para entrar a tu compu."
+  tecnico: "Asistencia rápida (Ctrl + Windows + Q). El ayudante genera un código de seguridad temporal; el que comparte lo ingresa y acepta «Permitir»; el control total requiere otra aprobación."
+frases: ["quiero que mi hijo me ayude con la compu desde su casa", "cómo uso asistencia rápida", "compartir la pantalla para que me ayuden a distancia", "mi nieto me pasó un código para ver mi compu"]
+pasos:
+  - texto: "Solo hacelo si VOS llamaste a esa persona y la conocés. Nunca con alguien que te llamó diciendo que es de soporte técnico o del banco."
+  - texto: "Apretá Ctrl + Windows + Q (o buscá «Asistencia rápida» en Inicio). Tu familiar elige ayudar a alguien y te dicta un código."
+  - texto: "Escribí el código en la parte para recibir ayuda, tocá enviar y después «Permitir». Si te pide controlar tu compu, decidí vos si aceptás."
+  - texto: "Podés cortar en cualquier momento cerrando la ventana. No le pases contraseñas. Microsoft lo explica."
+    abrir: "https://learn.microsoft.com/windows/client-management/client-tools/quick-assist"
+derivar: "Si alguien que no conocés te pidió conectarse a tu compu, cortá y escribile a PC Doctor «me llamaron de Microsoft»."
+fuentes:
+  - https://learn.microsoft.com/windows/client-management/client-tools/quick-assist
+madurez: T0
+---
+id: NETX-021
+area: red
+titulo:
+  sencillo: "Quiero prender la compu a distancia por la red (Wake on LAN)"
+  tecnico: "Wake on LAN: comportamiento en Windows 10/11"
+explicacion:
+  sencillo: "Wake on LAN es una función para «despertar» una compu enviándole una señal por el cable de red. En Windows 10 y 11 funciona cuando la compu está suspendida o hibernada, pero no después de un apagado normal (por el inicio rápido), salvo que la placa de la compu lo permita por su cuenta."
+  tecnico: "WOL soportado desde S3 (suspensión) o hibernación explícita; no desde apagado híbrido (inicio rápido, S4) ni S5, donde Windows no arma el adaptador. Algunos firmware lo permiten igual. Microsoft no recomienda desactivar el inicio rápido."
+frases: ["prender la compu a distancia", "wake on lan no funciona con la compu apagada", "despertar la pc por la red", "qué es wake on lan"]
+pasos:
+  - texto: "Para que funcione, dejá la compu suspendida o hibernada, no apagada del todo, y conectada por cable de red."
+  - texto: "Si necesitás que despierte desde apagada, depende de la placa de la compu: revisá el manual del fabricante."
+  - texto: "Microsoft explica el comportamiento de cada versión de Windows."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/wake-on-lan-feature"
+derivar: "Es una función avanzada: si la necesitás para el trabajo, consultá a un técnico."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/wake-on-lan-feature
+madurez: T0
+---
+id: NETX-022
+area: red
+titulo:
+  sencillo: "¿Qué es una red Wi-Fi para invitados y me conviene?"
+  tecnico: "Red Wi-Fi de invitados (concepto y ejemplo en Google Nest Wifi)"
+explicacion:
+  sencillo: "Muchos routers pueden crear una segunda red Wi-Fi, separada, solo para las visitas. Así no tenés que darles la clave de tu red principal. Tiene que tener su propia clave, distinta de la de tu Wi-Fi."
+  tecnico: "Red separada para invitados con su propio nombre y contraseña; se eligen qué dispositivos compartir. La opción depende del router (ej.: Google Home > Wifi > Configuración de red > Red para invitados)."
+frases: ["qué es la red de invitados del wifi", "crear un wifi para las visitas", "no quiero darle la clave de mi wifi a todos", "wifi aparte para invitados"]
+pasos:
+  - texto: "Fijate si tu router tiene la opción de red para invitados (está en su configuración o en la aplicación del router)."
+  - texto: "Si tenés Google Nest Wifi o Google Wifi: en la aplicación Google Home entrá en Wifi > Configuración de red > Red para invitados, activala, poné un nombre y una clave distintos de tu red principal y tocá «Guardar»."
+    abrir: "https://support.google.com/googlenest/answer/6327302?hl=es-419"
+  - texto: "Elegí con cuidado qué aparatos compartís con los invitados (por ejemplo, solo la tele o un parlante)."
+derivar: "Si tu router es de la empresa de Internet, ellos te pueden decir si tiene red de invitados y cómo activarla."
+fuentes:
+  - https://support.google.com/googlenest/answer/6327302?hl=es-419
+madurez: T0
+---
+id: NETX-023
+area: red
+titulo:
+  sencillo: "Me pidieron que haga un «ping»: ¿qué es y cómo se hace?"
+  tecnico: "Comando ping para comprobar conectividad"
+explicacion:
+  sencillo: "El ping manda unos «golpecitos» a otra compu o página y mide cuánto tardan en volver. Sirve para saber si hay conexión. Si responde por número pero no por nombre, el problema suele ser el DNS."
+  tecnico: "ping envía solicitudes de eco ICMP (4 por defecto) y muestra respuestas y tiempos. /t repite hasta Ctrl + C. Si responde por IP y no por nombre, falla la resolución de nombres."
+frases: ["cómo hago un ping", "el técnico me pidió que haga ping", "qué significa el ping en internet", "hacer ping a una página desde la compu"]
+pasos:
+  - texto: "Buscá «cmd» en Inicio y abrí el Símbolo del sistema."
+  - texto: "Escribí ping, un espacio y el nombre o la dirección que te pidieron, y apretá Enter."
+  - texto: "Si aparecen líneas de respuesta con un tiempo en milisegundos (ms), hay conexión. Si dice que se agotó el tiempo de espera, no llegó respuesta."
+  - texto: "Si lo pusiste con /t sigue sin parar: cortalo con Ctrl + C. Microsoft lo explica."
+    abrir: "https://learn.microsoft.com/windows-server/administration/windows-commands/ping"
+fuentes:
+  - https://learn.microsoft.com/windows-server/administration/windows-commands/ping
+madurez: T0
+---
+id: NETX-024
+area: red
+titulo:
+  sencillo: "Quiero ver por dónde pasa mi conexión hasta una página (tracert)"
+  tecnico: "Comandos tracert y pathping"
+explicacion:
+  sencillo: "tracert muestra los «saltos» (routers) por los que pasa tu conexión hasta llegar a una página, y cuánto tarda cada uno. Sirve para ver si el problema está en tu casa o más lejos. Los asteriscos (*) significan que ese salto no contestó, y no siempre es una falla."
+  tecnico: "tracert envía ecos ICMP con TTL creciente (máx. 30 saltos); «*» = salto que no responde. pathping agrega estadísticas de pérdida por salto (tarda unos minutos)."
+frases: ["cómo hago un tracert", "ver por dónde pasa mi internet", "el técnico me pidió un tracert", "para qué sirve el pathping"]
+pasos:
+  - texto: "Buscá «cmd» en Inicio y abrí el Símbolo del sistema."
+  - texto: "Escribí exactamente tracert www.microsoft.com y apretá Enter. Esperá a que diga que terminó."
+    abrir: "https://learn.microsoft.com/windows-server/administration/windows-commands/tracert"
+  - texto: "El primer salto suele ser tu router. Si ya ahí tarda mucho o no responde, el problema está en tu casa."
+  - texto: "Si te piden «pathping», funciona parecido pero mide durante unos minutos cuántos paquetes se pierden en cada salto. Microsoft lo explica."
+    abrir: "https://learn.microsoft.com/windows-server/administration/windows-commands/pathping"
+fuentes:
+  - https://learn.microsoft.com/windows-server/administration/windows-commands/tracert
+  - https://learn.microsoft.com/windows-server/administration/windows-commands/pathping
+madurez: T0
+---
+id: NETX-025
+area: red
+titulo:
+  sencillo: "Me pidieron que haga un «nslookup»: ¿qué es?"
+  tecnico: "Comando nslookup para consultar el DNS"
+explicacion:
+  sencillo: "nslookup le pregunta al DNS la dirección de una página. Sirve para saber si la «guía telefónica» de Internet está respondiendo. Si contesta «Nonexistent domain», ese nombre no existe o está mal escrito."
+  tecnico: "Modo no interactivo: nslookup <nombre> [servidor DNS]; sin segundo argumento usa el DNS predeterminado. Errores: timed out, No response from server, Nonexistent domain."
+frases: ["cómo uso nslookup", "qué es nslookup", "el técnico me pidió un nslookup", "probar si el dns responde desde la compu"]
+pasos:
+  - texto: "Buscá «cmd» en Inicio y abrí el Símbolo del sistema."
+  - texto: "Escribí nslookup, un espacio y el nombre de la página (por ejemplo, el de una página conocida), y apretá Enter. Usa el DNS que tiene configurado tu compu."
+  - texto: "Si aparece una dirección, el DNS responde. Si dice «timed out» o «No response from server», el servidor DNS no contestó."
+  - texto: "Microsoft explica todas las opciones."
+    abrir: "https://learn.microsoft.com/windows-server/administration/windows-commands/nslookup"
+derivar: "Si el DNS no responde, escribile a PC Doctor «hay Internet pero las páginas no abren»."
+fuentes:
+  - https://learn.microsoft.com/windows-server/administration/windows-commands/nslookup
+madurez: T0

@@ -1,0 +1,492 @@
+# Mensajes de error al abrir o instalar programas en Windows: códigos 0xc000007b/0xc0000142/0xc0000005, DLL, Control de cuentas de usuario, Windows Installer (1603, 1618, 2503, 1638...), compatibilidad, .NET, Arm, 16 bits y ventanas perdidas. Guiadas con fuente oficial.
+id: MSG-001
+area: programas
+titulo:
+  sencillo: "Al abrir un programa sale «La aplicación no se pudo iniciar correctamente (0xc000007b)»"
+  tecnico: "STATUS_INVALID_IMAGE_FORMAT (0xC000007B): archivo inválido o mezcla de 32 y 64 bits"
+explicacion:
+  sencillo: "Ese código quiere decir que Windows encontró una pieza del programa que no le sirve: puede estar dañada o ser de otro tipo (por ejemplo, una parte hecha para 32 bits mezclada con otra de 64 bits). Microsoft indica volver a instalar el programa desde su instalador original o consultar al fabricante."
+  tecnico: "0xC000007B = STATUS_INVALID_IMAGE_FORMAT: el ejecutable o una DLL no es válida para Windows o está dañada. Un proceso de 32 bits no puede cargar DLL de 64 bits ni al revés (WOW64)."
+frases: ["me sale 0xc000007b al abrir un juego", "la aplicación no se pudo iniciar correctamente 0xc000007b", "error 0xc000007b haga clic en aceptar para cerrar la aplicación", "no abre el programa y tira el código 0xc000007b"]
+pasos:
+  - texto: "Primero probá repararlo: en Aplicaciones instaladas, tocá los tres puntos del programa y, si aparece «Modificar» u «Opciones avanzadas», elegí «Reparar». En Panel de control > «Programas y características» también podés hacer clic derecho > «Reparar» o «Cambiar»."
+    abrir: "https://support.microsoft.com/windows/repair-apps-and-programs-in-windows-e90eefe4-d0a2-7c1b-dd59-949a9030f317"
+  - texto: "Si sigue, desinstalalo (tres puntos > «Desinstalar») y volvé a instalarlo con su instalador original o bajándolo de la página oficial del fabricante."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Si la página del programa ofrece versión de 32 bits y de 64 bits, bajá la que corresponde a tu Windows. Para saber cuál tenés, mirá en «Especificaciones del dispositivo» si tu Windows es de 32 o de 64 bits."
+    abrir: "ms-settings:about"
+  - texto: "Si el programa pide piezas de Microsoft (como «Visual C++»), preguntale al fabricante cuál necesita: Microsoft aconseja seguir sus instrucciones."
+derivar: "Si el error aparece con muchos programas distintos, pasá el diagnóstico de PC Doctor."
+fuentes:
+  - https://learn.microsoft.com/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55
+  - https://learn.microsoft.com/windows/win32/winprog64/running-32-bit-applications
+  - https://support.microsoft.com/windows/repair-apps-and-programs-in-windows-e90eefe4-d0a2-7c1b-dd59-949a9030f317
+  - https://support.microsoft.com/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808
+  - https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist
+madurez: T0
+---
+id: MSG-002
+area: programas
+titulo:
+  sencillo: "Word, Excel u otro programa no abre y dice «(0xc0000142)»"
+  tecnico: "STATUS_DLL_INIT_FAILED (0xC0000142): falla al inicializar una DLL"
+explicacion:
+  sencillo: "El programa arranca, pero una de sus piezas internas (una «DLL») no logra ponerse en marcha y Windows lo cierra. Con Office pasa bastante y Microsoft tiene pasos específicos: actualizar, reparar y, si no alcanza, reinstalar."
+  tecnico: "0xC0000142 = STATUS_DLL_INIT_FAILED. En Office: actualizar, Reparación en línea, Windows Update, servicio Office Software Protection Platform y, por último, desinstalar con el solucionador y reinstalar."
+frases: ["error 0xc0000142 al abrir excel", "word no abre y dice 0xc0000142", "la aplicación no se pudo iniciar correctamente 0xc0000142", "me tira 0xc0000142 cuando abro un programa"]
+pasos:
+  - texto: "Instalá las actualizaciones pendientes de Windows y reiniciá la compu."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si es Word, Excel, Outlook u otro de Office: hacé clic derecho en Inicio > «Aplicaciones instaladas», buscá Microsoft 365 u Office, tocá los tres puntos > «Modificar» y elegí «Reparación en línea» > «Reparar». Repara todo Office junto."
+    abrir: "https://support.microsoft.com/office/error-0xc0000142-when-you-start-an-office-application-64b3a500-ee74-4b66-b370-9d607ef92b6c"
+  - texto: "Si es otro programa, probá repararlo desde Aplicaciones instaladas o reinstalalo desde su página oficial."
+    abrir: "https://support.microsoft.com/windows/repair-apps-and-programs-in-windows-e90eefe4-d0a2-7c1b-dd59-949a9030f317"
+  - texto: "Si Office sigue igual, la misma guía de Microsoft explica cómo desinstalarlo con su herramienta oficial y volver a instalarlo."
+derivar: "Si es una compu del trabajo, avisale al área de sistemas: puede que ellos manejen las actualizaciones de Office."
+fuentes:
+  - https://support.microsoft.com/office/error-0xc0000142-when-you-start-an-office-application-64b3a500-ee74-4b66-b370-9d607ef92b6c
+  - https://learn.microsoft.com/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55
+  - https://support.microsoft.com/windows/repair-apps-and-programs-in-windows-e90eefe4-d0a2-7c1b-dd59-949a9030f317
+madurez: T0
+---
+id: MSG-003
+area: programas
+titulo:
+  sencillo: "Un programa se cierra con «0xc0000005» o «La memoria no se puede read»"
+  tecnico: "STATUS_ACCESS_VIOLATION (0xC0000005): infracción de acceso a memoria"
+explicacion:
+  sencillo: "El programa intentó usar una parte de la memoria que no le correspondía y Windows lo frenó. Casi siempre es una falla del propio programa, que se arregla reparándolo o reinstalándolo. Si les pasa a muchos programas, conviene revisar los archivos de Windows."
+  tecnico: "0xC0000005 = STATUS_ACCESS_VIOLATION («La instrucción en 0x… hace referencia a la memoria en 0x…. La memoria no se puede read/written»)."
+frases: ["error 0xc0000005 al abrir un programa", "dice la memoria no se puede read", "la instrucción en 0x hace referencia a la memoria y no se puede written", "excepción de infracción de acceso 0xc0000005"]
+pasos:
+  - texto: "Cerrá el programa y buscá si tiene una versión más nueva en la página del fabricante (o en Microsoft Store, si lo bajaste de ahí)."
+    abrir: "https://support.microsoft.com/windows/make-older-apps-or-programs-compatible-with-the-latest-version-of-windows-783d6dd7-b439-bdb0-0490-54eea0f45938"
+  - texto: "Probá repararlo desde Aplicaciones instaladas (tres puntos > «Modificar» u «Opciones avanzadas» > «Reparar»). Si no hay opción de reparar, desinstalalo y volvé a instalarlo."
+    abrir: "https://support.microsoft.com/windows/repair-apps-and-programs-in-windows-e90eefe4-d0a2-7c1b-dd59-949a9030f317"
+  - texto: "Si les pasa a varios programas, repará los archivos de Windows: buscá «cmd», hacé clic derecho en «Símbolo del sistema» > «Ejecutar como administrador», escribí DISM.exe /Online /Cleanup-image /Restorehealth y Enter; cuando termine, escribí sfc /scannow y Enter. No cierres la ventana hasta que llegue al 100 %."
+    abrir: "https://support.microsoft.com/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e"
+derivar: "Si sigue pasando con muchos programas o la compu se cuelga entera, pasá el diagnóstico de PC Doctor."
+fuentes:
+  - https://learn.microsoft.com/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55
+  - https://support.microsoft.com/windows/repair-apps-and-programs-in-windows-e90eefe4-d0a2-7c1b-dd59-949a9030f317
+  - https://support.microsoft.com/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e
+  - https://support.microsoft.com/windows/make-older-apps-or-programs-compatible-with-the-latest-version-of-windows-783d6dd7-b439-bdb0-0490-54eea0f45938
+madurez: T0
+---
+id: MSG-004
+area: programas
+titulo:
+  sencillo: "Dice que falta un archivo «.dll» y el programa no arranca"
+  tecnico: "STATUS_DLL_NOT_FOUND (0xC0000135): falta una DLL que el programa necesita"
+explicacion:
+  sencillo: "Los programas usan piezas llamadas «DLL». Si falta una, Windows muestra su nombre y no abre el programa. El propio mensaje dice cómo se arregla: reinstalando el programa desde su origen oficial. Nunca bajes la DLL suelta de páginas de «descargar DLL»: pueden traer virus."
+  tecnico: "0xC0000135 / «This application has failed to start because X.dll was not found. Reinstalling the application might fix this problem». Para componentes de Microsoft, solo instaladores descargados de Microsoft y firmados por Microsoft."
+frases: ["falta un archivo dll y no abre el programa", "el programa no puede iniciarse porque falta un .dll en el equipo", "no se encontró el dll reinstalar el programa puede solucionar el problema", "dónde bajo un dll que me falta"]
+pasos:
+  - texto: "Anotá el nombre exacto del archivo que dice que falta (termina en «.dll»)."
+  - texto: "Reinstalá el programa: desinstalalo desde Aplicaciones instaladas y volvé a bajarlo de la página oficial del fabricante."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Si el nombre empieza con MSVCP o VCRUNTIME, es una pieza de Microsoft: escribile a PC Doctor «falta msvcp140.dll». Si dice «hostfxr.dll», el programa necesita .NET: escribile «el programa pide instalar .net desktop runtime»."
+    abrir: "https://learn.microsoft.com/dotnet/core/install/windows"
+  - texto: "No bajes el .dll de otras páginas ni lo copies de otra compu. Microsoft pide instalar sus componentes solo desde sus sitios y firmados por Microsoft."
+    abrir: "https://learn.microsoft.com/cpp/windows/troubleshoot-vc-redistributable-installation-issues"
+fuentes:
+  - https://learn.microsoft.com/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55
+  - https://learn.microsoft.com/cpp/build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies
+  - https://learn.microsoft.com/cpp/windows/troubleshoot-vc-redistributable-installation-issues
+  - https://learn.microsoft.com/dotnet/core/install/windows
+madurez: T0
+---
+id: MSG-005
+area: programas
+titulo:
+  sencillo: "Dice «No se encontró el punto de entrada del procedimiento» en una DLL"
+  tecnico: "STATUS_ENTRYPOINT_NOT_FOUND (0xC0000139)"
+explicacion:
+  sencillo: "El programa buscó una función adentro de una pieza «DLL» y no la encontró. Suele indicar que el programa y esa pieza no son de la misma versión, por ejemplo después de una actualización que quedó a medias."
+  tecnico: "0xC0000139 = STATUS_ENTRYPOINT_NOT_FOUND: «The procedure entry point X could not be located in the dynamic link library Y»."
+frases: ["no se encontró el punto de entrada del procedimiento", "punto de entrada no encontrado en la biblioteca de vínculos dinámicos", "error de punto de entrada al abrir un programa", "entry point not found en un dll"]
+pasos:
+  - texto: "Actualizá el programa a su última versión desde la página oficial del fabricante."
+  - texto: "Si no alcanza, repáralo o desinstalalo y volvé a instalarlo desde Aplicaciones instaladas."
+    abrir: "https://support.microsoft.com/windows/repair-apps-and-programs-in-windows-e90eefe4-d0a2-7c1b-dd59-949a9030f317"
+  - texto: "Si el mensaje aparece con varios programas, repará los archivos de Windows: «Símbolo del sistema» como administrador, DISM.exe /Online /Cleanup-image /Restorehealth y después sfc /scannow."
+    abrir: "https://support.microsoft.com/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e"
+derivar: "Si sigue, contactá al soporte del fabricante del programa y pasale el texto exacto del mensaje."
+fuentes:
+  - https://learn.microsoft.com/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55
+  - https://support.microsoft.com/windows/repair-apps-and-programs-in-windows-e90eefe4-d0a2-7c1b-dd59-949a9030f317
+  - https://support.microsoft.com/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e
+madurez: T0
+---
+id: MSG-006
+area: programas
+titulo:
+  sencillo: "Dice que «su configuración en paralelo es incorrecta» y el programa no abre"
+  tecnico: "Error de ensamblados side-by-side (SxS): configuración de la aplicación incorrecta"
+explicacion:
+  sencillo: "El programa necesita unas piezas compartidas en una versión exacta y Windows no las encuentra. Microsoft dice que reinstalar el programa puede arreglarlo, y es lo primero que hay que probar."
+  tecnico: "Falta un ensamblado side-by-side declarado en el manifiesto (WinSxS o privado). Mensajes relacionados: «la configuración de la aplicación es incorrecta», «El sistema no puede ejecutar el programa especificado»."
+frases: ["la aplicación no se pudo iniciar porque su configuración en paralelo es incorrecta", "error de configuración en paralelo al abrir un programa", "la configuración de la aplicación es incorrecta reinstalar la aplicación", "me aparece un error que nombra sxstrace.exe"]
+pasos:
+  - texto: "Desinstalá el programa desde Aplicaciones instaladas y volvé a instalarlo con el instalador de la página oficial."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Bajá la versión que corresponde a tu Windows (32 o 64 bits): las piezas de 64 bits no sirven para programas de 32 y al revés."
+    abrir: "ms-settings:about"
+  - texto: "Muchas veces la pieza que falta es el «Visual C++» de Microsoft: preguntale al fabricante cuál necesita el programa, o escribile a PC Doctor «error de visual c++ al abrir un programa»."
+    abrir: "https://learn.microsoft.com/cpp/build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies"
+derivar: "Si no se arregla, contactá al soporte del fabricante del programa."
+fuentes:
+  - https://learn.microsoft.com/cpp/build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies
+  - https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist
+madurez: T0
+---
+id: MSG-009
+area: programas
+titulo:
+  sencillo: "¿Qué es «Ejecutar como administrador» y cuándo lo uso?"
+  tecnico: "Elevación manual con UAC; ERROR_ELEVATION_REQUIRED (740)"
+explicacion:
+  sencillo: "Aunque tu usuario sea administrador, Windows abre los programas con permisos comunes para protegerte. «Ejecutar como administrador» abre ese programa con permisos completos, después de que aceptás el cartel de Windows. Se usa solo cuando hace falta: cuando una guía lo pide o cuando un programa dice «La operación solicitada requiere elevación»."
+  tecnico: "Por defecto los procesos usan el token de usuario estándar; usar el token de administrador requiere consentimiento o credenciales. Error 740 = ERROR_ELEVATION_REQUIRED."
+frases: ["qué significa ejecutar como administrador", "la operación solicitada requiere elevación", "error 740 al abrir un programa", "cuándo tengo que abrir un programa como administrador"]
+pasos:
+  - texto: "Hacé clic derecho sobre el programa (en Inicio o en su ícono) y elegí «Ejecutar como administrador». Aparece el cartel del Control de cuentas de usuario: tocá «Sí» si es el programa que querías."
+  - texto: "Usalo solo con programas de confianza y solo cuando hace falta: con permisos completos, un programa puede cambiar cosas importantes de Windows."
+    abrir: "https://learn.microsoft.com/windows/security/application-security/application-control/user-account-control/how-it-works"
+  - texto: "Si el cartel te pide una clave en vez de «Sí», tu usuario es estándar: escribile a PC Doctor «para instalar me pide la contraseña del administrador»."
+fuentes:
+  - https://learn.microsoft.com/windows/security/application-security/application-control/user-account-control/how-it-works
+  - https://learn.microsoft.com/windows/win32/debug/system-error-codes--500-999-
+  - https://support.microsoft.com/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e
+madurez: T0
+---
+id: MSG-010
+area: seguridad
+titulo:
+  sencillo: "Aparece el aviso «No se puede cargar un controlador en este dispositivo»"
+  tecnico: "Integridad de memoria bloquea un controlador incompatible"
+explicacion:
+  sencillo: "La protección «Integridad de memoria» de Windows no dejó arrancar un controlador (driver) de algún aparato o programa porque tiene una falla de seguridad. Lo más probable es que no sea un virus, pero lo que usa ese controlador puede dejar de andar hasta que el fabricante saque una versión corregida."
+  tecnico: "Aislamiento del núcleo > Integridad de memoria impide cargar un controlador vulnerable. El nombre del controlador y de la empresa que figuran en la notificación son los únicos datos confiables."
+frases: ["me salió no se puede cargar un controlador en este dispositivo", "aviso de que un driver no se pudo cargar por la integridad de memoria", "un controlador quedó bloqueado por seguridad de windows", "desde ese aviso del controlador dejó de andar un aparato"]
+pasos:
+  - texto: "Anotá el nombre del controlador y de la empresa que muestra el aviso: Microsoft dice que son los únicos datos confiables."
+  - texto: "Buscá una versión nueva y compatible de ese controlador en Windows Update o en la página del fabricante."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si no hay versión nueva, escribile al fabricante para preguntarle si va a sacar una corrección."
+    abrir: "https://support.microsoft.com/windows/hardware/drivers/a-driver-can-t-load-on-this-device"
+derivar: "Microsoft explica que también se puede apagar la integridad de memoria, pero la compu queda menos protegida: no lo hagas por tu cuenta, consultalo con un técnico."
+fuentes:
+  - https://support.microsoft.com/windows/hardware/drivers/a-driver-can-t-load-on-this-device
+madurez: T0
+---
+id: MSG-011
+area: programas
+titulo:
+  sencillo: "Al instalar un programa sale «Error 1603: error grave durante la instalación»"
+  tecnico: "ERROR_INSTALL_FAILURE (1603) de Windows Installer"
+explicacion:
+  sencillo: "Es un error general del instalador: algo impidió terminar y Windows deshizo la instalación. Una causa común es que el programa ya está instalado (aunque no veas su ícono); otras son instalarlo en una carpeta cifrada o un problema de permisos en el disco."
+  tecnico: "Causas (KB 834484): producto ya instalado, carpeta de destino cifrada, unidad sustituta (subst) o cuenta SYSTEM sin Control total sobre la carpeta."
+frases: ["error 1603 al instalar", "se produjo un error grave durante la instalación", "el instalador da 1603 y se deshace todo", "fatal error 1603 instalando un programa"]
+pasos:
+  - texto: "Fijate si el programa ya está instalado: buscalo por su nombre en Aplicaciones instaladas. Si aparece, desinstalalo y después volvé a instalarlo."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Si estaba instalado y solo perdiste el ícono, no hace falta reinstalar: apretá la tecla Windows, escribí el nombre, hacé clic derecho sobre el programa y elegí «Anclar a Inicio»."
+  - texto: "Si elegiste instalarlo en una carpeta cifrada, elegí otra que no lo esté."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-server/application-management/msi-installation-error-1603"
+derivar: "Si sigue, puede ser un problema de permisos del disco. Microsoft explica la corrección, pero conviene que la haga un técnico."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-server/application-management/msi-installation-error-1603
+  - https://learn.microsoft.com/windows/win32/msi/error-codes
+madurez: T0
+---
+id: MSG-012
+area: programas
+titulo:
+  sencillo: "El instalador dice «Otra instalación está en curso» (error 1618 o 1500)"
+  tecnico: "ERROR_INSTALL_ALREADY_RUNNING (1618) / error 1500 de Windows Installer"
+explicacion:
+  sencillo: "Windows Installer instala de a un programa por vez. Si hay otra instalación andando, el instalador nuevo no puede arrancar hasta que esa termine."
+  tecnico: "Otra instalación tiene tomado el mutex _MSIExecute; hay que completarla antes de seguir."
+frases: ["otra instalación está en curso y no me deja instalar", "error 1618 al instalar un programa", "debe completar esa instalación antes de continuar con esta", "error 1500 otra instalación en progreso"]
+pasos:
+  - texto: "Fijate en la barra de tareas si tenés otro instalador abierto y dejalo terminar."
+    abrir: "https://learn.microsoft.com/windows/win32/msi/error-codes"
+  - texto: "Si no ves ninguno, esperá unos minutos y volvé a probar."
+  - texto: "Si sigue diciendo lo mismo, reiniciá la compu y probá otra vez la instalación antes de abrir otros programas."
+    abrir: "https://support.microsoft.com/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d"
+fuentes:
+  - https://learn.microsoft.com/windows/win32/msi/error-codes
+  - https://learn.microsoft.com/windows/win32/msi/windows-installer-error-messages
+  - https://support.microsoft.com/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d
+madurez: T0
+---
+id: MSG-013
+area: programas
+titulo:
+  sencillo: "Al instalar o desinstalar sale el error 2503 o 2502"
+  tecnico: "Errores internos 2502/2503 de Windows Installer"
+explicacion:
+  sencillo: "Son errores internos del instalador: Windows Installer se trabó en el medio del proceso. El código no dice qué falló, así que se prueba lo básico: reiniciar, reparar o desinstalar desde Configuración y, si no, consultar al fabricante."
+  tecnico: "2502: «Called InstallFinalize when no install in progress». 2503: «Called RunScript when not marked in progress»."
+frases: ["el instalador tiró el error 2503", "error interno 2502 al desinstalar", "windows installer error 2503 no me deja instalar", "me aparece el error 2502 y después el 2503"]
+pasos:
+  - texto: "Reiniciá la compu y probá de nuevo la instalación o la desinstalación."
+    abrir: "https://support.microsoft.com/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d"
+  - texto: "Si estabas desinstalando, hacelo desde Aplicaciones instaladas: tres puntos del programa > «Desinstalar». Si falla, probá antes «Reparar» (en «Modificar» u «Opciones avanzadas», si aparece)."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Si tu compu tiene Windows 10, en la guía de Microsoft está el solucionador de problemas de instalación y desinstalación de programas."
+  - texto: "Si sigue, contactá al soporte del fabricante del programa."
+fuentes:
+  - https://learn.microsoft.com/windows/win32/msi/windows-installer-error-messages
+  - https://support.microsoft.com/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d
+  - https://learn.microsoft.com/windows/win32/msi/error-codes
+madurez: T0
+---
+id: MSG-014
+area: programas
+titulo:
+  sencillo: "El instalador dice «Ya está instalada otra versión de este producto» (error 1638)"
+  tecnico: "ERROR_PRODUCT_VERSION (1638)"
+explicacion:
+  sencillo: "Ya tenés instalada otra versión del mismo programa y el instalador no puede poner la otra encima. Hay que quitar la que está y después instalar la que querés."
+  tecnico: "Para configurar o quitar la versión existente se usa Agregar o quitar programas (hoy, Aplicaciones instaladas o Programas y características)."
+frases: ["ya está instalada otra versión de este producto", "error 1638 al instalar", "no puedo instalar la versión nueva porque está la vieja", "dice que hay otra versión instalada y no sigue"]
+pasos:
+  - texto: "Abrí Aplicaciones instaladas y buscá el programa por su nombre para ver qué versión tenés."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Si querés la otra versión, desinstalá la actual (tres puntos > «Desinstalar») y después abrí de nuevo el instalador."
+    abrir: "https://learn.microsoft.com/windows/win32/msi/error-codes"
+  - texto: "Si la desinstalación da error, escribile a PC Doctor «no puedo desinstalar un programa»."
+fuentes:
+  - https://learn.microsoft.com/windows/win32/msi/error-codes
+madurez: T0
+---
+id: MSG-015
+area: programas
+titulo:
+  sencillo: "Dice «La directiva del sistema prohíbe esta instalación» (error 1625)"
+  tecnico: "ERROR_INSTALL_PACKAGE_REJECTED (1625): instalación bloqueada por directiva"
+explicacion:
+  sencillo: "La compu tiene una regla puesta por quien la administra (la empresa, la escuela o un técnico) que no deja instalar ese programa. No es una falla: hay que pedirle permiso a quien administra la compu."
+  tecnico: "Instalación prohibida por directiva del sistema; contactar al administrador del sistema."
+frases: ["la directiva del sistema prohíbe esta instalación", "error 1625 al instalar", "en la compu del trabajo no me deja instalar nada", "póngase en contacto con el administrador del sistema para instalar"]
+pasos:
+  - texto: "Si es una compu del trabajo o de la escuela, pedile al área de sistemas que te instale el programa o te dé permiso. No intentes saltear el bloqueo."
+    abrir: "https://learn.microsoft.com/windows/win32/msi/error-codes"
+  - texto: "Si es tu compu personal, consultá con quien te la configuró (por ejemplo, el técnico que la preparó)."
+fuentes:
+  - https://learn.microsoft.com/windows/win32/msi/error-codes
+madurez: T0
+---
+id: MSG-016
+area: programas
+titulo:
+  sencillo: "Dice «No se pudo abrir este paquete de instalación» (error 1619 o 1620)"
+  tecnico: "ERROR_INSTALL_PACKAGE_OPEN_FAILED (1619) / ERROR_INSTALL_PACKAGE_INVALID (1620)"
+explicacion:
+  sencillo: "Windows no pudo leer el archivo de instalación (.msi): puede que se haya bajado incompleto, que esté en un lugar al que ya no se llega (un pendrive que sacaste) o que no sea un instalador válido."
+  tecnico: "Verificar que el paquete exista y sea accesible; si no, consultar al proveedor si es un paquete de Windows Installer válido."
+frases: ["no se pudo abrir este paquete de instalación", "error 1619 al abrir un msi", "compruebe que el paquete existe y que puede tener acceso a él", "el archivo msi no abre y dice paquete no válido"]
+pasos:
+  - texto: "Si el instalador está en un pendrive o disco externo, fijate que siga conectado, o copialo a la compu (por ejemplo, a Descargas) y abrilo desde ahí."
+    abrir: "https://learn.microsoft.com/windows/win32/msi/error-codes"
+  - texto: "Volvé a bajar el instalador desde la página oficial del programa: puede haberse bajado incompleto."
+  - texto: "Si el archivo te lo mandaron por correo o salió de una página que no es la oficial, no insistas: borralo y conseguí el instalador del fabricante."
+  - texto: "Si sigue, consultá al soporte del fabricante del programa."
+fuentes:
+  - https://learn.microsoft.com/windows/win32/msi/error-codes
+  - https://learn.microsoft.com/cpp/windows/troubleshoot-vc-redistributable-installation-issues
+madurez: T0
+---
+id: MSG-017
+area: programas
+titulo:
+  sencillo: "Dice «No se pudo tener acceso al servicio Windows Installer» (error 1719 o 1601)"
+  tecnico: "ERROR_INSTALL_SERVICE_FAILURE (1601) / 1719; 1652 en modo seguro"
+explicacion:
+  sencillo: "Los instaladores usan un servicio de Windows llamado «Windows Installer», y no lo pudieron usar. También pasa si la compu está en «modo seguro», donde ese servicio no está disponible."
+  tecnico: "1601/1719: servicio no accesible o mal registrado. 1652: Windows Installer no está disponible en modo seguro."
+frases: ["no se pudo tener acceso al servicio windows installer", "error 1719 al instalar", "no puedo instalar programas en modo seguro", "error 1601 del servicio de instalación"]
+pasos:
+  - texto: "Si en las esquinas de la pantalla dice «Modo seguro», reiniciá la compu para que arranque normal y probá de nuevo."
+    abrir: "https://learn.microsoft.com/windows/win32/msi/error-codes"
+  - texto: "Si no estabas en modo seguro, reiniciá igual y volvé a probar."
+    abrir: "https://support.microsoft.com/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d"
+  - texto: "Si sigue, repará los archivos de Windows: «Símbolo del sistema» como administrador, DISM.exe /Online /Cleanup-image /Restorehealth y después sfc /scannow."
+    abrir: "https://support.microsoft.com/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e"
+derivar: "Si no se arregla, consultá con un técnico: Microsoft indica revisar que el servicio esté bien registrado."
+fuentes:
+  - https://learn.microsoft.com/windows/win32/msi/error-codes
+  - https://learn.microsoft.com/windows/win32/msi/windows-installer-error-messages
+  - https://support.microsoft.com/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d
+  - https://support.microsoft.com/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e
+madurez: T0
+---
+id: MSG-018
+area: programas
+titulo:
+  sencillo: "Dice que no tengo «privilegios suficientes» para instalar para todos los usuarios (error 1925)"
+  tecnico: "Error 1925 de Windows Installer: hace falta un administrador"
+explicacion:
+  sencillo: "El programa se quiere instalar para todos los usuarios de la compu, y eso solo lo puede hacer un usuario administrador."
+  tecnico: "«You do not have sufficient privileges to complete this installation for all users of the machine. Log on as administrator and then retry this installation.»"
+frases: ["no tiene privilegios suficientes para completar esta instalación", "error 1925 al instalar", "inicie sesión como administrador y vuelva a intentar la instalación", "me dice que necesito privilegios para instalar para todos los usuarios"]
+pasos:
+  - texto: "Cerrá el instalador. Hacé clic derecho sobre el archivo de instalación, elegí «Ejecutar como administrador» y aceptá el cartel de Windows."
+    abrir: "https://learn.microsoft.com/windows/win32/msi/windows-installer-error-messages"
+  - texto: "Si el cartel te pide una clave, tu usuario es estándar: pedile a quien administra la compu que la escriba, o que entre con su usuario e instale el programa."
+    abrir: "https://learn.microsoft.com/windows/security/application-security/application-control/user-account-control/how-it-works"
+  - texto: "Si sos el dueño de la compu y querés que tu usuario sea administrador, escribile a PC Doctor «hacer administrador a otro usuario»."
+fuentes:
+  - https://learn.microsoft.com/windows/win32/msi/windows-installer-error-messages
+  - https://learn.microsoft.com/windows/security/application-security/application-control/user-account-control/how-it-works
+madurez: T0
+---
+id: MSG-019
+area: programas
+titulo:
+  sencillo: "Al desinstalar dice «El origen de instalación de este producto no está disponible»"
+  tecnico: "ERROR_INSTALL_SOURCE_ABSENT (1612): falta el instalador original"
+explicacion:
+  sencillo: "Algunos programas, para desinstalarse o repararse, necesitan el instalador original (el CD, el pendrive o el archivo que usaste para instalarlo). Si ya no está, el desinstalador no puede seguir."
+  tecnico: "1612: el origen de instalación del producto no está disponible; verificar que exista y sea accesible."
+frases: ["el origen de instalación de este producto no está disponible", "error 1612 al desinstalar", "para desinstalar me pide el cd del programa", "el desinstalador busca un archivo msi que no está"]
+pasos:
+  - texto: "Si lo instalaste desde un CD, pendrive o disco externo, conectalo y volvé a probar."
+    abrir: "https://learn.microsoft.com/windows/win32/msi/error-codes"
+  - texto: "Si lo bajaste de Internet, bajá de nuevo el instalador de la página oficial y, cuando Windows te pida el archivo, indicá dónde lo guardaste."
+  - texto: "Reiniciá y probá desinstalar desde Aplicaciones instaladas. Si tu compu tiene Windows 10, la guía de Microsoft incluye un solucionador para programas que no se pueden quitar."
+    abrir: "https://support.microsoft.com/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d"
+  - texto: "Si nada sirve, contactá al soporte del fabricante del programa."
+fuentes:
+  - https://learn.microsoft.com/windows/win32/msi/error-codes
+  - https://support.microsoft.com/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d
+madurez: T0
+---
+id: MSG-020
+area: programas
+titulo:
+  sencillo: "Quiero que Windows pruebe solo cómo hacer andar un programa viejo"
+  tecnico: "Solucionador de problemas de compatibilidad de programas"
+explicacion:
+  sencillo: "Además de tocar a mano las opciones de compatibilidad, Windows trae un solucionador que prueba ajustes para que un programa viejo funcione. Antes conviene fijarse si hay una versión nueva del programa."
+  tecnico: "Configuración > Sistema > Solucionar problemas > Otros solucionadores de problemas > Solucionador de problemas de compatibilidad de programas > Ejecutar."
+frases: ["solucionador de compatibilidad de programas", "que windows arregle solo un programa antiguo", "un programa de la época de windows xp no funciona", "asistente de compatibilidad para programas viejos"]
+pasos:
+  - texto: "Primero fijate si hay una versión más nueva del programa en la página del fabricante o en Microsoft Store."
+    abrir: "https://support.microsoft.com/windows/make-older-apps-or-programs-compatible-with-the-latest-version-of-windows-783d6dd7-b439-bdb0-0490-54eea0f45938"
+  - texto: "Abrí Solucionar problemas > «Otros solucionadores de problemas», buscá el de compatibilidad de programas y tocá «Ejecutar». Seguí las instrucciones de la pantalla."
+    abrir: "ms-settings:troubleshoot"
+  - texto: "Si el programa usa un aparato (por ejemplo, una impresora o un escáner), buscá controladores nuevos en Windows Update."
+    abrir: "ms-settings:windowsupdate"
+derivar: "Para ajustar a mano el modo de compatibilidad, escribile a PC Doctor «esta aplicación no se puede ejecutar en el equipo»."
+fuentes:
+  - https://support.microsoft.com/windows/make-older-apps-or-programs-compatible-with-the-latest-version-of-windows-783d6dd7-b439-bdb0-0490-54eea0f45938
+madurez: T0
+---
+id: MSG-021
+area: programas
+titulo:
+  sencillo: "Un programa pide instalar «.NET» para poder abrir"
+  tecnico: ".NET Desktop Runtime (.NET 8, 9 o 10) faltante"
+explicacion:
+  sencillo: "Algunos programas nuevos están hechos con «.NET» (no es lo mismo que el viejo «.NET Framework» que trae Windows). Si falta, el programa avisa y no abre. Se instala gratis desde la página oficial de Microsoft; para programas de escritorio, la pieza que hace falta es «.NET Desktop Runtime»."
+  tecnico: ".NET Desktop Runtime incluye el .NET Runtime; elegir la versión pedida y la arquitectura (x64, x86 o Arm64). Instalación para todo el sistema con permisos de administrador. Error típico: falta hostfxr.dll."
+frases: ["el programa pide instalar .net desktop runtime", "to run this application you must install .net", "para ejecutar esta aplicación debe instalar .net", "falta hostfxr.dll"]
+pasos:
+  - texto: "Anotá qué versión pide el mensaje (por ejemplo «8.0») y si menciona x64, x86 o Arm64."
+  - texto: "Entrá a la página oficial de descargas de .NET de Microsoft (está enlazada en esta guía), elegí esa versión y bajá «.NET Desktop Runtime» para Windows. Si no sabés cuál, Microsoft sugiere x64, que es la más común."
+    abrir: "https://learn.microsoft.com/dotnet/core/install/windows"
+  - texto: "Abrí el archivo bajado (en Descargas), tocá «Instalar» y aceptá el cartel de Windows. Después volvé a abrir el programa."
+  - texto: "Si el programa es viejo y pide «.NET Framework 3.5», es otra cosa: escribile a PC Doctor «dice que falta .net framework 3.5»."
+fuentes:
+  - https://learn.microsoft.com/dotnet/core/install/windows
+madurez: T0
+---
+id: MSG-022
+area: programas
+titulo:
+  sencillo: "Mi compu tiene procesador Arm (Snapdragon) y un programa o aparato no anda"
+  tecnico: "Compatibilidad en Windows en Arm: emulación x86/x64 y controladores Arm64"
+explicacion:
+  sencillo: "Algunas compus nuevas usan procesadores «Arm» (por ejemplo, Snapdragon). Windows 11 hace andar la mayoría de los programas comunes imitando a una compu tradicional, pero esa imitación no sirve para los controladores (drivers): impresoras y otros aparatos necesitan un controlador hecho para Arm64."
+  tecnico: "Windows 11 en Arm emula apps x86 y x64 (Prism desde 24H2). La emulación solo cubre modo usuario: los controladores de modo kernel y de impresión deben ser Arm64 nativos, y un instalador x86/x64 no puede instalar un controlador Arm64."
+frases: ["tengo una notebook snapdragon y un programa no anda", "compu con procesador arm no instala el driver de la impresora", "programa incompatible con windows en arm", "en mi compu arm no funciona un aparato"]
+pasos:
+  - texto: "Fijate qué procesador tenés: en Información, en «Especificaciones del dispositivo», mirá el nombre del procesador (por ejemplo, Snapdragon)."
+    abrir: "ms-settings:about"
+  - texto: "Buscá en la página del fabricante del programa o del aparato si hay una versión «Arm64» o «para Windows en Arm», y usá esa."
+    abrir: "https://learn.microsoft.com/windows/arm/apps-on-arm-x86-emulation"
+  - texto: "Para impresoras y otros aparatos, el controlador tiene que ser para Arm64: si el fabricante no lo tiene, ese aparato puede no andar en esta compu."
+    abrir: "https://learn.microsoft.com/windows/arm/faq"
+  - texto: "Si es un programa común que no usa controladores y no anda, actualizalo o consultale al fabricante."
+fuentes:
+  - https://learn.microsoft.com/windows/arm/apps-on-arm-x86-emulation
+  - https://learn.microsoft.com/windows/arm/faq
+  - https://support.microsoft.com/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808
+madurez: T0
+---
+id: MSG-023
+area: programas
+titulo:
+  sencillo: "Un programa muy viejo (de 16 bits) no arranca en Windows de 64 bits"
+  tecnico: "Aplicaciones de 16 bits no compatibles con Windows de 64 bits"
+explicacion:
+  sencillo: "Los programas de 16 bits, hechos para versiones muy antiguas de Windows, no pueden funcionar en Windows de 64 bits, y Windows 11 necesita un procesador de 64 bits. No hay ajuste que lo arregle: hace falta una versión más nueva del programa o uno que lo reemplace."
+  tecnico: "Windows de 64 bits no ejecuta aplicaciones de 16 bits (ERROR_BAD_EXE_FORMAT). Windows 11 requiere procesador de 64 bits."
+frases: ["aplicación de 16 bits no compatible", "programa de 16 bits no anda en windows de 64 bits", "tengo un programa viejísimo de disquete que no abre", "no puedo usar un programa de windows 3.1"]
+pasos:
+  - texto: "Fijate si tu Windows es de 64 bits: en Información, en «Especificaciones del dispositivo»."
+    abrir: "ms-settings:about"
+  - texto: "Buscá una versión nueva del programa en la página del fabricante, o un programa actual que haga lo mismo."
+    abrir: "https://support.microsoft.com/windows/make-older-apps-or-programs-compatible-with-the-latest-version-of-windows-783d6dd7-b439-bdb0-0490-54eea0f45938"
+derivar: "Si necesitás sí o sí ese programa (por ejemplo, para un trabajo o un aparato viejo), consultá con un técnico."
+fuentes:
+  - https://learn.microsoft.com/windows/win32/winprog64/running-32-bit-applications
+  - https://learn.microsoft.com/windows/whats-new/windows-11-requirements
+  - https://support.microsoft.com/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808
+  - https://support.microsoft.com/windows/make-older-apps-or-programs-compatible-with-the-latest-version-of-windows-783d6dd7-b439-bdb0-0490-54eea0f45938
+madurez: T0
+---
+id: MSG-024
+area: programas
+titulo:
+  sencillo: "Instalé un programa pero no aparece en el menú Inicio"
+  tecnico: "Programa instalado sin acceso directo visible: buscar, anclar o verificar la instalación"
+explicacion:
+  sencillo: "A veces el programa se instaló bien pero no dejó el ícono a la vista, o el ícono se perdió. Se lo puede buscar por su nombre y anclar a Inicio. Si no aparece en ningún lado, puede que la instalación no haya terminado."
+  tecnico: "Buscar la app (tecla Windows o Buscar), lista alfabética de Inicio, Anclar a Inicio; verificar en Aplicaciones instaladas."
+frases: ["instalé un programa y no lo encuentro en inicio", "no me aparece el ícono del programa que instalé", "se instaló pero no tiene acceso directo", "el programa no figura en la lista de aplicaciones"]
+pasos:
+  - texto: "Apretá la tecla Windows y escribí el nombre del programa. Si aparece, hacé clic derecho y elegí «Anclar a Inicio»."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/find-your-files-and-apps-in-windows"
+  - texto: "También podés mirar la lista de todas las aplicaciones de Inicio, ordenada por letra."
+  - texto: "Si no aparece, fijate en Aplicaciones instaladas. Si tampoco está ahí, la instalación no terminó: volvé a abrir el instalador."
+    abrir: "ms-settings:appsfeatures"
+fuentes:
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/find-your-files-and-apps-in-windows
+  - https://learn.microsoft.com/troubleshoot/windows-server/application-management/msi-installation-error-1603
+madurez: T0
+---
+id: MSG-025
+area: programas
+titulo:
+  sencillo: "Un programa se abre en el otro monitor o fuera de la pantalla"
+  tecnico: "Mover la ventana activa entre monitores (Windows + Mayús + flecha)"
+explicacion:
+  sencillo: "Pasa sobre todo si usaste un segundo monitor o un televisor: el programa está abierto (se ve en la barra de tareas), pero la ventana queda en el otro lado. Con el teclado se la trae de vuelta."
+  tecnico: "Windows + Mayús + flecha izquierda/derecha mueve la ventana activa al monitor contiguo; Windows + flecha arriba maximiza; Alt + barra espaciadora abre el menú de la ventana."
+frases: ["el programa se abre en el otro monitor", "la ventana se abre fuera de la pantalla y no la veo", "el programa está abierto en la barra pero no se ve la ventana", "cómo paso una ventana al otro monitor"]
+pasos:
+  - texto: "Tocá el ícono del programa en la barra de tareas para que su ventana quede seleccionada."
+  - texto: "Apretá Windows + Mayús + flecha izquierda (o derecha): la ventana pasa al otro monitor. Repetilo hasta que aparezca."
+    abrir: "https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec"
+  - texto: "Cuando la veas, apretá Windows + flecha arriba para agrandarla."
+  - texto: "Si tenés un solo monitor y la ventana sigue sin verse, apretá Alt + barra espaciadora: se abre el menú de la ventana, donde podés elegir «Maximizar»."
+fuentes:
+  - https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec
+madurez: T0
+

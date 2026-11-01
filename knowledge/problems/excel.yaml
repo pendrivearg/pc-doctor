@@ -1,0 +1,470 @@
+# Excel paso a paso: sumar, promediar, contar, porcentajes, ordenar, filtrar, duplicados, buscar y reemplazar, formatos, fórmulas y errores comunes. Guiadas con fuente oficial de Microsoft.
+id: XLS-001
+area: programas
+titulo:
+  sencillo: "Quiero sumar una columna de números en Excel"
+  tecnico: "Autosuma (función SUMA)"
+explicacion:
+  sencillo: "Excel suma una columna entera con un solo botón, «Autosuma». No hace falta hacer la cuenta a mano ni escribir la fórmula."
+  tecnico: "Inicio > Autosuma inserta =SUMA() con el rango contiguo detectado; Entrar confirma."
+frases: ["cómo sumo una columna en excel", "quiero el total de la columna", "sumar todos los números de la planilla", "dónde está el botón de autosuma"]
+pasos:
+  - texto: "Hacé clic en la celda vacía que está justo debajo del último número de la columna (o a la derecha, si querés sumar una fila)."
+  - texto: "En la pestaña «Inicio», tocá «Autosuma». Excel marca con un recuadro las celdas que va a sumar: fijate que estén todas."
+  - texto: "Apretá Entrar y aparece el total. En la celda queda la fórmula SUMA."
+    abrir: "https://support.microsoft.com/es-es/office/use-autosum-to-sum-numbers-543941e7-e783-44ef-8317-7d1bb85fe706"
+fuentes:
+  - https://support.microsoft.com/es-es/office/use-autosum-to-sum-numbers-543941e7-e783-44ef-8317-7d1bb85fe706
+madurez: T0
+---
+id: XLS-002
+area: programas
+titulo:
+  sencillo: "Quiero sacar el promedio de unos números en Excel"
+  tecnico: "Función PROMEDIO"
+explicacion:
+  sencillo: "La fórmula PROMEDIO suma los números y los divide por la cantidad, sola. Las celdas vacías o con texto no las cuenta, pero los ceros sí."
+  tecnico: "=PROMEDIO(número1; [número2]; ...): ignora celdas vacías, texto y valores lógicos de los rangos; incluye los ceros."
+frases: ["cómo saco el promedio en excel", "sacar el promedio de las notas", "promediar una columna", "excel me da mal el promedio"]
+pasos:
+  - texto: "Hacé clic en la celda vacía donde querés ver el promedio."
+  - texto: "Escribí =PROMEDIO( , marcá con el mouse las celdas con los números y cerrá el paréntesis. Por ejemplo: =PROMEDIO(A2:A6). Apretá Entrar."
+  - texto: "Si el promedio te parece raro, revisá: un 0 cuenta como nota, pero una celda vacía no."
+    abrir: "https://support.microsoft.com/es-es/office/average-function-047bac88-d466-426c-a32b-8f33eb960cf6"
+fuentes:
+  - https://support.microsoft.com/es-es/office/average-function-047bac88-d466-426c-a32b-8f33eb960cf6
+madurez: T0
+---
+id: XLS-003
+area: programas
+titulo:
+  sencillo: "Quiero contar cuántos datos hay en una columna de Excel"
+  tecnico: "Funciones CONTAR, CONTARA y CONTAR.SI"
+explicacion:
+  sencillo: "Excel puede contar por vos: cuántos números hay, cuántas celdas tienen algo escrito, o cuántas cumplen una condición (por ejemplo, cuántos dicen «pagado»)."
+  tecnico: "CONTAR cuenta solo celdas con números; CONTARA cuenta las no vacías (texto incluido); CONTAR.SI cuenta según un criterio."
+frases: ["cuántas filas tengo en la planilla", "contar cuántos nombres hay en excel", "excel cuántas celdas tienen algo escrito", "contar cuántos dicen pagado"]
+pasos:
+  - texto: "Para contar celdas con números: en una celda vacía escribí =CONTAR( , marcá la columna, cerrá el paréntesis y apretá Entrar."
+  - texto: "Si en la columna hay nombres o texto, CONTAR no los cuenta: usá =CONTARA( ) de la misma forma, que cuenta todas las celdas que no están vacías."
+  - texto: "Para contar solo las que cumplen algo (por ejemplo, las que dicen «pagado»), la fórmula es CONTAR.SI."
+    abrir: "https://support.microsoft.com/es-es/office/count-function-a59cd7fc-b623-4d93-87a4-d23bf411294c"
+fuentes:
+  - https://support.microsoft.com/es-es/office/count-function-a59cd7fc-b623-4d93-87a4-d23bf411294c
+madurez: T0
+---
+id: XLS-004
+area: programas
+titulo:
+  sencillo: "Quiero calcular un porcentaje en Excel"
+  tecnico: "Calcular porcentajes y aplicar Estilo porcentual"
+explicacion:
+  sencillo: "Para saber qué porcentaje es un número de otro, se divide uno por el otro y después se le pone el formato de «%». Para sumar o restar un porcentaje (un aumento o un descuento) también hay una cuenta sencilla."
+  tecnico: "Parte/total + Inicio > Estilo porcentual. Aumento: =valor*(1+0,25); descuento: =valor*(1-0,25)."
+frases: ["cómo saco el porcentaje en excel", "calcular el 25 por ciento de un precio", "aplicar un descuento en la planilla", "poner el signo de porcentaje en excel"]
+pasos:
+  - texto: "Qué porcentaje es un número de otro: en una celda vacía escribí la división, por ejemplo =42/50, y apretá Entrar. Da 0,84."
+  - texto: "Con esa celda elegida, en la pestaña «Inicio» tocá el botón de porcentaje (%): ahora se ve 84 %. Con los botones de aumentar o disminuir decimales elegís cuántos decimales mostrar."
+  - texto: "Para aumentar un número un 25 %: =113*(1+0,25). Para descontarle un 25 %: =113*(1-0,25). Cambiá 113 por tu celda o tu precio."
+    abrir: "https://support.microsoft.com/es-es/excel/calculate-percentages"
+fuentes:
+  - https://support.microsoft.com/es-es/excel/calculate-percentages
+madurez: T0
+---
+id: XLS-005
+area: programas
+titulo:
+  sencillo: "Quiero ordenar la lista de Excel de la A a la Z"
+  tecnico: "Ordenar datos de un rango o tabla"
+explicacion:
+  sencillo: "Excel ordena una lista alfabéticamente o de menor a mayor con un botón. Conviene que toda la lista se ordene junta, así cada nombre sigue con sus datos."
+  tecnico: "Datos > Ordenar y filtrar > Ordenar de A a Z / de menor a mayor; Datos > Ordenar para varios niveles. Evitar ordenar una parte del rango."
+frases: ["ordenar por orden alfabético en excel", "ordenar los nombres de la a a la z", "ordenar de menor a mayor la planilla", "al ordenar se me mezclaron los datos"]
+pasos:
+  - texto: "Hacé clic en una sola celda de la columna por la que querés ordenar (no marques la columna sola)."
+  - texto: "En la pestaña «Datos», tocá «Ordenar de la A a la Z» (para números aparece como «de menor a mayor»)."
+  - texto: "Si Excel te pregunta, elegí «Ampliar la selección»: así cada fila se mueve entera y no se mezclan los datos."
+  - texto: "Para ordenar por más de una columna (por ejemplo, apellido y después nombre), usá «Datos» > «Ordenar» > «Agregar nivel»."
+    abrir: "https://support.microsoft.com/es-es/office/sort-data-in-a-range-or-table-62d0b95d-2a90-4610-a6ae-2e545c4a4654"
+fuentes:
+  - https://support.microsoft.com/es-es/office/sort-data-in-a-range-or-table-62d0b95d-2a90-4610-a6ae-2e545c4a4654
+madurez: T0
+---
+id: XLS-006
+area: programas
+titulo:
+  sencillo: "Quiero ver solo algunas filas de la planilla (filtrar)"
+  tecnico: "Filtrar datos de un rango o tabla (Autofiltro)"
+explicacion:
+  sencillo: "El filtro esconde por un rato las filas que no te interesan y deja ver solo las que elegís, por ejemplo las de un mes o un cliente. No borra nada: al quitar el filtro vuelven todas."
+  tecnico: "Datos > Filtro agrega flechas en los encabezados; desmarcar (Seleccionar todo) y elegir valores. Las filas filtradas quedan ocultas, no se eliminan."
+frases: ["ver solo las filas de un mes en excel", "poner filtro en la planilla", "aparecieron flechitas en los títulos de excel", "me desaparecieron filas de la planilla"]
+pasos:
+  - texto: "Hacé clic en una celda de la lista y, en la pestaña «Datos», tocá «Filtro». Aparecen flechitas en los títulos de cada columna."
+  - texto: "Tocá la flechita de la columna que querés filtrar, sacá la marca de «(Seleccionar todo)», marcá solo lo que querés ver y tocá «Aceptar»."
+  - texto: "Para que vuelvan a verse todas las filas, tocá de nuevo «Datos» > «Filtro». Si te faltan filas y no sabés por qué, puede haber un filtro puesto."
+    abrir: "https://support.microsoft.com/es-es/office/filter-data-in-a-range-or-table-01832226-31b5-4568-8806-38c37dcc180e"
+fuentes:
+  - https://support.microsoft.com/es-es/office/filter-data-in-a-range-or-table-01832226-31b5-4568-8806-38c37dcc180e
+madurez: T0
+---
+id: XLS-007
+area: programas
+titulo:
+  sencillo: "Tengo nombres o datos repetidos en la planilla y quiero sacarlos"
+  tecnico: "Datos > Quitar duplicados (y resaltarlos antes con formato condicional)"
+explicacion:
+  sencillo: "Excel puede encontrar las filas repetidas y dejar una sola de cada una. Ojo: las repetidas se borran de verdad, así que conviene hacer una copia antes o marcarlas primero con color para revisarlas."
+  tecnico: "Datos > Herramientas de datos > Quitar duplicados, eligiendo columnas; elimina en forma permanente. Para revisar antes: Inicio > Formato condicional > Resaltar reglas de celdas > Duplicar valores."
+frases: ["sacar los repetidos de la lista de excel", "tengo clientes duplicados en la planilla", "borrar las filas repetidas", "marcar los datos que están dos veces"]
+pasos:
+  - texto: "Antes que nada: copiá la planilla a otra hoja o guardá una copia del archivo. Quitar duplicados borra las filas repetidas en forma permanente."
+  - texto: "Si primero querés verlos: seleccioná la columna y andá a «Inicio» > «Formato condicional» > «Resaltar reglas de celdas» > «Duplicar valores». Se pintan de color y no se borra nada."
+    abrir: "https://support.microsoft.com/es-es/office/find-and-remove-duplicates-00e35bea-b46a-4d5d-b28e-66a552dc138d"
+  - texto: "Para borrarlos: hacé clic dentro de la lista, andá a la pestaña «Datos» y tocá «Quitar duplicados». Marcá las columnas que tienen que coincidir para que una fila cuente como repetida y tocá «Aceptar»."
+  - texto: "Excel te dice cuántos sacó. Si no era lo que querías, apretá enseguida Ctrl + Z para deshacer."
+    abrir: "https://support.microsoft.com/es-es/office/filter-for-unique-values-or-remove-duplicate-values-ccf664b0-81d6-449b-bbe1-8daaec1e83c2"
+fuentes:
+  - https://support.microsoft.com/es-es/office/filter-for-unique-values-or-remove-duplicate-values-ccf664b0-81d6-449b-bbe1-8daaec1e83c2
+  - https://support.microsoft.com/es-es/office/find-and-remove-duplicates-00e35bea-b46a-4d5d-b28e-66a552dc138d
+madurez: T0
+---
+id: XLS-008
+area: programas
+titulo:
+  sencillo: "Quiero cambiar una palabra o un número en toda la planilla de una vez"
+  tecnico: "Buscar y reemplazar en una hoja o libro"
+explicacion:
+  sencillo: "Excel puede encontrar una palabra o un número en toda la planilla y cambiarlo por otro de un saque, sin ir celda por celda."
+  tecnico: "Inicio > Edición > Buscar y seleccionar > Reemplazar; Opciones: Dentro de Hoja/Libro, coincidir mayúsculas o todo el contenido de la celda."
+frases: ["cambiar una palabra en toda la planilla", "buscar un nombre en excel", "reemplazar todos los datos iguales de una vez", "corregir el mismo error en muchas celdas"]
+pasos:
+  - texto: "Para solo encontrar algo: en la pestaña «Inicio», tocá «Buscar y seleccionar» > «Buscar», escribí lo que buscás y tocá «Buscar todos»."
+  - texto: "Para cambiarlo: «Inicio» > «Buscar y seleccionar» > «Reemplazar». Arriba poné lo que está mal y en «Reemplazar por» lo nuevo."
+  - texto: "Antes de tocar «Reemplazar todo», usá «Buscar todos» para ver qué celdas va a cambiar: cambia todas las que coinciden, aunque sea dentro de otra palabra. En «Opciones» podés marcar «Coincidir con todo el contenido de la celda»."
+    abrir: "https://support.microsoft.com/es-es/office/find-or-replace-text-and-numbers-on-a-worksheet-0e304ca5-ecef-4808-b90f-fdb42f892e90"
+  - texto: "Si te equivocaste, apretá enseguida Ctrl + Z para deshacer."
+fuentes:
+  - https://support.microsoft.com/es-es/office/find-or-replace-text-and-numbers-on-a-worksheet-0e304ca5-ecef-4808-b90f-fdb42f892e90
+madurez: T0
+---
+id: XLS-009
+area: programas
+titulo:
+  sencillo: "Quiero que los números se vean como plata, con el signo $"
+  tecnico: "Formato de número Moneda o Contabilidad"
+explicacion:
+  sencillo: "Excel puede mostrar los importes con el signo de pesos y los decimales que quieras. Es una forma de mostrarlos: no hace falta escribir el signo a mano en cada celda."
+  tecnico: "Inicio > grupo Número: Moneda o Contabilidad; Ctrl + 1 > Formato de celdas para elegir Símbolo, Posiciones decimales y Números negativos."
+frases: ["poner el signo pesos en excel", "que los números aparezcan como plata", "formato moneda en la planilla", "mostrar los precios con dos decimales en excel"]
+pasos:
+  - texto: "Seleccioná las celdas con los importes."
+  - texto: "En la pestaña «Inicio», en la parte «Número», desplegá la lista de formatos y elegí «Moneda» (o el botón con el símbolo de moneda, que es «Contabilidad» y alinea los signos en la columna)."
+  - texto: "Para elegir el símbolo o los decimales: apretá Ctrl + 1, en «Categoría» elegí «Moneda», y cambiá «Símbolo» y «Posiciones decimales». Tocá «Aceptar»."
+    abrir: "https://support.microsoft.com/es-es/excel/format-numbers-as-currency-in-excel"
+fuentes:
+  - https://support.microsoft.com/es-es/excel/format-numbers-as-currency-in-excel
+madurez: T0
+---
+id: XLS-010
+area: programas
+titulo:
+  sencillo: "Hay un triangulito verde en las celdas y los números no suman"
+  tecnico: "Números almacenados como texto: Convertir en número"
+explicacion:
+  sencillo: "Cuando un número quedó guardado como si fuera texto (pasa mucho al copiar de una página o de otro programa), Excel le pone un triangulito verde en la esquina y no lo trata como número. Se convierte con un par de clics."
+  tecnico: "Indicador de comprobación de errores «Número almacenado como texto»: botón de error > Convertir en número; alternativa: =VALOR() y pegar valores."
+frases: ["me aparece un triangulito verde en la celda", "excel no me suma los números que pegué", "dice número almacenado como texto", "pasé números de otro programa y excel no los toma"]
+pasos:
+  - texto: "Seleccioná las celdas que tienen el triangulito verde arriba a la izquierda."
+  - texto: "Al lado aparece un botoncito con un signo de advertencia: tocalo y elegí «Convertir en número»."
+  - texto: "Si no aparece esa opción, en una columna nueva escribí =VALOR(A2) (con tu celda), arrastrá la fórmula hacia abajo y después copiá y pegá solo los valores en la columna original."
+    abrir: "https://support.microsoft.com/es-es/excel/convert-numbers-stored-as-text-to-numbers-in-excel"
+fuentes:
+  - https://support.microsoft.com/es-es/excel/convert-numbers-stored-as-text-to-numbers-in-excel
+madurez: T0
+---
+id: XLS-011
+area: programas
+titulo:
+  sencillo: "El texto se sale de la celda o no entra en la columna"
+  tecnico: "Ajustar texto, salto de línea y ancho de columna (Autoajustar)"
+explicacion:
+  sencillo: "Si escribís algo largo, Excel lo muestra pasando por encima de las celdas de al lado o lo corta. Podés ensanchar la columna o, con «Ajustar texto», hacer que se acomode en varios renglones dentro de la misma celda."
+  tecnico: "Doble clic en el borde del encabezado de columna (autoajustar) o Inicio > Formato > Ancho de columna; Inicio > Alineación > Ajustar texto; salto manual con Alt + Entrar; Autoajustar alto de fila."
+frases: ["el texto se sale de la celda", "escribir en dos renglones dentro de una celda", "la columna es muy angosta y no se lee", "cómo hago un enter dentro de la celda", "agrandar una columna en excel"]
+pasos:
+  - texto: "Para ensanchar la columna: arriba de todo, donde están las letras, hacé doble clic en la rayita que está a la derecha de la letra. La columna toma el ancho justo para lo que tiene escrito. También podés arrastrar esa rayita."
+    abrir: "https://support.microsoft.com/es-es/office/change-the-column-width-and-row-height-72f5e3cc-994d-43e8-ae58-9774a0905f46"
+  - texto: "Para que el texto baje de renglón dentro de la celda: seleccioná las celdas y, en la pestaña «Inicio», tocá «Ajustar texto»."
+  - texto: "Para cortar el renglón donde vos quieras: hacé doble clic en la celda, poné el cursor en ese lugar y apretá Alt + Entrar."
+  - texto: "Si igual no se ve todo, la fila tiene un alto fijo: en «Inicio» > «Formato», elegí «Autoajustar alto de fila»."
+    abrir: "https://support.microsoft.com/es-es/office/wrap-text-in-a-cell-2a18cff5-ccc1-4bce-95e4-f0d4f3ff4e84"
+fuentes:
+  - https://support.microsoft.com/es-es/office/wrap-text-in-a-cell-2a18cff5-ccc1-4bce-95e4-f0d4f3ff4e84
+  - https://support.microsoft.com/es-es/office/change-the-column-width-and-row-height-72f5e3cc-994d-43e8-ae58-9774a0905f46
+madurez: T0
+---
+id: XLS-012
+area: programas
+titulo:
+  sencillo: "Escribo una fecha en Excel y aparece un número raro (como 45123)"
+  tecnico: "Fechas como número de serie: aplicar formato de Fecha"
+explicacion:
+  sencillo: "Excel guarda las fechas como un número (cuenta los días desde el 1 de enero de 1900) para poder hacer cuentas con ellas. Si la celda no tiene formato de fecha, te muestra ese número. La fecha no se perdió: solo hay que decirle que la muestre como fecha."
+  tecnico: "Las fechas son números de serie secuenciales (1/1/1900 = 1). Ctrl + 1 > Formato de celdas > Número > Categoría Fecha > Tipo."
+frases: ["pongo una fecha y aparece un número", "las fechas se convirtieron en números", "en vez de la fecha sale 45000 y pico", "cómo hago que excel muestre la fecha bien"]
+pasos:
+  - texto: "Seleccioná las celdas donde aparecen los números en lugar de las fechas."
+  - texto: "Apretá Ctrl + 1. Se abre «Formato de celdas»: en la pestaña «Número», elegí «Fecha» en la lista «Categoría»."
+  - texto: "En «Tipo», elegí cómo querés verla. En «Muestra», ves cómo va a quedar. Tocá «Aceptar»."
+    abrir: "https://support.microsoft.com/es-es/office/format-a-date-the-way-you-want-8e10019e-d5d8-47a1-ba95-db95123d273e"
+fuentes:
+  - https://support.microsoft.com/es-es/office/format-a-date-the-way-you-want-8e10019e-d5d8-47a1-ba95-db95123d273e
+  - https://support.microsoft.com/es-es/office/datevalue-function-df8b07d4-7761-4a93-bc33-b7471bbff252
+madurez: T0
+---
+id: XLS-013
+area: programas
+titulo:
+  sencillo: "Quiero agregar o borrar una fila o una columna en Excel"
+  tecnico: "Insertar o eliminar filas y columnas de hoja"
+explicacion:
+  sencillo: "Podés meter una fila nueva en el medio de la planilla (por ejemplo, para un dato que te faltó) o sacar una que sobra. Al borrar una fila se va todo lo que tenía escrito."
+  tecnico: "Clic derecho en el encabezado de fila o columna > Insertar o Eliminar; o Inicio > Insertar / Eliminar > filas o columnas de hoja."
+frases: ["agregar una fila en el medio de la planilla", "meter una columna nueva en excel", "borrar una fila entera", "me faltó un renglón en la lista de excel"]
+pasos:
+  - texto: "Para agregar una fila: hacé clic derecho sobre el número de la fila (a la izquierda de todo) y elegí «Insertar». Para una columna, lo mismo sobre la letra de arriba."
+  - texto: "Para borrar: clic derecho sobre el número de la fila (o la letra de la columna) y «Eliminar». Ojo: se borra todo lo que había en esa fila. Si te equivocaste, apretá Ctrl + Z."
+  - texto: "También está en la pestaña «Inicio»: «Insertar» > «Insertar filas de hoja» o «Eliminar» > «Eliminar filas de hoja»."
+    abrir: "https://support.microsoft.com/es-es/office/insert-or-delete-rows-and-columns-6f40e6e4-85af-45e0-b39d-65dd504a3246"
+fuentes:
+  - https://support.microsoft.com/es-es/office/insert-or-delete-rows-and-columns-6f40e6e4-85af-45e0-b39d-65dd504a3246
+madurez: T0
+---
+id: XLS-014
+area: programas
+titulo:
+  sencillo: "Quiero hacer un gráfico con los datos de la planilla"
+  tecnico: "Insertar > Gráficos recomendados"
+explicacion:
+  sencillo: "Con los números de la planilla Excel arma un gráfico de barras, de torta o de líneas. Te muestra cuáles le quedan bien a tus datos para que elijas."
+  tecnico: "Seleccionar los datos con sus títulos > Insertar > Gráficos recomendados (o Todos los gráficos) > Aceptar."
+frases: ["hacer un gráfico en excel", "armar un gráfico de torta con la planilla", "pasar los números a un gráfico de barras", "cómo se hace un gráfico con los gastos"]
+pasos:
+  - texto: "Seleccioná con el mouse los datos que querés mostrar, incluyendo los títulos de las columnas."
+  - texto: "En la pestaña «Insertar», tocá «Gráficos recomendados»."
+  - texto: "Tocá cada opción para ver cómo queda. Si no te convence ninguna, mirá en «Todos los gráficos». Elegí uno y tocá «Aceptar»."
+    abrir: "https://support.microsoft.com/es-es/office/create-a-chart-from-start-to-finish-0baf399e-dd61-4e18-8a73-b3fd5d5680c2"
+fuentes:
+  - https://support.microsoft.com/es-es/office/create-a-chart-from-start-to-finish-0baf399e-dd61-4e18-8a73-b3fd5d5680c2
+madurez: T0
+---
+id: XLS-015
+area: programas
+titulo:
+  sencillo: "Quiero que Excel pinte de color las celdas según el valor"
+  tecnico: "Formato condicional: Resaltar reglas de celdas"
+explicacion:
+  sencillo: "Excel puede pintar solo las celdas que cumplen algo, por ejemplo en rojo las deudas mayores a cierto monto. Si el número cambia, el color se acomoda solo."
+  tecnico: "Inicio > Estilos > Formato condicional > Resaltar reglas de celdas (Mayor que, Entre, Igual a...); también barras de datos y escalas de color. Borrar reglas para quitarlo."
+frases: ["que se pinten solas las celdas en rojo", "que se marquen las celdas mayores a un monto", "formato condicional en excel", "resaltar con color los que deben plata"]
+pasos:
+  - texto: "Seleccioná las celdas que querés controlar."
+  - texto: "En la pestaña «Inicio», tocá «Formato condicional» > «Resaltar reglas de celdas» y elegí la condición (por ejemplo «Mayor que» o «Entre»)."
+  - texto: "Escribí el número, elegí el color y tocá «Aceptar»."
+  - texto: "Para sacarlo: «Inicio» > «Formato condicional» > «Borrar reglas»."
+    abrir: "https://support.microsoft.com/es-es/excel/use-conditional-formatting-to-highlight-information-in-excel"
+fuentes:
+  - https://support.microsoft.com/es-es/excel/use-conditional-formatting-to-highlight-information-in-excel
+madurez: T0
+---
+id: XLS-016
+area: programas
+titulo:
+  sencillo: "Quiero que nadie me cambie la planilla (proteger la hoja)"
+  tecnico: "Revisar > Proteger hoja"
+explicacion:
+  sencillo: "Podés trabar una hoja de Excel para que otros la vean pero no borren ni cambien las fórmulas. Si querés, dejás algunas celdas libres para que sí puedan escribir."
+  tecnico: "Formato de celdas > Protección > desmarcar Bloqueada en las editables; Revisar > Proteger hoja con permisos y contraseña opcional; Desproteger hoja."
+frases: ["que no me borren las fórmulas de la planilla", "bloquear una hoja de excel", "proteger la planilla para que no la modifiquen", "dejar que solo puedan escribir en algunas celdas"]
+pasos:
+  - texto: "Si querés que puedan escribir en algunas celdas: seleccionalas, apretá Ctrl + 1, andá a la pestaña «Protección» y sacale la marca a «Bloqueada». Tocá «Aceptar»."
+  - texto: "En la pestaña «Revisar», tocá «Proteger hoja» y marcá lo que sí van a poder hacer los demás."
+  - texto: "La clave es opcional. Si le ponés una, anotala en un lugar seguro: si te la olvidás, Microsoft no la puede recuperar."
+  - texto: "Para destrabarla: «Revisar» > «Desproteger hoja»."
+    abrir: "https://support.microsoft.com/es-es/excel/protect-a-worksheet"
+fuentes:
+  - https://support.microsoft.com/es-es/excel/protect-a-worksheet
+madurez: T0
+---
+id: XLS-017
+area: programas
+titulo:
+  sencillo: "Quiero que los títulos de las columnas salgan en todas las hojas impresas"
+  tecnico: "Diseño de página > Imprimir títulos (Repetir filas en extremo superior)"
+explicacion:
+  sencillo: "Cuando una planilla larga se imprime en varias hojas, los títulos de arriba solo salen en la primera. Excel puede repetir esa fila de títulos en cada hoja para que se entienda qué es cada columna."
+  tecnico: "Diseño de página > Configurar página > Imprimir títulos > pestaña Hoja > Repetir filas en extremo superior (p. ej. $1:$1)."
+frases: ["que los títulos salgan en todas las hojas al imprimir", "repetir la primera fila en cada página", "en la segunda hoja impresa no se sabe qué es cada columna", "imprimir el encabezado de la planilla en cada hoja"]
+pasos:
+  - texto: "Abrí la hoja que vas a imprimir. En la pestaña «Diseño de página», tocá «Imprimir títulos»."
+  - texto: "En la pestaña «Hoja», hacé clic en el cuadro «Repetir filas en extremo superior» y después tocá en la planilla el número de la fila de títulos (por ejemplo, la 1). Queda escrito algo como $1:$1."
+  - texto: "Tocá «Aceptar» e imprimí. Si «Imprimir títulos» aparece gris, apretá Esc (puede que estés escribiendo en una celda) o hacé clic fuera del gráfico."
+    abrir: "https://support.microsoft.com/es-es/excel/print-rows-with-column-headers-on-top-of-every-page"
+fuentes:
+  - https://support.microsoft.com/es-es/excel/print-rows-with-column-headers-on-top-of-every-page
+madurez: T0
+---
+id: XLS-018
+area: archivos
+titulo:
+  sencillo: "Abro un archivo CSV en Excel y los acentos y las eñes salen con símbolos raros"
+  tecnico: "Importar CSV UTF-8 con Datos > Desde el texto/CSV (Origen del archivo)"
+explicacion:
+  sencillo: "Muchos archivos .csv que se bajan de sistemas o páginas vienen en una codificación llamada UTF-8. Si Excel no se da cuenta, las letras con acento y la ñ aparecen como símbolos raros. Importándolo desde la pestaña «Datos» le podés decir cómo leerlo."
+  tecnico: "Sin BOM, Excel no infiere UTF-8 al abrir el CSV. Datos > Obtener y transformar datos > Desde texto o CSV; en la vista previa, lista Origen del archivo: UTF-8; Cargar."
+frases: ["el csv sale con letras raras", "los acentos se ven mal en el archivo csv", "en vez de la ñ aparecen símbolos en excel", "abro el archivo del banco y salen caracteres extraños"]
+pasos:
+  - texto: "No abras el CSV con doble clic. Abrí Excel con un libro en blanco y, en la pestaña «Datos», tocá «Desde texto o CSV» (en algunas versiones está en «Obtener datos» > «De un archivo»)."
+    abrir: "https://support.microsoft.com/es-es/office/abrir-archivos-csv-utf-8-correctamente-en-excel-8a935af5-3416-4edd-ba7e-3dfd2bc4a032"
+  - texto: "Buscá el archivo, hacé doble clic y tocá «Importar». Aparece una vista previa."
+  - texto: "Arriba, en la lista «Origen del archivo», elegí la opción que dice UTF-8. Fijate en la vista previa que los acentos ya se vean bien. Si las columnas salen todas juntas, cambiá el «Delimitador» (por ejemplo, a punto y coma)."
+    abrir: "https://learn.microsoft.com/es-es/power-query/connectors/text-csv"
+  - texto: "Tocá «Cargar» y los datos quedan en una hoja nueva."
+    abrir: "https://support.microsoft.com/es-es/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba"
+fuentes:
+  - https://support.microsoft.com/es-es/office/abrir-archivos-csv-utf-8-correctamente-en-excel-8a935af5-3416-4edd-ba7e-3dfd2bc4a032
+  - https://support.microsoft.com/es-es/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba
+  - https://learn.microsoft.com/es-es/power-query/connectors/text-csv
+madurez: T0
+---
+id: XLS-019
+area: programas
+titulo:
+  sencillo: "Quiero que Excel me traiga un dato de otra lista (BUSCARV)"
+  tecnico: "Funciones BUSCARV y BUSCARX: búsqueda exacta"
+explicacion:
+  sencillo: "BUSCARV busca algo (un código, un nombre) en una lista y te trae el dato que está en la misma fila, por ejemplo el precio. Así no tenés que buscarlo a ojo."
+  tecnico: "=BUSCARV(valor_buscado; matriz_buscar_en; indicador_columnas; FALSO). El valor buscado debe estar en la primera columna del rango. BUSCARX es la versión nueva: busca en cualquier dirección y es exacta por defecto."
+frases: ["cómo uso el buscarv", "traer el precio de otra lista con el código", "buscar un dato en otra tabla de excel", "cruzar dos listas en excel"]
+pasos:
+  - texto: "Fijate que lo que vas a buscar (por ejemplo, el código) esté en la primera columna de la lista donde buscás."
+  - texto: "En la celda donde querés el resultado escribí, por ejemplo: =BUSCARV(H2;B2:E7;2;FALSO). Quiere decir: buscá lo que está escrito en H2 dentro de la primera columna de B2:E7 y traeme lo que está en la 2.ª columna de ese rango, en la misma fila."
+  - texto: "El último dato, FALSO, es para que busque exactamente eso. Si no lo ponés, puede traer un resultado aproximado equivocado."
+    abrir: "https://support.microsoft.com/es-es/office/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1"
+  - texto: "Si tu Excel es nuevo, existe BUSCARX, que es más fácil: busca para cualquier lado y ya es exacta sola."
+fuentes:
+  - https://support.microsoft.com/es-es/office/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1
+madurez: T0
+---
+id: XLS-020
+area: programas
+titulo:
+  sencillo: "En Excel me aparece #¡DIV/0! en una celda"
+  tecnico: "Error #¡DIV/0!: división por cero o por celda vacía"
+explicacion:
+  sencillo: "Ese cartel quiere decir que la fórmula está dividiendo por cero o por una celda que está vacía. Pasa mucho en planillas que todavía no tienen todos los datos cargados."
+  tecnico: "#¡DIV/0! aparece cuando el divisor es 0 o una celda en blanco. Se evita con =SI(A3;A2/A3;0) o se controla con SI.ERROR, que oculta cualquier error."
+frases: ["me sale div/0 en excel", "aparece #¡DIV/0! en la planilla", "error de división por cero en excel", "el promedio me da div 0"]
+pasos:
+  - texto: "Hacé clic en la celda con el error y mirá la fórmula arriba. Fijate por qué celda divide (lo que está después de la barra /)."
+  - texto: "Si esa celda está vacía o tiene un 0, cargale el dato que falta, o cambiá la fórmula para que divida por la celda correcta."
+  - texto: "Si es normal que a veces esté vacía, podés hacer que muestre 0 en vez del error: por ejemplo, en lugar de =A2/A3 escribí =SI(A3;A2/A3;0)."
+    abrir: "https://support.microsoft.com/es-es/office/how-to-correct-a-div-0-error-3a5a18a9-8d80-4ebb-a908-39e759a009a5"
+  - texto: "También existe SI.ERROR, pero tapa cualquier error, no solo este: usalo recién cuando sepas que la fórmula está bien."
+fuentes:
+  - https://support.microsoft.com/es-es/office/how-to-correct-a-div-0-error-3a5a18a9-8d80-4ebb-a908-39e759a009a5
+madurez: T0
+---
+id: XLS-021
+area: programas
+titulo:
+  sencillo: "En Excel me aparece #N/A (sobre todo con BUSCARV)"
+  tecnico: "Error #N/A: valor buscado no encontrado"
+explicacion:
+  sencillo: "#N/A quiere decir que la fórmula buscó algo y no lo encontró. Con BUSCARV casi siempre es porque ese dato no está en la lista, o está escrito distinto (con un espacio de más, o como texto en vez de número)."
+  tecnico: "#N/A en BUSCARV/BUSCARX/COINCIDIR: valor inexistente, número frente a texto, espacios sobrantes (ESPACIOS) o coincidencia aproximada (usar FALSO). SI.ERROR solo lo oculta."
+frases: ["me sale #N/A en excel", "el buscarv me tira n/a", "excel no encuentra el dato y pone n/a", "aparece n/a en vez del precio"]
+pasos:
+  - texto: "Fijate si lo que buscás está de verdad en la lista donde busca la fórmula. Si no está, el #N/A es correcto: falta cargar ese dato."
+  - texto: "Si está pero no lo encuentra, puede que en un lado sea número y en el otro texto: seleccioná las dos columnas, apretá Ctrl + 1 y dejales el mismo formato."
+  - texto: "Los espacios de más al principio o al final también lo traban. Y en BUSCARV, el último dato tiene que ser FALSO para que busque exacto."
+    abrir: "https://support.microsoft.com/es-es/office/how-to-correct-a-n-a-error-a9708411-f82e-4e1b-8a7e-28c28311b993"
+  - texto: "Si es normal que algunos no estén, podés usar SI.ERROR para mostrar un 0 o dejarlo vacío. Ojo: así parece un dato válido, así que primero confirmá por qué no lo encuentra."
+fuentes:
+  - https://support.microsoft.com/es-es/office/how-to-correct-a-n-a-error-a9708411-f82e-4e1b-8a7e-28c28311b993
+madurez: T0
+---
+id: XLS-022
+area: programas
+titulo:
+  sencillo: "En Excel me aparece #¡VALOR! al hacer una cuenta"
+  tecnico: "Error #¡VALOR!: texto o espacios en celdas usadas en operaciones"
+explicacion:
+  sencillo: "Ese error aparece cuando la cuenta se encuentra con algo que no es un número: una palabra, una fecha escrita como texto o un espacio escondido en una celda que parece vacía."
+  tecnico: "#¡VALOR! con operadores + o * sobre celdas con texto o espacios. Usar funciones (SUMA, PRODUCTO) que ignoran el texto, limpiar espacios o revisar con Fórmulas > Evaluar fórmula."
+frases: ["me sale #¡VALOR! en la planilla", "excel tira error valor al sumar", "la cuenta me da error de valor", "una celda que parece vacía me arruina la fórmula"]
+pasos:
+  - texto: "Si la fórmula suma con signos +, como =A2+B2+C2, cambiala por =SUMA(A2:C2): SUMA no se traba con el texto."
+  - texto: "Si alguna celda parece vacía pero tiene un espacio: seleccioná solo esas celdas de números, andá a «Inicio» > «Buscar y seleccionar» > «Reemplazar», escribí un espacio en «Buscar», dejá vacío «Reemplazar por» y tocá «Reemplazar todo»."
+  - texto: "Para ver en qué parte falla: hacé clic en la celda con el error y andá a «Fórmulas» > «Evaluar fórmula»."
+    abrir: "https://support.microsoft.com/es-es/excel/how-to-correct-a-value-error"
+fuentes:
+  - https://support.microsoft.com/es-es/excel/how-to-correct-a-value-error
+madurez: T0
+---
+id: XLS-023
+area: programas
+titulo:
+  sencillo: "En Excel me aparece #¿NOMBRE? en la fórmula"
+  tecnico: "Error #¿NOMBRE?: función o nombre mal escrito"
+explicacion:
+  sencillo: "#¿NOMBRE? casi siempre es un error de tipeo: el nombre de la fórmula está mal escrito, falta poner comillas a una palabra o faltan los dos puntos entre dos celdas (A1:A10)."
+  tecnico: "#¿NOMBRE?: nombre de función mal escrito, texto sin comillas dobles, rango sin dos puntos, nombre definido inexistente o complemento no habilitado. Usar autocompletar o Fórmulas > Insertar función."
+frases: ["me sale #¿NOMBRE? en excel", "excel dice nombre con signo de pregunta", "escribí la fórmula y aparece error de nombre", "la fórmula no la reconoce excel"]
+pasos:
+  - texto: "Hacé clic en la celda y revisá la fórmula de arriba letra por letra: el nombre de la función tiene que estar bien escrito (por ejemplo SUMA, no SUMMA)."
+  - texto: "Si la fórmula usa una palabra, tiene que ir entre comillas dobles. Y los rangos van con dos puntos: B2:B12."
+  - texto: "Para no equivocarte: empezá a escribir =SU y elegí la función de la lista que aparece, o andá a la pestaña «Fórmulas» > «Insertar función», que te guía paso a paso."
+    abrir: "https://support.microsoft.com/es-es/excel/how-to-correct-a-name-error"
+fuentes:
+  - https://support.microsoft.com/es-es/excel/how-to-correct-a-name-error
+madurez: T0
+---
+id: XLS-024
+area: programas
+titulo:
+  sencillo: "Excel me avisa de una «referencia circular»"
+  tecnico: "Referencia circular: buscar y corregir (Fórmulas > Comprobación de errores)"
+explicacion:
+  sencillo: "Pasa cuando una fórmula se usa a sí misma en la cuenta, por ejemplo un total que se suma a sí mismo. Excel no puede terminar la cuenta y avisa, o muestra 0."
+  tecnico: "Fórmula que depende de su propia celda, directa o indirectamente. Fórmulas > Comprobación de errores > Referencias circulares lista las celdas; el cálculo iterativo debe quedar desactivado salvo modelos específicos."
+frases: ["excel dice referencia circular", "me sale un cartel de referencia circular al abrir la planilla", "el total me da cero y avisa algo circular", "cómo saco la referencia circular"]
+pasos:
+  - texto: "Andá a la pestaña «Fórmulas» > flechita de «Comprobación de errores» > «Referencias circulares». Ahí aparece la celda que tiene el problema: tocala para ir."
+  - texto: "Mirá la fórmula de esa celda: seguro incluye su propia celda. Por ejemplo, si en D3 dice =D1+D2+D3, cambiala por =D1+D2. Pasa mucho con una SUMA que abarca también la celda del total."
+  - texto: "Repetí hasta que abajo, en la barra de estado, deje de decir «Referencias circulares». Si sigue, puede haber otra en otra hoja."
+    abrir: "https://support.microsoft.com/es-es/excel/remove-or-allow-a-circular-reference-in-excel"
+  - texto: "No actives el «cálculo iterativo» para sacar el aviso: Microsoft recomienda dejarlo apagado en las planillas comunes."
+fuentes:
+  - https://support.microsoft.com/es-es/excel/remove-or-allow-a-circular-reference-in-excel
+madurez: T0
+---
+id: XLS-025
+area: programas
+titulo:
+  sencillo: "Cambio un número y Excel no actualiza los resultados"
+  tecnico: "Opciones de cálculo en Manual: volver a Automático (F9 recalcula)"
+explicacion:
+  sencillo: "Excel puede estar puesto para calcular «a mano»: cambiás un dato y el total queda igual hasta que se lo pedís. Se vuelve a poner en automático en un minuto."
+  tecnico: "Con Cálculo del libro en Manual, las fórmulas solo se recalculan con F9. Fórmulas > Opciones de cálculo > Automático, o Archivo > Opciones > Fórmulas."
+frases: ["excel no se actualiza solo", "cambio un número y el total queda igual", "tengo que apretar f9 para que calcule", "las fórmulas no recalculan"]
+pasos:
+  - texto: "Para que calcule ya mismo, apretá F9."
+  - texto: "Para que vuelva a calcular solo: en la pestaña «Fórmulas», tocá «Opciones de cálculo» y elegí «Automático»."
+  - texto: "Si no lo encontrás ahí: «Archivo» > «Opciones» > «Fórmulas», y en «Cálculo del libro» marcá «Automático». Tocá «Aceptar»."
+    abrir: "https://support.microsoft.com/es-es/excel/change-formula-recalculation-iteration-or-precision-in-excel"
+fuentes:
+  - https://support.microsoft.com/es-es/excel/change-formula-recalculation-iteration-or-precision-in-excel
+madurez: T0

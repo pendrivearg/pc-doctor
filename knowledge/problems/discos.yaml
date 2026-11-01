@@ -1,0 +1,516 @@
+# Discos y almacenamiento: salud, discos y volúmenes, inicializar y formatear, extender y reducir, formatos, discos externos, Espacios de almacenamiento, espacio, unidades de red y cifrado. Guiadas con fuente oficial y advertencias antes de todo lo que puede borrar datos.
+id: DSK-001
+area: hardware
+titulo:
+  sencillo: "Quiero ver si mi disco está sano y cuánta vida le queda"
+  tecnico: "Estado de un SSD NVMe en Configuración > Discos y volúmenes > Propiedades"
+explicacion:
+  sencillo: "Windows muestra la salud de los discos SSD de tipo NVMe: la vida útil que les queda (estimada), la reserva disponible y la temperatura. En discos rígidos comunes (HDD) y en SSD SATA no aparece esta información."
+  tecnico: "Windows supervisa solo SSD NVMe: vida útil restante estimada, reserva disponible (0–100 %) y temperatura. Advertencias críticas: reserva baja, confiabilidad degradada o unidad en solo lectura."
+frases: ["cómo sé si mi disco está bien de salud", "quiero ver cuánta vida le queda al disco", "dónde veo el estado del disco nvme", "revisar la salud del disco en windows"]
+pasos:
+  - texto: "Abrí «Discos y volúmenes» en Configuración."
+    abrir: "ms-settings:disksandvolumes"
+  - texto: "Tocá el disco y elegí «Propiedades». Si es un SSD NVMe vas a ver su estado: la vida útil restante estimada, la reserva disponible y la temperatura."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/what-to-do-about-a-critical-warning-for-a-storage-device"
+  - texto: "Si Windows muestra una advertencia (poca reserva, confiabilidad degradada o disco en solo lectura), copiá tus archivos importantes a otro disco o a la nube YA, antes de hacer cualquier otra cosa."
+  - texto: "Si no ves esos datos, tu disco no es NVMe (es un HDD o un SSD SATA): Windows no informa su salud en esta pantalla."
+derivar: "Si aparece una advertencia, después de copiar tus archivos consultá a un técnico para reemplazar el disco."
+fuentes:
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/what-to-do-about-a-critical-warning-for-a-storage-device
+madurez: T0
+---
+id: DSK-002
+area: hardware
+titulo:
+  sencillo: "¿Qué discos tiene mi compu y cuánto lugar libre le queda a cada uno?"
+  tecnico: "Configuración > Sistema > Almacenamiento > Configuración avanzada de almacenamiento > Discos y volúmenes"
+explicacion:
+  sencillo: "En «Discos y volúmenes» Windows muestra todos los discos, los de adentro y los externos, con sus partes (volúmenes), la letra de cada una, el tamaño y cuánto está ocupado. Solo mirar no cambia nada."
+  tecnico: "Discos y volúmenes lista discos internos y externos con tipo, capacidad y uso; permite crear, formatear o cambiar el tamaño de volúmenes desde Propiedades."
+frases: ["qué discos tiene mi computadora", "cuántos discos tengo en la pc", "ver todos los discos y particiones", "cuánto lugar libre tiene cada disco"]
+pasos:
+  - texto: "Para ver rápido el espacio libre: abrí el Explorador (Windows + E), tocá «Este equipo» y mirá «Dispositivos y unidades»: cada disco tiene una barra con lo libre."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/free-up-drive-space-in-windows"
+  - texto: "Para ver todos los discos con detalle, abrí «Discos y volúmenes». Ahí aparecen los internos y los externos, con cada volumen, su letra y su tamaño."
+    abrir: "ms-settings:disksandvolumes"
+  - texto: "Desde ahí también se pueden formatear o achicar volúmenes, pero eso puede borrar datos: no toques nada si solo querías mirar, y nunca las partes sin letra, que son de Windows."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/storage-settings-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/storage-settings-in-windows
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/free-up-drive-space-in-windows
+madurez: T0
+---
+id: DSK-003
+area: hardware
+titulo:
+  sencillo: "¿Mi compu tiene disco SSD o disco rígido (HDD)?"
+  tecnico: "Ver el tipo de disco (SSD o HDD) en Discos y volúmenes"
+explicacion:
+  sencillo: "Hay dos tipos de disco: los rígidos de siempre (HDD) y los SSD, que son mucho más rápidos. Windows te dice qué tipo es cada disco de tu compu."
+  tecnico: "Configuración > Sistema > Almacenamiento > Configuración avanzada de almacenamiento > Discos y volúmenes muestra el tipo de cada disco (SSD o HDD), su capacidad y su uso."
+frases: ["mi disco es ssd o hdd", "cómo sé si tengo disco sólido", "qué tipo de disco tiene mi notebook", "tengo disco rígido o ssd"]
+pasos:
+  - texto: "Abrí «Discos y volúmenes» en Configuración."
+    abrir: "ms-settings:disksandvolumes"
+  - texto: "En cada disco figura el tipo (SSD o HDD), junto con su tamaño y cuánto está ocupado."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/storage-settings-in-windows"
+  - texto: "Si Windows está en un HDD y la compu anda lenta, escribile a PC Doctor «conviene poner un ssd»."
+fuentes:
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/storage-settings-in-windows
+madurez: T0
+---
+id: DSK-004
+area: hardware
+titulo:
+  sencillo: "Puse un disco nuevo y no aparece en el Explorador"
+  tecnico: "Disco nuevo «No inicializado»: inicializarlo en Administración de discos"
+explicacion:
+  sencillo: "Un disco recién comprado viene «en blanco»: Windows lo detecta, pero hasta que no lo prepares (inicializar y crear un volumen) no aparece en el Explorador. OJO: inicializar borra todo lo que tenga el disco, así que es solo para discos nuevos y vacíos."
+  tecnico: "Disco sin firma válida: figura como «No inicializado» o «Desconocido» en Administración de discos. Inicializar disco (GPT por defecto) y luego crear un volumen simple. Inicializar borra todos los datos."
+frases: ["puse un disco nuevo y no lo veo", "instalé un ssd nuevo y no aparece en este equipo", "el disco nuevo no figura en el explorador", "compré un disco y la compu no lo muestra", "dice disco no inicializado"]
+pasos:
+  - texto: "Hacé clic derecho en el botón Inicio y elegí «Administración de discos». Buscá el disco nuevo por su tamaño: suele decir «No inicializado» o «Desconocido». Si dice «Sin conexión», hacé clic derecho sobre él y elegí «En línea»."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/disk-management-in-windows"
+  - texto: "ADVERTENCIA antes de seguir: inicializar BORRA todo lo que tenga el disco. Hacelo solo si el disco es nuevo y está vacío. Si es un disco que ya usabas (por ejemplo, de otra compu) y tiene archivos, NO lo inicialices: primero hacé una copia de seguridad o escribile a PC Doctor «el disco aparece como no inicializado y tiene mis archivos»."
+  - texto: "Si es nuevo: clic derecho sobre el disco (a la izquierda, donde dice «Disco 1» o similar) > «Inicializar disco». Revisá que esté marcado el disco correcto, dejá la opción GPT que viene elegida y tocá «Aceptar»."
+    abrir: "https://learn.microsoft.com/windows-server/storage/disk-management/initialize-new-disks"
+  - texto: "Todavía falta un paso para que aparezca en el Explorador: crear un volumen en el espacio «No asignado». Escribile a PC Doctor «quiero crear un volumen en el disco nuevo»."
+derivar: "Si el disco no aparece ni siquiera en Administración de discos, revisá con un técnico que esté bien conectado adentro de la PC."
+fuentes:
+  - https://learn.microsoft.com/windows-server/storage/disk-management/initialize-new-disks
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/disk-management-in-windows
+  - https://learn.microsoft.com/troubleshoot/windows-server/backup-and-storage/troubleshoot-disk-management
+madurez: T0
+---
+id: DSK-005
+area: archivos
+titulo:
+  sencillo: "Quiero crear un volumen en el disco nuevo para poder usarlo"
+  tecnico: "Nuevo volumen simple en espacio no asignado (letra y formato)"
+explicacion:
+  sencillo: "Después de inicializar un disco, queda una franja «No asignado». Hay que crear un volumen ahí: Windows le pone una letra (por ejemplo E:) y lo formatea, y recién entonces lo ves en el Explorador."
+  tecnico: "Administración de discos > clic derecho en espacio no asignado > Nuevo volumen simple: tamaño (por defecto, todo el disco), letra de unidad y sistema de archivos (normalmente NTFS)."
+frases: ["el disco dice no asignado", "cómo hago para que el disco nuevo tenga letra", "crear una partición en el disco nuevo", "quiero usar el espacio no asignado"]
+pasos:
+  - texto: "Abrí «Administración de discos» (clic derecho en el botón Inicio). Ubicá la franja negra que dice «No asignado» en el disco nuevo."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/disk-management-in-windows"
+  - texto: "ADVERTENCIA: hacé esto solo si sabés que ese espacio está vacío (un disco recién comprado). Si es un disco que tenía archivos y ahora dice «No asignado», no crees nada: escribile a PC Doctor «el disco externo me pide formatear»."
+  - texto: "Clic derecho sobre «No asignado» > «Nuevo volumen simple» > «Siguiente». Dejá el tamaño que propone (usa todo el disco) y tocá «Siguiente»."
+    abrir: "https://learn.microsoft.com/windows-server/storage/disk-management/initialize-new-disks"
+  - texto: "Elegí la letra que quieras, después dejá el formato NTFS y ponele un nombre (por ejemplo «Fotos»). Tocá «Siguiente» y «Finalizar». En unos segundos el disco aparece en el Explorador."
+fuentes:
+  - https://learn.microsoft.com/windows-server/storage/disk-management/initialize-new-disks
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/disk-management-in-windows
+  - https://learn.microsoft.com/troubleshoot/windows-server/backup-and-storage/troubleshoot-disk-management
+madurez: T0
+---
+id: DSK-006
+area: archivos
+titulo:
+  sencillo: "Quiero agrandar el disco C: (o «Extender volumen» aparece en gris)"
+  tecnico: "Extender un volumen básico con espacio no asignado contiguo"
+explicacion:
+  sencillo: "A una parte del disco se le puede sumar espacio libre («No asignado») que esté justo a su derecha en el mismo disco. Si el espacio libre está en otro lado, o hay otra partición en el medio, Windows no deja extender y la opción aparece en gris."
+  tecnico: "Extender volumen requiere espacio no asignado inmediatamente después del volumen, en el mismo disco, y sistema de archivos NTFS o ReFS; en discos de más de 2 TB, estilo GPT."
+frases: ["quiero agrandar el disco c", "extender volumen está en gris", "cómo le sumo espacio a la partición c", "no me deja extender el volumen"]
+pasos:
+  - texto: "Antes de tocar particiones, hacé una copia de seguridad de tus archivos importantes en un disco externo o en la nube."
+  - texto: "Abrí «Administración de discos» (clic derecho en el botón Inicio) y fijate si hay una franja negra «No asignado» pegada a la derecha de la parte que querés agrandar."
+    abrir: "https://learn.microsoft.com/windows-server/storage/disk-management/extend-a-basic-volume"
+  - texto: "Si está pegada: clic derecho sobre el volumen > «Extender volumen» > «Siguiente». Dejá la cantidad máxima que propone, tocá «Siguiente» y «Finalizar»."
+  - texto: "Si la opción está en gris es porque el espacio libre no está pegado, está en otro disco o el volumen no es NTFS. No borres particiones para hacer lugar (y nunca la de recuperación): escribile a PC Doctor «quiero unir el disco C: con el D:»."
+fuentes:
+  - https://learn.microsoft.com/windows-server/storage/disk-management/extend-a-basic-volume
+  - https://learn.microsoft.com/windows-server/storage/disk-management/overview-of-disk-management
+madurez: T0
+---
+id: DSK-007
+area: archivos
+titulo:
+  sencillo: "Quiero achicar una partición para hacer otra (reducir volumen)"
+  tecnico: "Reducir un volumen básico NTFS en Administración de discos"
+explicacion:
+  sencillo: "Windows puede achicar una parte del disco y dejar espacio libre para crear otra (por ejemplo, separar tus documentos de Windows). Los archivos comunes se acomodan solos, pero algunos archivos del sistema no se mueven y limitan cuánto se puede achicar."
+  tecnico: "Reducir volumen libera espacio no asignado al final del volumen (NTFS o sin sistema de archivos). Archivos inamovibles (archivo de paginación, instantáneas) limitan la reducción. En particiones RAW con datos puede destruirlos."
+frases: ["quiero dividir el disco en dos", "achicar la partición c para hacer otra", "cómo reduzco un volumen", "hacer una partición nueva sin formatear"]
+pasos:
+  - texto: "ADVERTENCIA: cambiar el tamaño de las particiones siempre tiene algún riesgo. Antes, copiá tus archivos importantes a un disco externo o a la nube."
+  - texto: "Abrí «Administración de discos» (clic derecho en el botón Inicio). Clic derecho sobre el volumen que querés achicar > «Reducir volumen»."
+    abrir: "https://learn.microsoft.com/windows-server/storage/disk-management/shrink-a-basic-volume"
+  - texto: "Windows calcula cuánto se puede achicar. Escribí cuánto espacio querés liberar (en MB) sin pasarte de lo que propone y tocá «Reducir»."
+  - texto: "Va a aparecer una franja «No asignado». Para usarla, creá ahí un volumen nuevo: escribile a PC Doctor «quiero crear un volumen en el disco nuevo»."
+  - texto: "No achiques ni toques las particiones sin letra (sistema EFI o recuperación): son de Windows."
+    abrir: "https://learn.microsoft.com/windows-server/storage/disk-management/overview-of-disk-management"
+fuentes:
+  - https://learn.microsoft.com/windows-server/storage/disk-management/shrink-a-basic-volume
+  - https://learn.microsoft.com/windows-server/storage/disk-management/overview-of-disk-management
+madurez: T0
+---
+id: DSK-008
+area: archivos
+titulo:
+  sencillo: "Quiero unir el disco C: con el D: en uno solo"
+  tecnico: "Eliminar el volumen intermedio para extender C: (con pérdida de datos de ese volumen)"
+explicacion:
+  sencillo: "Windows solo puede agrandar C: con espacio libre que esté pegado. Si D: está en el mismo disco justo después de C:, la única forma con las herramientas de Windows es BORRAR D: entero y sumar ese espacio a C:. Todo lo que haya en D: se pierde, así que primero hay que copiarlo a otro lado."
+  tecnico: "Extender volumen exige espacio no asignado contiguo. Con un volumen en medio, las opciones son eliminar ese volumen (destruye sus datos), usar una herramienta de terceros que mueva particiones, o crear un volumen separado."
+frases: ["juntar la partición c y la d", "unir los dos discos en uno", "pasar el espacio de d a c", "borrar la partición d para agrandar c"]
+pasos:
+  - texto: "ADVERTENCIA: este procedimiento BORRA todo lo que hay en D:. Primero copiá todo el contenido de D: a un disco externo o a la nube y comprobá que la copia se abra bien."
+  - texto: "Abrí «Administración de discos» (clic derecho en el botón Inicio). Confirmá que D: está en el mismo disco y justo a la derecha de C:. Si entre C: y D: hay una partición de recuperación, no sigas: esa no se borra."
+    abrir: "https://learn.microsoft.com/windows-server/storage/disk-management/extend-a-basic-volume"
+  - texto: "Con la copia hecha: clic derecho sobre D: > «Eliminar volumen» > «Sí». Queda una franja «No asignado»."
+  - texto: "Clic derecho sobre C: > «Extender volumen» > «Siguiente», dejá el máximo y tocá «Finalizar». Después volvé a copiar tus archivos a C:."
+derivar: "Si no estás seguro de qué partición es cuál, no borres nada: pedile ayuda a un técnico."
+fuentes:
+  - https://learn.microsoft.com/windows-server/storage/disk-management/extend-a-basic-volume
+  - https://learn.microsoft.com/windows-server/storage/disk-management/overview-of-disk-management
+madurez: T0
+---
+id: DSK-009
+area: archivos
+titulo:
+  sencillo: "¿En qué formato pongo el disco externo: NTFS, exFAT o FAT32?"
+  tecnico: "Elegir sistema de archivos para un disco externo o pendrive"
+explicacion:
+  sencillo: "El formato es la forma en que el disco ordena los archivos. FAT32 es el más viejo y no acepta archivos de más de 4 GB. exFAT es su sucesor y acepta archivos enormes. NTFS es el de Windows: además permite permisos, cifrado y compresión. Cambiar el formato borra todo lo que hay en el disco."
+  tecnico: "FAT32: archivo máximo 4 GiB. exFAT: sucesor de FAT32, archivos de hasta 2^64-1 bytes, sin permisos ni registro en diario. NTFS: permisos (ACL), registro en diario de metadatos, cifrado y compresión."
+frases: ["qué formato le pongo al disco externo", "ntfs o exfat cuál conviene", "en qué formato formateo el pendrive", "diferencia entre fat32 y ntfs"]
+pasos:
+  - texto: "Si el disco lo vas a usar solo en computadoras con Windows, NTFS es lo más completo. Si vas a pasar archivos grandes (películas, copias de seguridad) entre distintos aparatos, exFAT no tiene el límite de 4 GB por archivo."
+    abrir: "https://learn.microsoft.com/windows/win32/fileio/filesystem-functionality-comparison"
+  - texto: "Usá FAT32 solo si un aparato (una tele, un equipo de música, una cámara) te lo pide en su manual: no acepta archivos de más de 4 GB."
+  - texto: "ADVERTENCIA: para cambiar el formato hay que formatear, y eso BORRA todo el contenido. Copiá antes lo que quieras conservar. Para hacerlo, escribile a PC Doctor «quiero formatear un pendrive»."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/disk-management-in-windows"
+fuentes:
+  - https://learn.microsoft.com/windows/win32/fileio/filesystem-functionality-comparison
+  - https://learn.microsoft.com/windows/win32/fileio/exfat-specification
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/disk-management-in-windows
+madurez: T0
+---
+id: DSK-010
+area: archivos
+titulo:
+  sencillo: "No puedo copiar un archivo grande al pendrive aunque tiene lugar"
+  tecnico: "Límite de 4 GiB por archivo en volúmenes FAT32"
+explicacion:
+  sencillo: "Si el pendrive o el disco está en formato FAT32, no acepta archivos de más de 4 GB (una película o un respaldo grande), aunque tenga mucho espacio libre. Hay que pasarlo a exFAT o NTFS, y eso implica formatearlo."
+  tecnico: "FAT32 admite archivos de hasta 4 GiB; exFAT y NTFS admiten hasta 2^64-1 bytes. Cambiar el sistema de archivos requiere formatear el volumen."
+frases: ["el archivo es demasiado grande para el pendrive", "no me deja copiar una película al pendrive", "tengo lugar en el pendrive pero no copia el archivo", "no puedo pasar un archivo de más de 4 gb"]
+pasos:
+  - texto: "Abrí «Administración de discos» (clic derecho en el botón Inicio) y mirá el pendrive: al lado del tamaño dice su formato. Si dice FAT32, esa es la causa."
+    abrir: "https://learn.microsoft.com/windows/win32/fileio/filesystem-functionality-comparison"
+  - texto: "ADVERTENCIA: para cambiarlo a exFAT o NTFS hay que formatearlo, y eso BORRA todo lo que tiene. Primero copiá a la compu lo que haya en el pendrive."
+  - texto: "Con la copia hecha, formatealo eligiendo exFAT (o NTFS) como sistema de archivos. Fijate bien de elegir el pendrive y no otro disco. Si no sabés cómo, escribile a PC Doctor «quiero formatear un pendrive»."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/disk-management-in-windows"
+  - texto: "Después volvé a copiar tus archivos y el archivo grande."
+fuentes:
+  - https://learn.microsoft.com/windows/win32/fileio/filesystem-functionality-comparison
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/disk-management-in-windows
+madurez: T0
+---
+id: DSK-011
+area: archivos
+titulo:
+  sencillo: "Enchufo el disco externo y me dice que lo tengo que formatear"
+  tecnico: "Volumen RAW o ilegible: no formatear si hay datos que recuperar"
+explicacion:
+  sencillo: "Ese aviso aparece cuando Windows no puede leer cómo están ordenados los archivos del disco. NO aceptes formatear si el disco tiene fotos o documentos: formatear borra todo. Muchas veces es el cable, el puerto o el disco que está fallando."
+  tecnico: "Partición sin sistema de archivos reconocible (RAW) o firma dañada. Formatear o inicializar borra los datos; primero descartar cable, puerto, alimentación y probar en otra PC."
+frases: ["el disco externo me pide formatear", "dice que hay que formatear el disco antes de usarlo", "el pendrive me pide formatear y tiene mis fotos", "el disco aparece como raw"]
+pasos:
+  - texto: "Tocá «Cancelar» en el aviso. NO formatees si el disco tiene archivos que te importan."
+  - texto: "Desenchufalo, conectalo en otro puerto USB directo en la compu (sin alargue ni hub) y, si podés, con otro cable. Si el disco tiene fuente propia, enchufala."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-server/backup-and-storage/troubleshoot-disk-management"
+  - texto: "Mirá en «Administración de discos» (clic derecho en el botón Inicio) cómo aparece: si dice RAW o «No asignado», no formatees ni crees nada encima si querés recuperar lo que tenía."
+  - texto: "Probalo en otra computadora. Si ahí tampoco anda, el disco probablemente esté fallando."
+derivar: "Si los archivos son importantes, no sigas probando: un técnico o un servicio de recuperación de datos puede intentar rescatarlos antes de formatear."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-server/backup-and-storage/troubleshoot-disk-management
+madurez: T0
+---
+id: DSK-012
+area: hardware
+titulo:
+  sencillo: "El disco externo se desconecta solo mientras lo uso"
+  tecnico: "Disco USB que se desconecta: puerto, alimentación y cable"
+explicacion:
+  sencillo: "Muchos discos externos necesitan más energía de la que dan algunos puertos USB, sobre todo los de alargues o hubs. También fallan seguido los cables. Si el disco se corta, tomalo como aviso para tener tus archivos copiados en otro lado."
+  tecnico: "Algunos puertos (en especial hubs) no entregan suficiente energía a discos USB; probar puerto directo, alimentación externa, otro cable y revisar el Administrador de dispositivos."
+frases: ["el disco externo se desconecta solo", "se me corta el disco usb cuando copio", "el disco externo aparece y desaparece", "copiando archivos se desconecta el disco"]
+pasos:
+  - texto: "Conectá el disco directo en la computadora, sin hub ni alargue. En una PC de escritorio, probá los puertos de atrás; probá también otros puertos."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-server/backup-and-storage/troubleshoot-disk-management"
+  - texto: "Si el disco tiene fuente de energía propia (o un cable con dos puntas USB), conectalo todo."
+  - texto: "Probá con otro cable: los cables se gastan y fallan seguido."
+  - texto: "Abrí el Administrador de dispositivos (clic derecho en el botón Inicio) y fijate si el disco o algo USB tiene un signo de advertencia. Si lo tiene, escribile a PC Doctor con el código que aparezca."
+  - texto: "Probalo en otra computadora. Si ahí también se corta, el disco puede estar fallando: copiá tus archivos a otro lado cuanto antes."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-server/backup-and-storage/troubleshoot-disk-management
+madurez: T0
+---
+id: DSK-013
+area: hardware
+titulo:
+  sencillo: "Quiero juntar varios discos en uno, con copia por si se rompe uno (Espacios de almacenamiento)"
+  tecnico: "Espacios de almacenamiento: grupo de almacenamiento con resistencia (espejo o paridad)"
+explicacion:
+  sencillo: "«Espacios de almacenamiento» junta dos o más discos (además del de Windows) en un solo grupo. Con la opción de espejo, Windows guarda tus archivos dos veces, en discos distintos: si se rompe uno, no perdés nada. Después podés sumar más discos."
+  tecnico: "Grupo de almacenamiento con espacios virtuales; resistencia simple (sin protección), espejo doble (tolera 1 falla), espejo triple (2 fallas, 5 discos) o paridad. Requiere al menos dos discos además del de Windows; algunas carcasas o hubs USB ocultan los discos."
+frases: ["juntar dos discos en uno solo", "quiero que mis archivos estén en dos discos a la vez", "hacer un espejo de discos en windows", "para qué sirven los espacios de almacenamiento"]
+pasos:
+  - texto: "Necesitás al menos dos discos además del de Windows (internos o externos). ADVERTENCIA: el espacio nuevo se formatea. Usá discos vacíos y, si tienen algo, copialo antes a otro lado."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/storage-spaces-in-windows"
+  - texto: "Conectá los discos. Tocá la lupa de la barra de tareas, escribí «Espacios de almacenamiento» y abrilo. Elegí crear un grupo nuevo, marcá los discos que querés sumar y confirmá."
+  - texto: "Ponele nombre al espacio y elegí la resistencia: el espejo doble (el que viene marcado) guarda dos copias y aguanta que se rompa un disco. La opción simple no protege nada."
+  - texto: "Elegí el tamaño, la letra y el sistema de archivos, y tocá el botón para formatear. Vas a ver una unidad nueva en el Explorador."
+  - texto: "Si un disco USB no aparece para sumarlo, puede ser por la carcasa o el hub: Windows solo acepta ciertos discos. Probalo conectado directo."
+derivar: "El espejo protege si se rompe un disco, pero no si borrás algo sin querer: seguí haciendo copias de seguridad."
+fuentes:
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/storage-spaces-in-windows
+madurez: T0
+---
+id: DSK-014
+area: archivos
+titulo:
+  sencillo: "Quiero revisar si un disco o pendrive tiene errores"
+  tecnico: "Comprobación de errores (chkdsk) desde Propiedades > Herramientas"
+explicacion:
+  sencillo: "Windows trae una herramienta que revisa el disco y arregla errores en la forma en que están guardados los archivos. Se usa desde las propiedades del disco, sin escribir comandos. Si el disco está en uso, puede pedir hacerlo al reiniciar."
+  tecnico: "Propiedades de la unidad > Herramientas > Comprobación de errores > Comprobar ejecuta chkdsk sobre el volumen. Para reparar, el volumen debe bloquearse; en el volumen del sistema se programa para el próximo reinicio. No conviene interrumpirlo."
+frases: ["cómo reviso el disco por errores", "comprobar errores del pendrive", "pasarle el chkdsk al disco", "quiero escanear el disco externo"]
+pasos:
+  - texto: "Si el disco hace ruidos raros o Windows ya te avisó que está fallando, primero copiá tus archivos importantes a otro lado, por las dudas."
+  - texto: "Abrí el Explorador (Windows + E) y tocá «Este equipo». Hacé clic derecho sobre el disco o pendrive que querés revisar > «Propiedades»."
+    abrir: "https://support.microsoft.com/en-us/surface/performance/windows-doesn-t-respond-or-stops-working-on-surface"
+  - texto: "Entrá en la pestaña «Herramientas» y, en «Comprobación de errores», tocá «Comprobar». Seguí lo que indica la pantalla."
+  - texto: "Si es el disco C:, puede pedirte reiniciar para revisarlo. No la apagues ni cortes la revisión a la mitad: en discos grandes puede tardar bastante."
+    abrir: "https://learn.microsoft.com/windows-server/administration/windows-commands/chkdsk"
+derivar: "Si la revisión encuentra errores una y otra vez, el disco puede estar fallando: escribile a PC Doctor «un disco informa que está fallando»."
+fuentes:
+  - https://support.microsoft.com/en-us/surface/performance/windows-doesn-t-respond-or-stops-working-on-surface
+  - https://learn.microsoft.com/windows-server/administration/windows-commands/chkdsk
+madurez: T0
+---
+id: DSK-015
+area: archivos
+titulo:
+  sencillo: "Me avisa que el disco D: (u otro que no es C:) está casi lleno"
+  tecnico: "Almacenamiento usado en otras unidades: uso por tipo de archivo en discos secundarios"
+explicacion:
+  sencillo: "Windows puede mostrarte qué ocupa lugar en cualquier disco, no solo en C:. Así ves si el disco D: o el externo está lleno de fotos, videos u otras cosas, y decidís qué pasar a otro lado."
+  tecnico: "Sistema > Almacenamiento > Configuración avanzada de almacenamiento > Almacenamiento usado en otras unidades: uso desglosado por tipo de archivo en cada unidad conectada."
+frases: ["el disco d está lleno", "me dice poco espacio en el disco d", "qué me ocupa el disco d", "se llenó el segundo disco"]
+pasos:
+  - texto: "Abrí Almacenamiento en Configuración y entrá en «Configuración avanzada de almacenamiento» > «Almacenamiento usado en otras unidades»."
+    abrir: "ms-settings:storagesense"
+  - texto: "Tocá el disco que se llenó: vas a ver cuánto ocupan los documentos, las fotos, los videos y lo demás."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/storage-settings-in-windows"
+  - texto: "Pasá a un disco externo lo que no uses seguido: seleccioná los archivos, «Cortar», y «Pegar» en el disco externo. Antes de borrar algo, asegurate de tenerlo copiado."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/free-up-drive-space-in-windows"
+  - texto: "Si lo que se llenó es una partición de recuperación, no le borres nada: escribile a PC Doctor «qué es la partición de recuperación»."
+fuentes:
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/storage-settings-in-windows
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/free-up-drive-space-in-windows
+madurez: T0
+---
+id: DSK-016
+area: archivos
+titulo:
+  sencillo: "Quiero que lo nuevo (fotos, documentos, apps) se guarde en otro disco"
+  tecnico: "Dónde se guarda el contenido nuevo (ubicaciones de guardado predeterminadas)"
+explicacion:
+  sencillo: "Si C: se llena y tenés otro disco con lugar, podés decirle a Windows que guarde ahí las fotos, documentos, música, videos y aplicaciones nuevas. Lo que ya tenés no se mueve."
+  tecnico: "Sistema > Almacenamiento > Configuración avanzada de almacenamiento > Dónde se guarda el contenido nuevo: unidad predeterminada por tipo (aplicaciones, documentos, música, fotos, videos)."
+frases: ["guardar las fotos nuevas en el disco d", "que las cosas nuevas se guarden en otro disco", "cambiar el disco donde se guardan los documentos", "instalar las apps nuevas en otro disco"]
+pasos:
+  - texto: "Abrí «Dónde se guarda el contenido nuevo» en Configuración."
+    abrir: "ms-settings:savelocations"
+  - texto: "Para cada tipo (aplicaciones nuevas, documentos, música, fotos y videos) elegí el disco en la lista."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/free-up-drive-space-in-windows"
+  - texto: "Conviene elegir un disco que esté siempre conectado, no un pendrive que sacás y ponés."
+  - texto: "Esto vale para lo nuevo. Lo que ya está en C: tenés que pasarlo vos: seleccioná los archivos, «Cortar» y «Pegar» en el otro disco."
+fuentes:
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/free-up-drive-space-in-windows
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/storage-settings-in-windows
+madurez: T0
+---
+id: DSK-017
+area: archivos
+titulo:
+  sencillo: "¿Qué es lo que me ocupa el disco: fotos, programas o Windows?"
+  tecnico: "Uso del almacenamiento por categorías (Sistema > Almacenamiento)"
+explicacion:
+  sencillo: "La pantalla de Almacenamiento muestra, por categorías, cuánto ocupan las aplicaciones, los archivos temporales, Windows («Sistema y reservado») y tus cosas. Así sabés por dónde empezar a liberar lugar."
+  tecnico: "Sistema > Almacenamiento: uso por categorías (Aplicaciones instaladas, Archivos temporales, Sistema y reservado, etc.); «Mostrar más categorías» despliega el resto, incluido el almacenamiento reservado del sistema."
+frases: ["en qué se me va el espacio del disco", "qué categoría ocupa más en el disco", "qué es sistema y reservado", "ver cuánto ocupan los programas y cuánto las fotos"]
+pasos:
+  - texto: "Abrí Almacenamiento en Configuración. Vas a ver el disco C: con barras por categoría."
+    abrir: "ms-settings:storagesense"
+  - texto: "Tocá «Mostrar más categorías» para verlas todas (aplicaciones, archivos temporales, «Sistema y reservado» y las demás). Tocá una categoría para ver el detalle."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/storage-settings-in-windows"
+  - texto: "«Sistema y reservado» es de Windows: incluye lugar apartado para actualizaciones. No es algo para borrar a mano."
+  - texto: "Para liberar espacio de forma segura, escribile a PC Doctor «quiero encontrar los archivos grandes» o «el disco está casi lleno»."
+fuentes:
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/storage-settings-in-windows
+madurez: T0
+---
+id: DSK-018
+area: archivos
+titulo:
+  sencillo: "Quiero que una carpeta de otra compu aparezca como un disco en la mía (unidad de red)"
+  tecnico: "Conectar a una unidad de red desde el Explorador de archivos"
+explicacion:
+  sencillo: "Si otra compu de la casa o de la oficina comparte una carpeta, podés conectarla como si fuera un disco más (por ejemplo, Z:). Aparece en «Este equipo» y se abre como cualquier disco."
+  tecnico: "Explorador > Este equipo > Ver más > Conectar unidad de red: letra de unidad, ruta de la carpeta (\\\\equipo\\carpeta) y opción de volver a conectar al iniciar sesión."
+frases: ["conectar una unidad de red", "mapear una carpeta compartida como disco", "que la carpeta de la oficina aparezca como z", "agregar el disco de red en este equipo"]
+pasos:
+  - texto: "Abrí el Explorador (Windows + E) y tocá «Este equipo» a la izquierda. Arriba, tocá los tres puntitos y elegí «Conectar unidad de red». Si no está, hacé clic derecho sobre «Este equipo»."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/file-sharing-over-a-network-in-windows"
+  - texto: "Elegí una letra libre para la unidad. En la carpeta, escribí la dirección que te pasaron (empieza con dos barras, como \\\\NOMBRE-PC\\Carpeta) o tocá «Examinar» para buscarla."
+  - texto: "Marcá la casilla para que se vuelva a conectar cada vez que iniciás sesión y tocá «Finalizar»."
+  - texto: "Si no conecta, fijate que la otra compu esté prendida. Si es en una oficina, puede que no tengas permiso: consultá con quien administra la red."
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/file-sharing-over-a-network-in-windows
+madurez: T0
+---
+id: DSK-019
+area: hardware
+titulo:
+  sencillo: "¿Mi disco está cifrado? ¿Qué es el «cifrado de dispositivo»?"
+  tecnico: "Cifrado de dispositivo (BitLocker automático): qué es y cómo ver si está activado"
+explicacion:
+  sencillo: "El cifrado de dispositivo protege tu disco: si alguien te roba la compu y saca el disco, no puede leer tus archivos. Windows lo activa solo cuando configurás la compu con una cuenta de Microsoft, y guarda la clave de recuperación en esa cuenta."
+  tecnico: "Cifrado de dispositivo activa BitLocker en la unidad del sistema y unidades fijas; se habilita al configurar con cuenta de Microsoft o profesional/educativa (la clave de recuperación queda en la cuenta), no con cuenta local. BitLocker completo: ediciones Pro, Enterprise y Education."
+frases: ["cómo sé si mi disco está cifrado", "qué es el cifrado de dispositivo", "tengo bitlocker activado", "mi compu tiene el disco encriptado"]
+pasos:
+  - texto: "Abrí «Cifrado de dispositivo» en Configuración (está dentro de Privacidad y seguridad). Si el interruptor está activado, tu disco está cifrado."
+    abrir: "ms-settings:deviceencryption"
+  - texto: "Si esa opción no aparece, puede ser que tu compu no lo admita o que estés en una cuenta que no es de administrador."
+    abrir: "https://support.microsoft.com/windows/security/encryption/device-encryption-in-windows"
+  - texto: "Si está activado, asegurate de saber dónde está la clave de recuperación (queda en tu cuenta de Microsoft): escribile a PC Doctor «dónde está mi clave de bitlocker». No se la pases a nadie que te la pida por teléfono o mensaje."
+fuentes:
+  - https://support.microsoft.com/windows/security/encryption/device-encryption-in-windows
+madurez: T0
+---
+id: DSK-020
+area: archivos
+titulo:
+  sencillo: "El disco D: (o una partición) desapareció del Explorador"
+  tecnico: "Volumen sano sin letra de unidad: agregar una letra"
+explicacion:
+  sencillo: "A veces un disco o una partición sigue estando, con tus archivos, pero se quedó sin letra (D:, E:...). Sin letra, el Explorador no lo muestra. Ponerle una letra no borra nada."
+  tecnico: "Volumen en línea y en buen estado con sistema de archivos pero sin letra asignada: Administración de discos > Cambiar la letra y rutas de acceso de unidad > Agregar."
+frases: ["desapareció el disco d", "no me aparece más la partición d", "el disco d se fue del explorador", "se perdió la letra del disco"]
+pasos:
+  - texto: "Abrí «Administración de discos» (clic derecho en el botón Inicio). Buscá el volumen que falta: se reconoce por el tamaño y porque no tiene letra al lado del nombre."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-server/backup-and-storage/troubleshoot-disk-management"
+  - texto: "Si aparece como en buen estado y con formato (NTFS, exFAT o FAT32), hacé clic derecho > «Cambiar la letra y rutas de acceso de unidad...» > «Agregar». Elegí una letra libre, tocá «Aceptar» y confirmá."
+    abrir: "https://learn.microsoft.com/windows-server/storage/disk-management/change-a-drive-letter"
+  - texto: "No le pongas letra a las particiones de Windows sin nombre (sistema EFI o recuperación): esas no tienen que verse."
+  - texto: "Si en lugar de formato dice RAW o «No asignado», no formatees ni crees nada: escribile a PC Doctor «el disco externo me pide formatear»."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-server/backup-and-storage/troubleshoot-disk-management
+  - https://learn.microsoft.com/windows-server/storage/disk-management/change-a-drive-letter
+madurez: T0
+---
+id: DSK-021
+area: hardware
+titulo:
+  sencillo: "En Administración de discos mi disco aparece «Sin conexión»"
+  tecnico: "Disco sin conexión (Offline): ponerlo en línea"
+explicacion:
+  sencillo: "Si un disco figura «Sin conexión», Windows lo ve pero no lo está usando, y sus archivos no aparecen en el Explorador. Ponerlo «En línea» no borra nada. Si no queda en línea, puede ser el cable o un disco que falla."
+  tecnico: "Disco en estado Offline en Administración de discos. Clic derecho > En línea; si persiste, revisar cables, controlador y estado físico del disco."
+frases: ["el disco dice sin conexión", "en administración de discos el disco está offline", "mi segundo disco aparece desconectado", "cómo pongo en línea un disco"]
+pasos:
+  - texto: "Abrí «Administración de discos» (clic derecho en el botón Inicio). En la parte de abajo, a la izquierda, ubicá el disco que dice «Sin conexión»."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-server/backup-and-storage/troubleshoot-disk-management"
+  - texto: "Hacé clic derecho sobre ese recuadro (donde dice «Disco 1» o similar) y elegí «En línea». Esto no borra nada."
+  - texto: "Si vuelve a quedar sin conexión, revisá los cables (en un disco externo, probá otro cable y otro puerto) y reiniciá la compu."
+  - texto: "Aprovechá para copiar tus archivos de ese disco a otro lado: un disco que se desconecta solo puede estar por fallar."
+derivar: "Si es un disco interno y sigue «Sin conexión», consultá a un técnico para revisar la conexión adentro de la PC."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-server/backup-and-storage/troubleshoot-disk-management
+madurez: T0
+---
+id: DSK-022
+area: hardware
+titulo:
+  sencillo: "¿Qué es un «disco dinámico»? ¿Lo convierto?"
+  tecnico: "Discos dinámicos: obsoletos; conversión básica/dinámica con pérdida de datos"
+explicacion:
+  sencillo: "Un disco dinámico es una forma vieja de organizar discos para unir o duplicar varios. Microsoft ya no la recomienda: para unir discos está «Espacios de almacenamiento». Pasar un disco de básico a dinámico o al revés exige borrar todos sus volúmenes, es decir, todos los archivos."
+  tecnico: "Los discos dinámicos (volúmenes distribuidos, seccionados y reflejados) están en desuso; se recomiendan discos básicos o Espacios de almacenamiento. La conversión en Administración de discos requiere eliminar todos los volúmenes."
+frases: ["qué es un disco dinámico", "me ofrece convertir a disco dinámico", "conviene pasar el disco a dinámico", "cómo vuelvo un disco dinámico a básico"]
+pasos:
+  - texto: "Si Windows o un programa te ofrece «Convertir en disco dinámico», lo más seguro es decir que no: Microsoft lo considera obsoleto y no lo recomienda para equipos nuevos."
+    abrir: "https://learn.microsoft.com/windows-server/storage/disk-management/change-disk-type-dynamic-basic"
+  - texto: "ADVERTENCIA: para volver un disco dinámico a básico (o al revés) hay que eliminar todos sus volúmenes, y eso BORRA todos los archivos. Antes, copiá todo a otro disco o a la nube."
+  - texto: "Si lo que querés es juntar varios discos en uno, mirá la ficha de PC Doctor sobre «Espacios de almacenamiento»."
+derivar: "Si tu disco ya es dinámico y tiene datos importantes, consultá a un técnico antes de convertirlo."
+fuentes:
+  - https://learn.microsoft.com/windows-server/storage/disk-management/change-disk-type-dynamic-basic
+madurez: T0
+---
+id: DSK-023
+area: hardware
+titulo:
+  sencillo: "Quiero saber si mi disco es GPT o MBR"
+  tecnico: "Ver el estilo de partición de un disco (GPT o MBR)"
+explicacion:
+  sencillo: "GPT y MBR son dos maneras de organizar un disco. GPT es la moderna: acepta discos de más de 2 TB y más de cuatro particiones. MBR es la vieja, para equipos antiguos. Fijarte cuál tenés no cambia nada."
+  tecnico: "MBR: esquema BIOS heredado, hasta cuatro particiones primarias y 2 TB. GPT: UEFI, más de cuatro particiones y discos de más de 2 TB. Se ve en Propiedades del disco > Volúmenes."
+frases: ["mi disco es gpt o mbr", "cómo sé el estilo de partición del disco", "dónde veo si el disco está en gpt", "qué diferencia hay entre gpt y mbr"]
+pasos:
+  - texto: "Abrí «Administración de discos» (clic derecho en el botón Inicio)."
+    abrir: "https://learn.microsoft.com/windows-server/storage/disk-management/change-disk-partition-scheme"
+  - texto: "Abajo, hacé clic derecho sobre el recuadro del disco (donde dice «Disco 0», «Disco 1»...) > «Propiedades» > pestaña «Volúmenes». Ahí figura el estilo de partición: GPT o MBR."
+  - texto: "Solo mirar no cambia nada. ADVERTENCIA: convertir de uno a otro con Administración de discos exige borrar todos los volúmenes del disco (todos los archivos). No lo hagas sin una copia de seguridad."
+fuentes:
+  - https://learn.microsoft.com/windows-server/storage/disk-management/change-disk-partition-scheme
+  - https://learn.microsoft.com/windows-server/storage/disk-management/initialize-new-disks
+madurez: T0
+---
+id: DSK-024
+area: hardware
+titulo:
+  sencillo: "Compré un disco de 3 o 4 TB y Windows solo me deja usar 2 TB"
+  tecnico: "Disco de más de 2 TB inicializado como MBR: requiere GPT"
+explicacion:
+  sencillo: "Si un disco grande se preparó con el estilo viejo (MBR), Windows solo puede usar los primeros 2 TB y el resto queda como espacio que no se puede usar. Hay que pasarlo a GPT, y eso implica borrar todo lo que tiene."
+  tecnico: "MBR direcciona hasta ~2,2 TB (sectores de 512 bytes). En un disco de más capacidad iniciado como MBR, el resto queda no direccionable; hay que convertirlo a GPT (Convertir en disco GPT), lo que requiere eliminar los volúmenes."
+frases: ["el disco de 4 tb me muestra 2 tb", "me falta espacio en el disco nuevo grande", "compré un disco de 3 teras y aparece más chico", "hay espacio no asignado que no puedo usar en el disco grande"]
+pasos:
+  - texto: "Abrí «Administración de discos» (clic derecho en el botón Inicio). Si el disco muestra dos franjas «No asignado» o una parte que no podés usar, y es MBR, esa es la causa."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-server/backup-and-storage/support-for-hard-disks-exceeding-2-tb"
+  - texto: "ADVERTENCIA: para pasarlo a GPT hay que eliminar todos los volúmenes del disco, y eso BORRA todo. Si ya le copiaste archivos, pasalos antes a otro lado."
+  - texto: "Con el disco vacío: clic derecho sobre cada volumen > «Eliminar volumen» > «Sí». Después, clic derecho sobre el recuadro del disco > «Convertir en disco GPT»."
+    abrir: "https://learn.microsoft.com/windows-server/storage/disk-management/change-disk-partition-scheme"
+  - texto: "Ahora todo el espacio aparece como «No asignado»: creá un volumen nuevo. Escribile a PC Doctor «quiero crear un volumen en el disco nuevo»."
+derivar: "Si es el disco donde está Windows, no lo hagas así: consultá a un técnico."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-server/backup-and-storage/support-for-hard-disks-exceeding-2-tb
+  - https://learn.microsoft.com/windows-server/storage/disk-management/change-disk-partition-scheme
+madurez: T0
+---
+id: DSK-025
+area: hardware
+titulo:
+  sencillo: "En Administración de discos mi disco aparece con un estado de error o «en riesgo»"
+  tecnico: "Estados Ilegible, Error o Correcto (en riesgo) en Administración de discos"
+explicacion:
+  sencillo: "Administración de discos muestra al lado de cada disco y volumen si está bien. Si dice que está en riesgo, que tiene errores o que no se puede leer, el disco puede estar dañado o fallando. Lo primero es salvar tus archivos."
+  tecnico: "Ilegible: falla de hardware, corrupción o errores de E/S. Error: volumen que no se inicia, disco dañado o sistema de archivos corrupto (indica pérdida de datos). Correcto (en riesgo): errores de E/S en el disco subyacente; respaldar y reemplazar."
+frases: ["administración de discos dice que el disco está en riesgo", "el disco aparece como ilegible", "el volumen dice error en administración de discos", "el estado del disco tiene un signo de advertencia"]
+pasos:
+  - texto: "Si todavía podés abrir los archivos de ese disco, copiá ya lo importante a otro disco o a la nube. Es lo primero."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-server/backup-and-storage/troubleshoot-disk-management"
+  - texto: "Revisá que el disco esté bien conectado (cable y alimentación si es externo) y reiniciá la compu. Después, en «Administración de discos», menú «Acción» > «Volver a examinar los discos»."
+  - texto: "Si el estado sigue igual, no formatees ni inicialices el disco: eso borra lo que todavía se podría recuperar."
+  - texto: "Si es un disco NVMe, mirá también su salud: escribile a PC Doctor «quiero ver si mi disco está sano»."
+derivar: "Si el estado de error o de riesgo no se va, el disco puede estar fallando: después de salvar tus archivos, pedile a un técnico que lo cambie."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-server/backup-and-storage/troubleshoot-disk-management
+madurez: T0

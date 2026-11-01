@@ -1,0 +1,459 @@
+# Microsoft Edge: perfiles, colecciones, pestañas verticales, lectura, espacios de trabajo, pantalla dividida, capturas, barra lateral, Copilot, pestañas dormidas, modo IE, predeterminado, inicio, historial, celular, seguimiento, SmartScreen y más. Guiadas con fuente oficial.
+id: EDG-001
+area: programas
+titulo:
+  sencillo: "Quiero que cada uno en casa tenga su propio Edge"
+  tecnico: "Microsoft Edge: crear un perfil nuevo"
+explicacion:
+  sencillo: "Si varios usan la misma compu, Edge puede tener un «perfil» para cada uno: cada perfil guarda sus propios favoritos, historial y extensiones, y se abre en su propia ventana."
+  tecnico: "Ícono de perfil > Configurar un nuevo perfil (personal o trabajo/escuela); cada perfil tiene datos separados y abre en ventana propia."
+frases: ["quiero un edge para mí y otro para mi señora", "crear otro perfil en edge", "que mi nieto tenga su propio edge con sus favoritos", "separar lo del trabajo de lo personal en edge"]
+pasos:
+  - texto: "Arriba a la derecha de Edge, tocá el ícono de tu perfil (la carita o tu foto)."
+  - texto: "Elegí la opción para configurar un perfil nuevo y después si es personal o de trabajo/escuela."
+  - texto: "Podés entrar con una cuenta de Microsoft para sincronizar sus cosas o empezar sin datos. Al confirmar, el perfil nuevo se abre en otra ventana de Edge."
+    abrir: "https://support.microsoft.com/edge/sign-in-and-create-multiple-profiles-in-microsoft-edge"
+fuentes:
+  - https://support.microsoft.com/edge/sign-in-and-create-multiple-profiles-in-microsoft-edge
+madurez: T0
+---
+id: EDG-002
+area: programas
+titulo:
+  sencillo: "Abro Edge y no están mis favoritos: capaz estoy en otro perfil"
+  tecnico: "Microsoft Edge: cambiar de perfil"
+explicacion:
+  sencillo: "Si en la compu hay más de un perfil de Edge, cada uno tiene sus propios favoritos e historial. Si abriste el de otra persona, tus cosas no aparecen, pero siguen estando en tu perfil."
+  tecnico: "Ícono de perfil > elegir el perfil; Edge lo abre en una ventana nueva. Ctrl + Mayús + M abre el selector de perfiles."
+frases: ["en edge me aparecen los favoritos de mi hijo", "cómo paso a mi perfil en edge", "edge me abrió con la cuenta de otro", "cambiar de usuario en el navegador edge"]
+pasos:
+  - texto: "Mirá el ícono de perfil arriba a la derecha: muestra la foto o la inicial de quién está usando esa ventana."
+  - texto: "Tocalo y elegí tu perfil de la lista. Edge lo abre en una ventana nueva, con tus favoritos y tu historial."
+    abrir: "https://support.microsoft.com/edge/sign-in-and-create-multiple-profiles-in-microsoft-edge"
+  - texto: "Atajo: Ctrl + Mayús + M abre directamente el cambio de perfil."
+    abrir: "https://support.microsoft.com/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad"
+fuentes:
+  - https://support.microsoft.com/edge/sign-in-and-create-multiple-profiles-in-microsoft-edge
+  - https://support.microsoft.com/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad
+madurez: T0
+---
+id: EDG-003
+area: programas
+titulo:
+  sencillo: "Quiero borrar un perfil de Edge que ya no se usa"
+  tecnico: "Microsoft Edge: quitar un perfil"
+explicacion:
+  sencillo: "Se puede quitar un perfil de Edge que sobra. Ojo: lo que ese perfil tenía guardado en esta compu (favoritos, historial, extensiones) se va con él, así que antes asegurate de que nadie lo necesite."
+  tecnico: "Ícono de perfil > Configuración de perfil > Más perfiles > botón de eliminar junto al perfil > Quitar perfil."
+frases: ["sacar un perfil viejo de edge", "eliminar el perfil de alguien en edge", "edge tiene perfiles de más y quiero quitar uno", "borrar el usuario de mi hijo en edge"]
+pasos:
+  - texto: "Antes de borrar: fijate bien que no sea tu perfil y preguntale a la otra persona si necesita algo de ahí (por ejemplo sus favoritos)."
+  - texto: "Tocá el ícono de perfil arriba a la derecha y entrá a la configuración de perfiles."
+  - texto: "En «Más perfiles», tocá el botón de eliminar al lado del perfil que querés sacar y confirmá «Quitar perfil»."
+    abrir: "https://support.microsoft.com/edge/sign-in-and-create-multiple-profiles-in-microsoft-edge"
+fuentes:
+  - https://support.microsoft.com/edge/sign-in-and-create-multiple-profiles-in-microsoft-edge
+madurez: T0
+---
+id: EDG-004
+area: programas
+titulo:
+  sencillo: "Desaparecieron mis Colecciones de Edge"
+  tecnico: "Retiro de Colecciones en Microsoft Edge (pasar a Favoritos)"
+explicacion:
+  sencillo: "Microsoft sacó las «Colecciones» de Edge: desde la versión 145 ya no se pueden agregar páginas y desde la 149 la función ya no está. Edge ofrece pasar las páginas guardadas a Favoritos: cada colección queda como una carpeta. Las notas y las imágenes no se pasan, solo las páginas."
+  tecnico: "Colecciones retiradas (Edge 145: sin altas; Edge 149: no disponible). Aviso con «Mover a Favoritos»: cada colección pasa a una carpeta en la raíz de Favoritos; solo URL. Cuentas personales: bing.com/saves."
+frases: ["no encuentro las colecciones de edge", "edge me borró las colecciones", "dónde quedaron las páginas que guardé en colecciones", "ya no puedo agregar cosas a una colección"]
+pasos:
+  - texto: "Si Edge te muestra el aviso de las Colecciones, elegí la opción de mover todo a Favoritos. Cada colección queda como una carpeta en tus Favoritos."
+    abrir: "https://support.microsoft.com/edge/organize-your-ideas-with-collections-in-microsoft-edge"
+  - texto: "Abrí tus Favoritos (Ctrl + Mayús + O) y buscá las carpetas con el nombre de tus colecciones."
+    abrir: "https://support.microsoft.com/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad"
+  - texto: "Ojo: las notas y las imágenes que tenías en una colección no se pasan, solo las direcciones de las páginas. Si usás cuenta personal de Microsoft, Microsoft indica que lo guardado también se puede ver en Bing, en «bing.com/saves»."
+fuentes:
+  - https://support.microsoft.com/edge/organize-your-ideas-with-collections-in-microsoft-edge
+  - https://support.microsoft.com/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad
+madurez: T0
+---
+id: EDG-005
+area: programas
+titulo:
+  sencillo: "Las pestañas de Edge se pusieron al costado (o las quiero al costado)"
+  tecnico: "Microsoft Edge: pestañas verticales"
+explicacion:
+  sencillo: "Edge puede mostrar las pestañas en una columna a la izquierda en vez de arriba. Con muchas pestañas abiertas se leen mejor los nombres. Se pone y se saca con un clic o con un atajo, así que si apareció sin querer, se vuelve atrás enseguida."
+  tecnico: "Pestañas verticales: botón Buscar pestañas (arriba a la izquierda) > activar/desactivar pestañas verticales, o Ctrl + Mayús + , (coma)."
+frases: ["las pestañas de edge se fueron a la izquierda", "poner las pestañas al costado en edge", "edge me muestra las pestañas en una columna", "volver a poner las pestañas arriba en edge"]
+pasos:
+  - texto: "Arriba a la izquierda de la ventana de Edge hay un botón con una flechita (el de buscar pestañas). Tocalo y elegí activar o desactivar las pestañas verticales."
+  - texto: "Atajo para pasar de un modo al otro: Ctrl + Mayús + , (coma). Si las pestañas se fueron al costado sin querer, puede que se haya apretado este atajo."
+fuentes:
+  - https://explore.microsoft.com/edge/features/vertical-tabs
+madurez: T0
+---
+id: EDG-006
+area: programas
+titulo:
+  sencillo: "Quiero leer una página de Edge sin publicidad y con letra grande"
+  tecnico: "Microsoft Edge: Lector inmersivo (modo de lectura)"
+explicacion:
+  sencillo: "El Lector inmersivo de Edge muestra solo el texto de una nota o artículo, sin propaganda ni cosas que distraigan. Ahí podés agrandar la letra y cambiar el color del fondo para leer más cómodo."
+  tecnico: "Lector inmersivo / modo de lectura: ícono en la barra de direcciones o F9; Preferencias de texto (tamaño, temas de página); clic derecho > Abrir en Lector inmersivo."
+frases: ["leer la nota del diario sin tanta propaganda", "agrandar solo el texto de un artículo en edge", "poner la página como un libro para leer tranquilo", "el modo lectura de edge"]
+pasos:
+  - texto: "Abrí la nota que querés leer y apretá F9, o tocá el ícono del Lector inmersivo en la barra de direcciones. No aparece en todas las páginas: solo en las que tienen un texto para leer."
+  - texto: "Si no ves el ícono, seleccioná el texto con el mouse, hacé clic derecho y elegí abrirlo en el Lector inmersivo."
+  - texto: "En la barra de arriba del Lector, entrá a las preferencias de texto: ahí agrandás la letra y elegís otro color de página. Para salir, apretá F9 de nuevo."
+    abrir: "https://support.microsoft.com/education/use-immersive-reader-in-microsoft-edge-1"
+fuentes:
+  - https://support.microsoft.com/education/use-immersive-reader-in-microsoft-edge-1
+  - https://support.microsoft.com/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad
+madurez: T0
+---
+id: EDG-007
+area: programas
+titulo:
+  sencillo: "Quiero que Edge me lea en voz alta lo que dice la página"
+  tecnico: "Microsoft Edge: Leer en voz alta"
+explicacion:
+  sencillo: "Edge puede leerte en voz alta el texto de una página: vos escuchás y ves resaltado lo que va leyendo. Podés elegir otra voz y hacer que lea más lento o más rápido."
+  tecnico: "Leer en voz alta: Ctrl + Mayús + U, o Configuración y más > Más herramientas > Leer en voz alta; opciones de voz (voz y velocidad)."
+frases: ["que la compu me lea la página", "edge que hable lo que está escrito", "me cuesta leer y quiero escuchar la nota", "cómo hago que lea más despacio la voz de edge"]
+pasos:
+  - texto: "Abrí la página y apretá Ctrl + Mayús + U. También está en el menú de los tres puntitos, dentro de «Más herramientas»."
+    abrir: "https://support.microsoft.com/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad"
+  - texto: "Arriba aparece una barrita para pausar, seguir o saltar párrafos. En las opciones de voz elegís otra voz y la velocidad."
+    abrir: "https://support.microsoft.com/education/use-immersive-reader-in-microsoft-edge-1"
+  - texto: "Para que deje de leer, tocá pausa o la X de esa barrita, o volvé a apretar Ctrl + Mayús + U."
+fuentes:
+  - https://support.microsoft.com/education/use-immersive-reader-in-microsoft-edge-1
+  - https://support.microsoft.com/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad
+madurez: T0
+---
+id: EDG-008
+area: programas
+titulo:
+  sencillo: "Quiero separar en Edge las pestañas de cada tema (trámites, viaje, trabajo)"
+  tecnico: "Microsoft Edge: espacios de trabajo (Workspaces)"
+explicacion:
+  sencillo: "Los «espacios de trabajo» de Edge te dejan guardar juntas las pestañas de un mismo tema, con nombre y color. Por ejemplo, un espacio «Trámites» con la AFIP, el banco y la obra social, que abrís cuando lo necesitás. Hace falta haber entrado a Edge con una cuenta de Microsoft."
+  tecnico: "Espacios de trabajo (Edge 144 o posterior, sesión con cuenta Microsoft o Entra): ícono de buscar pestañas > Administrar espacios de trabajo > Nuevo; editar o eliminar desde Más opciones (…). Sincronización: «Espacios de trabajo y grupos de pestañas»."
+frases: ["agrupar en edge las páginas de los trámites", "tener las pestañas del trabajo aparte en edge", "guardar un grupo de pestañas para abrirlo otro día", "los espacios de trabajo de edge"]
+pasos:
+  - texto: "Arriba a la izquierda de Edge, tocá el ícono de buscar pestañas y elegí administrar los espacios de trabajo."
+    abrir: "https://support.microsoft.com/edge/getting-started-with-microsoft-edge-workspaces"
+  - texto: "Creá uno nuevo: podés empezar con las pestañas que ya tenés abiertas o con uno vacío. Ponele un nombre, elegí un color y confirmá."
+  - texto: "Para pasar de un espacio a otro, tocá el botón de espacios de trabajo arriba a la izquierda (muestra el nombre del que estás usando) y elegí otro."
+  - texto: "Para cambiarle el nombre o borrarlo, tocá los tres puntitos al lado del espacio. Ojo: si lo borrás, se pierde ese grupo de pestañas guardado."
+fuentes:
+  - https://support.microsoft.com/edge/getting-started-with-microsoft-edge-workspaces
+madurez: T0
+---
+id: EDG-009
+area: seguridad
+titulo:
+  sencillo: "Quiero que Edge me invente una contraseña segura al registrarme en una página"
+  tecnico: "Microsoft Edge: Generador de contraseñas («Sugerir contraseñas seguras»)"
+explicacion:
+  sencillo: "Cuando te registrás en una página nueva o cambiás una clave, Edge te puede proponer una contraseña difícil de adivinar y guardarla por vos, así no tenés que acordártela. PC Doctor nunca te va a pedir ni mirar tus claves."
+  tecnico: "Generador de contraseñas: al seleccionar el campo de contraseña en un registro o cambio de clave aparece la sugerencia; clic derecho > Sugerir contraseña segura. Configuración > Contraseñas y autorrelleno > Microsoft Password Manager > Más configuraciones."
+frases: ["que edge me invente una clave", "no se me ocurre una contraseña difícil para registrarme", "edge me sugiere una contraseña rara", "dónde se activa la contraseña sugerida en edge"]
+pasos:
+  - texto: "En la página donde te estás registrando (o cambiando la clave), tocá el casillero de la contraseña. Edge muestra debajo una contraseña sugerida."
+  - texto: "Si te sirve, elegila: Edge la completa y la guarda, y la próxima vez la pone solo. Si no aparece, hacé clic derecho en el casillero y elegí la opción de sugerir una contraseña segura."
+    abrir: "https://support.microsoft.com/edge/use-password-generator-to-create-more-secure-passwords-in-microsoft-edge"
+  - texto: "Si no aparece nunca, revisá en Configuración > «Contraseñas y autorrelleno» > Microsoft Password Manager > más configuraciones, que esté activado preguntar si guardar las contraseñas y sugerir contraseñas seguras."
+fuentes:
+  - https://support.microsoft.com/edge/use-password-generator-to-create-more-secure-passwords-in-microsoft-edge
+madurez: T0
+---
+id: EDG-010
+area: programas
+titulo:
+  sencillo: "Quiero ver dos páginas a la vez en la misma ventana de Edge"
+  tecnico: "Microsoft Edge: pantalla dividida"
+explicacion:
+  sencillo: "La «pantalla dividida» de Edge muestra dos páginas una al lado de la otra dentro de la misma pestaña, por ejemplo el home banking y la factura. Así no tenés que andar saltando de pestaña."
+  tecnico: "Pantalla dividida: Configuración y más (Alt + F) > Pantalla dividida; dos sitios por pestaña; cerrar con la X o separar en dos pestañas desde Más opciones."
+frases: ["poner dos páginas una al lado de la otra en edge", "partir la pestaña de edge en dos", "ver la factura y el banco al mismo tiempo en el navegador", "cómo saco la pantalla partida de edge"]
+pasos:
+  - texto: "Apretá Alt + F (o tocá los tres puntitos arriba a la derecha) y elegí «Pantalla dividida». La pestaña se parte en dos y en la otra mitad abrís la segunda página."
+  - texto: "Para cerrar una de las dos mitades, tocá la X arriba a la derecha de esa mitad. Si preferís quedarte con las dos páginas en pestañas separadas, tocá los tres puntitos de esa mitad y elegí la opción para separarlas."
+  - texto: "Solo se pueden poner dos páginas por pestaña, y en el celular no está. Si en tu Edge no aparece, puede que tu versión todavía no lo tenga."
+fuentes:
+  - https://explore.microsoft.com/edge/features/split-screen
+madurez: T0
+---
+id: EDG-011
+area: programas
+titulo:
+  sencillo: "Quiero sacarle una foto a una página entera con Edge"
+  tecnico: "Microsoft Edge: Captura de pantalla (antes «Captura web»)"
+explicacion:
+  sencillo: "Edge trae su propia herramienta para capturar la página: podés sacar solo un pedazo o la página entera, incluso lo que no entra en la pantalla. Después la copiás o la guardás como imagen."
+  tecnico: "Captura de pantalla de Edge: Ctrl + Mayús + S, clic derecho > Captura de pantalla o menú Configuración y más; capturar área o página completa; copiar, guardar o marcar."
+frases: ["sacar foto de toda la página en edge", "capturar una página larga entera", "guardar como imagen lo que veo en edge", "la captura web de edge"]
+pasos:
+  - texto: "En la página, apretá Ctrl + Mayús + S, o hacé clic derecho en un lugar vacío y elegí la opción de captura de pantalla."
+  - texto: "Elegí si querés marcar un área con el mouse o capturar la página completa (incluye lo que está más abajo)."
+  - texto: "Cuando aparece la captura, podés dibujar encima y después copiarla (para pegarla en un correo o en Word) o guardarla en la compu."
+fuentes:
+  - https://explore.microsoft.com/edge/features/screenshot
+madurez: T0
+---
+id: EDG-012
+area: programas
+titulo:
+  sencillo: "Me apareció una barra a la derecha en Edge"
+  tecnico: "Microsoft Edge: barra lateral (mostrar, ocultar automáticamente, personalizar)"
+explicacion:
+  sencillo: "La barra lateral de Edge es una columna con accesos (Copilot, herramientas, páginas que fijaste). Se puede dejar siempre visible o que se esconda sola y aparezca solo cuando la llamás."
+  tecnico: "Configuración y más > Configuración > Barra lateral > Visibilidad: «Siempre activada» u «Oculta automáticamente»; Personalizar (+) para fijar sitios y apps."
+frases: ["en edge hay una columna de íconos a la derecha", "sacar la barra del costado de edge", "achicar la barra lateral del navegador", "agregar una página a la barra lateral de edge"]
+pasos:
+  - texto: "Tocá los tres puntitos arriba a la derecha > «Configuración» > «Barra lateral»."
+    abrir: "https://www.microsoft.com/en-us/edge/learning-center/unleash-power-of-edge-sidebar"
+  - texto: "En la visibilidad de la barra lateral, elegí que esté siempre o que se oculte automáticamente. Si se oculta, la abrís desde el ícono de Copilot."
+  - texto: "Para fijar una página o herramienta en la barra, tocá el botón «+» (Personalizar) y buscala."
+fuentes:
+  - https://www.microsoft.com/en-us/edge/learning-center/unleash-power-of-edge-sidebar
+madurez: T0
+---
+id: EDG-013
+area: programas
+titulo:
+  sencillo: "Quiero que Copilot me resuma la página que estoy viendo en Edge"
+  tecnico: "Copilot en Microsoft Edge (panel lateral)"
+explicacion:
+  sencillo: "En Edge, Copilot se abre en un costado de la ventana y te puede resumir la página que estás mirando, contestarte preguntas sobre ella o resumir un video de YouTube, sin salir de la página. Lo que contesta puede tener errores: si es algo importante, chequealo."
+  tecnico: "Ícono de Copilot arriba a la derecha abre el panel lateral; resume, compara pestañas y responde sobre la página o videos de YouTube. Funciones opcionales que se activan o desactivan desde la configuración."
+frases: ["que copilot me resuma esta página", "preguntarle a copilot sobre lo que estoy leyendo en edge", "para qué sirve el botón de copilot en edge", "que me resuma un video de youtube en edge"]
+pasos:
+  - texto: "Con la página abierta, tocá el ícono de Copilot arriba a la derecha de Edge. Se abre un panel a un costado."
+  - texto: "Escribile lo que querés, por ejemplo: «Resumime esta página» o «¿Qué dice sobre los horarios?». También sirve con un video de YouTube abierto."
+  - texto: "Para cerrarlo, tocá de nuevo el ícono de Copilot. Si lo que querés es sacar Copilot de la compu, escribile a PC Doctor «no uso Copilot y lo quiero sacar»."
+fuentes:
+  - https://explore.microsoft.com/en-us/edge/features/copilot
+madurez: T0
+---
+id: EDG-014
+area: rendimiento
+titulo:
+  sencillo: "Vuelvo a una pestaña de Edge y se recarga, y pierdo lo que estaba haciendo"
+  tecnico: "Microsoft Edge: pestañas en suspensión y lista «Mantener siempre activos estos sitios»"
+explicacion:
+  sencillo: "Para ahorrar memoria, Edge «duerme» las pestañas que no usás hace un rato (se ven más claritas). Al tocarlas se despiertan. Si una página que te importa (el correo, una radio, un trámite) no tiene que dormirse nunca, la podés anotar en una lista de excepciones."
+  tecnico: "Configuración > Sistema y rendimiento > Rendimiento: «Suspender automáticamente las pestañas», tiempo de inactividad (2 h por defecto) y lista «Mantener siempre activos estos sitios» (Agregar sitio)."
+frases: ["edge me duerme las pestañas", "la pestaña del correo se pone gris y se recarga", "que edge no suspenda la página de la radio", "las pestañas de edge se ven apagadas"]
+pasos:
+  - texto: "Tocá los tres puntitos > «Configuración» > «Sistema y rendimiento» > «Rendimiento»."
+    abrir: "https://support.microsoft.com/edge/learn-about-performance-features-in-microsoft-edge"
+  - texto: "Buscá la lista de sitios que se mantienen siempre activos, tocá agregar sitio, escribí la dirección completa de la página (por ejemplo la del correo) y confirmá."
+  - texto: "Ahí mismo podés elegir después de cuánto tiempo sin usarlas se duermen las pestañas, o apagar la suspensión. Ojo: si la apagás y tenés muchas pestañas, la compu puede andar más lenta."
+fuentes:
+  - https://support.microsoft.com/edge/learn-about-performance-features-in-microsoft-edge
+madurez: T0
+---
+id: EDG-015
+area: programas
+titulo:
+  sencillo: "Una página vieja dice que solo funciona con Internet Explorer"
+  tecnico: "Microsoft Edge: modo Internet Explorer (modo IE)"
+explicacion:
+  sencillo: "Internet Explorer ya no existe, pero Edge tiene un «modo Internet Explorer» para abrir esas páginas viejas (algunos sistemas de obras sociales, municipios o empresas). Se activa una sola vez y después se agrega la página a una lista."
+  tecnico: "edge://settings/defaultBrowser > Compatibilidad con Internet Explorer: permitir que los sitios se vuelvan a cargar en modo IE; reiniciar; Páginas del modo Internet Explorer > Agregar una página. Salir con «Salir» en la barra de información."
+frases: ["la página me pide internet explorer", "cómo abro internet explorer en windows 11", "un sistema viejo no anda en edge", "activar el modo explorer en edge"]
+pasos:
+  - texto: "En Edge, tocá los tres puntitos > «Configuración» > la sección del navegador predeterminado."
+    abrir: "https://support.microsoft.com/edge/internet-explorer-mode-in-microsoft-edge"
+  - texto: "En la parte de compatibilidad con Internet Explorer, en la opción de permitir que los sitios se recarguen en modo Internet Explorer, elegí «Permitir». Reiniciá Edge."
+  - texto: "Volvé a la misma sección y, en «Páginas del modo Internet Explorer», agregá la dirección de esa página. Al recargarla se abre en modo IE."
+  - texto: "Para volver al modo normal, tocá el botón para salir en la barra de aviso de arriba, o cerrá esa pestaña. En compus de empresa, a veces solo lo puede activar el área de sistemas."
+fuentes:
+  - https://support.microsoft.com/edge/internet-explorer-mode-in-microsoft-edge
+madurez: T0
+---
+id: EDG-016
+area: programas
+titulo:
+  sencillo: "Edge me pregunta si lo quiero como navegador predeterminado"
+  tecnico: "Navegador predeterminado en Windows (Aplicaciones predeterminadas)"
+explicacion:
+  sencillo: "El navegador «predeterminado» es el que se abre cuando tocás un enlace en un correo o en un documento. Edge a veces te pregunta si querés que sea él. No es obligatorio: elegí el que más uses. Se puede cambiar cuando quieras desde la Configuración de Windows."
+  tecnico: "Configuración > Aplicaciones > Aplicaciones predeterminadas > elegir el navegador > Establecer como predeterminado (para Edge: «Hacer que Microsoft Edge sea tu navegador predeterminado»)."
+frases: ["edge me pide ser el navegador principal", "me sale que edge no es el predeterminado", "si toco que sí a edge pierdo el chrome", "volver a poner edge como navegador de siempre"]
+pasos:
+  - texto: "Si usás Edge para todo, podés aceptar. Si usás otro navegador (por ejemplo Chrome), podés decir que no: no se rompe nada."
+  - texto: "Para elegirlo con calma: abrí Configuración > Aplicaciones > «Aplicaciones predeterminadas» y tocá el navegador que querés usar."
+    abrir: "ms-settings:defaultapps"
+  - texto: "Al lado de la opción de hacerlo tu navegador predeterminado, tocá el botón para establecerlo como predeterminado. Desde ahí los enlaces se abren con ese navegador."
+    abrir: "https://support.microsoft.com/windows/apps/change-default-apps-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/apps/change-default-apps-in-windows
+madurez: T0
+---
+id: EDG-017
+area: programas
+titulo:
+  sencillo: "Quiero que Edge abra las pestañas que tenía la última vez"
+  tecnico: "Microsoft Edge: qué se abre al iniciar («Cuando se inicia Edge»)"
+explicacion:
+  sencillo: "Edge puede abrir al arrancar una pestaña nueva vacía, las mismas pestañas que tenías cuando lo cerraste, o páginas que vos elijas (por ejemplo el diario y el correo). Se elige en la configuración."
+  tecnico: "Configuración > Inicio, página principal y nuevas pestañas > Cuando se inicia Edge: abrir la página de nueva pestaña / continuar donde lo dejaste / abrir estas páginas."
+frases: ["que edge se abra con las páginas de ayer", "cada vez que abro edge pierdo las pestañas", "que edge arranque siempre en el diario", "edge me abre páginas viejas cuando lo abro y no quiero"]
+pasos:
+  - texto: "Tocá los tres puntitos arriba a la derecha > «Configuración» y entrá a la sección de inicio, página principal y nuevas pestañas."
+    abrir: "https://www.microsoft.com/en-us/edge/learning-center/how-to-manage-edge-startup-settings"
+  - texto: "En la parte de cuando se inicia Edge, elegí: abrir una pestaña nueva, continuar donde lo dejaste (vuelven las pestañas de la última vez) o abrir páginas que vos elijas."
+  - texto: "Si elegís páginas propias, agregá cada dirección, o usá la opción para usar todas las pestañas que tenés abiertas ahora."
+  - texto: "Si Edge se abre solo al prender la compu (sin que lo toques), escribile a PC Doctor «el navegador se abre solo»."
+fuentes:
+  - https://www.microsoft.com/en-us/edge/learning-center/how-to-manage-edge-startup-settings
+madurez: T0
+---
+id: EDG-018
+area: programas
+titulo:
+  sencillo: "Quiero ver qué páginas visité ayer en Edge (o borrar lo último)"
+  tecnico: "Microsoft Edge: ver el historial y borrar un período"
+explicacion:
+  sencillo: "Edge anota las páginas que visitás: con Ctrl + H ves la lista y podés volver a una página que no te acordás. Si querés borrar solo lo último (por ejemplo la última hora), se elige el período. Ojo: si Edge está sincronizado, se borra también en tus otros dispositivos."
+  tecnico: "Historial: Ctrl + H. Borrar: Configuración > Privacidad, búsqueda y servicios > Borrar datos de exploración > Elegir qué borrar > Intervalo de tiempo > Borrar ahora (los datos sincronizados se borran en todos los dispositivos)."
+frases: ["ver las páginas que visité ayer", "no me acuerdo qué página entré y quiero encontrarla", "borrar solo lo que vi en la última hora", "dónde está el historial de edge"]
+pasos:
+  - texto: "Para ver el historial, apretá Ctrl + H. Aparece la lista de páginas que visitaste, ordenadas por fecha; tocá una para volver a abrirla."
+    abrir: "https://support.microsoft.com/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad"
+  - texto: "Antes de borrar: lo que borres no se puede recuperar, y si tenés Edge sincronizado con tu cuenta se borra también en el celular y en otras compus."
+  - texto: "Para borrar, entrá a Configuración > «Privacidad, búsqueda y servicios» > borrar datos de exploración > elegir qué borrar. En el intervalo de tiempo elegí, por ejemplo, la última hora, marcá «Historial de exploración» y tocá borrar ahora."
+    abrir: "https://support.microsoft.com/microsoft-edge/view-and-delete-browser-history-in-microsoft-edge-00cf7943-a9e1-975a-a33d-ac10ce454ca4"
+fuentes:
+  - https://support.microsoft.com/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad
+  - https://support.microsoft.com/microsoft-edge/view-and-delete-browser-history-in-microsoft-edge-00cf7943-a9e1-975a-a33d-ac10ce454ca4
+madurez: T0
+---
+id: EDG-019
+area: seguridad
+titulo:
+  sencillo: "Quiero que Edge borre todo solo cada vez que lo cierro"
+  tecnico: "Microsoft Edge: elegir qué borrar cada vez que se cierra el navegador"
+explicacion:
+  sencillo: "Si la compu la usan varios, Edge puede borrar solo el historial, las cookies u otras cosas cada vez que lo cerrás. Ojo: si borra las cookies, cada vez vas a tener que volver a entrar con tu usuario en las páginas."
+  tecnico: "Configuración > Privacidad, búsqueda y servicios > Borrar datos de exploración > Elegir qué borrar cada vez que se cierre el explorador; activar los tipos de datos."
+frases: ["que edge se olvide de todo al cerrarlo", "borrar el historial automáticamente al salir de edge", "que no quede nada guardado cuando cierro el navegador", "la compu es compartida y no quiero que vean lo que miro en edge"]
+pasos:
+  - texto: "Tocá los tres puntitos > «Configuración» > «Privacidad, búsqueda y servicios» y buscá la parte de borrar datos de exploración."
+    abrir: "https://support.microsoft.com/windows/microsoft-edge-browsing-data-and-privacy-bb8174ba-9d73-dcf2-9b4a-c582b4e640dd"
+  - texto: "Entrá a la opción para elegir qué borrar cada vez que se cierra el navegador."
+  - texto: "Activá solo lo que quieras borrar, por ejemplo el historial. Pensalo dos veces antes de activar las cookies: vas a tener que volver a entrar con tu usuario en todas las páginas."
+fuentes:
+  - https://support.microsoft.com/windows/microsoft-edge-browsing-data-and-privacy-bb8174ba-9d73-dcf2-9b4a-c582b4e640dd
+madurez: T0
+---
+id: EDG-020
+area: programas
+titulo:
+  sencillo: "Quiero ver en el celular las pestañas que dejé abiertas en la compu"
+  tecnico: "Microsoft Edge en el celular: iniciar sesión y sincronizar (incluye pestañas abiertas)"
+explicacion:
+  sencillo: "Si instalás Edge en el celular y entrás con la misma cuenta de Microsoft que usás en la compu, se pasan los favoritos, el historial, las contraseñas y también las pestañas abiertas. Así seguís en el celular lo que estabas mirando en la compu."
+  tecnico: "Edge móvil: menú (…) > Configuración > Cuentas > Agregar cuenta, con la misma cuenta Microsoft; en el escritorio, Sincronizar activado. Sincroniza contraseñas, historial, favoritos, pestañas abiertas y direcciones."
+frases: ["bajé edge en el celular y no veo mis cosas", "seguir en el celular la página que tenía en la compu", "pasar las pestañas de la compu al teléfono", "entrar con mi cuenta en el edge del celular"]
+pasos:
+  - texto: "Instalá Microsoft Edge en el celular desde la tienda de aplicaciones y abrilo."
+  - texto: "Tocá los tres puntitos del medio de abajo > «Configuración» > «Cuentas» > agregar cuenta, y entrá con la misma cuenta de Microsoft que usás en el Edge de la compu."
+    abrir: "https://www.microsoft.com/en-us/edge/learning-center/sync-your-browser-across-devices"
+  - texto: "En la compu, revisá que Edge tenga la sincronización activada (en tu perfil, la parte de sincronizar). Esperá unos minutos: van a aparecer tus cosas, incluidas las pestañas abiertas."
+fuentes:
+  - https://www.microsoft.com/en-us/edge/learning-center/sync-your-browser-across-devices
+madurez: T0
+---
+id: EDG-021
+area: seguridad
+titulo:
+  sencillo: "Quiero que las páginas no me sigan por todos lados con publicidad"
+  tecnico: "Microsoft Edge: prevención de seguimiento (Básica, Equilibrada, Estricta)"
+explicacion:
+  sencillo: "Muchas páginas tienen «rastreadores» que anotan qué mirás para mostrarte publicidad. Edge los frena con la «prevención de seguimiento», que tiene tres niveles: Básica, Equilibrada (la que viene puesta) y Estricta. La Estricta frena más, pero alguna página puede andar mal."
+  tecnico: "edge://settings/privacy > Prevención de seguimiento: Básica / Equilibrada (predeterminada) / Estricta; excepciones por sitio; el ícono de información del sitio muestra los rastreadores bloqueados."
+frases: ["me persigue la publicidad de lo que busqué", "que no me rastreen las páginas en edge", "bloquear rastreadores en el navegador", "poner edge en modo estricto de privacidad"]
+pasos:
+  - texto: "En Edge, tocá los tres puntitos > «Configuración» y entrá a la parte de privacidad. Ahí está la prevención de seguimiento."
+    abrir: "https://learn.microsoft.com/microsoft-edge/web-platform/tracking-prevention"
+  - texto: "Elegí el nivel: «Equilibrada» es la que viene puesta y anda bien en casi todas las páginas. «Estricta» bloquea más rastreadores, pero alguna página puede no funcionar bien."
+  - texto: "Si con «Estricta» una página de confianza anda mal, agregala como excepción o volvé a «Equilibrada». Tocando el ícono a la izquierda de la dirección ves qué rastreadores frenó en esa página."
+fuentes:
+  - https://learn.microsoft.com/microsoft-edge/web-platform/tracking-prevention
+madurez: T0
+---
+id: EDG-022
+area: seguridad
+titulo:
+  sencillo: "Edge me puso una pantalla roja diciendo que el sitio no es seguro"
+  tecnico: "Microsoft Defender SmartScreen en Edge: página notificada como no segura"
+explicacion:
+  sencillo: "Esa pantalla la pone SmartScreen, la protección de Edge, cuando la página fue denunciada por robar datos (phishing) o por repartir virus. Es un aviso para cuidarte: lo más seguro es no entrar, sobre todo si llegaste por un correo o un mensaje."
+  tecnico: "Microsoft Defender SmartScreen: compara con listas dinámicas de sitios de phishing y malware y muestra una página de advertencia; permite informar el sitio como seguro o no seguro. Activado por defecto (edge://settings/privacy > Servicios)."
+frases: ["edge dice que la página fue notificada como no segura", "me salió una pantalla roja al entrar a un link", "edge no me deja entrar a una página porque es peligrosa", "aviso de sitio de phishing en el navegador"]
+pasos:
+  - texto: "No sigas adelante ni pongas datos ni claves en esa página. Cerrá la pestaña o volvé atrás."
+    abrir: "https://learn.microsoft.com/deployedge/microsoft-edge-security-smartscreen"
+  - texto: "Si llegaste por un enlace de un correo o mensaje que «parece» de tu banco u otra empresa, no lo uses: entrá escribiendo vos la dirección oficial."
+  - texto: "Si estás seguro de que la página es de confianza y el aviso es un error, desde ese mismo aviso podés informar que el sitio es seguro. Dejá SmartScreen siempre activado."
+fuentes:
+  - https://learn.microsoft.com/deployedge/microsoft-edge-security-smartscreen
+madurez: T0
+---
+id: EDG-023
+area: programas
+titulo:
+  sencillo: "Quiero tener una página (como el correo) como si fuera un programa con su ícono"
+  tecnico: "Microsoft Edge: instalar un sitio como aplicación"
+explicacion:
+  sencillo: "Edge puede «instalar» una página que usás mucho como si fuera un programa: se abre en su propia ventana, sin pestañas, y la podés anclar a la barra de tareas o al Inicio. Si después no la querés, se desinstala desde Edge."
+  tecnico: "Configuración y más > Más herramientas > Aplicaciones > Instalar este sitio como una aplicación; administración en edge://apps (Detalles > Anclar a la barra de tareas / Anclar a Inicio / Crear acceso directo en el escritorio / Desinstalar)."
+frases: ["poner el correo como programa aparte", "tener un ícono de una página en la barra de abajo", "abrir una página en su propia ventana sin pestañas", "instalar una página como aplicación en edge"]
+pasos:
+  - texto: "Abrí la página en Edge. Tocá los tres puntitos > «Más herramientas» > «Aplicaciones» > instalar este sitio como una aplicación. Algunas páginas ya te ofrecen instalarse solas."
+    abrir: "https://support.microsoft.com/edge/install-manage-or-uninstall-apps-in-microsoft-edge"
+  - texto: "Para tenerla a mano: escribí «edge://apps» en la barra de direcciones, tocá «Detalles» en la tarjeta de esa aplicación y elegí anclarla a la barra de tareas, al Inicio o crear un acceso en el escritorio."
+  - texto: "Para sacarla: en esa misma pantalla, «Detalles» > «Desinstalar». Te pregunta si también querés borrar el historial y los datos de esa aplicación; si dudás, no lo marques."
+fuentes:
+  - https://support.microsoft.com/edge/install-manage-or-uninstall-apps-in-microsoft-edge
+madurez: T0
+---
+id: EDG-024
+area: programas
+titulo:
+  sencillo: "Quiero Edge con fondo oscuro"
+  tecnico: "Microsoft Edge: tema oscuro (Apariencia > Apariencia general)"
+explicacion:
+  sencillo: "Edge tiene su propio ajuste de colores: lo podés poner oscuro para que encandile menos, sin tocar nada más de la compu."
+  tecnico: "Configuración y más > Configuración > Apariencia > Apariencia general > Oscuro."
+frases: ["poner edge en negro", "el blanco de edge me encandila de noche", "edge en modo oscuro", "cambiar el color de edge a oscuro"]
+pasos:
+  - texto: "Tocá los tres puntitos arriba a la derecha > «Configuración» > «Apariencia»."
+    abrir: "https://support.microsoft.com/en-us/article/9b74617b-f542-77ed-033b-1a5cfb17a2df"
+  - texto: "En «Apariencia general», elegí «Oscuro». Para volver como estaba, elegí la opción clara."
+  - texto: "Si querés todo Windows oscuro (no solo Edge), escribile a PC Doctor «quiero poner la pantalla en modo oscuro»."
+fuentes:
+  - https://support.microsoft.com/en-us/article/9b74617b-f542-77ed-033b-1a5cfb17a2df
+madurez: T0
+---
+id: EDG-025
+area: programas
+titulo:
+  sencillo: "Una pestaña de Edge hace ruido y no sé cuál es"
+  tecnico: "Microsoft Edge: silenciar una pestaña"
+explicacion:
+  sencillo: "Cuando una pestaña reproduce sonido, Edge le pone un parlantito al lado del nombre. Tocándolo la silenciás sin cerrar la página ni bajar el volumen de toda la compu."
+  tecnico: "Ícono de altavoz en la pestaña que reproduce audio: clic para silenciar o reactivar; Ctrl + M en la pestaña activa."
+frases: ["una página empezó a sonar y no sé cuál", "silenciar una pestaña del navegador", "callar un video que arrancó solo en edge", "suena música en edge y no encuentro de dónde"]
+pasos:
+  - texto: "Mirá las pestañas de arriba: la que hace ruido tiene un parlantito al lado del nombre."
+  - texto: "Tocá ese parlantito: la pestaña queda en silencio. Tocalo de nuevo para que vuelva a sonar."
+    abrir: "https://www.microsoft.com/en-us/edge/learning-center/how-to-mute-tabs"
+  - texto: "Con el teclado: entrá a esa pestaña y apretá Ctrl + M."
+fuentes:
+  - https://www.microsoft.com/en-us/edge/learning-center/how-to-mute-tabs
+  - https://support.microsoft.com/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad
+madurez: T0
