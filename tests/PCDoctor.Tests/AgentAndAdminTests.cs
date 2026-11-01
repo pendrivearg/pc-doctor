@@ -137,8 +137,17 @@ public class AgentTests
         await pipe.ConnectAsync(10_000);
         using var writer = new StreamWriter(pipe, new UTF8Encoding(false), leaveOpen: true) { AutoFlush = true };
         using var reader = new StreamReader(pipe, new UTF8Encoding(false), leaveOpen: true);
-        await writer.WriteLineAsync(JsonSerializer.Serialize(new AgentRequest { Token = "codigo-falso", Op = "accion", Accion = "net.dns.flush" }));
-        var reply = await reader.ReadLineAsync();
+        string? reply;
+        try
+        {
+            await writer.WriteLineAsync(JsonSerializer.Serialize(new AgentRequest { Token = "codigo-falso", Op = "accion", Accion = "net.dns.flush" }));
+            reply = await reader.ReadLineAsync();
+        }
+        catch (IOException)
+        {
+            // El agente cortó la conexión antes de que terminara el pedido: también es un rechazo (no respondió ni ejecutó nada).
+            reply = null;
+        }
         var code = await server.WaitAsync(TimeSpan.FromSeconds(20));
         // Lo importante: no respondió ni ejecutó nada. El código dice por qué cortó (0 = código secreto falso, 2 = proceso no autorizado).
         Assert.True(reply is null, $"el agente respondió: {reply}");

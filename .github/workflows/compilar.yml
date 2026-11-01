@@ -24,7 +24,7 @@ jobs:
       - name: Pruebas (las de administrador corren aparte)
         shell: pwsh
         run: |
-          dotnet test tests/PCDoctor.Tests -c Release --filter "FullyQualifiedName!~AdminActionTests&FullyQualifiedName!~ElevatedAgent" --logger "trx;LogFileName=resultado.trx" --results-directory "$env:RUNNER_TEMP/pruebas"
+          dotnet test tests/PCDoctor.Tests -c Release -p:ArtifactsPath="$env:GITHUB_WORKSPACE/artifacts" --filter "FullyQualifiedName!~AdminActionTests&FullyQualifiedName!~ElevatedAgent" --logger "trx;LogFileName=resultado.trx" --results-directory "$env:RUNNER_TEMP/pruebas"
           $codigo = $LASTEXITCODE
           # Cada prueba fallida queda como nota pública del resultado (los registros completos piden iniciar sesión).
           foreach ($trx in Get-ChildItem "$env:RUNNER_TEMP/pruebas" -Filter *.trx -ErrorAction SilentlyContinue) {
@@ -49,7 +49,7 @@ jobs:
         with:
           dotnet-version: '10.0.x'
       - name: Reparaciones reales con permiso
-        run: dotnet test tests/PCDoctor.Tests -c Release --filter "FullyQualifiedName~AdminActionTests|FullyQualifiedName~ElevatedAgent" --logger "console;verbosity=normal"
+        run: dotnet test tests/PCDoctor.Tests -c Release -p:ArtifactsPath="${{ github.workspace }}/artifacts" --filter "FullyQualifiedName~AdminActionTests|FullyQualifiedName~ElevatedAgent" --logger "console;verbosity=normal"
 
   compilar:
     name: Armar el pendrive
