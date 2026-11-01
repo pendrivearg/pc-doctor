@@ -1,0 +1,154 @@
+# Manejo básico: sacar el pendrive, programa congelado, dos ventanas a la vez, bloquear la PC, adjuntar al correo, carpetas y nombres, cambiar la clave y deshacer. Guiadas con fuente oficial.
+id: USB-EJ-001
+area: archivos
+titulo:
+  sencillo: "¿Cómo saco el pendrive sin que se dañen los archivos?"
+  tecnico: "Quitar hardware de forma segura"
+explicacion:
+  sencillo: "Antes de desenchufar un pendrive o un disco externo conviene «expulsarlo»: así Windows termina de guardar todo y no se pierde nada."
+  tecnico: "Quitar hardware de forma segura y expulsar el medio (área de notificación) antes de desconectar."
+frases: ["cómo saco el pendrive", "expulsar el pendrive", "quitar el disco externo con seguridad", "se puede sacar el pendrive así nomás"]
+pasos:
+  - texto: "Cerrá los archivos que tengas abiertos del pendrive."
+  - texto: "Abajo a la derecha, tocá la flechita «^» y después el ícono del pendrive («Quitar hardware de forma segura y expulsar el medio»). Elegí «Expulsar» y tu pendrive."
+  - texto: "Esperá el aviso «Es seguro quitar el hardware» y recién ahí desenchufalo."
+    abrir: "https://support.microsoft.com/windows/hardware/safely-remove-hardware-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/safely-remove-hardware-in-windows
+madurez: T0
+---
+id: APP-HUNG-001
+area: programas
+titulo:
+  sencillo: "Un programa se congeló y no se puede cerrar"
+  tecnico: "Aplicación que no responde: finalizar tarea"
+explicacion:
+  sencillo: "Si un programa dice «No responde» y no se cierra, Windows lo puede cerrar a la fuerza desde el Administrador de tareas. Lo que no hayas guardado en ese programa se pierde."
+  tecnico: "Administrador de tareas (Ctrl + Mayús + Esc) > Procesos > Aplicaciones > Finalizar tarea."
+frases: ["un programa se congeló y no se cierra", "la ventana no responde", "dice que el programa no responde", "no puedo cerrar un programa que quedó colgado"]
+pasos:
+  - texto: "Esperá un minuto: a veces el programa se recupera solo."
+  - texto: "Apretá Ctrl + Mayús + Esc para abrir el Administrador de tareas. En «Procesos», buscá el programa en «Aplicaciones», hacé clic derecho > «Finalizar tarea»."
+    abrir: "https://support.microsoft.com/microsoft-edge/how-to-close-a-pop-up-window-if-microsoft-edge-isn-t-responding-a239b1d0-7830-2c64-0eca-522f06522b94"
+  - texto: "Volvé a abrir el programa. Si se congela seguido, escribile a PC Doctor «un programa se cierra solo» o pasá el diagnóstico."
+fuentes:
+  - https://support.microsoft.com/microsoft-edge/how-to-close-a-pop-up-window-if-microsoft-edge-isn-t-responding-a239b1d0-7830-2c64-0eca-522f06522b94
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+madurez: T0
+---
+id: BAS-SNAP-001
+area: basico
+titulo:
+  sencillo: "Quiero ver dos ventanas una al lado de la otra"
+  tecnico: "Acoplar ventanas (Snap)"
+explicacion:
+  sencillo: "Windows puede dividir la pantalla en dos: por ejemplo, un documento a la izquierda y el navegador a la derecha."
+  tecnico: "Acoplar: arrastrar al borde o Windows + flechas; Asistente de acoplamiento; Sistema > Multitarea."
+frases: ["poner dos ventanas una al lado de la otra", "ver dos programas a la vez en la pantalla", "dividir la pantalla en dos"]
+pasos:
+  - texto: "Arrastrá la ventana desde su barra de arriba hasta el borde izquierdo de la pantalla y soltala: ocupa la mitad."
+  - texto: "Del otro lado aparecen las demás ventanas abiertas: tocá la que quieras para que ocupe la otra mitad."
+  - texto: "Con el teclado: Windows + flecha izquierda o derecha. Si no funciona, revisá que «Acoplar ventanas» esté activado."
+    abrir: "ms-settings:multitasking"
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/snap-your-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/snap-your-windows
+madurez: T0
+---
+id: BAS-LOCK-001
+area: basico
+titulo:
+  sencillo: "Quiero bloquear la compu cuando me levanto"
+  tecnico: "Bloquear la sesión (Windows + L)"
+explicacion:
+  sencillo: "Bloquear deja todo abierto como estaba, pero para volver a usarla hay que poner la clave o el PIN. Es útil en la oficina o si hay chicos cerca."
+  tecnico: "Windows + L bloquea la sesión sin cerrar las aplicaciones."
+frases: ["bloquear la compu cuando me voy", "dejar la compu bloqueada mientras no estoy", "que pida la clave sin apagar la compu"]
+pasos:
+  - texto: "Apretá Windows + L. La pantalla se bloquea y todo queda abierto como estaba."
+  - texto: "Para volver, tocá cualquier tecla y poné tu clave o PIN."
+  - texto: "Microsoft lo lista entre los atajos de teclado de Windows."
+    abrir: "https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+madurez: T0
+---
+id: MAIL-ATT-001
+area: programas
+titulo:
+  sencillo: "Quiero mandar una foto o un archivo por correo"
+  tecnico: "Adjuntar archivos a un correo (Outlook, Gmail)"
+explicacion:
+  sencillo: "En cualquier correo, el botón con forma de clip sirve para adjuntar fotos o documentos de la computadora."
+  tecnico: "Adjuntar archivo en Outlook (Insertar/Incluir > Adjuntar archivo) o Gmail (ícono de adjuntar); límite de 25 MB en Gmail personal."
+frases: ["mandar una foto por mail", "adjuntar un archivo al correo", "cómo envío un documento por email", "poner una foto en el correo"]
+pasos:
+  - texto: "Escribí el correo nuevo y tocá el clip («Adjuntar»). Elegí «Examinar este equipo» (Outlook) o buscá el archivo en la ventana que se abre (Gmail), y tocá «Abrir»."
+  - texto: "Esperá a que el archivo aparezca debajo del asunto antes de tocar «Enviar»."
+  - texto: "Outlook lo explica."
+    abrir: "https://support.microsoft.com/outlook/mail/add-pictures-or-attach-files-to-emails-in-outlook"
+  - texto: "Gmail lo explica (los archivos de más de 25 MB se mandan como enlace de Google Drive)."
+    abrir: "https://support.google.com/mail/answer/6584?hl=es-419"
+fuentes:
+  - https://support.microsoft.com/outlook/mail/add-pictures-or-attach-files-to-emails-in-outlook
+  - https://support.google.com/mail/answer/6584?hl=es-419
+madurez: T0
+---
+id: FIL-ORG-001
+area: archivos
+titulo:
+  sencillo: "Quiero crear una carpeta o cambiarle el nombre a un archivo"
+  tecnico: "Crear carpetas y renombrar archivos en el Explorador"
+explicacion:
+  sencillo: "Las carpetas sirven para ordenar fotos y documentos, y a cualquier archivo se le puede cambiar el nombre para encontrarlo más fácil."
+  tecnico: "Explorador de archivos: Nuevo > Carpeta; Cambiar nombre o F2."
+frases: ["crear una carpeta nueva", "cambiar el nombre de un archivo", "ordenar mis fotos en carpetas", "renombrar un documento"]
+pasos:
+  - texto: "Abrí el Explorador de archivos (Windows + E) y entrá donde quieras la carpeta (por ejemplo, Documentos). Tocá «Nuevo» > «Carpeta», escribí el nombre y Enter."
+    abrir: "https://support.microsoft.com/office/create-a-new-folder-cbbfb6f5-59dd-4e5d-95f6-a12577952e17"
+  - texto: "Para cambiar el nombre: seleccioná el archivo, apretá F2 (o «Cambiar nombre»), escribí el nombre nuevo y Enter."
+    abrir: "https://support.microsoft.com/office/collab-files/rename-a-file"
+fuentes:
+  - https://support.microsoft.com/office/create-a-new-folder-cbbfb6f5-59dd-4e5d-95f6-a12577952e17
+  - https://support.microsoft.com/office/collab-files/rename-a-file
+madurez: T0
+---
+id: ACC-CHG-001
+area: basico
+titulo:
+  sencillo: "Quiero cambiar la contraseña de la computadora"
+  tecnico: "Cambiar la contraseña de Windows (cuenta local o de Microsoft)"
+explicacion:
+  sencillo: "Si sabés la clave actual, se cambia en un minuto desde Configuración. PC Doctor no ve ni guarda tu clave: la escribís vos en la pantalla de Windows."
+  tecnico: "Cuentas > Opciones de inicio de sesión > Contraseña > Cambiar; en cuentas de Microsoft se cambia la contraseña de la cuenta."
+frases: ["quiero cambiar la contraseña de la compu", "cambiar la clave de windows", "poner otra clave para entrar a la compu"]
+pasos:
+  - texto: "Abrí Opciones de inicio de sesión > «Contraseña» > «Cambiar». Escribí la actual y después la nueva dos veces."
+    abrir: "ms-settings:signinoptions"
+  - texto: "Si entrás con una cuenta de Microsoft (tu correo de Hotmail u Outlook), Microsoft explica cómo cambiarla."
+    abrir: "https://support.microsoft.com/accounts-billing/security/change-or-reset-your-microsoft-account-password-in-windows"
+  - texto: "Anotá la clave nueva en un lugar seguro. Si te la olvidás, escribile a PC Doctor «me olvidé la contraseña de la computadora»."
+    abrir: "https://support.microsoft.com/windows/security/change-or-reset-your-local-account-password-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/security/change-or-reset-your-local-account-password-in-windows
+  - https://support.microsoft.com/accounts-billing/security/change-or-reset-your-microsoft-account-password-in-windows
+madurez: T0
+---
+id: BAS-UNDO-001
+area: basico
+titulo:
+  sencillo: "Hice algo sin querer y quiero volver atrás"
+  tecnico: "Deshacer (Ctrl + Z)"
+explicacion:
+  sencillo: "Casi todos los programas permiten deshacer lo último que hiciste: un texto borrado, un archivo movido o un cambio en un documento."
+  tecnico: "Ctrl + Z deshace la acción anterior (Explorador, Office, navegador y la mayoría de las aplicaciones)."
+frases: ["deshacer lo que hice", "me equivoqué y quiero deshacer", "volver atrás un cambio en el documento", "moví un archivo sin querer"]
+pasos:
+  - texto: "Apretá Ctrl + Z enseguida, sin hacer otra cosa antes. Cada vez que lo apretás deshace un paso más."
+  - texto: "Si borraste un archivo entero, buscalo en la Papelera: escribile a PC Doctor «borré un archivo sin querer»."
+  - texto: "Microsoft lo lista entre los atajos de teclado de Windows."
+    abrir: "https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/keyboard-shortcuts-in-windows
+madurez: T0

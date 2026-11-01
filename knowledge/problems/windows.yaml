@@ -1,0 +1,335 @@
+# Módulo A — Windows y sistema operativo
+id: WIN-LIFE-001
+area: windows
+titulo:
+  sencillo: "Windows 10 ya no recibe actualizaciones gratuitas"
+  tecnico: "Windows 10 fuera del ciclo de soporte estándar"
+explicacion:
+  sencillo: >-
+    Microsoft dejó de enviar arreglos de seguridad gratuitos para Windows 10. La PC sigue funcionando, pero
+    cada mes queda más expuesta a virus y ataques. Si la PC está inscripta en el programa de Actualizaciones
+    de Seguridad Extendidas (ESU), sigue recibiendo parches.
+  tecnico: >-
+    Windows 10 22H2 llegó al fin de soporte el 14/10/2025. Solo los equipos inscriptos en ESU reciben
+    actualizaciones de seguridad (para consumidores se informó una extensión hasta el 12/10/2027).
+frases: ["mi windows 10 no se actualiza más", "windows 10 sin soporte", "me sale que windows 10 ya no tiene soporte"]
+sondas: [sistema]
+deteccion:
+  # Advertencia (no problema): si la PC está inscripta en ESU sigue recibiendo parches, y eso no se puede leer de forma confiable.
+  - si: "sistema.windows == 10 and sistema.fuera_de_soporte"
+    estado: advertencia
+    mensaje: "Tu {sistema.nombre} (versión {sistema.version}) dejó de tener soporte gratuito el {sistema.fin_soporte}. Si no está inscripta en las Actualizaciones de Seguridad Extendidas (ESU), ya no recibe arreglos de seguridad."
+pasos:
+  - texto: "Abrí Windows Update y fijate si dice que la PC está inscripta en las Actualizaciones de Seguridad Extendidas (ESU)."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si no está inscripta, en esa misma pantalla puede aparecer la opción para inscribirla."
+  - texto: "Para pasar a Windows 11 sin costo, la PC tiene que cumplir los requisitos oficiales (TPM 2.0, Secure Boot, procesador compatible)."
+    abrir: "https://www.microsoft.com/windows/windows-11-specifications"
+derivar: "Si la PC no admite Windows 11 ni ESU, consultá con un técnico las alternativas antes de seguir usándola para bancos o trámites."
+fuentes:
+  - https://learn.microsoft.com/lifecycle/products/windows-10-home-and-pro
+  - https://learn.microsoft.com/windows/release-health/release-information
+madurez: T1
+---
+id: WIN-LIFE-002
+area: windows
+titulo:
+  sencillo: "Esta versión de Windows 11 se quedó sin soporte"
+  tecnico: "Versión de Windows 11 fuera de servicio"
+explicacion:
+  sencillo: "Cada versión de Windows 11 recibe arreglos durante un tiempo limitado. Hay que actualizar a la versión nueva, que es gratis."
+  tecnico: "Las versiones de Windows 11 Home/Pro tienen 24 meses de servicio; Enterprise/Education, 36 meses."
+frases: ["windows dice que mi versión ya no tiene soporte", "tengo que actualizar windows 11", "windows 11 viejo"]
+sondas: [sistema]
+deteccion:
+  - si: "sistema.windows == 11 and sistema.fuera_de_soporte"
+    estado: problema
+    mensaje: "Tu Windows 11 versión {sistema.version} dejó de recibir arreglos de seguridad el {sistema.fin_soporte}."
+  - si: "sistema.windows == 11 and sistema.dias_para_fin_soporte <= 60"
+    estado: advertencia
+    mensaje: "Tu Windows 11 versión {sistema.version} deja de recibir arreglos el {sistema.fin_soporte} (faltan {sistema.dias_para_fin_soporte} días)."
+pasos:
+  - texto: "Abrí Windows Update, tocá «Buscar actualizaciones» e instalá la actualización de versión que aparezca. Tus archivos y programas se conservan."
+    abrir: "ms-settings:windowsupdate"
+fuentes:
+  - https://learn.microsoft.com/windows/release-health/windows11-release-information
+madurez: T1
+---
+id: WIN-LIFE-004
+area: windows
+titulo:
+  sencillo: "Esta PC usa una versión de prueba de Windows"
+  tecnico: "Compilación Insider / no publicada"
+explicacion:
+  sencillo: "Las versiones de prueba (Windows Insider) reciben novedades antes, pero pueden tener errores y no tienen fecha de soporte publicada."
+  tecnico: "La compilación es posterior a las versiones generales conocidas por la biblioteca."
+frases: ["tengo windows insider", "versión de prueba de windows", "windows preview"]
+sondas: [sistema]
+deteccion:
+  - si: "sistema.insider"
+    estado: no_comprobado
+    mensaje: "La compilación {sistema.build} es una versión de prueba (Insider): no se puede comprobar su fecha de fin de soporte."
+pasos:
+  - texto: "Si la PC es para uso diario, conviene salir del programa Insider desde Windows Update > Programa Windows Insider."
+    abrir: "ms-settings:windowsinsider"
+fuentes:
+  - https://learn.microsoft.com/windows-insider/
+madurez: T1
+---
+id: WIN-ACT-001
+area: windows
+titulo:
+  sencillo: "Windows no está activado"
+  tecnico: "Licencia de Windows sin activar"
+explicacion:
+  sencillo: >-
+    Windows sin activar muestra avisos y limita la personalización. Se soluciona activándolo con una licencia
+    legítima: muchas PCs ya la tienen guardada en la placa madre o vinculada a la cuenta Microsoft.
+  tecnico: "SoftwareLicensingProduct.LicenseStatus distinto de 1 (Licensed)."
+frases: ["me dice activar windows", "windows no activado", "marca de agua activar windows", "windows dice que no es una copia original"]
+sondas: [licencia]
+deteccion:
+  - si: "not licencia.activado"
+    estado: problema
+    mensaje: "Windows no está activado (estado: {licencia.estado_texto})."
+pasos:
+  - texto: "Abrí la pantalla de Activación. Si cambiaste piezas de la PC, usá «Solucionar problemas» e iniciá sesión con tu cuenta Microsoft."
+    abrir: "ms-settings:activation"
+  - texto: "Si no tenés licencia, se puede comprar desde esa misma pantalla en la Microsoft Store. PC Doctor nunca activa Windows por vías no oficiales."
+fuentes:
+  - https://support.microsoft.com/windows/activate-windows-c39005d4-95ee-b91e-b399-2820fda32227
+madurez: T1
+---
+id: WIN-UPD-010
+area: windows
+titulo:
+  sencillo: "Hay actualizaciones esperando que reinicies"
+  tecnico: "Reinicio pendiente (CBS / Windows Update)"
+explicacion:
+  sencillo: "Windows descargó arreglos pero no los termina de instalar hasta que reiniciás. Mientras tanto la PC puede andar más lenta o fallar."
+  tecnico: "Existe RebootPending (CBS) o RebootRequired (WindowsUpdate\\Auto Update)."
+frases: ["windows me pide reiniciar", "actualizaciones pendientes", "reiniciar para actualizar"]
+sondas: [sistema]
+deteccion:
+  - si: "sistema.reinicio_pendiente"
+    estado: advertencia
+    mensaje: "Windows tiene actualizaciones instaladas a medias que necesitan un reinicio."
+pasos:
+  - texto: "Guardá lo que estés haciendo y elegí Inicio > Encendido > «Actualizar y reiniciar»."
+    abrir: "ms-settings:windowsupdate"
+fuentes:
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+madurez: T1
+---
+id: WIN-UPT-001
+area: rendimiento
+titulo:
+  sencillo: "La PC hace muchos días que no se reinicia"
+  tecnico: "Tiempo de actividad prolongado"
+explicacion:
+  sencillo: >-
+    Con el «Inicio rápido» de Windows, apagar no es lo mismo que reiniciar: Windows no se limpia del todo.
+    Reiniciar de vez en cuando corrige lentitud y errores raros.
+  tecnico: "GetTickCount64 alto: el inicio rápido (hibernación del kernel) no reinicia el contador al apagar."
+frases: ["nunca reinicio la compu", "la compu está prendida hace días", "apago y sigue igual de lenta"]
+sondas: [sistema]
+deteccion:
+  - si: "sistema.horas_encendida >= 336"
+    estado: advertencia
+    mensaje: "Windows lleva {sistema.horas_encendida:0} horas sin reiniciarse."
+pasos:
+  - texto: "Usá Inicio > Encendido > «Reiniciar» (no «Apagar») al menos una vez por semana."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/kernel/distinguishing-fast-startup-from-wake-from-hibernation
+madurez: T1
+---
+id: WIN-BSOD-001
+area: windows
+titulo:
+  sencillo: "La PC tuvo pantallas azules"
+  tecnico: "Errores de detención (bugcheck) recientes"
+explicacion:
+  sencillo: "Una pantalla azul es un error grave: Windows se detiene para protegerse. El código indica qué parte falló (un controlador, la memoria, el disco)."
+  tecnico: "Eventos WER-SystemErrorReporting 1001 en los últimos 30 días."
+frases: ["me sale pantalla azul", "pantallazo azul", "se reinicia con una pantalla azul", "error critical process died", "pantalla azul con una carita triste"]
+sondas: [eventos]
+deteccion:
+  - si: "eventos.pantallas_azules_30d >= 2"
+    estado: problema
+    mensaje: "Hubo {eventos.pantallas_azules_30d} pantallas azules en los últimos 30 días: {eventos.codigos_bsod}."
+  - si: "eventos.pantallas_azules_30d >= 1"
+    estado: advertencia
+    mensaje: "Hubo una pantalla azul en los últimos 30 días: {eventos.codigos_bsod}."
+pasos:
+  - texto: "Instalá todas las actualizaciones de Windows, incluidas las opcionales de controladores."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si el código menciona MEMORY_MANAGEMENT o WHEA, conviene probar la memoria y el hardware (ver informe técnico)."
+  - texto: "Microsoft tiene una guía para reinicios inesperados y pantallas azules (desconectar hardware nuevo, dejar espacio libre, actualizar)."
+    abrir: "https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors"
+derivar: "Si las pantallas azules siguen después de actualizar, llevá el informe técnico a un técnico: el código y la fecha le ahorran horas."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-code-reference2
+  - https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors
+madurez: T1
+---
+id: WIN-PWR-010
+area: windows
+titulo:
+  sencillo: "La PC se apagó o reinició sin avisar"
+  tecnico: "Kernel-Power 41 (apagado no limpio)"
+explicacion:
+  sencillo: >-
+    Windows registró apagados inesperados. Puede ser un corte de luz, mantener apretado el botón de encendido,
+    una pantalla azul o un problema de temperatura o de energía. PC Doctor no puede medir la fuente de alimentación:
+    si pasa jugando o con mucha carga, hace falta revisarla físicamente.
+  tecnico: "Evento 41 de Microsoft-Windows-Kernel-Power: el sistema se reinició sin un apagado limpio."
+frases: ["se me apaga sola la compu", "se reinicia sola", "se apaga cuando juego", "se corta y se prende de nuevo"]
+sondas: [eventos]
+deteccion:
+  - si: "eventos.apagados_inesperados_30d >= 3"
+    estado: problema
+    mensaje: "Hubo {eventos.apagados_inesperados_30d} apagados o reinicios inesperados en los últimos 30 días."
+  - si: "eventos.apagados_inesperados_30d >= 1"
+    estado: advertencia
+    mensaje: "Hubo {eventos.apagados_inesperados_30d} apagado(s) inesperado(s) en los últimos 30 días."
+pasos:
+  - texto: "Recordá si coincidieron con cortes de luz o con haber apagado con el botón. Si no, fijate si pasa siempre con el mismo programa o juego."
+  - texto: "Revisá que las salidas de aire no estén tapadas y que no haya mucho polvo."
+derivar: "Si se apaga bajo carga (juegos, edición) sin pantalla azul ni sobrecalentamiento, la fuente o la refrigeración necesitan revisión física."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-client/performance/event-id-41-restart
+madurez: T1
+---
+id: WIN-DEV-001
+area: windows
+titulo:
+  sencillo: "Hay dispositivos que no funcionan bien"
+  tecnico: "Dispositivos con código de error en el Administrador de dispositivos"
+explicacion:
+  sencillo: "Windows detecta piezas o accesorios que no pueden funcionar, casi siempre por falta de un controlador (el programa que los hace andar)."
+  tecnico: "Win32_PnPEntity.ConfigManagerErrorCode distinto de 0 (excluye deshabilitados por el usuario y desconectados)."
+frases: ["algo no tiene controlador", "dispositivo desconocido", "falta un driver"]
+sondas: [dispositivos]
+deteccion:
+  - si: "dispositivos.con_error >= 1"
+    estado: problema
+    mensaje: "Dispositivos con problemas: {dispositivos.lista}."
+pasos:
+  - texto: "Abrí Actualizaciones opcionales de Windows Update e instalá los controladores que aparezcan."
+    abrir: "ms-settings:windowsupdate-optionalupdates"
+  - texto: "Si no aparecen, descargá el controlador solo desde la página oficial del fabricante de la PC o de la pieza."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/install/device-manager-error-messages
+madurez: T1
+---
+id: WIN-APP-001
+area: programas
+titulo:
+  sencillo: "Un programa se cierra solo seguido"
+  tecnico: "Fallas repetidas de una aplicación (Application Error 1000)"
+explicacion:
+  sencillo: "Windows registró que un programa se cerró con error muchas veces. Suele arreglarse actualizándolo o reparándolo."
+  tecnico: "Agrupación de eventos 1000 de Application Error por nombre de ejecutable en 30 días."
+frases: ["un programa se cierra solo", "se me cierra el programa", "el programa deja de funcionar", "se cierra de golpe"]
+sondas: [eventos]
+deteccion:
+  - si: "eventos.programa_mas_fallado_veces >= 5"
+    estado: advertencia
+    mensaje: "{eventos.programa_mas_fallado} se cerró con error {eventos.programa_mas_fallado_veces} veces en los últimos 30 días."
+pasos:
+  - texto: "Actualizá ese programa a su última versión desde su menú de ayuda o desde su página oficial."
+  - texto: "Si sigue fallando, buscalo en Aplicaciones instaladas y probá «Modificar» o «Reparar» si la opción existe."
+    abrir: "ms-settings:appsfeatures"
+fuentes:
+  - https://learn.microsoft.com/windows/win32/wer/windows-error-reporting
+madurez: T1
+---
+id: WIN-SB-001
+area: windows
+titulo:
+  sencillo: "El Arranque seguro (Secure Boot) está desactivado"
+  tecnico: "UEFI Secure Boot deshabilitado"
+explicacion:
+  sencillo: >-
+    El Arranque seguro impide que programas maliciosos se carguen antes que Windows. Lo exigen Windows 11 y
+    varios juegos online con anti-trampas. Se activa desde la configuración de la BIOS/UEFI.
+  tecnico: "UEFISecureBootEnabled = 0 con firmware UEFI."
+frases: ["el juego me pide secure boot", "arranque seguro desactivado", "secure boot apagado"]
+sondas: [plataforma]
+deteccion:
+  - si: "plataforma.uefi and not plataforma.secure_boot"
+    estado: advertencia
+    mensaje: "La PC arranca en modo UEFI pero con el Arranque seguro desactivado."
+pasos:
+  - texto: "IMPORTANTE: si el disco está cifrado con BitLocker, antes de tocar la BIOS tené a mano la clave de recuperación."
+    abrir: "https://account.microsoft.com/devices/recoverykey"
+  - texto: "Reiniciá y entrá a la BIOS/UEFI (suele ser F2, Supr, F10 o Esc al encender). Buscá «Secure Boot», activalo y guardá los cambios."
+derivar: "Si no encontrás la opción o la PC deja de arrancar, volvé a dejarla como estaba y consultá a un técnico."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/design/device-experiences/oem-secure-boot
+madurez: T1
+---
+id: WIN-LEG-001
+area: windows
+titulo:
+  sencillo: "La PC arranca en modo antiguo (Legacy/BIOS)"
+  tecnico: "Firmware en modo BIOS heredado (CSM)"
+explicacion:
+  sencillo: "El modo antiguo impide usar el Arranque seguro y pasar a Windows 11. Cambiarlo requiere convertir el disco y es una tarea delicada."
+  tecnico: "GetFirmwareType = FirmwareTypeBios. Pasar a UEFI requiere disco GPT (MBR2GPT) y cambiar el modo en el firmware."
+frases: ["mi pc está en legacy", "modo bios antiguo", "no puedo activar uefi"]
+sondas: [plataforma]
+deteccion:
+  - si: "not plataforma.uefi"
+    estado: advertencia
+    mensaje: "Windows arrancó en modo BIOS heredado (Legacy), no en UEFI."
+derivar: "La conversión a UEFI (MBR2GPT) modifica el disco: hacela solo con una copia de seguridad completa y, si no tenés experiencia, con un técnico."
+fuentes:
+  - https://learn.microsoft.com/windows/deployment/mbr-to-gpt
+madurez: T1
+---
+id: BOOT-BL-002
+area: windows
+tipo: sugerencia
+titulo:
+  sencillo: "Tu disco está cifrado: guardá la clave de recuperación"
+  tecnico: "BitLocker activo en el volumen del sistema"
+explicacion:
+  sencillo: >-
+    BitLocker protege tus archivos si te roban la PC. Pero si cambiás algo en la BIOS, la actualizás o arrancás
+    desde un pendrive, Windows puede pedir una clave de recuperación de 48 números. Sin esa clave, los archivos no se recuperan.
+  tecnico: "System.Volume.BitLockerProtection indica protección activa en el volumen del sistema."
+frases: ["me pide clave de bitlocker", "clave de recuperación bitlocker", "pantalla azul pide clave de 48 números"]
+sondas: [plataforma]
+deteccion:
+  - si: "plataforma.bitlocker_sistema"
+    estado: advertencia
+    mensaje: "El disco del sistema está cifrado con BitLocker. Antes de tocar la BIOS o arrancar desde un pendrive, asegurate de tener la clave de recuperación."
+pasos:
+  - texto: "Iniciá sesión en tu cuenta Microsoft y anotá o imprimí la clave de recuperación de esta PC. Guardala fuera de la computadora."
+    abrir: "https://account.microsoft.com/devices/recoverykey"
+fuentes:
+  - https://support.microsoft.com/windows/find-your-bitlocker-recovery-key-6b71ad27-0b89-ea08-f143-056f5ab347d6
+madurez: T1
+---
+id: WIN-UPD-001
+area: windows
+titulo:
+  sencillo: "Windows no se actualiza"
+  tecnico: "Fallas de Windows Update"
+explicacion:
+  sencillo: "Cuando Windows no se puede actualizar, suele ser por falta de espacio, una actualización trabada o un reinicio pendiente."
+  tecnico: "Guía inicial; la reparación automática de componentes de Windows Update llega en la próxima versión."
+frases: ["windows no se actualiza", "error al actualizar windows", "windows update no funciona", "se traba la actualización", "no puedo actualizar windows"]
+sondas: [sistema, disco, servicios]
+acciones: [wu.service.repair, win.dism.scan, win.dism.restore]
+pasos:
+  - texto: "Reiniciá la PC (no la apagues: reiniciala) y volvé a probar."
+  - texto: "Comprobá que haya al menos 20 GB libres en el disco del sistema (PC Doctor lo revisa en este análisis)."
+  - texto: "Abrí Windows Update y tocá «Buscar actualizaciones». Si muestra un código de error, anotalo."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "En Windows 11 podés usar Sistema > Recuperación > «Corregir problemas con Windows Update», que reinstala la versión actual sin borrar tus archivos."
+    abrir: "ms-settings:recovery"
+fuentes:
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+madurez: T0

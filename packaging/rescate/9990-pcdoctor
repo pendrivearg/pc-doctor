@@ -1,0 +1,46 @@
+#!/bin/sh
+# PC Doctor — prepara el modo rescate al arrancar desde el pendrive.
+# Lo ejecuta live-config (parámetro de arranque hooks=medium) como root, antes de que aparezca la consola.
+set -u
+M=/run/live/medium/pcdoctor
+[ -d "$M" ] || exit 0
+
+# Antivirus ClamAV y apertura de BitLocker: paquetes oficiales de Debian, verificados (SHA-256 del índice firmado) al armar el pendrive.
+if ls "$M"/debs/*.deb >/dev/null 2>&1; then
+	DEBIAN_FRONTEND=noninteractive dpkg -i "$M"/debs/*.deb >/var/log/pcdoctor-paquetes.log 2>&1 || true
+fi
+# Las firmas se actualizan solo cuando PC Doctor detecta Internet; el servicio automático queda apagado.
+systemctl disable --now clamav-freshclam.service >/dev/null 2>&1 || true
+mkdir -p /var/lib/clamav
+chown clamav:clamav /var/lib/clamav 2>/dev/null || true
+
+install -m 0755 "$M/pcdoctor-rescate" /usr/local/bin/pcdoctor-rescate
+
+cat > /etc/systemd/system/pcdoctor-rescate.service <<'EOF'
+[Unit]
+Description=PC Doctor - modo rescate
+After=live-config.service systemd-user-sessions.service
+Conflicts=getty@tty1.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/pcdoctor-rescate
+StandardInput=tty
+StandardOutput=tty
+StandardError=journal
+TTYPath=/dev/tty1
+TTYReset=yes
+TTYVHangup=yes
+TTYVTDisallocate=yes
+Restart=always
+RestartSec=1
+Environment=TERM=linux LANG=es_AR.UTF-8
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl daemon-reload
+systemctl mask getty@tty1.service >/dev/null 2>&1 || true
+systemctl enable pcdoctor-rescate.service >/dev/null 2>&1 || true
+systemctl --no-block start pcdoctor-rescate.service

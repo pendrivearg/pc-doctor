@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <AssemblyName>PCDoctor</AssemblyName>
+    <RootNamespace>PCDoctor.App</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>pcdoctor.ico</ApplicationIcon>
+    <AssemblyTitle>PC Doctor AI</AssemblyTitle>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <NoWarn>$(NoWarn);CA1416</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.3.22" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.22" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.22" />
+    <PackageReference Include="System.Speech" Version="10.0.14" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PCDoctor.Windows\PCDoctor.Windows.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="pcdoctor.ico" LogicalName="PCDoctor.App.pcdoctor.ico" />
+    <None Remove="pcdoctor.png" />
+  </ItemGroup>
+  <!-- Huellas de los archivos del agente con permiso (las pone tools/publicar.ps1). La interfaz las comprueba antes de pedir permiso. -->
+  <ItemGroup Condition="'$(AgentHashes)' != ''">
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute">
+      <_Parameter1>AgentHashes</_Parameter1>
+      <_Parameter2>$(AgentHashes)</_Parameter2>
+    </AssemblyAttribute>
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="PCDoctor.Snap" />
+    <InternalsVisibleTo Include="PCDoctor.Tests" />
+  </ItemGroup>
+</Project>

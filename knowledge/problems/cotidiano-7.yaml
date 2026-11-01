@@ -1,0 +1,156 @@
+# Navegadores (Chrome, Edge, página de inicio cambiada), WhatsApp en la PC, antivirus de prueba y compartir Internet. Guiadas con fuente oficial.
+id: APP-CHR-001
+area: programas
+titulo:
+  sencillo: "Google Chrome se cierra, se cuelga o muestra «¡Oh, no!»"
+  tecnico: "Fallos de Chrome y errores de carga de páginas"
+explicacion:
+  sencillo: "Casi siempre es falta de memoria por muchas pestañas, una extensión que anda mal o Chrome sin actualizar. Si falla una sola página, el problema suele ser de esa página."
+  tecnico: "Memoria, extensiones, caché, versión de Chrome, software no deseado o antivirus que inspecciona HTTPS."
+frases: ["el chrome se cierra solo", "google chrome se cuelga", "chrome me dice oh no", "el chrome no abre las páginas", "se tilda el chrome"]
+sondas: [ram]
+pasos:
+  - texto: "Recargá la página. Si falla una sola página y las demás andan, el problema es de esa página."
+  - texto: "Cerrá las pestañas que no uses. Abrí la página en una ventana de incógnito (Ctrl + Mayús + N): si ahí anda, desactivá las extensiones de a una para encontrar la que falla."
+  - texto: "Actualizá Chrome: menú de los tres puntos > Ayuda > Información de Google Chrome. Después reiniciá la computadora."
+  - texto: "Si sigue igual, hacé un examen con Microsoft Defender por si hay algún programa no deseado."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Google explica cada mensaje de error."
+    abrir: "https://support.google.com/chrome/answer/95669?hl=es-419"
+fuentes:
+  - https://support.google.com/chrome/answer/95669?hl=es-419
+madurez: T0
+---
+id: APP-EDG-001
+area: programas
+titulo:
+  sencillo: "Microsoft Edge se cierra o no abre"
+  tecnico: "Edge no responde, se bloquea o no inicia"
+explicacion:
+  sencillo: "Edge se puede reparar desde Configuración sin perder tus favoritos ni tus contraseñas guardadas. Antes conviene probar lo simple: cerrar pestañas, actualizar y reiniciar."
+  tecnico: "Liberar memoria, actualizar Edge, examen antimalware, reinicio y Reparar (Aplicaciones instaladas > Microsoft Edge > Modificar)."
+frases: ["el edge se cierra solo", "no abre el microsoft edge", "el navegador edge se cuelga", "edge dejó de funcionar"]
+sondas: [ram]
+pasos:
+  - texto: "Cerrá las pestañas y programas que no uses y quitá las extensiones que no necesites."
+  - texto: "Actualizá Edge: menú de los tres puntos > Configuración > Acerca de Microsoft Edge. Después reiniciá la computadora."
+  - texto: "Si sigue fallando, repará Edge: cerralo, buscalo en Aplicaciones instaladas > tres puntos > Modificar > Reparar (necesita Internet). Tus datos y configuraciones no se tocan."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Microsoft lo explica según el caso (se cierra, deja de responder o no abre)."
+    abrir: "https://support.microsoft.com/microsoft-edge/what-to-do-if-microsoft-edge-isn-t-working-cc0657a6-acd2-cbbd-1528-c0335c71312a"
+fuentes:
+  - https://support.microsoft.com/microsoft-edge/what-to-do-if-microsoft-edge-isn-t-working-cc0657a6-acd2-cbbd-1528-c0335c71312a
+madurez: T0
+---
+id: SEC-BRW-001
+area: seguridad
+titulo:
+  sencillo: "Me cambiaron la página de inicio o el buscador del navegador"
+  tecnico: "Página de inicio o motor de búsqueda modificados sin permiso"
+explicacion:
+  sencillo: >-
+    Algunos programas gratuitos, al instalarse, cambian la página que abre el navegador o el buscador por otro lleno de publicidad.
+    Se vuelve atrás desde la configuración del navegador y quitando la extensión o el programa que lo cambió.
+  tecnico: "Secuestro de página de inicio/buscador por extensiones o software no deseado (PUA)."
+frases: ["me cambió la página de inicio sola", "el buscador del navegador cambió solo", "se abre una página rara al abrir el navegador", "me cambiaron google por otro buscador"]
+sondas: [seguridad]
+pasos:
+  - texto: "Revisá las extensiones del navegador y quitá las que no reconozcas."
+  - texto: "Volvé a poner tu página de inicio (en Edge: Configuración > Inicio, página principal y nuevas pestañas)."
+    abrir: "https://support.microsoft.com/microsoft-edge/change-your-browser-home-page-a531e1b8-ed54-d057-0262-cc5983a065c6"
+  - texto: "Volvé a elegir tu buscador (en Edge: Configuración > Privacidad, búsqueda y servicios > Barra de direcciones y búsqueda)."
+    abrir: "https://support.microsoft.com/microsoft-edge/change-your-default-search-engine-in-microsoft-edge-cccaf51c-a4df-a43e-8036-d4d2c527a791"
+  - texto: "Desinstalá los programas que no recuerdes haber instalado y hacé un examen completo con Microsoft Defender."
+    abrir: "ms-settings:windowsdefender"
+fuentes:
+  - https://support.microsoft.com/microsoft-edge/change-your-browser-home-page-a531e1b8-ed54-d057-0262-cc5983a065c6
+  - https://support.microsoft.com/microsoft-edge/change-your-default-search-engine-in-microsoft-edge-cccaf51c-a4df-a43e-8036-d4d2c527a791
+madurez: T0
+---
+id: SEC-AV-003
+area: seguridad
+titulo:
+  sencillo: "El antivirus de prueba se venció y me pide pagar"
+  tecnico: "Antivirus de terceros vencido o no deseado"
+explicacion:
+  sencillo: >-
+    Muchas computadoras vienen con un antivirus de prueba (McAfee, Norton y otros) que después pide pagar. No hace falta:
+    Windows trae Microsoft Defender gratis, y se vuelve a activar solo cuando el otro antivirus se desinstala o se vence.
+  tecnico: "En Windows 10/11 Defender pasa a deshabilitado con un antivirus de terceros y se reactiva automáticamente si ese producto vence o se desinstala."
+frases: ["el antivirus de prueba se venció", "me pide pagar el antivirus", "quiero desinstalar el mcafee", "quiero sacar el norton de la compu", "me aparecen avisos del antivirus para que lo compre"]
+sondas: [seguridad]
+pasos:
+  - texto: "Desinstalá el antivirus de prueba: Configuración > Aplicaciones > Aplicaciones instaladas > tres puntos junto al antivirus > Desinstalar. Reiniciá la PC."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Si no se deja desinstalar, Microsoft explica otras formas. Si tampoco funciona, buscá la «herramienta de desinstalación» en la página oficial del fabricante del antivirus."
+    abrir: "https://support.microsoft.com/windows/uninstall-or-remove-apps-and-programs-in-windows-4b55f974-2cc6-2d2b-d092-5905080eaf98"
+  - texto: "Después del reinicio, abrí Seguridad de Windows y comprobá que Microsoft Defender esté activo. Volvé a pasar el diagnóstico de PC Doctor para confirmarlo."
+    abrir: "ms-settings:windowsdefender"
+derivar: "Nunca pagues desde una ventana que aparece sola en el navegador: los antivirus de verdad no te avisan así."
+fuentes:
+  - https://learn.microsoft.com/defender-endpoint/microsoft-defender-antivirus-compatibility
+  - https://support.microsoft.com/windows/uninstall-or-remove-apps-and-programs-in-windows-4b55f974-2cc6-2d2b-d092-5905080eaf98
+madurez: T0
+---
+id: DAY-WA-001
+area: programas
+titulo:
+  sencillo: "Quiero usar WhatsApp en la computadora"
+  tecnico: "WhatsApp Web / WhatsApp para Windows (dispositivo vinculado)"
+explicacion:
+  sencillo: "WhatsApp se usa en la computadora vinculándola con tu celular: la compu muestra un código QR y lo escaneás con el celular. Tus chats aparecen en las dos."
+  tecnico: "Dispositivos vinculados: hasta 4 por teléfono; se desvinculan si el teléfono no se usa por más de 14 días."
+frases: ["quiero usar whatsapp en la compu", "cómo pongo el whatsapp en la computadora", "whatsapp web no conecta", "el whatsapp de la pc se desconectó", "escanear el código de whatsapp"]
+pasos:
+  - texto: "En la computadora, abrí WhatsApp para Windows (desde Microsoft Store) o entrá a web.whatsapp.com. Va a aparecer un código QR."
+  - texto: "En el celular: Android: tres puntitos > Dispositivos vinculados > Vincular un dispositivo. iPhone: Configuración > Dispositivos vinculados > Vincular un dispositivo. Apuntá la cámara al código de la pantalla."
+  - texto: "Si se desconectó: cerrá sesión en la computadora y volvé a vincularla. Usá WhatsApp en el celular al menos cada dos semanas para que no se desvincule."
+  - texto: "WhatsApp lo explica paso a paso."
+    abrir: "https://faq.whatsapp.com/539218963354346"
+fuentes:
+  - https://faq.whatsapp.com/539218963354346
+madurez: T0
+---
+id: NET-HOT-001
+area: red
+titulo:
+  sencillo: "Quiero usar el Internet del celular en la computadora"
+  tecnico: "Zona Wi-Fi (hotspot) o anclaje de red del teléfono"
+explicacion:
+  sencillo: >-
+    Si no hay Wi-Fi, el celular puede compartir sus datos y la computadora se conecta a él como a cualquier Wi-Fi.
+    Gasta datos del plan del celular, y algunas compañías lo limitan o lo cobran aparte.
+  tecnico: "Hotspot Wi-Fi, anclaje USB o Bluetooth del teléfono (Android: Zona Wi-Fi; iPhone: Compartir Internet)."
+frases: ["quiero usar el internet del celular en la compu", "compartir los datos del celular con la notebook", "conectar la compu al celular para tener internet", "no tengo wifi y quiero usar los datos del teléfono"]
+pasos:
+  - texto: "Android: deslizá desde arriba, mantené apretado el ícono «Zona Wi-Fi» (o «Hotspot») y activalo. Ahí ves el nombre y la clave."
+    abrir: "https://support.google.com/android/answer/9059108?hl=es-419"
+  - texto: "iPhone: Configuración > Compartir Internet (o Datos celulares > Compartir Internet), y activá «Permitir a otros conectarse»."
+    abrir: "https://support.apple.com/es-mx/111785"
+  - texto: "En la computadora, elegí la red del celular en la lista de Wi-Fi y escribí la clave que muestra el teléfono."
+    abrir: "ms-settings:network-wifi"
+  - texto: "Dejá el celular enchufado mientras compartís y apagá la zona Wi-Fi cuando termines: gasta batería y datos."
+derivar: "Si el celular no tiene la opción o no conecta, consultá a tu compañía de celular: algunos planes no la incluyen."
+fuentes:
+  - https://support.google.com/android/answer/9059108?hl=es-419
+  - https://support.apple.com/es-mx/111785
+madurez: T0
+---
+id: NET-HOT-002
+area: red
+titulo:
+  sencillo: "Quiero compartir el Internet de la computadora con otros aparatos"
+  tecnico: "Zona con cobertura inalámbrica móvil de Windows"
+explicacion:
+  sencillo: "Windows puede convertir la computadora en un Wi-Fi para que se conecten el celular, una tablet u otra PC. Sirve, por ejemplo, si la compu tiene Internet por cable."
+  tecnico: "Mobile hotspot: comparte Wi-Fi, Ethernet o datos móviles por Wi-Fi o Bluetooth, con nombre, clave y banda configurables."
+frases: ["quiero compartir el internet de la compu con el celular", "usar la notebook como wifi", "hacer una zona wifi con la computadora", "la compu tiene internet por cable y quiero wifi para el celular"]
+pasos:
+  - texto: "Abrí Zona con cobertura inalámbrica móvil, elegí qué conexión compartir y activala. Ahí ves el nombre de la red y la clave (o un código QR)."
+    abrir: "ms-settings:network-mobilehotspot"
+  - texto: "En el celular, buscá esa red en la lista de Wi-Fi y escribí la clave, o escaneá el código QR."
+  - texto: "Microsoft lo explica paso a paso. Si la PC usa datos móviles, gasta datos de ese plan."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/use-your-windows-device-as-a-mobile-hotspot"
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/use-your-windows-device-as-a-mobile-hotspot
+madurez: T0

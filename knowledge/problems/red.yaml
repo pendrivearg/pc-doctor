@@ -1,0 +1,181 @@
+# Módulo D — Internet y redes. El orden de las capas permite decir si falla la PC, el router o el proveedor.
+id: NET-001
+area: red
+titulo:
+  sencillo: "La computadora no está conectada a ninguna red"
+  tecnico: "Sin adaptador de red físico conectado"
+explicacion:
+  sencillo: "La PC no está conectada ni por Wi-Fi ni por cable. Puede estar el modo avión activado, el Wi-Fi apagado o el cable desenchufado."
+  tecnico: "Ninguna interfaz física en estado Up con puerta de enlace."
+frases: ["no me anda internet", "no tengo internet", "no me conecta el wifi", "no aparece el wifi", "se desconectó internet", "sin conexión"]
+sondas: [red]
+deteccion:
+  - si: "not red.adaptador_conectado"
+    estado: problema
+    mensaje: "La PC no está conectada a ninguna red."
+pasos:
+  - texto: "Fijate que el modo avión esté desactivado y el Wi-Fi activado."
+    abrir: "ms-settings:network-airplanemode"
+  - texto: "Elegí tu red Wi-Fi y conectate (te va a pedir la clave del Wi-Fi, que suele estar en una etiqueta del router)."
+    abrir: "ms-settings:network-wifi"
+  - texto: "Si usás cable, revisá que esté bien enchufado en la PC y en el router (debería encenderse una luz junto al conector)."
+fuentes:
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+madurez: T1
+---
+id: NET-002
+area: red
+titulo:
+  sencillo: "La PC está conectada pero el router no le da dirección"
+  tecnico: "Dirección APIPA 169.254.x.x (DHCP sin respuesta)"
+explicacion:
+  sencillo: "La PC está conectada, pero el router no le asignó una dirección para navegar. Casi siempre se arregla reiniciando el router."
+  tecnico: "IPv4 autoconfigurada (169.254.0.0/16) sin puerta de enlace: el cliente DHCP no obtuvo concesión."
+frases: ["conectado sin internet", "dice sin acceso a internet", "red no identificada"]
+sondas: [red]
+deteccion:
+  - si: "red.apipa"
+    estado: problema
+    mensaje: "La PC tiene una dirección 169.254.x.x: el router no le respondió."
+pasos:
+  - texto: "Apagá el router (y el módem si son dos aparatos), esperá 30 segundos y volvé a encenderlo. Esperá 2 minutos."
+  - texto: "Desconectá y volvé a conectar el Wi-Fi o el cable."
+    abrir: "ms-settings:network-status"
+derivar: "Si otras computadoras o celulares tampoco se conectan, el problema es del router: llamá a tu proveedor."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-server/networking/troubleshoot-dhcp-guidance
+madurez: T1
+---
+id: NET-003
+area: red
+titulo:
+  sencillo: "El router no responde"
+  tecnico: "Puerta de enlace inaccesible"
+explicacion:
+  sencillo: "La PC está conectada a la red pero el router no contesta. Puede estar colgado, o la señal Wi-Fi es muy débil."
+  tecnico: "Sin respuesta ICMP ni TCP (53/80/443) de la puerta de enlace y sin salida externa."
+frases: ["no me anda internet", "el wifi está conectado pero no navega", "internet no funciona"]
+sondas: [red]
+deteccion:
+  # Algunas redes (trabajo, escuela) bloquean esos servidores pero la web funciona: solo es problema si la web también falla.
+  - si: "red.puerta_enlace_ok == false and red.externo_ok == false and red.web != 'ok'"
+    estado: problema
+    mensaje: "El router ({red.puerta_enlace}) no responde."
+pasos:
+  - texto: "Apagá el router 30 segundos y volvé a encenderlo."
+  - texto: "Si usás Wi-Fi, acercate al router o probá con cable."
+fuentes:
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+madurez: T1
+---
+id: NET-004
+area: red
+titulo:
+  sencillo: "El router funciona pero no llega Internet"
+  tecnico: "Puerta de enlace accesible sin conectividad externa"
+explicacion:
+  sencillo: "La PC llega al router, pero el router no tiene salida a Internet. Normalmente es un corte del proveedor o del módem, no de la computadora."
+  tecnico: "Gateway responde; fallan las conexiones TCP a 1.1.1.1:443, 8.8.8.8:53 y 9.9.9.9:443."
+frases: ["no me anda internet", "se cortó internet", "internet no carga nada"]
+sondas: [red]
+deteccion:
+  - si: "red.puerta_enlace_ok and not red.externo_ok and red.web != 'ok'"
+    estado: problema
+    mensaje: "El router responde, pero no hay salida a Internet."
+pasos:
+  - texto: "Mirá las luces del router/módem: si la de Internet está roja o apagada, el corte es del proveedor."
+  - texto: "Reiniciá el router y el módem (30 segundos apagados)."
+derivar: "Si sigue igual, llamá al servicio técnico de tu proveedor de Internet: la computadora está bien."
+fuentes:
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+madurez: T1
+---
+id: NET-DNS-001
+area: red
+titulo:
+  sencillo: "Hay Internet pero las páginas no abren"
+  tecnico: "Resolución DNS fallando con conectividad IP operativa"
+explicacion:
+  sencillo: "La conexión funciona, pero la PC no logra «traducir» los nombres de las páginas. Por eso a veces anda WhatsApp pero no Google."
+  tecnico: "Conexiones TCP a IPs públicas exitosas; fallan las consultas DNS."
+frases: ["whatsapp anda pero google no", "no me abren las páginas", "no se encuentra la dirección dns del servidor", "dns no responde", "los mensajes llegan pero las páginas no abren"]
+sondas: [red]
+deteccion:
+  - si: "red.externo_ok and not red.dns_ok"
+    estado: problema
+    mensaje: "Hay salida a Internet, pero no se pueden resolver los nombres de las páginas (DNS: {red.dns_servidores})."
+acciones: [net.dns.flush]
+pasos:
+  - texto: "Reiniciá el router: muchas veces es su DNS el que se colgó."
+derivar: "Si sigue, tu proveedor puede tener caídos sus servidores DNS."
+fuentes:
+  - https://learn.microsoft.com/windows-server/networking/dns/troubleshoot/troubleshoot-dns-client
+madurez: T1
+---
+id: NET-CAP-001
+area: red
+titulo:
+  sencillo: "Esta red pide iniciar sesión"
+  tecnico: "Portal cautivo detectado"
+explicacion:
+  sencillo: "Algunas redes Wi-Fi (bares, hoteles, aeropuertos) piden aceptar condiciones o ingresar un código en una página antes de dejarte navegar."
+  tecnico: "La sonda NCSI recibió una redirección o contenido distinto del esperado."
+frases: ["el wifi del hotel no anda", "wifi público no navega", "red de invitados no conecta"]
+sondas: [red]
+deteccion:
+  - si: "red.web == 'portal'"
+    estado: advertencia
+    mensaje: "La red a la que estás conectado pide iniciar sesión en una página antes de navegar."
+pasos:
+  - texto: "Abrí el navegador e intentá entrar a cualquier página: debería aparecer la página de acceso de la red."
+fuentes:
+  - https://learn.microsoft.com/windows-server/networking/ncsi/ncsi-overview
+madurez: T1
+---
+id: NET-PRX-001
+area: red
+titulo:
+  sencillo: "Hay un proxy configurado"
+  tecnico: "Proxy WinINET o script PAC activo"
+explicacion:
+  sencillo: >-
+    Un proxy hace pasar toda tu navegación por otra computadora. Lo usan algunas empresas, pero también
+    programas maliciosos para espiar o mostrar publicidad. Si no lo pusiste vos ni es de tu trabajo, conviene sacarlo.
+  tecnico: "HKCU Internet Settings: ProxyEnable=1 o AutoConfigURL definido."
+frases: ["internet anda raro", "me aparecen anuncios en todas las páginas", "proxy no responde"]
+sondas: [red]
+deteccion:
+  - si: "red.proxy_activado"
+    estado: advertencia
+    mensaje: "Tu usuario tiene un proxy configurado: {red.proxy_detalle}."
+acciones: [net.proxy.disable]
+pasos:
+  - texto: "Si es la PC del trabajo, no lo cambies: consultá con el área de sistemas."
+    abrir: "ms-settings:network-proxy"
+fuentes:
+  - https://support.microsoft.com/windows/use-a-proxy-server-in-windows-03096c53-0554-4ffe-b6ab-8b1deee8dae1
+madurez: T1
+---
+id: WIN-TIME-001
+area: windows
+titulo:
+  sencillo: "La hora de la computadora está mal"
+  tecnico: "Desfase del reloj del sistema"
+explicacion:
+  sencillo: >-
+    Con la hora equivocada, las páginas seguras (bancos, correo, trámites) dan error de certificado. Si se
+    desajusta cada vez que apagás, la pila de la placa madre se agotó.
+  tecnico: "Diferencia SNTP con time.windows.com superior a 2 minutos."
+frases: ["la hora está mal", "se atrasa la hora", "error de certificado en todas las páginas", "la fecha está mal"]
+sondas: [hora]
+deteccion:
+  - si: "hora.desfase_seg >= 120"
+    estado: problema
+    mensaje: "El reloj de la PC está desfasado {hora.desfase_seg} segundos respecto de la hora real."
+pasos:
+  - texto: "Activá «Establecer la hora automáticamente» y tocá «Sincronizar ahora». Revisá que la zona horaria sea la correcta."
+    abrir: "ms-settings:dateandtime"
+derivar: "Si la hora vuelve a desajustarse cada vez que apagás la PC, la pila de la placa madre (CR2032) hay que cambiarla."
+fuentes:
+  - https://learn.microsoft.com/windows-server/networking/windows-time-service/windows-time-service-top
+madurez: T1

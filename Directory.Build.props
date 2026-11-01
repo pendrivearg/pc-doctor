@@ -1,0 +1,16 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Version>0.2.0</Version>
+    <Company>PC Doctor AI</Company>
+    <Product>PC Doctor AI</Product>
+    <Copyright>PC Doctor AI</Copyright>
+    <SatelliteResourceLanguages>es</SatelliteResourceLanguages>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <!-- Salidas de compilación en una ruta corta (evita el límite de 260 caracteres de Windows). -->
+    <UseArtifactsOutput>true</UseArtifactsOutput>
+    <ArtifactsPath>$(LOCALAPPDATA)\pcdbuild</ArtifactsPath>
+  </PropertyGroup>
+</Project>

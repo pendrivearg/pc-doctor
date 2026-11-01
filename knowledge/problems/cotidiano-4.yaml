@@ -1,0 +1,290 @@
+# Periféricos, pantallas, accesibilidad, familia, recuperación y programas (módulos E, G, Q, S, B). Guiadas con fuente oficial.
+id: PRN-003
+area: perifericos
+titulo:
+  sencillo: "La impresora figura «sin conexión»"
+  tecnico: "Impresora en estado Offline"
+explicacion:
+  sencillo: "Windows cree que la impresora está desconectada. A veces es real (apagada o en otra red Wi-Fi) y a veces quedó marcada «usar sin conexión»."
+  tecnico: "Red distinta, cola en pausa o «Usar impresora sin conexión» activado."
+frases: ["la impresora dice sin conexión", "la impresora figura desconectada", "impresora offline", "la impresora aparece apagada pero está prendida"]
+sondas: [servicios]
+pasos:
+  - texto: "Revisá que la impresora esté prendida y conectada a la misma red Wi-Fi que la computadora (o por cable USB)."
+  - texto: "En Impresoras y escáneres elegí tu impresora > Abrir cola de impresión > menú Impresora y destildá «Usar impresora sin conexión» y «Pausar la impresión»."
+    abrir: "ms-settings:printers"
+  - texto: "Microsoft explica los demás pasos."
+    abrir: "https://support.microsoft.com/windows/hardware/printer/troubleshooting-offline-printer-problems-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/printer/troubleshooting-offline-printer-problems-in-windows
+madurez: T0
+---
+id: PRN-004
+area: perifericos
+titulo:
+  sencillo: "Quiero escanear un documento"
+  tecnico: "Instalación y uso de un escáner"
+explicacion:
+  sencillo: "Windows trae una aplicación gratuita (Escáner de Windows). Si el escáner no aparece, se agrega desde Impresoras y escáneres."
+  tecnico: "Detección del dispositivo y app Windows Scan."
+frases: ["cómo escaneo un documento", "no me aparece el escáner", "quiero escanear una hoja", "el escáner no funciona"]
+pasos:
+  - texto: "Conectá y prendé el escáner (o la impresora con escáner). Si no aparece, agregalo en Impresoras y escáneres > Agregar dispositivo."
+    abrir: "ms-settings:printers"
+  - texto: "Abrí la aplicación «Escáner de Windows» desde el menú Inicio, elegí el escáner y tocá «Escanear». Si no la tenés, se instala gratis desde la Microsoft Store."
+    abrir: "https://support.microsoft.com/windows/hardware/printer/install-and-use-a-scanner-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/printer/install-and-use-a-scanner-in-windows
+madurez: T0
+---
+id: DSP-002
+area: hardware
+titulo:
+  sencillo: "La pantalla parpadea o titila"
+  tecnico: "Parpadeo de pantalla (controlador de video o aplicación)"
+explicacion:
+  sencillo: "Suele ser el controlador de video o un programa que no se lleva bien con Windows. Hay un atajo que reinicia el video sin apagar la PC."
+  tecnico: "Si el Administrador de tareas también parpadea, es el controlador; si no, una aplicación incompatible."
+frases: ["la pantalla parpadea", "la pantalla titila", "la imagen tiembla", "el monitor hace como flashes"]
+sondas: [gpu, eventos]
+pasos:
+  - texto: "Apretá Windows + Ctrl + Mayús + B: reinicia el video (la pantalla se pone negra un segundo). Si sigue, reiniciá la PC."
+  - texto: "Abrí el Administrador de tareas (Ctrl + Mayús + Esc). Si también parpadea, actualizá el controlador de video; si no, el problema es un programa: actualizalo o desinstalalo."
+    abrir: "https://support.microsoft.com/windows/hardware/display-graphics/troubleshoot-screen-flickering-in-windows"
+  - texto: "Revisá que el cable del monitor esté bien enchufado en los dos extremos."
+fuentes:
+  - https://support.microsoft.com/windows/hardware/display-graphics/troubleshoot-screen-flickering-in-windows
+madurez: T0
+---
+id: DSP-003
+area: hardware
+titulo:
+  sencillo: "No detecta el segundo monitor"
+  tecnico: "Monitor externo no detectado"
+explicacion:
+  sencillo: "Casi siempre se arregla eligiendo el modo «Extender» con Windows + P, o tocando «Detectar» en la configuración de pantalla."
+  tecnico: "Modo de proyección, detección manual, cable/adaptador y controlador de video."
+frases: ["no me detecta el segundo monitor", "conecté otro monitor y no anda", "el monitor externo no da imagen", "dos pantallas no funciona"]
+sondas: [gpu]
+pasos:
+  - texto: "Apretá Windows + P y elegí «Extender»."
+  - texto: "En Pantalla > Varias pantallas, tocá «Detectar»."
+    abrir: "ms-settings:display"
+  - texto: "Probá otro cable o puerto, y quitá adaptadores intermedios para descartar que fallen."
+    abrir: "https://support.microsoft.com/windows/hardware/display-graphics/troubleshoot-external-monitor-connections-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/display-graphics/troubleshoot-external-monitor-connections-in-windows
+madurez: T0
+---
+id: PER-MOU-001
+area: perifericos
+titulo:
+  sencillo: "El mouse o el teclado no funcionan"
+  tecnico: "Mouse o teclado sin respuesta"
+explicacion:
+  sencillo: "Suele ser el puerto, las pilas o el receptor inalámbrico. Si en otra computadora tampoco anda, el aparato está roto."
+  tecnico: "Conexión USB, alimentación, receptor inalámbrico y controlador."
+frases: ["no me anda el mouse", "el teclado no escribe nada", "el mouse no se mueve", "el teclado inalámbrico no responde"]
+sondas: [dispositivos]
+pasos:
+  - texto: "Desenchufalo y enchufalo en otro puerto USB, directo en la computadora."
+  - texto: "Si es inalámbrico: cambiá las pilas, y desenchufá el receptor, esperá 10 segundos y volvelo a enchufar."
+  - texto: "Probalo en otra computadora: si tampoco anda, hay que reemplazarlo."
+    abrir: "https://support.microsoft.com/windows/hardware/input-devices/mouse-and-keyboard-problems-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/input-devices/mouse-and-keyboard-problems-in-windows
+madurez: T0
+---
+id: PER-TPD-001
+area: perifericos
+titulo:
+  sencillo: "El panel táctil (touchpad) de la notebook no responde"
+  tecnico: "Touchpad deshabilitado o sin controlador"
+explicacion:
+  sencillo: "Muchas notebooks tienen una tecla que apaga el panel táctil sin querer. También puede faltar su controlador."
+  tecnico: "Activación del touchpad (tecla Fn o Configuración) y controlador."
+frases: ["no anda el panel de la notebook", "el touchpad no responde", "no se mueve la flechita con el dedo", "se desactivó el touchpad"]
+pasos:
+  - texto: "Buscá en el teclado una tecla con el dibujo de un panel táctil (a veces junto con Fn) y apretala."
+  - texto: "Revisá que el panel táctil esté activado en Configuración."
+    abrir: "ms-settings:devices-touchpad"
+  - texto: "Si sigue sin andar, Microsoft explica cómo actualizar su controlador."
+    abrir: "https://support.microsoft.com/windows/fix-touchpad-problems-in-windows-30b498e5-0caa-9740-2b21-336ea75ee756"
+fuentes:
+  - https://support.microsoft.com/windows/fix-touchpad-problems-in-windows-30b498e5-0caa-9740-2b21-336ea75ee756
+madurez: T0
+---
+id: MIG-005
+area: windows
+titulo:
+  sencillo: "Quiero restablecer o reinstalar Windows"
+  tecnico: "Restablecer este equipo / reinstalar Windows"
+explicacion:
+  sencillo: >-
+    Es el último recurso cuando nada funciona. Antes conviene probar opciones más suaves. «Mantener mis archivos»
+    conserva tus documentos pero borra los programas instalados. Siempre hacé antes una copia de tus cosas.
+  tecnico: "Opciones de recuperación: reinstalar con Windows Update (conserva todo), Restablecer este equipo (mantener archivos o quitar todo), descarga en la nube o reinstalación local."
+frases: ["quiero formatear la computadora", "cómo reinstalo windows", "quiero dejar la compu como nueva", "restablecer de fábrica"]
+pasos:
+  - texto: "Primero hacé una copia de tus fotos y documentos en un disco externo (ver «copia de seguridad»)."
+  - texto: "Si tenés BitLocker, anotá la clave de recuperación antes de empezar."
+    abrir: "https://account.microsoft.com/devices/recoverykey"
+  - texto: "En Recuperación, probá primero «Corregir problemas con Windows Update» (conserva archivos y programas). Si no alcanza, usá «Restablecer este equipo» > «Mantener mis archivos»."
+    abrir: "ms-settings:recovery"
+  - texto: "Microsoft explica cada opción."
+    abrir: "https://support.microsoft.com/windows/experience/backup-recovery/reset-your-pc"
+derivar: "«Quitar todo» borra tus archivos. Si la PC tiene información importante, no elijas esa opción sin ayuda."
+fuentes:
+  - https://support.microsoft.com/windows/experience/backup-recovery/reset-your-pc
+  - https://support.microsoft.com/windows/experience/backup-recovery/recovery-options-in-windows
+madurez: T0
+---
+id: MIG-006
+area: windows
+titulo:
+  sencillo: "Después de una actualización algo anda mal: quiero volver atrás"
+  tecnico: "Volver a la versión anterior de Windows"
+explicacion:
+  sencillo: "Durante unos días después de una actualización grande, Windows permite volver a la versión anterior sin perder tus archivos."
+  tecnico: "Revertir actualización de característica (disponible por tiempo limitado)."
+frases: ["desde que se actualizó windows anda mal", "quiero volver a la versión anterior de windows", "deshacer la actualización de windows", "después de actualizar no funciona nada"]
+pasos:
+  - texto: "En Recuperación, si aparece «Volver», tocala y seguí los pasos. Solo está disponible por unos días después de actualizar."
+    abrir: "ms-settings:recovery"
+    # La opción aparece solo si Windows conservó la versión anterior.
+  - texto: "Microsoft lo explica con detalle."
+    abrir: "https://support.microsoft.com/windows/deployment/install-upgrade/go-back-to-the-previous-version-of-windows"
+fuentes:
+  - https://support.microsoft.com/windows/deployment/install-upgrade/go-back-to-the-previous-version-of-windows
+madurez: T0
+---
+id: MIG-002
+area: archivos
+titulo:
+  sencillo: "Quiero pasar mis cosas a una computadora nueva"
+  tecnico: "Transferencia de archivos y configuraciones a otra PC"
+explicacion:
+  sencillo: "Windows puede pasar tus archivos y configuraciones a la PC nueva con la aplicación Copia de seguridad de Windows, o lo podés hacer con un disco externo."
+  tecnico: "Windows Backup / transferencia PC a PC, o copia manual de carpetas de usuario."
+frases: ["compré una computadora nueva y quiero pasar mis cosas", "pasar los archivos a la notebook nueva", "mudar todo a la pc nueva"]
+pasos:
+  - texto: "Forma simple: copiá Documentos, Escritorio, Imágenes y Descargas a un disco externo y después a la PC nueva."
+  - texto: "Forma automática: Microsoft explica cómo usar Windows Backup para pasar archivos y configuraciones."
+    abrir: "https://support.microsoft.com/windows/experience/backup-recovery/transfer-your-files-and-settings-to-a-new-windows-pc"
+  - texto: "Los programas no se copian: hay que instalarlos de nuevo en la PC nueva (con sus licencias)."
+fuentes:
+  - https://support.microsoft.com/windows/experience/backup-recovery/transfer-your-files-and-settings-to-a-new-windows-pc
+madurez: T0
+---
+id: BAS-ACC-001
+area: basico
+titulo:
+  sencillo: "La computadora habla sola y lee todo en voz alta"
+  tecnico: "Narrador activado"
+explicacion:
+  sencillo: "Se activó el Narrador, una ayuda para personas que no ven bien. Se apaga con un atajo de teclado."
+  tecnico: "Narrador (Windows + Ctrl + Enter)."
+frases: ["la compu habla sola", "una voz lee todo lo que toco", "se activó una voz que lee la pantalla", "aparece un recuadro azul y habla"]
+pasos:
+  - texto: "Apretá a la vez Windows + Ctrl + Enter: el Narrador se apaga."
+  - texto: "Para que no se prenda solo, revisá la configuración del Narrador."
+    abrir: "ms-settings:easeofaccess-narrator"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/narrator/chapter-1-introducing-narrator
+madurez: T0
+---
+id: BAS-NIG-001
+area: basico
+titulo:
+  sencillo: "La pantalla se ve amarillenta o me cansa la vista de noche"
+  tecnico: "Luz nocturna (filtro de luz azul)"
+explicacion:
+  sencillo: "La «luz nocturna» pone la pantalla más cálida (amarillenta) para descansar la vista a la noche. Se puede prender, apagar o programar."
+  tecnico: "Night light: intensidad y programación (atardecer-amanecer u horario)."
+frases: ["la pantalla se ve amarilla", "me cansa la vista la pantalla de noche", "la pantalla está naranja", "quiero que la pantalla no moleste a la noche"]
+pasos:
+  - texto: "En Luz nocturna podés apagarla (si la ves amarillenta sin querer) o programarla para la noche."
+    abrir: "ms-settings:nightlight"
+fuentes:
+  - https://support.microsoft.com/windows/set-your-display-for-night-time-in-windows-18fe903a-e0a1-8326-4c68-fd23d7aaf136
+madurez: T0
+---
+id: FAM-001
+area: basico
+titulo:
+  sencillo: "Quiero controlar lo que usan los chicos en la computadora"
+  tecnico: "Control parental (Microsoft Family Safety)"
+explicacion:
+  sencillo: "Con Microsoft Family Safety (gratis) podés poner horarios, límites de tiempo y filtrar páginas para la cuenta de cada chico."
+  tecnico: "Grupo familiar, cuenta de menor como usuario estándar, límites de tiempo y filtros."
+frases: ["control parental", "limitar el tiempo de los chicos en la compu", "que mi hijo no entre a cualquier página", "poner horarios a la computadora de los chicos"]
+pasos:
+  - texto: "Creá un grupo familiar con tu cuenta Microsoft y agregá a los chicos. Su cuenta en la PC tiene que ser «usuario estándar», no administrador."
+    abrir: "https://account.microsoft.com/family"
+  - texto: "Microsoft explica cómo configurar horarios y límites."
+    abrir: "https://support.microsoft.com/family-safety/set-up-microsoft-family-safety"
+fuentes:
+  - https://support.microsoft.com/family-safety/set-up-microsoft-family-safety
+  - https://support.microsoft.com/family-safety/set-screen-time-limits-across-devices
+madurez: T0
+---
+id: APP-GEN-006
+area: programas
+titulo:
+  sencillo: "«Esta aplicación no se puede ejecutar en el equipo»"
+  tecnico: "Programa incompatible o bloqueado"
+explicacion:
+  sencillo: >-
+    Puede ser un programa viejo, uno hecho para otro tipo de procesador, o que Windows lo bloqueó porque no confía
+    en él (Control inteligente de aplicaciones). En ese último caso, conseguí una versión oficial actualizada.
+  tecnico: "Compatibilidad (modo de compatibilidad), arquitectura (x86/x64/ARM64) o bloqueo por Smart App Control."
+frases: ["esta aplicación no se puede ejecutar en el equipo", "el programa no es compatible con windows", "un programa viejo no anda en windows 11", "windows bloqueó el programa"]
+sondas: [sistema]
+pasos:
+  - texto: "Descargá la versión más nueva del programa desde su página oficial."
+  - texto: "Para programas viejos: clic derecho sobre el programa > Propiedades > Compatibilidad, y probá con una versión anterior de Windows."
+    abrir: "https://support.microsoft.com/windows/make-older-apps-or-programs-compatible-with-the-latest-version-of-windows-783d6dd7-b439-bdb0-0490-54eea0f45938"
+derivar: "Si Windows lo bloquea por seguridad, no lo fuerces: puede ser un programa peligroso."
+fuentes:
+  - https://support.microsoft.com/windows/make-older-apps-or-programs-compatible-with-the-latest-version-of-windows-783d6dd7-b439-bdb0-0490-54eea0f45938
+  - https://support.microsoft.com/windows/smart-app-control-frequently-asked-questions-285ea03d-fa88-4d56-882e-6698afdb7003
+madurez: T0
+---
+id: APP-GEN-004
+area: programas
+titulo:
+  sencillo: "No puedo desinstalar un programa"
+  tecnico: "Desinstalación bloqueada o fallida"
+explicacion:
+  sencillo: "Se desinstala desde Aplicaciones instaladas. Si da error, Microsoft tiene una herramienta oficial que destraba la desinstalación."
+  tecnico: "Desinstalación estándar y solucionador de problemas de instalación/desinstalación."
+frases: ["no puedo desinstalar un programa", "el programa no se quiere borrar", "cómo saco un programa que no uso", "da error al desinstalar"]
+pasos:
+  - texto: "Abrí Aplicaciones instaladas, buscá el programa, tocá los tres puntos > Desinstalar."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Si da error, seguí la guía oficial de Microsoft para programas que no se pueden quitar."
+    abrir: "https://support.microsoft.com/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d"
+derivar: "Si es un antivirus de otra marca, usá la herramienta de desinstalación oficial de ese fabricante."
+fuentes:
+  - https://support.microsoft.com/windows/uninstall-or-remove-apps-and-programs-in-windows-4b55f974-2cc6-2d2b-d092-5905080eaf98
+  - https://support.microsoft.com/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d
+madurez: T0
+---
+id: LAP-BAT-002
+area: hardware
+titulo:
+  sencillo: "Quiero que la batería de la notebook dure más"
+  tecnico: "Ahorro de batería"
+explicacion:
+  sencillo: "Bajar el brillo, usar el modo de ahorro y cerrar lo que no se usa alarga mucho la batería. PC Doctor también revisa si la batería está gastada."
+  tecnico: "Brillo, modo de energía, suspensión, uso de batería por aplicación."
+frases: ["cómo hago que dure más la batería", "ahorrar batería en la notebook", "qué gasta tanta batería"]
+sondas: [bateria]
+pasos:
+  - texto: "Bajá el brillo de la pantalla y activá el Ahorro de batería cuando estés sin cargador."
+    abrir: "ms-settings:powersleep"
+  - texto: "Microsoft tiene más consejos para ahorrar batería."
+    abrir: "https://support.microsoft.com/windows/experience/power-battery/battery-saving-tips-for-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/power-battery/battery-saving-tips-for-windows
+madurez: T0

@@ -1,0 +1,355 @@
+# Módulos de hardware: almacenamiento, memoria, video, energía
+id: HW-DSK-001
+area: hardware
+titulo:
+  sencillo: "Un disco informa que está fallando"
+  tecnico: "MSFT_PhysicalDisk.HealthStatus en advertencia o en mal estado"
+explicacion:
+  sencillo: "El propio disco avisa que tiene problemas. Lo más importante ahora es copiar tus archivos a otro lado ANTES de intentar cualquier reparación."
+  tecnico: "Estado de salud informado por el disco (SMART/NVMe) vía la API de almacenamiento de Windows. No ejecutar chkdsk /r ni pruebas de superficie antes de respaldar."
+frases: ["el disco hace ruido", "se me va a romper el disco", "disco fallando", "disco duro dañado"]
+sondas: [disco]
+deteccion:
+  - si: "disco.alguno_falla"
+    estado: revision_fisica
+    mensaje: "El disco {disco.discos_con_problema} informa que está fallando. Copiá tus archivos importantes ya."
+  - si: "disco.alguno_advertencia"
+    estado: advertencia
+    mensaje: "El disco {disco.discos_con_problema} informa una advertencia de salud."
+si_no_se_puede: "No se pudo leer el estado de salud que informan los discos."
+pasos:
+  - texto: "Conectá un disco externo o pendrive y copiá tus Documentos, Escritorio, Fotos y Descargas."
+  - texto: "No uses programas de «reparación de disco» hasta tener la copia: pueden empeorar un disco que falla."
+derivar: "El disco tiene que reemplazarse. Un técnico puede clonar lo que se pueda recuperar al disco nuevo."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/storage/msft-physicaldisk
+madurez: T1
+---
+id: HW-DSK-002
+area: hardware
+titulo:
+  sencillo: "Windows registró errores al leer o escribir el disco"
+  tecnico: "Eventos disk 7/51/153 y Ntfs 55"
+explicacion:
+  sencillo: "Hubo errores de lectura o escritura. Pueden venir de desconectar pendrives sin expulsarlos, de un cable flojo o de un disco que empieza a fallar."
+  tecnico: "Errores de E/S o de sistema de archivos registrados en el log System."
+frases: ["error al copiar archivos", "no puedo leer el disco", "error de disco"]
+sondas: [eventos]
+deteccion:
+  - si: "eventos.errores_disco_30d >= 10"
+    estado: advertencia
+    mensaje: "Windows registró {eventos.errores_disco_30d} errores de disco en los últimos 30 días."
+pasos:
+  - texto: "Expulsá siempre los pendrives y discos externos antes de desconectarlos."
+  - texto: "Si los errores siguen, hacé una copia de seguridad y pedí una revisión del disco."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-server/backup-and-storage/troubleshoot-data-corruption-and-disk-errors
+madurez: T1
+---
+id: HW-DSK-003
+area: hardware
+titulo:
+  sencillo: "El disco está muy caliente"
+  tecnico: "Temperatura de unidad elevada"
+explicacion:
+  sencillo: "El calor acorta la vida del disco. Suele deberse a polvo, poca ventilación o a que la PC está sobre una superficie que tapa las salidas de aire."
+  tecnico: "MSFT_StorageReliabilityCounter.Temperature por encima del umbral para el tipo de unidad."
+frases: ["la compu está muy caliente", "se calienta el disco"]
+sondas: [disco]
+deteccion:
+  - si: "disco.sistema.tipo == 'HDD' and disco.sistema.temperatura >= 55"
+    estado: advertencia
+    mensaje: "El disco del sistema está a {disco.sistema.temperatura} °C (para un disco mecánico conviene menos de 50 °C)."
+  - si: "disco.sistema.temperatura >= 75"
+    estado: advertencia
+    mensaje: "El disco del sistema está a {disco.sistema.temperatura} °C."
+pasos:
+  - texto: "Dejá libres las salidas de aire y, si es una notebook, no la uses sobre la cama o almohadones."
+derivar: "Si sigue caliente, una limpieza interna de polvo la hace un técnico."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/storage/msft-storagereliabilitycounter
+madurez: T1
+---
+id: HW-DSK-004
+area: hardware
+titulo:
+  sencillo: "El SSD está gastado"
+  tecnico: "Desgaste del SSD elevado"
+explicacion:
+  sencillo: "Los SSD tienen una vida útil de escrituras. Cuando se acercan al final conviene reemplazarlos antes de que fallen."
+  tecnico: "MSFT_StorageReliabilityCounter.Wear: porcentaje de vida nominal consumida."
+frases: ["ssd gastado", "vida del ssd"]
+sondas: [disco]
+deteccion:
+  - si: "disco.sistema.desgaste_pct >= 90"
+    estado: revision_fisica
+    mensaje: "El disco del sistema usó el {disco.sistema.desgaste_pct} % de su vida útil."
+  - si: "disco.sistema.desgaste_pct >= 70"
+    estado: advertencia
+    mensaje: "El disco del sistema usó el {disco.sistema.desgaste_pct} % de su vida útil."
+derivar: "Planificá reemplazarlo y mantené copias de seguridad al día."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/storage/msft-storagereliabilitycounter
+madurez: T1
+---
+id: UPG-001
+area: hardware
+tipo: sugerencia
+titulo:
+  sencillo: "Cambiar el disco por un SSD aceleraría mucho la PC"
+  tecnico: "Sistema instalado en HDD"
+explicacion:
+  sencillo: >-
+    Windows está instalado en un disco mecánico. Pasarlo a un SSD es, por lejos, la mejora que más acelera
+    una PC: arranca y abre programas varias veces más rápido. Es una pieza económica.
+  tecnico: "MediaType = HDD en el disco que contiene el volumen del sistema."
+frases: ["qué le puedo mejorar a mi pc", "cómo hago más rápida la compu", "conviene poner un ssd"]
+sondas: [disco]
+deteccion:
+  - si: "disco.sistema.tipo == 'HDD'"
+    estado: advertencia
+    mensaje: "Windows está en un disco mecánico (HDD). Un SSD es la mejora más notoria para esta PC."
+derivar: "Al comprar, pedí un SSD SATA de 2,5\" o M.2 según lo que admita tu PC (el manual o un técnico lo confirman). El técnico puede pasar Windows y tus archivos al disco nuevo."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/storage/msft-physicaldisk
+madurez: T1
+---
+id: HW-RAM-002
+area: hardware
+tipo: sugerencia
+titulo:
+  sencillo: "La memoria funciona en canal simple"
+  tecnico: "Un solo módulo con ranuras libres (single channel)"
+explicacion:
+  sencillo: "La PC tiene un solo módulo de memoria y una ranura libre. Agregando un segundo módulo igual, la memoria trabaja al doble de velocidad (doble canal). Se nota mucho en juegos y en PCs con video integrado."
+  tecnico: "Win32_PhysicalMemory = 1 módulo, Win32_PhysicalMemoryArray.MemoryDevices >= 2, tipo no LPDDR soldado."
+frases: ["agregar memoria ram", "qué ram le pongo", "ampliar memoria"]
+sondas: [ram]
+deteccion:
+  - si: "ram.modulos == 1 and ram.ranuras >= 2 and not ram.soldada_lpddr"
+    estado: advertencia
+    mensaje: "Hay 1 módulo {ram.tipo} y la placa informa {ram.ranuras} ranuras. Un segundo módulo igual habilitaría el doble canal."
+derivar: "Comprá un módulo del mismo tipo, capacidad y velocidad que el actual (los datos están en el informe técnico)."
+fuentes:
+  - https://learn.microsoft.com/windows/win32/cimwin32prov/win32-physicalmemory
+madurez: T1
+---
+id: HW-RAM-003
+area: hardware
+tipo: sugerencia
+titulo:
+  sencillo: "La memoria funciona más lento de lo que puede"
+  tecnico: "ConfiguredClockSpeed menor que Speed"
+explicacion:
+  sencillo: "La memoria está configurada a menor velocidad que la que informa. En PCs de escritorio suele activarse con el perfil XMP/EXPO en la BIOS."
+  tecnico: "Velocidad configurada inferior a la velocidad nominal informada por SPD/SMBIOS."
+frases: ["activar xmp", "la ram va más lenta"]
+sondas: [ram]
+deteccion:
+  # Solo en PCs de escritorio: en notebooks la velocidad la fija el fabricante y no se puede cambiar.
+  - si: "ram.velocidad_diferencia >= 100 and ram.es_escritorio"
+    estado: advertencia
+    mensaje: "La memoria trabaja a {ram.velocidad_configurada} MT/s pero informa {ram.velocidad_nominal} MT/s. Algunas placas madre no permiten subirla."
+pasos:
+  - texto: "Si tenés BitLocker, guardá antes la clave de recuperación."
+    abrir: "https://account.microsoft.com/devices/recoverykey"
+  - texto: "En la BIOS/UEFI buscá «XMP», «EXPO» o «DOCP» y activalo. Si la PC se vuelve inestable, desactivalo."
+fuentes:
+  - https://learn.microsoft.com/windows/win32/cimwin32prov/win32-physicalmemory
+madurez: T1
+---
+id: PERF-RAM-001
+area: rendimiento
+tipo: sugerencia
+titulo:
+  sencillo: "La PC tiene poca memoria RAM"
+  tecnico: "Memoria física por debajo de 8 GB"
+explicacion:
+  sencillo: "Con menos de 8 GB, Windows y un navegador con varias pestañas ya llenan la memoria y todo se pone lento. Ampliarla suele ser barato."
+  tecnico: "Memoria física utilizable inferior a 7,5 GB."
+frases: ["me falta memoria", "poca ram", "la memoria se llena"]
+sondas: [ram]
+deteccion:
+  - si: "ram.total_gb < 7.5"
+    estado: advertencia
+    mensaje: "La PC tiene {ram.total_gb} GB de RAM; para el uso actual se recomiendan 8 GB o más."
+derivar: "Verificá cuántas ranuras libres tiene (informe técnico) y comprá memoria del mismo tipo."
+fuentes:
+  - https://www.microsoft.com/windows/windows-11-specifications
+madurez: T1
+---
+id: PERF-RAM-002
+area: rendimiento
+titulo:
+  sencillo: "La memoria está casi llena ahora mismo"
+  tecnico: "Uso de memoria física superior al 90 %"
+explicacion:
+  sencillo: "Cuando la memoria se llena, Windows usa el disco como memoria y todo se pone muy lento."
+  tecnico: "GlobalMemoryStatusEx: carga de memoria >= 90 %."
+frases: ["la compu está lenta", "se tilda todo", "memoria llena"]
+sondas: [ram]
+deteccion:
+  - si: "ram.uso_pct >= 90"
+    estado: advertencia
+    mensaje: "La memoria está usada al {ram.uso_pct} %. El programa que más usa es {ram.proceso_top} ({ram.proceso_top_gb} GB)."
+pasos:
+  - texto: "Cerrá los programas y pestañas del navegador que no estés usando."
+fuentes:
+  - https://learn.microsoft.com/windows/win32/api/sysinfoapi/nf-sysinfoapi-globalmemorystatusex
+madurez: T1
+---
+id: PERF-CPU-001
+area: rendimiento
+titulo:
+  sencillo: "El procesador está trabajando al máximo"
+  tecnico: "Uso de CPU sostenido elevado"
+explicacion:
+  sencillo: "El procesador está casi todo el tiempo ocupado, por eso la PC responde lento. Suele ser un programa en particular."
+  tecnico: "Uso de CPU medido durante 3 s antes del resto del análisis (para no medir a PC Doctor)."
+frases: ["la compu está lenta", "el procesador al 100", "ventilador a full", "va lentísima"]
+sondas: [cpu]
+deteccion:
+  - si: "cpu.uso_pct >= 85"
+    estado: advertencia
+    mensaje: "El procesador está al {cpu.uso_pct} %. El que más usa es {cpu.proceso_top} ({cpu.proceso_top_pct} %)."
+pasos:
+  - texto: "Si ese programa no lo estás usando, cerralo. Si es un antivirus analizando, esperá a que termine."
+fuentes:
+  - https://learn.microsoft.com/windows/win32/api/processthreadsapi/nf-processthreadsapi-getsystemtimes
+madurez: T1
+---
+id: GPU-001
+area: hardware
+titulo:
+  sencillo: "La placa de video no tiene su controlador"
+  tecnico: "Microsoft Basic Display Adapter en uso"
+explicacion:
+  sencillo: "Windows está usando un controlador genérico de video: la imagen puede verse mal, los juegos no andan y no se puede elegir la resolución correcta."
+  tecnico: "Win32_VideoController con InfFilename display.inf (controlador básico)."
+frases: ["la pantalla se ve mal", "no puedo cambiar la resolución", "adaptador de pantalla básico"]
+sondas: [gpu]
+deteccion:
+  - si: "gpu.adaptador_basico"
+    estado: problema
+    mensaje: "La placa de video funciona con el controlador básico de Windows."
+pasos:
+  - texto: "Abrí Windows Update e instalá todas las actualizaciones, incluidas las opcionales."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si no aparece, descargalo de la página oficial del fabricante de la PC o de la placa (NVIDIA, AMD o Intel)."
+fuentes:
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+madurez: T1
+---
+id: GPU-002
+area: hardware
+tipo: sugerencia
+titulo:
+  sencillo: "El controlador de video es muy viejo"
+  tecnico: "Controlador gráfico con más de 2 años"
+explicacion:
+  sencillo: "Los controladores de video nuevos corrigen errores y mejoran los juegos. El de esta PC tiene más de dos años."
+  tecnico: "Win32_VideoController.DriverDate con antigüedad >= 730 días."
+frases: ["actualizar driver de video", "juegos andan mal"]
+sondas: [gpu]
+deteccion:
+  - si: "gpu.driver_antiguedad_dias >= 730"
+    estado: advertencia
+    mensaje: "El controlador de {gpu.nombre_principal} tiene {gpu.driver_antiguedad_dias} días."
+pasos:
+  - texto: "Actualizalo solo desde Windows Update o desde la página oficial del fabricante (NVIDIA, AMD, Intel o el de tu notebook)."
+    abrir: "ms-settings:windowsupdate"
+fuentes:
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+madurez: T1
+---
+id: GPU-003
+area: hardware
+titulo:
+  sencillo: "El controlador de video se reinició varias veces"
+  tecnico: "Eventos TDR (Display 4101)"
+explicacion:
+  sencillo: "La pantalla se puso negra un momento y volvió: el controlador de video dejó de responder y Windows lo reinició."
+  tecnico: "Timeout Detection and Recovery: Display 4101 en el log System."
+frases: ["la pantalla se pone negra y vuelve", "se congela la imagen", "el controlador de video dejó de responder"]
+sondas: [eventos]
+deteccion:
+  - si: "eventos.reinicios_video_30d >= 3"
+    estado: advertencia
+    mensaje: "El controlador de video se reinició {eventos.reinicios_video_30d} veces en 30 días."
+pasos:
+  - texto: "Actualizá el controlador de video desde Windows Update o el fabricante."
+    abrir: "ms-settings:windowsupdate"
+derivar: "Si sigue pasando con el controlador al día, puede ser temperatura o la placa de video: requiere revisión física."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/display/timeout-detection-and-recovery
+madurez: T1
+---
+id: DSP-001
+area: hardware
+tipo: sugerencia
+titulo:
+  sencillo: "Tu monitor puede verse más fluido"
+  tecnico: "Frecuencia de actualización por debajo de la máxima"
+explicacion:
+  sencillo: "El monitor admite más imágenes por segundo de las que está usando. Subirlo hace que todo se vea más fluido, sobre todo en juegos."
+  tecnico: "EnumDisplaySettings informa modos de mayor frecuencia en la resolución actual."
+frases: ["el monitor de 144 va a 60", "configurar hz del monitor", "frecuencia del monitor", "compré un monitor nuevo y no noto la diferencia"]
+sondas: [gpu]
+deteccion:
+  - si: "pantalla.hz_desaprovechada"
+    estado: advertencia
+    mensaje: "{pantalla.detalle_hz}."
+pasos:
+  - texto: "Abrí Pantalla > Pantalla avanzada y elegí la frecuencia más alta en «Elegir una frecuencia de actualización»."
+    abrir: "ms-settings:display"
+  - texto: "Si no aparece, el cable puede no admitirla: los monitores de alta frecuencia suelen necesitar DisplayPort o HDMI 2.0 o superior."
+fuentes:
+  - https://support.microsoft.com/windows/change-the-refresh-rate-on-your-monitor-in-windows-c8ea729e-0678-015c-c415-f806f04aae5a
+madurez: T1
+---
+id: HW-WHEA-001
+area: hardware
+titulo:
+  sencillo: "El hardware informó errores"
+  tecnico: "Eventos WHEA-Logger"
+explicacion:
+  sencillo: "El procesador, la memoria o una placa informaron errores de hardware. Los graves suelen causar pantallas azules."
+  tecnico: "WHEA-Logger: errores no corregidos (1/18/20/46) o gran cantidad de errores corregidos (17/19/47)."
+frases: ["error de hardware", "whea uncorrectable error"]
+sondas: [eventos]
+deteccion:
+  - si: "eventos.whea_fatales_30d >= 1"
+    estado: revision_fisica
+    mensaje: "Se registraron {eventos.whea_fatales_30d} errores de hardware graves en 30 días."
+  - si: "eventos.whea_corregidos_30d >= 50"
+    estado: advertencia
+    mensaje: "Se registraron {eventos.whea_corregidos_30d} errores de hardware corregidos en 30 días."
+pasos:
+  - texto: "Si hiciste overclock o activaste perfiles XMP/EXPO, volvé a los valores por defecto."
+derivar: "Con errores graves repetidos, la memoria, el procesador o la fuente requieren revisión física."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/whea/
+madurez: T1
+---
+id: LAP-BAT-001
+area: hardware
+titulo:
+  sencillo: "La batería está gastada"
+  tecnico: "Capacidad de carga completa muy inferior a la de diseño"
+explicacion:
+  sencillo: "Con el uso, las baterías pierden capacidad. Esta ya guarda bastante menos energía que cuando era nueva."
+  tecnico: "BatteryFullChargedCapacity / BatteryStaticData.DesignedCapacity."
+frases: ["la batería dura poco", "se descarga rápido", "la batería no dura nada"]
+sondas: [bateria]
+deteccion:
+  - si: "bateria.presente and bateria.salud_pct < 50"
+    estado: revision_fisica
+    mensaje: "La batería conserva el {bateria.salud_pct} % de su capacidad original."
+  - si: "bateria.presente and bateria.salud_pct < 70"
+    estado: advertencia
+    mensaje: "La batería conserva el {bateria.salud_pct} % de su capacidad original."
+si_no_se_puede: "No se pudo medir el desgaste de la batería (hace falta permiso de administrador o la batería no lo informa)."
+derivar: "Reemplazar la batería por una original o compatible de buena calidad la deja como nueva."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/design/device-experiences/powercfg-command-line-options
+madurez: T1

@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>pcdoctor-rescate</AssemblyName>
+    <RootNamespace>PCDoctor.Rescue</RootNamespace>
+    <!-- Corre en el sistema de rescate (Linux, sin Windows). Sin ICU: no depende de bibliotecas del sistema. -->
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <AssemblyTitle>PC Doctor AI — modo rescate</AssemblyTitle>
+  </PropertyGroup>
+</Project>

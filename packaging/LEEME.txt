@@ -1,0 +1,46 @@
+PC DOCTOR AI — versión 0.2 de prueba
+=====================================
+
+SI LA COMPUTADORA NO ARRANCA, O TIENE UN VIRUS QUE NO TE DEJA USARLA: MODO RESCATE
+1. Con la PC apagada, poné este pendrive.
+2. Prendela y apretá varias veces la tecla del menú de arranque. Según la marca:
+   F12 (Dell, Lenovo, Acer, Toshiba), F9 (HP), Esc (Asus, algunas HP), F11 (MSI), F8 (algunas Asus).
+3. Elegí el pendrive (suele decir «USB» o «UEFI»). A los 5 segundos arranca «PC Doctor - Modo rescate».
+4. Ahí podés: rescatar tus fotos y documentos al pendrive, buscar virus y señales de hackeo con Windows
+   apagado (los virus no se pueden esconder), ver si el disco está fallando y saber cómo reparar Windows.
+   Lo rescatado queda en este pendrive, carpeta RESCATE.
+   Si el disco tiene BitLocker, vas a necesitar la clave de recuperación (aka.ms/myrecoverykey).
+   Algunas PCs nuevas solo arrancan programas firmados por Microsoft: si el pendrive no aparece en el menú,
+   en la configuración de la placa habilitá «Microsoft UEFI CA de terceros», o pedile ayuda a un técnico.
+
+SI WINDOWS ARRANCA: CÓMO SE USA
+1. Abrí este pendrive en el Explorador de archivos.
+2. Hacé doble clic en «ABRIR PC DOCTOR».
+   (Windows no permite que un pendrive se abra solo: este doble clic siempre hace falta.)
+3. Tocá «ANALIZAR Y SOLUCIONAR MI COMPUTADORA» o escribí con tus palabras qué te pasa.
+
+Si Windows muestra «Windows protegió su PC» (SmartScreen), es porque esta versión de prueba
+todavía no tiene firma digital. Tocá «Más información» > «Ejecutar de todas formas».
+
+QUÉ HACE Y QUÉ NO
+- Revisa Windows, el hardware, Internet, la seguridad y el rendimiento, y separa lo comprobado
+  de lo que no se pudo comprobar.
+- Nunca cambia nada sin preguntarte. Cada cambio queda en el «Historial de reparaciones»
+  y, si se puede deshacer, tiene su botón «Deshacer».
+- No instala nada en la computadora, no envía datos a Internet y no pide contraseñas.
+- Algunas comprobaciones (temperatura del disco, chip TPM) piden permiso de administrador:
+  en ese paso solo se lee información.
+
+SOFTWARE LIBRE
+PC Doctor AI es software libre bajo la Licencia Pública General de GNU, versión 3 (GPL-3.0).
+Podés usarlo, copiarlo, estudiarlo, modificarlo y redistribuirlo según esa licencia. Se entrega
+SIN NINGUNA GARANTÍA. El texto completo de la licencia y los componentes de terceros están en
+pcdoctor\licencias\. El código fuente completo de esta versión se publica junto con cada versión
+del proyecto; si no lo encontrás, pedíselo a quien te vendió este pendrive.
+
+CONTENIDO DEL PENDRIVE
+  ABRIR PC DOCTOR.exe    el programa
+  pcdoctor\              biblioteca de problemas, datos y herramienta para técnicos (pcdoctor-cli.exe)
+  pcdoctor\state\        historial e informes de cada PC revisada (se puede borrar)
+  RESCATE\               fotos, documentos e informes copiados desde el modo rescate
+  (parte «PCD-RESCATE»)  el sistema de rescate que arranca sin Windows: no lo modifiques

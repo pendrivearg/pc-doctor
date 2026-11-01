@@ -1,0 +1,24 @@
+# Modo rescate: cuando Windows no arranca o un virus no deja usar la PC. El pendrive arranca solo, sin Windows.
+id: BOOT-RESC-001
+area: windows
+titulo:
+  sencillo: "La computadora no arranca o no entra a Windows"
+  tecnico: "Windows no inicia: rescate de archivos y recuperación"
+explicacion:
+  sencillo: >-
+    El pendrive de PC Doctor tiene un modo rescate que arranca solo, sin Windows. Desde ahí podés copiar tus fotos y
+    documentos al pendrive, revisar si el disco está fallando y buscar virus. Después, Windows trae su propia reparación.
+  tecnico: "Arranque del sistema de rescate (Debian live firmado, compatible con Arranque seguro), copia de perfiles, SMART, ClamAV y revisión de persistencias; luego WinRE."
+frases: ["la compu no arranca", "no entra a windows", "se queda en el logo al prender", "windows no inicia", "la pc no pasa de la pantalla de inicio"]
+pasos:
+  - texto: "Con la PC apagada, poné el pendrive de PC Doctor. Prendela y apretá varias veces la tecla del menú de arranque (según la marca: F12, F11, F9, F8 o Esc). Elegí el pendrive (suele decir «USB» o «UEFI»)."
+  - texto: "Aparece «PC Doctor — Modo rescate». Primero elegí «Rescatar mis fotos y documentos»: quedan guardados en el pendrive."
+  - texto: "Después elegí «Ver si el disco está fallando». Si está fallando, hay que cambiar el disco: ninguna reparación de Windows lo arregla."
+  - texto: "Para reparar Windows: sacá el pendrive y prendé la PC. Si Windows falla dos veces seguidas, abre solo «Reparación automática» > «Opciones avanzadas» (Reparación de inicio, Restaurar sistema, Desinstalar actualizaciones)."
+    abrir: "https://learn.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference"
+  - texto: "Si pide la clave de BitLocker, está en tu cuenta de Microsoft (entrá desde el celular)."
+    abrir: "https://account.microsoft.com/devices/recoverykey"
+derivar: "Algunas PCs nuevas solo arrancan programas firmados por Microsoft: si el pendrive no aparece, en la configuración de la placa habilitá «Microsoft UEFI CA de terceros» o pedile ayuda a un técnico."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference
+madurez: T0

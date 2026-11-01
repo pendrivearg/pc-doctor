@@ -1,0 +1,4 @@
+# Dónde busca PC Doctor sus versiones nuevas: un repositorio público de GitHub ("usuario/proyecto").
+# Las versiones se publican como «Releases» con un manifiesto firmado; el programa rechaza todo lo que no esté firmado
+# con la clave del proyecto. Si queda vacío, el botón «Buscar actualizaciones» no aparece.
+repositorio: "pendrivearg/pc-doctor"

@@ -1,0 +1,162 @@
+# Pantalla (brillo, apagado, fondo), teclado en pantalla, notebook que no carga, fotos del iPhone, instalar programas seguros y encontrar documentos. Guiadas con fuente oficial.
+id: DSP-BRI-001
+area: windows
+titulo:
+  sencillo: "La pantalla está muy oscura o muy brillante"
+  tecnico: "Brillo de la pantalla"
+explicacion:
+  sencillo: "En las notebooks el brillo se cambia desde Windows. En las computadoras de escritorio, casi siempre con los botones del propio monitor."
+  tecnico: "Control deslizante de brillo (configuración rápida o Sistema > Pantalla); en monitores externos, el menú del monitor."
+frases: ["la pantalla está muy oscura", "subir el brillo de la pantalla", "la pantalla brilla demasiado y me molesta", "cómo bajo el brillo"]
+pasos:
+  - texto: "Notebook: tocá el ícono de Wi-Fi (abajo a la derecha) y mové la barrita del brillo. También está en Configuración > Sistema > Pantalla."
+    abrir: "ms-settings:display"
+  - texto: "Computadora de escritorio: usá los botones del monitor (suelen estar abajo o al costado) y buscá «Brillo» en su menú."
+  - texto: "Si en una notebook la barrita no aparece o no cambia nada, puede faltar el controlador de video: pasá el diagnóstico de PC Doctor."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/hardware/display-graphics/change-display-brightness-and-color-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/display-graphics/change-display-brightness-and-color-in-windows
+madurez: T0
+---
+id: PWR-SCR-001
+area: windows
+titulo:
+  sencillo: "La pantalla se apaga o la compu se duerme demasiado rápido"
+  tecnico: "Tiempos de apagado de pantalla y suspensión"
+explicacion:
+  sencillo: "Windows apaga la pantalla y duerme la computadora después de unos minutos sin tocarla, para ahorrar energía. Ese tiempo se puede alargar."
+  tecnico: "Configuración > Sistema > Energía y batería > Tiempos de espera de pantalla, suspensión e hibernación (con batería y enchufada)."
+frases: ["la pantalla se apaga sola a cada rato", "la compu se duerme muy rápido", "se apaga la pantalla mientras leo", "que la pantalla no se apague tan rápido"]
+pasos:
+  - texto: "Abrí Energía y elegí más minutos en «Apagar la pantalla después de» y «Suspender el dispositivo después de» (hay un valor enchufada y otro con batería)."
+    abrir: "ms-settings:powersleep"
+  - texto: "Si la computadora se apaga del todo (no solo la pantalla), es otro problema: pasá el diagnóstico de PC Doctor."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/power-settings-in-windows-11-0d6a2b6b-2e87-4611-9980-ac9ea2175734"
+fuentes:
+  - https://support.microsoft.com/windows/power-settings-in-windows-11-0d6a2b6b-2e87-4611-9980-ac9ea2175734
+madurez: T0
+---
+id: BAS-OSK-001
+area: basico
+titulo:
+  sencillo: "El teclado no anda y necesito escribir igual"
+  tecnico: "Teclado en pantalla (OSK)"
+explicacion:
+  sencillo: "Windows tiene un teclado que aparece en la pantalla y se usa con el mouse. Sirve para salir del paso hasta arreglar o cambiar el teclado, incluso para poner la clave al entrar."
+  tecnico: "Teclado en pantalla: Windows + Ctrl + O, Accesibilidad > Teclado, o el botón de accesibilidad de la pantalla de inicio de sesión."
+frases: ["se rompió el teclado y necesito escribir", "un teclado en la pantalla", "escribir con el mouse", "no tengo teclado para poner la clave"]
+pasos:
+  - texto: "En la pantalla para entrar a Windows: tocá el botón de accesibilidad (abajo a la derecha) > «Teclado en pantalla»."
+  - texto: "Ya dentro de Windows: Accesibilidad > Teclado > activá «Teclado en pantalla». Hacé clic en las teclas con el mouse."
+    abrir: "ms-settings:easeofaccess-keyboard"
+  - texto: "Para ver por qué no anda el teclado, escribile a PC Doctor «el mouse o el teclado no funcionan»."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/use-the-on-screen-keyboard-osk-to-type"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/use-the-on-screen-keyboard-osk-to-type
+madurez: T0
+---
+id: LAP-CHG-001
+area: hardware
+titulo:
+  sencillo: "La notebook está enchufada pero no carga"
+  tecnico: "La batería no carga o carga lento"
+explicacion:
+  sencillo: >-
+    Suele ser el cargador (que no es el original o no da suficiente potencia), el enchufe, o el conector sucio.
+    Si el ícono de la batería muestra un corazón, no es una falla: la notebook frena la carga a propósito para cuidar la batería.
+  tecnico: "Cargador incompatible o de poca potencia, cable, puerto; carga inteligente (Smart charging) del fabricante."
+frases: ["la notebook no carga", "está enchufada pero no carga la batería", "el cargador no carga la compu", "la batería no sube aunque esté enchufada"]
+sondas: [bateria]
+pasos:
+  - texto: "Mirá el ícono de la batería (abajo a la derecha). Si tiene un corazón y dice «carga inteligente», es normal: la notebook decidió no cargar al 100 % para cuidar la batería."
+    abrir: "https://support.microsoft.com/windows/experience/power-battery/use-smart-charging-in-windows"
+  - texto: "Probá otro enchufe, revisá que el cable esté bien conectado en los dos lados y usá el cargador original de la notebook (otros pueden no dar suficiente potencia)."
+  - texto: "Para que cargue más rápido, dejala cargando apagada o suspendida."
+    abrir: "https://support.microsoft.com/windows/experience/power-battery/pc-is-charging-slowly-or-discharging-while-it-s-plugged-in"
+derivar: "Si con el cargador original y otro enchufe sigue sin cargar, puede ser el cargador, el conector o la batería: consultá al fabricante o a un técnico."
+fuentes:
+  - https://support.microsoft.com/windows/experience/power-battery/pc-is-charging-slowly-or-discharging-while-it-s-plugged-in
+  - https://support.microsoft.com/windows/experience/power-battery/use-smart-charging-in-windows
+madurez: T0
+---
+id: PHN-HEIC-001
+area: archivos
+titulo:
+  sencillo: "Las fotos que pasé del iPhone no se abren en la compu"
+  tecnico: "Fotos HEIC/HEIF y videos HEVC"
+explicacion:
+  sencillo: >-
+    Los iPhone y algunos Android guardan las fotos en un formato (HEIC) que Windows no abre solo.
+    Hay formas gratuitas de verlas: subirlas a OneDrive o mandártelas por correo, que las convierte.
+  tecnico: "Formato HEIF/HEVC: extensiones de Microsoft Store (HEIF gratis, HEVC paga) o conversión automática al transferir o al subir a OneDrive."
+frases: ["las fotos del iphone no se abren en la compu", "no puedo abrir fotos heic", "no puedo ver las fotos que pasé del celular", "dice que necesito una extensión para ver la foto"]
+pasos:
+  - texto: "Gratis: subí las fotos a OneDrive (con tu cuenta de Microsoft) o mandátelas por correo y guardalas desde ahí; en muchos casos se convierten solas a un formato común."
+  - texto: "Otra opción: instalar las extensiones de Microsoft Store. Microsoft indica que hacen falta las dos: la de imágenes HEIF es gratis y la de video HEVC cuesta US$ 0,99."
+  - texto: "Microsoft explica las tres opciones."
+    abrir: "https://support.microsoft.com/windows/apps/photos/photos-app-video-editor-error-can-t-view-this-file-type"
+fuentes:
+  - https://support.microsoft.com/windows/apps/photos/photos-app-video-editor-error-can-t-view-this-file-type
+madurez: T0
+---
+id: BAS-BG-001
+area: basico
+titulo:
+  sencillo: "Quiero cambiar la foto de fondo de la pantalla"
+  tecnico: "Fondo de escritorio"
+explicacion:
+  sencillo: "Podés poner de fondo cualquier foto tuya, un color o las imágenes que trae Windows."
+  tecnico: "Personalización > Fondo: imagen, color sólido, presentación o Windows destacado; o clic derecho en una imagen > Establecer como fondo de escritorio."
+frases: ["cambiar el fondo de pantalla", "poner una foto mía de fondo en la compu", "cambiar la imagen del escritorio"]
+pasos:
+  - texto: "Lo más rápido: en el Explorador de archivos, clic derecho sobre la foto > «Establecer como fondo de escritorio»."
+  - texto: "O desde Personalización > Fondo: elegí «Imagen» y tocá «Examinar fotos»."
+    abrir: "ms-settings:personalization-background"
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/personalization/change-the-desktop-background-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/personalization/change-the-desktop-background-in-windows
+madurez: T0
+---
+id: APP-STO-001
+area: programas
+titulo:
+  sencillo: "Quiero instalar un programa sin riesgo de virus"
+  tecnico: "Instalar aplicaciones desde fuentes de confianza (Microsoft Store)"
+explicacion:
+  sencillo: >-
+    La forma más segura es la Microsoft Store, que viene con Windows: los programas de ahí se revisan y se actualizan solos.
+    Si el programa no está, bajalo solo de la página oficial de quien lo hace, nunca de páginas de descargas con muchos botones.
+  tecnico: "Microsoft recomienda instalar desde Microsoft Store; evitar instaladores de sitios de terceros (software no deseado incluido)."
+frases: ["cómo instalo un programa sin que tenga virus", "dónde bajo programas seguros", "quiero instalar una aplicación", "descargar programas de forma segura"]
+pasos:
+  - texto: "Abrí Inicio > Microsoft Store, buscá el programa y tocá «Obtener» o «Instalar». Te puede pedir tu cuenta de Microsoft."
+    abrir: "https://support.microsoft.com/accounts-billing/get-trusted-apps-and-games-from-microsoft-store"
+  - texto: "Si no está en la Store, entrá a la página oficial del fabricante. Desconfiá de las páginas con varios botones de «Descargar» o que piden instalar otra cosa primero."
+    abrir: "https://support.microsoft.com/windows/security/threat-malware-protection/protect-your-pc-from-unwanted-software"
+fuentes:
+  - https://support.microsoft.com/accounts-billing/get-trusted-apps-and-games-from-microsoft-store
+  - https://support.microsoft.com/windows/security/threat-malware-protection/protect-your-pc-from-unwanted-software
+madurez: T0
+---
+id: FIL-FND-001
+area: archivos
+titulo:
+  sencillo: "No encuentro un documento que guardé"
+  tecnico: "Buscar archivos en Windows"
+explicacion:
+  sencillo: "Windows puede buscar un archivo por su nombre o por una palabra que tenga adentro. Lo último que usaste también aparece en el Explorador."
+  tecnico: "Búsqueda de la barra de tareas (pestaña Documentos), búsqueda del Explorador desde Este equipo, y archivos recientes en Inicio del Explorador."
+frases: ["no encuentro un documento que guardé", "dónde guardé el archivo", "perdí una carta que escribí en word", "buscar un archivo en la compu"]
+pasos:
+  - texto: "Tocá la lupa de la barra de tareas y escribí parte del nombre o una palabra del documento. Arriba elegí «Documentos» para ver solo eso."
+  - texto: "Abrí el Explorador (Windows + E): en «Inicio» están los archivos que usaste hace poco. Para buscar en toda la PC, entrá a «Este equipo» y usá el cuadro de búsqueda."
+  - texto: "En Word o Excel: Archivo > Abrir muestra los últimos documentos que usaste."
+  - texto: "Si lo borraste, escribile a PC Doctor «borré un archivo sin querer». Microsoft explica cómo buscar."
+    abrir: "https://support.microsoft.com/windows/find-your-files-and-apps-in-windows-5c7c8cfe-c289-fae4-f5f8-6b3fdba418d2"
+fuentes:
+  - https://support.microsoft.com/windows/find-your-files-and-apps-in-windows-5c7c8cfe-c289-fae4-f5f8-6b3fdba418d2
+madurez: T0

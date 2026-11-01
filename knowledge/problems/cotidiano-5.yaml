@@ -1,0 +1,175 @@
+# Energía, seguridad, OneDrive, inicio de sesión, accesibilidad, idioma, impresión y escritorio. Guiadas con fuente oficial.
+id: PWR-001
+area: windows
+titulo:
+  sencillo: "La computadora se prende o se despierta sola"
+  tecnico: "Reactivación inesperada desde suspensión"
+explicacion:
+  sencillo: "Casi siempre la despierta el mouse, el teclado o una tarea programada de Windows (como el mantenimiento automático)."
+  tecnico: "Dispositivos con permiso de reactivación, temporizadores de reactivación y mantenimiento automático."
+frases: ["la compu se prende sola de noche", "se despierta sola", "la pc sale de la suspensión sola", "se enciende sola a cualquier hora"]
+pasos:
+  - texto: "Si el mouse está sobre una mesa que vibra, moverlo puede despertarla: probá apagándolo o desenchufándolo de noche."
+  - texto: "En Energía, revisá cuándo se suspende y usá «Apagar» en vez de «Suspender» si no la vas a usar por muchas horas."
+    abrir: "ms-settings:powersleep"
+  - texto: "Microsoft explica la diferencia entre apagar, suspender e hibernar."
+    abrir: "https://support.microsoft.com/topic/troubleshoot-problems-waking-computer-from-sleep-mode-6cf5b22f-5111-92c3-4a28-eec6e6ff908e"
+fuentes:
+  - https://support.microsoft.com/topic/troubleshoot-problems-waking-computer-from-sleep-mode-6cf5b22f-5111-92c3-4a28-eec6e6ff908e
+madurez: T0
+---
+id: SEC-PHI-001
+area: seguridad
+titulo:
+  sencillo: "Me llegó un correo o mensaje sospechoso"
+  tecnico: "Phishing (suplantación para robar datos)"
+explicacion:
+  sencillo: >-
+    Los estafadores mandan correos que parecen del banco, de un correo argentino, de Microsoft o de una tienda
+    para que toques un enlace y escribas tus claves. Ningún banco ni Microsoft te pide la contraseña por correo.
+  tecnico: "Remitente falsificado, enlaces que no coinciden con el sitio real, urgencia y pedido de datos."
+frases: ["me llegó un mail raro del banco", "un correo me pide la clave", "recibí un mensaje sospechoso", "me dicen que mi cuenta se va a bloquear si no toco el enlace"]
+pasos:
+  - texto: "No toques enlaces ni abras archivos adjuntos. Si dudás, entrá a la página del banco o servicio escribiendo vos la dirección, no desde el correo."
+  - texto: "Si ya escribiste una clave, cambiala desde la página oficial y avisá a tu banco."
+  - texto: "Microsoft explica cómo reconocer estos engaños."
+    abrir: "https://support.microsoft.com/security/protect-yourself-from-phishing"
+fuentes:
+  - https://support.microsoft.com/security/protect-yourself-from-phishing
+madurez: T0
+---
+id: FIL-ODR-002
+area: archivos
+titulo:
+  sencillo: "OneDrive dice que está lleno"
+  tecnico: "Cuota de OneDrive excedida"
+explicacion:
+  sencillo: "La cuenta gratuita trae 5 GB. Cuando se llena, OneDrive deja de guardar cosas nuevas (lo que ya está no se pierde)."
+  tecnico: "Cuota excedida: archivos en solo lectura, sin sincronizar; la papelera de OneDrive también cuenta."
+frases: ["onedrive está lleno", "me dice que no tengo más espacio en onedrive", "se llenó la nube de microsoft", "onedrive no guarda más fotos"]
+pasos:
+  - texto: "Entrá a OneDrive en el navegador, vaciá su papelera (vaciar la papelera de la PC no alcanza) y borrá videos o archivos grandes que no necesites."
+  - texto: "Antes de borrar algo de OneDrive, pasalo a un disco externo si lo querés conservar."
+  - texto: "Microsoft explica las opciones, incluida la de pagar más espacio (es opcional)."
+    abrir: "https://support.microsoft.com/onedrive/my-onedrive-says-it-s-full"
+fuentes:
+  - https://support.microsoft.com/onedrive/my-onedrive-says-it-s-full
+madurez: T0
+---
+id: ACC-HELLO-001
+area: basico
+titulo:
+  sencillo: "No me reconoce la huella o la cara para entrar"
+  tecnico: "Windows Hello (huella / reconocimiento facial)"
+explicacion:
+  sencillo: "Pasa con el lector sucio, con anteojos o con mucha o poca luz. Se puede volver a registrar la huella o la cara. Mientras tanto, entrá con el PIN."
+  tecnico: "Mejorar reconocimiento, volver a registrar, limpiar el sensor, controlador del lector."
+frases: ["no me reconoce la huella", "no me reconoce la cara para entrar", "el lector de huellas no anda", "windows hello no funciona"]
+pasos:
+  - texto: "Entrá con el PIN o la contraseña. Limpiá y secá el lector de huellas."
+  - texto: "En Opciones de inicio de sesión, usá «Mejorar el reconocimiento» o agregá otro dedo."
+    abrir: "ms-settings:signinoptions"
+  - texto: "Microsoft tiene más soluciones."
+    abrir: "https://support.microsoft.com/windows/security/windows-hello-common-issues-and-troubleshooting-tips"
+fuentes:
+  - https://support.microsoft.com/windows/security/windows-hello-common-issues-and-troubleshooting-tips
+madurez: T0
+---
+id: BAS-CLIP-001
+area: basico
+titulo:
+  sencillo: "Quiero pegar algo que copié antes"
+  tecnico: "Historial del portapapeles"
+explicacion:
+  sencillo: "Windows puede recordar las últimas 25 cosas que copiaste. Se abre con Windows + V."
+  tecnico: "Historial del portapapeles (Win+V), elementos anclados, se borra al reiniciar."
+frases: ["cómo pego algo que copié antes", "perdí lo que había copiado", "ver las cosas que copié", "copiar y pegar varias cosas"]
+pasos:
+  - texto: "Apretá Windows + V. La primera vez, tocá «Activar». Después vas a ver lo último que copiaste y podés elegir qué pegar."
+  - texto: "Se puede activar o desactivar en Configuración."
+    abrir: "ms-settings:clipboard"
+fuentes:
+  - https://support.microsoft.com/windows/apps/using-the-clipboard
+madurez: T0
+---
+id: BAS-PTR-001
+area: basico
+titulo:
+  sencillo: "No veo bien la flechita del mouse"
+  tecnico: "Tamaño y color del puntero"
+explicacion:
+  sencillo: "Se puede agrandar la flechita del mouse y ponerle un color que se vea mejor."
+  tecnico: "Accesibilidad > Puntero del mouse y entrada táctil."
+frases: ["no veo la flechita del mouse", "el puntero es muy chico", "pierdo el cursor en la pantalla", "agrandar la flecha del mouse"]
+pasos:
+  - texto: "En Puntero del mouse, mové el tamaño y elegí un color que contraste (por ejemplo, negro o amarillo)."
+    abrir: "ms-settings:easeofaccess-mousepointer"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/make-your-mouse-keyboard-and-other-input-devices-easier-to-use
+madurez: T0
+---
+id: BAS-KB-003
+area: basico
+titulo:
+  sencillo: "El teclado hace ruidos o las teclas responden raro"
+  tecnico: "Teclas especiales o teclas filtro activadas"
+explicacion:
+  sencillo: "Si apretás Mayúscula cinco veces seguidas se activan las «teclas especiales», y el teclado empieza a sonar o a comportarse distinto. Se apagan en un minuto."
+  tecnico: "Sticky Keys (Mayús ×5) y Filter Keys (Mayús derecha 8 s)."
+frases: ["el teclado hace un pitido", "se activaron las teclas especiales", "las teclas tardan en responder", "el teclado suena al apretar shift"]
+pasos:
+  - texto: "En Teclado (Accesibilidad), apagá «Teclas especiales» y «Teclas de filtro», y desactivá sus atajos si no los usás."
+    abrir: "ms-settings:easeofaccess-keyboard"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/make-your-mouse-keyboard-and-other-input-devices-easier-to-use
+madurez: T0
+---
+id: BAS-LANG-001
+area: basico
+titulo:
+  sencillo: "Windows está en otro idioma"
+  tecnico: "Idioma de presentación de Windows"
+explicacion:
+  sencillo: "Se puede agregar el español y ponerlo como idioma de Windows. Hace falta cerrar sesión para que cambie."
+  tecnico: "Agregar paquete de idioma y establecerlo como idioma de presentación."
+frases: ["windows está en inglés", "la compu está en otro idioma", "cambiar el idioma de windows a español", "los menús aparecen en inglés"]
+pasos:
+  - texto: "En Idioma y región, tocá «Agregar un idioma», elegí Español (Argentina o el que prefieras) e indicá que sea el idioma de Windows. Después cerrá sesión."
+    abrir: "ms-settings:regionlanguage"
+fuentes:
+  - https://support.microsoft.com/windows/manage-the-input-and-display-language-settings-in-windows-12a10cb4-8626-9b77-0ccb-5013e0c7c7a2
+madurez: T0
+---
+id: PRN-005
+area: perifericos
+titulo:
+  sencillo: "Imprime en otra impresora"
+  tecnico: "Impresora predeterminada"
+explicacion:
+  sencillo: "Windows puede elegir solo la impresora predeterminada (la última que usaste). Se puede fijar siempre la misma."
+  tecnico: "«Permitir que Windows administre la impresora predeterminada»."
+frases: ["imprime en otra impresora", "manda a imprimir a la impresora equivocada", "cambiar la impresora predeterminada", "aparece otra impresora por defecto"]
+pasos:
+  - texto: "En Impresoras y escáneres, desactivá «Permitir que Windows administre mi impresora predeterminada», elegí tu impresora y tocá «Establecer como predeterminada»."
+    abrir: "ms-settings:printers"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/printer/set-a-default-printer-in-windows
+madurez: T0
+---
+id: BAS-TASK-001
+area: basico
+titulo:
+  sencillo: "Desapareció la barra de abajo (barra de tareas)"
+  tecnico: "Barra de tareas oculta automáticamente"
+explicacion:
+  sencillo: "Puede estar configurada para esconderse sola: aparece al llevar el mouse hasta abajo de todo."
+  tecnico: "Ocultar automáticamente la barra de tareas."
+frases: ["desapareció la barra de abajo", "no veo la barra de tareas", "se esconde la barra de inicio", "no aparece el botón de inicio abajo"]
+pasos:
+  - texto: "Llevá el mouse hasta el borde de abajo de la pantalla: si aparece, está en modo «ocultar automáticamente»."
+  - texto: "En Barra de tareas > Comportamientos, desactivá «Ocultar automáticamente la barra de tareas»."
+    abrir: "ms-settings:taskbar"
+  - texto: "Si no aparece de ninguna forma, reiniciá la PC."
+fuentes:
+  - https://support.microsoft.com/windows/fix-problems-with-the-start-menu-604171c1-2c65-40a6-8774-473810765950
+madurez: T0

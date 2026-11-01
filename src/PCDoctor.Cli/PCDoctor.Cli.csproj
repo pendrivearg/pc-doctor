@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <AssemblyName>pcdoctor-cli</AssemblyName>
+    <RootNamespace>PCDoctor.Cli</RootNamespace>
+    <NoWarn>$(NoWarn);CA1416</NoWarn>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>..\PCDoctor.App\pcdoctor.ico</ApplicationIcon>
+    <AssemblyTitle>PC Doctor AI (herramienta para técnicos)</AssemblyTitle>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PCDoctor.Windows\PCDoctor.Windows.csproj" />
+  </ItemGroup>
+</Project>

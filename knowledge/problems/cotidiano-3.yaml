@@ -1,0 +1,235 @@
+# Programas, archivos, cuentas, seguridad y juegos (módulos B, C, F, H, I, M). Fichas guiadas con fuente oficial.
+id: APP-OFF-002
+area: programas
+titulo:
+  sencillo: "Office dice «Producto sin licencia» o pide activar"
+  tecnico: "Errores de activación de Microsoft 365 / Office"
+explicacion:
+  sencillo: "Pasa cuando Office no reconoce tu licencia: otra cuenta, suscripción vencida o dos Office instalados a la vez. Se arregla con la licencia legítima; PC Doctor nunca activa Office por vías no oficiales."
+  tecnico: "Cuenta incorrecta, suscripción expirada, instalaciones duplicadas o fecha/hora incorrecta."
+frases: ["el word dice producto sin licencia", "office me pide activar", "excel dice que no tiene licencia", "se venció el office"]
+pasos:
+  - texto: "Abrí Word, tocá tu nombre arriba a la derecha y fijate que sea la cuenta con la que compraste Office."
+  - texto: "Si tenés dos Office instalados, desinstalá el que no usás desde Aplicaciones instaladas."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Si la suscripción de Microsoft 365 venció, hay que renovarla. Microsoft explica cada error en su página oficial."
+    abrir: "https://support.microsoft.com/microsoft-365-activation-licensing/office-install/unlicensed-product-and-activation-errors-in-office"
+fuentes:
+  - https://support.microsoft.com/microsoft-365-activation-licensing/office-install/unlicensed-product-and-activation-errors-in-office
+madurez: T0
+---
+id: APP-OUT-001
+area: programas
+titulo:
+  sencillo: "Outlook no abre o se cuelga"
+  tecnico: "Outlook no inicia (complementos, perfil o archivo de datos)"
+explicacion:
+  sencillo: "Muchas veces lo traba un complemento. Abrir Outlook en «modo seguro» permite saberlo."
+  tecnico: "Diagnóstico con outlook /safe; luego complementos COM, reparación de Office o nuevo perfil."
+frases: ["no me abre el outlook", "el outlook se queda colgado", "outlook no puede abrir la ventana", "no puedo entrar al correo de outlook"]
+sondas: [eventos]
+pasos:
+  - texto: "Apretá Windows + R, escribí  outlook /safe  y Enter. Si abre así, el problema es un complemento: desactivalo en Archivo > Opciones > Complementos."
+  - texto: "Si tampoco abre en modo seguro, repará Office desde Aplicaciones instaladas > Microsoft 365 > Modificar."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Microsoft tiene una guía con los demás pasos (reparar el archivo de datos, crear un perfil nuevo)."
+    abrir: "https://support.microsoft.com/office/i-can-t-start-microsoft-outlook-or-receive-the-error-cannot-start-microsoft-outlook-cannot-open-the-outlook-window-d1f69da6-b333-4650-97bf-4d77bd7abb85"
+fuentes:
+  - https://support.microsoft.com/office/i-can-t-start-microsoft-outlook-or-receive-the-error-cannot-start-microsoft-outlook-cannot-open-the-outlook-window-d1f69da6-b333-4650-97bf-4d77bd7abb85
+madurez: T0
+---
+id: FIL-DEL-001
+area: archivos
+titulo:
+  sencillo: "Borré un archivo sin querer"
+  tecnico: "Recuperación de archivos eliminados"
+explicacion:
+  sencillo: >-
+    Casi siempre se puede recuperar si se actúa rápido. IMPORTANTE: hasta recuperarlo, no guardes ni descargues
+    cosas nuevas en ese disco, porque pueden ocupar el lugar del archivo borrado.
+  tecnico: "Papelera, Historial de archivos/versiones anteriores, papelera de OneDrive y Windows File Recovery (sin escribir en el disco afectado)."
+frases: ["borré un archivo sin querer", "se me borraron las fotos", "eliminé una carpeta importante", "vacié la papelera y necesito un archivo"]
+pasos:
+  - texto: "Abrí la Papelera de reciclaje (en el escritorio), buscá el archivo, clic derecho > «Restaurar»."
+  - texto: "Si estaba en OneDrive, entrá a la papelera de OneDrive en internet: guarda lo borrado 30 días."
+    abrir: "https://support.microsoft.com/onedrive/restore-your-onedrive-files"
+  - texto: "Si tenías Historial de archivos, clic derecho sobre la carpeta > «Restaurar versiones anteriores»."
+  - texto: "Si nada de eso funciona, Microsoft tiene una herramienta gratuita (Windows File Recovery)."
+    abrir: "https://support.microsoft.com/windows/experience/backup-recovery/windows-file-recovery"
+derivar: "Si son fotos o documentos muy valiosos y no aparecen, apagá la PC y consultá a un técnico en recuperación de datos antes de seguir usándola."
+fuentes:
+  - https://support.microsoft.com/windows/experience/backup-recovery/windows-file-recovery
+  - https://support.microsoft.com/onedrive/restore-your-onedrive-files
+madurez: T0
+---
+id: FIL-ODR-001
+area: archivos
+titulo:
+  sencillo: "OneDrive no sincroniza"
+  tecnico: "Fallas de sincronización de OneDrive"
+explicacion:
+  sencillo: "OneDrive dejó de subir o bajar archivos. Reiniciarlo suele arreglarlo y no se pierde nada."
+  tecnico: "Restablecimiento de OneDrive (no borra archivos; hay que volver a elegir carpetas)."
+frases: ["onedrive no sincroniza", "la nube no sube mis archivos", "onedrive tiene una cruz roja", "onedrive dice sincronización pendiente"]
+pasos:
+  - texto: "Fijate que haya Internet y que la cuenta de OneDrive tenga espacio libre (la gratuita trae 5 GB)."
+  - texto: "Si sigue igual, restablecé OneDrive como explica Microsoft: no se pierden archivos."
+    abrir: "https://support.microsoft.com/onedrive/reset-onedrive"
+fuentes:
+  - https://support.microsoft.com/onedrive/reset-onedrive
+madurez: T0
+---
+id: FIL-BAK-001
+area: archivos
+titulo:
+  sencillo: "Quiero hacer una copia de seguridad de mis cosas"
+  tecnico: "Copia de seguridad (Windows Backup / disco externo)"
+explicacion:
+  sencillo: "Tener una copia de tus fotos y documentos en otro lugar es lo que más te protege ante un disco roto, un virus o un robo."
+  tecnico: "Windows Backup con OneDrive (cuenta Microsoft personal) o copia manual a un disco externo."
+frases: ["quiero hacer una copia de seguridad", "cómo guardo mis fotos por si se rompe la compu", "hacer un backup de mis archivos", "resguardar mis documentos"]
+pasos:
+  - texto: "Opción simple: conectá un disco externo o pendrive y copiá las carpetas Documentos, Escritorio, Imágenes y Descargas."
+  - texto: "Opción automática: Windows Backup guarda tus carpetas y configuraciones en OneDrive (necesita una cuenta Microsoft personal)."
+    abrir: "https://support.microsoft.com/windows/experience/backup-recovery/back-up-and-restore-with-windows-backup"
+  - texto: "Lo ideal es tener la copia fuera de la computadora y revisarla de vez en cuando."
+fuentes:
+  - https://support.microsoft.com/windows/experience/backup-recovery/back-up-and-restore-with-windows-backup
+madurez: T0
+---
+id: FIL-ZIP-001
+area: archivos
+titulo:
+  sencillo: "No puedo abrir un archivo comprimido (ZIP, RAR, 7z)"
+  tecnico: "Extracción de archivos comprimidos"
+explicacion:
+  sencillo: "Windows abre los ZIP, y desde Windows 11 24H2 también RAR y 7z. Los comprimidos con contraseña necesitan otro programa."
+  tecnico: "Extracción nativa (Explorador) de ZIP; RAR/7z/TAR en Windows 11 24H2+; cifrados requieren 7-Zip u otro."
+frases: ["no puedo abrir un archivo rar", "cómo descomprimo un zip", "me mandaron un archivo 7z y no lo abro", "descomprimir archivos"]
+pasos:
+  - texto: "Clic derecho sobre el archivo > «Extraer todo…» y elegí dónde dejar lo que tiene adentro."
+  - texto: "Si tiene contraseña o es un formato que Windows no abre, usá un programa gratuito y oficial como 7-Zip (descargalo solo de su página oficial)."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/zip-and-unzip-files"
+fuentes:
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/zip-and-unzip-files
+madurez: T0
+---
+id: SEC-RAN-001
+area: seguridad
+titulo:
+  sencillo: "Mis archivos no abren y me piden plata para devolverlos"
+  tecnico: "Ransomware (cifrado de archivos con pedido de rescate)"
+explicacion:
+  sencillo: >-
+    Es un virus que bloquea tus archivos y pide un pago. No pagues: no garantiza nada. Desconectá la PC de Internet
+    y de los discos externos para que no se extienda. Algunas variantes tienen solución gratuita.
+  tecnico: "Contención (aislar red y unidades), limpieza con Defender sin conexión, búsqueda de descifrador en No More Ransom, restauración desde copias."
+frases: ["me secuestraron los archivos", "mis archivos tienen otra extensión y no abren", "me piden plata para devolverme los archivos", "apareció una nota que pide un rescate en bitcoin"]
+sondas: [seguridad]
+pasos:
+  - texto: "Desconectá el cable de red o el Wi-Fi y quitá pendrives y discos externos. No apagues ni borres nada."
+  - texto: "Hacé un examen de Microsoft Defender sin conexión (Seguridad de Windows > Protección antivirus > Opciones de examen)."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "En No More Ransom (proyecto oficial de la policía europea y empresas de seguridad) podés ver si hay un descifrador gratuito."
+    abrir: "https://www.nomoreransom.org/"
+  - texto: "Para el futuro: Microsoft explica cómo proteger tus carpetas y tener copias."
+    abrir: "https://support.microsoft.com/security/protect-your-pc-from-ransomware"
+derivar: "Denunciá el hecho y, si los archivos son importantes, consultá a un técnico en seguridad antes de hacer cualquier otra cosa."
+fuentes:
+  - https://support.microsoft.com/security/protect-your-pc-from-ransomware
+  - https://www.nomoreransom.org/
+madurez: T0
+---
+id: ACC-MSA-001
+area: basico
+titulo:
+  sencillo: "Mi cuenta de Microsoft (Hotmail, Outlook) está bloqueada"
+  tecnico: "Cuenta Microsoft bloqueada o suspendida"
+explicacion:
+  sencillo: "Microsoft bloquea cuentas cuando ve movimientos raros, para protegerlas. Se desbloquea con un código que te mandan al celular."
+  tecnico: "Desbloqueo con código de seguridad por SMS; si no hay acceso, asistente de inicio de sesión. El soporte no restablece contraseñas."
+frases: ["me bloquearon la cuenta de hotmail", "mi cuenta de microsoft está bloqueada", "no puedo entrar a mi correo outlook dice bloqueada"]
+pasos:
+  - texto: "Entrá a tu cuenta de Microsoft desde el navegador y pedí el código de seguridad por mensaje de texto. Vence a los 10 minutos."
+    abrir: "https://account.microsoft.com/"
+  - texto: "Microsoft explica qué hacer si no te llega el código."
+    abrir: "https://support.microsoft.com/accounts-billing/manage/microsoft-account-has-been-locked"
+derivar: "Desconfiá de cualquiera que te ofrezca desbloquearla por teléfono o por mensaje: Microsoft no lo hace así."
+fuentes:
+  - https://support.microsoft.com/accounts-billing/manage/microsoft-account-has-been-locked
+madurez: T0
+---
+id: DAY-SCR-001
+area: basico
+titulo:
+  sencillo: "Sacar una foto de la pantalla o grabarla"
+  tecnico: "Capturas y grabación de pantalla (Recortes)"
+explicacion:
+  sencillo: "Windows trae una herramienta para sacar una foto de la pantalla o de una parte, y en Windows 11 también para grabar video."
+  tecnico: "Win+Shift+S (captura), Win+Shift+R (grabación en Recortes, Windows 11), Impr Pant."
+frases: ["cómo saco una captura de pantalla", "quiero sacarle una foto a la pantalla", "cómo grabo la pantalla", "guardar lo que se ve en la pantalla"]
+pasos:
+  - texto: "Para una foto: apretá Windows + Mayús + S, elegí la parte de la pantalla y pegala donde quieras (queda también en la carpeta Imágenes > Capturas de pantalla)."
+  - texto: "Para grabar video (Windows 11): Windows + Mayús + R, elegí la zona y tocá Iniciar."
+  - texto: "Microsoft lo explica paso a paso."
+    abrir: "https://support.microsoft.com/windows/apps/use-snipping-tool-to-capture-screenshots"
+fuentes:
+  - https://support.microsoft.com/windows/apps/use-snipping-tool-to-capture-screenshots
+madurez: T0
+---
+id: GAM-002
+area: juegos
+titulo:
+  sencillo: "El juego dice que falta un archivo de DirectX (d3dx9, xinput…)"
+  tecnico: "Componentes heredados de DirectX ausentes"
+explicacion:
+  sencillo: "Muchos juegos usan partes viejas de DirectX que Windows no trae. Se instalan gratis desde Microsoft y no cambian nada más."
+  tecnico: "DirectX End-User Runtime (d3dx9_xx.dll, xinput1_3.dll, etc.); no reemplaza la versión de DirectX instalada."
+frases: ["falta d3dx9_43.dll", "el juego dice que falta un dll de directx", "error de directx al abrir el juego", "falta xinput1_3.dll"]
+pasos:
+  - texto: "Instalá el «DirectX End-User Runtime» siguiendo la página oficial de Microsoft. No descargues archivos .dll sueltos de otras páginas: suelen traer virus."
+    abrir: "https://support.microsoft.com/topic/how-to-install-the-latest-version-of-directx-d1f5ffa5-dae2-246c-91b1-ee1e973ed8c2"
+  - texto: "En Steam también podés verificar los archivos del juego (clic derecho > Propiedades > Archivos instalados)."
+fuentes:
+  - https://support.microsoft.com/topic/how-to-install-the-latest-version-of-directx-d1f5ffa5-dae2-246c-91b1-ee1e973ed8c2
+madurez: T0
+---
+id: GAM-003
+area: juegos
+titulo:
+  sencillo: "El juego pide TPM 2.0 o Arranque seguro (Secure Boot)"
+  tecnico: "Requisitos de anti-trampas: TPM 2.0 y UEFI Secure Boot"
+explicacion:
+  sencillo: "Algunos juegos online (como Valorant o Battlefield) exigen dos protecciones que se activan en la BIOS. PC Doctor revisa cómo están en tu PC."
+  tecnico: "Anti-cheat a nivel kernel que requiere TPM 2.0 habilitado y Secure Boot activo en modo UEFI."
+frases: ["el juego me pide tpm 2.0", "valorant dice que necesito secure boot", "el antitrampas dice que active el tpm", "battlefield pide arranque seguro"]
+sondas: [plataforma]
+pasos:
+  - texto: "Mirá abajo cómo está el Arranque seguro en esta PC. Si tenés BitLocker, guardá antes la clave de recuperación."
+    abrir: "https://account.microsoft.com/devices/recoverykey"
+  - texto: "Para activar TPM 2.0 (puede figurar como Intel PTT o AMD fTPM) en la BIOS, seguí la guía oficial."
+    abrir: "https://support.microsoft.com/windows/security/devicesecurity/enable-tpm-2-0-on-your-pc"
+fuentes:
+  - https://support.microsoft.com/windows/security/devicesecurity/enable-tpm-2-0-on-your-pc
+  - https://learn.microsoft.com/windows-hardware/design/device-experiences/oem-secure-boot
+madurez: T0
+---
+id: NET-WIFI-001
+area: red
+titulo:
+  sencillo: "El Wi-Fi se corta a cada rato"
+  tecnico: "Desconexiones intermitentes de Wi-Fi"
+explicacion:
+  sencillo: "Puede ser la distancia al router, interferencias o que Windows apague el Wi-Fi para ahorrar batería."
+  tecnico: "Señal, banda (2,4/5 GHz), ahorro de energía del adaptador y controlador."
+frases: ["el wifi se corta a cada rato", "se desconecta el internet cada tanto", "el wifi anda y deja de andar", "se cae la conexión todo el tiempo"]
+sondas: [red]
+pasos:
+  - texto: "Acercate al router o probá con cable para ver si es la señal."
+  - texto: "Olvidá la red Wi-Fi y volvé a conectarte (vas a necesitar la clave del Wi-Fi)."
+    abrir: "ms-settings:network-wifi"
+  - texto: "Microsoft tiene más pasos, como actualizar el controlador del adaptador."
+    abrir: "https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c"
+fuentes:
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+madurez: T0

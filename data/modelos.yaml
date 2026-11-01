@@ -1,0 +1,32 @@
+# Modelos de IA local que PC Doctor puede usar (formato GGUF para llama.cpp).
+# ram_gb = memoria libre necesaria (modelo + contexto 4K + margen). Se elige el más grande que entre
+# en la memoria realmente libre de la PC. Licencias verificadas en Hugging Face (Qwen/Qwen3.5-*).
+motor:
+  carpeta: engines/llama-cpu-x64
+  ejecutable: llama-server.exe
+  version: b12032
+  licencia: MIT
+  # Se pone en true recién cuando el motor y los modelos pasan la evaluación en vivo (tools/evaluar-ia). Hasta entonces el chat usa reglas.
+  verificado: false
+modelos:
+  - id: qwen3.5-0.8b
+    nombre: "Qwen3.5 0.8B"
+    archivo: Qwen3.5-0.8B-Q4_K_M.gguf
+    ram_gb: 0.9
+    licencia: Apache-2.0
+    origen: https://huggingface.co/unsloth/Qwen3.5-0.8B-GGUF
+    sha256: bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517
+  - id: qwen3.5-2b
+    nombre: "Qwen3.5 2B"
+    archivo: Qwen3.5-2B-Q4_K_M.gguf
+    ram_gb: 2.0
+    licencia: Apache-2.0
+    origen: https://huggingface.co/unsloth/Qwen3.5-2B-GGUF
+    sha256: aaf42c8b7c3cab2bf3d69c355048d4a0ee9973d48f16c731c0520ee914699223
+  - id: qwen3.5-4b
+    nombre: "Qwen3.5 4B"
+    archivo: Qwen3.5-4B-Q4_K_M.gguf
+    ram_gb: 3.6
+    licencia: Apache-2.0
+    origen: https://huggingface.co/unsloth/Qwen3.5-4B-GGUF
+    sha256: 00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4

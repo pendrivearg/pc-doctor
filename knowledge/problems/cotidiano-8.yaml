@@ -1,0 +1,161 @@
+# Uso cotidiano y accesibilidad: dictar con la voz, lupa, pantalla girada, descargas, avisos, zoom del navegador, íconos del escritorio y Gmail. Guiadas con fuente oficial.
+id: BAS-DIC-001
+area: basico
+titulo:
+  sencillo: "Quiero escribir hablando, sin usar el teclado"
+  tecnico: "Escritura por voz (Windows + H)"
+explicacion:
+  sencillo: "Windows escribe lo que decís. Funciona en cualquier lugar donde se pueda escribir (un correo, un documento, el buscador) y entiende español. Necesita Internet y un micrófono."
+  tecnico: "Escritura por voz con reconocimiento en línea; idiomas español (México) y español (España) con comandos de puntuación."
+frases: ["quiero escribir hablando", "dictarle un texto a la compu", "que la compu escriba lo que digo", "escribir con la voz sin teclado"]
+pasos:
+  - texto: "Hacé clic donde quieras escribir (por ejemplo, en un correo). Apretá Windows + H y esperá el aviso «Escuchando…». Hablá con normalidad."
+  - texto: "Los signos se dictan diciéndolos (por ejemplo «coma» o «punto»). Para terminar, tocá el micrófono de la barrita de dictado."
+  - texto: "Si no escribe nada, revisá que el micrófono funcione (también podés escribirle a PC Doctor «no funciona el micrófono»)."
+    abrir: "ms-settings:privacy-microphone"
+  - texto: "Microsoft lo explica, con todos los comandos de voz."
+    abrir: "https://support.microsoft.com/accessibility/windows/use-voice-typing-to-talk-instead-of-type-on-your-pc"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/use-voice-typing-to-talk-instead-of-type-on-your-pc
+madurez: T0
+---
+id: BAS-MAG-001
+area: basico
+titulo:
+  sencillo: "Quiero una lupa para ver mejor la pantalla"
+  tecnico: "Lupa de Windows (Magnifier)"
+explicacion:
+  sencillo: "Windows trae una lupa que agranda la parte de la pantalla donde está el mouse. Se prende y se apaga con el teclado, cuando la necesitás."
+  tecnico: "Lupa: Windows + Más para activar y acercar, Windows + Menos para alejar, Windows + Esc para cerrar."
+frases: ["necesito una lupa para ver la pantalla", "agrandar una parte de la pantalla", "no veo bien lo que hay en la pantalla", "ver más grande donde está el mouse"]
+pasos:
+  - texto: "Apretá Windows + la tecla Más (+) para prender la lupa. Volvé a apretarla para acercar más; Windows + Menos (−) aleja."
+  - texto: "Mové el mouse para recorrer la pantalla agrandada. Para cerrarla: Windows + Esc."
+  - texto: "Si querés que todo (letras e íconos) quede siempre más grande, mejor cambiá la escala: escribile a PC Doctor «las letras se ven muy chicas»."
+  - texto: "Desde Configuración podés elegir el aumento y que se prenda sola."
+    abrir: "ms-settings:easeofaccess-magnifier"
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/magnifier/chapter-1-introducing-magnifier"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/magnifier/chapter-1-introducing-magnifier
+madurez: T0
+---
+id: DSP-ROT-001
+area: windows
+titulo:
+  sencillo: "La pantalla quedó dada vuelta o de costado"
+  tecnico: "Orientación de pantalla cambiada"
+explicacion:
+  sencillo: "A veces se aprieta sin querer una combinación de teclas que gira la imagen. Se vuelve a poner derecha en un minuto."
+  tecnico: "Orientación de pantalla (Horizontal/Vertical/volteada); atajo Ctrl + Alt + flecha según el controlador de video."
+frases: ["la pantalla quedó dada vuelta", "la imagen se ve de costado", "se giró la pantalla", "todo se ve al revés en el monitor"]
+pasos:
+  - texto: "Probá apretar Ctrl + Alt + flecha hacia arriba (en algunas computadoras endereza la imagen al instante)."
+  - texto: "Si no cambia: Configuración > Sistema > Pantalla > «Orientación de la pantalla» y elegí «Horizontal». Confirmá con «Mantener cambios»."
+    abrir: "ms-settings:display"
+  - texto: "Microsoft lo explica paso a paso."
+    abrir: "https://support.microsoft.com/windows/change-screen-orientation-f7ab1ff8-971d-58a5-b8ee-bc113bbf3acb"
+fuentes:
+  - https://support.microsoft.com/windows/change-screen-orientation-f7ab1ff8-971d-58a5-b8ee-bc113bbf3acb
+  - https://support.microsoft.com/powerpoint/draw-straight-lines-or-align-things-with-the-ruler-in-powerpoint
+madurez: T0
+---
+id: DAY-DL-001
+area: archivos
+titulo:
+  sencillo: "No encuentro lo que descargué"
+  tecnico: "Ubicación de las descargas del navegador"
+explicacion:
+  sencillo: "Casi todo lo que bajás de Internet queda en la carpeta «Descargas». El navegador también tiene una lista de lo último que bajaste."
+  tecnico: "Carpeta Descargas del perfil; lista de descargas del navegador (Ctrl + J); ubicación configurable en Configuración > Descargas."
+frases: ["no encuentro lo que bajé", "dónde quedan las descargas", "descargué un archivo y no sé dónde está", "dónde se guardó lo que bajé de internet"]
+pasos:
+  - texto: "En el navegador, apretá Ctrl + J: aparece la lista de lo último que bajaste. Tocá «Mostrar en carpeta» para ver dónde está."
+  - texto: "También podés abrir el Explorador de archivos (Windows + E) y entrar a «Descargas», a la izquierda."
+  - texto: "Si el navegador guarda en otro lugar, Microsoft explica cómo ver y cambiar esa carpeta."
+    abrir: "https://support.microsoft.com/microsoft-edge/find-where-your-browser-is-saving-downloads-d3e83af6-68bb-aa90-3167-eeb657013902"
+fuentes:
+  - https://support.microsoft.com/microsoft-edge/find-where-your-browser-is-saving-downloads-d3e83af6-68bb-aa90-3167-eeb657013902
+  - https://support.microsoft.com/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad
+madurez: T0
+---
+id: BAS-NOT-001
+area: basico
+titulo:
+  sencillo: "Quiero que la compu deje de interrumpirme con notificaciones"
+  tecnico: "Notificaciones de aplicaciones y modo No molestar"
+explicacion:
+  sencillo: "Se pueden apagar los avisos de un programa en particular, o activar «No molestar» para que no aparezca ninguno por un rato o en ciertos horarios."
+  tecnico: "Configuración > Sistema > Notificaciones: por aplicación, No molestar manual o automático (horario, juegos, pantalla completa)."
+frases: ["quiero silenciar las notificaciones", "me interrumpen todo el tiempo las notificaciones", "activar no molestar en la compu", "sacar los avisos de un programa"]
+pasos:
+  - texto: "Para silenciar todo un rato: tocá la fecha y hora (abajo a la derecha) y la campanita con «zZ»."
+  - texto: "Para apagar los avisos de un programa: Notificaciones > elegí el programa > desactivalo. Ahí también podés programar «No molestar» por horario."
+    abrir: "ms-settings:notifications"
+  - texto: "Si los avisos son de una página web (en la esquina, con publicidad), escribile a PC Doctor «avisos de publicidad en la esquina»."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/notifications-and-do-not-disturb-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/notifications-and-do-not-disturb-in-windows
+madurez: T0
+---
+id: BAS-ZOOM-001
+area: basico
+titulo:
+  sencillo: "Las páginas de Internet se ven muy chicas o muy grandes"
+  tecnico: "Zoom del navegador"
+explicacion:
+  sencillo: "Cada navegador tiene su propio tamaño (zoom). Si se apretó una tecla sin querer, todo se ve gigante o diminuto. Se arregla con el teclado."
+  tecnico: "Ctrl + Más / Ctrl + Menos / Ctrl + 0; zoom predeterminado en Configuración > Accesibilidad > Zoom de página (Edge)."
+frases: ["las páginas de internet se ven muy chicas", "la página se ve gigante", "agrandar lo que se ve en el navegador", "se achicó todo en el navegador"]
+pasos:
+  - texto: "Con el navegador abierto: Ctrl + Más (+) agranda, Ctrl + Menos (−) achica y Ctrl + 0 (cero) vuelve al tamaño normal. También sirve Ctrl + la ruedita del mouse."
+  - texto: "Para que todas las páginas se vean más grandes siempre: en Edge, Configuración > Accesibilidad > «Zoom de página»."
+    abrir: "https://support.microsoft.com/accessibility/edge/accessibility-features-in-microsoft-edge"
+fuentes:
+  - https://support.microsoft.com/accessibility/edge/accessibility-features-in-microsoft-edge
+  - https://support.microsoft.com/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad
+madurez: T0
+---
+id: BAS-ICO-001
+area: basico
+titulo:
+  sencillo: "Desaparecieron los íconos del escritorio"
+  tecnico: "Íconos del escritorio ocultos o carpeta Escritorio movida"
+explicacion:
+  sencillo: "Casi siempre están ocultos por una opción del menú, no borrados. Otras veces la carpeta del escritorio quedó en OneDrive."
+  tecnico: "Ver > Mostrar iconos del escritorio; Configuración de iconos del escritorio; ubicación de la carpeta Escritorio (copia de seguridad de OneDrive)."
+frases: ["desaparecieron los íconos del escritorio", "el escritorio quedó vacío", "se borraron los accesos directos del escritorio", "no veo la papelera en el escritorio"]
+pasos:
+  - texto: "Hacé clic derecho en un lugar vacío del escritorio > Ver > marcá «Mostrar iconos del escritorio»."
+  - texto: "Si falta la Papelera o «Este equipo»: Temas > «Configuración de iconos del escritorio», marcalos y Aceptar."
+    abrir: "ms-settings:themes"
+  - texto: "Si siguen sin aparecer, puede que la carpeta Escritorio haya quedado en otro lugar (por ejemplo, OneDrive). Microsoft explica cómo revisarlo."
+    abrir: "https://support.microsoft.com/onedrive/where-have-my-desktop-icons-gone"
+fuentes:
+  - https://support.microsoft.com/windows/show-desktop-icons-in-windows-c13270f0-3812-c71d-f27e-29aa32588b20
+  - https://support.microsoft.com/onedrive/where-have-my-desktop-icons-gone
+madurez: T0
+---
+id: ACC-GML-001
+area: basico
+titulo:
+  sencillo: "Me olvidé la contraseña de Gmail"
+  tecnico: "Recuperación de cuenta de Google"
+explicacion:
+  sencillo: >-
+    Google la recupera solo por su página oficial, haciéndote preguntas para comprobar que la cuenta es tuya.
+    Google no atiende por teléfono: si alguien te llama o te escribe diciendo que es de Google y te pide un código, es una estafa.
+    PC Doctor no lee ni guarda contraseñas.
+  tecnico: "Recuperación de cuenta de Google (g.co/recover); usar un dispositivo y lugar habituales; correo o teléfono de recuperación."
+frases: ["me olvidé la clave del gmail", "no puedo entrar a mi correo de google", "recuperar mi cuenta de gmail", "no me acuerdo la contraseña de google"]
+pasos:
+  - texto: "Hacelo desde una computadora o celular donde ya hayas entrado antes a tu Gmail, y desde tu casa si es posible: Google lo tiene en cuenta."
+  - texto: "Entrá a la página oficial de recuperación y respondé lo que pregunte. Si no sabés una respuesta, poné la mejor aproximación en vez de saltearla."
+    abrir: "https://support.google.com/accounts/answer/7682439?hl=es-419"
+  - texto: "Si te mandan un código, puede llegar al correo o teléfono de recuperación; revisá también la carpeta de spam."
+derivar: "Nunca le des un código de verificación a alguien que te llama o te escribe: Google no pide códigos ni contraseñas."
+fuentes:
+  - https://support.google.com/accounts/answer/7682439?hl=es-419
+  - https://support.google.com/accounts/answer/7299973?hl=es-419
+madurez: T0

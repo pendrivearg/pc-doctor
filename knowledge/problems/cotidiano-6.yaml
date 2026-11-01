@@ -1,0 +1,156 @@
+# Arranque y recuperación (pantalla negra, modo seguro, restaurar), Wi-Fi, documentos y navegador. Guiadas con fuente oficial.
+id: BOOT-BLK-001
+area: windows
+titulo:
+  sencillo: "La pantalla queda negra"
+  tecnico: "Pantalla negra o en blanco"
+explicacion:
+  sencillo: "Si la PC está prendida pero la pantalla queda negra, muchas veces se arregla con un atajo que reinicia el video. Si pasa al iniciar sesión o después de una actualización, hay más pasos."
+  tecnico: "Reinicio del controlador gráfico, modos de proyección, reinicio del Explorador, controlador de video, modo seguro."
+frases: ["la pantalla queda negra", "prendo la compu y la pantalla está negra", "después de poner la clave queda todo negro", "se ve solo el puntero en una pantalla negra"]
+sondas: [gpu, eventos]
+pasos:
+  - texto: "Revisá que el monitor esté prendido y el cable bien conectado en los dos extremos."
+  - texto: "Apretá Windows + Ctrl + Mayús + B (reinicia el video: se escucha un pitido o parpadea). Después probá Windows + P y elegí «Solo pantalla de PC» o «Duplicar»."
+  - texto: "Si ves el puntero: apretá Ctrl + Alt + Supr > Administrador de tareas > buscá «Explorador de Windows» > Reiniciar."
+  - texto: "Microsoft tiene la guía completa (incluye modo seguro y volver atrás el controlador)."
+    abrir: "https://support.microsoft.com/windows/hardware/display-graphics/troubleshooting-blank-screens-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/display-graphics/troubleshooting-blank-screens-in-windows
+madurez: T0
+---
+id: BOOT-SAFE-001
+area: windows
+titulo:
+  sencillo: "Necesito iniciar Windows en modo seguro"
+  tecnico: "Modo seguro (inicio con controladores mínimos)"
+explicacion:
+  sencillo: "El modo seguro arranca Windows con lo mínimo. Sirve para desinstalar un programa o controlador que no deja usar la PC. Para salir, alcanza con reiniciar."
+  tecnico: "Entorno de recuperación > Solucionar problemas > Opciones avanzadas > Configuración de inicio > F4/F5."
+frases: ["cómo entro en modo seguro", "iniciar en modo a prueba de fallos", "arrancar windows en modo seguro"]
+pasos:
+  - texto: "IMPORTANTE: si el disco tiene BitLocker, vas a necesitar la clave de recuperación."
+    abrir: "https://account.microsoft.com/devices/recoverykey"
+  - texto: "Mantené apretada la tecla Mayúscula y elegí Inicio > Encendido > Reiniciar. Después: Solucionar problemas > Opciones avanzadas > Configuración de inicio > Reiniciar, y apretá 5 (modo seguro con red)."
+  - texto: "Microsoft lo explica paso a paso."
+    abrir: "https://support.microsoft.com/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234"
+fuentes:
+  - https://support.microsoft.com/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234
+madurez: T0
+---
+id: WIN-RST-001
+area: windows
+titulo:
+  sencillo: "Quiero volver la computadora a como estaba hace unos días"
+  tecnico: "Restaurar sistema (punto de restauración)"
+explicacion:
+  sencillo: >-
+    «Restaurar sistema» deshace cambios de programas, controladores y configuraciones hasta una fecha anterior,
+    sin borrar tus documentos ni fotos. Solo funciona si la protección del sistema estaba activada.
+  tecnico: "rstrui.exe: revierte archivos de sistema, registro y programas a un punto de restauración; no toca archivos personales."
+frases: ["volver la compu a una fecha anterior", "restaurar a como estaba antes", "punto de restauración", "desde que instalé un programa anda mal"]
+pasos:
+  - texto: "Apretá Windows + R, escribí  rstrui  y Enter. Elegí un punto de restauración de antes de que empezara el problema."
+  - texto: "Si no hay puntos de restauración, esta opción no está disponible en esta PC (no estaba activada)."
+  - texto: "Microsoft lo explica, incluido cómo hacerlo si Windows no arranca."
+    abrir: "https://support.microsoft.com/windows/experience/backup-recovery/system-restore"
+fuentes:
+  - https://support.microsoft.com/windows/experience/backup-recovery/system-restore
+madurez: T0
+---
+id: NET-PWD-001
+area: red
+titulo:
+  sencillo: "No sé la clave del Wi-Fi"
+  tecnico: "Contraseña de la red Wi-Fi"
+explicacion:
+  sencillo: >-
+    La clave original suele estar en una etiqueta pegada al router. Si una computadora tuya ya está conectada,
+    Windows te la puede mostrar. PC Doctor no lee ni guarda contraseñas: te indica dónde verla vos.
+  tecnico: "Etiqueta del router; en una PC ya conectada: Red e Internet > Propiedades > Mostrar contraseña de la red."
+frases: ["no sé la clave del wifi", "me olvidé la contraseña del wifi", "cuál es la clave de internet", "quiero conectar el celular y no sé la clave"]
+pasos:
+  - texto: "Mirá la etiqueta del router o módem: la clave suele figurar como «WPA Key», «Clave» o «Password»."
+  - texto: "En una PC tuya que ya esté conectada: Redes conocidas > tu red > «Mostrar» junto a la contraseña."
+    abrir: "ms-settings:network-wifisettings"
+  - texto: "Microsoft lo explica paso a paso."
+    abrir: "https://support.microsoft.com/windows/find-your-wi-fi-network-password-in-windows-2ec74b2e-d9ec-ade1-cc9b-bef1429cb678"
+derivar: "Si nadie la sabe y nada está conectado, la empresa de Internet te puede ayudar a cambiarla."
+fuentes:
+  - https://support.microsoft.com/windows/find-your-wi-fi-network-password-in-windows-2ec74b2e-d9ec-ade1-cc9b-bef1429cb678
+madurez: T0
+---
+id: DAY-PDF-002
+area: programas
+titulo:
+  sencillo: "Quiero guardar un documento como PDF"
+  tecnico: "Exportar o imprimir a PDF"
+explicacion:
+  sencillo: "Desde Word, Excel y casi cualquier programa se puede guardar como PDF, eligiendo «Microsoft Print to PDF» como impresora."
+  tecnico: "Guardar como PDF en Office o impresora virtual Microsoft Print to PDF."
+frases: ["cómo guardo un documento en pdf", "convertir el word a pdf", "pasar un archivo a pdf", "imprimir como pdf"]
+pasos:
+  - texto: "En Word o Excel: Archivo > Guardar como, y en «Tipo» elegí PDF."
+  - texto: "En cualquier programa: Imprimir, y como impresora elegí «Microsoft Print to PDF». Te va a pedir dónde guardar el archivo."
+  - texto: "Microsoft lo explica para cada programa de Office."
+    abrir: "https://support.microsoft.com/office/collab-files/save-or-convert-to-pdf-or-xps-in-office-desktop-apps"
+fuentes:
+  - https://support.microsoft.com/office/collab-files/save-or-convert-to-pdf-or-xps-in-office-desktop-apps
+madurez: T0
+---
+id: APP-OFF-004
+area: programas
+titulo:
+  sencillo: "Un archivo de Word o Excel no abre o dice que está dañado"
+  tecnico: "Documento o libro dañado"
+explicacion:
+  sencillo: "Office tiene una opción «Abrir y reparar» que muchas veces lo recupera. También se puede volver a una versión anterior si estaba en OneDrive."
+  tecnico: "Abrir y reparar / Extraer datos; historial de versiones."
+frases: ["el excel dice que el archivo está dañado", "no abre un documento de word", "el archivo está corrupto", "se dañó la planilla"]
+pasos:
+  - texto: "Hacé una copia del archivo antes de tocarlo."
+  - texto: "Abrí Word o Excel, Archivo > Abrir > Examinar, elegí el archivo, tocá la flechita junto a «Abrir» > «Abrir y reparar»."
+    abrir: "https://support.microsoft.com/office/open-a-document-after-a-file-corruption-error-47df9d48-2165-4411-a699-1786ac734bc3"
+  - texto: "Si el archivo estaba en OneDrive, clic derecho > Historial de versiones para recuperar una versión anterior."
+    abrir: "https://support.microsoft.com/excel/repair-a-corrupted-workbook"
+fuentes:
+  - https://support.microsoft.com/office/open-a-document-after-a-file-corruption-error-47df9d48-2165-4411-a699-1786ac734bc3
+  - https://support.microsoft.com/excel/repair-a-corrupted-workbook
+madurez: T0
+---
+id: SEC-POP-001
+area: seguridad
+titulo:
+  sencillo: "Se abren ventanas de propaganda en el navegador"
+  tecnico: "Ventanas emergentes y redirecciones"
+explicacion:
+  sencillo: "El navegador trae un bloqueador de ventanas emergentes. Si igual aparecen muchas, puede ser una extensión instalada sin querer."
+  tecnico: "Bloqueador de elementos emergentes, extensiones sospechosas y bloqueador de scareware de Edge."
+frases: ["se abren ventanas de propaganda", "me aparecen ventanas emergentes todo el tiempo", "se abren pestañas solas en el navegador", "me salen popups"]
+sondas: [seguridad, red]
+pasos:
+  - texto: "En el navegador, revisá que el bloqueador de ventanas emergentes esté activado (en Edge: Configuración > Permisos del sitio > Elementos emergentes y redireccionamientos)."
+    abrir: "https://support.microsoft.com/microsoft-edge/block-pop-ups-in-microsoft-edge-1d8ba4f8-f385-9a0b-e944-aa47339b6bb5"
+  - texto: "Revisá las extensiones del navegador y quitá las que no reconozcas."
+  - texto: "Si siguen apareciendo, hacé un examen completo con Microsoft Defender."
+    abrir: "ms-settings:windowsdefender"
+fuentes:
+  - https://support.microsoft.com/microsoft-edge/block-pop-ups-in-microsoft-edge-1d8ba4f8-f385-9a0b-e944-aa47339b6bb5
+madurez: T0
+---
+id: DAY-SHR-001
+area: archivos
+titulo:
+  sencillo: "Quiero pasar un archivo a otra computadora que está cerca"
+  tecnico: "Uso compartido con dispositivos cercanos"
+explicacion:
+  sencillo: "Windows puede mandar archivos a otra PC cercana por Bluetooth o Wi-Fi, sin pendrive. Hay que activarlo en las dos."
+  tecnico: "Nearby sharing (Bluetooth/Wi-Fi), activado en ambos equipos."
+frases: ["pasar un archivo a otra computadora sin pendrive", "mandar fotos a la otra compu", "compartir archivos con la notebook de al lado"]
+pasos:
+  - texto: "En las dos PCs, activá «Uso compartido con dispositivos cercanos» (Configuración > Sistema)."
+  - texto: "En el Explorador, clic derecho sobre el archivo > Compartir > elegí la otra PC. En la otra, aceptá."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/share-things-with-nearby-devices-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/share-things-with-nearby-devices-in-windows
+madurez: T0

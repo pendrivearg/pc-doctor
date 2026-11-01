@@ -1,0 +1,159 @@
+# Módulos I (seguridad) y O (estafas)
+id: SEC-AV-001
+area: seguridad
+titulo:
+  sencillo: "No hay ningún antivirus activo"
+  tecnico: "Sin protección antivirus en tiempo real registrada"
+explicacion:
+  sencillo: "La PC no tiene ningún antivirus funcionando. Windows trae uno gratuito (Microsoft Defender) que se puede volver a activar."
+  tecnico: "SecurityCenter2: ningún AntiVirusProduct con estado activo."
+frases: ["no tengo antivirus", "antivirus desactivado", "se me desactivó el antivirus"]
+sondas: [seguridad]
+deteccion:
+  # Se cruza con Defender: si el Centro de seguridad no responde pero Defender protege, no es un problema.
+  - si: "not seguridad.antivirus_activo and seguridad.defender_activo == false"
+    estado: problema
+    mensaje: "No hay ningún antivirus activo en esta PC."
+si_no_se_puede: "No se pudo consultar el estado del antivirus."
+pasos:
+  - texto: "Abrí Seguridad de Windows > Protección antivirus y contra amenazas y activá la protección en tiempo real."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Si tenías otro antivirus que venció, desinstalalo con la herramienta oficial de su fabricante: Defender se activa solo."
+fuentes:
+  - https://learn.microsoft.com/defender-endpoint/microsoft-defender-antivirus-windows
+madurez: T1
+---
+id: SEC-AV-002
+area: seguridad
+titulo:
+  sencillo: "El antivirus está desactualizado"
+  tecnico: "Firmas antivirus desactualizadas"
+explicacion:
+  sencillo: "Un antivirus sin actualizar no reconoce los virus nuevos."
+  tecnico: "Security Center informa firmas no actualizadas, o Defender tiene firmas de más de 7 días."
+frases: ["antivirus desactualizado", "actualizar antivirus"]
+sondas: [seguridad]
+acciones: [defender.update]
+deteccion:
+  - si: "seguridad.antivirus_activo and seguridad.antivirus_actualizado == false"
+    estado: advertencia
+    mensaje: "El antivirus activo ({seguridad.antivirus_nombres}) informa que no está actualizado."
+  - si: "seguridad.defender_firmas_dias >= 7"
+    estado: advertencia
+    mensaje: "Las firmas de Microsoft Defender tienen {seguridad.defender_firmas_dias} días."
+pasos:
+  - texto: "Conectate a Internet y buscá actualizaciones en Seguridad de Windows > Actualizaciones de protección."
+    abrir: "ms-settings:windowsdefender"
+fuentes:
+  - https://learn.microsoft.com/defender-endpoint/microsoft-defender-antivirus-updates
+madurez: T1
+---
+id: SEC-FW-001
+area: seguridad
+titulo:
+  sencillo: "El firewall está desactivado"
+  tecnico: "Firewall de Windows deshabilitado sin firewall de terceros"
+explicacion:
+  sencillo: "El firewall bloquea conexiones peligrosas desde Internet o desde otras PCs de la red. Está apagado y no hay otro que lo reemplace."
+  tecnico: "EnableFirewall=0 en al menos un perfil y ningún FirewallProduct activo en Security Center."
+frases: ["firewall apagado", "desactivé el firewall"]
+sondas: [seguridad]
+deteccion:
+  - si: "seguridad.firewall_windows_activo == false and seguridad.firewall_terceros_activo == false"
+    estado: problema
+    mensaje: "El firewall de Windows está desactivado en al menos un tipo de red."
+pasos:
+  - texto: "Abrí Seguridad de Windows > Firewall y protección de red y activalo en las tres redes."
+    abrir: "ms-settings:windowsdefender"
+fuentes:
+  - https://learn.microsoft.com/windows/security/operating-system-security/network-security/windows-firewall/
+madurez: T1
+---
+id: SCAM-002
+area: seguridad
+titulo:
+  sencillo: "Hay programas para controlar esta PC a distancia"
+  tecnico: "Software de acceso remoto instalado"
+explicacion:
+  sencillo: >-
+    Estos programas permiten que otra persona vea y maneje tu computadora. Son útiles si los instalaste vos o
+    tu técnico de confianza, pero los estafadores que llaman haciéndose pasar por «soporte de Microsoft» o del
+    banco los usan para robar. Microsoft y los bancos nunca llaman para pedir acceso a tu PC.
+  tecnico: "Coincidencias en el registro de programas instalados con herramientas de acceso remoto conocidas."
+frases: ["me llamaron de microsoft", "me pidieron instalar anydesk", "alguien maneja mi compu", "se mueve el mouse solo", "me llamaron del banco y me hicieron instalar un programa"]
+sondas: [seguridad]
+deteccion:
+  - si: "seguridad.acceso_remoto_cantidad >= 1"
+    estado: advertencia
+    mensaje: "Están instalados: {seguridad.acceso_remoto}. Si no los instalaste vos o alguien de confianza, desinstalalos."
+pasos:
+  - texto: "Si no reconocés alguno, desinstalalo desde Aplicaciones instaladas."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Si alguien te llamó y le diste acceso: desconectá Internet, cambiá tus claves desde OTRO dispositivo y avisá a tu banco."
+fuentes:
+  - https://support.microsoft.com/windows/protect-yourself-from-tech-support-scams-2ebf91bd-f94c-2a8a-e541-f5c800d18435
+madurez: T1
+---
+id: SEC-HIJ-004
+area: seguridad
+titulo:
+  sencillo: "Hay páginas redirigidas en el archivo hosts"
+  tecnico: "Entradas no estándar en el archivo hosts"
+explicacion:
+  sencillo: "El archivo «hosts» puede desviar páginas a otros lugares. Lo usan algunos programadores, pero también virus para mandarte a páginas falsas."
+  tecnico: "%SystemRoot%\\System32\\drivers\\etc\\hosts contiene entradas distintas de localhost."
+frases: ["me manda a otra página", "entro a una página y me lleva a otra", "páginas falsas"]
+sondas: [seguridad]
+deteccion:
+  - si: "seguridad.hosts_entradas >= 1"
+    estado: advertencia
+    mensaje: "El archivo hosts tiene {seguridad.hosts_entradas} redirecciones: {seguridad.hosts_detalle}."
+pasos:
+  - texto: "Microsoft explica cómo dejar el archivo hosts como viene de fábrica. Hacé además un análisis completo con Defender: borrar las redirecciones no elimina un virus."
+    abrir: "https://support.microsoft.com/windows/experience/how-to-reset-the-hosts-file-back-to-the-default"
+derivar: "Si no las pusiste vos (o un programa que usás a propósito), pedí que las revise un técnico."
+fuentes:
+  - https://support.microsoft.com/windows/experience/how-to-reset-the-hosts-file-back-to-the-default
+madurez: T1
+---
+id: SEC-VIR-001
+area: seguridad
+titulo:
+  sencillo: "Creo que tengo un virus"
+  tecnico: "Sospecha de software malicioso"
+explicacion:
+  sencillo: >-
+    PC Doctor revisa el antivirus, el firewall, el proxy, los programas de inicio y los programas de acceso
+    remoto. Además, hacé un análisis completo con Microsoft Defender.
+  tecnico: "Triaje de seguridad: estado de protección y persistencias comunes; el escaneo integrado llega en la próxima versión."
+frases: ["tengo un virus", "creo que me hackearon", "la compu tiene virus", "me aparecen ventanas solas", "se abren páginas solas", "tengo un troyano"]
+sondas: [seguridad, inicio, red]
+acciones: [defender.update, defender.quickscan, defender.offline]
+pasos:
+  - texto: "Abrí Seguridad de Windows > Protección antivirus > Opciones de examen y elegí «Examen completo»."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Si sospechás de algo grave, en esa misma pantalla elegí «Examen de Microsoft Defender sin conexión»: reinicia la PC y la revisa antes de que arranque Windows (tarda unos 15 minutos; si hay BitLocker, tené a mano la clave de recuperación)."
+  - texto: "Si Windows no arranca o el virus no te deja usarla: apagá la PC, prendela con el pendrive de PC Doctor puesto y apretá la tecla de arranque (F12, F11, F9, F8 o Esc según la marca). El modo rescate revisa la PC con Windows apagado y rescata tus fotos y documentos."
+fuentes:
+  - https://learn.microsoft.com/defender-endpoint/microsoft-defender-offline
+madurez: T0
+---
+id: SCAM-001
+area: seguridad
+titulo:
+  sencillo: "Una página dice que mi PC está infectada y que llame a un número"
+  tecnico: "Estafa de soporte técnico (bloqueo de navegador)"
+explicacion:
+  sencillo: >-
+    Es una estafa. Ningún aviso real de Microsoft muestra un teléfono para llamar. La página no puede hacerle
+    nada a tu computadora si no llamás ni instalás lo que te piden.
+  tecnico: "Página de bloqueo de navegador con pantalla completa y audio; no implica infección local."
+frases: ["me salió que mi pc está infectada y que llame", "una página dice que llame a microsoft", "pantalla de virus con un teléfono", "no puedo cerrar la página de virus"]
+sondas: [seguridad]
+pasos:
+  - texto: "No llames al número ni instales nada."
+  - texto: "Cerrá el navegador con Ctrl+Mayús+Esc (Administrador de tareas) > seleccioná el navegador > Finalizar tarea."
+  - texto: "Al volver a abrir el navegador, elegí NO restaurar las pestañas."
+fuentes:
+  - https://support.microsoft.com/windows/protect-yourself-from-tech-support-scams-2ebf91bd-f94c-2a8a-e541-f5c800d18435
+madurez: T0

@@ -1,0 +1,85 @@
+# Módulos J (rendimiento) y F (archivos y almacenamiento)
+id: PERF-SLOW-001
+area: rendimiento
+titulo:
+  sencillo: "La computadora está lenta"
+  tecnico: "Lentitud general"
+explicacion:
+  sencillo: "PC Doctor revisó el procesador, la memoria, el disco, los programas de inicio y Windows. Abajo están las causas que encontró, de la más importante a la menos importante."
+  tecnico: "Triaje de rendimiento: CPU, memoria, almacenamiento, inicio y estado del sistema."
+frases: ["la compu está lenta", "mi computadora está muy lenta", "se tilda todo", "tarda mucho en prender", "va lentísima", "anda re lenta", "se cuelga", "todo tarda"]
+sondas: [cpu, ram, disco, inicio, sistema]
+pasos:
+  - texto: "Reiniciá la PC (Inicio > Encendido > Reiniciar) y probá de nuevo."
+  - texto: "Aplicá las soluciones de los problemas que aparecen en este informe, empezando por los rojos."
+fuentes:
+  - https://support.microsoft.com/windows/tips-to-improve-pc-performance-in-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96
+madurez: T0
+---
+id: PERF-STA-001
+area: rendimiento
+titulo:
+  sencillo: "Arrancan demasiados programas junto con Windows"
+  tecnico: "Elementos de inicio excesivos"
+explicacion:
+  sencillo: "Cada programa que arranca solo hace que la PC tarde más en estar lista y usa memoria todo el tiempo."
+  tecnico: "Entradas Run/StartupFolder habilitadas según StartupApproved."
+frases: ["tarda mucho en arrancar", "tarda en prender", "muchos programas al inicio", "tarda muchísimo desde que la prendo"]
+sondas: [inicio]
+deteccion:
+  - si: "inicio.activos >= 12"
+    estado: advertencia
+    mensaje: "Arrancan {inicio.activos} programas con Windows: {inicio.lista}."
+acciones: [startup.disable.user, startup.disable.machine]
+pasos:
+  - texto: "Abrí Aplicaciones de inicio y desactivá los que no necesites apenas prendés (por ejemplo, programas de juegos o actualizadores). No desactives el antivirus."
+    abrir: "ms-settings:startupapps"
+fuentes:
+  - https://support.microsoft.com/windows/configure-startup-applications-in-windows-115a420a-0bff-4a6f-90e0-1934c844e473
+madurez: T1
+---
+id: FIL-SPC-001
+area: archivos
+titulo:
+  sencillo: "El disco está casi lleno"
+  tecnico: "Poco espacio libre en el volumen del sistema"
+explicacion:
+  sencillo: "Con el disco lleno, Windows no se puede actualizar, los programas fallan y todo se pone lento."
+  tecnico: "Espacio libre bajo en el volumen del sistema (Windows necesita margen para actualizaciones, memoria virtual y temporales)."
+frases: ["disco lleno", "no tengo espacio", "me quedé sin espacio", "dice que no hay espacio en el disco"]
+sondas: [disco]
+deteccion:
+  - si: "disco.sistema.libre_gb < 8 or (disco.sistema.libre_pct < 3 and disco.sistema.libre_gb < 30)"
+    estado: problema
+    mensaje: "Quedan solo {disco.sistema.libre_gb} GB libres ({disco.sistema.libre_pct} %) en el disco del sistema."
+  - si: "disco.sistema.libre_gb < 20 or (disco.sistema.libre_pct < 8 and disco.sistema.libre_gb < 60)"
+    estado: advertencia
+    mensaje: "Quedan {disco.sistema.libre_gb} GB libres ({disco.sistema.libre_pct} %) en el disco del sistema."
+acciones: [clean.temp]
+pasos:
+  - texto: "Activá el Sensor de almacenamiento y usá «Recomendaciones de limpieza». Revisá vos lo que se borra de Descargas."
+    abrir: "ms-settings:storagesense"
+  - texto: "Pasá fotos y videos que no uses seguido a un disco externo o a la nube."
+fuentes:
+  - https://support.microsoft.com/windows/manage-drive-space-with-storage-sense-654f6ada-7bfc-45e5-966b-e24aded96ad5
+madurez: T1
+---
+id: FIL-SPC-003
+area: archivos
+tipo: sugerencia
+titulo:
+  sencillo: "Hay muchos archivos temporales"
+  tecnico: "Carpeta TEMP del usuario voluminosa"
+explicacion:
+  sencillo: "Los programas dejan archivos temporales que ya no sirven. Se pueden borrar sin perder nada."
+  tecnico: "%TEMP% del usuario supera 1 GB."
+frases: ["borrar archivos temporales", "limpiar la compu", "liberar espacio"]
+sondas: [disco]
+deteccion:
+  - si: "disco.temporales_gb >= 1"
+    estado: advertencia
+    mensaje: "Los archivos temporales ocupan {disco.temporales_gb} GB."
+acciones: [clean.temp]
+fuentes:
+  - https://support.microsoft.com/windows/disk-cleanup-in-windows-8a96ff42-5751-39ad-23d6-434b4d5b9a68
+madurez: T1

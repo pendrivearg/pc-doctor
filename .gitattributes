@@ -1,0 +1,3 @@
+# El script de arranque del modo rescate corre en Linux: siempre con saltos de línea de Linux.
+packaging/rescate/9990-pcdoctor text eol=lf
+*.sh text eol=lf

@@ -1,0 +1,84 @@
+# Servicios de Windows (impresión, sonido, actualizaciones) y archivos del sistema.
+id: PRN-002
+area: perifericos
+titulo:
+  sencillo: "El servicio de impresión de Windows está apagado"
+  tecnico: "Servicio Spooler detenido o deshabilitado"
+explicacion:
+  sencillo: "Sin este servicio ninguna impresora funciona: no aparecen o no imprimen. Si no usás impresoras, podés dejarlo así."
+  tecnico: "El Administrador de trabajos de impresión (Spooler) no está en ejecución o su inicio está deshabilitado."
+frases: ["no aparece la impresora", "no imprime nada", "dice que el servicio de impresión no se está ejecutando"]
+sondas: [servicios]
+deteccion:
+  - si: "servicios.impresion_deshabilitado"
+    estado: advertencia
+    mensaje: "El servicio de impresión está deshabilitado: ninguna impresora va a funcionar."
+  - si: "not servicios.impresion_ejecutando"
+    estado: advertencia
+    mensaje: "El servicio de impresión está detenido."
+acciones: [print.spooler.repair]
+fuentes:
+  - https://support.microsoft.com/windows/fix-printer-connection-and-printing-problems-in-windows-fb830bff-7702-6349-33cd-9443fe987f73
+madurez: T1
+---
+id: AUD-002
+area: audio
+titulo:
+  sencillo: "El servicio de sonido de Windows está apagado"
+  tecnico: "Servicio Audiosrv detenido o deshabilitado"
+explicacion:
+  sencillo: "Sin este servicio la computadora no tiene sonido aunque los parlantes estén bien."
+  tecnico: "El servicio Audio de Windows (Audiosrv) no está en ejecución o su inicio está deshabilitado."
+frases: ["no tengo sonido", "dice que el servicio de audio no responde", "el ícono del parlante tiene una cruz roja"]
+sondas: [servicios]
+deteccion:
+  - si: "servicios.audio_deshabilitado or not servicios.audio_ejecutando"
+    estado: problema
+    mensaje: "El servicio de sonido de Windows no está funcionando."
+acciones: [audio.service.repair]
+fuentes:
+  - https://support.microsoft.com/windows/fix-sound-or-audio-problems-in-windows-73025246-b61c-40fb-671a-2535c7cd56c8
+madurez: T1
+---
+id: WIN-UPD-020
+area: windows
+titulo:
+  sencillo: "Windows Update está apagado"
+  tecnico: "Servicio wuauserv deshabilitado"
+explicacion:
+  sencillo: >-
+    Alguien (o algún programa «optimizador») apagó las actualizaciones de Windows. Así la PC deja de recibir
+    arreglos de seguridad y queda expuesta a virus.
+  tecnico: "Tipo de inicio de wuauserv = Deshabilitado (el valor por defecto de Microsoft es Manual, inicio a demanda)."
+frases: ["desactivé las actualizaciones", "windows update desactivado", "windows no busca actualizaciones"]
+sondas: [servicios]
+deteccion:
+  - si: "servicios.update_deshabilitado"
+    estado: problema
+    mensaje: "El servicio de Windows Update está deshabilitado: la PC no recibe arreglos de seguridad."
+acciones: [wu.service.repair]
+fuentes:
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+madurez: T1
+---
+id: WIN-SYS-001
+area: windows
+titulo:
+  sencillo: "Windows anda raro: puede tener archivos dañados"
+  tecnico: "Posible corrupción del almacén de componentes / archivos del sistema"
+explicacion:
+  sencillo: >-
+    Cuando Windows muestra errores raros, programas de Windows que no abren o actualizaciones que fallan,
+    puede tener archivos propios dañados. Windows trae una herramienta oficial que los revisa y los repara
+    sin tocar tus archivos.
+  tecnico: "DISM ScanHealth / RestoreHealth sobre la imagen en línea mediante la API oficial (dismapi.dll)."
+frases: ["windows anda raro", "me salen errores raros de windows", "archivos de windows dañados", "reparar windows", "windows tiene errores", "las aplicaciones de windows no abren"]
+sondas: [sistema, eventos]
+acciones: [win.dism.scan, win.dism.restore]
+pasos:
+  - texto: "Primero revisá los archivos. Si el resultado dice que se pueden reparar, usá «Reparar los archivos de Windows» (con Internet)."
+  - texto: "En Windows 11 también existe Sistema > Recuperación > «Corregir problemas con Windows Update», que reinstala Windows sin borrar tus archivos."
+    abrir: "ms-settings:recovery"
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/manufacture/desktop/repair-a-windows-image
+madurez: T0

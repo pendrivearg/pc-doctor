@@ -1,0 +1,158 @@
+# Problemas que se detectan por lo que cuenta la persona (módulos B, E, G, Q, C). Cada uno corre las sondas relacionadas.
+id: AUD-001
+area: audio
+titulo:
+  sencillo: "No hay sonido"
+  tecnico: "Sin salida de audio"
+explicacion:
+  sencillo: "Casi siempre es el volumen, un programa silenciado o que el sonido sale por otro aparato (el monitor, la TV o unos auriculares)."
+  tecnico: "Revisar dispositivo de salida predeterminado, mezclador por aplicación y estado del controlador."
+frases: ["no tengo sonido", "no se escucha nada", "no me anda el audio", "no suenan los parlantes", "la compu no tiene sonido", "no anda el sonido", "no se oye el sonido de los videos"]
+sondas: [dispositivos, servicios]
+acciones: [audio.service.repair]
+pasos:
+  - texto: "Subí el volumen con el ícono del parlante, abajo a la derecha, y fijate que no esté en silencio."
+  - texto: "En Sonido, en «Salida», elegí el aparato por el que querés escuchar (parlantes, auriculares, TV)."
+    abrir: "ms-settings:sound"
+  - texto: "Si es un solo programa el que no suena, abrí el Mezclador de volumen y subí el volumen de ese programa."
+    abrir: "ms-settings:apps-volume"
+fuentes:
+  - https://support.microsoft.com/windows/fix-sound-or-audio-problems-in-windows-73025246-b61c-40fb-671a-2535c7cd56c8
+madurez: T0
+---
+id: PER-MIC-001
+area: perifericos
+titulo:
+  sencillo: "No funciona el micrófono"
+  tecnico: "Micrófono sin señal o bloqueado por privacidad"
+explicacion:
+  sencillo: "Muchas veces Windows bloquea el micrófono por privacidad, o el programa usa otro micrófono distinto."
+  tecnico: "Revisar permisos de privacidad del micrófono y dispositivo de entrada predeterminado."
+frases: ["no me escuchan", "no anda el micrófono", "en zoom no me escuchan", "el micrófono no funciona"]
+sondas: [dispositivos]
+pasos:
+  - texto: "Activá «Acceso al micrófono» y el permiso para el programa que usás (Zoom, Meet en el navegador, etc.)."
+    abrir: "ms-settings:privacy-microphone"
+  - texto: "En Sonido > Entrada, elegí el micrófono correcto y hablá: la barra debería moverse."
+    abrir: "ms-settings:sound"
+fuentes:
+  - https://support.microsoft.com/windows/fix-microphone-problems-5f230348-106d-bfa4-1db5-336f35576011
+madurez: T0
+---
+id: PER-CAM-001
+area: perifericos
+titulo:
+  sencillo: "No funciona la cámara"
+  tecnico: "Cámara no disponible o bloqueada por privacidad"
+explicacion:
+  sencillo: "Puede estar tapada (muchas notebooks tienen una tapita o una tecla), bloqueada por privacidad, o usada por otro programa."
+  tecnico: "Revisar obturador físico, permisos de privacidad y dispositivos con error."
+frases: ["no me ven en la videollamada", "no anda la cámara", "la cámara no funciona", "la webcam no anda"]
+sondas: [dispositivos]
+pasos:
+  - texto: "Fijate si la cámara tiene una tapita corrida o una tecla con el dibujo de una cámara."
+  - texto: "Activá «Acceso a la cámara» y el permiso para el programa que usás."
+    abrir: "ms-settings:privacy-webcam"
+  - texto: "Cerrá otros programas que puedan estar usando la cámara."
+fuentes:
+  - https://support.microsoft.com/windows/hardware/camera/camera-doesn-t-work-in-windows
+madurez: T0
+---
+id: BAS-KB-001
+area: basico
+titulo:
+  sencillo: "No me sale la @, la ñ o los acentos"
+  tecnico: "Distribución de teclado distinta del teclado físico"
+explicacion:
+  sencillo: >-
+    Windows tiene configurado un teclado de otro idioma. Con el teclado Latinoamericano la @ se escribe con AltGr+Q;
+    con el Español (España), AltGr+2; con el Inglés (EE.UU.), Mayúscula+2.
+  tecnico: "La distribución activa (Latinoamericano / Español / EE.UU.) no coincide con las teclas impresas."
+frases: ["no me sale la arroba", "no puedo escribir la @", "no me sale la ñ", "el teclado escribe otra cosa", "no me salen los acentos", "el teclado está cambiado", "no encuentro la arroba"]
+sondas: [sistema]
+pasos:
+  - texto: "Probá apretar Windows + Barra espaciadora: cambia entre los teclados instalados (aparece un cartel abajo a la derecha)."
+  - texto: "En Idioma y región > Español > Opciones, agregá el teclado que coincide con el tuyo (en Argentina suele ser «Latinoamericano») y quitá el que sobra."
+    abrir: "ms-settings:regionlanguage"
+fuentes:
+  - https://support.microsoft.com/windows/manage-the-input-and-display-language-settings-in-windows-12a10cb4-8626-9b77-0ccb-5013e0c7c7a2
+madurez: T0
+---
+id: BAS-TXT-001
+area: basico
+titulo:
+  sencillo: "Las letras se ven muy chicas"
+  tecnico: "Tamaño de texto y escalado"
+explicacion:
+  sencillo: "Se puede agrandar solo el texto o todo lo que se ve en pantalla, sin perder calidad."
+  tecnico: "Accesibilidad > Tamaño del texto y Pantalla > Escala."
+frases: ["las letras son muy chicas", "no veo bien las letras", "agrandar la letra", "todo se ve muy chiquito", "quiero letra más grande"]
+sondas: [sistema]
+pasos:
+  - texto: "En Tamaño del texto, mové la barra hasta que se lea cómodo y tocá «Aplicar»."
+    abrir: "ms-settings:easeofaccess-display"
+  - texto: "Para agrandar todo (íconos y ventanas), cambiá la «Escala» en Pantalla."
+    abrir: "ms-settings:display"
+  - texto: "En el navegador podés agrandar una página con Ctrl y la rueda del mouse (o Ctrl y +)."
+fuentes:
+  - https://support.microsoft.com/windows/change-the-size-of-text-in-windows-1d5830c3-eee3-8eaa-836b-abcc37d99b9a
+madurez: T0
+---
+id: PRN-001
+area: perifericos
+titulo:
+  sencillo: "La impresora no imprime"
+  tecnico: "Fallas de impresión"
+explicacion:
+  sencillo: "Las causas más comunes: la impresora está apagada o sin papel, hay un documento trabado en la cola, o la PC manda a imprimir a otra impresora."
+  tecnico: "Guía inicial; la reparación automática de la cola de impresión llega en la próxima versión."
+frases: ["no imprime", "la impresora no anda", "no puedo imprimir", "la impresora no responde", "impresora sin conexión"]
+sondas: [dispositivos, servicios]
+acciones: [print.queue.clear, print.spooler.repair]
+pasos:
+  - texto: "Revisá que esté prendida, con papel, sin luces de error y conectada (cable USB o la misma red Wi-Fi)."
+  - texto: "En Impresoras, elegí la tuya, abrí la cola y cancelá los documentos trabados. Fijate que sea la predeterminada."
+    abrir: "ms-settings:printers"
+  - texto: "Apagá la impresora y la PC, y volvelas a prender."
+fuentes:
+  - https://support.microsoft.com/windows/fix-printer-connection-and-printing-problems-in-windows-fb830bff-7702-6349-33cd-9443fe987f73
+madurez: T0
+---
+id: APP-OFF-001
+area: programas
+titulo:
+  sencillo: "Word (u otro programa de Office) no abre"
+  tecnico: "Aplicación de Office no inicia o se cierra"
+explicacion:
+  sencillo: "Muchas veces lo traba un complemento. Abrirlo en «modo seguro» permite saberlo; si no, Office tiene una reparación oficial."
+  tecnico: "Diagnóstico: winword /safe para aislar complementos; reparación rápida o en línea de Click-to-Run."
+frases: ["no puedo abrir word", "word no abre", "excel no abre", "se cierra el word", "office no funciona", "no me abre el word"]
+sondas: [eventos]
+pasos:
+  - texto: "Apretá Windows + R, escribí  winword /safe  y Enter. Si abre así, el problema es un complemento: desactivalo en Archivo > Opciones > Complementos."
+  - texto: "Si no abre ni en modo seguro: Aplicaciones instaladas > Microsoft 365 u Office > Modificar > «Reparación rápida» (y si no alcanza, «Reparación en línea»)."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Si pide activar, iniciá sesión con la cuenta con la que compraste Office."
+fuentes:
+  - https://support.microsoft.com/office/repair-an-office-application-7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b
+madurez: T0
+---
+id: GAM-001
+area: juegos
+titulo:
+  sencillo: "Un juego anda mal o no abre"
+  tecnico: "Problemas de juegos"
+explicacion:
+  sencillo: "PC Doctor revisó la placa de video, el procesador, la memoria y los errores recientes. Abajo están los problemas relacionados que encontró."
+  tecnico: "Triaje de juegos; la comparación de requisitos por juego llega en la próxima versión."
+frases: ["el juego no abre", "el juego anda lento", "tengo pocos fps", "se cierra el juego", "el juego se traba", "no puedo jugar"]
+sondas: [gpu, cpu, ram, eventos]
+pasos:
+  - texto: "Actualizá el controlador de video desde Windows Update o desde el fabricante (NVIDIA, AMD, Intel)."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "En Steam: clic derecho en el juego > Propiedades > Archivos instalados > «Verificar integridad de los archivos»."
+  - texto: "En notebooks, jugá con el cargador conectado y elegí el modo de energía «Máximo rendimiento»."
+    abrir: "ms-settings:powersleep"
+fuentes:
+  - https://help.steampowered.com/en/faqs/view/0C48-FCBD-DA71-93EB
+madurez: T0

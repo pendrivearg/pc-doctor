@@ -1,0 +1,22 @@
+# Fechas de fin de soporte de Windows (servicio de seguridad). Se actualiza con el paquete "datos".
+# consumo  = Home, Pro, Pro Education, Pro for Workstations
+# empresa  = Enterprise, Education, IoT Enterprise
+# ltsc     = canal de mantenimiento a largo plazo (EnterpriseS / EnterpriseSN)
+# ltsc_iot = IoT Enterprise LTSC (IoTEnterpriseS), que tiene un ciclo más largo
+fuentes:
+  - https://learn.microsoft.com/windows/release-health/windows11-release-information
+  - https://learn.microsoft.com/windows/release-health/release-information
+  - https://learn.microsoft.com/lifecycle/products/windows-10-home-and-pro
+nota_windows10: >-
+  Windows 10 22H2 dejó de recibir actualizaciones gratuitas el 14/10/2025. Las PCs inscriptas en el programa
+  de Actualizaciones de Seguridad Extendidas (ESU) siguen recibiendo parches de seguridad; según lo informado
+  en junio de 2026, el ESU para consumidores se extendió hasta el 12/10/2027 (confirmar en Windows Update).
+versiones:
+  - { build: 19044, nombre: "Windows 10 21H2", consumo: 2023-06-13, empresa: 2024-06-11, ltsc: 2027-01-12, ltsc_iot: 2032-01-13 }
+  - { build: 19045, nombre: "Windows 10 22H2", consumo: 2025-10-14, empresa: 2025-10-14 }
+  - { build: 17763, nombre: "Windows 10 1809", consumo: 2020-11-10, empresa: 2021-05-11, ltsc: 2029-01-09 }
+  - { build: 22000, nombre: "Windows 11 21H2", consumo: 2023-10-10, empresa: 2024-10-08 }
+  - { build: 22621, nombre: "Windows 11 22H2", consumo: 2024-10-08, empresa: 2025-10-14 }
+  - { build: 22631, nombre: "Windows 11 23H2", consumo: 2025-11-11, empresa: 2026-11-10 }
+  - { build: 26100, nombre: "Windows 11 24H2", consumo: 2026-10-13, empresa: 2027-10-12, ltsc: 2029-10-09, ltsc_iot: 2034-10-10 }
+  - { build: 26200, nombre: "Windows 11 25H2", consumo: 2027-10-12, empresa: 2028-10-10 }

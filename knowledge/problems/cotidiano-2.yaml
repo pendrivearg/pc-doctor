@@ -1,0 +1,156 @@
+# Problemas cotidianos (módulos E, H, I, M, R): Bluetooth, pendrives, TV, celular, cuentas, programas predeterminados, publicidad.
+id: BT-001
+area: perifericos
+titulo:
+  sencillo: "Los auriculares o el parlante Bluetooth no se conectan"
+  tecnico: "Fallas de emparejamiento o conexión Bluetooth"
+explicacion:
+  sencillo: "Casi siempre se arregla apagando y prendiendo el Bluetooth, o quitando el aparato de la lista y volviéndolo a agregar."
+  tecnico: "Re-emparejamiento, ahorro de energía del adaptador y controlador Bluetooth."
+frases: ["no se conectan los auriculares bluetooth", "el parlante bluetooth no aparece", "no me empareja el bluetooth", "se desconectan los auriculares inalámbricos"]
+sondas: [dispositivos]
+pasos:
+  - texto: "Fijate que los auriculares o el parlante estén cargados y en modo para emparejar (suele ser mantener apretado el botón de encendido hasta que titile una luz)."
+  - texto: "Abrí Bluetooth, apagalo y volvelo a prender. Si el aparato aparece en la lista, quitalo y agregalo de nuevo."
+    abrir: "ms-settings:bluetooth"
+  - texto: "Si no aparece la opción de Bluetooth, revisá que el modo avión esté apagado."
+    abrir: "ms-settings:network-airplanemode"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/bluetooth/fix-bluetooth-problems-in-windows
+madurez: T0
+---
+id: USB-001
+area: perifericos
+titulo:
+  sencillo: "El pendrive o el disco externo no aparece"
+  tecnico: "Dispositivo de almacenamiento USB no reconocido"
+explicacion:
+  sencillo: "Suele ser el puerto, el cable o falta de energía. A veces aparece pero sin letra, o tiene un problema que Windows avisa con un código."
+  tecnico: "Revisar puerto directo (sin hub), alimentación, estado en el Administrador de dispositivos y asignación de letra."
+frases: ["no me aparece el pendrive", "no reconoce el disco externo", "enchufo el pendrive y no pasa nada", "dispositivo usb no reconocido"]
+sondas: [dispositivos]
+pasos:
+  - texto: "Probá en otro puerto USB, directo en la computadora (no en un alargue o hub). En PCs de escritorio, mejor los de atrás."
+  - texto: "Si es un disco externo con su propia fuente o dos cables, conectalos todos."
+  - texto: "Abrí Discos y volúmenes y fijate si el pendrive aparece ahí aunque no tenga letra. Si aparece «sin formato», no lo formatees: primero intentá recuperar lo que tiene."
+    abrir: "ms-settings:disksandvolumes"
+derivar: "Si no aparece en ninguna PC, el pendrive o el disco probablemente esté dañado. Para recuperar fotos o documentos importantes, consultá a un técnico antes de formatearlo."
+fuentes:
+  - https://support.microsoft.com/windows/hardware/usb/fix-usb-c-problems-in-windows
+  - https://learn.microsoft.com/windows-hardware/drivers/install/device-manager-error-messages
+madurez: T0
+---
+id: TV-001
+area: audio
+titulo:
+  sencillo: "Quiero ver la computadora en el televisor"
+  tecnico: "Proyección por HDMI o pantalla inalámbrica (Miracast)"
+explicacion:
+  sencillo: "Se puede con un cable HDMI o, si el televisor lo permite, sin cables. Con Windows + P elegís si se ve igual en los dos o solo en la tele."
+  tecnico: "Modos de proyección (Win+P) y conexión Miracast (Win+K)."
+frases: ["quiero ver la compu en la tele", "conectar la computadora al televisor", "pasar la pantalla a la tv", "no se ve en la tele con el hdmi"]
+pasos:
+  - texto: "Con cable: conectá un cable HDMI de la computadora al televisor y elegí esa entrada HDMI con el control remoto de la tele."
+  - texto: "Apretá Windows + P y elegí «Duplicar» (se ve igual en las dos pantallas) o «Solo segunda pantalla»."
+  - texto: "Sin cable: si el televisor admite pantalla inalámbrica (Miracast), prendelo y apretá Windows + K para elegirlo."
+  - texto: "Si se ve pero el sonido sigue saliendo por la computadora, elegí el televisor como salida de sonido."
+    abrir: "ms-settings:sound"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/display-graphics/screen-mirroring-and-projecting-to-your-pc-or-wireless-display
+madurez: T0
+---
+id: PHN-001
+area: archivos
+titulo:
+  sencillo: "Pasar las fotos del celular a la computadora"
+  tecnico: "Importación de fotos y videos desde el teléfono"
+explicacion:
+  sencillo: "Se puede con el cable del cargador (si sirve para pasar datos) o, en Android, con la aplicación Vínculo Móvil de Windows."
+  tecnico: "Importación por USB (MTP) desde la app Fotos, Vínculo Móvil (Android) o iCloud para Windows (iPhone)."
+frases: ["pasar las fotos del celular a la compu", "cómo paso las fotos del teléfono", "conecto el celular y no veo las fotos", "bajar fotos del iphone a la computadora"]
+pasos:
+  - texto: "Conectá el celular con un cable USB que sirva para pasar datos y desbloquealo. En Android, en el aviso que aparece en el celular elegí «Transferir archivos» o «Transferir fotos»."
+  - texto: "Abrí la aplicación Fotos de Windows, tocá «Importar» y elegí el celular."
+  - texto: "En Android también podés usar Vínculo Móvil para ver las fotos recientes sin cable."
+    abrir: "ms-settings:mobile-devices"
+  - texto: "En iPhone, se usa la aplicación iCloud para Windows."
+fuentes:
+  - https://support.microsoft.com/windows/apps/photos/import-photos-and-videos-from-phone-to-pc
+madurez: T0
+---
+id: ACC-PWD-001
+area: basico
+titulo:
+  sencillo: "Me olvidé la contraseña de la computadora"
+  tecnico: "Recuperación oficial de contraseña de Windows"
+explicacion:
+  sencillo: >-
+    Hay caminos oficiales: si entrás con una cuenta Microsoft (un correo), la contraseña se cambia desde otro
+    dispositivo. Si es una cuenta local, con las preguntas de seguridad o con otra cuenta de administrador.
+    PC Doctor nunca saltea contraseñas.
+  tecnico: "Restablecimiento de cuenta Microsoft en línea; cuenta local: preguntas de seguridad, disco de restablecimiento u otro administrador."
+frases: ["me olvidé la contraseña de windows", "no me acuerdo la clave para entrar a la compu", "no puedo entrar a mi usuario", "olvidé el pin y la contraseña"]
+pasos:
+  - texto: "Si para entrar usás un correo (cuenta Microsoft), cambiá la contraseña desde el celular u otra computadora y después entrá con la nueva."
+    abrir: "https://support.microsoft.com/accounts-billing/security/change-or-reset-your-microsoft-account-password-in-windows"
+  - texto: "Si es una cuenta local, en la pantalla de inicio escribí cualquier cosa, tocá «Restablecer contraseña» y respondé las preguntas de seguridad."
+    abrir: "https://support.microsoft.com/windows/security/change-or-reset-your-local-account-password-in-windows"
+derivar: "Si ninguna opción oficial funciona, Microsoft no puede recuperar la contraseña: la única salida es restablecer la PC, y eso borra los datos de esa cuenta."
+fuentes:
+  - https://support.microsoft.com/windows/security/change-or-reset-your-local-account-password-in-windows
+  - https://support.microsoft.com/accounts-billing/security/change-or-reset-your-microsoft-account-password-in-windows
+madurez: T0
+---
+id: ACC-PIN-001
+area: basico
+titulo:
+  sencillo: "El PIN para entrar a Windows no funciona"
+  tecnico: "Restablecer el PIN de Windows Hello"
+explicacion:
+  sencillo: "El PIN se puede cambiar o crear de nuevo sin perder nada, usando la contraseña de la cuenta."
+  tecnico: "Restablecimiento del PIN desde la pantalla de inicio de sesión o desde Opciones de inicio de sesión."
+frases: ["no me funciona el pin", "me dice que el pin no está disponible", "olvidé el pin de la computadora"]
+pasos:
+  - texto: "En la pantalla de inicio, tocá «Olvidé mi PIN» y seguí los pasos (te va a pedir la contraseña de tu cuenta)."
+  - texto: "Si ya entraste, podés cambiarlo en Opciones de inicio de sesión > PIN."
+    abrir: "ms-settings:signinoptions"
+fuentes:
+  - https://support.microsoft.com/windows/security/change-or-reset-your-pin-in-windows
+madurez: T0
+---
+id: DAY-DEF-001
+area: programas
+titulo:
+  sencillo: "Los archivos se abren con el programa equivocado"
+  tecnico: "Aplicaciones predeterminadas por tipo de archivo"
+explicacion:
+  sencillo: "Windows permite elegir con qué programa se abre cada tipo de archivo, por ejemplo los PDF o las fotos."
+  tecnico: "Configuración > Aplicaciones > Aplicaciones predeterminadas, por extensión."
+frases: ["los pdf se me abren con otro programa", "las fotos se abren con un programa que no quiero", "cambiar con qué programa se abre un archivo"]
+pasos:
+  - texto: "Abrí Aplicaciones predeterminadas, buscá el tipo de archivo (por ejemplo .pdf) y elegí el programa que querés."
+    abrir: "ms-settings:defaultapps"
+  - texto: "Para una sola vez: clic derecho sobre el archivo > «Abrir con» > elegí el programa."
+fuentes:
+  - https://support.microsoft.com/windows/change-default-apps-in-windows-e5d82cad-17d1-c53b-3505-f10a32e1894d
+madurez: T0
+---
+id: SEC-HIJ-003
+area: seguridad
+titulo:
+  sencillo: "Aparecen avisos de publicidad o de páginas en la esquina de la pantalla"
+  tecnico: "Notificaciones push de sitios web"
+explicacion:
+  sencillo: >-
+    Alguna página web consiguió permiso para mandarte avisos (a veces con mensajes alarmantes o publicidad).
+    No es un virus: se apaga desde el navegador, quitándole el permiso a esa página.
+  tecnico: "Permisos de notificación por sitio en el navegador."
+frases: ["me aparecen anuncios en la esquina de la pantalla", "me salen notificaciones de páginas raras", "avisos de publicidad abajo a la derecha", "me llegan avisos de premios y virus"]
+sondas: [seguridad]
+pasos:
+  - texto: "Abrí el navegador, entrá a Configuración > Privacidad o Permisos del sitio > Notificaciones y bloqueá las páginas que no conocés."
+    abrir: "https://support.microsoft.com/edge/manage-website-notifications-in-microsoft-edge"
+  - texto: "No toques los avisos que dicen que ganaste un premio o que tenés virus: son engaños."
+fuentes:
+  - https://support.microsoft.com/edge/manage-website-notifications-in-microsoft-edge
+madurez: T0
