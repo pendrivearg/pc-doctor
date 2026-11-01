@@ -22,7 +22,20 @@ jobs:
         with:
           dotnet-version: '10.0.x'
       - name: Pruebas (las de administrador corren aparte)
-        run: dotnet test tests/PCDoctor.Tests -c Release --filter "FullyQualifiedName!~AdminActionTests&FullyQualifiedName!~ElevatedAgent"
+        shell: pwsh
+        run: |
+          dotnet test tests/PCDoctor.Tests -c Release --filter "FullyQualifiedName!~AdminActionTests&FullyQualifiedName!~ElevatedAgent" --logger "trx;LogFileName=resultado.trx" --results-directory "$env:RUNNER_TEMP/pruebas"
+          $codigo = $LASTEXITCODE
+          # Cada prueba fallida queda como nota pública del resultado (los registros completos piden iniciar sesión).
+          foreach ($trx in Get-ChildItem "$env:RUNNER_TEMP/pruebas" -Filter *.trx -ErrorAction SilentlyContinue) {
+            [xml]$x = Get-Content $trx.FullName
+            foreach ($r in $x.TestRun.Results.UnitTestResult | Where-Object { $_.outcome -eq 'Failed' }) {
+              $msg = ("$($r.Output.ErrorInfo.Message)" -replace "`r?`n", ' ').Trim()
+              if ($msg.Length -gt 600) { $msg = $msg.Substring(0, 600) }
+              Write-Output "::error title=$($r.testName)::$msg"
+            }
+          }
+          exit $codigo
 
   pruebas-con-permiso:
     # Las máquinas de GitHub corren como administrador: sirven para probar las reparaciones reales en una PC descartable.
