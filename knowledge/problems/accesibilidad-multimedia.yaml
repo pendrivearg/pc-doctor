@@ -1,0 +1,504 @@
+# Accesibilidad, multimedia y juegos: subtítulos en vivo, filtros de color, contraste, acceso por voz, sonido mono, avisos visuales, teclado y cursor, audífonos, video y fotos, Game Bar, controles y componentes que piden los juegos. Guiadas con fuente oficial.
+id: MED-001
+area: basico
+titulo:
+  sencillo: "Quiero que la compu me ponga subtítulos a lo que se escucha"
+  tecnico: "Subtítulos en vivo (Live captions) de Windows 11"
+explicacion:
+  sencillo: "Windows 11 puede escribir en pantalla lo que se dice en un video, una videollamada o cualquier sonido de la compu. Sirve mucho si escuchás poco o si no podés poner volumen. Funciona sin Internet una vez preparado."
+  tecnico: "Live captions (Windows 11 22H2 o posterior): Windows + Ctrl + L o Configuración > Accesibilidad > Subtítulos. Reconocimiento en el dispositivo; la primera vez descarga el idioma."
+frases: ["quiero subtítulos en todo lo que se escucha", "poner subtítulos a una videollamada", "no escucho bien los videos y quiero leerlos", "que la compu escriba lo que dicen"]
+pasos:
+  - texto: "Apretá Windows + Ctrl + L. También podés abrir Accesibilidad > Subtítulos y activar los subtítulos en vivo, o tocar el ícono del volumen o de la red (abajo a la derecha) y activarlos desde ahí."
+    abrir: "ms-settings:easeofaccess-closedcaptioning"
+  - texto: "La primera vez te pide permiso para procesar la voz en tu compu y descargar el idioma: aceptá y esperá a que termine."
+  - texto: "Para moverlos, tocá el engranaje de la ventanita de subtítulos y elegí «Posición» (arriba, abajo o flotando). Ahí mismo, en «Preferencias», podés activar «Incluir audio del micrófono» para que también escriba lo que se dice cerca tuyo."
+  - texto: "Microsoft lo explica paso a paso (hace falta Windows 11, versión 22H2 o más nueva)."
+    abrir: "https://support.microsoft.com/windows/use-live-captions-to-better-understand-audio-b52da59c-14b8-4031-aeeb-f6a47e6055df"
+fuentes:
+  - https://support.microsoft.com/windows/use-live-captions-to-better-understand-audio-b52da59c-14b8-4031-aeeb-f6a47e6055df
+  - https://support.microsoft.com/accessibility/windows/make-windows-easier-to-hear
+madurez: T0
+---
+id: MED-002
+area: basico
+titulo:
+  sencillo: "Soy daltónico y me cuesta distinguir algunos colores en la pantalla"
+  tecnico: "Filtros de color de Windows"
+explicacion:
+  sencillo: "Windows trae «filtros de color» que cambian cómo se ven los colores en toda la pantalla, para que sea más fácil distinguir cosas que solo se diferencian por el color. Se prueban uno por uno hasta encontrar el que mejor te sirve."
+  tecnico: "Configuración > Accesibilidad > Filtros de color (Windows + U): activar y probar cada filtro de la lista."
+frases: ["soy daltónico y no distingo los colores", "no diferencio el rojo del verde en la pantalla", "los colores de la pantalla me confunden", "filtro para daltonismo en la compu"]
+pasos:
+  - texto: "Abrí Filtros de color (o apretá Windows + U y entrá en «Filtros de color»)."
+    abrir: "ms-settings:easeofaccess-colorfilter"
+  - texto: "Activá «Filtros de color» y probá cada filtro de la lista hasta que veas mejor la diferencia entre los colores."
+  - texto: "Si la pantalla quedó con colores raros y no te gusta cómo se ve, apagá el mismo interruptor."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/use-color-filters-in-windows"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/use-color-filters-in-windows
+madurez: T0
+---
+id: MED-003
+area: basico
+titulo:
+  sencillo: "Quiero más contraste en la pantalla para leer mejor"
+  tecnico: "Temas de contraste (alto contraste)"
+explicacion:
+  sencillo: "Los «temas de contraste» ponen colores muy marcados para que el texto y los botones se distingan mejor. Acá también está cómo sacarlos si se activaron sin querer y la pantalla cambió de colores de golpe."
+  tecnico: "Configuración > Accesibilidad > Temas de contraste > elegir tema > Aplicar; «Ninguno» los desactiva. Atajo: Alt izquierda + Mayús izquierda + Impr Pant."
+frases: ["quiero más contraste en la pantalla", "la pantalla se puso negra con letras amarillas", "poner alto contraste", "se activó el alto contraste y no sé sacarlo"]
+pasos:
+  - texto: "Abrí Temas de contraste, desplegá la lista, elegí un tema y tocá «Aplicar». Puede aparecer «Espere» unos segundos antes de que cambien los colores."
+    abrir: "ms-settings:easeofaccess-highcontrast"
+  - texto: "Para volver a los colores normales, elegí «Ninguno» en la misma lista y tocá «Aplicar»."
+  - texto: "Atajo: Alt izquierda + Mayús izquierda + Impr Pant activa o apaga el alto contraste (si se activó solo, probablemente lo apretaste sin querer)."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/change-color-contrast-in-windows"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/change-color-contrast-in-windows
+madurez: T0
+---
+id: MED-004
+area: basico
+titulo:
+  sencillo: "Quiero manejar la computadora hablando, sin mouse ni teclado"
+  tecnico: "Acceso por voz (Voice access) de Windows 11"
+explicacion:
+  sencillo: "Con el «acceso por voz» podés abrir programas, hacer clic y dictar texto diciendo lo que querés. Es distinto del dictado: acá manejás toda la compu con la voz. Necesitás un micrófono que funcione."
+  tecnico: "Voice access (Windows 11 22H2 o posterior): Configuración > Accesibilidad > Voz. Descarga un modelo de idioma la primera vez (incluye español de España y de México); funciona sin conexión después."
+frases: ["manejar la compu con la voz", "no puedo usar las manos para el mouse", "darle órdenes a la computadora hablando", "abrir programas diciendo el nombre"]
+pasos:
+  - texto: "Antes, fijate que el micrófono funcione. Después abrí Accesibilidad > «Voz» y activá «Acceso por voz» (o buscá «acceso por voz» en el menú Inicio)."
+  - texto: "La primera vez elegí el idioma (español) y aceptá: descarga los archivos de voz. Hace falta Internet solo para esa descarga y puede tardar unos minutos."
+  - texto: "Para que te escuche decí «Voice access wake up» o tocá el botón del micrófono; para que deje de escuchar, Alt + Mayús + B. Seguí el tutorial que ofrece para aprender las órdenes."
+    abrir: "https://support.microsoft.com/accessibility/windows/voice-access/get-started-with-voice-access"
+  - texto: "Si querés que arranque solo, en la misma página de «Voz» marcá que se inicie antes o después de iniciar sesión."
+    abrir: "https://support.microsoft.com/accessibility/windows/voice-access/set-up-voice-access"
+derivar: "Si el micrófono no anda, escribile a PC Doctor «no funciona el micrófono»."
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/voice-access/get-started-with-voice-access
+  - https://support.microsoft.com/accessibility/windows/voice-access/set-up-voice-access
+madurez: T0
+---
+id: MED-005
+area: audio
+titulo:
+  sencillo: "Escucho bien de un solo oído o uso un solo auricular"
+  tecnico: "Audio mono"
+explicacion:
+  sencillo: "Mucha música y muchos videos mandan sonidos distintos a cada lado. Si escuchás de un solo oído o usás un solo auricular, te perdés una parte. El «audio mono» junta todo en un solo canal para que escuches todo de los dos lados."
+  tecnico: "Configuración > Accesibilidad > Audio > Audio mono (combina los canales estéreo en uno)."
+frases: ["escucho de un solo oído y me pierdo sonidos", "uso un solo auricular", "quiero que suene igual de los dos lados", "poner el sonido en mono"]
+pasos:
+  - texto: "Abrí Accesibilidad > Audio y activá «Audio mono»."
+    abrir: "ms-settings:easeofaccess-audio"
+  - texto: "Probá un video o una canción con un solo auricular: ahora tendría que escucharse todo."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/make-windows-easier-to-hear"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/make-windows-easier-to-hear
+madurez: T0
+---
+id: MED-006
+area: audio
+titulo:
+  sencillo: "No escucho los avisos de la compu: quiero que la pantalla parpadee"
+  tecnico: "Avisos visuales en lugar de sonidos"
+explicacion:
+  sencillo: "Si no escuchás bien, Windows puede hacer titilar la ventana o toda la pantalla cada vez que suena un aviso, así te das cuenta aunque no lo oigas."
+  tecnico: "Configuración > Accesibilidad > Audio: hacer parpadear la barra de título, la ventana activa o toda la pantalla durante las notificaciones de audio."
+frases: ["no escucho cuando la compu me avisa algo", "que la pantalla titile en vez de sonar", "soy sordo y no me entero de los avisos", "avisos visuales en lugar del sonido"]
+pasos:
+  - texto: "Abrí Accesibilidad > Audio."
+    abrir: "ms-settings:easeofaccess-audio"
+  - texto: "En la opción para hacer parpadear la pantalla durante las notificaciones de audio, elegí qué querés que titile: la barra de título de la ventana, la ventana entera o toda la pantalla."
+  - texto: "Si además los avisos se van muy rápido, escribile a PC Doctor «los avisos desaparecen muy rápido»."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/make-windows-easier-to-hear"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/make-windows-easier-to-hear
+madurez: T0
+---
+id: MED-007
+area: basico
+titulo:
+  sencillo: "Los avisos de la compu desaparecen antes de que los pueda leer"
+  tecnico: "Tiempo de las notificaciones (Efectos visuales)"
+explicacion:
+  sencillo: "Los avisos que aparecen abajo a la derecha se van solos a los 5 segundos. Si leés despacio o no los ves a tiempo, podés hacer que se queden más tiempo en pantalla."
+  tecnico: "Configuración > Accesibilidad > Efectos visuales > «Descartar notificaciones después de este período de tiempo» (predeterminado: 5 s)."
+frases: ["los avisos se van muy rápido", "no llego a leer las notificaciones", "quiero que los mensajes de la compu duren más", "las notificaciones desaparecen enseguida"]
+pasos:
+  - texto: "Abrí Accesibilidad > «Efectos visuales»."
+    abrir: "ms-settings:easeofaccess-visualeffects"
+  - texto: "En la opción para descartar las notificaciones después de un tiempo, elegí uno más largo (por ejemplo, 1 minuto)."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/make-windows-easier-to-hear"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/make-windows-easier-to-hear
+madurez: T0
+---
+id: MED-008
+area: basico
+titulo:
+  sencillo: "Me cuesta apretar dos teclas a la vez (como Ctrl + C)"
+  tecnico: "Teclas especiales (Sticky Keys) para usar atajos de a una tecla"
+explicacion:
+  sencillo: "Muchos atajos piden apretar dos o tres teclas juntas. Si usás una sola mano o te cuesta, las «teclas especiales» te dejan apretarlas de a una: primero Ctrl, después C, y funciona igual."
+  tecnico: "Configuración > Accesibilidad > Teclado > Teclas especiales: los modificadores (Ctrl, Alt, Mayús, Windows) quedan presionados hasta la siguiente tecla."
+frases: ["no puedo apretar dos teclas juntas", "uso el teclado con una sola mano", "me cuesta hacer control c", "quiero apretar los atajos de a una tecla"]
+pasos:
+  - texto: "Abrí Accesibilidad > Teclado y activá «Teclas especiales»."
+    abrir: "ms-settings:easeofaccess-keyboard"
+  - texto: "Probá: apretá Ctrl, soltala, y después apretá C. Es lo mismo que Ctrl + C."
+  - texto: "Si en algún momento querés apagarlas, es el mismo interruptor. Si el teclado empieza a hacer ruidos raros, escribile a PC Doctor «el teclado hace ruidos»."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/make-your-mouse-keyboard-and-other-input-devices-easier-to-use"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/make-your-mouse-keyboard-and-other-input-devices-easier-to-use
+madurez: T0
+---
+id: MED-009
+area: basico
+titulo:
+  sencillo: "Me tiembla la mano y se me escriben letras repetidas"
+  tecnico: "Teclas de filtro (Filter Keys) para ignorar pulsaciones breves o repetidas"
+explicacion:
+  sencillo: "Si te tiembla la mano o rozás teclas sin querer, aparecen letras de más. Las «teclas de filtro» hacen que el teclado ignore los toques muy cortos o repetidos."
+  tecnico: "Configuración > Accesibilidad > Teclado > Teclas de filtro: ajusta la sensibilidad para ignorar pulsaciones breves o repetidas."
+frases: ["me tiembla la mano y escribo letras de más", "se me repiten las letras al escribir", "toco teclas sin querer", "el teclado es muy sensible para mí"]
+pasos:
+  - texto: "Abrí Accesibilidad > Teclado y activá «Teclas de filtro»."
+    abrir: "ms-settings:easeofaccess-keyboard"
+  - texto: "Escribí un rato. Si ahora el teclado parece que tarda en responder, apagalas desde el mismo lugar."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/make-your-mouse-keyboard-and-other-input-devices-easier-to-use"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/make-your-mouse-keyboard-and-other-input-devices-easier-to-use
+madurez: T0
+---
+id: MED-010
+area: basico
+titulo:
+  sencillo: "Escribo todo en mayúsculas sin darme cuenta"
+  tecnico: "Teclas de alternancia (Toggle Keys): aviso sonoro de Bloq Mayús"
+explicacion:
+  sencillo: "Pasa cuando se aprieta sin querer la tecla Bloq Mayús. Windows puede hacer un sonido cada vez que se activa o desactiva, así te das cuenta enseguida."
+  tecnico: "Configuración > Accesibilidad > Teclado > Teclas de alternancia: sonido al presionar Bloq Mayús, Bloq Num o Bloq Despl."
+frases: ["se me escribe todo en mayúscula", "aprieto bloq mayús sin darme cuenta", "quiero que suene cuando activo las mayúsculas", "la clave no me entra porque estaba en mayúscula"]
+pasos:
+  - texto: "Para volver a minúsculas ahora, apretá una vez la tecla Bloq Mayús (a veces dice «Caps Lock»)."
+  - texto: "Abrí Accesibilidad > Teclado y activá «Teclas de alternancia»: desde ahí, cada vez que toques Bloq Mayús o Bloq Num vas a escuchar un sonido."
+    abrir: "ms-settings:easeofaccess-keyboard"
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/make-your-mouse-keyboard-and-other-input-devices-easier-to-use"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/make-your-mouse-keyboard-and-other-input-devices-easier-to-use
+madurez: T0
+---
+id: MED-011
+area: basico
+titulo:
+  sencillo: "No encuentro dónde estoy escribiendo: la rayita que titila es muy finita"
+  tecnico: "Cursor de texto: indicador y grosor"
+explicacion:
+  sencillo: "La rayita que marca dónde vas a escribir se pierde fácil. Windows la puede hacer más gruesa y ponerle una marca de color arriba y abajo para encontrarla enseguida."
+  tecnico: "Configuración > Accesibilidad > Cursor de texto: Indicador de cursor de texto (tamaño y color) y Grosor del cursor de texto."
+frases: ["no veo dónde estoy escribiendo", "la rayita que titila es muy finita", "pierdo el cursor cuando escribo", "hacer más grueso el cursor de texto"]
+pasos:
+  - texto: "Abrí Accesibilidad > «Cursor de texto»."
+    abrir: "ms-settings:easeofaccess-cursor"
+  - texto: "Activá «Indicador de cursor de texto», mové el tamaño y elegí un color que resalte."
+  - texto: "Más abajo, mové el grosor del cursor de texto hasta que la vista previa se vea bien."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/make-your-mouse-keyboard-and-other-input-devices-easier-to-use"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/make-your-mouse-keyboard-and-other-input-devices-easier-to-use
+madurez: T0
+---
+id: MED-012
+area: basico
+titulo:
+  sencillo: "Quiero mover la flechita con el teclado porque no puedo usar el mouse"
+  tecnico: "Teclas del mouse (teclado numérico)"
+explicacion:
+  sencillo: "Si el mouse no anda o te cuesta usarlo, podés mover la flechita con los números del costado derecho del teclado (el teclado numérico) y hacer clic con el 5."
+  tecnico: "Configuración > Accesibilidad > Mouse > Teclas del mouse. 8/2/4/6 mueven, 7/9/1/3 en diagonal, 5 clic, + doble clic, / botón izquierdo, - botón derecho."
+frases: ["mover el mouse con el teclado", "no puedo usar el mouse y quiero hacer clic", "manejar la flechita con los números", "el mouse se rompió y necesito hacer clic"]
+pasos:
+  - texto: "Abrí Accesibilidad > «Mouse» (en la parte de Interacción) y activá «Teclas del mouse». Sin mouse: apretá Windows + U para abrir Accesibilidad, movete con Tab y las flechas, y cuando estés en el interruptor apretá la barra espaciadora."
+  - texto: "Usá el teclado numérico: 8 sube, 2 baja, 4 va a la izquierda, 6 a la derecha (7, 9, 1 y 3 en diagonal). El 5 hace clic y el + hace doble clic."
+  - texto: "Para clic derecho, apretá primero la tecla menos (-) y después el 5. Para volver al clic normal, apretá la barra (/)."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/use-mouse-keys-to-move-the-mouse-pointer"
+derivar: "Si el mouse dejó de funcionar, escribile a PC Doctor «el mouse no funciona»."
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/use-mouse-keys-to-move-the-mouse-pointer
+  - https://support.microsoft.com/accessibility/windows/make-your-mouse-keyboard-and-other-input-devices-easier-to-use
+madurez: T0
+---
+id: MED-013
+area: audio
+titulo:
+  sencillo: "Quiero escuchar la compu directo en mis audífonos"
+  tecnico: "Audífonos con Bluetooth LE Audio en Windows 11"
+explicacion:
+  sencillo: "Algunos audífonos pueden recibir el sonido de la compu directo, como si fueran auriculares. Para eso, tanto la compu como los audífonos tienen que ser compatibles con «LE Audio». No todos lo son, aunque digan Bluetooth."
+  tecnico: "Requiere Windows 11, Bluetooth LE integrado de fábrica y controladores con LE Audio; los audífonos ASHA o MFi no son LE Audio. Presets y sonido ambiente desde Windows 11 24H2."
+frases: ["conectar los audífonos a la compu", "quiero escuchar la compu en mi audífono", "mis audífonos tienen bluetooth y no se conectan a la pc", "uso audífono y quiero oír los videos directo"]
+pasos:
+  - texto: "Fijate en el manual de los audífonos (o preguntale a tu fonoaudiólogo) si son compatibles con «LE Audio». Si son de tipo ASHA o «Made for iPhone», no van a funcionar con Windows."
+  - texto: "Prendé los audífonos y ponelos en modo de emparejamiento. En la compu, tocá el ícono de la red, el volumen o la batería (abajo a la derecha); en el cuadro de Bluetooth entrá a administrar los dispositivos y elegí tus audífonos en la lista de dispositivos nuevos. Si aparece un aviso para conectarlos, tocá «Conectar»."
+  - texto: "Después podés ver la batería y si están conectados en Bluetooth y dispositivos."
+    abrir: "ms-settings:bluetooth"
+  - texto: "Si tenés dos audífonos, conectá también el segundo cuando Windows te lo pida. Con Windows 11 24H2, en las propiedades del audífono podés cambiar el modo de sonido y el volumen del ambiente."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/using-hearing-devices-with-your-windows-11-pc"
+derivar: "Si son auriculares comunes y no conectan, escribile a PC Doctor «los auriculares Bluetooth no se conectan»."
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/using-hearing-devices-with-your-windows-11-pc
+madurez: T0
+---
+id: MED-014
+area: juegos
+titulo:
+  sencillo: "El juego o programa dice que falta MSVCP140.dll o VCRUNTIME140.dll"
+  tecnico: "Microsoft Visual C++ Redistributable ausente o dañado"
+explicacion:
+  sencillo: "Muchos juegos y programas necesitan unas piezas de Microsoft llamadas «Visual C++». Si faltan o se dañaron, aparece ese aviso. Se arregla instalándolas desde la página oficial de Microsoft. Nunca bajes el archivo .dll suelto de páginas de «descargar DLL»: son peligrosas y pueden traer virus."
+  tecnico: "Instalar el Visual C++ v14 Redistributable más reciente (x64 y, para juegos de 32 bits, x86) desde learn.microsoft.com; solo instaladores descargados de Microsoft y firmados por Microsoft."
+frases: ["falta msvcp140.dll", "dice que no se encuentra vcruntime140.dll", "el juego no abre por un archivo dll", "error de visual c++ al abrir un programa"]
+pasos:
+  - texto: "Primero fijate en la ayuda del juego o programa: Microsoft recomienda seguir las instrucciones de quien lo fabrica."
+  - texto: "Si sigue, abrí la página oficial de Microsoft e instalá el «Visual C++ Redistributable» más reciente: el X64 y también el X86 (algunos juegos son de 32 bits). Reiniciá la compu y probá de nuevo."
+    abrir: "https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist"
+  - texto: "Si la instalación da error, instalá las actualizaciones pendientes de Windows, reiniciá y volvé a intentar."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Importante: no bajes el archivo .dll de otras páginas. Microsoft pide instalar solo lo que viene de sus sitios y firmado por Microsoft."
+    abrir: "https://learn.microsoft.com/cpp/windows/troubleshoot-vc-redistributable-installation-issues"
+fuentes:
+  - https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist
+  - https://learn.microsoft.com/cpp/windows/troubleshoot-vc-redistributable-installation-issues
+madurez: T0
+---
+id: MED-015
+area: juegos
+titulo:
+  sencillo: "Un juego o programa viejo pide .NET Framework"
+  tecnico: ".NET Framework 3.5 (incluye 2.0 y 3.0) no instalado"
+explicacion:
+  sencillo: "Algunos juegos y programas viejos necesitan una pieza de Windows llamada «.NET Framework 3.5». Windows 10 y 11 ya traen la versión nueva (4.8), pero no la vieja, que se agrega aparte gratis desde Microsoft."
+  tecnico: "Windows 11 incluye .NET Framework 4.8/4.8.1; la 3.5 se habilita a pedido (Características de Windows) hasta 25H2. Desde 26H1 (compilación 28000) solo con instalador independiente."
+frases: ["el juego me pide net framework", "dice que falta .net framework 3.5", "un programa viejo pide instalar una característica de windows", "no puedo instalar net framework"]
+pasos:
+  - texto: "Si aparece un cartel que ofrece «Descargar e instalar esta característica», aceptalo: es de Windows y necesita Internet."
+  - texto: "Si no aparece: tocá Inicio, buscá «Características de Windows» y abrí «Activar o desactivar las características de Windows». Marcá «.NET Framework 3.5 (incluye .NET 2.0 y 3.0)», tocá «Aceptar» y reiniciá si te lo pide."
+    abrir: "https://learn.microsoft.com/dotnet/framework/install/dotnet-35-windows"
+  - texto: "Con Windows 11 26H1 o más nuevo, esa casilla ya no está: Microsoft da un instalador aparte en esta página. Bajalo solo de ahí."
+    abrir: "https://learn.microsoft.com/dotnet/framework/install/dotnet-35-windows-11"
+  - texto: "Antes de instalar, fijate si el programa tiene una versión más nueva: Microsoft recomienda eso primero."
+derivar: "Si la instalación da un error (como 0x800f0906 o 0x800f081f), escribile a PC Doctor «Windows no se actualiza»."
+fuentes:
+  - https://learn.microsoft.com/dotnet/framework/install/dotnet-35-windows
+  - https://learn.microsoft.com/dotnet/framework/install/dotnet-35-windows-11
+  - https://learn.microsoft.com/dotnet/framework/install/
+madurez: T0
+---
+id: MED-016
+area: programas
+titulo:
+  sencillo: "Quiero recortar, enderezar o girar una foto"
+  tecnico: "Editar imágenes en la app Fotos (recortar, girar, voltear, ajustes y filtros)"
+explicacion:
+  sencillo: "La app Fotos que viene con Windows sirve para recortar una foto, girarla si quedó de costado, enderezarla, darle más luz o ponerle un filtro, sin instalar nada."
+  tecnico: "Fotos > Editar imagen (Ctrl + E): Recortar (relación de aspecto, girar 90°, voltear, rotación libre), ajustes de luz y color, Filtro; «Restablecer» deshace todo."
+frases: ["quiero recortar una foto", "la foto quedó de costado y la quiero girar", "enderezar una foto torcida", "aclarar una foto que salió oscura"]
+pasos:
+  - texto: "Escribí «Fotos» en la búsqueda de la barra de tareas, abrí la app y tocá la foto."
+  - texto: "Arriba, tocá «Editar imagen» (o Ctrl + E). En «Recortar» podés achicar el borde, girar la foto, voltearla o enderezarla con la barrita de rotación."
+  - texto: "Con las barritas de la derecha ajustás la luz y el color; en «Filtro» elegís uno (con «Original» lo sacás). Si algo no te gusta, «Restablecer» deshace todos los cambios."
+  - texto: "Al terminar, guardá los cambios. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/en-us/windows/apps/photos/edit-photos-and-videos-in-windows"
+fuentes:
+  - https://support.microsoft.com/en-us/windows/apps/photos/edit-photos-and-videos-in-windows
+madurez: T0
+---
+id: MED-017
+area: programas
+titulo:
+  sencillo: "Quiero cortar el principio o el final de un video"
+  tecnico: "Recortar un video con la app Fotos"
+explicacion:
+  sencillo: "Si un video tiene partes de más al principio o al final, se puede recortar con la app Fotos de Windows y guardar como un video nuevo, sin tocar el original."
+  tecnico: "Fotos > abrir el video > Recortar (Ctrl + E) > marcadores de inicio y fin > Guardar como copia. Edición avanzada: «Editar en el editor de video Clipchamp»."
+frases: ["cortar el principio de un video", "recortar un video que grabé con el celular", "sacarle el final a un video", "achicar la duración de un video"]
+pasos:
+  - texto: "Escribí «Fotos» en la búsqueda de la barra de tareas, abrí la app y tocá el video."
+  - texto: "Arriba, tocá «Recortar» (o Ctrl + E) y mové las barritas de abajo hasta donde querés que empiece y termine."
+  - texto: "Tocá «Guardar como copia»: así queda un video nuevo y el original no se toca. (En la flechita de al lado está «Guardar», que reemplaza el original.)"
+  - texto: "Para cosas más complicadas (unir videos o cortar una parte del medio), abrí el video con el editor Clipchamp. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/en-us/windows/apps/photos/edit-photos-and-videos-in-windows"
+fuentes:
+  - https://support.microsoft.com/en-us/windows/apps/photos/edit-photos-and-videos-in-windows
+madurez: T0
+---
+id: MED-018
+area: programas
+titulo:
+  sencillo: "Quiero unir varios videos o sacar una parte del medio"
+  tecnico: "Editar y exportar un video con Clipchamp"
+explicacion:
+  sencillo: "Clipchamp es el editor de video de Microsoft. Sirve para juntar varios videos en uno, cortar un pedazo del medio y guardar el resultado."
+  tecnico: "Clipchamp: crear un video > Importar medios > arrastrar a la línea de tiempo > recortar (bordes) o dividir (tijera) > Exportar (480p, 720p, 1080p; 4K con suscripción)."
+frases: ["unir dos videos en uno", "cortar una parte del medio de un video", "editar un video en la compu", "hacer un video con varios videos"]
+pasos:
+  - texto: "Abrí Clipchamp (buscalo en el menú Inicio), tocá el botón para crear un video nuevo y después el de importar medios para elegir tus videos."
+    abrir: "https://support.microsoft.com/en-us/clipchamp/how-to-edit-a-video-in-clipchamp"
+  - texto: "Arrastrá los videos a la línea de tiempo de abajo, en el orden que quieras."
+  - texto: "Para acortar uno, tocalo y arrastrá sus bordes hacia adentro. Para sacar una parte del medio, poné la rayita donde querés cortar, tocá la tijera (dividir), seleccioná el pedazo que sobra y apretá Suprimir."
+    abrir: "https://support.microsoft.com/en-us/clipchamp/how-to-trim-videos-images-or-audio-assets"
+  - texto: "Arriba a la derecha tocá «Exportar» y elegí la calidad (1080p alcanza para casi todo; 4K pide suscripción)."
+fuentes:
+  - https://support.microsoft.com/en-us/clipchamp/how-to-edit-a-video-in-clipchamp
+  - https://support.microsoft.com/en-us/clipchamp/how-to-trim-videos-images-or-audio-assets
+madurez: T0
+---
+id: MED-019
+area: programas
+titulo:
+  sencillo: "Un video no se reproduce o dice que falta un códec"
+  tecnico: "Códec de video ausente (HEVC, VP9, AV1)"
+explicacion:
+  sencillo: "Un «códec» es una pieza que le enseña a la compu a leer cierto tipo de video. Si falta, el video no abre o no se ve bien. Algunos se agregan desde la Microsoft Store. No bajes «paquetes de códecs gratis» de páginas desconocidas: pueden traer problemas y dañar Windows."
+  tecnico: "Extensiones de video de Microsoft Store (HEVC, VP9, AV1). Evitar los paquetes de códecs gratuitos de Internet; usar solo fuentes oficiales y crear un punto de restauración antes."
+frases: ["el video no se reproduce", "dice que falta un códec", "el video se escucha pero no se ve", "no puedo abrir un video del celular en la compu"]
+pasos:
+  - texto: "Fijate qué dice el error. Si nombra una extensión (por ejemplo, «HEVC»), abrí la Microsoft Store, buscá ese nombre e instalala. Después cerrá y volvé a abrir el reproductor."
+  - texto: "Si después de eso sigue sin andar, puede que el problema no sea el códec: no todas las fallas al reproducir son por eso."
+  - texto: "No instales «paquetes de códecs gratis» de páginas desconocidas: Microsoft advierte que pueden causar problemas y dañar el sistema."
+    abrir: "https://support.microsoft.com/en-us/windows/apps/windowsmediaplayer/codecs-faq"
+fuentes:
+  - https://support.microsoft.com/en-us/windows/apps/windowsmediaplayer/codecs-faq
+madurez: T0
+---
+id: MED-020
+area: juegos
+titulo:
+  sencillo: "Quiero grabar un pedazo del juego mientras juego"
+  tecnico: "Grabar clips con Xbox Game Bar"
+explicacion:
+  sencillo: "Windows trae la «Xbox Game Bar», que graba lo que pasa en el juego con una combinación de teclas. Los videos quedan guardados en la carpeta Videos."
+  tecnico: "Xbox Game Bar: Windows + Alt + R inicia y detiene la grabación; Windows + G muestra la barra; Windows + Alt + M micrófono. Clips MP4 en Videos > Capturas."
+frases: ["grabar la partida de un juego", "quiero grabar lo que juego", "cómo grabo un clip del juego", "guardar una jugada en video"]
+pasos:
+  - texto: "Fijate que esté activada: abrí Game Bar y prendé la opción que habilita Xbox Game Bar para grabar clips de juegos."
+    abrir: "ms-settings:gaming-gamebar"
+  - texto: "Abrí el juego y apretá Windows + Alt + R para empezar a grabar. Para terminar, otra vez Windows + Alt + R."
+  - texto: "Windows + G muestra la barra con todos los botones; Windows + Alt + M prende o apaga el micrófono mientras grabás."
+  - texto: "El video queda en la carpeta Videos, dentro de «Capturas», con el nombre del juego y la fecha. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/en-us/accessibility/windows/use-a-screen-reader-to-record-your-screen-with-xbox-game-bar"
+derivar: "Para grabar la pantalla fuera de un juego, escribile a PC Doctor «grabar la pantalla»."
+fuentes:
+  - https://support.microsoft.com/en-us/accessibility/windows/use-a-screen-reader-to-record-your-screen-with-xbox-game-bar
+madurez: T0
+---
+id: MED-021
+area: juegos
+titulo:
+  sencillo: "Se me abre una barra de Xbox en la pantalla y no la quiero"
+  tecnico: "Desactivar Xbox Game Bar"
+explicacion:
+  sencillo: "Esa barra es la «Xbox Game Bar», que sirve para grabar juegos. Aparece al apretar Windows + G. Si no la usás, se puede apagar."
+  tecnico: "Configuración > Juegos > Game Bar: apagar la opción que habilita Xbox Game Bar para grabar clips de juegos."
+frases: ["me aparece la barra de xbox", "se abre la game bar sola", "sacar la barra de juegos de windows", "desactivar xbox game bar"]
+pasos:
+  - texto: "Si está abierta ahora, apretá Windows + G para esconderla."
+  - texto: "Abrí Game Bar y apagá la opción que habilita Xbox Game Bar para cosas como grabar clips de juegos."
+    abrir: "ms-settings:gaming-gamebar"
+  - texto: "Si más adelante querés grabar un juego, prendé la misma opción. Microsoft muestra dónde está."
+    abrir: "https://support.microsoft.com/en-us/accessibility/windows/use-a-screen-reader-to-record-your-screen-with-xbox-game-bar"
+fuentes:
+  - https://support.microsoft.com/en-us/accessibility/windows/use-a-screen-reader-to-record-your-screen-with-xbox-game-bar
+madurez: T0
+---
+id: MED-022
+area: juegos
+titulo:
+  sencillo: "La notebook tiene dos placas de video y el juego usa la más débil"
+  tecnico: "Preferencia de gráficos por aplicación (Alto rendimiento)"
+explicacion:
+  sencillo: "Muchas notebooks tienen una placa de video que ahorra batería y otra más potente para juegos. Windows deja elegir cuál usa cada juego, para que use la potente."
+  tecnico: "Configuración > Sistema > Pantalla > Gráficos > Opciones personalizadas para aplicaciones > Opciones > Preferencia de gráficos: Alto rendimiento (solo con más de una GPU)."
+frases: ["el juego no usa la placa de video buena", "quiero que el juego use la nvidia", "tengo dos placas de video y anda lento el juego", "elegir la placa de video para un juego"]
+pasos:
+  - texto: "Abrí Gráficos (Sistema > Pantalla > Gráficos). Si la página no aparece, tu compu no tiene esta opción."
+    abrir: "ms-settings:display-advancedgraphics"
+  - texto: "En las opciones personalizadas para aplicaciones, elegí el juego y tocá «Opciones»."
+  - texto: "En «Preferencia de gráficos» elegí «Alto rendimiento», tocá «Guardar» y volvé a abrir el juego."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/en-us/windows/hardware/display-graphics/optimizations-for-windowed-games-in-windows-11"
+fuentes:
+  - https://support.microsoft.com/en-us/windows/hardware/display-graphics/optimizations-for-windowed-games-in-windows-11
+madurez: T0
+---
+id: MED-023
+area: juegos
+titulo:
+  sencillo: "Los juegos en ventana andan peor que en pantalla completa"
+  tecnico: "Optimizaciones para juegos en ventana (Windows 11)"
+explicacion:
+  sencillo: "Windows 11 tiene una opción que hace que los juegos que se juegan en ventana o «sin bordes» anden mejor."
+  tecnico: "Configuración > Sistema > Pantalla > Gráficos > Configuración predeterminada > Optimizaciones para juegos en ventana. Activar HDR automático también la activa."
+frases: ["el juego en ventana anda trabado", "en modo ventana el juego va peor", "mejorar los juegos sin bordes", "el juego no va fluido si no es pantalla completa"]
+pasos:
+  - texto: "Abrí Gráficos (Sistema > Pantalla > Gráficos)."
+    abrir: "ms-settings:display-advancedgraphics"
+  - texto: "En la configuración predeterminada, activá «Optimizaciones para juegos en ventana» y volvé a abrir el juego."
+  - texto: "Si un juego en particular anda peor con esto, en las «Opciones» de ese juego podés apagarla solo para él. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/en-us/windows/hardware/display-graphics/optimizations-for-windowed-games-in-windows-11"
+derivar: "Si el juego anda mal igual, escribile a PC Doctor «el juego anda lento»."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/hardware/display-graphics/optimizations-for-windowed-games-in-windows-11
+madurez: T0
+---
+id: MED-024
+area: basico
+titulo:
+  sencillo: "Los subtítulos se ven muy chicos o no se leen bien"
+  tecnico: "Estilo de subtítulos de Windows"
+explicacion:
+  sencillo: "Windows deja cambiar cómo se ven los subtítulos, por ejemplo más grandes o con fondo oscuro, para leerlos mejor."
+  tecnico: "Configuración > Accesibilidad > Subtítulos > Estilo de subtítulos."
+frases: ["los subtítulos son muy chiquitos", "no leo bien los subtítulos", "cambiar el color de los subtítulos", "agrandar la letra de los subtítulos"]
+pasos:
+  - texto: "Abrí Accesibilidad > Subtítulos."
+    abrir: "ms-settings:easeofaccess-closedcaptioning"
+  - texto: "En «Estilo de subtítulos» elegí cómo querés que se vean y fijate en la vista previa."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/accessibility/windows/make-windows-easier-to-hear"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/make-windows-easier-to-hear
+madurez: T0
+---
+id: MED-025
+area: juegos
+titulo:
+  sencillo: "Quiero conectar un joystick de Xbox a la computadora"
+  tecnico: "Emparejar un control inalámbrico de Xbox por Bluetooth"
+explicacion:
+  sencillo: "Los controles inalámbricos de Xbox que tienen Bluetooth se pueden conectar a la compu sin cables, como unos auriculares. Se hace una sola vez y después se conecta solo."
+  tecnico: "Botón Xbox + botón de conexión (borde superior) hasta que sea detectable;Configuración > Bluetooth y dispositivos > Agregar dispositivo > Todo lo demás > Xbox Wireless Controller."
+frases: ["conectar el joystick de la xbox a la pc", "quiero jugar con el control de xbox en la compu", "el mando de xbox no se conecta a la computadora", "usar el joystick inalámbrico en la notebook"]
+pasos:
+  - texto: "En el control, mantené apretados a la vez el botón Xbox y el botoncito de conexión (en el borde de arriba) hasta que quede listo para que la compu lo encuentre."
+  - texto: "En la compu, abrí Bluetooth y dispositivos, tocá «Agregar dispositivo» y elegí la última opción («Todo lo demás»)."
+    abrir: "ms-settings:bluetooth"
+  - texto: "Cuando aparezca «Xbox Wireless Controller», tocalo, seguí lo que te pida y tocá «Listo»."
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/en-us/surface/play-xbox-games-on-surface-a2eabfa6-3d8d-d997-1773-489cd43faead"
+derivar: "Si no aparece o no se conecta, escribile a PC Doctor «los auriculares o el parlante Bluetooth no se conectan»: los pasos para revisar el Bluetooth son los mismos."
+fuentes:
+  - https://support.microsoft.com/en-us/surface/play-xbox-games-on-surface-a2eabfa6-3d8d-d997-1773-489cd43faead
+madurez: T0

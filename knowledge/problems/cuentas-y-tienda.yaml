@@ -1,0 +1,510 @@
+# Cuentas de usuario de Windows, inicio de sesión, BitLocker y Microsoft Store: perfil temporal, cuentas locales y de Microsoft, otros usuarios, Store que no abre o no descarga. Guiadas con fuente oficial.
+id: CTA-001
+area: windows
+titulo:
+  sencillo: "Al entrar dice «No podemos iniciar sesión en tu cuenta»"
+  tecnico: "Error «No podemos iniciar sesión en tu cuenta» (perfil de usuario que no carga)"
+explicacion:
+  sencillo: "Windows no pudo abrir tu usuario de siempre y te dejó entrar con uno provisorio. Tus cosas en general siguen en la computadora; muchas veces se arregla reiniciando."
+  tecnico: "El perfil de usuario no se carga y Windows inicia sesión con un perfil temporal; suele deberse a un bloqueo del perfil al iniciar (por ejemplo, antivirus) o a un perfil dañado."
+frases: ["me dice no podemos iniciar sesión en tu cuenta", "entro a la compu y sale un cartel que no puede iniciar sesión en mi cuenta", "dice que no se puede iniciar sesión y que cierre sesión", "error al entrar a mi usuario de windows"]
+pasos:
+  - texto: "Antes de nada: no guardes cosas nuevas mientras esté ese cartel. Lo que crees o cambies ahora se pierde al cerrar la sesión; si hiciste algo importante, copialo a un pendrive."
+  - texto: "Reiniciá la computadora normalmente y volvé a entrar con tu usuario. A veces hace falta reiniciar más de una vez."
+  - texto: "Si sigue igual, Microsoft recomienda probar entrando en modo seguro y apagar por un rato el antivirus que no sea el de Windows. Seguí sus pasos."
+    abrir: "https://support.microsoft.com/windows/security/identity-signin/we-can-t-sign-in-to-your-account-error-message"
+derivar: "Si nada funciona, la salida es crear otro usuario administrador y pasar tus archivos al usuario nuevo: si no te animás, pedí ayuda a alguien de confianza."
+fuentes:
+  - https://support.microsoft.com/windows/security/identity-signin/we-can-t-sign-in-to-your-account-error-message
+madurez: T0
+---
+id: CTA-002
+area: windows
+titulo:
+  sencillo: "Desaparecieron mis archivos y mi escritorio: dice «perfil temporal»"
+  tecnico: "«Iniciaste sesión con un perfil temporal»"
+explicacion:
+  sencillo: "Cuando aparece ese aviso, la computadora te muestra un escritorio vacío y provisorio. Tus fotos y documentos no se borraron: están en tu usuario de siempre, que esta vez no cargó."
+  tecnico: "Perfil temporal: Windows no pudo cargar el perfil local; los cambios hechos en el perfil temporal se eliminan al cerrar sesión."
+frases: ["iniciaste sesión con un perfil temporal", "se me borró todo el escritorio y dice perfil temporal", "prendí la compu y no están mis archivos", "me aparece la compu como nueva sin mis cosas"]
+pasos:
+  - texto: "No te asustes y no guardes nada en este escritorio provisorio: Microsoft avisa que lo que crees o cambies ahí se pierde al cerrar la sesión. Si ya guardaste algo, copialo a un pendrive."
+  - texto: "Reiniciá la computadora (puede hacer falta más de una vez) y fijate si al entrar vuelven tu fondo y tus archivos."
+  - texto: "Si no vuelven, seguí los pasos de Microsoft: probar en modo seguro, apagar un rato otro antivirus y, como último recurso, crear un usuario administrador nuevo y pasar tus archivos."
+    abrir: "https://support.microsoft.com/windows/security/identity-signin/we-can-t-sign-in-to-your-account-error-message"
+derivar: "Si hay que pasar archivos de un usuario a otro y no te sentís seguro, pedí ayuda: es fácil equivocarse de carpeta."
+fuentes:
+  - https://support.microsoft.com/windows/security/identity-signin/we-can-t-sign-in-to-your-account-error-message
+madurez: T0
+---
+id: CTA-003
+area: windows
+titulo:
+  sencillo: "En mi compu aparece la cuenta del trabajo o del colegio y la quiero sacar"
+  tecnico: "Desconectar una cuenta profesional o educativa (Obtener acceso a trabajo o escuela)"
+explicacion:
+  sencillo: "Si alguna vez entraste con el correo del trabajo o del colegio, esa cuenta puede quedar conectada a la compu. Se puede desconectar; la cuenta en sí no se borra."
+  tecnico: "Configuración > Cuentas > Obtener acceso a trabajo o escuela > Desconectar; quita la información de inicio de sesión y los datos de esa cuenta del dispositivo."
+frases: ["sacar la cuenta del trabajo de mi compu", "me quedó conectado el correo del colegio en windows", "desconectar la cuenta de la empresa de la computadora", "en mi compu figura la cuenta de mi ex trabajo"]
+pasos:
+  - texto: "Antes, guardá en otro lado los archivos del trabajo o del colegio que necesites: al desconectar, se borran de esta compu los datos de esa cuenta."
+  - texto: "Abrí la parte de trabajo o escuela en Configuración. Tocá la cuenta, elegí «Desconectar» y confirmá con «Sí»."
+    abrir: "ms-settings:workplace"
+  - texto: "Microsoft lo explica acá. Si la compu es de la empresa o del colegio, no la desconectes sin preguntar: puede que la necesiten administrar."
+    abrir: "https://support.microsoft.com/windows/manage-user-accounts-in-windows-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32"
+fuentes:
+  - https://support.microsoft.com/windows/manage-user-accounts-in-windows-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32
+madurez: T0
+---
+id: CTA-004
+area: windows
+titulo:
+  sencillo: "Quiero entrar a la compu sin la cuenta de Microsoft (cuenta local)"
+  tecnico: "Cambiar de cuenta Microsoft a cuenta local"
+explicacion:
+  sencillo: "Se puede usar la computadora con un usuario que exista solo en esa máquina, sin estar atado al correo de Microsoft. Tus archivos quedan donde están. Ojo: si después te olvidás esa clave, no se recupera por Internet."
+  tecnico: "Configuración > Cuentas > Tu información > iniciar sesión con una cuenta local; requiere nombre de usuario único, contraseña y pista; se cierra la sesión para terminar."
+frases: ["quiero sacar la cuenta de microsoft de la compu", "entrar a windows sin el correo de hotmail", "pasar mi usuario a cuenta local", "no quiero que la compu me pida la cuenta de outlook"]
+pasos:
+  - texto: "Guardá lo que estés haciendo: al final hay que cerrar la sesión. Después abrí «Tu información»."
+    abrir: "ms-settings:yourinfo"
+  - texto: "Tocá la opción para iniciar sesión con una cuenta local en su lugar (solo aparece si hoy entrás con una cuenta de Microsoft)."
+  - texto: "Escribí un nombre de usuario, una contraseña y una pista que te ayude a recordarla. Tocá «Siguiente» y después la opción para cerrar sesión y finalizar. Volvé a entrar con el usuario nuevo."
+  - texto: "Anotá la contraseña en un lugar seguro: Microsoft avisa que en una cuenta local, si te la olvidás, no se puede recuperar sin un disco para restablecerla. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/windows/switch-your-windows-10-device-to-a-local-account-eb7e78a9-88ee-9bc3-8f06-831b56e339fd"
+fuentes:
+  - https://support.microsoft.com/windows/switch-your-windows-10-device-to-a-local-account-eb7e78a9-88ee-9bc3-8f06-831b56e339fd
+madurez: T0
+---
+id: CTA-005
+area: windows
+titulo:
+  sencillo: "Quiero entrar a la compu con mi cuenta de Microsoft (Hotmail, Outlook)"
+  tecnico: "Cambiar de cuenta local a cuenta Microsoft"
+explicacion:
+  sencillo: "Si entrás con tu correo de Microsoft, la compu se conecta con OneDrive, la Store y tus otros aparatos, y si te olvidás la clave se puede recuperar por Internet."
+  tecnico: "Configuración > Cuentas > Tu información > iniciar sesión con una cuenta Microsoft; puede pedir la contraseña local actual; reiniciar para completar."
+frases: ["quiero entrar a la compu con mi hotmail", "pasar mi usuario a cuenta de microsoft", "vincular la compu con mi cuenta de outlook", "usar mi correo de microsoft para entrar a windows"]
+pasos:
+  - texto: "Abrí «Tu información»."
+    abrir: "ms-settings:yourinfo"
+  - texto: "Tocá la opción para iniciar sesión con una cuenta Microsoft en su lugar (solo aparece si hoy entrás con una cuenta local) y escribí tu correo de Microsoft. Si te pide la contraseña actual de la compu, ponela vos y tocá «Siguiente»."
+  - texto: "Reiniciá la computadora: la próxima vez vas a entrar con tu cuenta de Microsoft. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/windows/switch-to-a-microsoft-account-8458c7fc-ef27-4166-a75d-b561da4fc428"
+fuentes:
+  - https://support.microsoft.com/windows/switch-to-a-microsoft-account-8458c7fc-ef27-4166-a75d-b561da4fc428
+  - https://support.microsoft.com/windows/switch-your-windows-10-device-to-a-local-account-eb7e78a9-88ee-9bc3-8f06-831b56e339fd
+madurez: T0
+---
+id: CTA-006
+area: windows
+titulo:
+  sencillo: "Quiero agregar otro usuario para que otra persona use la compu"
+  tecnico: "Agregar otra cuenta de usuario (Microsoft o local)"
+explicacion:
+  sencillo: "Cada persona puede tener su propio usuario, con su escritorio, sus archivos y su clave. Así nadie toca las cosas del otro."
+  tecnico: "Configuración > Cuentas > Otros usuarios > Agregar cuenta; con correo Microsoft o como usuario sin cuenta Microsoft (cuenta local)."
+frases: ["quiero crear otro usuario en la compu", "agregar un usuario para mi señora", "que otra persona tenga su propia sesión en la computadora", "crear una cuenta nueva en windows para otro"]
+pasos:
+  - texto: "Abrí la parte de otros usuarios en Configuración y, en «Agregar otro usuario», tocá «Agregar cuenta»."
+    abrir: "ms-settings:otherusers"
+  - texto: "Si la persona tiene correo de Microsoft (Hotmail, Outlook), escribilo. Si no tiene, elegí la opción de que no tenés sus datos de inicio de sesión y después la de agregar un usuario sin cuenta Microsoft."
+  - texto: "Terminá los pasos que aparecen en pantalla. La clave la elige y la escribe la otra persona. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/windows/manage-user-accounts-in-windows-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32"
+fuentes:
+  - https://support.microsoft.com/windows/manage-user-accounts-in-windows-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32
+madurez: T0
+---
+id: CTA-007
+area: basico
+titulo:
+  sencillo: "Quiero que un familiar tenga su propio usuario en la compu"
+  tecnico: "Agregar un miembro del grupo familiar de Microsoft como usuario de Windows"
+explicacion:
+  sencillo: "Con el grupo familiar de Microsoft, cada integrante (un hijo, un nieto, tu pareja) entra con su propia cuenta. A los chicos conviene darles el papel de «Miembro» y a los adultos el de «Organizador»."
+  tecnico: "Grupo familiar de Microsoft: Agregar un miembro de la familia (rol Miembro u Organizador) desde la web o la app Family Safety; el invitado acepta por correo y los menores piden consentimiento de un adulto. En Windows: Cuentas > Familia y Otros usuarios."
+frases: ["crear una cuenta para mi nieto en la compu", "agregar a mi hijo como usuario de la familia", "que cada uno de la familia tenga su usuario", "invitar a un familiar a la cuenta de microsoft"]
+pasos:
+  - texto: "Tu grupo familiar se ve en Configuración > Cuentas > Familia. Para sumar a alguien, entrá con tu cuenta de Microsoft (tenés que ser «Organizador») a la página de familia o a la app Microsoft Family Safety y tocá «Agregar un miembro de la familia». Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/help/12417"
+  - texto: "Escribí el correo o el teléfono de esa persona y elegí su papel: «Miembro» (lo mejor para un chico) u «Organizador» (lo mejor para un adulto)."
+  - texto: "A la persona le llega un correo con la invitación y la tiene que aceptar entrando con su cuenta. Si es menor, va a tener que pedir permiso a un adulto."
+  - texto: "Para que entre en esta compu con su cuenta, agregala como usuario: en «Otros usuarios», tocá «Agregar cuenta» y escribí su correo. Para poner horarios o filtros a los chicos, escribile a PC Doctor «control parental»."
+    abrir: "ms-settings:otherusers"
+fuentes:
+  - https://support.microsoft.com/help/12417
+  - https://support.microsoft.com/windows/manage-user-accounts-in-windows-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32
+madurez: T0
+---
+id: CTA-008
+area: basico
+titulo:
+  sencillo: "Quiero cambiar el nombre que aparece al entrar a la compu"
+  tecnico: "Cambiar el nombre de la cuenta de usuario (cuenta Microsoft o local)"
+explicacion:
+  sencillo: "El nombre que ves al prender la compu sale de tu cuenta. Si entrás con un correo de Microsoft, se cambia en la página de tu cuenta; si es una cuenta local, desde el Panel de control."
+  tecnico: "Cuenta Microsoft: Tu información > Editar nombre (puede tardar hasta 24 h). Cuenta local: Panel de control > Cuentas de usuario > Cambiar el nombre de cuenta."
+frases: ["cambiar el nombre que sale al prender la compu", "en la pantalla de inicio aparece otro nombre", "quiero poner mi nombre en el usuario de windows", "me figura el nombre del dueño anterior al entrar"]
+pasos:
+  - texto: "Si entrás con un correo de Microsoft (Hotmail, Outlook): Microsoft explica cómo entrar a tu información y tocar la opción para editar el nombre. El cambio puede tardar hasta 24 horas en verse."
+    abrir: "https://support.microsoft.com/en-us/accounts-billing/manage/how-to-change-your-user-account-name"
+  - texto: "Si es una cuenta local: tocá Inicio, escribí «Panel de control» y abrilo. Entrá a «Cuentas de usuario» y tocá «Cambiar el nombre de cuenta»."
+  - texto: "Usá letras comunes: Microsoft avisa que los símbolos de fuentes raras pueden impedir que entres."
+fuentes:
+  - https://support.microsoft.com/en-us/accounts-billing/manage/how-to-change-your-user-account-name
+madurez: T0
+---
+id: CTA-009
+area: basico
+titulo:
+  sencillo: "Quiero cambiar la foto que aparece en mi usuario"
+  tecnico: "Cambiar la imagen de la cuenta"
+explicacion:
+  sencillo: "La foto redondita que aparece al entrar y en el menú Inicio se puede cambiar por cualquier imagen de la compu o por una foto sacada con la cámara."
+  tecnico: "Configuración > Cuentas > Tu información > Ajustar la foto: elegir un archivo o abrir la cámara; Windows guarda las últimas tres imágenes."
+frases: ["cambiar la foto de mi usuario", "poner una foto en la cuenta de la compu", "sacar la foto que aparece al entrar a windows", "cambiar la imagen de perfil de windows"]
+pasos:
+  - texto: "Abrí «Tu información»."
+    abrir: "ms-settings:yourinfo"
+  - texto: "En la parte de ajustar la foto, tocá «Examinar archivos» y elegí la imagen. Si la compu tiene cámara, también podés tocar «Abrir cámara» y sacarte una foto."
+  - texto: "Windows recuerda las últimas tres fotos que usaste: para volver a una, tocala en esa misma pantalla. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/windows/change-your-account-picture-in-windows-3645cdc7-acab-49d2-76a9-4ce7e5e10939"
+fuentes:
+  - https://support.microsoft.com/windows/change-your-account-picture-in-windows-3645cdc7-acab-49d2-76a9-4ce7e5e10939
+madurez: T0
+---
+id: CTA-010
+area: seguridad
+titulo:
+  sencillo: "Quiero sacar la contraseña para entrar a la compu"
+  tecnico: "Entrar sin contraseña: Windows Hello en lugar de una cuenta sin clave"
+explicacion:
+  sencillo: "Dejar la compu sin ninguna clave es peligroso: cualquiera que la prenda entra a tus correos, fotos y cuentas, sobre todo si es una notebook que sale de tu casa. Lo que Microsoft propone para no escribir más la contraseña es usar un PIN, la huella o la cara."
+  tecnico: "Microsoft advierte que una cuenta local sin contraseña permite iniciar sesión a cualquiera con acceso físico. Alternativa: Windows Hello y la opción «solo permitir el inicio de sesión de Windows Hello para cuentas Microsoft»."
+frases: ["quiero sacarle la contraseña a la compu", "que la computadora no tenga clave", "estoy cansado de escribir la contraseña al entrar", "cómo hago para no poner más la clave en windows"]
+pasos:
+  - texto: "Primero configurá un PIN (o la huella o la cara si tu compu lo permite) en Opciones de inicio de sesión: es corto, rápido y sirve solo en esta compu."
+    abrir: "ms-settings:signinoptions"
+  - texto: "Si entrás con una cuenta de Microsoft, en esa misma pantalla, en «Configuración adicional», podés activar la opción que permite solo Windows Hello para cuentas Microsoft. Desde la próxima vez ya no aparece la contraseña: entrás con el PIN, la huella o la cara."
+    abrir: "https://support.microsoft.com/en-us/topic/585a71d7-2295-4878-aeac-a014984df856"
+  - texto: "Atención: dejar el usuario sin ninguna clave no es lo mismo. Microsoft avisa que así cualquiera que tenga la compu en la mano puede entrar, y que es todavía más riesgoso en una notebook."
+    abrir: "https://learn.microsoft.com/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/accounts-limit-local-account-use-of-blank-passwords-to-console-logon-only"
+derivar: "PC Doctor no recomienda dejar la compu sin clave. Si igual lo querés en una compu de escritorio que no usa nadie más, consultalo antes con alguien de confianza."
+fuentes:
+  - https://support.microsoft.com/en-us/topic/585a71d7-2295-4878-aeac-a014984df856
+  - https://learn.microsoft.com/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/accounts-limit-local-account-use-of-blank-passwords-to-console-logon-only
+madurez: T0
+---
+id: CTA-011
+area: seguridad
+titulo:
+  sencillo: "Quiero que la compu entre sola, sin pedirme nada"
+  tecnico: "Inicio de sesión automático (AutoAdminLogon): riesgos"
+explicacion:
+  sencillo: "Se puede, pero no conviene: cualquiera que prenda la computadora entra a todas tus cosas (correo, fotos, cuentas abiertas). Lo más cómodo y seguro es entrar con un PIN corto o con la huella."
+  tecnico: "El inicio automático se configura editando el registro; Microsoft advierte que la contraseña queda guardada en texto plano y que cualquiera con acceso físico accede a todo el contenido."
+frases: ["que la compu arranque sin pedir la clave", "quiero que windows entre solo sin contraseña", "iniciar sesión automáticamente al prender", "que no me pida usuario al prender la compu"]
+pasos:
+  - texto: "Antes de hacerlo, pensá en la alternativa segura: un PIN de pocos números o la huella se ponen en Opciones de inicio de sesión y son mucho más rápidos que la contraseña."
+    abrir: "ms-settings:signinoptions"
+  - texto: "Atención: Microsoft explica que el inicio automático deja la contraseña guardada sin protección y que cualquiera que tenga la compu en la mano entra a todo. Solo tiene sentido en una compu que nunca sale de tu casa y que no usa nadie más."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-server/user-profiles-and-logon/turn-on-automatic-logon"
+derivar: "El método oficial implica tocar el registro de Windows, donde un error puede dañar el sistema. Si igual lo querés, pedile a un técnico de confianza que lo haga con vos. En una notebook que sacás de tu casa, no lo hagas."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-server/user-profiles-and-logon/turn-on-automatic-logon
+  - https://support.microsoft.com/en-us/windows/security/configure-windows-hello
+madurez: T0
+---
+id: CTA-012
+area: seguridad
+titulo:
+  sencillo: "Quiero que un usuario sea administrador (o que deje de serlo)"
+  tecnico: "Cambiar el tipo de cuenta: administrador o usuario estándar"
+explicacion:
+  sencillo: "El administrador puede instalar programas y cambiar todo; el usuario estándar usa la compu pero no puede tocar lo importante. Para el día a día conviene ser estándar, sobre todo los chicos."
+  tecnico: "Configuración > Cuentas > Otros usuarios > Opciones de cuenta > Cambiar tipo de cuenta (Administrador / Usuario estándar). Microsoft recomienda limitar las cuentas de administrador."
+frases: ["hacer administrador a otro usuario", "me dice que necesito permiso de administrador", "sacarle los permisos de administrador a mi hijo", "cambiar mi cuenta a administrador"]
+pasos:
+  - texto: "Entrá con un usuario que ya sea administrador y abrí la parte de otros usuarios en Configuración."
+    abrir: "ms-settings:otherusers"
+  - texto: "Tocá el usuario que querés cambiar y, junto a «Opciones de cuenta», elegí «Cambiar tipo de cuenta». Elegí «Administrador» o «Usuario estándar» y tocá «Aceptar»."
+  - texto: "Microsoft recomienda tener pocos administradores: con muchos, es más fácil que entre un virus o que alguien cambie algo sin querer."
+    abrir: "https://support.microsoft.com/windows/manage-user-accounts-in-windows-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32"
+fuentes:
+  - https://support.microsoft.com/windows/manage-user-accounts-in-windows-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32
+madurez: T0
+---
+id: CTA-013
+area: seguridad
+titulo:
+  sencillo: "Al prender, aparece una pantalla de BitLocker que pide una clave de recuperación"
+  tecnico: "Pantalla de recuperación de BitLocker al arrancar"
+explicacion:
+  sencillo: "Tu disco está protegido con BitLocker y Windows notó un cambio (un pendrive conectado, una actualización de la BIOS, un cambio de configuración). Por seguridad pide una clave larga de 48 números para dejarte entrar."
+  tecnico: "BitLocker entra en recuperación ante cambios en el arranque, el TPM, el Arranque seguro o el firmware; pide la contraseña de recuperación de 48 dígitos e indica el Id. de clave."
+frases: ["prendo la compu y me sale una pantalla de recuperación de bitlocker", "la notebook arranca pidiendo una clave larga de números", "después de actualizar la bios me pide una clave de recuperación", "me aparece escribir la clave de recuperación para esta unidad"]
+pasos:
+  - texto: "No apagues de golpe ni pruebes números al azar. Si hay un pendrive, un disco o un DVD conectado, sacalo y reiniciá: Microsoft indica que a veces con eso alcanza."
+    abrir: "https://learn.microsoft.com/windows/security/operating-system-security/data-protection/bitlocker/preboot-recovery-screen"
+  - texto: "Si vuelve a aparecer, anotá los primeros 8 caracteres del «Id. de clave» que se ve en la pantalla: sirven para elegir la clave correcta."
+  - texto: "Desde el celular u otra computadora, buscá la clave en tu cuenta de Microsoft (la pantalla puede mostrar una pista de qué cuenta es). Microsoft explica todos los lugares donde puede estar."
+    abrir: "https://support.microsoft.com/en-us/windows/find-your-bitlocker-recovery-key-6b71ad27-0b89-ea08-f143-056f5ab347d6"
+  - texto: "Escribí la clave con el teclado y la compu sigue arrancando. Si la compu es del trabajo, pedísela al área de sistemas."
+derivar: "Microsoft no puede darte ni recrear la clave. Si no la encontrás en ningún lado, la única salida es restablecer la compu, y eso borra todos los archivos: antes de llegar a eso, consultá a un técnico."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/find-your-bitlocker-recovery-key-6b71ad27-0b89-ea08-f143-056f5ab347d6
+  - https://learn.microsoft.com/windows/security/operating-system-security/data-protection/bitlocker/preboot-recovery-screen
+  - https://learn.microsoft.com/windows/security/operating-system-security/data-protection/bitlocker/recovery-overview
+madurez: T0
+---
+id: CTA-014
+area: seguridad
+titulo:
+  sencillo: "¿Dónde encuentro la clave de recuperación de BitLocker?"
+  tecnico: "Ubicar la clave de recuperación de BitLocker (cuenta Microsoft, impresión, USB)"
+explicacion:
+  sencillo: "La clave de 48 números se guarda cuando se activa BitLocker. Casi siempre está en la cuenta de Microsoft de quien configuró la compu; otras veces en un papel impreso o en un pendrive."
+  tecnico: "Ubicaciones: cuenta Microsoft (aka.ms/myrecoverykey), cuenta profesional o educativa (aka.ms/aadrecoverykey), impresión, archivo de texto o unidad USB. Se identifica por el Id. de clave."
+frases: ["dónde está mi clave de bitlocker", "no encuentro la clave de recuperación", "cómo saco la clave de bitlocker de mi cuenta de microsoft", "quién tiene la clave de bitlocker de mi compu"]
+pasos:
+  - texto: "Desde el celular u otra compu, entrá con tu cuenta de Microsoft a la dirección que Microsoft indica (aka.ms/myrecoverykey) y buscá la clave cuyo «Id. de clave» coincida con el de tu pantalla. Si la compu la configuró otra persona (un hijo, un técnico), puede estar en la cuenta de esa persona."
+    abrir: "https://support.microsoft.com/en-us/windows/find-your-bitlocker-recovery-key-6b71ad27-0b89-ea08-f143-056f5ab347d6"
+  - texto: "Buscá entre tus papeles importantes una hoja impresa con la clave, o un pendrive donde se haya guardado: enchufalo y seguí lo que dice la pantalla."
+  - texto: "Si la compu es de una empresa o escuela, la clave la tiene el área de sistemas."
+  - texto: "Si ahora sí podés entrar a Windows, guardate una copia: tocá Inicio, escribí «BitLocker», abrí «Administrar BitLocker» y elegí la opción para hacer una copia de seguridad de la clave de recuperación."
+    abrir: "https://learn.microsoft.com/windows/security/operating-system-security/data-protection/bitlocker/operations-guide"
+derivar: "Nunca le pases la clave a alguien que te la pida por teléfono o por mensaje. Microsoft no puede recuperarla por vos."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/find-your-bitlocker-recovery-key-6b71ad27-0b89-ea08-f143-056f5ab347d6
+  - https://learn.microsoft.com/windows/security/operating-system-security/data-protection/bitlocker/operations-guide
+madurez: T0
+---
+id: CTA-015
+area: seguridad
+titulo:
+  sencillo: "No me aparece la opción de entrar con la cara o con la huella"
+  tecnico: "Windows Hello facial o de huella no disponible (hardware compatible)"
+explicacion:
+  sencillo: "Para entrar con la cara hace falta una cámara especial (infrarroja) compatible con Windows Hello; la camarita común de muchas notebooks no sirve. Para la huella hace falta un lector. Si la compu no los tiene, la opción no se puede usar."
+  tecnico: "Reconocimiento facial: cámara infrarroja compatible con Hello (integrada o externa). Huella: lector integrado o lector USB. Se configuran en Cuentas > Opciones de inicio de sesión."
+frases: ["no me aparece windows hello con la cara", "no tengo la opción de huella para entrar", "la opción de reconocimiento facial no está disponible", "quiero entrar con la cara pero no me deja configurarlo"]
+pasos:
+  - texto: "Abrí Opciones de inicio de sesión y fijate qué aparece en «Formas de iniciar sesión»: si figura reconocimiento facial o de huella, tocalo y después «Configurar»."
+    abrir: "ms-settings:signinoptions"
+  - texto: "Si dice que no está disponible, lo más común es que la compu no tenga el aparato necesario: la cara necesita una cámara infrarroja compatible con Windows Hello y la huella, un lector. Microsoft aclara que existen lectores de huella USB y cámaras infrarrojas externas."
+    abrir: "https://support.microsoft.com/en-us/windows/security/configure-windows-hello"
+  - texto: "Mientras tanto, el PIN funciona en cualquier compu y es igual de rápido: se configura en esa misma pantalla."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/security/configure-windows-hello
+madurez: T0
+---
+id: CTA-016
+area: windows
+titulo:
+  sencillo: "No puedo entrar con mi cuenta de Microsoft: dice «Algo salió mal»"
+  tecnico: "Problemas al iniciar sesión en Windows con cuenta Microsoft"
+explicacion:
+  sencillo: "A veces Windows no logra comprobar tu cuenta de Microsoft al entrar, por ejemplo si no hay Internet o hay un problema pasajero. Hay pasos simples para probar antes de preocuparse."
+  tecnico: "Errores genéricos de inicio de sesión: verificar conexión desde la pantalla de bloqueo, reiniciar (Actualizar y reiniciar), probar otra cuenta o el modo seguro con contraseña, y usar el asistente de inicio de sesión de cuentas Microsoft."
+frases: ["al entrar a windows dice algo salió mal", "no me deja iniciar sesión con mi cuenta de microsoft", "la compu dice que no puede verificar mi cuenta", "no puedo entrar a la compu con mi correo de hotmail"]
+pasos:
+  - texto: "En la pantalla de inicio de sesión, tocá el ícono de red y fijate que estés conectado a Internet. Si el Wi-Fi anda flojo, probá con cable al router."
+  - texto: "Reiniciá la compu. Si aparece «Actualizar y reiniciar», elegí esa opción."
+  - texto: "Si en la compu hay otro usuario, probá entrar con ese (abajo a la izquierda). Si el problema es la clave de tu cuenta de Microsoft, Microsoft tiene un asistente de inicio de sesión."
+    abrir: "https://support.microsoft.com/en-us/windows/troubleshoot-problems-signing-in-298cfd5f-df1f-c66b-36ad-f2a61a73baad"
+  - texto: "Si nada anda, Microsoft explica cómo entrar en modo seguro (ahí se entra solo con la contraseña, no con el PIN ni la huella)."
+    abrir: "https://support.microsoft.com/en-us/windows/troubleshoot-problems-signing-in-298cfd5f-df1f-c66b-36ad-f2a61a73baad"
+derivar: "Si te olvidaste la contraseña, escribile a PC Doctor «me olvidé la contraseña de la computadora». Nunca le des tu clave a nadie que te llame ofreciendo ayuda."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/troubleshoot-problems-signing-in-298cfd5f-df1f-c66b-36ad-f2a61a73baad
+madurez: T0
+---
+id: CTA-017
+area: programas
+titulo:
+  sencillo: "La Microsoft Store no abre"
+  tecnico: "Microsoft Store no se inicia: restablecer la caché (wsreset)"
+explicacion:
+  sencillo: "A veces la tienda de aplicaciones de Windows se traba y no abre o se cierra enseguida. Casi siempre se arregla limpiando su memoria interna, sin perder nada."
+  tecnico: "wsreset.exe borra la caché de Microsoft Store; además, actualizar Windows y revisar fecha, hora y región."
+frases: ["no me abre la microsoft store", "la tienda de windows no abre", "toco la store y se cierra sola", "no puedo entrar a la tienda de aplicaciones"]
+pasos:
+  - texto: "Apretá Windows + R, escribí wsreset.exe y tocá «Aceptar». Se abre una ventana negra vacía unos diez segundos, se cierra sola y después se abre la Store."
+    abrir: "https://support.microsoft.com/help/4027338"
+  - texto: "Si no anduvo, instalá las actualizaciones pendientes de Windows y reiniciá."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Revisá que la fecha, la hora y la región de la compu estén bien."
+    abrir: "ms-settings:dateandtime"
+  - texto: "Si en Inicio no aparece «Microsoft Store», Microsoft explica cómo volver a obtenerla desde su página."
+    abrir: "https://support.microsoft.com/help/4027338"
+fuentes:
+  - https://support.microsoft.com/help/4027338
+madurez: T0
+---
+id: CTA-018
+area: programas
+titulo:
+  sencillo: "No encuentro o no puedo instalar una aplicación de la Store"
+  tecnico: "No se puede encontrar ni instalar una aplicación desde Microsoft Store"
+explicacion:
+  sencillo: "Pasa si no entraste con tu cuenta de Microsoft, si Windows se actualizó y falta reiniciar, si la app no está en Argentina, si hay control parental o si la app no anda en tu compu."
+  tecnico: "Causas: sin sesión de cuenta Microsoft, reinicio pendiente tras actualizaciones, disponibilidad por región, configuración familiar, app retirada o incompatible con el dispositivo; caché de la Store (wsreset)."
+frases: ["la store no me deja descargar una aplicación", "no aparece la aplicación en la microsoft store", "no me sale el botón para instalar en la store", "la tienda de windows no me baja nada"]
+pasos:
+  - texto: "Fijate que en la Store hayas iniciado sesión con tu cuenta de Microsoft: sin eso no deja instalar."
+  - texto: "Si Windows se actualizó hace poco, reiniciá la computadora antes de volver a intentarlo."
+  - texto: "Apretá Windows + R, escribí wsreset.exe y tocá «Aceptar». Cuando la Store se abra sola, buscá la aplicación de nuevo."
+    abrir: "https://support.microsoft.com/help/13765"
+  - texto: "Si sigue sin aparecer, puede que la app no esté disponible en tu país, que la tape el control parental o que no sea compatible con tu compu: Microsoft lo explica en la misma página."
+    abrir: "https://support.microsoft.com/help/13765"
+fuentes:
+  - https://support.microsoft.com/help/13765
+madurez: T0
+---
+id: CTA-019
+area: programas
+titulo:
+  sencillo: "La Store dice «Vuelve a intentarlo» o el error 0x80131500"
+  tecnico: "Error 0x80131500 en Microsoft Store"
+explicacion:
+  sencillo: "Es un error de la tienda de Windows que no deja cargar las páginas. Microsoft propone algunos arreglos que se hacen en pocos minutos."
+  tecnico: "Error 0x80131500: restablecer la Store (wsreset), actualizar Windows y la Store, revisar fecha, hora y ubicación, y habilitar TLS 1.2/1.3 en Opciones de Internet."
+frases: ["la store me da el error 0x80131500", "la microsoft store dice vuelve a intentarlo", "la tienda dice que algo pasó y no carga", "la store no carga las páginas"]
+pasos:
+  - texto: "Apretá Windows + R, escribí wsreset.exe y tocá «Aceptar». Esperá a que la Store se abra sola."
+  - texto: "Instalá las actualizaciones de Windows y reiniciá. Revisá también que la fecha, la hora y la región estén bien."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si sigue igual, Microsoft explica cómo revisar una opción de seguridad de Internet llamada TLS (en «Opciones de Internet», pestaña «Opciones avanzadas»). Seguí sus pasos al pie de la letra."
+    abrir: "https://support.microsoft.com/accounts-billing/error-0x80131500-in-microsoft-store"
+fuentes:
+  - https://support.microsoft.com/accounts-billing/error-0x80131500-in-microsoft-store
+madurez: T0
+---
+id: CTA-020
+area: programas
+titulo:
+  sencillo: "Al instalar una app de la Store sale un código de error"
+  tecnico: "Errores de instalación en Microsoft Store (por ejemplo 0x80073D02, 0x803F8001)"
+explicacion:
+  sencillo: "La Store a veces corta la instalación y muestra un número raro que empieza con 0x. Microsoft no tiene una explicación para cada número, pero hay pasos generales que suelen destrabarlo."
+  tecnico: "Microsoft no publica una guía por código para estos errores; pasos generales: cerrar la app, actualizar Windows y la Store (Biblioteca > Obtener actualizaciones), reiniciar, wsreset y reinstalar desde la Biblioteca."
+frases: ["la store me da error 0x80073d02", "me sale el error 0x803f8001 al instalar", "no se instala la aplicación y sale un código de error", "la descarga de la store falla con un número raro"]
+pasos:
+  - texto: "Si la aplicación que querés instalar o actualizar está abierta, cerrala del todo. Después reiniciá la computadora."
+  - texto: "Instalá las actualizaciones pendientes de Windows."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Abrí la Store, entrá a «Biblioteca» y tocá «Obtener actualizaciones». Después volvé a instalar la app desde ahí."
+    abrir: "https://support.microsoft.com/help/4027498"
+  - texto: "Si sigue fallando, apretá Windows + R, escribí wsreset.exe y tocá «Aceptar» para limpiar la Store, y probá de nuevo."
+    abrir: "https://support.microsoft.com/help/13765"
+derivar: "Si el error vuelve siempre con la misma app, anotá el código y consultá con el soporte de Microsoft desde su página de ayuda."
+fuentes:
+  - https://support.microsoft.com/help/4027498
+  - https://support.microsoft.com/help/13765
+madurez: T0
+---
+id: CTA-021
+area: programas
+titulo:
+  sencillo: "Quiero restablecer la Microsoft Store"
+  tecnico: "Restablecer la Store: wsreset y Reparar/Restablecer en Aplicaciones instaladas"
+explicacion:
+  sencillo: "Si la tienda anda mal, se puede «limpiar» o dejar como recién instalada. Las aplicaciones que ya tenés siguen instaladas."
+  tecnico: "wsreset.exe restablece la caché de la Store; en Aplicaciones > Aplicaciones instaladas > Microsoft Store > Opciones avanzadas están Reparar (conserva datos) y Restablecer (borra datos y ajustes de la app)."
+frases: ["cómo reseteo la microsoft store", "limpiar la tienda de windows", "dejar la store como nueva", "reparar la microsoft store"]
+pasos:
+  - texto: "Primero lo más simple: apretá Windows + R, escribí wsreset.exe y tocá «Aceptar». La ventana negra se cierra sola y se abre la Store."
+    abrir: "https://support.microsoft.com/help/4027338"
+  - texto: "Si no alcanza: abrí Configuración > Aplicaciones > Aplicaciones instaladas, buscá «Microsoft Store», tocá los tres puntitos y «Opciones avanzadas»."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Tocá «Reparar» (no borra nada). Si no aparece o no sirve, tocá «Restablecer»: la Store queda como nueva y se borran sus ajustes, así que puede pedirte que vuelvas a iniciar sesión."
+    abrir: "https://support.microsoft.com/help/4028054"
+fuentes:
+  - https://support.microsoft.com/help/4027338
+  - https://support.microsoft.com/help/4028054
+  - https://learn.microsoft.com/windows/msix/desktop/managing-your-msix-reset-and-repair
+madurez: T0
+---
+id: CTA-022
+area: programas
+titulo:
+  sencillo: "Una aplicación que bajé de la Store no abre"
+  tecnico: "Aplicación de Microsoft Store que no se inicia o falla"
+explicacion:
+  sencillo: "Si una app de la tienda (por ejemplo una de juegos, fotos o música) no abre o se cierra sola, se puede actualizar, reparar o reinstalar."
+  tecnico: "Cerrar y reabrir, actualizar Windows y la Store, Reparar/Restablecer la app desde Aplicaciones instaladas > Opciones avanzadas, o reinstalar desde Biblioteca."
+frases: ["una aplicación de la store no abre", "abro la app y se cierra enseguida", "la aplicación que bajé de la tienda no funciona", "la app de windows se queda en la pantalla de inicio"]
+pasos:
+  - texto: "Cerrala con la X de arriba a la derecha y volvé a abrirla. Instalá también las actualizaciones de Windows."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Actualizá tus apps: en la Store, entrá a «Biblioteca» y tocá «Obtener actualizaciones»."
+    abrir: "https://support.microsoft.com/help/4027498"
+  - texto: "Si sigue igual: en Aplicaciones instaladas, tocá los tres puntitos de esa app > «Opciones avanzadas» > «Reparar» (conserva tus datos). Si no alcanza, «Restablecer»: ojo, borra los ajustes y datos guardados dentro de la app y puede pedirte iniciar sesión de nuevo."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Como último paso, desinstalala y volvé a instalarla desde «Biblioteca» en la Store."
+    abrir: "https://support.microsoft.com/help/4027498"
+fuentes:
+  - https://support.microsoft.com/help/4027498
+  - https://support.microsoft.com/help/4028054
+  - https://learn.microsoft.com/windows/msix/desktop/managing-your-msix-reset-and-repair
+madurez: T0
+---
+id: CTA-023
+area: programas
+titulo:
+  sencillo: "Quiero volver a bajar las aplicaciones que ya tenía o compré en la Store"
+  tecnico: "Reinstalar aplicaciones desde la Biblioteca de Microsoft Store"
+explicacion:
+  sencillo: "Las aplicaciones que bajaste o compraste en la Store quedan asociadas a tu cuenta de Microsoft. En una compu nueva o después de reinstalar Windows, se vuelven a instalar desde la «Biblioteca» de la Store."
+  tecnico: "Microsoft Store > Biblioteca: aplicaciones adquiridas con la cuenta Microsoft; Instalar para reinstalar. Requiere iniciar sesión con la misma cuenta."
+frases: ["cómo vuelvo a bajar una app que compré en la store", "cambié de compu y quiero mis aplicaciones de la tienda", "reinstalar las aplicaciones de la microsoft store", "dónde están las apps que pagué en la store"]
+pasos:
+  - texto: "Abrí la Microsoft Store y fijate que hayas entrado con la misma cuenta de Microsoft con la que compraste o bajaste las apps."
+    abrir: "https://support.microsoft.com/help/13765"
+  - texto: "Entrá a «Biblioteca» dentro de la Store. Buscá la aplicación en la lista y tocá «Instalar»."
+    abrir: "https://support.microsoft.com/help/4027498"
+  - texto: "Si no aparece, puede que la app ya no esté en la Store o no sea compatible con esta compu: Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/help/13765"
+fuentes:
+  - https://support.microsoft.com/help/4027498
+  - https://support.microsoft.com/help/13765
+madurez: T0
+---
+id: CTA-024
+area: archivos
+titulo:
+  sencillo: "OneDrive me pide iniciar sesión a cada rato"
+  tecnico: "OneDrive sin sesión iniciada: iniciar sesión o desvincular y volver a vincular"
+explicacion:
+  sencillo: "OneDrive es la nube de Microsoft donde se guardan copias de tus archivos. Si no tiene la sesión iniciada, no guarda nada en la nube. Volver a conectarlo no borra tus archivos."
+  tecnico: "Verificar que OneDrive esté en ejecución e iniciar sesión; si persiste, Configuración de OneDrive > Cuenta > Desvincular este equipo y volver a iniciar sesión."
+frases: ["onedrive me pide que inicie sesión", "me sale que onedrive no tiene la sesión iniciada", "la nube de onedrive se desconectó", "cada vez que prendo la compu onedrive pide mi cuenta"]
+pasos:
+  - texto: "Fijate si en el área de notificación, junto al reloj, está la nubecita de OneDrive. Si no está, tocá Inicio, escribí «OneDrive» y abrilo."
+  - texto: "Cuando te lo pida, escribí tu correo de Microsoft y seguí con «Iniciar sesión». La contraseña la escribís vos en la ventana de Microsoft."
+    abrir: "https://support.microsoft.com/en-US/onedrive/fix-onedrive-personal-sync-problems"
+  - texto: "Si te lo vuelve a pedir: en la configuración de OneDrive, pestaña «Cuenta», tocá «Desvincular este equipo» y después volvé a iniciar sesión. Microsoft aclara que así no se pierden archivos."
+    abrir: "https://support.microsoft.com/en-US/onedrive/fix-onedrive-personal-sync-problems"
+derivar: "Si tampoco podés entrar a tu cuenta desde la página de OneDrive, el problema es la cuenta: escribile a PC Doctor «mi cuenta de Microsoft está bloqueada» o «me olvidé la contraseña»."
+fuentes:
+  - https://support.microsoft.com/en-US/onedrive/fix-onedrive-personal-sync-problems
+madurez: T0
+---
+id: CTA-025
+area: windows
+titulo:
+  sencillo: "Quiero borrar un usuario que ya no se usa"
+  tecnico: "Quitar una cuenta de usuario de Windows"
+explicacion:
+  sencillo: "Si alguien ya no usa la compu, se puede quitar su usuario. Cuidado: se borran también sus archivos guardados en esta compu (documentos, fotos, escritorio)."
+  tecnico: "Configuración > Cuentas > Otros usuarios > Cuenta y datos > Quitar; elimina el inicio de sesión y los datos del dispositivo, pero no la cuenta Microsoft."
+frases: ["borrar un usuario de la compu", "eliminar la cuenta de alguien que ya no usa la computadora", "sacar un usuario viejo de windows", "quitar la cuenta de mi hijo de la compu"]
+pasos:
+  - texto: "Antes de borrar, entrá a ese usuario (o pedile a la persona) y copiá a un pendrive las fotos y documentos que quieran conservar."
+  - texto: "Entrá con un usuario administrador y abrí la parte de otros usuarios. Tocá el usuario y, junto a «Cuenta y datos», tocá «Quitar»."
+    abrir: "ms-settings:otherusers"
+  - texto: "Confirmá solo si ya guardaste lo importante. La cuenta de Microsoft de esa persona (su correo) sigue existiendo: solo se saca de esta compu. Microsoft lo explica acá."
+    abrir: "https://support.microsoft.com/windows/manage-user-accounts-in-windows-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32"
+fuentes:
+  - https://support.microsoft.com/windows/manage-user-accounts-in-windows-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32
+madurez: T0

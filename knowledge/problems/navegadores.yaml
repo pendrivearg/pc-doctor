@@ -1,0 +1,550 @@
+# Navegadores (Microsoft Edge y Google Chrome): errores de conexión y certificado, caché y cookies, pestañas, favoritos, contraseñas, descargas, permisos, extensiones y más. Guiadas con fuente oficial.
+id: NAV-001
+area: seguridad
+titulo:
+  sencillo: "El navegador dice «La conexión no es privada»"
+  tecnico: "Errores de certificado (NET::ERR_CERT_AUTHORITY_INVALID, ERR_CERT_COMMON_NAME_INVALID, ERR_CERT_DATE_INVALID)"
+explicacion:
+  sencillo: "Ese cartel aparece cuando el navegador no puede comprobar que la página sea segura. No pongas claves ni datos de tarjeta en esa página hasta que el aviso desaparezca."
+  tecnico: "Falla la validación del certificado TLS: portal cautivo, extensión o antivirus que inspecciona HTTPS, sistema desactualizado o fecha y hora incorrectas."
+frases: ["me sale que la conexión no es privada", "dice net::err_cert_authority_invalid", "error de certificado en una página", "el navegador dice que el sitio no es seguro y no me deja entrar", "aparece un candado rojo tachado"]
+pasos:
+  - texto: "Si estás en un Wi-Fi de bar, hotel o aeropuerto, puede que la red pida aceptar sus condiciones primero: abrí cualquier página y fijate si aparece la pantalla de acceso de esa red."
+  - texto: "Si el cartel habla del reloj («El reloj está atrasado» o ERR_CERT_DATE_INVALID), corregí la fecha y la hora de la compu desde Configuración."
+    abrir: "ms-settings:dateandtime"
+  - texto: "Probá abrir la misma página en una ventana de incógnito (Ctrl + Mayús + N en Chrome). Si ahí anda, el problema es una extensión: desactivalas y probá de a una."
+  - texto: "Actualizá Windows. Si tu antivirus tiene una opción de «análisis HTTPS» o «protección web», puede estar causando el aviso: Google explica cómo revisarlo. Nunca instales certificados que te pida una página."
+    abrir: "https://support.google.com/chrome/answer/95669?hl=es-419"
+derivar: "Si el aviso aparece en todas las páginas, escribile a PC Doctor «la hora de la computadora está mal»."
+fuentes:
+  - https://support.google.com/chrome/answer/95669?hl=es-419
+  - https://support.google.com/chrome/answer/157179?hl=es-419
+madurez: T0
+---
+id: NAV-002
+area: programas
+titulo:
+  sencillo: "Quiero actualizar el navegador"
+  tecnico: "Actualizar Google Chrome y Microsoft Edge"
+explicacion:
+  sencillo: "Los navegadores se actualizan casi solos, pero a veces esperan a que los cierres y los vuelvas a abrir. Tenerlos al día corrige errores y te protege de páginas peligrosas."
+  tecnico: "Chrome: Más > Ayuda > Acerca de Google Chrome > Reiniciar. Edge: Configuración y más > Configuración > Acerca de Microsoft Edge."
+frases: ["cómo actualizo el chrome", "el navegador está desactualizado", "me dice que actualice el navegador", "qué versión de edge tengo"]
+pasos:
+  - texto: "En Chrome: tocá los tres puntitos de arriba a la derecha («Más») > «Ayuda» > «Acerca de Google Chrome». Si aparece «Reiniciar», tocalo: Chrome se cierra y vuelve a abrir con tus pestañas (las de incógnito no vuelven)."
+    abrir: "https://support.google.com/chrome/answer/95414?hl=es-419"
+  - texto: "En Edge: tocá los tres puntitos de arriba a la derecha («Configuración y más») > «Configuración» > «Acerca de Microsoft Edge». Si hay una actualización, se instala ahí; después reiniciá el navegador."
+    abrir: "https://support.microsoft.com/microsoft-edge/what-to-do-if-microsoft-edge-isn-t-working-cc0657a6-acd2-cbbd-1528-c0335c71312a"
+fuentes:
+  - https://support.google.com/chrome/answer/95414?hl=es-419
+  - https://support.microsoft.com/microsoft-edge/what-to-do-if-microsoft-edge-isn-t-working-cc0657a6-acd2-cbbd-1528-c0335c71312a
+madurez: T0
+---
+id: NAV-003
+area: red
+titulo:
+  sencillo: "Una página tarda y al final dice ERR_CONNECTION_TIMED_OUT"
+  tecnico: "Tiempo de espera de conexión agotado (ERR_CONNECTION_TIMED_OUT, ERR_TIMED_OUT)"
+explicacion:
+  sencillo: "El navegador esperó y la página nunca contestó. Puede ser la página, tu Internet o algo de la compu que bloquea la conexión."
+  tecnico: "El servidor no respondió dentro del tiempo límite: sitio caído, conexión inestable, firewall, antivirus o proxy."
+frases: ["me sale err_connection_timed_out", "la página tarda una eternidad y no carga", "dice que el sitio tardó demasiado en responder", "se queda cargando y después da error"]
+pasos:
+  - texto: "Revisá que la dirección esté bien escrita y tocá «Volver a cargar esta página» (la flechita en círculo, arriba a la izquierda)."
+  - texto: "Probá abrir otra página conocida. Si tampoco anda ninguna, el problema es tu Internet: apagá el módem y el router, esperá un minuto y prendelos."
+    abrir: "ms-settings:network-status"
+  - texto: "Si solo falla esa página, probá en una ventana de incógnito y, si ahí anda, desactivá las extensiones. Si sigue igual, puede que la página esté caída: probá más tarde."
+    abrir: "https://support.google.com/chrome/answer/6098869?hl=es-419"
+  - texto: "Revisá que el antivirus o el firewall no estén bloqueando el navegador."
+derivar: "Si no abre ninguna página pero hay Internet, escribile a PC Doctor «hay Internet pero las páginas no abren»."
+fuentes:
+  - https://support.google.com/chrome/answer/6098869?hl=es-419
+  - https://support.google.com/chrome/answer/95669?hl=es-419
+madurez: T0
+---
+id: NAV-004
+area: red
+titulo:
+  sencillo: "Dice que no se encuentra la dirección del sitio (ERR_NAME_NOT_RESOLVED)"
+  tecnico: "Fallo de resolución de nombre (ERR_NAME_NOT_RESOLVED, DNS_PROBE_FINISHED_NXDOMAIN)"
+explicacion:
+  sencillo: "La compu no pudo encontrar a qué lugar de Internet corresponde ese nombre de página. Muchas veces es una letra mal escrita en la dirección o una página que ya no existe."
+  tecnico: "La consulta DNS del dominio no devolvió dirección: error de tipeo, dominio inexistente o problema con el servidor DNS."
+frases: ["me sale err_name_not_resolved", "dns_probe_finished_nxdomain", "no se puede acceder a este sitio", "dice que no encuentra la dirección ip del servidor"]
+pasos:
+  - texto: "Mirá con atención la dirección: una letra de más o de menos (por ejemplo «gogle» en vez de «google») alcanza para que no la encuentre. Corregila y tocá «Volver a cargar»."
+  - texto: "Si la sacaste de un correo o mensaje, buscala en Google por su nombre en vez de usar el enlace."
+  - texto: "Probá con otra página conocida. Si ninguna abre, revisá el Wi-Fi y reiniciá el módem y el router."
+    abrir: "https://support.google.com/chrome/answer/6098869?hl=es-419"
+derivar: "Si con Internet funcionando no abre ninguna página, escribile a PC Doctor «hay Internet pero las páginas no abren»."
+fuentes:
+  - https://support.google.com/chrome/answer/6098869?hl=es-419
+  - https://support.google.com/chrome/answer/95669?hl=es-419
+madurez: T0
+---
+id: NAV-005
+area: programas
+titulo:
+  sencillo: "La página dice «demasiadas redirecciones» y no entra"
+  tecnico: "Bucle de redireccionamiento (ERR_TOO_MANY_REDIRECTS)"
+explicacion:
+  sencillo: "La página te manda de un lado a otro sin parar y el navegador corta. Casi siempre se arregla borrando las cookies de ese sitio. Ojo: vas a tener que volver a entrar con tu usuario en esa página."
+  tecnico: "Bucle de redirecciones HTTP, en general por cookies del sitio desactualizadas o dañadas."
+frases: ["me sale err_too_many_redirects", "la página tiene un bucle de redireccionamiento", "la página se recarga sola sin parar y da error", "dice que te redireccionó demasiadas veces"]
+pasos:
+  - texto: "Antes de seguir: al borrar las cookies de esa página se cierra tu sesión ahí. Fijate que sepas tu usuario y clave de ese sitio."
+  - texto: "En Chrome: tres puntitos («Más») > «Configuración» > «Privacidad y seguridad» > «Cookies de terceros» > «Ver todos los datos y permisos de sitios». Buscá el nombre de la página, tocá el tacho de basura a la derecha y confirmá con «Borrar»."
+    abrir: "https://support.google.com/chrome/answer/95647?hl=es-419"
+  - texto: "Volvé a abrir la página. Si sigue igual, el problema es de la página: avisale al dueño del sitio o probá más tarde."
+    abrir: "https://support.google.com/chrome/answer/95669?hl=es-419"
+fuentes:
+  - https://support.google.com/chrome/answer/95669?hl=es-419
+  - https://support.google.com/chrome/answer/95647?hl=es-419
+madurez: T0
+---
+id: NAV-006
+area: programas
+titulo:
+  sencillo: "Quiero borrar la caché y las cookies del navegador"
+  tecnico: "Borrar datos de navegación (caché y cookies) en Chrome y Edge"
+explicacion:
+  sencillo: "El navegador guarda copias de las páginas (caché) y datos de los sitios (cookies). Borrarlos arregla muchas páginas que andan mal, pero te cierra la sesión en los sitios donde estabas adentro."
+  tecnico: "Chrome: Más > Borrar datos de navegación (Ctrl + Mayús + Supr). Edge: Configuración > Privacidad, búsqueda y servicios > Borrar datos de exploración."
+frases: ["cómo borro las cookies", "limpiar la caché del navegador", "borrar el historial y los datos del chrome", "me dijeron que borre la memoria del navegador"]
+pasos:
+  - texto: "Antes de borrar: las cookies guardan tus sesiones, así que después vas a tener que volver a entrar con usuario y clave en tus páginas (correo, banco, redes). Tené esos datos a mano."
+  - texto: "En Chrome: apretá Ctrl + Mayús + Supr (o «Más» > «Borrar datos de navegación»). Elegí el período («Todos»), marcá «Cookies y otros datos de sitios» y también la casilla de imágenes y archivos guardados en caché, y tocá «Borrar datos»."
+    abrir: "https://support.google.com/accounts/answer/32050?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "En Edge: tres puntitos («Configuración y más») > «Configuración» > «Privacidad, búsqueda y servicios» > «Borrar datos de exploración» > «Elegir lo que se debe borrar». Marcá las imágenes y archivos en caché y las cookies, dejá sin marcar «Contraseñas» y tocá «Borrar ahora»."
+    abrir: "https://support.microsoft.com/microsoft-edge/view-and-delete-browser-history-in-microsoft-edge-00cf7943-a9e1-975a-a33d-ac10ce454ca4"
+  - texto: "Si tenés la sincronización activada, en Edge el borrado puede aplicarse también en tus otros dispositivos: Microsoft explica cómo evitarlo."
+fuentes:
+  - https://support.google.com/accounts/answer/32050?hl=es-419&co=GENIE.Platform%3DDesktop
+  - https://support.google.com/chrome/answer/157179?hl=es-419
+  - https://support.microsoft.com/microsoft-edge/view-and-delete-browser-history-in-microsoft-edge-00cf7943-a9e1-975a-a33d-ac10ce454ca4
+madurez: T0
+---
+id: NAV-007
+area: programas
+titulo:
+  sencillo: "Una página se ve desarmada o rota"
+  tecnico: "Página que no carga bien: caché, extensiones o recarga forzada"
+explicacion:
+  sencillo: "A veces una página aparece toda desordenada, sin imágenes o con botones que no andan. Suele arreglarse recargándola bien, probando sin extensiones o borrando la caché."
+  tecnico: "Recursos en caché desactualizados o extensiones que modifican la página; recargar ignorando la caché (Mayús + F5)."
+frases: ["la página se ve toda desarmada", "no cargan las imágenes de una página", "la página se ve rara y los botones no funcionan", "la página aparece toda desordenada"]
+pasos:
+  - texto: "Apretá Mayús + F5: recarga la página sin usar lo que el navegador tenía guardado."
+    abrir: "https://support.google.com/chrome/answer/157179?hl=es-419"
+  - texto: "Abrí la página en una ventana de incógnito (Ctrl + Mayús + N). Si ahí se ve bien, una extensión la está rompiendo: desactivá las extensiones y volvé a activarlas de a una."
+    abrir: "https://support.google.com/chrome/answer/6098869?hl=es-419"
+  - texto: "Si sigue igual, borrá la caché y las cookies (vas a tener que volver a iniciar sesión en tus páginas). Escribile a PC Doctor «borrar la caché del navegador»."
+  - texto: "Probá con otro navegador. Si en todos se ve mal, el problema es de la página."
+    abrir: "https://support.microsoft.com/microsoft-edge/what-to-do-if-microsoft-edge-isn-t-working-cc0657a6-acd2-cbbd-1528-c0335c71312a"
+fuentes:
+  - https://support.google.com/chrome/answer/157179?hl=es-419
+  - https://support.google.com/chrome/answer/6098869?hl=es-419
+  - https://support.microsoft.com/microsoft-edge/what-to-do-if-microsoft-edge-isn-t-working-cc0657a6-acd2-cbbd-1528-c0335c71312a
+madurez: T0
+---
+id: NAV-008
+area: rendimiento
+titulo:
+  sencillo: "El navegador anda muy lento"
+  tecnico: "Navegador lento: memoria, extensiones y versión"
+explicacion:
+  sencillo: "Cuando hay muchas pestañas abiertas o extensiones de más, el navegador se pone pesado. Se puede ver qué lo está frenando y cerrarlo."
+  tecnico: "Consumo de memoria por pestañas y extensiones; Administrador de tareas del navegador (Mayús + Esc); actualización pendiente."
+frases: ["el chrome anda lentísimo", "internet anda lento solo en el navegador", "el navegador tarda mucho en abrir las páginas", "el edge se pone pesado"]
+pasos:
+  - texto: "Cerrá las pestañas que no estés usando y las descargas que no necesites."
+  - texto: "En Chrome, apretá Mayús + Esc: se abre el Administrador de tareas de Chrome, donde ves qué tenés abierto adentro del navegador."
+    abrir: "https://support.google.com/chrome/answer/157179?hl=es-419"
+  - texto: "Desinstalá las extensiones que no uses. Escribile a PC Doctor «extensiones sospechosas en el navegador» si no sabés cuáles son."
+    abrir: "https://support.microsoft.com/microsoft-edge/what-to-do-if-microsoft-edge-isn-t-working-cc0657a6-acd2-cbbd-1528-c0335c71312a"
+  - texto: "Actualizá el navegador y reinicialo. Si anda lenta toda la computadora, no solo el navegador, escribile a PC Doctor «la computadora está lenta»."
+    abrir: "https://support.google.com/chrome/answer/6098869?hl=es-419"
+fuentes:
+  - https://support.google.com/chrome/answer/6098869?hl=es-419
+  - https://support.google.com/chrome/answer/157179?hl=es-419
+  - https://support.microsoft.com/microsoft-edge/what-to-do-if-microsoft-edge-isn-t-working-cc0657a6-acd2-cbbd-1528-c0335c71312a
+madurez: T0
+---
+id: NAV-009
+area: rendimiento
+titulo:
+  sencillo: "Tengo demasiadas pestañas abiertas"
+  tecnico: "Ahorro de memoria, pestañas suspendidas y grupos de pestañas"
+explicacion:
+  sencillo: "Cada pestaña gasta memoria. Los navegadores pueden «dormir» las que no usás para que la compu no se ponga lenta, y también podés agruparlas para ordenarlas."
+  tecnico: "Chrome: Configuración > Rendimiento > Ahorro de memoria; grupos de pestañas. Edge: pestañas en suspensión."
+frases: ["tengo mil pestañas abiertas", "no encuentro la pestaña entre tantas", "las pestañas me ponen lenta la compu", "cómo ordeno las pestañas"]
+pasos:
+  - texto: "En Chrome: tres puntitos («Más») > «Configuración» > «Rendimiento» y activá «Ahorro de memoria». Las pestañas que no usás se liberan y vuelven a cargar cuando las tocás."
+    abrir: "https://support.google.com/chrome/answer/12929150?hl=es-419"
+  - texto: "Para ordenarlas: clic derecho en una pestaña > «Agregar pestaña al grupo» > «Grupo nuevo». Un grupo se puede cerrar y volver a abrir después."
+    abrir: "https://support.google.com/chrome/answer/2391819?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Para buscar una pestaña entre muchas: apretá Ctrl + Mayús + A y escribí parte del nombre."
+  - texto: "Cerrá con Ctrl + W las que ya no necesites. Si cerrás una sin querer, Ctrl + Mayús + T la vuelve a abrir."
+fuentes:
+  - https://support.google.com/chrome/answer/12929150?hl=es-419
+  - https://support.google.com/chrome/answer/2391819?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: NAV-010
+area: basico
+titulo:
+  sencillo: "Cerré una pestaña sin querer y la quiero recuperar"
+  tecnico: "Volver a abrir pestañas cerradas (Ctrl + Mayús + T) e historial"
+explicacion:
+  sencillo: "Las pestañas que cerraste se pueden volver a abrir con un atajo de teclado. Y si ya pasó tiempo, la página está en el historial."
+  tecnico: "Ctrl + Mayús + T reabre pestañas en el orden en que se cerraron; Ctrl + H abre el historial; opción «Al iniciar» para retomar la sesión."
+frases: ["cerré una pestaña sin querer", "se me cerró el navegador y perdí las pestañas", "recuperar la página que tenía abierta", "volver a abrir lo que cerré"]
+pasos:
+  - texto: "Apretá Ctrl + Mayús + T. Cada vez que lo apretás vuelve otra pestaña, en el orden en que las cerraste. También recupera una ventana entera cerrada."
+    abrir: "https://support.google.com/chrome/answer/2391819?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Si fue hace más tiempo, apretá Ctrl + H para abrir el historial y buscá la página ahí."
+    abrir: "https://support.google.com/chrome/answer/157179?hl=es-419"
+  - texto: "Para que Chrome abra siempre las pestañas de la última vez: «Más» > «Configuración» > «Al iniciar» > «Continuar la sesión desde donde la dejaste»."
+    abrir: "https://support.google.com/chrome/answer/95314?hl=es-419"
+fuentes:
+  - https://support.google.com/chrome/answer/2391819?hl=es-419&co=GENIE.Platform%3DDesktop
+  - https://support.google.com/chrome/answer/157179?hl=es-419
+  - https://support.google.com/chrome/answer/95314?hl=es-419
+madurez: T0
+---
+id: NAV-011
+area: programas
+titulo:
+  sencillo: "Quiero guardar mis favoritos o pasarlos a otro navegador"
+  tecnico: "Exportar e importar favoritos (archivo HTML)"
+explicacion:
+  sencillo: "Los favoritos (las páginas que marcaste con la estrellita) se pueden guardar en un archivo y después cargarlos en otro navegador o en otra compu."
+  tecnico: "Chrome: Administrador de favoritos > Exportar favoritos (HTML). Edge: Configuración > Perfiles > Importar datos del explorador."
+frases: ["cómo paso mis favoritos a la compu nueva", "exportar los marcadores", "guardar los favoritos del chrome", "pasar los favoritos de chrome a edge"]
+pasos:
+  - texto: "En Chrome, para guardarlos en un archivo: tres puntitos («Más») > «Favoritos y listas» > «Administrador de favoritos». Arriba, tocá los tres puntitos > «Exportar favoritos» y guardá el archivo (por ejemplo en un pendrive)."
+    abrir: "https://support.google.com/chrome/answer/96816?hl=es-419"
+  - texto: "Para cargarlos en Chrome desde ese archivo: «Más» > «Favoritos y listas» > «Importar favoritos y configuración» > «Seleccionar archivo»."
+  - texto: "Para pasarlos a Edge: «Configuración y más» > «Configuración» > «Perfiles» > la opción para importar datos de otro navegador. Elegí Chrome directamente o, en otras ubicaciones, el archivo HTML de favoritos. Aparecen en una carpeta de la barra de favoritos."
+    abrir: "https://support.microsoft.com/en-gb/edge/import-your-favorites-and-passwords-in-microsoft-edge"
+  - texto: "Otra opción: si iniciás sesión con la misma cuenta en las dos compus, los favoritos se pasan solos. Escribile a PC Doctor «sincronizar el navegador»."
+fuentes:
+  - https://support.google.com/chrome/answer/96816?hl=es-419
+  - https://support.microsoft.com/en-gb/edge/import-your-favorites-and-passwords-in-microsoft-edge
+madurez: T0
+---
+id: NAV-012
+area: programas
+titulo:
+  sencillo: "Desaparecieron mis favoritos o la barra de favoritos"
+  tecnico: "Mostrar la barra de favoritos y buscar marcadores"
+explicacion:
+  sencillo: "Muchas veces los favoritos siguen ahí y solo se ocultó la barra de arriba. Si los borraste, Chrome no los puede recuperar, pero si tenías la sincronización activa pueden estar en tu cuenta."
+  tecnico: "Chrome: Más > Favoritos y listas > Mostrar barra de favoritos; búsqueda con @favoritos; un favorito borrado no se recupera."
+frases: ["se me borraron los favoritos", "desapareció la barra de marcadores", "no encuentro mis páginas guardadas", "dónde quedaron mis favoritos"]
+pasos:
+  - texto: "En Chrome: tres puntitos («Más») > «Favoritos y listas» > «Mostrar barra de favoritos»."
+    abrir: "https://support.google.com/chrome/answer/188842?hl=es-419"
+  - texto: "Para buscar uno: en la barra de direcciones escribí @favoritos, apretá la barra espaciadora y escribí parte del nombre. O abrí el «Administrador de favoritos» con Ctrl + Mayús + O."
+    abrir: "https://support.google.com/chrome/answer/157179?hl=es-419"
+  - texto: "Google aclara que un favorito borrado no se puede recuperar. Si usabas tu cuenta de Google en otra compu o en el celular, fijate si siguen ahí y activá la sincronización."
+    abrir: "https://support.google.com/chrome/answer/165139?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Si cambiaste de navegador, quizás estén en el otro: escribile a PC Doctor «pasar los favoritos a otro navegador»."
+fuentes:
+  - https://support.google.com/chrome/answer/188842?hl=es-419
+  - https://support.google.com/chrome/answer/157179?hl=es-419
+  - https://support.google.com/chrome/answer/165139?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: NAV-013
+area: seguridad
+titulo:
+  sencillo: "¿Dónde están las contraseñas que guardó el navegador?"
+  tecnico: "Administrador de contraseñas de Google y Microsoft Password Manager"
+explicacion:
+  sencillo: "Chrome y Edge pueden guardar tus claves de las páginas. Se administran en una sección del navegador que te pide el PIN o la clave de la compu antes de mostrarlas. PC Doctor nunca las lee ni te las pide."
+  tecnico: "Chrome: Más > Contraseñas y autocompletar > Administrador de contraseñas de Google. Edge: Configuración > Contraseñas y autocompletar > Microsoft Password Manager."
+frases: ["dónde guarda las claves el chrome", "quiero ver una contraseña que guardé en el navegador", "el navegador recuerda mis claves y no sé dónde", "que el navegador deje de preguntar si guardo la contraseña"]
+pasos:
+  - texto: "En Chrome: tres puntitos («Más») > «Contraseñas y autocompletar» > «Administrador de contraseñas de Google». Ahí podés ver tus sitios guardados, borrar uno («Borrar») o, en «Configuración», apagar «Ofrecer guardar contraseñas y llaves de acceso»."
+    abrir: "https://support.google.com/chrome/answer/95606?hl=es-419"
+  - texto: "En Edge: tres puntitos («Configuración y más») > «Configuración» > «Contraseñas y autocompletar» > «Microsoft Password Manager». Para ver una clave, Windows te pide tu PIN o la clave de la compu."
+    abrir: "https://support.microsoft.com/microsoft-edge/save-or-forget-passwords-in-microsoft-edge-b4beecb0-f2a8-1ca0-f26f-9ec247a3f336"
+  - texto: "Cambiar una clave en el navegador no la cambia en la página: si la cambiás, hacelo en los dos lados. No le muestres ni le dictes tus claves a nadie que te las pida por teléfono o mensaje."
+fuentes:
+  - https://support.google.com/chrome/answer/95606?hl=es-419
+  - https://support.microsoft.com/microsoft-edge/save-or-forget-passwords-in-microsoft-edge-b4beecb0-f2a8-1ca0-f26f-9ec247a3f336
+madurez: T0
+---
+id: NAV-014
+area: programas
+titulo:
+  sencillo: "El navegador completa solo mi dirección o mi tarjeta y quiero cambiarlo"
+  tecnico: "Autocompletar: direcciones y métodos de pago"
+explicacion:
+  sencillo: "El navegador puede recordar tu nombre, dirección o tarjeta para llenar formularios más rápido. Podés corregir esos datos, borrarlos o apagar la función."
+  tecnico: "Chrome: Más > Contraseñas y autocompletar (Pagos, direcciones). Edge: Configuración > Contraseñas y autocompletar > Direcciones y más."
+frases: ["el navegador me completa una dirección vieja", "borrar la tarjeta guardada en el chrome", "no quiero que se autocomplete el formulario", "cambiar los datos que completa solo el navegador"]
+pasos:
+  - texto: "En Chrome: tres puntitos («Más») > «Contraseñas y autocompletar». Elegí la categoría (por ejemplo «Pagos» o direcciones). Con los tres puntitos al lado de cada dato podés «Editar» o «Borrar»."
+    abrir: "https://support.google.com/chrome/answer/142893?hl=es-419"
+  - texto: "Para que Chrome no complete más esa información, apagá «Guardar y completar» en esa misma categoría."
+  - texto: "En Edge: «Configuración» > «Contraseñas y autocompletar» > «Direcciones y más». Ahí podés editar o borrar los datos, o apagar la opción de guardar y completar direcciones."
+    abrir: "https://support.microsoft.com/edge/get-started-with-autofill-microsoft-edge"
+  - texto: "Si tenés la sesión iniciada con tu cuenta, los cambios se aplican también en tus otros dispositivos."
+fuentes:
+  - https://support.google.com/chrome/answer/142893?hl=es-419
+  - https://support.microsoft.com/edge/get-started-with-autofill-microsoft-edge
+madurez: T0
+---
+id: NAV-015
+area: seguridad
+titulo:
+  sencillo: "El navegador bloqueó una descarga"
+  tecnico: "Descargas bloqueadas: Navegación segura de Chrome y Microsoft Defender SmartScreen"
+explicacion:
+  sencillo: "Si el navegador dice que un archivo es peligroso, que no se puede descargar de forma segura o que no se descarga con frecuencia, te está cuidando. Lo más seguro es no bajarlo y buscarlo en la página oficial del programa."
+  tecnico: "Chrome marca descargas como peligrosas, sospechosas, sin verificar o inseguras (sin HTTPS). Edge usa SmartScreen por reputación del archivo."
+frases: ["no se puede descargar de forma segura", "el chrome me bloquea una descarga", "dice que el archivo puede ser peligroso", "el edge no me deja bajar un programa"]
+pasos:
+  - texto: "Si Chrome dice que es peligroso, no hace falta hacer nada: no lo bajes. Si dice «inseguro», es porque la página no usa conexión segura (https): buscá el archivo en el sitio oficial."
+    abrir: "https://support.google.com/chrome/answer/6261569?hl=es-419"
+  - texto: "En Edge, el aviso viene de Microsoft Defender SmartScreen, que compara el archivo con los conocidos como peligrosos o poco descargados. No lo apagues para bajar un archivo dudoso."
+    abrir: "https://support.microsoft.com/edge/how-can-smartscreen-help-protect-me-in-microsoft-edge"
+  - texto: "Bajá programas solo desde la página oficial de quien los hace. Escribile a PC Doctor «instalar un programa sin riesgo de virus»."
+    abrir: "https://support.google.com/chrome/answer/2765944?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Si ya abriste un archivo sospechoso, pasá un análisis con Seguridad de Windows."
+    abrir: "ms-settings:windowsdefender"
+fuentes:
+  - https://support.google.com/chrome/answer/6261569?hl=es-419
+  - https://support.microsoft.com/edge/how-can-smartscreen-help-protect-me-in-microsoft-edge
+  - https://support.google.com/chrome/answer/2765944?hl=es-419&co=GENIE.Platform%3DDesktop
+  - https://support.microsoft.com/microsoft-edge/what-to-do-if-microsoft-edge-isn-t-working-cc0657a6-acd2-cbbd-1528-c0335c71312a
+madurez: T0
+---
+id: NAV-016
+area: basico
+titulo:
+  sencillo: "Quiero traducir una página que está en otro idioma"
+  tecnico: "Traducir páginas (Google Traductor en Chrome, Microsoft Translator en Edge)"
+explicacion:
+  sencillo: "Chrome y Edge pueden mostrarte en castellano una página que está en inglés u otro idioma, con un solo clic."
+  tecnico: "Ícono de traducir en la barra de direcciones o clic derecho > Traducir; se activa en Configuración > Idiomas."
+frases: ["traducir una página en inglés", "la página está en otro idioma", "cómo pongo la página en español", "el navegador no me ofrece traducir"]
+pasos:
+  - texto: "En Chrome: tocá el ícono de traducir a la derecha de la barra de direcciones, o hacé clic derecho en la página > «Traducir al español». Si no traduce, recargá la página."
+    abrir: "https://support.google.com/chrome/answer/173424?hl=es-419"
+  - texto: "En Edge: cuando aparece el aviso, elegí el idioma y tocá «Traducir». Si no aparece, tocá el ícono de traducir en la barra de direcciones. Para volver al idioma original, el mismo ícono tiene «Mostrar original»."
+    abrir: "https://support.microsoft.com/en-gb/topic/use-microsoft-translator-in-microsoft-edge-browser-4ad1c6cb-01a4-4227-be9d-a81e127fcb0b"
+  - texto: "Si nunca te ofrece traducir: en Chrome, «Configuración» > «Idiomas» > activá «Usar Google Traductor»; en Edge, «Configuración» > «Idiomas» > activá la opción de ofrecer traducir las páginas."
+fuentes:
+  - https://support.google.com/chrome/answer/173424?hl=es-419
+  - https://support.microsoft.com/en-gb/topic/use-microsoft-translator-in-microsoft-edge-browser-4ad1c6cb-01a4-4227-be9d-a81e127fcb0b
+madurez: T0
+---
+id: NAV-017
+area: perifericos
+titulo:
+  sencillo: "Quiero imprimir una página de Internet"
+  tecnico: "Imprimir desde Chrome o Edge (Ctrl + P)"
+explicacion:
+  sencillo: "Cualquier página se puede imprimir, entera o solo algunas hojas, y también guardarla como PDF."
+  tecnico: "Ctrl + P abre la vista de impresión: destino, páginas, diseño, color y más opciones; Edge: Ctrl + Mayús + P abre el diálogo del sistema."
+frases: ["imprimir una página web", "cómo imprimo lo que estoy viendo en internet", "imprimir solo una hoja de la página", "imprimir un comprobante desde el navegador"]
+pasos:
+  - texto: "Apretá Ctrl + P. En «Destino» (o «Impresora») elegí tu impresora, o «Guardar como PDF» si querés guardarlo."
+    abrir: "https://support.google.com/chrome/answer/1069693?hl=es-419"
+  - texto: "En «Páginas» podés elegir todas o escribir solo algunas (por ejemplo 1-2). Revisá la vista previa y tocá «Imprimir»."
+    abrir: "https://support.microsoft.com/edge/print-in-microsoft-edge"
+  - texto: "Para imprimir solo una parte: seleccioná el texto con el mouse, hacé clic derecho sobre lo marcado y elegí «Imprimir»."
+  - texto: "Si la impresora no responde, escribile a PC Doctor «la impresora no imprime»."
+fuentes:
+  - https://support.google.com/chrome/answer/1069693?hl=es-419
+  - https://support.microsoft.com/edge/print-in-microsoft-edge
+madurez: T0
+---
+id: NAV-018
+area: archivos
+titulo:
+  sencillo: "Quiero abrir un PDF en el navegador (o que se descargue en vez de abrirse)"
+  tecnico: "Visor de PDF del navegador y programa predeterminado para PDF"
+explicacion:
+  sencillo: "Chrome y Edge abren los PDF directamente, sin instalar nada: los podés leer, imprimir, completar y firmar. Si preferís que se descarguen, también se puede elegir."
+  tecnico: "Visor de PDF integrado; Chrome: chrome://settings/content/pdfDocuments; programa predeterminado para .pdf en Aplicaciones predeterminadas."
+frases: ["no puedo abrir un pdf", "quiero que el pdf se abra en el navegador", "el pdf se descarga y no se abre", "completar un formulario pdf en la compu"]
+pasos:
+  - texto: "Tocá el enlace del PDF: se abre en una pestaña. Si no se abre, usá el menú de Chrome y elegí «Abrir en una pestaña nueva» o «Descargar»."
+    abrir: "https://support.google.com/chrome/answer/16215622?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Dentro del PDF podés «Agregar texto» para completarlo o «Dibujar» para firmarlo, y bajarlo con tus cambios con el ícono de descarga."
+  - texto: "Para elegir si los PDF se abren en Chrome o se descargan: escribí chrome://settings/content/pdfDocuments en la barra de direcciones y elegí la opción."
+  - texto: "Para que los PDF de la compu se abran siempre con un programa (Edge, Chrome u otro lector), cambialo en Aplicaciones predeterminadas."
+    abrir: "ms-settings:defaultapps"
+fuentes:
+  - https://support.google.com/chrome/answer/16215622?hl=es-419&co=GENIE.Platform%3DDesktop
+  - https://support.google.com/chrome/answer/95417?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: NAV-019
+area: seguridad
+titulo:
+  sencillo: "Quiero navegar sin que quede guardado (modo incógnito o InPrivate)"
+  tecnico: "Ventana de incógnito (Chrome) e InPrivate (Edge)"
+explicacion:
+  sencillo: "En una ventana de incógnito el navegador no guarda las páginas que visitaste ni las cookies cuando la cerrás. Sirve en una compu prestada. Ojo: no te hace invisible; la página que visitás y quien maneja la red pueden ver lo que hacés."
+  tecnico: "Chrome: Ctrl + Mayús + N. Edge: Configuración y más > Nueva ventana InPrivate. Se conservan descargas y favoritos."
+frases: ["abrir una ventana de incógnito", "navegar en privado", "que no quede el historial de lo que busco", "entrar a mi correo en una compu ajena sin que quede guardado"]
+pasos:
+  - texto: "En Chrome: apretá Ctrl + Mayús + N, o tres puntitos («Más») > «Nueva ventana de incógnito»."
+    abrir: "https://support.google.com/chrome/answer/95464?hl=es-419"
+  - texto: "En Edge: tres puntitos («Configuración y más») > «Nueva ventana InPrivate»."
+    abrir: "https://support.microsoft.com/en-gb/edge/browse-inprivate-in-microsoft-edge"
+  - texto: "Lo que descargues y los favoritos que agregues sí quedan guardados en la compu."
+  - texto: "Cuando termines, cerrá todas las ventanas de incógnito con la X de arriba a la derecha: recién ahí se borra lo de esa sesión."
+fuentes:
+  - https://support.google.com/chrome/answer/95464?hl=es-419
+  - https://support.microsoft.com/en-gb/edge/browse-inprivate-in-microsoft-edge
+madurez: T0
+---
+id: NAV-020
+area: programas
+titulo:
+  sencillo: "Quiero tener los mismos favoritos y claves en la compu y en el celular"
+  tecnico: "Sincronizar Chrome (Cuenta de Google) y Edge (cuenta de Microsoft)"
+explicacion:
+  sencillo: "Si entrás al navegador con tu cuenta (de Google en Chrome, de Microsoft en Edge), tus favoritos, contraseñas y otras cosas aparecen en todos tus dispositivos, y no se pierden si cambiás de compu."
+  tecnico: "Chrome: Configuración > Tú y Google. Edge: ícono de perfil > Iniciar sesión para sincronizar datos; Configuración > Perfiles > Sincronizar."
+frases: ["sincronizar los favoritos con el celular", "tener mis cosas del chrome en otra compu", "que el edge me guarde todo en la cuenta", "no me aparecen los favoritos en el celular"]
+pasos:
+  - texto: "En Chrome: tocá tu foto o el ícono de perfil arriba a la derecha > «Acceder a Chrome» y entrá con tu cuenta de Google. Para elegir qué se guarda: «Más» > «Configuración» > «Tú y Google» > tu nombre."
+    abrir: "https://support.google.com/chrome/answer/165139?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "En Edge: tocá el ícono de perfil arriba a la derecha, elegí tu cuenta de Microsoft y «Iniciar sesión para sincronizar datos». Qué se sincroniza se elige en «Configuración» > «Perfiles» > «Sincronizar»."
+    abrir: "https://support.microsoft.com/en-gb/edge/sign-in-to-sync-microsoft-edge-across-devices"
+  - texto: "En el celular, abrí el mismo navegador y entrá con la misma cuenta."
+    abrir: "https://support.google.com/chrome/answer/185277?hl=es-419"
+  - texto: "Si en una compu ajena entraste con tu cuenta, salí al terminar («Salir de Chrome» en el ícono de perfil)."
+fuentes:
+  - https://support.google.com/chrome/answer/165139?hl=es-419&co=GENIE.Platform%3DDesktop
+  - https://support.google.com/chrome/answer/185277?hl=es-419
+  - https://support.microsoft.com/en-gb/edge/sign-in-to-sync-microsoft-edge-across-devices
+madurez: T0
+---
+id: NAV-021
+area: perifericos
+titulo:
+  sencillo: "Una página no puede usar mi cámara o mi micrófono"
+  tecnico: "Permisos de cámara y micrófono por sitio en Chrome y Edge"
+explicacion:
+  sencillo: "Para una videollamada en el navegador, la página necesita tu permiso para usar la cámara y el micrófono. Si alguna vez tocaste «No permitir», hay que cambiarlo."
+  tecnico: "Permiso por sitio en el navegador más el permiso de Windows «Permitir que las aplicaciones de escritorio accedan a la cámara/micrófono»."
+frases: ["la página no me toma la cámara", "en la videollamada por el navegador no me escuchan", "bloqueé la cámara sin querer en una página", "el meet no detecta el micrófono"]
+pasos:
+  - texto: "Cuando la página pregunte, tocá «Permitir mientras visitas el sitio». Si ya la bloqueaste: tocá el ícono que está a la izquierda de la dirección > «Configuración de sitios» y cambiá «Cámara» y «Micrófono» a «Permitir»."
+    abrir: "https://support.google.com/chrome/answer/114662?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "También en Chrome: «Más» > «Configuración» > «Privacidad y seguridad» > «Configuración de sitios» > «Cámara» o «Micrófono». Ahí ves los sitios bloqueados y podés elegir qué cámara o micrófono usar."
+    abrir: "https://support.google.com/chrome/answer/2693767?hl=es-419"
+  - texto: "Revisá que Windows deje usar la cámara a las aplicaciones de escritorio (los navegadores cuentan como tales)."
+    abrir: "ms-settings:privacy-webcam"
+  - texto: "Lo mismo para el micrófono. Después cerrá y volvé a abrir el navegador."
+    abrir: "ms-settings:privacy-microphone"
+derivar: "Si la cámara no anda en ningún programa, escribile a PC Doctor «no funciona la cámara»."
+fuentes:
+  - https://support.google.com/chrome/answer/2693767?hl=es-419
+  - https://support.google.com/chrome/answer/114662?hl=es-419&co=GENIE.Platform%3DDesktop
+  - https://support.microsoft.com/windows/privacy/windows-camera-microphone-and-privacy
+madurez: T0
+---
+id: NAV-022
+area: seguridad
+titulo:
+  sencillo: "Una página me pide la ubicación y no sé si darla"
+  tecnico: "Permiso de ubicación por sitio en Chrome y Edge"
+explicacion:
+  sencillo: "Algunas páginas (mapas, delivery, el clima) piden saber dónde estás. Podés permitirlo solo a las que confiás y bloquearlo en las demás."
+  tecnico: "Permiso de ubicación por sitio y predeterminado; en Windows además depende de la configuración de ubicación del sistema."
+frases: ["una página quiere saber mi ubicación", "cómo saco el permiso de ubicación de una página", "la página del mapa no sabe dónde estoy", "no quiero que las páginas sepan dónde vivo"]
+pasos:
+  - texto: "Cuando una página pregunte, tocá «Permitir» solo si confiás en ella y la necesitás (por ejemplo un mapa)."
+  - texto: "Para cambiarlo en una página: tocá el ícono a la izquierda de la dirección > «Configuración de sitios» (Chrome) o «Permisos para este sitio» (Edge) y elegí permitir o bloquear la ubicación."
+    abrir: "https://support.google.com/chrome/answer/114662?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Para todas las páginas en Chrome: «Más» > «Configuración» > «Privacidad y seguridad» > «Configuración de sitios» > «Ubicación» y elegí la opción predeterminada."
+    abrir: "https://support.google.com/chrome/answer/142065?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "En Edge: «Configuración» > «Privacidad, búsqueda y servicios» > «Permisos del sitio» > «Todos los permisos» > «Ubicación». Si una página de mapas no te ubica, revisá también que la ubicación esté activada en Windows."
+    abrir: "https://support.microsoft.com/edge/location-and-privacy-in-microsoft-edge"
+fuentes:
+  - https://support.google.com/chrome/answer/142065?hl=es-419&co=GENIE.Platform%3DDesktop
+  - https://support.google.com/chrome/answer/114662?hl=es-419&co=GENIE.Platform%3DDesktop
+  - https://support.microsoft.com/edge/location-and-privacy-in-microsoft-edge
+madurez: T0
+---
+id: NAV-023
+area: seguridad
+titulo:
+  sencillo: "Tengo extensiones raras en el navegador"
+  tecnico: "Revisar, desactivar y quitar extensiones de Chrome y Edge"
+explicacion:
+  sencillo: "Las extensiones son agregados del navegador. Algunas se instalan sin que te des cuenta y muestran publicidad o cambian páginas. Las que no reconocés conviene quitarlas."
+  tecnico: "Chrome: Más > Extensiones > Administrar extensiones. Edge: Extensiones > Administrar extensiones. Quitar las desconocidas y revisar programas instalados."
+frases: ["me apareció una extensión que no instalé", "hay un agregado raro en el chrome", "cómo saco una extensión del navegador", "el navegador tiene una barra de herramientas que no puse"]
+pasos:
+  - texto: "En Chrome: tres puntitos («Más») > «Extensiones» > «Administrar extensiones». Con el interruptor la desactivás; con «Quitar» la borrás."
+    abrir: "https://support.google.com/chrome_webstore/answer/2664769?hl=es-419"
+  - texto: "En Edge: tocá el botón «Extensiones», a la derecha de la barra de direcciones (o tres puntitos > «Extensiones») > «Administrar extensiones». Usá el interruptor para apagarla o «Quitar de Microsoft Edge» para borrarla."
+    abrir: "https://support.microsoft.com/edge/add-turn-off-or-remove-extensions-in-microsoft-edge"
+  - texto: "Si la extensión vuelve sola, puede haber un programa no deseado: revisá la lista de programas instalados y desinstalá lo que no reconozcas."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Pasá un análisis con Seguridad de Windows. En la compu del trabajo, algunas extensiones las pone la empresa: consultá antes de quitarlas."
+    abrir: "ms-settings:windowsdefender"
+fuentes:
+  - https://support.google.com/chrome_webstore/answer/2664769?hl=es-419
+  - https://support.google.com/chrome/answer/2765944?hl=es-419&co=GENIE.Platform%3DDesktop
+  - https://support.microsoft.com/edge/add-turn-off-or-remove-extensions-in-microsoft-edge
+  - https://support.microsoft.com/microsoft-edge/what-to-do-if-microsoft-edge-isn-t-working-cc0657a6-acd2-cbbd-1528-c0335c71312a
+madurez: T0
+---
+id: NAV-024
+area: programas
+titulo:
+  sencillo: "Quiero dejar Chrome como recién instalado"
+  tecnico: "Restablecer la configuración predeterminada de Chrome"
+explicacion:
+  sencillo: "Si Chrome anda raro, cambia solo de buscador o abre propaganda, se puede volver a su configuración original sin perder tus favoritos ni tus contraseñas guardadas. Ojo: se desactivan las extensiones y se borran las cookies, así que vas a tener que volver a entrar en tus páginas."
+  tecnico: "Más > Configuración > Restablecer la configuración: buscador, página principal, pestañas fijadas, permisos de sitios, cookies, extensiones y temas vuelven a los valores originales."
+frases: ["restablecer el chrome", "dejar el chrome de fábrica", "el chrome quedó todo cambiado y quiero volverlo como antes", "resetear la configuración del navegador"]
+pasos:
+  - texto: "Antes: tené a mano el usuario y la clave de tus páginas, porque se borran las cookies y se cierran las sesiones. Los favoritos y las contraseñas guardadas no se borran."
+  - texto: "Si sospechás de un programa raro, revisá primero los programas instalados y desinstalá los que no reconozcas."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "En Chrome: tres puntitos («Más») > «Configuración» > «Restablecer la configuración» > «Restablecer la configuración a los valores predeterminados originales» > «Restablecer la configuración»."
+    abrir: "https://support.google.com/chrome/answer/3296214?hl=es-419"
+  - texto: "Después, volvé a activar solo las extensiones que conocés y confiás."
+    abrir: "https://support.google.com/chrome/answer/2765944?hl=es-419&co=GENIE.Platform%3DDesktop"
+fuentes:
+  - https://support.google.com/chrome/answer/3296214?hl=es-419
+  - https://support.google.com/chrome/answer/2765944?hl=es-419&co=GENIE.Platform%3DDesktop
+madurez: T0
+---
+id: NAV-025
+area: programas
+titulo:
+  sencillo: "El navegador se abre solo"
+  tecnico: "Navegador que se inicia con Windows, aumento de inicio de Edge o software no deseado"
+explicacion:
+  sencillo: "Si el navegador se abre solo al prender la compu, puede estar puesto para arrancar con Windows. Si además abre pestañas o propaganda por su cuenta, puede haber un programa no deseado."
+  tecnico: "Aplicaciones de inicio de Windows; Edge «Aumento de inicio» deja procesos en segundo plano; pestañas que se abren solas son señal de software no deseado."
+frases: ["el chrome se abre solo cuando prendo la compu", "se me abre el navegador sin que lo toque", "el edge arranca solo con windows", "se abren pestañas solas"]
+pasos:
+  - texto: "Abrí Aplicaciones de inicio y apagá el navegador si aparece en la lista: así no arranca solo con Windows."
+    abrir: "ms-settings:startupapps"
+  - texto: "En Edge existe el «aumento de inicio», que lo deja preparado en segundo plano para que abra más rápido. Se maneja escribiendo edge://settings/system/manageSystem en la barra de direcciones."
+    abrir: "https://support.microsoft.com/edge/get-help-with-startup-boost"
+  - texto: "Si al abrirse aparecen páginas de propaganda o pestañas que no pediste, revisá los programas instalados y las extensiones, y desinstalá lo que no reconozcas."
+    abrir: "https://support.google.com/chrome/answer/2765944?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Pasá un análisis con Seguridad de Windows."
+    abrir: "ms-settings:windowsdefender"
+fuentes:
+  - https://support.microsoft.com/windows/configure-startup-applications-in-windows-115a420a-0bff-4a6f-90e0-1934c844e473
+  - https://support.microsoft.com/edge/get-help-with-startup-boost
+  - https://support.google.com/chrome/answer/2765944?hl=es-419&co=GENIE.Platform%3DDesktop
+  - https://support.microsoft.com/microsoft-edge/what-to-do-if-microsoft-edge-isn-t-working-cc0657a6-acd2-cbbd-1528-c0335c71312a
+madurez: T0

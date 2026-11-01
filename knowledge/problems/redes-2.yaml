@@ -1,0 +1,515 @@
+# Redes e Internet en Windows (2): mensajes de Wi-Fi, cable, IP, restablecer la red, perfiles, compartir en casa, VPN, uso medido, bandas y adaptadores. Guiadas con fuente oficial.
+id: RED-001
+area: red
+titulo:
+  sencillo: "El Wi-Fi dice «Sin Internet, protegida»"
+  tecnico: "Conectado a la red Wi-Fi sin acceso a Internet"
+explicacion:
+  sencillo: "La compu sí está conectada a tu Wi-Fi, pero por ese Wi-Fi no está llegando Internet. Puede ser el router, el proveedor o un ajuste de la compu."
+  tecnico: "Conectividad limitada: asociación correcta al punto de acceso sin salida a Internet (DHCP, DNS, proxy o enlace del proveedor)."
+frases: ["dice sin internet protegida", "me aparece sin internet, protegida", "el wifi figura protegida pero no navega", "en el wifi dice sin internet aunque está conectado"]
+pasos:
+  - texto: "Fijate si otro aparato (el celular, por ejemplo) navega con el mismo Wi-Fi. Si tampoco anda, el problema es del router o del proveedor, no de la compu."
+  - texto: "Apagá el router (y el módem si son dos aparatos), esperá unos 30 segundos, volvé a prenderlos y esperá a que las luces se estabilicen."
+  - texto: "En la compu, apagá el Wi-Fi y volvé a prenderlo."
+    abrir: "ms-settings:network-wifi"
+  - texto: "Si sigue igual, revisá que no haya un proxy puesto a mano (escribile a PC Doctor «hay un proxy configurado»). Microsoft explica los demás pasos en «Conectado pero sin Internet»."
+    abrir: "https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c"
+derivar: "Si ningún aparato de la casa tiene Internet, llamá a tu proveedor: la computadora está bien."
+fuentes:
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+madurez: T0
+---
+id: RED-002
+area: red
+titulo:
+  sencillo: "Me dice «No se puede conectar a esta red»"
+  tecnico: "Error de conexión o de autenticación a una red Wi-Fi"
+explicacion:
+  sencillo: "Windows no logra entrar a ese Wi-Fi. Lo más común es que la clave guardada ya no sea la correcta (por ejemplo, la cambiaron en el router) o que el router esté colgado."
+  tecnico: "Falla de asociación o autenticación (clave o seguridad que no coincide con el router), perfil guardado desactualizado o problema del adaptador."
+frases: ["no se puede conectar a esta red", "me sale que no se puede conectar al wifi", "pongo la clave del wifi y no conecta", "cambiaron la clave del wifi y ahora no entra"]
+pasos:
+  - texto: "Olvidá la red y volvé a conectarte: en «Administrar redes conocidas» elegí tu red, tocá «Olvidar» y después conectate de nuevo escribiendo la clave del Wi-Fi con cuidado (mayúsculas y minúsculas cuentan)."
+    abrir: "ms-settings:network-wifisettings"
+  - texto: "Reiniciá el router y el módem: apagalos, esperá unos 30 segundos y prendelos de nuevo."
+  - texto: "Si con la clave correcta sigue sin conectar, Microsoft sugiere revisar el router (reiniciarlo, actualizarlo) y el controlador del Wi-Fi de la compu."
+    abrir: "https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c"
+derivar: "Si no sabés la clave, escribile a PC Doctor «no sé la clave del Wi-Fi»."
+fuentes:
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+madurez: T0
+---
+id: RED-003
+area: red
+titulo:
+  sencillo: "Mi red Wi-Fi no aparece en la lista"
+  tecnico: "La red (SSID) no figura entre las redes disponibles"
+explicacion:
+  sencillo: "La compu ve otras redes (las de los vecinos) pero no la tuya. Puede ser que estés lejos del router, que el router no esté anunciando su nombre o que tu compu no sea compatible con esa banda (por ejemplo, 5 GHz)."
+  tecnico: "SSID no visible: alcance, router sin difusión del SSID o adaptador sin soporte para la banda (2,4/5 GHz)."
+frases: ["no me aparece mi red en la lista", "veo las redes de los vecinos pero no la mía", "mi wifi no figura entre las redes", "el nombre de mi wifi no sale en la compu"]
+pasos:
+  - texto: "Tocá los íconos de red, volumen o batería abajo a la derecha, abrí la lista de redes Wi-Fi y usá el botón para actualizar la lista (abajo a la derecha de esa lista). Acercate al router y probá de nuevo."
+  - texto: "Si tu router tiene dos redes (una de 2,4 GHz y otra de 5 GHz), probá conectarte a la otra: algunas compus no ven la de 5 GHz."
+  - texto: "Reiniciá el router y el módem, y fijate que el router esté configurado para mostrar el nombre de la red."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/get-connected-when-setting-up-your-windows-device"
+  - texto: "Microsoft explica qué revisar en la compu en «No se encuentra ninguna red Wi-Fi»."
+    abrir: "https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c"
+fuentes:
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+  - https://support.microsoft.com/windows/experience/connectivity-networking/connect-to-a-wi-fi-network-in-windows
+  - https://support.microsoft.com/windows/experience/connectivity-networking/get-connected-when-setting-up-your-windows-device
+madurez: T0
+---
+id: RED-004
+area: red
+titulo:
+  sencillo: "Desapareció la opción de Wi-Fi de la computadora"
+  tecnico: "Adaptador inalámbrico deshabilitado, sin controlador o no detectado"
+explicacion:
+  sencillo: "Si en la compu ya no aparece el botón de Wi-Fi, Windows no está «viendo» la plaquita de Wi-Fi: puede estar apagada con un botón, desactivada o sin su controlador."
+  tecnico: "Adaptador WLAN deshabilitado, apagado por interruptor físico, servicio WLAN AutoConfig detenido o controlador ausente."
+frases: ["desapareció el wifi de la compu", "no tengo el botón de wifi", "se fue el símbolo del wifi y no lo encuentro", "la notebook ya no tiene la opción de wifi"]
+pasos:
+  - texto: "Si es una notebook, fijate si tiene un botón o una tecla para prender el Wi-Fi y que esté encendido. Revisá también que el modo avión esté apagado."
+    abrir: "ms-settings:network-airplanemode"
+  - texto: "Reiniciá la compu."
+  - texto: "Abrí el Administrador de dispositivos (clic derecho en Inicio), desplegá «Adaptadores de red», hacé clic derecho en el adaptador de Wi-Fi y, si lo ofrece, elegí «Habilitar dispositivo»."
+  - texto: "Si el adaptador ni siquiera aparece, hay que instalar su controlador desde la página del fabricante de la compu. Microsoft lo explica en «Falta la opción Wi-Fi» y «No se detectan ni habilitan adaptadores de red»."
+    abrir: "https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c"
+derivar: "Si nada de esto lo trae de vuelta, la plaquita de Wi-Fi puede estar fallando: llevala a un técnico o usá un adaptador de Wi-Fi USB."
+fuentes:
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+madurez: T0
+---
+id: RED-005
+area: red
+titulo:
+  sencillo: "El Wi-Fi anda muy lento"
+  tecnico: "Conexión inalámbrica con bajo rendimiento"
+explicacion:
+  sencillo: "Hay Internet, pero todo tarda. Suele deberse a la distancia o las paredes entre la compu y el router, a interferencias, o a que algún programa está descargando mucho."
+  tecnico: "Señal débil, obstáculos, congestión de la banda de 2,4 GHz o procesos que consumen ancho de banda."
+frases: ["el wifi anda lentísimo", "internet tarda una eternidad en cargar", "el wifi va a paso de tortuga", "las páginas cargan muy despacio con el wifi"]
+pasos:
+  - texto: "Acercate al router y fijate que no haya paredes u objetos grandes de metal en el medio. Probá si con otro aparato también anda lento."
+  - texto: "Abrí el Administrador de tareas y cerrá los programas que estén descargando mucho y no estés usando."
+  - texto: "Si el router tiene una red de 5 GHz y estás cerca, probá conectarte a esa: suele ser más rápida."
+    abrir: "ms-settings:network-wifi"
+  - texto: "Microsoft da consejos sobre dónde poner el router (en el medio de la casa y alto, no en un rincón ni debajo de un escritorio)."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/wi-fi-and-your-home-layout"
+fuentes:
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+  - https://support.microsoft.com/windows/experience/connectivity-networking/wi-fi-and-your-home-layout
+madurez: T0
+---
+id: RED-006
+area: red
+titulo:
+  sencillo: "Internet por cable no anda"
+  tecnico: "Conexión Ethernet no detectada o sin acceso"
+explicacion:
+  sencillo: "Con el cable de red enchufado, la compu no tiene Internet o dice que el cable está desconectado. Muchas veces es el cable, el agujerito del router donde está enchufado o el router mismo."
+  tecnico: "Ethernet sin enlace o sin conectividad: cable, puerto, router, controlador del adaptador o configuración de red."
+frases: ["no me anda internet por cable", "dice cable de red desconectado", "enchufé el cable y no hay internet", "la compu no reconoce el cable del router"]
+pasos:
+  - texto: "Revisá que el cable esté bien enchufado en la compu y en el router. En el router usá una de las bocas comunes, no la de «Internet» que va al módem. Si tenés otro cable, probá con ese."
+  - texto: "Reiniciá el módem y el router: desenchufalos, esperá al menos 30 segundos y volvé a enchufarlos."
+  - texto: "Fijate qué dice la sección Ethernet en Configuración: debería decir que está conectado."
+    abrir: "ms-settings:network-ethernet"
+  - texto: "Si el router tiene Wi-Fi, probá conectarte por Wi-Fi para saber si el problema es el cable. Microsoft explica los pasos siguientes (controlador, restablecer la red)."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/fix-ethernet-connection-problems-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/fix-ethernet-connection-problems-in-windows
+madurez: T0
+---
+id: RED-007
+area: red
+titulo:
+  sencillo: "Windows avisa que hay un conflicto de dirección IP"
+  tecnico: "Dirección IP duplicada en la red local"
+explicacion:
+  sencillo: "Cada aparato conectado al router tiene un «número de dirección». Windows avisa cuando cree que otro aparato está usando el mismo número que tu compu. Lo más fácil es dejar que el router reparta los números solo."
+  tecnico: "Detección de direcciones duplicadas (ARP) durante la configuración IP; suele resolverse con asignación automática (DHCP) y renovando la concesión."
+frases: ["me sale conflicto de dirección ip", "dice que otro equipo tiene la misma ip", "windows detectó un conflicto de ip", "aviso de ip duplicada en la red"]
+pasos:
+  - texto: "Reiniciá el router y el módem: apagalos, esperá unos 30 segundos y prendelos de nuevo."
+  - texto: "En la configuración de tu red (Wi-Fi > «Administrar redes conocidas» > tu red, o Ethernet), buscá «Asignación de IP», tocá «Editar» y elegí «Automático (DHCP)», que es lo que recomienda Microsoft."
+    abrir: "ms-settings:network-wifisettings"
+  - texto: "Microsoft explica cómo cambiar esa configuración."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/essential-network-settings-and-tasks-in-windows"
+  - texto: "Si sigue, los comandos «ipconfig /release» y después «ipconfig /renew» (Símbolo del sistema como administrador) le piden al router una dirección nueva. Están en la guía de Microsoft."
+    abrir: "https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c"
+derivar: "En redes de oficina, avisale al encargado de sistemas: puede ser un ajuste del router o del switch."
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/essential-network-settings-and-tasks-in-windows
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+  - https://learn.microsoft.com/troubleshoot/windows-server/networking/event-4199-windows-client-cannot-get-ip-address-dhcp-server
+madurez: T0
+---
+id: RED-008
+area: red
+titulo:
+  sencillo: "Dice «Wi-Fi no tiene una configuración de IP válida»"
+  tecnico: "Sin dirección IP válida (169.254.x.x): DHCP sin respuesta"
+explicacion:
+  sencillo: "La compu se conecta al Wi-Fi, pero el router no le dio la «dirección» que necesita para navegar. Casi siempre se arregla reiniciando el router o pidiéndole una dirección nueva."
+  tecnico: "IPv4 autoconfigurada 169.254.x.x: el cliente no obtuvo concesión DHCP. Renovar IP, restablecer Winsock/TCP-IP y verificar DHCP en el router."
+frases: ["wifi no tiene una configuración de ip válida", "el solucionador dice que la ip no es válida", "me sale error de configuración ip en el wifi", "no tiene una configuración ip válida"]
+pasos:
+  - texto: "Reiniciá el router y el módem (30 segundos apagados) y esperá a que las luces se estabilicen."
+  - texto: "Revisá que tu red tenga «Asignación de IP» en «Automático (DHCP)» (Wi-Fi > «Administrar redes conocidas» > tu red)."
+    abrir: "ms-settings:network-wifisettings"
+  - texto: "Si sigue, buscá «símbolo del sistema», abrilo con «Ejecutar como administrador» y escribí, de a uno y apretando Enter: netsh winsock reset, netsh int ip reset, ipconfig /release, ipconfig /renew, ipconfig /flushdns. Después reiniciá la compu."
+    abrir: "https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c"
+derivar: "Si otros aparatos tampoco se conectan, el router no está repartiendo direcciones: llamá a tu proveedor."
+fuentes:
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+  - https://support.microsoft.com/windows/experience/connectivity-networking/essential-network-settings-and-tasks-in-windows
+madurez: T0
+---
+id: RED-009
+area: red
+titulo:
+  sencillo: "Quiero restablecer la red de la computadora"
+  tecnico: "Restablecimiento de red (reinstalar adaptadores de red)"
+explicacion:
+  sencillo: "Es el último recurso cuando nada arregla Internet: Windows borra y vuelve a instalar las plaquitas de red con su configuración de fábrica. Ojo: después vas a tener que volver a poner la clave del Wi-Fi y, si usás una VPN, reinstalarla."
+  tecnico: "Configuración de red avanzada > Restablecimiento de red: quita adaptadores y su configuración, los reinstala con valores predeterminados tras reiniciar; puede requerir reinstalar VPN o conmutadores de Hyper-V y deja las redes como públicas."
+frases: ["resetear la red de la compu", "restablecer la configuración de internet", "volver la red a como venía de fábrica", "dejar el wifi como nuevo en la compu"]
+pasos:
+  - texto: "Antes, probá lo simple: reiniciar el router y la compu. Restablecer la red es el último paso."
+  - texto: "Tené a mano la clave del Wi-Fi: el restablecimiento borra las redes y configuraciones guardadas, y quizá tengas que reinstalar programas de VPN."
+  - texto: "Abrí «Configuración de red avanzada» > «Restablecimiento de red» > «Restablecer ahora» y confirmá con «Sí». La compu se reinicia."
+    abrir: "ms-settings:network-advancedsettings"
+  - texto: "Después, conectate de nuevo a tu Wi-Fi y, si es la red de tu casa, fijate que esté como «Red privada» si la necesitás para compartir. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/fix-ethernet-connection-problems-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/fix-ethernet-connection-problems-in-windows
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+madurez: T0
+---
+id: RED-010
+area: red
+titulo:
+  sencillo: "Quiero borrar una red Wi-Fi guardada y conectarme de nuevo"
+  tecnico: "Olvidar una red conocida y volver a conectar"
+explicacion:
+  sencillo: "Windows recuerda cada Wi-Fi al que te conectaste. «Olvidar» una red borra lo que tenía guardado (como la clave vieja) y te deja conectarte de cero."
+  tecnico: "Red e Internet > Wi-Fi > Administrar redes conocidas > Olvidar; elimina el perfil inalámbrico guardado."
+frases: ["olvidar una red wifi", "borrar un wifi guardado", "sacar una red vieja de la lista de la compu", "quiero que la compu se olvide de un wifi"]
+pasos:
+  - texto: "Tené a mano la clave del Wi-Fi: después de olvidarla la vas a tener que escribir de nuevo."
+  - texto: "Abrí «Administrar redes conocidas», elegí la red y tocá «Olvidar»."
+    abrir: "ms-settings:network-wifisettings"
+  - texto: "Volvé a la lista de redes, elegí la tuya, tocá «Conectar» y escribí la clave."
+    abrir: "ms-settings:network-wifi"
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c"
+fuentes:
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+  - https://support.microsoft.com/windows/experience/connectivity-networking/connect-to-a-wi-fi-network-in-windows
+madurez: T0
+---
+id: RED-011
+area: red
+titulo:
+  sencillo: "¿Pongo mi red como pública o privada?"
+  tecnico: "Tipo de perfil de red: público o privado"
+explicacion:
+  sencillo: "En una red «pública» (bar, hotel, aeropuerto) tu compu queda escondida de los demás: es lo más seguro y lo que viene por defecto. En una red «privada» (tu casa, si confiás en todos los conectados) la compu se puede ver y compartir archivos e impresoras."
+  tecnico: "Tipo de perfil de red: Público (predeterminado, más restrictivo en el Firewall) o Privado (detectable, uso compartido de archivos e impresoras)."
+frases: ["red pública o privada cuál pongo", "cambiar la red a privada", "mi wifi figura como red pública", "qué significa red pública en la compu"]
+pasos:
+  - texto: "Afuera de tu casa (bar, hotel, plaza), dejala siempre como «Red pública (recomendado)»."
+  - texto: "Para tu casa: entrá en Wi-Fi (o Ethernet), elegí tu red y en «Tipo de perfil de red» elegí «Red privada» solo si confiás en todos los que se conectan a ese Wi-Fi."
+    abrir: "ms-settings:network-wifi"
+  - texto: "Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/essential-network-settings-and-tasks-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/essential-network-settings-and-tasks-in-windows
+  - https://learn.microsoft.com/windows/security/operating-system-security/network-security/windows-firewall/
+madurez: T0
+---
+id: RED-012
+area: red
+titulo:
+  sencillo: "Quiero compartir una carpeta con otra compu de mi casa"
+  tecnico: "Uso compartido de archivos en la red local"
+explicacion:
+  sencillo: "Si las dos compus están en el mismo Wi-Fi de tu casa, podés compartir una carpeta para abrirla desde la otra, sin pendrive."
+  tecnico: "Conceder acceso a > Personas específicas; requiere perfil Privado, detección de redes y uso compartido de archivos e impresoras."
+frases: ["compartir una carpeta entre dos compus", "pasar archivos por la red de mi casa", "quiero ver los archivos de la otra compu", "compartir documentos por el wifi de casa"]
+pasos:
+  - texto: "Fijate que las dos compus estén en el mismo Wi-Fi y que la red esté como «Red privada»."
+    abrir: "ms-settings:network-wifi"
+  - texto: "Hacé clic derecho en la carpeta > «Mostrar más opciones» (en Windows 11) > «Conceder acceso a» > «Personas específicas» y elegí con quién compartirla."
+  - texto: "Si no funciona, en Configuración buscá «configuración avanzada de uso compartido» y, en «Redes privadas», activá la detección de redes y el uso compartido de archivos e impresoras. Microsoft lo explica paso a paso."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/file-sharing-over-a-network-in-windows"
+  - texto: "Para dejar de compartir: clic derecho > «Conceder acceso a» > «Quitar acceso»."
+derivar: "Si es solo para pasar algo rápido a una compu cercana, escribile a PC Doctor «quiero pasar un archivo a otra computadora que está cerca»."
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/file-sharing-over-a-network-in-windows
+madurez: T0
+---
+id: RED-013
+area: red
+titulo:
+  sencillo: "No veo las otras computadoras de la casa en «Red»"
+  tecnico: "Detección de redes desactivada"
+explicacion:
+  sencillo: "Para que las compus de la casa se vean entre sí, Windows tiene que tener encendida la «detección de redes», y la red tiene que estar como privada."
+  tecnico: "Detección de redes y uso compartido desactivados, perfil Público o servicios de detección (Function Discovery, SSDP, UPnP) detenidos."
+frases: ["no veo la otra compu en la red", "mi compu no aparece en la red de casa", "en red no sale ninguna computadora", "dice que la detección de redes está desactivada"]
+pasos:
+  - texto: "Fijate que todas las compus estén conectadas al mismo Wi-Fi o router, y que tu red esté como «Red privada»."
+    abrir: "ms-settings:network-wifi"
+  - texto: "En el Explorador de archivos entrá a «Red». Si arriba aparece un aviso de que la detección de redes está desactivada, tocalo y elegí activar la detección de redes y el uso compartido de archivos."
+  - texto: "Si sigue sin verse, Microsoft explica cómo revisar la configuración avanzada de uso compartido y los servicios necesarios."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/file-sharing-over-a-network-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/file-sharing-over-a-network-in-windows
+  - https://support.microsoft.com/windows/experience/connectivity-networking/essential-network-settings-and-tasks-in-windows
+madurez: T0
+---
+id: RED-014
+area: red
+titulo:
+  sencillo: "La VPN no se conecta"
+  tecnico: "Error al conectar una conexión VPN"
+explicacion:
+  sencillo: "Una VPN es una conexión especial (por ejemplo, para entrar a la red del trabajo). Si no conecta, casi siempre es algún dato mal cargado o que el servicio pide su propia aplicación."
+  tecnico: "Perfil VPN con servidor, tipo o método de inicio de sesión incorrectos, o servicio que requiere el cliente del proveedor."
+frases: ["la vpn no conecta", "no puedo entrar a la vpn del trabajo", "la vpn da error al conectar", "se cayó la vpn y no vuelve"]
+pasos:
+  - texto: "Primero fijate que tengas Internet común (que abran las páginas). Sin Internet la VPN no puede conectar."
+  - texto: "Entrá a VPN, elegí la conexión y revisá en «Opciones avanzadas» que el servidor y el tipo de VPN sean los que te dieron. Después tocá «Conectar»."
+    abrir: "ms-settings:network-vpn"
+  - texto: "Si la VPN es del trabajo, pedile los datos correctos al área de sistemas. Si es un servicio que pagás, fijate si tiene su propia aplicación en Microsoft Store o en su página. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/connect-to-a-vpn-in-windows"
+  - texto: "Si hace poco restableciste la red, puede que tengas que reinstalar el programa de la VPN."
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/connect-to-a-vpn-in-windows
+  - https://support.microsoft.com/windows/experience/connectivity-networking/fix-ethernet-connection-problems-in-windows
+madurez: T0
+---
+id: RED-015
+area: red
+titulo:
+  sencillo: "Me pidieron configurar una VPN en la computadora"
+  tecnico: "Agregar una conexión VPN integrada de Windows"
+explicacion:
+  sencillo: "Windows trae para cargar una VPN (por ejemplo, la del trabajo). Necesitás los datos que te den en tu trabajo o el servicio: la dirección del servidor y el tipo de VPN."
+  tecnico: "Red e Internet > VPN > Agregar VPN: Proveedor de VPN Windows (integrado), servidor, tipo de VPN y tipo de información de inicio de sesión."
+frases: ["configurar la vpn del trabajo", "cómo agrego una vpn en windows", "me pasaron datos para poner una vpn", "instalar una vpn en la compu"]
+pasos:
+  - texto: "Entrá a VPN y tocá «Agregar VPN». En «Proveedor de VPN» elegí «Windows (integrado)»."
+    abrir: "ms-settings:network-vpn"
+  - texto: "Completá un nombre que reconozcas y los datos que te pasaron (servidor, tipo de VPN, forma de inicio de sesión) y tocá «Guardar». La clave la escribís vos en la pantalla de Windows; PC Doctor no la pide ni la guarda."
+  - texto: "Para conectarte, elegila en la lista y tocá «Conectar». Si el servicio tiene su propia aplicación, conviene usar esa. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/connect-to-a-vpn-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/connect-to-a-vpn-in-windows
+madurez: T0
+---
+id: RED-016
+area: red
+titulo:
+  sencillo: "Uso Internet con datos limitados y quiero gastar menos"
+  tecnico: "Conexión de uso medido"
+explicacion:
+  sencillo: "Si te conectás con el celular o con un plan de pocos datos, podés avisarle a Windows que esa conexión es «de uso medido»: así deja para después las descargas grandes."
+  tecnico: "Conexión de uso medido: Windows Update solo descarga lo prioritario, se pueden pausar descargas de Microsoft Store y la sincronización de archivos sin conexión."
+frases: ["la compu me gasta todos los datos", "uso internet del celular y se me consumen los datos", "que windows no descargue cosas con mi plan", "conexión de uso medido"]
+pasos:
+  - texto: "Conectate a esa red, entrá en Wi-Fi (o Ethernet), elegí la red y activá «Conexión de uso medido»."
+    abrir: "ms-settings:network-wifi"
+  - texto: "Tené en cuenta que, en esa red, Windows va a bajar solo las actualizaciones importantes y algunas descargas pueden quedar en pausa."
+  - texto: "Si la opción aparece gris, quitá el límite de datos de esa red o revisá que tu usuario sea administrador. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/metered-connections-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/metered-connections-in-windows
+madurez: T0
+---
+id: RED-017
+area: red
+titulo:
+  sencillo: "Quiero saber cuánto Internet gasta la computadora"
+  tecnico: "Uso de datos y límite de datos por red"
+explicacion:
+  sencillo: "Windows lleva la cuenta de cuántos datos usó cada red y te puede avisar cuando te acercás a un límite que vos elijas."
+  tecnico: "Configuración de red avanzada > Uso de datos; límite de datos por conexión con avisos al acercarse y al superarlo."
+frases: ["cuántos datos gastó la compu", "ver el consumo de internet de la computadora", "poner un límite de datos en windows", "que me avise si gasto muchos megas"]
+pasos:
+  - texto: "Abrí «Configuración de red avanzada» y entrá a «Uso de datos». Elegí la conexión para ver cuánto usó."
+    abrir: "ms-settings:network-advancedsettings"
+  - texto: "Para poner un límite: en Wi-Fi elegí tu red, tocá la opción para establecer un límite de datos, «Introducir límite», completá y guardá. Windows te avisa cerca del límite."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/essential-network-settings-and-tasks-in-windows"
+  - texto: "Si además querés que Windows gaste menos, escribile a PC Doctor «conexión de uso medido»."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/metered-connections-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/essential-network-settings-and-tasks-in-windows
+  - https://support.microsoft.com/windows/experience/connectivity-networking/metered-connections-in-windows
+madurez: T0
+---
+id: RED-018
+area: red
+titulo:
+  sencillo: "La compu no se conecta sola al Wi-Fi cuando la prendo"
+  tecnico: "La red conocida no se conecta automáticamente"
+explicacion:
+  sencillo: "Windows puede conectarse solo a tu Wi-Fi cada vez que lo encuentra, pero eso se elige al conectarte. Si no lo hace, conviene volver a guardar la red con esa opción marcada."
+  tecnico: "Perfil de red sin conexión automática, perfil dañado o adaptador apagado por administración de energía."
+frases: ["cada vez que prendo la compu tengo que conectar el wifi", "el wifi no se conecta solo", "tengo que elegir la red cada vez", "la notebook no se reconecta sola a internet"]
+pasos:
+  - texto: "Olvidá la red en «Administrar redes conocidas» (tené a mano la clave)."
+    abrir: "ms-settings:network-wifisettings"
+  - texto: "Volvé a conectarte desde la lista de redes y, antes de tocar «Conectar», marcá la opción para conectarte automáticamente cuando la red esté cerca."
+    abrir: "ms-settings:network-wifi"
+  - texto: "Si se desconecta al despertar la compu, Microsoft sugiere desmarcar «Permitir que el equipo apague este dispositivo para ahorrar energía» en las propiedades del adaptador de Wi-Fi (Administrador de dispositivos)."
+    abrir: "https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c"
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/connect-to-a-wi-fi-network-in-windows
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+madurez: T0
+---
+id: RED-019
+area: red
+titulo:
+  sencillo: "Quiero que Windows revise solo qué le pasa a Internet"
+  tecnico: "Solucionador de problemas de red e Internet (Obtener ayuda)"
+explicacion:
+  sencillo: "Windows tiene un ayudante que revisa la conexión y te propone soluciones. No arregla todo, pero es un buen primer paso."
+  tecnico: "Aplicación Obtener ayuda > «Ejecutar diagnóstico de red»: pruebas de diagnóstico de red y soluciones sugeridas."
+frases: ["solucionador de problemas de internet", "que windows revise la conexión", "diagnosticar la red de la compu", "ejecutar el diagnóstico de red"]
+pasos:
+  - texto: "Abrí la aplicación «Obtener ayuda» (buscala en Inicio)."
+  - texto: "En la búsqueda escribí «connect to network and internet» y tocá «Ejecutar diagnóstico de red»."
+  - texto: "Seguí los pasos que te propone hasta que vuelvas a tener conexión. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/support/get-help/windows-troubleshooters"
+fuentes:
+  - https://support.microsoft.com/support/get-help/windows-troubleshooters
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+madurez: T0
+---
+id: RED-020
+area: red
+titulo:
+  sencillo: "Mi Wi-Fi tiene dos redes (2,4 y 5 GHz): ¿a cuál me conecto?"
+  tecnico: "Bandas de 2,4 GHz y 5 GHz"
+explicacion:
+  sencillo: "Muchos routers tienen dos redes. La de 5 GHz es más rápida pero llega menos lejos y atraviesa peor las paredes. La de 2,4 GHz llega más lejos pero es más lenta y tiene más interferencias (microondas, teléfonos inalámbricos, Bluetooth)."
+  tecnico: "2,4 GHz: mayor alcance, menor velocidad, más congestión. 5 GHz: mayor velocidad, menos congestión, menor alcance. El adaptador debe admitir la banda."
+frases: ["cuál wifi elijo el 5g o el normal", "diferencia entre 2.4 y 5 ghz", "tengo dos redes wifi con el mismo nombre", "la red de 5 ghz no me aparece"]
+pasos:
+  - texto: "Si estás cerca del router, conectate a la de 5 GHz. Si estás lejos o con paredes en el medio, usá la de 2,4 GHz."
+    abrir: "ms-settings:network-wifi"
+  - texto: "Si la de 5 GHz no aparece en tu compu, puede que tu adaptador no la admita. Microsoft explica dónde revisarlo («No se encuentra ninguna red Wi-Fi»)."
+    abrir: "https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c"
+  - texto: "Microsoft compara las dos bandas y da consejos para ubicar el router."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/wi-fi-and-your-home-layout"
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/wi-fi-and-your-home-layout
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+madurez: T0
+---
+id: RED-021
+area: red
+titulo:
+  sencillo: "Enchufé un adaptador de Wi-Fi USB y no funciona"
+  tecnico: "Adaptador de red USB no reconocido o sin controlador"
+explicacion:
+  sencillo: "Los adaptadores USB (de Wi-Fi o de cable de red) a veces necesitan su controlador para funcionar. Si Windows no lo trae, se baja de la página del fabricante del adaptador."
+  tecnico: "Adaptador WLAN o Ethernet USB sin controlador, deshabilitado o con error en el Administrador de dispositivos."
+frases: ["el adaptador wifi usb no anda", "compré una antena wifi usb y no funciona", "enchufé el wifi usb y no aparecen redes", "el adaptador usb de red no lo reconoce"]
+pasos:
+  - texto: "Con el adaptador enchufado, reiniciá la compu."
+  - texto: "Abrí el Administrador de dispositivos (clic derecho en Inicio) y desplegá «Adaptadores de red». Si el adaptador aparece desactivado, clic derecho > «Habilitar dispositivo»."
+  - texto: "Si no aparece en la lista, instalá el controlador desde la página del fabricante del adaptador. Microsoft lo explica en «No se detectan ni habilitan adaptadores de red»."
+    abrir: "https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c"
+  - texto: "Buscá también actualizaciones en Windows Update."
+    abrir: "ms-settings:windowsupdate"
+fuentes:
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+  - https://support.microsoft.com/windows/experience/connectivity-networking/get-connected-when-setting-up-your-windows-device
+madurez: T0
+---
+id: RED-022
+area: red
+titulo:
+  sencillo: "Después de actualizar Windows se fue Internet"
+  tecnico: "Pérdida de conectividad tras una actualización (controlador de red)"
+explicacion:
+  sencillo: "A veces una actualización cambia el controlador de la plaquita de red y deja de andar bien. Se puede volver al controlador anterior o reinstalarlo."
+  tecnico: "Regresión del controlador del adaptador tras Windows Update: revertir controlador, reinstalarlo o restablecer la red."
+frases: ["se actualizó windows y no tengo internet", "después de la actualización no anda el wifi", "desde que actualicé no conecta a internet", "windows update me rompió el internet"]
+pasos:
+  - texto: "Reiniciá la compu y el router: a veces alcanza."
+  - texto: "Abrí el Administrador de dispositivos (clic derecho en Inicio), desplegá «Adaptadores de red», clic derecho en tu adaptador > «Propiedades» y, en la pestaña «Controlador», usá la opción para volver al controlador anterior. Hace falta entrar con un usuario administrador."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Si no se puede, Microsoft explica cómo desinstalar el adaptador para que Windows lo reinstale al reiniciar (conviene bajar antes el controlador de la página del fabricante)."
+    abrir: "https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c"
+  - texto: "Si nada funciona, escribile a PC Doctor «después de una actualización algo anda mal»."
+fuentes:
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+madurez: T0
+---
+id: RED-023
+area: red
+titulo:
+  sencillo: "¿Cómo veo la dirección IP de mi computadora?"
+  tecnico: "Consultar la dirección IPv4 del adaptador"
+explicacion:
+  sencillo: "La dirección IP es el «número» que el router le da a tu compu dentro de tu casa. A veces te lo pide un técnico o un programa."
+  tecnico: "Red e Internet > Wi-Fi (red conectada) o Ethernet > Propiedades: Dirección IPv4."
+frases: ["cómo sé la ip de mi compu", "ver mi dirección ip", "el técnico me pide la ip de la computadora", "dónde está la ip en windows"]
+pasos:
+  - texto: "Si estás por Wi-Fi, entrá en Wi-Fi y tocá las propiedades de la red a la que estás conectado."
+    abrir: "ms-settings:network-wifi"
+  - texto: "Si estás por cable, entrá en Ethernet."
+    abrir: "ms-settings:network-ethernet"
+  - texto: "Buscá el dato «Dirección IPv4». Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/essential-network-settings-and-tasks-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/essential-network-settings-and-tasks-in-windows
+madurez: T0
+---
+id: RED-024
+area: red
+titulo:
+  sencillo: "Me aparece un avioncito y no tengo Wi-Fi"
+  tecnico: "Modo avión activado"
+explicacion:
+  sencillo: "El avioncito significa que está prendido el «modo avión», que apaga el Wi-Fi y el Bluetooth de golpe. Se apaga con un toque."
+  tecnico: "Modo avión: desactiva las radios inalámbricas; al salir, Windows restaura el último estado de Wi-Fi y Bluetooth."
+frases: ["me aparece un avioncito abajo", "se puso el modo avión solo", "cómo saco el modo avión", "tengo un avión en lugar del wifi"]
+pasos:
+  - texto: "Tocá los íconos de red, volumen o batería abajo a la derecha y apagá «Modo avión»."
+  - texto: "O desactivalo desde Configuración."
+    abrir: "ms-settings:network-airplanemode"
+  - texto: "Si después de sacarlo el Wi-Fi sigue apagado, prendelo desde el mismo lugar. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/essential-network-settings-and-tasks-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/essential-network-settings-and-tasks-in-windows
+  - https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c
+madurez: T0
+---
+id: RED-025
+area: red
+titulo:
+  sencillo: "La compu nueva me pide Internet para terminar de configurarse y no conecta"
+  tecnico: "Sin conexión durante la configuración inicial de Windows"
+explicacion:
+  sencillo: "Para terminar de configurar una compu con Windows Home o Pro hace falta Internet. Si el Wi-Fi no conecta en ese momento, hay varias alternativas."
+  tecnico: "La configuración inicial (OOBE) de Windows Home/Pro requiere conexión: Wi-Fi, Ethernet, red móvil o hotspot del teléfono."
+frases: ["la compu nueva no se conecta al wifi para configurarla", "me pide internet al instalar windows", "no puedo terminar de configurar la notebook nueva sin internet", "en la configuración inicial no aparece el wifi"]
+pasos:
+  - texto: "Reiniciá el módem y el router, acercate y revisá bien la clave del Wi-Fi. Si ves dos redes (2,4 y 5 GHz), probá con la otra."
+  - texto: "Si la compu tiene entrada de cable de red, enchufá un cable al router (o usá un adaptador USB a cable de red)."
+  - texto: "Otra opción: compartí Internet desde el celular (zona Wi-Fi o punto de acceso) y conectá la compu a esa red. Microsoft explica todas las opciones."
+    abrir: "https://support.microsoft.com/windows/experience/connectivity-networking/get-connected-when-setting-up-your-windows-device"
+fuentes:
+  - https://support.microsoft.com/windows/experience/connectivity-networking/get-connected-when-setting-up-your-windows-device
+madurez: T0

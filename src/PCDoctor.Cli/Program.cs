@@ -151,14 +151,17 @@ switch (args[0])
         foreach (var (name, cases) in new[] { ("conocidas", EvalSets.Known), ("nuevas", EvalSets.Novel), ("control", EvalSets.Control), ("control limpio", EvalSets.Clean), ("control limpio 2", EvalSets.Clean2) })
         {
             var hits = 0;
+            var hits5 = 0; // la pantalla muestra hasta 5 opciones
             var misses = new List<string>();
             foreach (var (text, expected) in cases)
             {
-                var top = host.Matcher.Match(text, 3).Select(m => m.Problem.Id).ToList();
+                var top5 = host.Matcher.Match(text, 5).Select(m => m.Problem.Id).ToList();
+                var top = top5.Take(3).ToList();
+                if (top5.Any(expected.Contains)) hits5++;
                 if (top.Any(expected.Contains)) hits++;
                 else misses.Add($"«{text}» → [{string.Join(", ", top)}]");
             }
-            Console.WriteLine($"{name}: {hits}/{cases.Length}");
+            Console.WriteLine($"{name}: {hits}/{cases.Length} entre las 3 primeras · {hits5}/{cases.Length} entre las 5 que ve la persona");
             foreach (var m in misses) Console.WriteLine("   falló " + m);
         }
         return 0;

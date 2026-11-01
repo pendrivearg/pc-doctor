@@ -15,7 +15,7 @@ public sealed class SymptomMatcher
     private static readonly Dictionary<string, string> Synonyms = BuildSynonyms(new()
     {
         ["pc"] = ["compu", "computadora", "computador", "ordenador", "maquina", "pc", "notebook", "laptop", "portatil", "equipo", "netbook", "windows"],
-        ["lento"] = ["lenta", "lento", "lentitud", "lentisima", "lentisimo", "tarda", "tardar", "demora", "tilda", "tildada", "tildado", "colgada", "colgado", "cuelga", "traba", "trabada", "trabado", "congela", "congelada", "pesada", "pesado", "lag", "lenteja"],
+        ["lento"] = ["lenta", "lento", "lentitud", "lentisima", "lentisimo", "tarda", "tardar", "demora", "tilda", "tildada", "tildado", "colgada", "colgado", "cuelga", "traba", "trabada", "trabado", "congela", "congelada", "pesada", "pesado", "lag", "lenteja", "eternidad", "siglos", "despacio", "lentisima"],
         ["internet"] = ["internet", "wifi", "wi", "fi", "conexion", "conectar", "conecta", "navegar", "navegador", "paginas", "pagina", "web", "router", "modem", "red", "online"],
         ["abre"] = ["abre", "abren", "abrir", "abrio", "inicia", "iniciar", "ejecuta", "ejecutar", "carga", "cargar"],
         ["sonido"] = ["sonido", "audio", "parlantes", "parlante", "altavoz", "altavoces", "volumen", "escucho", "escucha", "suena", "oigo", "oye", "oir", "auriculares", "mudo", "silencio"],
@@ -61,6 +61,7 @@ public sealed class SymptomMatcher
         "eso", "esto", "este", "ese", "su", "sus", "si", "porque", "cada", "vez", "ahora", "hace", "dice",
         "algo", "otra", "otro", "mucho", "mucha", "poco", "bien", "mal", "solo", "sola", "quiero", "necesito",
         "ayuda", "problema", "ser", "son", "fue", "estoy", "deja", "dejo", "dejar", "anduvo",
+        "desde", "hasta", "despues", "antes", "aunque", "tambien",
     ];
 
     private readonly List<(ProblemDef Problem, List<HashSet<string>> Phrases)> _index = new();
@@ -125,6 +126,8 @@ public sealed class SymptomMatcher
         // Expresiones que cambian de sentido según el contexto («no se oye» = sonido; «no me oye» = micrófono).
         var normalized = " " + System.Text.RegularExpressions.Regex.Replace(sb.ToString(), @"\s+", " ") + " ";
         foreach (var (pattern, replacement) in Idioms) normalized = pattern.Replace(normalized, replacement);
+        // «carga» es «cargar la batería» si se habla del cargador o la batería; si no, es «la página carga» (abrir).
+        if (ChargingContext.IsMatch(normalized)) normalized = ChargingVerb.Replace(normalized, " bateria ");
         var tokens = new HashSet<string>();
         foreach (var raw in normalized.Split(' ', StringSplitOptions.RemoveEmptyEntries))
         {
@@ -148,9 +151,14 @@ public sealed class SymptomMatcher
         (Rx(@" copia (no )?original | no es original "), " activar "),
         // «me dijo por teléfono» habla de una llamada, no del aparato (lo distingue de «el internet del teléfono»).
         (Rx(@" por (telefono|celular) "), " llamada "),
+        // «el símbolo del mail / de los correos» es la arroba.
+        (Rx(@" (simbolo|signo) (del?|de los|de las) (mail|mails|email|emails|correo|correos)( electronicos?)? "), " arroba "),
         // «la notebook se descarga» es la batería; «descargar un archivo» es bajarlo de Internet.
         (Rx(@" (notebook|laptop|portatil|bateria|pila) se (descarga|descargo|descargan) "), " bateria dura poco "),
     ];
+
+    private static readonly System.Text.RegularExpressions.Regex ChargingContext = Rx(@" (cargador|cargadores|bateria|baterias|enchufad[oa]|enchufe) ");
+    private static readonly System.Text.RegularExpressions.Regex ChargingVerb = Rx(@" (carga|cargar|cargando|cargue|cargo) ");
 
     private static System.Text.RegularExpressions.Regex Rx(string p) =>
         new(p, System.Text.RegularExpressions.RegexOptions.Compiled | System.Text.RegularExpressions.RegexOptions.CultureInvariant);

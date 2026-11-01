@@ -1,0 +1,491 @@
+# Periféricos y hardware (2): impresoras, monitores, teclado, mouse, USB-C, audio y lápiz. Fichas guiadas con fuente oficial (prefijo HWP).
+id: HWP-001
+area: perifericos
+titulo:
+  sencillo: "La impresora dice «Controlador no disponible»"
+  tecnico: "Impresora con controlador ausente o incompatible"
+explicacion:
+  sencillo: "El controlador es el programita que le explica a Windows cómo hablar con tu impresora. Si falta o quedó viejo (pasa a veces después de una actualización), la impresora aparece pero no imprime. Se arregla volviendo a instalarlo."
+  tecnico: "Estado «Controlador no disponible» en Impresoras y escáneres: reinstalar el controlador vía Windows Update o desde el sitio del fabricante, quitando y volviendo a agregar la impresora."
+frases: ["la impresora dice controlador no disponible", "me aparece que no está disponible el driver de la impresora", "después de actualizar windows la impresora quedó sin controlador", "falta el driver de la impresora"]
+pasos:
+  - texto: "Abrí Impresoras y escáneres, elegí tu impresora y tocá «Quitar». Después tocá «Agregar dispositivo» para que Windows la vuelva a encontrar e instale su controlador."
+    abrir: "ms-settings:printers"
+  - texto: "Buscá actualizaciones en Windows Update: es la forma que recomienda Microsoft para conseguir el controlador de la impresora."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si sigue igual, anotá el modelo (está escrito en la impresora), entrá a la página oficial del fabricante, sección «Soporte» o «Drivers», y descargá el programa para tu versión de Windows. Abrí el archivo descargado y seguí los pasos."
+    abrir: "https://support.microsoft.com/windows/hardware/printer/download-and-install-the-latest-printer-drivers"
+  - texto: "Microsoft explica otros pasos si la impresora sigue sin imprimir."
+    abrir: "https://support.microsoft.com/windows/fix-printer-connection-and-printing-problems-in-windows-fb830bff-7702-6349-33cd-9443fe987f73"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/printer/download-and-install-the-latest-printer-drivers
+  - https://support.microsoft.com/windows/fix-printer-connection-and-printing-problems-in-windows-fb830bff-7702-6349-33cd-9443fe987f73
+  - https://support.microsoft.com/windows/hardware/printer/add-or-install-a-printer-in-windows
+madurez: T0
+---
+id: HWP-002
+area: perifericos
+titulo:
+  sencillo: "Error 0x0000011b o 0x00000709 al usar la impresora de otra compu"
+  tecnico: "Fallas de conexión a una impresora compartida (0x0000011b / 0x00000709)"
+explicacion:
+  sencillo: "Estos códigos suelen aparecer cuando imprimís en una impresora que está conectada a OTRA computadora de la casa o la oficina. Muchas veces se debe a cambios de seguridad de Windows: las dos computadoras tienen que estar actualizadas."
+  tecnico: "Errores al conectar con una impresora compartida (cambios de autenticación RPC de impresión, KB4599464). Actualizar cliente y servidor, revisar uso compartido y volver a agregar la impresora por nombre."
+frases: ["me sale el error 0x0000011b al imprimir", "error 0x00000709 con la impresora", "windows no se puede conectar a la impresora compartida", "no puedo imprimir en la impresora de la otra compu"]
+pasos:
+  - texto: "Actualizá Windows en LAS DOS computadoras: la que tiene la impresora enchufada y la tuya. Microsoft pide que todas tengan las actualizaciones al día."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "En la computadora que tiene la impresora, fijate que esté prendida y que tenga activados «Detección de redes» y «Uso compartido de archivos e impresoras» (Red e Internet > Configuración de red avanzada > Configuración de uso compartido avanzado)."
+    abrir: "ms-settings:network-status"
+  - texto: "En tu computadora, en Impresoras y escáneres, quitá esa impresora, reiniciá y volvé a agregarla: «Agregar dispositivo» > «Agregar manualmente» > «Seleccionar una impresora compartida por nombre»."
+    abrir: "ms-settings:printers"
+  - texto: "Microsoft explica cada paso para impresoras compartidas."
+    abrir: "https://support.microsoft.com/en-us/windows/hardware/printer/fix-shared-printer-connection-problems-in-windows"
+derivar: "Si sigue el error, no cambies el registro de Windows ni desactives protecciones por tu cuenta: esas «soluciones» de Internet dejan la compu menos segura. Consultá a un técnico."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/hardware/printer/fix-shared-printer-connection-problems-in-windows
+  - https://support.microsoft.com/kb/4599464
+madurez: T0
+---
+id: HWP-003
+area: perifericos
+titulo:
+  sencillo: "La impresora imprime rayado, desteñido o borroso"
+  tecnico: "Mala calidad de impresión (rayas, tenue, borroso)"
+explicacion:
+  sencillo: "Casi siempre es la tinta o el tóner que se está acabando, el cabezal sucio o que la impresora está en modo «ahorro». Hay una prueba sencilla para saber si el problema es de la impresora o de la computadora."
+  tecnico: "Página de prueba desde el panel de la impresora, preferencias de impresión (calidad, borrador/ahorro, tipo de papel), limpieza y alineación de cabezales, consumibles y controlador."
+frases: ["la impresora saca las hojas con rayas", "imprime todo clarito y desteñido", "las letras salen cortadas o con franjas", "la impresión sale borrosa", "imprime con manchas y líneas"]
+pasos:
+  - texto: "Imprimí una página de prueba desde los botones de la propia impresora. Si también sale mal, el problema es de la impresora; si sale bien, seguí con los pasos de la computadora."
+  - texto: "Revisá que la tinta o el tóner no estén vacíos ni vencidos. En impresoras de chorro de tinta, usá la opción «Limpiar cabezal» o «Mantenimiento» del panel o del programa de la impresora (gasta tinta: no la repitas muchas veces)."
+  - texto: "En Impresoras y escáneres, elegí tu impresora > «Preferencias de impresión»: poné la calidad en «Normal» o «Óptima», apagá los modos borrador, económico o ahorro de tóner, y elegí el tipo de papel que usás."
+    abrir: "ms-settings:printers"
+  - texto: "Microsoft explica el resto de los pasos."
+    abrir: "https://support.microsoft.com/windows/fix-poor-print-quality-in-windows-blurry-faded-or-streaked-prints-d7498ada-4e54-4406-8969-a031b6311214"
+fuentes:
+  - https://support.microsoft.com/windows/fix-poor-print-quality-in-windows-blurry-faded-or-streaked-prints-d7498ada-4e54-4406-8969-a031b6311214
+madurez: T0
+---
+id: HWP-004
+area: perifericos
+titulo:
+  sencillo: "Un documento quedó trabado en la cola y no se borra"
+  tecnico: "Cola de impresión bloqueada: reiniciar la cola de impresión y vaciar la carpeta PRINTERS"
+explicacion:
+  sencillo: "A veces un documento queda «colgado» en la lista de impresión y, aunque lo cancelás, no se va y no deja imprimir nada más. Se puede vaciar la lista a mano. Ojo: se borran TODOS los documentos que estaban esperando para imprimirse (tus archivos no se tocan)."
+  tecnico: "Detener el servicio Cola de impresión (Print Spooler), borrar %WINDIR%\\system32\\spool\\PRINTERS y volver a iniciarlo en Automático."
+frases: ["no puedo cancelar lo que mandé a imprimir", "el documento queda en eliminando y no se borra", "se trabó la cola de impresión", "quedó un trabajo atascado en la impresora"]
+pasos:
+  - texto: "Primero apagá la impresora, desenchufala, esperá 30 segundos y volvé a prenderla."
+  - texto: "Si sigue trabado: tocá Windows + R, escribí services.msc y Enter. Hacé doble clic en «Cola de impresión» y tocá «Detener»."
+  - texto: "Tocá Windows + R, escribí %WINDIR%\\system32\\spool\\PRINTERS y Enter. Borrá todo lo que hay en esa carpeta (son solo los documentos pendientes de imprimir)."
+  - texto: "Volvé a «Cola de impresión», en «Tipo de inicio» elegí «Automático», tocá «Iniciar» y «Aceptar». Microsoft lo explica en el paso de la cola de impresión."
+    abrir: "https://support.microsoft.com/windows/fix-printer-connection-and-printing-problems-in-windows-fb830bff-7702-6349-33cd-9443fe987f73"
+fuentes:
+  - https://support.microsoft.com/windows/fix-printer-connection-and-printing-problems-in-windows-fb830bff-7702-6349-33cd-9443fe987f73
+madurez: T0
+---
+id: HWP-005
+area: perifericos
+titulo:
+  sencillo: "Quiero agregar una impresora Wi-Fi o de red"
+  tecnico: "Agregar una impresora de red o inalámbrica"
+explicacion:
+  sencillo: "Una impresora Wi-Fi se puede usar desde cualquier compu de la casa, sin cables, siempre que estén conectadas a la misma red Wi-Fi."
+  tecnico: "Impresoras y escáneres > Agregar dispositivo; si no aparece, «Agregar manualmente». Misma red que el equipo."
+frases: ["quiero instalar la impresora wifi", "agregar una impresora de red", "la compu no encuentra la impresora inalámbrica", "conectar la impresora sin cable"]
+pasos:
+  - texto: "Prendé la impresora y fijate que esté conectada a la MISMA red Wi-Fi que la computadora (en el panel de la impresora suele haber una opción de red o Wi-Fi)."
+  - texto: "Abrí Impresoras y escáneres y tocá «Agregar dispositivo». Esperá unos minutos a que aparezca tu impresora y tocá «Agregar dispositivo» al lado."
+    abrir: "ms-settings:printers"
+  - texto: "Si no aparece, tocá «Agregar manualmente» (al lado de «La impresora que deseo no está en la lista») y seguí las instrucciones de la ventana."
+    abrir: "https://support.microsoft.com/windows/hardware/printer/add-or-install-a-printer-in-windows"
+  - texto: "Después buscá actualizaciones en Windows Update para que se instale el controlador completo."
+    abrir: "ms-settings:windowsupdate"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/printer/add-or-install-a-printer-in-windows
+madurez: T0
+---
+id: HWP-006
+area: perifericos
+titulo:
+  sencillo: "Quiero imprimir en la impresora que está enchufada en otra compu"
+  tecnico: "Compartir una impresora y conectarse por nombre (\\\\Equipo\\Impresora)"
+explicacion:
+  sencillo: "Si la impresora está conectada por cable a una computadora, se puede «compartir» para que las otras compus de la casa también la usen. La computadora que tiene la impresora tiene que estar prendida."
+  tecnico: "Pestaña Compartir en las propiedades de la impresora; detección de redes y uso compartido de archivos e impresoras; agregar por nombre \\\\NombreEquipo\\NombreRecurso."
+frases: ["usar la impresora de la otra computadora", "compartir la impresora entre dos compus", "imprimir desde la notebook en la impresora de la pc", "la impresora está en la otra compu y quiero usarla"]
+pasos:
+  - texto: "En la computadora que tiene la impresora: abrí las propiedades de la impresora, en la pestaña «Compartir» activá compartirla y anotá el nombre que le pone."
+    abrir: "ms-settings:printers"
+  - texto: "En las dos compus, activá «Detección de redes» y «Uso compartido de archivos e impresoras» (Red e Internet > Configuración de red avanzada > Configuración de uso compartido avanzado). Tienen que estar en la misma red."
+    abrir: "ms-settings:network-status"
+  - texto: "En la otra compu: Impresoras y escáneres > «Agregar dispositivo» > «Agregar manualmente» > «Seleccionar una impresora compartida por nombre», y escribí \\\\NombreDeLaCompu\\NombreDeLaImpresora."
+    abrir: "https://support.microsoft.com/en-us/windows/hardware/printer/fix-shared-printer-connection-problems-in-windows"
+fuentes:
+  - https://support.microsoft.com/en-us/windows/hardware/printer/fix-shared-printer-connection-problems-in-windows
+madurez: T0
+---
+id: HWP-007
+area: perifericos
+titulo:
+  sencillo: "Escaneé un documento y no sé dónde quedó (o en qué formato)"
+  tecnico: "Escáner de Windows: tipo de archivo y carpeta de destino"
+explicacion:
+  sencillo: "La aplicación «Escáner de Windows» guarda lo escaneado como imagen (JPEG, PNG, TIFF o Bitmap), no como PDF. Si no elegiste otra carpeta, queda dentro de la carpeta Imágenes, en la de escaneos."
+  tecnico: "Windows Scan: tipos JPEG, PNG, TIFF y Bitmap; destino predeterminado Imágenes > Scans (escaneos), configurable en «Mostrar más» > «Guardar archivo en»."
+frases: ["dónde se guarda lo que escaneo", "escaneé y no encuentro el archivo", "quiero escanear en pdf", "en qué carpeta queda lo escaneado"]
+pasos:
+  - texto: "Abrí el Explorador de archivos (Windows + E) y entrá a Imágenes: adentro está la carpeta de escaneos (puede llamarse «Scans»). Ahí van si no elegiste otra carpeta."
+  - texto: "Para el próximo: abrí «Escáner» desde Inicio, elegí el tipo en «Tipo de archivo» y, en «Mostrar más», tocá el enlace de «Guardar archivo en» para elegir la carpeta. Después tocá «Escanear»."
+    abrir: "https://support.microsoft.com/windows/hardware/printer/install-and-use-a-scanner-in-windows"
+  - texto: "Esta aplicación no guarda en PDF. Si te piden un PDF, escribile a PC Doctor «quiero guardar un documento como PDF»."
+fuentes:
+  - https://support.microsoft.com/windows/hardware/printer/install-and-use-a-scanner-in-windows
+madurez: T0
+---
+id: HWP-008
+area: hardware
+titulo:
+  sencillo: "La notebook carga muy lento (o no carga) por USB-C"
+  tecnico: "Notificación «Cargador lento» / «El equipo no se está cargando» por USB-C"
+explicacion:
+  sencillo: "Por USB-C la carga depende de que el cargador, el cable y la computadora aguanten la potencia necesaria. Un cargador de celular o un cable flojito cargan lento o directamente no cargan."
+  tecnico: "Cargador o cable USB-C sin la potencia requerida, puerto que no es de carga, o conexión a través de un hub o dock."
+frases: ["windows dice que el cargador es lento", "la notebook carga lentísimo con el cargador usb-c", "enchufé el cargador usb c y no carga", "me sale cargador lento conectado"]
+pasos:
+  - texto: "Usá el cargador y el cable que vinieron con la computadora. Un cargador de celular suele no alcanzar."
+  - texto: "Enchufalo en el puerto USB-C que sirve para cargar (el manual de la computadora dice cuál es), directo y no a través de un adaptador, hub o base."
+  - texto: "Si el puerto tiene pelusa o polvo, limpialo con aire comprimido, con la compu apagada."
+    abrir: "https://support.microsoft.com/windows/hardware/usb/fix-usb-c-problems-in-windows"
+derivar: "Si con el cargador original tampoco carga, puede ser el cargador, el cable o el puerto: llevala al servicio técnico de la marca."
+fuentes:
+  - https://support.microsoft.com/windows/hardware/usb/fix-usb-c-problems-in-windows
+madurez: T0
+---
+id: HWP-009
+area: hardware
+titulo:
+  sencillo: "Windows dice «La conexión de la pantalla puede estar limitada» por USB-C"
+  tecnico: "Monitor por USB-C sin modo alternativo DisplayPort/MHL"
+explicacion:
+  sencillo: "No todos los puertos ni todos los cables USB-C pasan imagen. Si el puerto, el cable o el adaptador no lo permiten, el monitor no se ve o se ve con limitaciones."
+  tecnico: "El equipo, el cable o la pantalla no admiten DisplayPort o MHL en modo alternativo sobre USB-C, o la conexión pasa por un hub/dock."
+frases: ["conecté el monitor por usb c y no anda", "dice que la conexión de pantalla puede estar limitada", "el adaptador usb-c a hdmi no da imagen", "el monitor no se ve por el usb-c"]
+pasos:
+  - texto: "Fijate en el manual o la página del fabricante de tu computadora cuál de sus puertos USB-C da imagen (no todos lo hacen)."
+  - texto: "Conectá el monitor directo a ese puerto, sin hubs ni bases intermedias."
+  - texto: "Probá con otro cable: la computadora, el cable y el monitor tienen que admitir video por USB-C (DisplayPort o MHL)."
+    abrir: "https://support.microsoft.com/windows/hardware/usb/fix-usb-c-problems-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/usb/fix-usb-c-problems-in-windows
+madurez: T0
+---
+id: HWP-010
+area: perifericos
+titulo:
+  sencillo: "Windows dice que un aparato USB «puede necesitar más energía»"
+  tecnico: "Notificación «Es posible que el dispositivo USB necesite más energía»"
+explicacion:
+  sencillo: "Algunos aparatos piden más energía de la que el puerto puede dar, sobre todo si la notebook está a batería o hay muchas cosas enchufadas."
+  tecnico: "Consumo del dispositivo por encima de lo que entrega el puerto; alimentar externamente, conectar el equipo a la corriente y liberar puertos."
+frases: ["dice que el dispositivo usb necesita más energía", "el usb avisa que le falta energía","me sale un aviso de energía del usb", "el aparato usb no tiene suficiente energía"]
+pasos:
+  - texto: "Si el aparato tiene su propio cargador o fuente, enchufalo."
+  - texto: "Enchufá la notebook a la corriente en vez de usarla a batería."
+  - texto: "Desenchufá los aparatos USB que no estés usando."
+    abrir: "https://support.microsoft.com/windows/hardware/usb/fix-usb-c-problems-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/usb/fix-usb-c-problems-in-windows
+madurez: T0
+---
+id: HWP-011
+area: audio
+titulo:
+  sencillo: "Los auriculares con adaptador USB-C no suenan"
+  tecnico: "Adaptador de audio USB-C analógico no admitido"
+explicacion:
+  sencillo: "Hay adaptadores USB-C para auriculares «simples» (analógicos) que Windows no puede usar. Hace falta uno «digital»."
+  tecnico: "Notificación «Adaptador de audio USB-C no admitido»: reemplazar el adaptador analógico por uno digital."
+frases: ["los auriculares con adaptador usb c no se escuchan", "dice adaptador de audio no compatible", "el adaptadorcito de auriculares a usb-c no anda", "enchufé los auriculares en el usb c y no suenan"]
+pasos:
+  - texto: "Si Windows avisa que el adaptador de audio no es compatible, cambialo por un adaptador USB-C de audio digital."
+    abrir: "https://support.microsoft.com/windows/hardware/usb/fix-usb-c-problems-in-windows"
+  - texto: "Después, en Sonido > Salida, elegí los auriculares."
+    abrir: "ms-settings:sound"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/usb/fix-usb-c-problems-in-windows
+madurez: T0
+---
+id: HWP-012
+area: hardware
+titulo:
+  sencillo: "El monitor no muestra nada o dice «Sin señal»"
+  tecnico: "Monitor externo sin imagen"
+explicacion:
+  sencillo: "Si la computadora está prendida pero el monitor queda negro o con un cartel de «sin señal», muchas veces es el cable, el puerto o el modo de pantalla elegido en Windows."
+  tecnico: "Modo de proyección (Windows + P), cable y puerto de video, adaptadores intermedios, reinicio del controlador gráfico (Windows + Ctrl + Mayús + B)."
+frases: ["el monitor dice sin señal", "la pc prende pero el monitor queda negro", "el monitor no da imagen", "el monitor dice no signal"]
+pasos:
+  - texto: "Revisá que el cable del monitor esté bien firme en los dos extremos. Si tenés otro cable, probá con ese."
+  - texto: "Si usás un adaptador o una base, sacalos y conectá el monitor directo. Si la computadora tiene otra salida de video (HDMI, DisplayPort, VGA), probá con esa."
+  - texto: "Apretá Windows + P y elegí «Extender». También podés apretar Windows + Ctrl + Mayús + B: reinicia el video sin apagar la compu."
+  - texto: "Reiniciá la computadora. Si podés, probá el monitor en otra compu para saber si la falla es del monitor o de la computadora."
+    abrir: "https://support.microsoft.com/windows/hardware/display-graphics/troubleshoot-external-monitor-connections-in-windows"
+derivar: "Si el monitor tampoco anda en otra computadora, el problema es del monitor: consultá al service."
+fuentes:
+  - https://support.microsoft.com/windows/hardware/display-graphics/troubleshoot-external-monitor-connections-in-windows
+madurez: T0
+---
+id: HWP-013
+area: hardware
+titulo:
+  sencillo: "La pantalla se ve borrosa, estirada o con bordes negros"
+  tecnico: "Resolución distinta de la recomendada"
+explicacion:
+  sencillo: "Cada pantalla tiene una resolución ideal. Si está puesta otra, las letras se ven menos nítidas, la imagen queda estirada o aparecen bordes negros."
+  tecnico: "Sistema > Pantalla > Escala y diseño > Resolución de pantalla (Recomendado); cambios inesperados sugieren actualizar el controlador gráfico."
+frases: ["la pantalla se ve borrosa", "la imagen se ve estirada", "aparecen bordes negros en el monitor", "se cambió la resolución sola", "las letras se ven desenfocadas"]
+pasos:
+  - texto: "Abrí Pantalla. Si tenés varios monitores, elegí arriba el que se ve mal."
+    abrir: "ms-settings:display"
+  - texto: "En «Escala y diseño», en «Resolución de pantalla», elegí la que dice «(Recomendado)»."
+  - texto: "Si lo que querés es agrandar letras e íconos, no toques la resolución: cambiá «Escala» (también conviene la recomendada)."
+  - texto: "Si la resolución se cambia sola, buscá actualizaciones en Windows Update: puede hacer falta actualizar el controlador de video."
+    abrir: "ms-settings:windowsupdate"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/display-graphics/change-your-screen-resolution-and-layout-in-windows
+madurez: T0
+---
+id: HWP-014
+area: hardware
+titulo:
+  sencillo: "Activé HDR y todo se ve lavado, oscuro o con colores raros"
+  tecnico: "HDR en Windows: activación, brillo del contenido SDR y modo duplicado"
+explicacion:
+  sencillo: "HDR sirve para ver películas y juegos con más brillo y colores, pero solo si la pantalla lo admite. Si lo demás se ve apagado, se puede ajustar el brillo de lo «normal» o directamente apagar HDR."
+  tecnico: "Sistema > Pantalla > HDR; control «Brillo del contenido SDR»; HDR no se admite con pantallas duplicadas; en notebooks se apaga a batería por defecto."
+frases: ["con hdr se ve todo lavado", "cómo activo el hdr", "no me aparece la opción hdr", "los colores se ven apagados con hdr", "el hdr se apaga solo en la notebook"]
+pasos:
+  - texto: "Abrí Pantalla, elegí arriba la pantalla que admite HDR y prendé o apagá «HDR» según lo que quieras."
+    abrir: "ms-settings:display"
+  - texto: "Si con HDR lo normal se ve lavado u oscuro, entrá a la opción HDR y mové el control de brillo del contenido SDR hasta que se vea bien."
+  - texto: "Si en la notebook con un monitor conectado no aparece HDR, elegí «Extender estas pantallas»: con las pantallas duplicadas HDR no funciona."
+  - texto: "En notebooks, HDR se apaga solo al desenchufar para ahorrar batería; se puede cambiar en la misma sección (gasta más batería). Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/hdr-settings-in-windows-2d767185-38ec-7fdc-6f97-bbc6c5ef24e6"
+fuentes:
+  - https://support.microsoft.com/windows/hdr-settings-in-windows-2d767185-38ec-7fdc-6f97-bbc6c5ef24e6
+madurez: T0
+---
+id: HWP-015
+area: hardware
+titulo:
+  sencillo: "Con dos monitores, el mouse no pasa al otro por el lado correcto"
+  tecnico: "Organizar pantallas en Sistema > Pantalla"
+explicacion:
+  sencillo: "Windows tiene que saber dónde está cada monitor sobre tu mesa (a la izquierda, a la derecha, arriba). Si lo tiene al revés, la flechita sale por el lado equivocado."
+  tecnico: "Identificar y arrastrar las pantallas en Sistema > Pantalla, Aplicar; modo de proyección con Windows + P."
+frases: ["el mouse no pasa al otro monitor", "tengo que salir por la izquierda para ir al monitor de la derecha", "ordenar los dos monitores", "las pantallas están al revés"]
+pasos:
+  - texto: "Abrí Pantalla y tocá «Identificar»: en cada monitor aparece un número."
+    abrir: "ms-settings:display"
+  - texto: "Arrastrá los rectángulos numerados para que queden como están los monitores sobre tu mesa y tocá «Aplicar». Probá pasar el mouse de una pantalla a la otra."
+  - texto: "Si las dos muestran lo mismo, apretá Windows + P y elegí «Extender»."
+    abrir: "https://support.microsoft.com/windows/hardware/display-graphics/how-to-use-multiple-monitors-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/display-graphics/how-to-use-multiple-monitors-in-windows
+madurez: T0
+---
+id: HWP-016
+area: perifericos
+titulo:
+  sencillo: "El clic izquierdo y el derecho del mouse están cambiados"
+  tecnico: "Botón principal del mouse configurado a la derecha"
+explicacion:
+  sencillo: "Windows permite elegir cuál es el botón principal del mouse (pensado para zurdos). Si se cambió, el clic izquierdo hace lo que antes hacía el derecho."
+  tecnico: "Bluetooth y dispositivos > Mouse > botón principal del mouse: Izquierdo / Derecho."
+frases: ["el mouse tiene los botones al revés", "el clic izquierdo abre el menú", "se invirtieron los botones del mouse", "poner el mouse para zurdos"]
+pasos:
+  - texto: "Abrí la configuración del Mouse (mientras estén cambiados, usá el botón derecho para hacer clic)."
+    abrir: "ms-settings:mousetouchpad"
+  - texto: "En la opción del botón principal del mouse, elegí «Izquierdo» (o «Derecho» si sos zurdo y lo preferís así)."
+    abrir: "https://support.microsoft.com/windows/hardware/input-devices/change-mouse-settings"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/input-devices/change-mouse-settings
+madurez: T0
+---
+id: HWP-017
+area: perifericos
+titulo:
+  sencillo: "El doble clic no me sale o el mouse queda arrastrando cosas"
+  tecnico: "Velocidad de doble clic y Bloqueo de clic (ClickLock)"
+explicacion:
+  sencillo: "Si el doble clic tiene que ser muy rápido, cuesta abrir carpetas. Y si está activado el «Bloqueo de clic», el mouse sigue agarrando lo que tocaste aunque sueltes el botón."
+  tecnico: "Propiedades del mouse > Botones: Velocidad de doble clic y Bloqueo de clic (ClickLock)."
+frases: ["no me sale el doble clic", "tengo que hacer doble clic muy rápido", "el mouse queda arrastrando las cosas", "el mouse se queda agarrado sin apretar"]
+pasos:
+  - texto: "Abrí la configuración del Mouse y, abajo, en la configuración relacionada, tocá «Configuración adicional del mouse»."
+    abrir: "ms-settings:mousetouchpad"
+  - texto: "En la pestaña «Botones», mové la velocidad de doble clic hacia «Lenta» y tocá «Aceptar»."
+  - texto: "En la misma pestaña, si está tildado el bloqueo de clic (ClickLock) y no lo usás, destildalo y tocá «Aceptar»."
+    abrir: "https://support.microsoft.com/windows/hardware/input-devices/change-mouse-settings"
+derivar: "Si el mouse sigue haciendo doble clic o soltando cosas por su cuenta, probá con otro mouse: puede ser el botón gastado."
+fuentes:
+  - https://support.microsoft.com/windows/hardware/input-devices/change-mouse-settings
+madurez: T0
+---
+id: HWP-018
+area: perifericos
+titulo:
+  sencillo: "La ruedita del mouse baja demasiado, muy poco o al revés"
+  tecnico: "Configuración de desplazamiento de la rueda del mouse"
+explicacion:
+  sencillo: "Se puede elegir cuántas líneas baja cada «clic» de la ruedita, si salta una pantalla entera y hacia qué lado se mueve la página."
+  tecnico: "Mouse > Desplazamiento: varias líneas o una pantalla a la vez, líneas por vez, desplazar ventanas inactivas y dirección de desplazamiento."
+frases: ["la ruedita del mouse baja muy rápido", "la rueda del mouse sube cuando la bajo", "el scroll del mouse va al revés", "la ruedita salta una página entera"]
+pasos:
+  - texto: "Abrí la configuración del Mouse y buscá la sección de desplazamiento."
+    abrir: "ms-settings:mousetouchpad"
+  - texto: "Elegí que la rueda mueva varias líneas a la vez (no una pantalla a la vez) y ajustá con el control cuántas líneas baja."
+  - texto: "Si va al revés, cambiá la dirección de desplazamiento para que al bajar la ruedita la página baje."
+    abrir: "https://support.microsoft.com/windows/hardware/input-devices/change-mouse-settings"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/input-devices/change-mouse-settings
+madurez: T0
+---
+id: HWP-019
+area: perifericos
+titulo:
+  sencillo: "La flechita del mouse va muy rápido, muy lento o no le emboco"
+  tecnico: "Velocidad y precisión del puntero"
+explicacion:
+  sencillo: "La velocidad de la flechita se puede ajustar a tu gusto. Así es más fácil apuntar a los botones chiquitos."
+  tecnico: "Mouse > velocidad del puntero del mouse y «Mejorar la precisión del puntero»."
+frases: ["el mouse va muy rápido", "la flechita se mueve muy lento", "no puedo apuntar bien con el mouse", "me cuesta acertarle a los botones con el mouse"]
+pasos:
+  - texto: "Abrí la configuración del Mouse y mové el control de velocidad del puntero hasta que te resulte cómodo."
+    abrir: "ms-settings:mousetouchpad"
+  - texto: "Activá «Mejorar la precisión del puntero» para que sea más fácil apuntar."
+    abrir: "https://support.microsoft.com/windows/hardware/input-devices/change-mouse-settings"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/input-devices/change-mouse-settings
+madurez: T0
+---
+id: HWP-020
+area: perifericos
+titulo:
+  sencillo: "La flechita se mueve cuando toco los números del teclado"
+  tecnico: "Teclas del mouse activadas (el teclado numérico controla el puntero)"
+explicacion:
+  sencillo: "Windows tiene una opción de accesibilidad que deja manejar la flechita con los números del costado del teclado. Si quedó activada, esos números pueden mover el mouse en vez de escribir."
+  tecnico: "Accesibilidad > Interacción > Mouse > Teclas del mouse."
+frases: ["los números del teclado mueven el mouse", "el teclado numérico no escribe y mueve la flechita", "el mouse se mueve solo cuando aprieto el 8", "se activaron las teclas del mouse"]
+pasos:
+  - texto: "Abrí Configuración > Accesibilidad > Mouse."
+    abrir: "ms-settings:easeofaccess-mouse"
+  - texto: "Apagá «Teclas del mouse» si no lo usás. Si te sirve para manejar la flechita con el teclado, dejalo prendido."
+    abrir: "https://support.microsoft.com/accessibility/windows/use-mouse-keys-to-move-the-mouse-pointer"
+fuentes:
+  - https://support.microsoft.com/accessibility/windows/use-mouse-keys-to-move-the-mouse-pointer
+  - https://support.microsoft.com/accessibility/windows/make-your-mouse-keyboard-and-other-input-devices-easier-to-use
+madurez: T0
+---
+id: HWP-021
+area: audio
+titulo:
+  sencillo: "El sonido se escucha de un solo lado"
+  tecnico: "Audio mono activado o balance izquierda/derecha desparejo"
+explicacion:
+  sencillo: "Si en los auriculares o parlantes se escucha de un solo lado (o distinto en cada oído), puede ser el balance entre izquierda y derecha, la opción «Audio mono» o, en auriculares Bluetooth, que se conectó uno solo."
+  tecnico: "Sistema > Sonido: Audio mono; configuración de salida > Volumen Izquierda/Derecha; formato 2 canales; volver a emparejar si es Bluetooth."
+frases: ["se escucha solo de un lado", "el auricular izquierdo no suena", "un auricular suena más fuerte que el otro", "el sonido sale por un solo parlante"]
+pasos:
+  - texto: "Abrí Sonido y, en la parte de salida, apagá «Audio mono»."
+    abrir: "ms-settings:sound"
+  - texto: "En «Salida», elegí tus auriculares o parlantes y, en la configuración de salida, revisá que el volumen «Izquierda» y «Derecha» estén iguales (normalmente en 100)."
+  - texto: "Si son auriculares Bluetooth: quitalos en Bluetooth y dispositivos, ponelos en modo de emparejar y agregalos de nuevo; si pregunta, aceptá conectar el segundo auricular."
+    abrir: "ms-settings:bluetooth"
+  - texto: "Microsoft lo explica paso a paso."
+    abrir: "https://support.microsoft.com/windows/hardware/bluetooth/fix-bluetooth-audio-only-playing-in-one-channel"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/bluetooth/fix-bluetooth-audio-only-playing-in-one-channel
+madurez: T0
+---
+id: HWP-022
+area: audio
+titulo:
+  sencillo: "El sonido sale distorsionado o con chasquidos"
+  tecnico: "Audio distorsionado o crepitante: mejoras de audio, formato y controlador"
+explicacion:
+  sencillo: "Si los parlantes o auriculares suenan «rotos» o con chasquidos, muchas veces la culpa es de las «mejoras de audio» de Windows o del controlador de sonido."
+  tecnico: "Desactivar mejoras de audio, cambiar el formato predeterminado, actualizar o reinstalar el controlador y reiniciar los servicios de audio de Windows."
+frases: ["el sonido sale distorsionado", "los parlantes hacen chasquidos", "el audio chisporrotea", "el audio suena como roto"]
+pasos:
+  - texto: "Abrí Sonido, en «Salida» elegí tu aparato y apagá las «Mejoras de audio». Probá cómo suena."
+    abrir: "ms-settings:sound"
+  - texto: "Si sigue igual, en ese mismo aparato entrá a la configuración avanzada y elegí otro formato predeterminado. Probá de nuevo."
+  - texto: "Si no mejora, actualizá el controlador de sonido desde el Administrador de dispositivos y reiniciá. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/hardware/audio/fix-distorted-or-crackling-audio-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/audio/fix-distorted-or-crackling-audio-in-windows
+madurez: T0
+---
+id: HWP-023
+area: audio
+titulo:
+  sencillo: "El sonido es muy bajo aunque esté al máximo"
+  tecnico: "Volumen bajo: mezclador, mejoras de audio, formato y controlador"
+explicacion:
+  sencillo: "A veces el volumen general está alto pero el programa que usás (el navegador, por ejemplo) está bajito en el mezclador, o alguna opción de Windows baja el sonido."
+  tecnico: "Mezclador de volumen (sistema y aplicación), mejoras de audio, formato predeterminado y controlador."
+frases: ["se escucha muy bajito", "el volumen está al máximo y apenas se oye", "los videos se escuchan bajo", "la compu suena muy despacio"]
+pasos:
+  - texto: "Abrí el Mezclador de volumen y subí tanto «Sistema» como el programa que estás usando. Fijate que ninguno esté silenciado."
+    abrir: "ms-settings:apps-volume"
+  - texto: "En Sonido, en «Salida», elegí tu aparato y apagá las «Mejoras de audio». Si no cambia, probá otro formato predeterminado en la configuración avanzada."
+    abrir: "ms-settings:sound"
+  - texto: "Si sigue bajo, actualizá el controlador de sonido y reiniciá. Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/hardware/audio/fix-low-or-quiet-sound-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/audio/fix-low-or-quiet-sound-in-windows
+madurez: T0
+---
+id: HWP-024
+area: audio
+titulo:
+  sencillo: "Enchufé los auriculares pero sigue sonando por los parlantes"
+  tecnico: "Dispositivo de salida predeterminado incorrecto"
+explicacion:
+  sencillo: "Windows manda el sonido al aparato que tiene elegido como «predeterminado». Si no cambia solo a los auriculares, hay que elegirlos a mano."
+  tecnico: "Sonido > Salida; configuración de sonido adicional > Reproducción > Establecer como predeterminado; mejoras de audio; solucionador de audio."
+frases: ["enchufé los auriculares y suena por los parlantes", "los auriculares no se escuchan", "el sonido no pasa a los auriculares", "no me toma los auriculares"]
+pasos:
+  - texto: "Abrí Sonido y, en «Salida», elegí tus auriculares. Revisá que no estén en silencio y que el volumen esté arriba."
+    abrir: "ms-settings:sound"
+  - texto: "Si se vuelve a cambiar solo, en esa misma página entrá a la configuración de sonido adicional (más abajo), pestaña «Reproducción», hacé clic derecho en los auriculares y elegí la opción para establecerlos como predeterminados."
+  - texto: "Si siguen mudos, en los auriculares (dentro de «Salida») apagá las «Mejoras de audio». Microsoft explica también el solucionador automático."
+    abrir: "https://support.microsoft.com/windows/hardware/audio/fix-audio-issues-when-no-sound-plays-from-speakers-or-headphones-in-windows"
+fuentes:
+  - https://support.microsoft.com/windows/hardware/audio/fix-audio-issues-when-no-sound-plays-from-speakers-or-headphones-in-windows
+madurez: T0
+---
+id: HWP-025
+area: perifericos
+titulo:
+  sencillo: "La compu no toma el micrófono de los auriculares"
+  tecnico: "Micrófono de auriculares (headset) no seleccionado o sin probar"
+explicacion:
+  sencillo: "Cuando enchufás auriculares con micrófono, Windows puede seguir usando el micrófono de la notebook o de la cámara. Hay que elegir el de los auriculares y probarlo."
+  tecnico: "Sistema > Sonido > Entrada: seleccionar el micrófono del headset; Propiedades > Iniciar prueba; volumen de entrada; Bluetooth: Agregar dispositivo."
+frases: ["no me detecta el micrófono de los auriculares", "en las llamadas usa el micrófono de la notebook y no el del auricular", "el micrófono del headset no aparece", "quiero probar el micrófono de los auriculares"]
+pasos:
+  - texto: "Con los auriculares conectados, abrí Sonido y fijate en «Entrada» que aparezca su micrófono. Si son Bluetooth y no aparecen, tocá «Agregar dispositivo»."
+    abrir: "ms-settings:sound"
+  - texto: "Elegí el micrófono de los auriculares y tocá la flechita «>» para abrir sus propiedades. Tocá «Iniciar prueba», hablá normal, después «Detener prueba» y escuchá la grabación."
+  - texto: "Si se oye muy bajo, subí el «Volumen de entrada». Microsoft lo explica."
+    abrir: "https://support.microsoft.com/windows/hardware/drivers/how-to-set-up-and-test-microphones-in-windows"
+  - texto: "Si en el programa de videollamadas tampoco anda, escribile a PC Doctor «no funciona el micrófono» para revisar los permisos."
+fuentes:
+  - https://support.microsoft.com/windows/hardware/drivers/how-to-set-up-and-test-microphones-in-windows
+madurez: T0

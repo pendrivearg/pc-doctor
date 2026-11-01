@@ -1,0 +1,613 @@
+# Pantallas azules según su código de detención (stop code): una ficha por código, con la referencia oficial de Microsoft Learn y la guía de soporte de Microsoft. Guiadas, sin detección automática.
+id: BSOD-001
+area: windows
+titulo:
+  sencillo: "Pantalla azul «CRITICAL_PROCESS_DIED»"
+  tecnico: "Error de detención 0xEF CRITICAL_PROCESS_DIED"
+explicacion:
+  sencillo: "Windows se frenó porque se cortó de golpe una de sus piezas imprescindibles. Suele venir de archivos de Windows dañados, de un controlador o de un aparato que conectaste hace poco."
+  tecnico: "0xEF: terminó un proceso crítico del sistema (csrss.exe, wininit.exe, smss.exe, services.exe, winlogon.exe…). Revisar hardware nuevo, controladores, SFC y el registro Sistema del Visor de eventos."
+frases: ["me salió pantalla azul critical process died", "critical process died y se reinicia sola", "la compu se cuelga con critical_process_died", "pantallazo azul que dice critical process died al prender"]
+pasos:
+  - texto: "Si conectaste algo nuevo (memoria, disco, placa, impresora) justo antes de que empezara, apagá la compu, desconectalo y volvé a prenderla."
+    abrir: "https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors"
+  - texto: "Repará los archivos de Windows: tocá Inicio, escribí «cmd», hacé clic derecho en «Símbolo del sistema» > «Ejecutar como administrador», escribí sfc /scannow y apretá Enter. Esperá a que llegue al 100 % sin apagar la compu."
+    abrir: "https://learn.microsoft.com/windows-server/administration/windows-commands/sfc"
+  - texto: "Clic derecho en Inicio > «Administrador de dispositivos». Si algún aparato tiene un signo de advertencia amarillo, clic derecho sobre él > «Actualizar controlador»."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Instalá todas las actualizaciones de Windows."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si empezó hace poco y nada sirvió, volvé a un punto de restauración anterior. Tus documentos no se tocan, pero antes de confirmar tocá «Buscar programas afectados» para ver qué programas cambian."
+    abrir: "https://support.microsoft.com/windows/experience/backup-recovery/system-restore"
+derivar: "Si sigue apareciendo, llevale a un técnico el código y la fecha: con el Visor de eventos puede ver qué falló justo antes."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0xef--critical-process-died
+  - https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors
+  - https://learn.microsoft.com/windows-server/administration/windows-commands/sfc
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+  - https://support.microsoft.com/windows/experience/backup-recovery/system-restore
+madurez: T0
+---
+id: BSOD-002
+area: windows
+titulo:
+  sencillo: "Pantalla azul «IRQL_NOT_LESS_OR_EQUAL»"
+  tecnico: "Error de detención 0xA IRQL_NOT_LESS_OR_EQUAL"
+explicacion:
+  sencillo: "Un controlador (el programita que hace andar un aparato) quiso usar memoria de una forma prohibida y Windows se detuvo. Casi siempre aparece después de instalar un controlador, un antivirus o un aparato nuevo."
+  tecnico: "0xA: acceso a memoria paginable o inválida con IRQL elevado, típico de un controlador en modo kernel con un puntero incorrecto. También por servicios, antivirus o herramientas de copia incompatibles tras actualizar Windows."
+frases: ["pantalla azul irql not less or equal", "me tira irql_not_less_or_equal y se reinicia", "error irql not less or equal después de instalar algo", "pantallazo azul que dice irql"]
+pasos:
+  - texto: "Si agregaste un aparato hace poco, desconectalo y fijate si el error vuelve."
+    abrir: "https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors"
+  - texto: "Si empezó después de actualizar un controlador: clic derecho en Inicio > «Administrador de dispositivos», clic derecho en ese aparato > «Propiedades» > pestaña «Controlador» > «Revertir al controlador anterior»."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Si usás un antivirus que no es el de Windows, desactivalo un tiempo. Si el error desaparece, buscá la versión nueva en la página oficial de ese antivirus."
+  - texto: "Instalá todas las actualizaciones de Windows, también las opcionales de controladores."
+    abrir: "ms-settings:windowsupdate-optionalupdates"
+derivar: "Si sigue después de esto, puede ser un aparato que está fallando: un técnico puede probarlo con el diagnóstico del fabricante."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0xa--irql-not-less-or-equal
+  - https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+madurez: T0
+---
+id: BSOD-003
+area: windows
+titulo:
+  sencillo: "Pantalla azul «PAGE_FAULT_IN_NONPAGED_AREA»"
+  tecnico: "Error de detención 0x50 PAGE_FAULT_IN_NONPAGED_AREA"
+explicacion:
+  sencillo: "Windows quiso leer una parte de la memoria que no existía o ya estaba liberada. Puede ser un controlador, el antivirus, un disco con errores o una memoria RAM fallada."
+  tecnico: "0x50: referencia a memoria del sistema inválida. Causas: controlador o servicio defectuoso, antivirus, volumen NTFS dañado o RAM defectuosa. Si se identifica el controlador, aparece en la pantalla azul."
+frases: ["me salió page fault in nonpaged area", "pantalla azul page_fault_in_nonpaged_area", "error page fault in nonpaged area al prender la compu", "pantallazo azul que dice nonpaged area"]
+pasos:
+  - texto: "Si en la pantalla azul figuraba el nombre de un archivo (termina en .sys), anotalo: es el controlador sospechoso. Buscá su actualización en el Administrador de dispositivos o en la página del fabricante."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Probá la memoria: guardá todo, tocá Inicio, escribí «memoria» y abrí «Diagnóstico de memoria de Windows». Elegí reiniciar ahora; la prueba corre sola y el resultado queda anotado en el Visor de eventos como «MemoryDiagnostics-Results»."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x50--page-fault-in-nonpaged-area"
+  - texto: "Revisá el disco: abrí «Símbolo del sistema» como administrador y escribí chkdsk C: /f /r. Te va a pedir hacerlo al reiniciar: decí que sí y reiniciá. Puede tardar mucho; no apagues la compu mientras trabaja."
+    abrir: "https://learn.microsoft.com/windows-server/administration/windows-commands/chkdsk"
+  - texto: "Si usás un antivirus que no es el de Windows, desactivalo un tiempo para ver si el error deja de aparecer."
+  - texto: "Si agregaste un aparato hace poco, desconectalo y probá de nuevo."
+    abrir: "https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors"
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x50--page-fault-in-nonpaged-area
+  - https://learn.microsoft.com/troubleshoot/windows-client/performance/stop-code-error-troubleshooting
+  - https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors
+  - https://learn.microsoft.com/windows-server/administration/windows-commands/chkdsk
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+madurez: T0
+---
+id: BSOD-004
+area: windows
+titulo:
+  sencillo: "Pantalla azul «SYSTEM_SERVICE_EXCEPTION»"
+  tecnico: "Error de detención 0x3B SYSTEM_SERVICE_EXCEPTION"
+explicacion:
+  sencillo: "Una parte de Windows tuvo un error grave mientras atendía un pedido de un programa. Suele ser un controlador (muchas veces el de video) o archivos de Windows dañados."
+  tecnico: "0x3B: excepción al ejecutar una rutina que pasa de código no privilegiado a privilegiado (a menudo 0xC0000005, violación de acceso). Revisar controladores recientes, Administrador de dispositivos y SFC."
+frases: ["pantalla azul system service exception", "me sale system_service_exception", "error system service exception jugando", "se reinicia con system service exception"]
+pasos:
+  - texto: "Si instalaste o actualizaste un controlador o un programa hace poco, desinstalalo o actualizalo. Si en la pantalla azul figuraba un archivo .sys, anotalo: es el sospechoso."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Clic derecho en Inicio > «Administrador de dispositivos». Si algún aparato tiene un signo de advertencia amarillo, clic derecho > «Actualizar controlador»."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Repará los archivos de Windows: abrí «Símbolo del sistema» como administrador, escribí sfc /scannow y Enter. Esperá a que termine."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/performance/stop-code-error-troubleshooting"
+  - texto: "Instalá todas las actualizaciones de Windows."
+    abrir: "ms-settings:windowsupdate"
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x3b--system-service-exception
+  - https://learn.microsoft.com/troubleshoot/windows-client/performance/stop-code-error-troubleshooting
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+madurez: T0
+---
+id: BSOD-005
+area: windows
+titulo:
+  sencillo: "Pantalla azul «KMODE_EXCEPTION_NOT_HANDLED»"
+  tecnico: "Error de detención 0x1E KMODE_EXCEPTION_NOT_HANDLED"
+explicacion:
+  sencillo: "Un programa que trabaja en lo más profundo de Windows (casi siempre un controlador) tuvo un error que nadie atajó. También puede venir de la BIOS o de la memoria."
+  tecnico: "0x1E: un programa en modo kernel generó una excepción no controlada. Causas: controlador o servicio defectuoso, incompatibilidad de BIOS, conflictos de memoria o IRQ."
+frases: ["pantalla azul kmode exception not handled", "me apareció kmode_exception_not_handled", "error kmode exception al iniciar windows", "kmode exception y no arranca"]
+pasos:
+  - texto: "Si en la pantalla azul figuraba un archivo .sys, ese controlador es el sospechoso. Desinstalá o actualizá los controladores y programas que agregaste hace poco."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Si se cuelga al arrancar, entrá en modo seguro: Configuración > Sistema > Recuperación > «Inicio avanzado» > «Reiniciar ahora»; después «Solucionar problemas» > «Opciones avanzadas» > «Configuración de inicio» > «Reiniciar», y apretá 4 o F4. Ahí podés desactivar el controlador en el Administrador de dispositivos."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/performance/stop-code-error-troubleshooting"
+  - texto: "Fijate en la página del fabricante de tu computadora si hay una actualización de BIOS. Si no sabés cómo instalarla, pedíselo a un técnico."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x1e--kmode-exception-not-handled"
+  - texto: "Probá la memoria: tocá Inicio, escribí «memoria», abrí «Diagnóstico de memoria de Windows» y elegí reiniciar ahora."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x154--unexpected-store-exception"
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x1e--kmode-exception-not-handled
+  - https://learn.microsoft.com/troubleshoot/windows-client/performance/stop-code-error-troubleshooting
+  - https://support.microsoft.com/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x154--unexpected-store-exception
+madurez: T0
+---
+id: BSOD-006
+area: windows
+titulo:
+  sencillo: "Pantalla azul «DPC_WATCHDOG_VIOLATION»"
+  tecnico: "Error de detención 0x133 DPC_WATCHDOG_VIOLATION"
+explicacion:
+  sencillo: "Windows tiene un «vigilante» que controla que cada controlador termine su tarea a tiempo. Uno se quedó trabado demasiado y Windows se detuvo."
+  tecnico: "0x133: el watchdog de DPC detectó una DPC o ISR que excedió su tiempo, o demasiado tiempo acumulado en IRQL DISPATCH_LEVEL o superior. Casi siempre un controlador defectuoso."
+frases: ["pantalla azul dpc watchdog violation", "me sale dpc_watchdog_violation cada tanto", "error dpc watchdog y se congela", "se tilda y aparece dpc watchdog violation"]
+pasos:
+  - texto: "Si en la pantalla azul figuraba un archivo .sys, buscá la actualización de ese controlador (o desactivá ese aparato un tiempo para confirmar que es él)."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Instalá todas las actualizaciones de Windows, también las opcionales de controladores."
+    abrir: "ms-settings:windowsupdate-optionalupdates"
+  - texto: "Si conectaste un aparato nuevo, confirmá en la página del fabricante que sea compatible con tu versión de Windows; si no, desconectalo."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x133-dpc-watchdog-violation"
+derivar: "Si sigue, un técnico puede revisar el registro Sistema del Visor de eventos o el archivo de volcado para saber qué controlador se traba."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x133-dpc-watchdog-violation
+  - https://learn.microsoft.com/troubleshoot/windows-client/performance/stop-code-error-troubleshooting
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+madurez: T0
+---
+id: BSOD-007
+area: hardware
+titulo:
+  sencillo: "Pantalla azul «WHEA_UNCORRECTABLE_ERROR»"
+  tecnico: "Error de detención 0x124 WHEA_UNCORRECTABLE_ERROR"
+explicacion:
+  sencillo: "Una pieza física de la computadora informó una falla grave: puede ser calor, la memoria, el procesador o que alguien la haya forzado a andar más rápido de lo normal."
+  tecnico: "0x124: error de hardware fatal informado por WHEA (Windows Hardware Error Architecture). Suele ser calor, RAM, CPU que falla u overclocking; rara vez un controlador."
+frases: ["pantalla azul whea uncorrectable error", "me salió whea_uncorrectable_error", "error whea y se apaga cuando juego", "pantallazo azul whea en la pc gamer"]
+pasos:
+  - texto: "Fijate que los ventiladores giren y que las salidas de aire no estén tapadas: el calor es una de las causas."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x124---whea-uncorrectable-error"
+  - texto: "Si alguien le subió la velocidad al procesador o a la memoria (overclock), volvé a los valores de fábrica o pedíselo a quien lo hizo."
+  - texto: "Probá la memoria: tocá Inicio, escribí «memoria», abrí «Diagnóstico de memoria de Windows» y elegí reiniciar ahora."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x154--unexpected-store-exception"
+  - texto: "Instalá todas las actualizaciones de Windows por si es un controlador."
+    abrir: "ms-settings:windowsupdate"
+derivar: "Es casi siempre un problema físico: si sigue, llevala a un técnico para que pruebe memoria, procesador, temperatura y fuente."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x124---whea-uncorrectable-error
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x154--unexpected-store-exception
+madurez: T0
+---
+id: BSOD-008
+area: hardware
+titulo:
+  sencillo: "Pantalla azul «MEMORY_MANAGEMENT»"
+  tecnico: "Error de detención 0x1A MEMORY_MANAGEMENT"
+explicacion:
+  sencillo: "Windows encontró un desorden grave en la forma en que maneja la memoria. Muchas veces es una memoria RAM que está fallando."
+  tecnico: "0x1A: error grave de administración de memoria (PTE/PFN dañados, etc.). Varios subcódigos apuntan a hardware; Microsoft recomienda el Diagnóstico de memoria de Windows."
+frases: ["pantalla azul memory management", "me sale memory_management y se reinicia", "error memory management en windows 11", "pantallazo azul memory management después de poner más memoria"]
+pasos:
+  - texto: "Probá la memoria: guardá todo, tocá Inicio, escribí «memoria» y abrí «Diagnóstico de memoria de Windows». Elegí reiniciar ahora; la prueba corre sola."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x1a--memory-management"
+  - texto: "Si le agregaste o cambiaste memoria hace poco, apagá, sacá el módulo nuevo y probá unos días sin él."
+    abrir: "https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors"
+  - texto: "Dejá libre al menos un 10 a 15 % del disco: Windows lo usa como memoria de apoyo."
+    abrir: "ms-settings:storagesense"
+  - texto: "Instalá todas las actualizaciones de Windows."
+    abrir: "ms-settings:windowsupdate"
+derivar: "Si el diagnóstico de memoria encuentra errores, hay que cambiar el módulo de RAM: llevala a un técnico."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x1a--memory-management
+  - https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors
+madurez: T0
+---
+id: BSOD-009
+area: hardware
+titulo:
+  sencillo: "Pantalla azul «VIDEO_TDR_FAILURE»"
+  tecnico: "Error de detención 0x116 VIDEO_TDR_FAILURE"
+explicacion:
+  sencillo: "La placa de video se quedó trabada y Windows no pudo despertarla. Pasa mucho jugando: controlador de video viejo, calor, poca fuente de energía o la placa forzada a andar más rápido."
+  tecnico: "0x116: falló la recuperación por TDR (Timeout Detection and Recovery) del controlador de pantalla, o hubo demasiados TDR en poco tiempo. Causas: controlador, overclock, refrigeración, fuente o piezas defectuosas."
+frases: ["pantalla azul video tdr failure", "me sale video_tdr_failure jugando", "error video tdr failure nvlddmkm", "se pone negra y después pantalla azul video tdr"]
+pasos:
+  - texto: "Actualizá el controlador de video: clic derecho en Inicio > «Administrador de dispositivos» > «Adaptadores de pantalla», clic derecho en tu placa > «Actualizar controlador». También podés bajarlo de la página oficial del fabricante de la placa."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Actualizá también el juego o programa con el que pasa, y Windows completo."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Revisá que la compu no se recaliente (ventiladores andando, sin polvo) y, si la placa o el procesador están con overclock, volvelos a fábrica."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x116---video-tdr-failure"
+  - texto: "Cerrá los programas que no estés usando mientras jugás: si hay muchos en segundo plano, la placa puede no llegar a responder."
+  - texto: "Probá la memoria: tocá Inicio, escribí «memoria», abrí «Diagnóstico de memoria de Windows» y elegí reiniciar ahora."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x116---video-tdr-failure"
+derivar: "Si sigue con el controlador al día, puede ser la placa de video o la fuente: llevala a un técnico."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x116---video-tdr-failure
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+madurez: T0
+---
+id: BSOD-010
+area: windows
+titulo:
+  sencillo: "Pantalla azul «INACCESSIBLE_BOOT_DEVICE» al prender"
+  tecnico: "Error de detención 0x7B INACCESSIBLE_BOOT_DEVICE"
+explicacion:
+  sencillo: "Al arrancar, Windows perdió contacto con el disco donde está instalado. Pasa después de tocar la configuración de la BIOS, cambiar o agregar un disco, o cuando el disco empieza a fallar."
+  tecnico: "0x7B: Windows perdió acceso a la partición del sistema durante el arranque. Causas: falla del dispositivo de arranque, controlador de almacenamiento, cambios en UEFI/BIOS (modo AHCI) o reparticionado."
+frases: ["pantalla azul inaccessible boot device", "inaccessible_boot_device y no entra a windows", "me sale inaccessible boot device después de cambiar el disco", "no arranca y dice inaccessible boot device"]
+pasos:
+  - texto: "Si agregaste un disco o cambiaste algo en la BIOS (por ejemplo el modo del disco, AHCI), deshacé ese cambio y volvé a prender."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x7b--inaccessible-boot-device"
+  - texto: "Si Windows llega a la pantalla «Elegir una opción», tocá «Solucionar problemas» > «Opciones avanzadas» > «Restaurar sistema» y elegí un punto anterior al error. Tus documentos no se tocan."
+    abrir: "https://support.microsoft.com/windows/experience/backup-recovery/system-restore"
+  - texto: "Si logra entrar, arrancá una vez en modo seguro y después reiniciá normal: así Windows vuelve a cargar los controladores del disco."
+    abrir: "https://support.microsoft.com/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234"
+  - texto: "Ya dentro de Windows, dejá libre al menos un 10 a 15 % del disco."
+    abrir: "ms-settings:storagesense"
+derivar: "Si no arranca de ninguna forma, puede que el disco esté fallando. No reinstales Windows sin antes rescatar tus archivos: un técnico puede sacarlos del disco."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x7b--inaccessible-boot-device
+  - https://support.microsoft.com/windows/experience/backup-recovery/system-restore
+  - https://support.microsoft.com/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234
+madurez: T0
+---
+id: BSOD-011
+area: windows
+titulo:
+  sencillo: "Pantalla azul «CRITICAL_STRUCTURE_CORRUPTION»"
+  tecnico: "Error de detención 0x109 CRITICAL_STRUCTURE_CORRUPTION"
+explicacion:
+  sencillo: "Windows descubrió que alguien modificó una parte protegida de su corazón. Lo hace un controlador que se mete donde no debe o una memoria que está fallando."
+  tecnico: "0x109: el kernel detectó corrupción de código o datos críticos. Causas: un controlador que modificó el kernel, un depurador mal usado o corrupción de hardware (memoria)."
+frases: ["pantalla azul critical structure corruption", "me salió critical_structure_corruption", "error critical structure corruption al abrir un programa", "pantallazo azul structure corruption"]
+pasos:
+  - texto: "Si en la pantalla azul figuraba un archivo .sys, desactivá ese controlador o buscá su actualización en la página del fabricante."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x109---critical-structure-corruption"
+  - texto: "Probá la memoria: tocá Inicio, escribí «memoria», abrí «Diagnóstico de memoria de Windows» y elegí reiniciar ahora."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x109---critical-structure-corruption"
+  - texto: "Si conectaste un aparato nuevo, confirmá que sea compatible con tu Windows; si no, desconectalo."
+    abrir: "https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors"
+  - texto: "Instalá todas las actualizaciones de Windows."
+    abrir: "ms-settings:windowsupdate"
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x109---critical-structure-corruption
+  - https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors
+madurez: T0
+---
+id: BSOD-012
+area: windows
+titulo:
+  sencillo: "Pantalla azul «DRIVER_POWER_STATE_FAILURE» al suspender o despertar"
+  tecnico: "Error de detención 0x9F DRIVER_POWER_STATE_FAILURE"
+explicacion:
+  sencillo: "Un controlador no respondió a tiempo cuando la compu entraba o salía de suspensión. Pasa mucho en notebooks al cerrar la tapa o al volver a prenderla."
+  tecnico: "0x9F: controlador en un estado de energía inconsistente (IRP de energía bloqueado o transición vencida). Relacionado con suspensión, hibernación y reanudación."
+frases: ["pantalla azul driver power state failure", "me sale driver_power_state_failure al cerrar la notebook", "pantalla azul cuando la compu vuelve de suspender", "error driver power state failure al apagar"]
+pasos:
+  - texto: "Para ver si es la suspensión, por unos días poné la suspensión en «Nunca» y apagá la compu normalmente en vez de suspenderla."
+    abrir: "ms-settings:powersleep"
+  - texto: "Clic derecho en Inicio > «Administrador de dispositivos». Si algún aparato tiene un signo de advertencia amarillo, clic derecho > «Actualizar controlador». Si en la pantalla azul figuraba un .sys, empezá por ese."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Fijate en la página del fabricante de tu computadora si hay una actualización de BIOS o firmware."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x9f--driver-power-state-failure"
+  - texto: "Si conectaste algo nuevo (dock, mouse, disco USB), desconectalo y probá."
+    abrir: "https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors"
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x9f--driver-power-state-failure
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+  - https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors
+madurez: T0
+---
+id: BSOD-013
+area: hardware
+titulo:
+  sencillo: "Pantalla azul «NTFS_FILE_SYSTEM»"
+  tecnico: "Error de detención 0x24 NTFS_FILE_SYSTEM"
+explicacion:
+  sencillo: "Falló la parte de Windows que lee y escribe en el disco. Lo más común es que el disco tenga errores o sectores dañados."
+  tecnico: "0x24: problema en ntfs.sys. Causas: corrupción del sistema de archivos NTFS, sectores defectuosos, controladores SATA/IDE dañados o falta de memoria no paginada."
+frases: ["pantalla azul ntfs file system", "me salió ntfs_file_system", "error ntfs file system y no arranca", "pantallazo azul que dice ntfs"]
+pasos:
+  - texto: "Antes que nada, si podés entrar, copiá tus fotos y documentos importantes a un pendrive o a la nube: el disco puede estar fallando."
+  - texto: "Revisá el disco: abrí el Explorador (Windows + E), clic derecho en el disco C: > «Propiedades» > pestaña «Herramientas» > «Comprobar». Si te ofrece repararlo al reiniciar, aceptá."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x24--ntfs-file-system"
+  - texto: "Dejá libre al menos un 10 a 15 % del disco."
+    abrir: "ms-settings:storagesense"
+  - texto: "Si usás programas que vigilan el disco todo el tiempo (antivirus de otra marca, copias de seguridad, desfragmentadores), desactivalos un tiempo para probar."
+  - texto: "Repará los archivos de Windows: abrí «Símbolo del sistema» como administrador, escribí sfc /scannow y Enter."
+    abrir: "https://learn.microsoft.com/windows-server/administration/windows-commands/sfc"
+derivar: "Si el disco sigue dando errores, cambialo pronto: un técnico puede pasar tus cosas a uno nuevo."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x24--ntfs-file-system
+  - https://learn.microsoft.com/troubleshoot/windows-client/performance/stop-code-error-troubleshooting
+  - https://learn.microsoft.com/windows-server/administration/windows-commands/sfc
+madurez: T0
+---
+id: BSOD-014
+area: hardware
+titulo:
+  sencillo: "Pantalla azul «UNEXPECTED_KERNEL_MODE_TRAP»"
+  tecnico: "Error de detención 0x7F UNEXPECTED_KERNEL_MODE_TRAP"
+explicacion:
+  sencillo: "El procesador se encontró con un error que Windows no pudo manejar. Casi siempre es una pieza física: memoria mal puesta o fallada, la fuente, o la compu forzada a andar más rápido."
+  tecnico: "0x7F: el procesador generó una trampa (bound trap o double fault) que el kernel no atrapó. Causas: hardware defectuoso o incompatible (sobre todo RAM), overclocking, fuente; también desbordamiento de pila por controladores."
+frases: ["pantalla azul unexpected kernel mode trap", "me sale unexpected_kernel_mode_trap", "error unexpected kernel mode trap después de cambiar la memoria", "pantallazo azul kernel mode trap"]
+pasos:
+  - texto: "Si agregaste o cambiaste alguna pieza hace poco (sobre todo memoria), sacala y probá de nuevo."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x7f--unexpected-kernel-mode-trap"
+  - texto: "Probá la memoria: tocá Inicio, escribí «memoria», abrí «Diagnóstico de memoria de Windows» y elegí reiniciar ahora."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x154--unexpected-store-exception"
+  - texto: "Si el procesador tiene overclock, volvelo a la velocidad de fábrica."
+  - texto: "Si empezó después de instalar o actualizar un controlador, quitalo o volvé al anterior desde el Administrador de dispositivos («Propiedades» > «Controlador» > «Revertir al controlador anterior»)."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Instalá todas las actualizaciones de Windows."
+    abrir: "ms-settings:windowsupdate"
+derivar: "Si sigue, un técnico puede probar la placa madre y la fuente, que también causan este error."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x7f--unexpected-kernel-mode-trap
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x154--unexpected-store-exception
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+madurez: T0
+---
+id: BSOD-015
+area: hardware
+titulo:
+  sencillo: "Pantalla azul «CLOCK_WATCHDOG_TIMEOUT»"
+  tecnico: "Error de detención 0x101 CLOCK_WATCHDOG_TIMEOUT"
+explicacion:
+  sencillo: "Uno de los núcleos del procesador dejó de responder y Windows se detuvo. Puede ser el procesador, la BIOS o un controlador."
+  tecnico: "0x101: no se recibió a tiempo la interrupción de reloj esperada en un procesador secundario; el procesador no responde o está bloqueado."
+frases: ["pantalla azul clock watchdog timeout", "me sale clock_watchdog_timeout", "error clock watchdog timeout y se congela todo", "se tilda la pc y sale clock watchdog"]
+pasos:
+  - texto: "Instalá todas las actualizaciones de Windows."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Fijate en la página del fabricante de tu computadora o de la placa madre si hay una actualización de BIOS o firmware. Si no sabés instalarla, pedíselo a un técnico."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/performance/stop-code-error-troubleshooting"
+  - texto: "Si conectaste o cambiaste algo hace poco, desconectalo y probá de nuevo."
+    abrir: "https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors"
+  - texto: "Probá la memoria: tocá Inicio, escribí «memoria», abrí «Diagnóstico de memoria de Windows» y elegí reiniciar ahora."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x154--unexpected-store-exception"
+derivar: "Si sigue, llevala a un técnico para que pruebe el procesador con el diagnóstico del fabricante."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x101---clock-watchdog-timeout
+  - https://learn.microsoft.com/troubleshoot/windows-client/performance/stop-code-error-troubleshooting
+  - https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x154--unexpected-store-exception
+madurez: T0
+---
+id: BSOD-016
+area: windows
+titulo:
+  sencillo: "Pantalla azul «BAD_POOL_HEADER»"
+  tecnico: "Error de detención 0x19 BAD_POOL_HEADER"
+explicacion:
+  sencillo: "Se desordenó una zona de memoria que Windows reparte entre sus controladores. Suele ser culpa de un controlador; si aparece de vez en cuando y sin patrón, puede ser la memoria RAM."
+  tecnico: "0x19: encabezado de pool dañado. Normalmente un controlador corrompe el pool; si aparece de forma inconsistente, sospechar de la memoria física."
+frases: ["pantalla azul bad pool header", "me sale bad_pool_header", "error bad pool header de repente", "pantallazo azul bad pool"]
+pasos:
+  - texto: "Probá la memoria: guardá todo, tocá Inicio, escribí «memoria», abrí «Diagnóstico de memoria de Windows» y elegí reiniciar ahora."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x19--bad-pool-header"
+  - texto: "Clic derecho en Inicio > «Administrador de dispositivos». Si algún aparato tiene un signo de advertencia amarillo, actualizá su controlador; si no mejora, desactivalo."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Instalá todas las actualizaciones de Windows."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si empezó hace poco, volvé a un punto de restauración anterior (tus documentos no se tocan)."
+    abrir: "https://support.microsoft.com/windows/experience/backup-recovery/system-restore"
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x19--bad-pool-header
+  - https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+  - https://support.microsoft.com/windows/experience/backup-recovery/system-restore
+madurez: T0
+---
+id: BSOD-017
+area: windows
+titulo:
+  sencillo: "Pantalla azul «SYSTEM_THREAD_EXCEPTION_NOT_HANDLED»"
+  tecnico: "Error de detención 0x7E SYSTEM_THREAD_EXCEPTION_NOT_HANDLED"
+explicacion:
+  sencillo: "Una tarea interna de Windows tuvo un error que nadie atajó. Casi siempre la pantalla azul nombra el controlador culpable (un archivo que termina en .sys)."
+  tecnico: "0x7E: un subproceso del sistema generó una excepción no controlada. Causas: controlador defectuoso, firmware/ACPI, conflictos de memoria o IRQ, hardware incompatible."
+frases: ["pantalla azul system thread exception not handled", "me sale system_thread_exception_not_handled", "system thread exception y no pasa del logo", "pantallazo azul thread exception"]
+pasos:
+  - texto: "Anotá el archivo .sys que figura en la pantalla azul. Desactivá o actualizá ese controlador; si empezó tras una actualización, volvé al anterior («Propiedades» > «Controlador» > «Revertir al controlador anterior»)."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Si no llega a entrar a Windows, arrancá en modo seguro y hacé el paso anterior desde ahí."
+    abrir: "https://support.microsoft.com/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234"
+  - texto: "Fijate en la página del fabricante de tu computadora si hay una actualización de BIOS o firmware."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x7e--system-thread-exception-not-handled"
+  - texto: "Si conectaste algo nuevo, confirmá que sea compatible con tu Windows; si no, desconectalo."
+    abrir: "https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors"
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x7e--system-thread-exception-not-handled
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+  - https://support.microsoft.com/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234
+  - https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors
+madurez: T0
+---
+id: BSOD-018
+area: windows
+titulo:
+  sencillo: "Pantalla azul «DRIVER_IRQL_NOT_LESS_OR_EQUAL»"
+  tecnico: "Error de detención 0xD1 DRIVER_IRQL_NOT_LESS_OR_EQUAL"
+explicacion:
+  sencillo: "Un controlador usó una dirección de memoria equivocada. Muchas veces es el de la placa de red o el Wi-Fi, y la pantalla azul suele nombrarlo."
+  tecnico: "0xD1: un controlador en modo kernel accedió a memoria paginable o inválida con IRQL demasiado alto (puntero nulo o liberado). Microsoft cita controladores de red desactualizados como causa frecuente."
+frases: ["pantalla azul driver irql not less or equal", "me sale driver_irql_not_less_or_equal con un archivo .sys", "error driver irql cuando me conecto al wifi", "pantallazo azul driver irql"]
+pasos:
+  - texto: "Anotá el archivo .sys que figura en la pantalla azul y actualizá ese controlador desde el Administrador de dispositivos o la página del fabricante."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Si es de red o Wi-Fi: en el Administrador de dispositivos abrí «Adaptadores de red», clic derecho en tu placa > «Actualizar controlador»."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/performance/stop-code-error-troubleshooting"
+  - texto: "Instalá todas las actualizaciones de Windows, también las opcionales de controladores."
+    abrir: "ms-settings:windowsupdate-optionalupdates"
+  - texto: "Si conectaste un aparato nuevo, confirmá que sea compatible con tu Windows; si no, desconectalo."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0xd1--driver-irql-not-less-or-equal"
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0xd1--driver-irql-not-less-or-equal
+  - https://learn.microsoft.com/troubleshoot/windows-client/performance/stop-code-error-troubleshooting
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+madurez: T0
+---
+id: BSOD-019
+area: windows
+titulo:
+  sencillo: "Pantalla azul «KERNEL_SECURITY_CHECK_FAILURE»"
+  tecnico: "Error de detención 0x139 KERNEL_SECURITY_CHECK_FAILURE"
+explicacion:
+  sencillo: "Windows revisa todo el tiempo que sus datos internos estén en orden. Encontró uno roto y se detuvo para protegerse. Casi siempre lo rompió un controlador."
+  tecnico: "0x139: el kernel detectó la corrupción de una estructura de datos crítica (LIST_ENTRY, desbordamiento de búfer, etc.), normalmente por un controlador."
+frases: ["pantalla azul kernel security check failure", "me salió kernel_security_check_failure", "error kernel security check failure después de actualizar", "pantallazo azul kernel security"]
+pasos:
+  - texto: "Si agregaste un aparato, un controlador o un programa hace poco, sacalo o actualizalo."
+    abrir: "https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors"
+  - texto: "Clic derecho en Inicio > «Administrador de dispositivos». Si algún aparato tiene un signo de advertencia amarillo, clic derecho > «Actualizar controlador»."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Pasá un análisis completo del antivirus: en Seguridad de Windows, «Protección antivirus y contra amenazas» > «Opciones de examen» > «Examen completo»."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Instalá todas las actualizaciones de Windows."
+    abrir: "ms-settings:windowsupdate"
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x139--kernel-security-check-failure
+  - https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+madurez: T0
+---
+id: BSOD-020
+area: windows
+titulo:
+  sencillo: "Pantalla azul «UNMOUNTABLE_BOOT_VOLUME» y no arranca"
+  tecnico: "Error de detención 0xED UNMOUNTABLE_BOOT_VOLUME"
+explicacion:
+  sencillo: "Windows no pudo abrir el disco donde está instalado. Puede ser que se haya dañado la información de arranque o que el disco esté fallando."
+  tecnico: "0xED: el subsistema de E/S no pudo montar el volumen de arranque. Suele relacionarse con falla del disco de arranque; se intenta Reparación de inicio, chkdsk /r y bootrec."
+frases: ["pantalla azul unmountable boot volume", "unmountable_boot_volume y no prende windows", "me sale unmountable boot volume al iniciar", "no arranca la compu, dice unmountable boot volume"]
+pasos:
+  - texto: "En la pantalla «Elegir una opción» tocá «Solucionar problemas» > «Opciones avanzadas» > «Reparación de inicio». Si no aparece sola, quizás haga falta un pendrive de recuperación hecho en otra compu."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0xed--unmountable-boot-volume"
+  - texto: "Si no alcanza, desde «Opciones avanzadas» > «Símbolo del sistema» se puede revisar el disco con chkdsk C: /r. Puede tardar horas; no apagues la compu mientras trabaja."
+    abrir: "https://learn.microsoft.com/windows-server/administration/windows-commands/chkdsk"
+derivar: "Si sigue sin arrancar, el disco puede estar roto. No lo formatees ni reinstales Windows antes de que un técnico intente rescatar tus fotos y documentos."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0xed--unmountable-boot-volume
+  - https://learn.microsoft.com/windows-server/administration/windows-commands/chkdsk
+madurez: T0
+---
+id: BSOD-021
+area: windows
+titulo:
+  sencillo: "Pantalla azul «ATTEMPTED_WRITE_TO_READONLY_MEMORY»"
+  tecnico: "Error de detención 0xBE ATTEMPTED_WRITE_TO_READONLY_MEMORY"
+explicacion:
+  sencillo: "Un controlador quiso escribir en una parte de la memoria que es solo para leer, y Windows lo frenó. Si se sabe cuál fue, su nombre aparece en la pantalla azul."
+  tecnico: "0xBE: un controlador intentó escribir en un segmento de memoria de solo lectura; si se identifica, su nombre figura en la pantalla de error."
+frases: ["pantalla azul attempted write to readonly memory", "me sale attempted_write_to_readonly_memory", "error write to readonly memory al prender", "pantallazo azul readonly memory"]
+pasos:
+  - texto: "Anotá el archivo .sys que figura en la pantalla azul. Actualizá ese controlador o, si empezó después de actualizarlo, volvé al anterior desde el Administrador de dispositivos."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Si conectaste algo nuevo justo antes, desconectalo y reiniciá."
+    abrir: "https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors"
+  - texto: "Instalá todas las actualizaciones de Windows."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si nada sirvió, volvé a un punto de restauración anterior al problema (tus documentos no se tocan)."
+    abrir: "https://support.microsoft.com/windows/experience/backup-recovery/system-restore"
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0xbe--attempted-write-to-readonly-memory
+  - https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+  - https://support.microsoft.com/windows/experience/backup-recovery/system-restore
+madurez: T0
+---
+id: BSOD-022
+area: windows
+titulo:
+  sencillo: "Pantalla azul «BAD_SYSTEM_CONFIG_INFO»"
+  tecnico: "Error de detención 0x74 BAD_SYSTEM_CONFIG_INFO"
+explicacion:
+  sencillo: "Se dañó el registro, el gran cuaderno donde Windows anota su configuración. Pasa si alguien lo tocó a mano o si un programa lo arruinó."
+  tecnico: "0x74: error en el registro; colmena SYSTEM dañada o faltan claves críticas (edición manual o corrupción por una aplicación o servicio)."
+frases: ["pantalla azul bad system config info", "me sale bad_system_config_info y no entra", "error bad system config info después de tocar el registro", "pantallazo azul system config info"]
+pasos:
+  - texto: "Arrancá una vez en modo seguro y después reiniciá normal: a veces con eso alcanza."
+    abrir: "https://support.microsoft.com/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234"
+  - texto: "Si no se arregla, volvé a un punto de restauración anterior. Si Windows no arranca, desde «Elegir una opción» > «Solucionar problemas» > «Opciones avanzadas» > «Restaurar sistema». Tus documentos no se tocan."
+    abrir: "https://support.microsoft.com/windows/experience/backup-recovery/system-restore"
+  - texto: "Si entra a Windows, repará sus archivos: abrí «Símbolo del sistema» como administrador, escribí sfc /scannow y Enter."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x74--bad-system-config-info"
+  - texto: "Como último recurso queda restablecer la PC. Ojo: según la opción que elijas puede borrar programas y archivos, así que antes copiá tus cosas. Escribile a PC Doctor «quiero restablecer o reinstalar Windows»."
+    abrir: "ms-settings:recovery"
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x74--bad-system-config-info
+  - https://support.microsoft.com/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234
+  - https://support.microsoft.com/windows/experience/backup-recovery/system-restore
+madurez: T0
+---
+id: BSOD-023
+area: hardware
+titulo:
+  sencillo: "Pantalla azul «KERNEL_DATA_INPAGE_ERROR»"
+  tecnico: "Error de detención 0x7A KERNEL_DATA_INPAGE_ERROR"
+explicacion:
+  sencillo: "Windows necesitaba traer datos del disco a la memoria y no pudo leerlos. Suele ser un disco con sectores dañados, un cable flojo, memoria fallada o, a veces, un virus."
+  tecnico: "0x7A: no se pudo leer en memoria una página de datos del kernel desde el archivo de paginación. El estado de error (parámetro 2) orienta: sectores defectuosos, cableado, controlador de disco o RAM."
+frases: ["pantalla azul kernel data inpage error", "me salió kernel_data_inpage_error", "error kernel data inpage y el disco hace ruido", "pantallazo azul inpage error"]
+pasos:
+  - texto: "Primero, si podés entrar, copiá tus fotos y documentos importantes a un pendrive o a la nube: el disco puede estar fallando."
+  - texto: "Revisá el disco: abrí «Símbolo del sistema» como administrador y escribí chkdsk C: /f /r. Aceptá que se haga al reiniciar y reiniciá. Puede tardar mucho; no apagues la compu mientras trabaja."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x7a--kernel-data-inpage-error"
+  - texto: "Probá la memoria: tocá Inicio, escribí «memoria», abrí «Diagnóstico de memoria de Windows» y elegí reiniciar ahora."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x154--unexpected-store-exception"
+  - texto: "Pasá un análisis completo del antivirus: en Seguridad de Windows, «Protección antivirus y contra amenazas» > «Opciones de examen» > «Examen completo»."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Instalá todas las actualizaciones de Windows."
+    abrir: "ms-settings:windowsupdate"
+derivar: "Si es una PC de escritorio, un técnico puede revisar los cables del disco y que las placas estén bien encajadas; si el disco tiene sectores dañados, conviene cambiarlo."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x7a--kernel-data-inpage-error
+  - https://learn.microsoft.com/windows-server/administration/windows-commands/chkdsk
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x154--unexpected-store-exception
+madurez: T0
+---
+id: BSOD-024
+area: windows
+titulo:
+  sencillo: "Pantalla azul «UNEXPECTED_STORE_EXCEPTION»"
+  tecnico: "Error de detención 0x154 UNEXPECTED_STORE_EXCEPTION"
+explicacion:
+  sencillo: "Falló la parte de Windows que guarda datos de memoria de forma comprimida. Puede venir de la memoria RAM, de un controlador o de archivos de Windows dañados."
+  tecnico: "0x154: el componente de almacén de memoria del kernel atrapó una excepción inesperada. Revisar Visor de eventos, Diagnóstico de memoria, controladores y SFC."
+frases: ["pantalla azul unexpected store exception", "me sale unexpected_store_exception", "error unexpected store exception en la notebook", "pantallazo azul store exception"]
+pasos:
+  - texto: "Probá la memoria: guardá todo, tocá Inicio, escribí «memoria», abrí «Diagnóstico de memoria de Windows» y elegí reiniciar ahora. La prueba corre sola."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x154--unexpected-store-exception"
+  - texto: "Clic derecho en Inicio > «Administrador de dispositivos». Si algún aparato tiene un signo de advertencia amarillo, clic derecho > «Actualizar controlador»."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Repará los archivos de Windows: abrí «Símbolo del sistema» como administrador, escribí sfc /scannow y Enter."
+    abrir: "https://learn.microsoft.com/windows-server/administration/windows-commands/sfc"
+  - texto: "Instalá todas las actualizaciones de Windows."
+    abrir: "ms-settings:windowsupdate"
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x154--unexpected-store-exception
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+  - https://learn.microsoft.com/windows-server/administration/windows-commands/sfc
+madurez: T0
+---
+id: BSOD-025
+area: hardware
+titulo:
+  sencillo: "Pantalla azul «VIDEO_SCHEDULER_INTERNAL_ERROR»"
+  tecnico: "Error de detención 0x119 VIDEO_SCHEDULER_INTERNAL_ERROR"
+explicacion:
+  sencillo: "El organizador de trabajo de la placa de video detectó un error grave. Casi siempre se arregla actualizando el controlador de video; si no, puede ser la memoria o la placa."
+  tecnico: "0x119: el programador de video detectó una infracción fatal. Si el módulo culpable es el controlador de video, buscar su actualización; algunos subcódigos indican corrupción de memoria o hardware defectuoso."
+frases: ["pantalla azul video scheduler internal error", "me sale video_scheduler_internal_error", "error video scheduler jugando", "pantallazo azul video scheduler al mirar videos"]
+pasos:
+  - texto: "Actualizá el controlador de video: clic derecho en Inicio > «Administrador de dispositivos» > «Adaptadores de pantalla», clic derecho en tu placa > «Actualizar controlador». También podés bajarlo de la página oficial del fabricante."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Instalá todas las actualizaciones de Windows, también las opcionales de controladores."
+    abrir: "ms-settings:windowsupdate-optionalupdates"
+  - texto: "Si conectaste o cambiaste algo hace poco, desconectalo y probá de nuevo."
+    abrir: "https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors"
+derivar: "Si sigue con el controlador al día, un técnico puede probar la memoria y la placa de video."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/debugger/bug-check-0x119---video-scheduler-internal-error
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+  - https://support.microsoft.com/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors
+madurez: T0

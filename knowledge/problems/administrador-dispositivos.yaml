@@ -1,0 +1,523 @@
+# Administrador de dispositivos: signo de exclamación amarillo, dispositivo desconocido, volver o actualizar controladores a mano y códigos de error (1 a 52). Guiadas con fuente oficial.
+id: DEVC-001
+area: hardware
+titulo:
+  sencillo: "Hay un aparato con un signo de exclamación amarillo"
+  tecnico: "Dispositivo con signo de exclamación amarillo: ver su código de error"
+explicacion:
+  sencillo: "Cuando Windows tiene problemas con una pieza de la compu o un accesorio, en el Administrador de dispositivos le pone un signo de exclamación amarillo. Cada problema tiene un número («código») que dice qué pasa y cómo seguir."
+  tecnico: "Administrador de dispositivos > Propiedades > General > Estado del dispositivo muestra el código (CM_PROB_* definidos en Cfg.h)."
+frases: ["hay un signo de exclamación amarillo en el administrador de dispositivos", "me sale un triangulito amarillo al lado de un dispositivo", "cómo sé qué error tiene un dispositivo", "el administrador de dispositivos marca algo en amarillo"]
+pasos:
+  - texto: "Hacé clic derecho en el botón Inicio y elegí «Administrador de dispositivos»."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Abrí el grupo donde está el aparato marcado (por ejemplo «Adaptadores de pantalla»), hacé clic derecho sobre él y elegí «Propiedades»."
+  - texto: "En la pestaña «General», mirá el recuadro «Estado del dispositivo»: ahí figura el número, por ejemplo «(Código 43)». Escribile ese código a PC Doctor, por ejemplo «el administrador de dispositivos dice código 43»."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/device-manager-error-messages
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+madurez: T0
+---
+id: DEVC-002
+area: hardware
+titulo:
+  sencillo: "En el Administrador de dispositivos aparece un «Dispositivo desconocido»"
+  tecnico: "Dispositivo sin controlador compatible"
+explicacion:
+  sencillo: "Windows ve que hay algo conectado o una pieza adentro de la compu, pero no tiene su controlador (el programita que la hace andar). Se arregla consiguiendo el controlador correcto: primero por Windows Update y, si no, de la página del fabricante."
+  tecnico: "Revisar el código en Estado del dispositivo; código 28 = controladores no instalados (STATUS_PNP_NO_COMPAT_DRIVERS: no se encontró controlador compatible)."
+frases: ["me aparece un dispositivo desconocido en el administrador", "hay algo que dice dispositivo desconocido con un signo amarillo", "windows no reconoce una pieza de la compu", "no sé qué es ese dispositivo desconocido"]
+pasos:
+  - texto: "Mirá qué código tiene: clic derecho en el aparato > «Propiedades» y fijate en «Estado del dispositivo». Si dice código 28 o código 1, le falta el controlador."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "Abrí las actualizaciones opcionales de Windows Update: si aparecen controladores, marcalos, tocá «Descargar e instalar» y reiniciá la compu al terminar."
+    abrir: "ms-settings:windowsupdate-optionalupdates"
+  - texto: "Si no aparece nada, en el Administrador de dispositivos hacé clic derecho en el aparato > «Actualizar controlador» y elegí la opción de buscar controladores automáticamente."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Si sigue igual, bajá el controlador solamente de la página oficial del fabricante de tu compu o de la pieza, nunca de otras páginas."
+fuentes:
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-failed-install
+  - https://support.microsoft.com/help/15046
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+madurez: T0
+---
+id: DEVC-003
+area: windows
+titulo:
+  sencillo: "Actualicé un controlador y algo dejó de andar: quiero volver al anterior"
+  tecnico: "Revertir al controlador anterior (Roll Back Driver)"
+explicacion:
+  sencillo: "Si un aparato (la pantalla, el sonido, el Wi-Fi) empezó a fallar justo después de actualizar su controlador, Windows te deja volver a la versión que tenías antes. Hace falta entrar con una cuenta de administrador."
+  tecnico: "Administrador de dispositivos > Propiedades > pestaña Controlador > Revertir al controlador anterior; requiere permisos de administrador."
+frases: ["quiero volver al driver que tenía antes", "actualicé el controlador y ahora anda peor", "cómo vuelvo atrás un controlador", "desde que actualicé el driver de video anda mal"]
+pasos:
+  - texto: "Hacé clic derecho en Inicio > «Administrador de dispositivos». Buscá el aparato, hacé clic derecho sobre él y elegí «Propiedades»."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Entrá a la pestaña «Controlador» y tocá «Revertir al controlador anterior». Elegí un motivo y confirmá con «Sí»."
+  - texto: "Si te lo pide, reiniciá la compu y probá si el aparato volvió a andar."
+  - texto: "Si ese botón no se puede tocar, conseguí la versión anterior en la página oficial del fabricante y escribile a PC Doctor «bajé el controlador y no sé cómo instalarlo»."
+fuentes:
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+madurez: T0
+---
+id: DEVC-004
+area: windows
+titulo:
+  sencillo: "Quiero instalar a mano un controlador que bajé del fabricante"
+  tecnico: "Actualizar un controlador manualmente desde una carpeta (Update driver > Browse my computer for drivers)"
+explicacion:
+  sencillo: "A veces Windows no encuentra solo el controlador correcto. Entonces se baja de la página oficial del fabricante y se lo indicás a Windows a mano. Bajalo únicamente del sitio oficial de la marca: de otras páginas puede venir con virus."
+  tecnico: "Administrador de dispositivos > Actualizar controlador > buscar controladores en el equipo > Examinar (carpeta con el INF descomprimido) > Siguiente."
+frases: ["cómo actualizo un driver a mano", "bajé el controlador y no sé cómo instalarlo", "instalar un controlador desde una carpeta", "windows no encuentra el driver y yo lo tengo descargado"]
+pasos:
+  - texto: "Primero probá lo fácil: en las actualizaciones opcionales de Windows Update, si hay controladores, instalalos y reiniciá."
+    abrir: "ms-settings:windowsupdate-optionalupdates"
+  - texto: "Si no, bajá el controlador de la página oficial del fabricante, eligiendo tu versión de Windows. Si viene comprimido (ZIP), descomprimilo en una carpeta."
+  - texto: "En el Administrador de dispositivos, clic derecho en el aparato > «Actualizar controlador» y elegí la segunda opción, la de buscar los controladores en tu equipo. Tocá «Examinar», elegí la carpeta, «Aceptar» y después «Siguiente»."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Si Windows avisa que ya están instalados los mejores controladores, ese aparato ya está al día. Tocá «Cerrar»."
+fuentes:
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+  - https://support.microsoft.com/help/15046
+madurez: T0
+---
+id: DEVC-005
+area: hardware
+titulo:
+  sencillo: "El Administrador de dispositivos dice «Código 1»"
+  tecnico: "Código 1: CM_PROB_NOT_CONFIGURED (dispositivo no configurado correctamente)"
+explicacion:
+  sencillo: "El código 1 quiere decir que ese aparato no está bien configurado: Windows no le instaló ningún controlador."
+  tecnico: "Sin entrada ConfigFlags en el registro: no hay controlador instalado (normalmente no se encontró el INF)."
+frases: ["el administrador de dispositivos dice código 1", "me aparece error código 1 en un dispositivo", "dice que el dispositivo no está configurado correctamente", "código 1 en el controlador"]
+pasos:
+  - texto: "Abrí el Administrador de dispositivos (clic derecho en Inicio), hacé clic derecho en el aparato con el signo amarillo y elegí «Actualizar controlador» > la opción de buscar automáticamente."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Si no encuentra nada, revisá las actualizaciones opcionales de Windows Update, instalá los controladores que aparezcan y reiniciá."
+    abrir: "ms-settings:windowsupdate-optionalupdates"
+  - texto: "Si sigue el código 1, bajá el controlador de la página oficial del fabricante e instalalo a mano: escribile a PC Doctor «cómo actualizo un driver a mano»."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-not-configured
+  - https://support.microsoft.com/help/15046
+madurez: T0
+---
+id: DEVC-006
+area: hardware
+titulo:
+  sencillo: "Código 3: el controlador puede estar dañado o falta memoria"
+  tecnico: "Código 3: CM_PROB_OUT_OF_MEMORY"
+explicacion:
+  sencillo: "Windows no pudo hacer andar el aparato: o su controlador está dañado, o a la compu le falta memoria en ese momento porque hay demasiadas cosas abiertas."
+  tecnico: "Controlador dañado o memoria/recursos del sistema insuficientes (también si DriverEntry devuelve STATUS_INSUFFICIENT_RESOURCES)."
+frases: ["el administrador de dispositivos marca código 3", "error código 3 en un dispositivo", "dice que el controlador puede estar dañado o que hay poca memoria", "me salió código 3 con muchos programas abiertos"]
+pasos:
+  - texto: "Cerrá los programas que no estés usando y fijate en el Administrador de tareas (Ctrl + Mayús + Esc) cuánta memoria está ocupada."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "Guardá lo que estés haciendo. En el Administrador de dispositivos, clic derecho en el aparato > «Desinstalar el dispositivo» > «Desinstalar», y reiniciá la compu: Windows intenta instalar el controlador de nuevo."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Si no se reinstaló solo, en el Administrador de dispositivos usá el menú «Acción» > «Buscar cambios de hardware»."
+  - texto: "Si el código 3 vuelve cada vez que tenés muchas cosas abiertas, puede que la compu necesite más memoria RAM: escribile a PC Doctor «la PC tiene poca memoria RAM»."
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-out-of-memory
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+madurez: T0
+---
+id: DEVC-007
+area: hardware
+titulo:
+  sencillo: "Código 10: el dispositivo no puede iniciar"
+  tecnico: "Código 10: CM_PROB_FAILED_START"
+explicacion:
+  sencillo: "Windows encontró el aparato pero no lo pudo arrancar. Microsoft recomienda empezar por actualizar su controlador."
+  tecnico: "Un controlador de la pila falló IRP_MN_START_DEVICE; el motivo puede verse en DEVPKEY_Device_ProblemStatus o en FailReasonString."
+frases: ["el administrador de dispositivos dice código 10", "este dispositivo no puede iniciar código 10", "me sale código 10 en el audio", "error código 10 en un usb"]
+pasos:
+  - texto: "En el Administrador de dispositivos, clic derecho en el aparato > «Actualizar controlador» > la opción de buscar automáticamente. Si no encuentra nada, tocá la opción que te lleva a buscar en Windows Update."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Revisá las actualizaciones opcionales de Windows Update, instalá los controladores que haya y reiniciá al terminar."
+    abrir: "ms-settings:windowsupdate-optionalupdates"
+  - texto: "Si el código 10 apareció justo después de actualizar ese controlador, volvé al anterior: escribile a PC Doctor «quiero volver al driver que tenía antes»."
+  - texto: "Si nada cambia, bajá el controlador de la página oficial del fabricante del aparato."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-failed-start
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+  - https://support.microsoft.com/help/15046
+madurez: T0
+---
+id: DEVC-008
+area: hardware
+titulo:
+  sencillo: "Código 12 o 34: el dispositivo no encuentra recursos libres o no sabe cómo configurarse"
+  tecnico: "Código 12 (CM_PROB_NORMAL_CONFLICT) y código 34 (CM_PROB_NO_SOFTCONFIG)"
+explicacion:
+  sencillo: "Cada pieza de la compu necesita unos «recursos» internos para comunicarse. Con el código 12, dos piezas quieren usar los mismos y chocan; con el código 34, Windows no sabe qué recursos darle y hay que configurarlo a mano. Es un tema más técnico que los demás."
+  tecnico: "12: dos dispositivos con los mismos puertos de E/S, IRQ o canal DMA, o el BIOS no asignó recursos. 34: requiere configuración forzada en la pestaña Recursos."
+frases: ["el administrador de dispositivos dice código 12", "no encuentra suficientes recursos libres código 12", "me sale código 34 en un dispositivo", "dice que tengo que deshabilitar otro dispositivo para usar este"]
+pasos:
+  - texto: "Anotá el nombre del aparato y el código que figura en «Estado del dispositivo» (clic derecho > «Propiedades»)."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "Código 12: el mensaje avisa que, para usar ese aparato, habría que deshabilitar otro. Microsoft indica resolver el conflicto desde el Administrador de dispositivos; a veces la causa es que el BIOS no le asignó recursos y hace falta una actualización del fabricante."
+  - texto: "Código 34: hay que configurar el aparato según el manual del fabricante y después fijar sus recursos en la pestaña «Recursos» de sus propiedades."
+derivar: "Resolver conflictos de recursos o tocar el BIOS es delicado: si no estás seguro, llevá la compu a un técnico con el nombre del aparato y el código."
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-normal-conflict
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-no-softconfig
+madurez: T0
+---
+id: DEVC-009
+area: hardware
+titulo:
+  sencillo: "Código 14 o 38: el dispositivo necesita que reinicies la compu"
+  tecnico: "Código 14 (CM_PROB_NEED_RESTART) y código 38 (CM_PROB_DRIVER_FAILED_PRIOR_UNLOAD)"
+explicacion:
+  sencillo: "Estos dos códigos se arreglan reiniciando. El 14 aparece cuando se instaló o cambió algo que necesita un reinicio para terminar; el 38, cuando el controlador viejo quedó cargado en memoria y no deja arrancar el nuevo."
+  tecnico: "14: operación pendiente que requiere reinicio (archivos o servicios en cola). 38: instancia previa del controlador todavía cargada."
+frases: ["el administrador de dispositivos dice código 14", "dice que el dispositivo no va a funcionar hasta que reinicie", "me aparece código 38", "código 38 el controlador sigue en memoria"]
+pasos:
+  - texto: "Guardá lo que estés haciendo y cerrá los programas."
+  - texto: "Reiniciá la compu: Inicio > botón de apagado > «Reiniciar»."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "Al volver, abrí el Administrador de dispositivos y fijate si el signo amarillo se fue. Si queda otro código, escribíselo a PC Doctor."
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-need-restart
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-driver-failed-prior-unload
+madurez: T0
+---
+id: DEVC-010
+area: hardware
+titulo:
+  sencillo: "Código 18: hay que reinstalar los controladores del dispositivo"
+  tecnico: "Código 18: CM_PROB_REINSTALL"
+explicacion:
+  sencillo: "Windows pide que se vuelva a instalar el controlador de ese aparato. Se hace desde el Administrador de dispositivos en un par de minutos."
+  tecnico: "Reinstalar mediante Actualizar controlador, o Desinstalar + Acción > Buscar cambios de hardware. Suele ser transitorio."
+frases: ["el administrador de dispositivos dice código 18", "dice que reinstale los controladores código 18", "error código 18 en un dispositivo"]
+pasos:
+  - texto: "En el Administrador de dispositivos, clic derecho en el aparato > «Actualizar controlador» > la opción de buscar automáticamente."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Si no cambia: guardá lo que estés haciendo, clic derecho en el aparato > «Desinstalar el dispositivo», y después menú «Acción» > «Buscar cambios de hardware» para que Windows lo vuelva a instalar."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "Si Windows no encuentra el controlador, bajalo de la página oficial del fabricante."
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-reinstall
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+madurez: T0
+---
+id: DEVC-011
+area: hardware
+titulo:
+  sencillo: "Código 19: la configuración del dispositivo está incompleta o dañada"
+  tecnico: "Código 19: CM_PROB_REGISTRY"
+explicacion:
+  sencillo: "Windows guarda la configuración de cada aparato en una especie de libreta interna (el «registro»). Si esa parte se dañó, el aparato no arranca. Se arregla reinstalando el controlador o volviendo la compu a un punto anterior."
+  tecnico: "Problema en el registro: más de un servicio definido, error al abrir la clave del servicio o nombre del controlador inaccesible (p. ej. filtro inexistente, STATUS_OBJECT_NAME_NOT_FOUND)."
+frases: ["el administrador de dispositivos dice código 19", "código 19 información de configuración incompleta o dañada", "me salió código 19 en un dispositivo", "error código 19 en el registro"]
+pasos:
+  - texto: "Guardá lo que estés haciendo. En el Administrador de dispositivos, clic derecho en el aparato > «Desinstalar el dispositivo»."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "Después usá el menú «Acción» > «Buscar cambios de hardware» para que Windows lo instale de nuevo."
+  - texto: "Si sigue, podés volver la compu a un punto de restauración de antes de que empezara el problema: escribile a PC Doctor «quiero volver la computadora a como estaba hace unos días»."
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-registry
+madurez: T0
+---
+id: DEVC-012
+area: hardware
+titulo:
+  sencillo: "Código 21: Windows está quitando este dispositivo"
+  tecnico: "Código 21: CM_PROB_WILL_BE_REMOVED"
+explicacion:
+  sencillo: "Windows está en pleno proceso de sacar ese aparato de la lista. Es pasajero: en general se va solo en unos segundos."
+  tecnico: "Estado transitorio mientras se consulta y se quita el dispositivo."
+frases: ["el administrador de dispositivos dice código 21", "dice que windows está quitando el dispositivo", "me quedó un dispositivo con código 21"]
+pasos:
+  - texto: "Cerrá la ventana de propiedades y esperá unos segundos."
+  - texto: "En el Administrador de dispositivos apretá F5 para actualizar la lista."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "Si el código 21 sigue ahí, reiniciá la compu."
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-will-be-removed
+madurez: T0
+---
+id: DEVC-013
+area: hardware
+titulo:
+  sencillo: "Código 22: el dispositivo está deshabilitado"
+  tecnico: "Código 22: CM_PROB_DISABLED"
+explicacion:
+  sencillo: "Alguien apagó ese aparato desde el Administrador de dispositivos. No está roto: hay que volver a habilitarlo."
+  tecnico: "Dispositivo deshabilitado por el usuario en el Administrador de dispositivos; se resuelve con Habilitar dispositivo."
+frases: ["el administrador de dispositivos dice código 22", "dice este dispositivo está deshabilitado", "la cámara aparece deshabilitada con código 22", "cómo vuelvo a activar un dispositivo deshabilitado"]
+pasos:
+  - texto: "Abrí el Administrador de dispositivos (clic derecho en Inicio) y buscá el aparato."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Seleccionalo y elegí «Habilitar dispositivo» (con clic derecho o desde el menú «Acción»)."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "Probá si anda. Si después aparece otro código, escribíselo a PC Doctor."
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-disabled
+madurez: T0
+---
+id: DEVC-014
+area: hardware
+titulo:
+  sencillo: "Código 24: el dispositivo no está presente o no funciona bien"
+  tecnico: "Código 24: CM_PROB_DEVICE_NOT_THERE"
+explicacion:
+  sencillo: "Windows tiene anotado el aparato, pero no lo encuentra o no le funciona: puede estar preparado para quitarlo, le puede faltar un controlador nuevo o puede estar fallando."
+  tecnico: "Dispositivo no presente, preparado para quitar, sin todos sus controladores o con hardware defectuoso."
+frases: ["el administrador de dispositivos dice código 24", "dice que el dispositivo no está presente código 24", "me aparece código 24 en un accesorio"]
+pasos:
+  - texto: "Si es un accesorio (por USB, por ejemplo), revisá que esté bien conectado y prendido."
+  - texto: "Si ya no lo usás, quitalo de la lista: clic derecho > «Desinstalar el dispositivo». El error desaparece al quitarlo."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "Si lo usás y sigue fallando, actualizá su controlador (clic derecho > «Actualizar controlador»). Si nada cambia, puede ser una falla del aparato."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-device-not-there
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+madurez: T0
+---
+id: DEVC-015
+area: hardware
+titulo:
+  sencillo: "Código 28: el dispositivo no tiene los controladores instalados"
+  tecnico: "Código 28: CM_PROB_FAILED_INSTALL"
+explicacion:
+  sencillo: "Windows no encontró un controlador que le sirva a ese aparato. Puede pasar, por ejemplo, después de actualizar Windows a una versión nueva."
+  tecnico: "Controladores no instalados; DEVPKEY_Device_ProblemStatus suele indicar STATUS_PNP_NO_COMPAT_DRIVERS (sin controlador compatible) o falta de dependencias del paquete."
+frases: ["el administrador de dispositivos dice código 28", "los controladores de este dispositivo no están instalados código 28", "después de actualizar windows me sale código 28", "error 28 driver no instalado"]
+pasos:
+  - texto: "Revisá las actualizaciones opcionales de Windows Update: si hay controladores, instalalos y reiniciá al terminar."
+    abrir: "ms-settings:windowsupdate-optionalupdates"
+  - texto: "En el Administrador de dispositivos: guardá lo que estés haciendo, clic derecho en el aparato > «Desinstalar el dispositivo», y después menú «Acción» > «Buscar cambios de hardware»."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "Si sigue sin controlador, entrá a la página oficial del fabricante del aparato (o de tu compu), buscá el controlador más nuevo para tu Windows e instalalo. Para hacerlo a mano, escribile a PC Doctor «instalar un controlador desde una carpeta»."
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-failed-install
+  - https://support.microsoft.com/help/15046
+madurez: T0
+---
+id: DEVC-016
+area: hardware
+titulo:
+  sencillo: "Código 29: el dispositivo está desactivado desde el BIOS"
+  tecnico: "Código 29: CM_PROB_HARDWARE_DISABLED"
+explicacion:
+  sencillo: "Ese aparato está apagado «desde adentro», en la configuración de la placa de la compu (el BIOS o firmware) que funciona antes de Windows. Por eso Windows no lo puede usar."
+  tecnico: "El firmware no asignó recursos al dispositivo; hay que habilitarlo en el BIOS/UEFI."
+frases: ["el administrador de dispositivos dice código 29", "dispositivo deshabilitado porque el firmware no le dio recursos", "me sale código 29", "cómo habilito algo en el bios por el código 29"]
+pasos:
+  - texto: "Anotá el nombre del aparato que tiene el código 29."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "Hay que activarlo en el BIOS (la configuración que aparece al prender la compu, antes de Windows). Cómo se entra y dónde está la opción depende de la marca: buscalo en el manual o en la página de soporte del fabricante de tu compu."
+derivar: "Si no te sentís seguro de entrar al BIOS, pedile a un técnico que active ese dispositivo, y no toques otras opciones de ahí."
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-hardware-disabled
+madurez: T0
+---
+id: DEVC-017
+area: hardware
+titulo:
+  sencillo: "Código 31: Windows no puede cargar los controladores del dispositivo"
+  tecnico: "Código 31: CM_PROB_FAILED_ADD"
+explicacion:
+  sencillo: "El aparato está, pero su controlador falla al prepararlo y Windows no lo puede cargar. Microsoft recomienda actualizar el controlador."
+  tecnico: "La rutina AddDevice del controlador de función devolvió error (en WDF, EvtDriverDeviceAdd)."
+frases: ["el administrador de dispositivos dice código 31", "no funciona correctamente porque windows no puede cargar los controladores", "código 31 en la placa de red", "me sale error 31 en un dispositivo"]
+pasos:
+  - texto: "En el Administrador de dispositivos, clic derecho en el aparato > «Actualizar controlador» > la opción de buscar automáticamente."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Revisá también las actualizaciones opcionales de Windows Update y reiniciá después de instalar."
+    abrir: "ms-settings:windowsupdate-optionalupdates"
+  - texto: "Si no aparece un controlador, bajalo de la página oficial del fabricante."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-failed-add
+  - https://support.microsoft.com/help/15046
+madurez: T0
+---
+id: DEVC-018
+area: hardware
+titulo:
+  sencillo: "Código 32: el controlador del dispositivo está desactivado"
+  tecnico: "Código 32: CM_PROB_DISABLED_SERVICE"
+explicacion:
+  sencillo: "El programa que hace andar ese aparato quedó configurado para no arrancar. A veces es a propósito porque otro controlador hace ese trabajo; si el aparato no te anda, conviene reinstalarlo."
+  tecnico: "El tipo de inicio del servicio del controlador está en Deshabilitado; puede haber un controlador alternativo dando la función."
+frases: ["el administrador de dispositivos dice código 32", "dice que un controlador para este dispositivo está deshabilitado", "me aparece código 32 y el aparato no anda"]
+pasos:
+  - texto: "Si el aparato anda bien igual, no hace falta tocar nada: el mensaje avisa que otro controlador puede estar haciendo ese trabajo."
+  - texto: "Si no anda: guardá lo que estés haciendo, en el Administrador de dispositivos hacé clic derecho en el aparato > «Desinstalar el dispositivo» y después menú «Acción» > «Buscar cambios de hardware»."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "Si el código vuelve, bajá el controlador de la página oficial del fabricante."
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-disabled-service
+madurez: T0
+---
+id: DEVC-019
+area: hardware
+titulo:
+  sencillo: "Código 33 o 35: el dispositivo necesita una actualización del BIOS"
+  tecnico: "Código 33 (CM_PROB_TRANSLATION_FAILED) y código 35 (CM_PROB_BIOS_TABLE)"
+explicacion:
+  sencillo: "Windows no logra saber qué recursos necesita el aparato (código 33), o el firmware de la placa (el BIOS) no trae la información necesaria (código 35). En general hace falta una actualización del BIOS del fabricante de la compu."
+  tecnico: "33: falló la traducción de recursos. 35: tabla MPS del BIOS incorrecta; obtener BIOS nuevo del fabricante."
+frases: ["el administrador de dispositivos dice código 35", "dice que contacte al fabricante para actualizar el bios", "me aparece código 33", "windows no puede determinar qué recursos necesita código 33"]
+pasos:
+  - texto: "Anotá la marca y el modelo exacto de tu compu (o de la placa madre) y el código que aparece."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "Entrá a la página de soporte oficial del fabricante y fijate si hay una actualización de BIOS o firmware para tu modelo."
+  - texto: "Con el código 33, si la actualización no lo arregla, el aparato puede necesitar configurarse, repararse o reemplazarse."
+derivar: "Actualizar el BIOS es delicado: seguí al pie de la letra las instrucciones del fabricante o pedíselo a un técnico."
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-translation-failed
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-bios-table
+madurez: T0
+---
+id: DEVC-020
+area: hardware
+titulo:
+  sencillo: "Código 37 o 41: el controlador no arranca o no encuentra el aparato"
+  tecnico: "Código 37 (CM_PROB_FAILED_DRIVER_ENTRY) y código 41 (CM_PROB_LEGACY_SERVICE_NO_DEVICES)"
+explicacion:
+  sencillo: "Con el código 37, el controlador falla apenas arranca. Con el 41, el controlador carga bien pero no encuentra el aparato. En los dos casos Microsoft recomienda reinstalarlo."
+  tecnico: "37: DriverEntry devolvió error. 41: servicio heredado cargado que no creó objeto de dispositivo."
+frases: ["el administrador de dispositivos dice código 37", "windows no puede inicializar el controlador código 37", "me sale código 41", "cargó el controlador pero no encuentra el dispositivo"]
+pasos:
+  - texto: "Guardá lo que estés haciendo. En el Administrador de dispositivos, clic derecho en el aparato > «Desinstalar el dispositivo»."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "Usá el menú «Acción» > «Buscar cambios de hardware» para que se reinstale."
+  - texto: "Si el código vuelve, bajá un controlador nuevo de la página oficial del fabricante."
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-failed-driver-entry
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-legacy-service-no-devices
+madurez: T0
+---
+id: DEVC-021
+area: hardware
+titulo:
+  sencillo: "Código 39 o 40: el controlador falta, está dañado o mal registrado"
+  tecnico: "Código 39 (CM_PROB_DRIVER_FAILED_LOAD) y código 40 (CM_PROB_DRIVER_SERVICE_KEY_INVALID)"
+explicacion:
+  sencillo: "Windows no puede cargar el controlador porque falta o se dañó (código 39), o porque los datos que guarda sobre él están incompletos o mal anotados (código 40). Se arregla reinstalándolo."
+  tecnico: "39: el controlador no se pudo cargar (archivo dañado, dependencia ausente, API no soportada o incompatibilidad con HVCI). 40: clave de servicio inválida en el registro."
+frases: ["el administrador de dispositivos dice código 39", "el controlador puede estar dañado o no existir código 39", "me aparece código 40 en un dispositivo", "código 39 en el usb"]
+pasos:
+  - texto: "Guardá lo que estés haciendo. En el Administrador de dispositivos, clic derecho en el aparato > «Desinstalar el dispositivo»."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "Usá el menú «Acción» > «Buscar cambios de hardware» para que Windows lo instale de nuevo."
+  - texto: "Si el código vuelve, revisá las actualizaciones opcionales de Windows Update o bajá el controlador de la página oficial del fabricante."
+    abrir: "ms-settings:windowsupdate-optionalupdates"
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-driver-failed-load
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-driver-service-key-invalid
+  - https://support.microsoft.com/help/15046
+madurez: T0
+---
+id: DEVC-022
+area: hardware
+titulo:
+  sencillo: "Código 43: Windows detuvo el dispositivo porque informó problemas"
+  tecnico: "Código 43: CM_PROB_FAILED_POST_START"
+explicacion:
+  sencillo: "El controlador del aparato le avisó a Windows que algo falló, y Windows lo detuvo. Puede ser culpa del controlador o del aparato en sí."
+  tecnico: "Un controlador de la pila informó PNP_DEVICE_FAILED en IRP_MN_QUERY_PNP_DEVICE_STATE (en WDF, p. ej. WdfDeviceSetFailed)."
+frases: ["el administrador de dispositivos dice código 43", "windows detuvo este dispositivo porque informó problemas", "la placa de video tiene código 43", "el usb no anda y dice código 43", "me sale error 43 en un dispositivo"]
+pasos:
+  - texto: "Guardá lo que estés haciendo. En el Administrador de dispositivos, clic derecho en el aparato > «Desinstalar el dispositivo» > «Desinstalar»."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "Usá el menú «Acción» > «Buscar cambios de hardware», o reiniciá la compu, para que Windows lo vuelva a instalar."
+    abrir: "https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+  - texto: "Si sigue, actualizá el controlador o bajalo de la página oficial del fabricante, y revisá la ayuda que da el fabricante del aparato."
+  - texto: "Si empezó justo después de actualizar el controlador, probá volver al anterior: escribile a PC Doctor «cómo vuelvo atrás un controlador»."
+derivar: "Si el código 43 vuelve aun con el controlador correcto, el aparato puede estar fallando: consultá con el fabricante o con un técnico."
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-failed-post-start
+  - https://support.microsoft.com/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6
+madurez: T0
+---
+id: DEVC-023
+area: hardware
+titulo:
+  sencillo: "Código 45: el dispositivo no está conectado a la computadora"
+  tecnico: "Código 45: CM_PROB_PHANTOM (dispositivo no presente)"
+explicacion:
+  sencillo: "Windows recuerda un aparato que alguna vez estuvo conectado, pero ahora no está. No es una falla: el aviso se va cuando lo volvés a conectar."
+  tecnico: "Dispositivo no presente; solo se muestra cuando se ven los dispositivos no presentes (DEVMGR_SHOW_NONPRESENT_DEVICES). No requiere acción."
+frases: ["el administrador de dispositivos dice código 45", "dice que el dispositivo no está conectado a la computadora", "me sale código 45 en algo que ya desenchufé"]
+pasos:
+  - texto: "Si querés usar ese aparato, volvé a conectarlo: el error se va solo."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "Si no lo vas a usar más, no hace falta hacer nada."
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-phantom
+madurez: T0
+---
+id: DEVC-024
+area: hardware
+titulo:
+  sencillo: "Código 48: el controlador está bloqueado porque da problemas con Windows"
+  tecnico: "Código 48: CM_PROB_DRIVER_BLOCKED"
+explicacion:
+  sencillo: "Windows tiene una lista de controladores que se sabe que causan problemas, y el de este aparato está en esa lista, así que no lo deja arrancar. Hace falta una versión nueva del controlador."
+  tecnico: "Controlador listado en la base de protección de controladores que distribuye Windows Update, o incompatible con el inicio de sesión de seguridad mejorada."
+frases: ["el administrador de dispositivos dice código 48", "el software de este dispositivo se bloqueó porque tiene problemas con windows", "código 48 controlador bloqueado", "windows me bloqueó un driver"]
+pasos:
+  - texto: "Revisá las actualizaciones opcionales de Windows Update por si hay una versión nueva del controlador; instalala y reiniciá."
+    abrir: "ms-settings:windowsupdate-optionalupdates"
+  - texto: "Si no aparece, entrá a la página oficial del fabricante del aparato y bajá la versión más nueva del controlador."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "No intentes forzar el controlador viejo: Windows lo bloquea porque se sabe que trae problemas."
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-driver-blocked
+  - https://support.microsoft.com/help/15046
+madurez: T0
+---
+id: DEVC-025
+area: hardware
+titulo:
+  sencillo: "Código 52: Windows no puede verificar la firma digital del controlador"
+  tecnico: "Código 52: CM_PROB_UNSIGNED_DRIVER"
+explicacion:
+  sencillo: "Windows no deja arrancar controladores sin una «firma» que demuestre de dónde vienen. Puede ser un archivo dañado, mal firmado o hasta un programa malicioso. La salida segura es instalar un controlador firmado del fabricante."
+  tecnico: "El controlador no cumple la directiva de firma de código en modo kernel (Windows de 64 bits)."
+frases: ["el administrador de dispositivos dice código 52", "windows no puede comprobar la firma digital de los controladores", "error código 52 driver sin firma", "me sale código 52 en el usb"]
+pasos:
+  - texto: "No busques trucos para saltear la firma: Microsoft indica que, para el usuario, la única salida es instalar un controlador firmado."
+    abrir: "https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-unsigned-driver"
+  - texto: "Revisá las actualizaciones opcionales de Windows Update por si hay un controlador para ese aparato."
+    abrir: "ms-settings:windowsupdate-optionalupdates"
+  - texto: "Si no, bajá el controlador más nuevo de la página oficial del fabricante, o consultale directamente."
+    abrir: "https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e"
+  - texto: "Si apareció de golpe sin que instalaras nada, revisá la compu con el antivirus: escribile a PC Doctor «creo que tengo un virus»."
+fuentes:
+  - https://support.microsoft.com/windows/error-codes-in-device-manager-in-windows-524e9e89-4dee-8883-0afa-6bca0456324e
+  - https://learn.microsoft.com/windows-hardware/drivers/install/cm-prob-unsigned-driver
+  - https://support.microsoft.com/help/15046
+madurez: T0

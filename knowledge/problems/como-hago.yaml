@@ -1,0 +1,489 @@
+# Cómo hago… en Windows 11: escritorios, widgets, anclar programas, Explorador, ZIP, Recortes, emojis, modo oscuro, apps de Windows (Calculadora, Reloj, Notas rápidas, Grabadora, Cámara) y datos de la PC. Guiadas con fuente oficial.
+id: HOW-001
+area: basico
+titulo:
+  sencillo: "Quiero tener varios escritorios para separar lo que hago"
+  tecnico: "Escritorios virtuales (Vista de tareas)"
+explicacion:
+  sencillo: "Windows te deja tener más de un escritorio, como si tuvieras varias mesas: en una las cosas del trabajo y en otra las de la casa. Cada escritorio tiene sus propias ventanas."
+  tecnico: "Vista de tareas (Windows + Tab) > Nuevo escritorio; Windows + Ctrl + D crea, Windows + Ctrl + flechas cambia y Windows + Ctrl + F4 cierra el escritorio actual."
+frases: ["cómo hago para tener otro escritorio", "separar las ventanas del trabajo y las de la casa", "escritorios virtuales en windows 11", "pasar de un escritorio a otro"]
+pasos:
+  - texto: "Apretá Windows + Tab (o tocá el ícono de «Vista de tareas» en la barra de abajo) y elegí «Nuevo escritorio». Si querés, tocá su nombre y poné uno propio, por ejemplo «Trabajo»."
+    abrir: "https://support.microsoft.com/windows/configure-multiple-desktops-in-windows-36f52e38-5b4a-557b-2ff9-e1a60c976434"
+  - texto: "Para crear uno directo con el teclado: Windows + Ctrl + D. Para pasar de un escritorio a otro: Windows + Ctrl + flecha izquierda o derecha."
+  - texto: "Para cerrar el escritorio en el que estás: Windows + Ctrl + F4. Microsoft lo lista entre los atajos de teclado de Windows."
+    abrir: "https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec"
+fuentes:
+  - https://support.microsoft.com/windows/configure-multiple-desktops-in-windows-36f52e38-5b4a-557b-2ff9-e1a60c976434
+  - https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec
+madurez: T0
+---
+id: HOW-002
+area: basico
+titulo:
+  sencillo: "Quiero sacar (o usar) el panel de widgets"
+  tecnico: "Widgets: abrir con Windows + W u ocultar el botón de la barra de tareas"
+explicacion:
+  sencillo: "Los widgets son un panel con información rápida (clima, noticias y otras cosas) que se abre desde la barra de abajo. Si no lo usás, podés sacar el botón de la barra; si te gusta, lo abrís con dos teclas."
+  tecnico: "Windows + W abre el panel; Configuración > Personalización > Barra de tareas > Elementos de la barra de tareas > Widgets (activado/desactivado). Ocultarlo no deshabilita el panel."
+frases: ["cómo saco los widgets de la barra", "quiero quitar el clima y las noticias de abajo", "para qué sirven los widgets", "se me abre un panel de noticias"]
+pasos:
+  - texto: "Para abrir el panel: apretá Windows + W, o tocá la zona de widgets en la barra de tareas."
+    abrir: "https://support.microsoft.com/windows/stay-up-to-date-with-widgets-7ba79aaa-dac6-4687-b460-ad16a06be6e4"
+  - texto: "Para sacar el botón: hacé clic derecho en la barra de tareas > «Configuración de la barra de tareas». En «Elementos de la barra de tareas», apagá «Widgets»."
+    abrir: "ms-settings:taskbar"
+  - texto: "Aunque saques el botón, el panel sigue estando: lo podés abrir cuando quieras con Windows + W. Para volver a poner el botón, prendé de nuevo «Widgets»."
+fuentes:
+  - https://support.microsoft.com/windows/stay-up-to-date-with-widgets-7ba79aaa-dac6-4687-b460-ad16a06be6e4
+madurez: T0
+---
+id: HOW-003
+area: basico
+titulo:
+  sencillo: "Quiero tener un programa a mano en la barra de abajo"
+  tecnico: "Anclar y desanclar aplicaciones en la barra de tareas"
+explicacion:
+  sencillo: "Si «anclás» un programa a la barra de tareas (la barra de abajo), su ícono queda siempre ahí y lo abrís con un solo clic, sin tener que buscarlo."
+  tecnico: "Búsqueda > clic derecho en la aplicación > Anclar a la barra de tareas; o clic derecho en el ícono de una app abierta; Desanclar de la barra de tareas para quitarlo; se reordena arrastrando."
+frases: ["poner el word en la barra de abajo", "dejar fijo un programa en la barra de tareas", "anclar una aplicación abajo", "sacar un ícono de la barra de abajo"]
+pasos:
+  - texto: "Tocá la búsqueda de la barra de tareas y escribí el nombre del programa. Hacé clic derecho sobre él y elegí «Anclar a la barra de tareas»."
+    abrir: "https://support.microsoft.com/windows/experience/personalization/customize-the-taskbar-in-windows"
+  - texto: "Si el programa ya está abierto, también podés hacer clic derecho en su ícono de la barra y elegir «Anclar a la barra de tareas»."
+  - texto: "Para sacarlo: clic derecho en el ícono > «Desanclar de la barra de tareas». Para cambiarlo de lugar, arrastralo con el mouse."
+fuentes:
+  - https://support.microsoft.com/windows/experience/personalization/customize-the-taskbar-in-windows
+madurez: T0
+---
+id: HOW-004
+area: basico
+titulo:
+  sencillo: "Quiero que un programa aparezca apenas abro Inicio"
+  tecnico: "Anclar y desanclar aplicaciones en el menú Inicio"
+explicacion:
+  sencillo: "En el menú Inicio hay una parte de programas «anclados» que se ven apenas lo abrís. Podés agregar ahí los que más usás y sacar los que no te sirven."
+  tecnico: "Búsqueda > clic derecho > Anclar a Inicio; clic derecho en un elemento anclado > Desanclar de Inicio; reordenar arrastrando."
+frases: ["agregar un programa al menú inicio", "anclar una aplicación a inicio", "sacar programas que no uso del inicio", "ordenar los íconos del menú inicio"]
+pasos:
+  - texto: "Tocá la búsqueda de la barra de tareas (o abrí Inicio) y escribí el nombre del programa. Hacé clic derecho sobre él y elegí «Anclar a Inicio»."
+    abrir: "https://support.microsoft.com/windows/experience/personalization/customize-the-windows-start-menu"
+  - texto: "Para sacar uno que no usás: abrí Inicio, hacé clic derecho sobre el programa anclado y elegí «Desanclar de Inicio». El programa no se borra: solo deja de aparecer ahí."
+  - texto: "Para ordenarlos, arrastrá cada ícono al lugar que quieras."
+fuentes:
+  - https://support.microsoft.com/windows/experience/personalization/customize-the-windows-start-menu
+madurez: T0
+---
+id: HOW-005
+area: archivos
+titulo:
+  sencillo: "Quiero ver la extensión de los archivos o los archivos ocultos"
+  tecnico: "Explorador: Ver > Mostrar > Extensiones de nombre de archivo / Elementos ocultos"
+explicacion:
+  sencillo: "La extensión es el final del nombre de un archivo (por ejemplo «.pdf» o «.jpg») y dice qué tipo de archivo es. Windows la esconde, y también esconde algunos archivos. Las dos cosas se pueden mostrar desde el Explorador."
+  tecnico: "Explorador de archivos > Ver > Mostrar > Extensiones de nombre de archivo y Elementos ocultos."
+frases: ["cómo veo si un archivo es pdf o jpg", "mostrar la extensión de los archivos", "ver los archivos ocultos", "no me aparece el .pdf al final del nombre"]
+pasos:
+  - texto: "Abrí el Explorador de archivos desde la barra de tareas (el ícono de la carpeta). Arriba, tocá «Ver» > «Mostrar»."
+    abrir: "https://support.microsoft.com/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5"
+  - texto: "Marcá «Extensiones de nombre de archivo»: desde ahora vas a ver el final de cada nombre (.pdf, .docx, .jpg)."
+  - texto: "Para ver los archivos ocultos, en el mismo menú marcá «Elementos ocultos». No borres ni muevas archivos ocultos que no conocés: muchos los usa Windows."
+fuentes:
+  - https://support.microsoft.com/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5
+madurez: T0
+---
+id: HOW-006
+area: archivos
+titulo:
+  sencillo: "Quiero abrir varias carpetas en pestañas, como en el navegador"
+  tecnico: "Pestañas en el Explorador de archivos (Ctrl + T / Ctrl + W)"
+explicacion:
+  sencillo: "En Windows 11 el Explorador de archivos tiene pestañas, igual que el navegador: podés tener Documentos, Descargas y el pendrive abiertos en una sola ventana y pasar de uno a otro."
+  tecnico: "Explorador de archivos: Ctrl + T abre una pestaña nueva y cambia a ella; Ctrl + W cierra la pestaña activa (o la ventana si es la única)."
+frases: ["abrir otra pestaña en el explorador", "tener dos carpetas abiertas en la misma ventana", "pestañas en las carpetas de windows 11", "cómo cierro una pestaña de carpeta"]
+pasos:
+  - texto: "Abrí el Explorador de archivos y apretá Ctrl + T: se abre una pestaña nueva arriba, como en el navegador. Ahí entrá a la carpeta que quieras."
+    abrir: "https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec"
+  - texto: "Tocá cada pestaña de arriba para pasar de una carpeta a otra."
+  - texto: "Para cerrar la pestaña en la que estás, apretá Ctrl + W. Si era la única, se cierra la ventana."
+fuentes:
+  - https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec
+madurez: T0
+---
+id: HOW-007
+area: archivos
+titulo:
+  sencillo: "Quiero comprimir archivos en un ZIP para mandarlos"
+  tecnico: "Crear una carpeta comprimida (ZIP) desde el Explorador"
+explicacion:
+  sencillo: "Un ZIP es como una bolsa que junta varios archivos en uno solo. Sirve, por ejemplo, para mandar muchas fotos o documentos juntos por correo."
+  tecnico: "Clic derecho > Mostrar más opciones > Enviar a > Carpeta comprimida (en zip); se crea en la misma ubicación con el mismo nombre."
+frases: ["cómo hago un zip", "comprimir una carpeta para mandarla por mail", "juntar varios archivos en uno solo", "hacer un archivo comprimido"]
+pasos:
+  - texto: "Buscá en el Explorador de archivos el archivo o la carpeta que querés comprimir."
+  - texto: "Hacé clic derecho sobre él y elegí «Mostrar más opciones» > «Enviar a» > «Carpeta comprimida (en zip)»."
+    abrir: "https://support.microsoft.com/windows/zip-and-unzip-files-8d28fa72-f2f9-712f-67df-f80cf89fd4e5"
+  - texto: "En el mismo lugar aparece una carpeta comprimida con el mismo nombre: ese es tu ZIP. Si querés otro nombre, clic derecho > «Cambiar nombre»."
+derivar: "Si lo que necesitás es abrir un ZIP o un RAR que te mandaron, escribile a PC Doctor «no puedo abrir un archivo comprimido»."
+fuentes:
+  - https://support.microsoft.com/windows/zip-and-unzip-files-8d28fa72-f2f9-712f-67df-f80cf89fd4e5
+madurez: T0
+---
+id: HOW-008
+area: perifericos
+titulo:
+  sencillo: "Quiero imprimir de los dos lados de la hoja"
+  tecnico: "Impresión a doble cara (dúplex) desde Word"
+explicacion:
+  sencillo: "Muchas impresoras imprimen solas de los dos lados. Si la tuya no puede, Word te ayuda a hacerlo a mano: imprime un lado, te avisa, das vuelta las hojas y sigue con el otro."
+  tecnico: "Word: Archivo > Imprimir > Configuración: Imprimir a doble cara (automático) o Imprimir manualmente a doble cara; alternativa: solo páginas impares y luego pares."
+frases: ["imprimir de los dos lados", "imprimir doble faz", "ahorrar hojas imprimiendo de ambos lados", "cómo imprimo del frente y del dorso"]
+pasos:
+  - texto: "En Word, tocá «Archivo» > «Imprimir». En «Configuración», abrí la opción que dice «Imprimir a una cara»: si aparece «Imprimir a doble cara», tu impresora lo hace sola. Elegila e imprimí."
+    abrir: "https://support.microsoft.com/en-us/word/print-on-both-sides-of-the-paper-duplex-printing-in-word"
+  - texto: "Si no aparece, elegí «Imprimir manualmente a doble cara». Word imprime un lado y te pide que des vuelta la pila de hojas y la vuelvas a poner en la impresora. Conviene probar primero con pocas hojas para ver para qué lado van."
+  - texto: "Otra forma: en «Imprimir todas las páginas» elegí «Imprimir solo páginas impares», imprimí, da vuelta la pila y repetí con «Imprimir solo páginas pares»."
+derivar: "Si la impresora no imprime nada, escribile a PC Doctor «la impresora no imprime»."
+fuentes:
+  - https://support.microsoft.com/en-us/word/print-on-both-sides-of-the-paper-duplex-printing-in-word
+madurez: T0
+---
+id: HOW-009
+area: basico
+titulo:
+  sencillo: "Quiero copiar el texto que aparece en una imagen"
+  tecnico: "Recortes: Acciones de texto (reconocimiento de texto, OCR)"
+explicacion:
+  sencillo: "La herramienta Recortes de Windows puede «leer» las letras de lo que ves en la pantalla (una foto, un documento escaneado) y dejarte copiarlas, sin tener que escribirlas de nuevo. Todo se hace en tu propia compu."
+  tecnico: "Herramienta Recortes: tras capturar, Acciones de texto activa el OCR local; permite seleccionar y copiar o Copiar todo el texto, y Redacción rápida."
+frases: ["copiar el texto de una foto", "pasar a texto lo que dice una imagen", "sacar las letras de una captura", "copiar un texto que no se deja seleccionar"]
+pasos:
+  - texto: "Dejá a la vista la imagen que tiene el texto. Apretá Windows + Mayús + S y marcá con el mouse la parte donde están las letras."
+    abrir: "https://support.microsoft.com/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b"
+  - texto: "Abrí ese recorte en la herramienta Recortes y tocá el botón «Acciones de texto»."
+  - texto: "Seleccioná con el mouse el texto que quieras y copialo, o tocá «Copiar todo el texto». Después pegalo donde lo necesites con Ctrl + V."
+fuentes:
+  - https://support.microsoft.com/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b
+madurez: T0
+---
+id: HOW-010
+area: basico
+titulo:
+  sencillo: "Quiero poner caritas (emojis) cuando escribo"
+  tecnico: "Panel de emojis (Windows + punto)"
+explicacion:
+  sencillo: "Windows tiene un panel con caritas, corazones y dibujitos que podés poner en cualquier lugar donde escribís: un correo, un documento o un chat."
+  tecnico: "Windows + punto (.) o Windows + punto y coma (;) abre el panel de emojis en el campo de texto activo."
+frases: ["cómo pongo una carita en la compu", "poner emojis en el correo", "dónde están los emoticones en windows", "quiero mandar un corazoncito desde la computadora"]
+pasos:
+  - texto: "Hacé clic en el lugar donde estás escribiendo, para que quede el cursor titilando."
+  - texto: "Apretá a la vez la tecla Windows y el punto (.). También funciona Windows + punto y coma (;)."
+    abrir: "https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec"
+  - texto: "En el panel que aparece, tocá la carita que quieras: queda escrita donde estaba el cursor."
+fuentes:
+  - https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec
+madurez: T0
+---
+id: HOW-011
+area: basico
+titulo:
+  sencillo: "Quiero poner la pantalla en modo oscuro"
+  tecnico: "Modo oscuro (Personalización > Colores > Elegir el modo)"
+explicacion:
+  sencillo: "El modo oscuro pone fondos negros o grises en las ventanas y menús de Windows en vez de blancos. A muchos les resulta más cómodo para la vista."
+  tecnico: "Configuración > Personalización > Colores > Elegir el modo: Oscuro. Afecta Inicio, barra de tareas y centro de actividades; algunas aplicaciones tienen su propio ajuste."
+frases: ["poner windows en negro", "activar el modo oscuro", "quiero las ventanas oscuras en vez de blancas", "el fondo blanco de las ventanas me encandila"]
+pasos:
+  - texto: "Abrí Configuración > Personalización > «Colores»."
+    abrir: "ms-settings:colors"
+  - texto: "En la opción para elegir el modo, poné «Oscuro». Para volver como estaba, elegí «Claro»."
+    abrir: "https://support.microsoft.com/windows/change-colors-in-windows-d26ef4d6-819a-581c-1581-493cfcc005fe"
+  - texto: "Algunos programas tienen su propio ajuste de colores: si alguno sigue en blanco, buscá el modo oscuro dentro de ese programa. Si lo que te molesta es la luz azulada de noche, escribile a PC Doctor «la pantalla me cansa la vista de noche»."
+fuentes:
+  - https://support.microsoft.com/windows/change-colors-in-windows-d26ef4d6-819a-581c-1581-493cfcc005fe
+madurez: T0
+---
+id: HOW-012
+area: basico
+titulo:
+  sencillo: "Quiero los íconos del escritorio más grandes (o más chicos)"
+  tecnico: "Tamaño de los iconos del escritorio (Ver > Iconos grandes/medianos/pequeños)"
+explicacion:
+  sencillo: "Los dibujitos del escritorio se pueden agrandar para verlos mejor, o achicar si ocupan demasiado lugar."
+  tecnico: "Clic derecho en el escritorio > Ver > Iconos grandes, medianos o pequeños; o Ctrl + rueda del mouse sobre el escritorio."
+frases: ["agrandar los íconos del escritorio", "los dibujitos del escritorio se ven muy chiquitos", "achicar los íconos de la pantalla", "los íconos están enormes"]
+pasos:
+  - texto: "Hacé clic derecho en un lugar vacío del escritorio, elegí «Ver» y después «Iconos grandes», «Iconos medianos» o «Iconos pequeños»."
+    abrir: "https://support.microsoft.com/windows/experience/personalization/customize-the-desktop-icons-in-windows"
+  - texto: "Otra forma: parado en el escritorio, mantené apretada la tecla Ctrl y mové la rueda del mouse para agrandarlos o achicarlos."
+  - texto: "Si lo que se ve chico son las letras de todo Windows, escribile a PC Doctor «las letras se ven muy chicas»."
+fuentes:
+  - https://support.microsoft.com/windows/experience/personalization/customize-the-desktop-icons-in-windows
+madurez: T0
+---
+id: HOW-013
+area: archivos
+titulo:
+  sencillo: "Quiero vaciar la Papelera (o sacar algo de ahí antes)"
+  tecnico: "Restaurar elementos y vaciar la Papelera de reciclaje"
+explicacion:
+  sencillo: "Lo que borrás va primero a la Papelera, que sigue ocupando lugar en el disco. Vaciarla libera espacio, pero lo que había adentro se borra para siempre: antes de vaciarla, fijate que no haya nada que quieras guardar."
+  tecnico: "Papelera: seleccionar > clic derecho > Restaurar (vuelve a su carpeta original); clic derecho en la Papelera del escritorio > Vaciar Papelera de reciclaje (eliminación permanente). Sensor de almacenamiento puede vaciarla automáticamente."
+frases: ["cómo vacío la papelera", "liberar espacio borrando la papelera", "sacar un archivo de la papelera", "quiero recuperar algo que tiré a la papelera"]
+pasos:
+  - texto: "Abrí la Papelera de reciclaje (el tachito del escritorio) y mirá lo que hay. Si algo te sirve, seleccionalo, clic derecho > «Restaurar»: vuelve a la carpeta donde estaba."
+    abrir: "https://support.microsoft.com/en-us/office/delete-and-restore-files-bef769c1-0771-4a01-bcaa-2d72461672e5"
+  - texto: "ATENCIÓN: lo que quede en la Papelera se va a borrar para siempre. Cuando estés seguro, cerrala, hacé clic derecho sobre la Papelera del escritorio y elegí «Vaciar Papelera de reciclaje»."
+    abrir: "https://support.microsoft.com/en-us/onenote/delete-onenote-notebook-from-your-windows-computer"
+  - texto: "Si no ves la Papelera en el escritorio: Temas > «Configuración de iconos del escritorio», marcá «Papelera de reciclaje» y Aceptar."
+    abrir: "ms-settings:themes"
+  - texto: "Windows también puede vaciarla solo cada tanto con el Sensor de almacenamiento."
+    abrir: "ms-settings:storagesense"
+derivar: "Si ya la vaciaste y necesitás algo que estaba ahí, escribile a PC Doctor «borré un archivo sin querer»."
+fuentes:
+  - https://support.microsoft.com/en-us/office/delete-and-restore-files-bef769c1-0771-4a01-bcaa-2d72461672e5
+  - https://support.microsoft.com/en-us/onenote/delete-onenote-notebook-from-your-windows-computer
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/find-the-recycle-bin-in-windows
+  - https://support.microsoft.com/en-us/windows/empty-the-recycle-bin-in-windows-10-d4c8f8ef-a12e-8250-b0cf-2311960a31f9
+madurez: T0
+---
+id: HOW-014
+area: basico
+titulo:
+  sencillo: "Quiero pasar dólares a pesos, metros a centímetros o grados"
+  tecnico: "Calculadora de Windows: convertidores y modos"
+explicacion:
+  sencillo: "La Calculadora que viene con Windows no solo hace cuentas: también convierte monedas, medidas, volúmenes y temperaturas, y cuenta los días entre dos fechas."
+  tecnico: "Calculadora > Abrir navegación (☰): modos Estándar, Científica, Graficadora, Programador y Cálculo de fecha; convertidores Moneda, Volumen, Longitud, Temperatura y otros."
+frases: ["convertir dólares a pesos en la compu", "pasar de pulgadas a centímetros", "cuántos días faltan entre dos fechas", "dónde está la calculadora de windows"]
+pasos:
+  - texto: "Tocá Inicio, escribí «Calculadora» y abrila."
+    abrir: "https://support.microsoft.com/en-us/windows/apps/use-the-calculator-in-windows"
+  - texto: "Tocá el botón de las tres rayitas (☰, «Abrir navegación») y elegí el convertidor que necesitás: por ejemplo «Moneda», «Longitud», «Volumen» o «Temperatura»."
+  - texto: "Escribí el número y elegí de qué unidad a cuál querés pasarlo."
+  - texto: "En el mismo menú están los modos «Estándar», «Científica» y «Cálculo de fecha», que sirve para saber cuántos días hay entre dos fechas."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/apps/use-the-calculator-in-windows
+madurez: T0
+---
+id: HOW-015
+area: basico
+titulo:
+  sencillo: "Quiero poner una alarma o un temporizador en la compu"
+  tecnico: "App Reloj: alarmas y temporizadores"
+explicacion:
+  sencillo: "La app Reloj de Windows tiene alarmas (para que te avise a una hora) y temporizadores (para que te avise cuando pasen unos minutos, por ejemplo para la comida)."
+  tecnico: "Reloj > Alarma o Temporizador > +. Funcionan con la app cerrada o el equipo bloqueado; las notificaciones pueden requerir que el equipo esté despierto (Sistema > Energía y batería)."
+frases: ["poner una alarma en la computadora", "que la compu me avise en 20 minutos", "temporizador para la comida en la pc", "despertador en windows"]
+pasos:
+  - texto: "Tocá Inicio, escribí «Reloj» y abrí la app."
+    abrir: "https://support.microsoft.com/windows/apps/how-to-use-alarms-and-timers-in-the-clock-app-in-windows"
+  - texto: "Elegí «Alarma» o «Temporizador». Para crear uno nuevo, tocá el «+» y poné la hora o los minutos que quieras."
+  - texto: "Suena aunque cierres la app o bloquees la compu. Pero si la compu se duerme, puede que no avise: si te pasa, revisá cuándo se suspende."
+    abrir: "ms-settings:powersleep"
+  - texto: "Cuando suene, podés posponerla un rato o descartarla para que deje de sonar."
+fuentes:
+  - https://support.microsoft.com/windows/apps/how-to-use-alarms-and-timers-in-the-clock-app-in-windows
+madurez: T0
+---
+id: HOW-016
+area: basico
+titulo:
+  sencillo: "Quiero anotarme cosas en papelitos en la pantalla"
+  tecnico: "Notas rápidas (Sticky Notes)"
+explicacion:
+  sencillo: "Notas rápidas es como tener papelitos autoadhesivos en la compu: anotás un teléfono, una lista de compras o un recordatorio, y cuando volvés a abrir la app tus notas siguen ahí."
+  tecnico: "Notas rápidas: Ctrl + N o + crea una nota; anclable a la barra de tareas; inicio de sesión con cuenta de Microsoft opcional para sincronizar."
+frases: ["anotar algo rápido en la compu", "papelitos para recordar en la pantalla", "dónde están las notas adhesivas de windows", "quiero dejarme un recordatorio escrito en la pc"]
+pasos:
+  - texto: "Tocá Inicio, escribí «Notas rápidas» y abrila. Se abre donde la dejaste la última vez."
+    abrir: "https://support.microsoft.com/en-us/windows/apps/stickynotes/get-started-with-sticky-notes"
+  - texto: "Para una nota nueva, apretá Ctrl + N o tocá el «+». Escribí lo que quieras."
+  - texto: "Para tenerla siempre a mano, hacé clic derecho en su ícono de la barra de tareas y elegí «Anclar a la barra de tareas»."
+  - texto: "Si querés ver tus notas en otra compu o en el celular, podés entrar con tu cuenta de Microsoft desde la configuración de la app. No es obligatorio."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/apps/stickynotes/get-started-with-sticky-notes
+madurez: T0
+---
+id: HOW-017
+area: audio
+titulo:
+  sencillo: "Quiero grabar mi voz o un audio con la compu"
+  tecnico: "Grabadora de sonido de Windows"
+explicacion:
+  sencillo: "Windows trae la Grabadora de sonido, que graba lo que entra por el micrófono: un mensaje, una canción o una charla."
+  tecnico: "Grabadora de sonido: Ctrl + R inicia, Espacio pausa, Esc detiene y guarda; las grabaciones se guardan dentro de la app y se borran si se desinstala."
+frases: ["grabar un audio en la computadora", "cómo grabo mi voz en la pc", "grabadora de voz de windows", "quiero grabar un mensaje con el micrófono"]
+pasos:
+  - texto: "Tocá Inicio, escribí «Grabadora de sonido» y abrila."
+    abrir: "https://support.microsoft.com/en-us/windows/apps/sound-recorder-app-for-windows-faq"
+  - texto: "Para empezar, tocá el botón de grabar o apretá Ctrl + R. Para hacer una pausa, la barra espaciadora; para terminar, el botón de detener o Esc. La grabación aparece en la lista de la app."
+  - texto: "Si no graba nada, puede que la app no tenga permiso para usar el micrófono: revisá que esté permitido."
+    abrir: "ms-settings:privacy-microphone"
+  - texto: "Ojo: las grabaciones quedan guardadas dentro de la app. Si desinstalás la Grabadora de sonido, se borran."
+derivar: "Si el micrófono no funciona en ningún programa, escribile a PC Doctor «no funciona el micrófono»."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/apps/sound-recorder-app-for-windows-faq
+madurez: T0
+---
+id: HOW-018
+area: perifericos
+titulo:
+  sencillo: "Quiero sacarme una foto con la cámara de la compu"
+  tecnico: "Aplicación Cámara: tomar fotos"
+explicacion:
+  sencillo: "Si tu compu tiene cámara, la app Cámara de Windows sirve para sacar fotos o grabar videos."
+  tecnico: "Cámara: modo Foto > Tomar foto; la foto aparece en la miniatura del carrete; … > Abrir carpeta muestra dónde se guardó."
+frases: ["sacarme una foto con la notebook", "usar la cámara de la compu para una foto", "dónde está la cámara en windows", "quiero hacer una selfie en la pc"]
+pasos:
+  - texto: "Tocá Inicio, escribí «Cámara» y abrila."
+    abrir: "https://support.microsoft.com/en-us/windows/hardware/camera/how-to-use-the-windows-camera-app"
+  - texto: "Fijate que esté elegido el modo de foto (el botón del costado derecho). Tocá el botón para tomar la foto."
+  - texto: "La foto aparece chiquita abajo a la derecha: tocala para verla grande. Para saber en qué carpeta quedó, tocá los tres puntitos (…) de arriba a la derecha y elegí la opción para abrir la carpeta."
+derivar: "Si la cámara no prende o se ve negra, escribile a PC Doctor «no funciona la cámara»."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/hardware/camera/how-to-use-the-windows-camera-app
+madurez: T0
+---
+id: HOW-019
+area: basico
+titulo:
+  sencillo: "No encuentro un programa: ¿cómo lo busco?"
+  tecnico: "Buscar aplicaciones desde Inicio o la búsqueda de la barra de tareas"
+explicacion:
+  sencillo: "No hace falta recordar dónde está cada programa: apretás la tecla de Windows, escribís el nombre y aparece. También están todos en una lista ordenada por letra."
+  tecnico: "Tecla Windows y escribir, o Windows + S / Buscar en la barra de tareas; lista alfabética de aplicaciones en Inicio."
+frases: ["dónde está el word en la compu", "cómo abro un programa que no veo", "buscar una aplicación en windows", "no sé dónde quedó un programa"]
+pasos:
+  - texto: "Apretá la tecla Windows y empezá a escribir el nombre del programa (por ejemplo «Word» o «Calculadora»). Cuando aparezca, tocalo o apretá Enter."
+    abrir: "https://support.microsoft.com/windows/experience/storage-filemanagement/find-your-files-and-apps-in-windows"
+  - texto: "También podés tocar la búsqueda de la barra de tareas, o apretar Windows + S, y escribir ahí."
+  - texto: "Si preferís mirar la lista: abrí Inicio y buscá en la lista de todas las aplicaciones, que está ordenada por letra."
+  - texto: "Si lo que buscás es un documento, escribile a PC Doctor «no encuentro un documento que guardé»."
+fuentes:
+  - https://support.microsoft.com/windows/experience/storage-filemanagement/find-your-files-and-apps-in-windows
+  - https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec
+madurez: T0
+---
+id: HOW-020
+area: windows
+titulo:
+  sencillo: "Quiero que la compu se apague sola dentro de un rato"
+  tecnico: "Programar el apagado con shutdown /s /t"
+explicacion:
+  sencillo: "Si dejás la compu descargando algo o pasando música para dormirte, podés decirle que se apague sola en una hora o el tiempo que quieras. Ojo: cuando llega la hora cierra los programas sin preguntar."
+  tecnico: "shutdown /s /t <segundos> (0 a 315360000); con /t mayor que 0 se fuerza el cierre de las aplicaciones (/f implícito). shutdown /a cancela un apagado pendiente."
+frases: ["que la compu se apague sola", "programar el apagado de la pc", "apagar la computadora en una hora", "temporizador para apagar la compu"]
+pasos:
+  - texto: "Antes que nada, guardá todo lo que tengas abierto: cuando llegue la hora, Windows cierra los programas sin avisar y lo que no guardaste se pierde."
+    abrir: "https://learn.microsoft.com/windows-server/administration/windows-commands/shutdown"
+  - texto: "Apretá Windows + R, escribí «shutdown /s /t 3600» y tocá «Aceptar». El número son segundos: 1800 es media hora, 3600 una hora y 7200 dos horas."
+    abrir: "https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec"
+  - texto: "Si te arrepentís antes de que se cumpla el tiempo, apretá Windows + R otra vez, escribí «shutdown /a» y «Aceptar»: se cancela el apagado."
+fuentes:
+  - https://learn.microsoft.com/windows-server/administration/windows-commands/shutdown
+  - https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec
+madurez: T0
+---
+id: HOW-021
+area: audio
+titulo:
+  sencillo: "Quiero cambiar o silenciar los sonidos de los avisos"
+  tecnico: "Sonido de las notificaciones por aplicación y sonidos de eventos (Panel de control > Sonido)"
+explicacion:
+  sencillo: "Cada programa puede hacer un ruidito cuando te manda un aviso. Podés apagar ese sonido para los programas que te molestan, y también elegir otro sonido para algunos avisos de Windows."
+  tecnico: "Sistema > Notificaciones > (aplicación) > Reproducir un sonido; Panel de control > Sonido > pestaña Sonidos > Eventos de programa > Examinar (.wav)."
+frases: ["sacar el ruidito de las notificaciones", "cambiar el sonido de los avisos", "la compu hace un sonido cada vez que llega algo", "poner otro sonido cuando me llega un correo"]
+pasos:
+  - texto: "Abrí Configuración > Sistema > «Notificaciones». En la lista de aplicaciones, tocá la que hace ruido y apagá «Reproducir un sonido»."
+    abrir: "ms-settings:notifications"
+  - texto: "Para cambiar el sonido de un aviso: abrí el Panel de control y buscá «Sonido». En la pestaña «Sonidos», elegí el aviso en la lista de eventos (por ejemplo, la notificación de correo nuevo), tocá «Examinar», elegí un archivo .wav y «Aceptar»."
+    abrir: "https://support.microsoft.com/en-us/outlook/change-the-sound-played-when-an-email-message-arrives"
+  - texto: "Microsoft explica las notificaciones."
+    abrir: "https://support.microsoft.com/en-us/windows/experience/notifications-and-do-not-disturb-in-windows"
+derivar: "Si querés que la compu no te interrumpa para nada, escribile a PC Doctor «quiero que deje de interrumpirme con notificaciones»."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/experience/notifications-and-do-not-disturb-in-windows
+  - https://support.microsoft.com/en-us/outlook/change-the-sound-played-when-an-email-message-arrives
+madurez: T0
+---
+id: HOW-022
+area: basico
+titulo:
+  sencillo: "Quiero agregar un teclado de otro idioma y cambiar entre ellos"
+  tecnico: "Agregar distribuciones de teclado y alternar con Windows + Barra espaciadora"
+explicacion:
+  sencillo: "Si escribís en otro idioma (por ejemplo en inglés o portugués), podés agregar ese teclado y pasar de uno a otro cuando quieras, sin cambiar el idioma de los menús de Windows."
+  tecnico: "Hora e idioma > Idioma y región > … > Opciones de idioma > Teclados > Agregar un teclado; Windows + Barra espaciadora o el indicador de idioma de la bandeja del sistema para alternar; … > Quitar."
+frases: ["agregar el teclado en inglés", "cambiar el idioma del teclado", "tener dos teclados en la compu", "pasar del teclado español al de otro idioma"]
+pasos:
+  - texto: "Abrí Configuración > Hora e idioma > «Idioma y región». Tocá los tres puntitos (…) al lado de tu idioma y elegí «Opciones de idioma»."
+    abrir: "ms-settings:regionlanguage"
+  - texto: "En «Teclados», fijate si ya está el que querés. Si no, tocá «Agregar un teclado» y elegilo de la lista."
+    abrir: "https://support.microsoft.com/en-us/windows/hardware/input-devices/manage-the-language-and-keyboard-input-layout-settings-in-windows"
+  - texto: "Para cambiar de teclado: mantené apretada la tecla Windows y tocá la barra espaciadora, o tocá el indicador de idioma de la barra de tareas, abajo a la derecha, y elegí el teclado."
+  - texto: "Para sacar uno que no usás: en «Teclados», tocá los tres puntitos al lado de ese teclado > «Quitar»."
+derivar: "Si las teclas escriben otra cosa (no sale la @ o la ñ), escribile a PC Doctor «no me sale la arroba»."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/hardware/input-devices/manage-the-language-and-keyboard-input-layout-settings-in-windows
+madurez: T0
+---
+id: HOW-023
+area: basico
+titulo:
+  sencillo: "Quiero saber qué hora es en otro país"
+  tecnico: "Reloj mundial en la app Reloj (agregar ciudades y comparar horarios)"
+explicacion:
+  sencillo: "Si tenés familia o amigos en otro país, la app Reloj te muestra la hora de su ciudad al lado de la tuya, y te ayuda a ver qué hora va a ser allá cuando acá sea, por ejemplo, la noche."
+  tecnico: "Reloj > Reloj mundial > Agregar una nueva ciudad; botón Comparar con control deslizante para ver horas equivalentes."
+frases: ["qué hora es en españa ahora", "ver la hora de otro país en la compu", "poner el horario de otra ciudad", "saber la diferencia de hora con mi hijo que vive afuera"]
+pasos:
+  - texto: "Tocá Inicio, escribí «Reloj» y abrí la app. Entrá a «Reloj mundial» (si no ves el menú, tocá el botón de arriba a la izquierda)."
+    abrir: "https://support.microsoft.com/en-us/windows/hardware/clock/how-to-use-the-world-time-clock-in-the-clock-app-in-windows"
+  - texto: "Abajo, tocá la opción para agregar una ciudad nueva, escribí las primeras letras (por ejemplo «Madrid») y elegila de la lista. Confirmá con «Agregar»."
+  - texto: "Para ver qué hora va a ser allá en otro momento, tocá el botón de comparar (dos relojitos con una flecha) y mové la barra. Para salir, la flecha de atrás de arriba a la izquierda."
+derivar: "Si la que está mal es la hora de tu propia compu, escribile a PC Doctor «la hora de la computadora está mal»."
+fuentes:
+  - https://support.microsoft.com/en-us/windows/hardware/clock/how-to-use-the-world-time-clock-in-the-clock-app-in-windows
+madurez: T0
+---
+id: HOW-024
+area: hardware
+titulo:
+  sencillo: "Quiero saber qué tiene mi compu: memoria, procesador y versión de Windows"
+  tecnico: "Configuración > Sistema > Información: especificaciones del dispositivo y de Windows"
+explicacion:
+  sencillo: "A veces un programa, un juego o un técnico te pregunta cuánta memoria tiene la compu, qué procesador o qué Windows usa. Todo eso está en una sola pantalla de Configuración."
+  tecnico: "Sistema > Información (Windows + Pausa): Especificaciones del dispositivo (procesador, RAM instalada, tipo de sistema 32/64 bits) y Especificaciones de Windows (edición y versión)."
+frases: ["cuánta memoria tiene mi compu", "qué windows tengo", "ver las características de mi computadora", "qué procesador tiene la pc", "mi windows es de 32 o 64 bits"]
+pasos:
+  - texto: "Abrí Configuración > Sistema > «Información». Atajo: Windows + Pausa."
+    abrir: "ms-settings:about"
+  - texto: "En «Especificaciones del dispositivo» ves el procesador, la memoria RAM instalada y si Windows es de 32 o de 64 bits."
+    abrir: "https://support.microsoft.com/windows/experience/find-information-about-your-windows-device"
+  - texto: "Más abajo, en «Especificaciones de Windows», ves la edición (por ejemplo Home o Pro) y la versión de Windows."
+    abrir: "https://support.microsoft.com/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808"
+fuentes:
+  - https://support.microsoft.com/windows/experience/find-information-about-your-windows-device
+  - https://support.microsoft.com/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808
+  - https://support.microsoft.com/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec
+madurez: T0
+---
+id: HOW-025
+area: windows
+titulo:
+  sencillo: "Quiero cambiarle el nombre a la compu"
+  tecnico: "Cambiar el nombre de este equipo (Sistema > Información)"
+explicacion:
+  sencillo: "Cada compu tiene un nombre. Ponerle uno claro (por ejemplo «Notebook-Abuela») ayuda a distinguirla de tus otros aparatos en tu cuenta de Microsoft. Hace falta reiniciar para que cambie."
+  tecnico: "Sistema > Información > Cambiar el nombre de este equipo > Siguiente > Reiniciar ahora / más tarde."
+frases: ["cambiar el nombre de la computadora", "renombrar la pc", "cómo se llama mi compu y cómo lo cambio", "ponerle otro nombre a la notebook"]
+pasos:
+  - texto: "Abrí Configuración > Sistema > «Información» y tocá «Cambiar el nombre de este equipo»."
+    abrir: "ms-settings:about"
+  - texto: "Escribí el nombre nuevo y tocá «Siguiente»."
+    abrir: "https://support.microsoft.com/accounts-billing/manage/rename-your-windows-device"
+  - texto: "Elegí «Reiniciar ahora» (guardá antes lo que tengas abierto) o reiniciá más tarde: el nombre nuevo aparece después de reiniciar."
+fuentes:
+  - https://support.microsoft.com/accounts-billing/manage/rename-your-windows-device
+madurez: T0

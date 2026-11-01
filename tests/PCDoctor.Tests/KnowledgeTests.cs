@@ -37,6 +37,13 @@ public class KnowledgeTests
         "network-proxy", "network-status", "network-wifi", "powersleep", "printers", "privacy-microphone", "privacy-webcam",
         "recovery", "regionlanguage", "sound", "startupapps", "storagesense", "windowsdefender", "windowsinsider", "windowsupdate",
         "windowsupdate-optionalupdates", "bluetooth", "disksandvolumes", "mobile-devices", "signinoptions", "defaultapps", "devices-touchpad", "easeofaccess-narrator", "nightlight", "clipboard", "easeofaccess-mousepointer", "easeofaccess-keyboard", "taskbar", "network-wifisettings", "network-mobilehotspot", "easeofaccess-magnifier", "notifications", "themes", "personalization-background", "multitasking",
+        // Verificadas en learn.microsoft.com/windows/apps/develop/launch/launch-settings (1/11/2026).
+        "about", "colors", "display-advancedgraphics", "easeofaccess-audio", "easeofaccess-closedcaptioning", "easeofaccess-colorfilter",
+        "easeofaccess-cursor", "easeofaccess-highcontrast", "easeofaccess-mouse", "easeofaccess-visualeffects", "gaming-gamebar", "gaming-gamemode",
+        "mousetouchpad", "network-advancedsettings", "network-ethernet", "network-vpn", "windowsupdate-history", "windowsupdate-options",
+        "otherusers", "yourinfo", "emailandaccounts", "workplace", "personalization-start", "lockscreen", "fonts", "deviceencryption",
+        "typing", "usb", "pen", "autoplay", "storagepolicies", "troubleshoot", "keyboard", "regionformatting", "findmydevice", "family-group",
+        "sound-devices", "privacy-location", "search", "optionalfeatures", "crossdevice", "project", "camera",
     ];
 
     [Fact]

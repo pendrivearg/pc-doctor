@@ -1,0 +1,492 @@
+# Correo electrónico (Gmail, Outlook.com/Hotmail, nuevo Outlook y Outlook clásico): no llegan, spam, enviar, borrar, firma, vacaciones, almacenamiento, reglas, PST, celular y calendario. Guiadas con fuente oficial.
+id: MAIL-001
+area: programas
+titulo:
+  sencillo: "No me llegan los correos a Gmail"
+  tecnico: "Gmail: mensajes faltantes (búsqueda en Spam/Papelera, filtros, reenvío, POP/IMAP, almacenamiento)"
+explicacion:
+  sencillo: "Muchas veces el correo sí llegó, pero quedó en Spam, en la Papelera o lo movió un filtro. También deja de llegar todo si se llenó el espacio de tu cuenta de Google."
+  tecnico: "Buscar con alcance «Correo, Spam y Papelera»; revisar filtros con «Borrar» u «Omitir Recibidos», reenvío y POP/IMAP; cuota compartida de 15 GB."
+frases: ["no me llegan los mails al gmail", "me dicen que me mandaron un correo y no lo tengo", "dejaron de entrarme los correos", "no recibo ningún mail nuevo en gmail"]
+pasos:
+  - texto: "En Gmail, en la barra de búsqueda tocá el ícono «Mostrar opciones de búsqueda». Al lado de «Buscar» elegí «Correo, Spam y Papelera», escribí quién te lo mandó y tocá «Buscar»."
+    abrir: "https://support.google.com/mail/answer/7015314?hl=es-419"
+  - texto: "Revisá los filtros: tocá el engranaje (Configuración) > «Ver toda la configuración» > pestaña «Filtros y direcciones bloqueadas». Si hay uno que diga «Borrar» u «Omitir Recibidos» y no lo hiciste vos, tocá «Editar» o «Eliminar»."
+  - texto: "En la pestaña «Reenvío y correo POP/IMAP», fijate que no esté reenviando tus correos a otra dirección sin dejar copia en Recibidos."
+  - texto: "Fijate si se te llenó el espacio de Google: si está lleno, los correos nuevos rebotan. Escribile a PC Doctor «gmail dice que no tengo espacio»."
+    abrir: "https://support.google.com/drive/answer/6374270?hl=es-419"
+derivar: "Si encontrás un filtro o un reenvío que vos no pusiste, puede que alguien haya entrado a tu cuenta: escribile a PC Doctor «me olvidé la contraseña de Gmail» para cambiarla desde la página oficial de Google."
+fuentes:
+  - https://support.google.com/mail/answer/7015314?hl=es-419
+  - https://support.google.com/drive/answer/6374270?hl=es-419
+madurez: T0
+---
+id: MAIL-002
+area: programas
+titulo:
+  sencillo: "Un correo que espero se va a Spam en Gmail"
+  tecnico: "Gmail: recuperar mensajes de Spam («No es spam») y evitar falsos positivos"
+explicacion:
+  sencillo: "Gmail a veces se equivoca y manda a la carpeta Spam correos buenos, como los del médico o del banco. Se pueden sacar de ahí y avisarle a Gmail que no son spam."
+  tecnico: "Carpeta Spam > seleccionar > «No es spam»; agregar al remitente a Contactos de Google; no bloquearlo."
+frases: ["los mails buenos se me van a spam", "un correo importante me cayó en correo basura", "tengo que buscar los mails en spam siempre", "cómo saco un correo de spam en gmail"]
+pasos:
+  - texto: "En Gmail, en el menú de la izquierda tocá «Más» y después «Spam»."
+    abrir: "https://support.google.com/mail/answer/1366858?hl=es-419"
+  - texto: "Marcá la casilla del correo bueno y arriba tocá «No es spam». El correo vuelve a Recibidos."
+  - texto: "Para que no vuelva a pasar, agregá a esa persona a tus contactos de Google. Escribile a PC Doctor «quiero agendar un contacto en gmail»."
+    abrir: "https://support.google.com/contacts/answer/1069522?hl=es-419"
+  - texto: "Ojo: si un correo de Spam te pide claves o datos del banco, no lo saques ni toques sus enlaces. Escribile a PC Doctor «me llegó un correo sospechoso»."
+fuentes:
+  - https://support.google.com/mail/answer/1366858?hl=es-419
+  - https://support.google.com/contacts/answer/1069522?hl=es-419
+madurez: T0
+---
+id: MAIL-003
+area: programas
+titulo:
+  sencillo: "Mandé un correo por error en Gmail"
+  tecnico: "Gmail: Deshacer el envío y período de cancelación"
+explicacion:
+  sencillo: "Gmail te da unos segundos para arrepentirte: justo después de tocar «Enviar», aparece abajo a la izquierda el botón «Deshacer». Pasado ese tiempo, el correo ya no se puede frenar."
+  tecnico: "Notificación «Deshacer» tras enviar; Configuración > Ver toda la configuración > Deshacer el envío: 5, 10, 20 o 30 segundos."
+frases: ["mandé un mail sin querer", "se me fue el correo antes de terminarlo", "quiero cancelar un mail que acabo de mandar", "le mandé el correo a la persona equivocada"]
+pasos:
+  - texto: "Apenas lo mandes, mirá abajo a la izquierda: tocá «Deshacer» en el aviso. El correo vuelve a la pantalla de escribir y no se envía."
+    abrir: "https://support.google.com/mail/answer/2819488?hl=es-419"
+  - texto: "Para tener más tiempo la próxima vez: tocá el engranaje > «Ver toda la configuración». Al lado de «Deshacer el envío» elegí 30 segundos y tocá «Guardar cambios» abajo de todo."
+  - texto: "Si ya pasó el tiempo, el correo se envió y no se puede borrar del otro lado. Lo mejor es mandar otro correo aclarando el error."
+fuentes:
+  - https://support.google.com/mail/answer/2819488?hl=es-419
+madurez: T0
+---
+id: MAIL-004
+area: programas
+titulo:
+  sencillo: "Quiero bloquear a alguien que me manda correos en Gmail"
+  tecnico: "Gmail: bloquear y desbloquear un remitente"
+explicacion:
+  sencillo: "Si alguien te manda correos que no querés, lo podés bloquear: lo que te mande después va directo a Spam y no lo ves en Recibidos."
+  tecnico: "Abrir mensaje > Más (⋮) > Bloquear a {remitente}; desbloqueo en Configuración > Filtros y direcciones bloqueadas."
+frases: ["no quiero recibir más mails de una persona", "bloquear a alguien en gmail", "una dirección me llena el correo y quiero bloquearla", "cómo hago para que no me lleguen más correos de alguien"]
+pasos:
+  - texto: "En Gmail, abrí un correo de esa persona. Arriba a la derecha, al lado de «Responder», tocá «Más» (los tres puntitos) y elegí «Bloquear a…» con su nombre."
+    abrir: "https://support.google.com/mail/answer/8151?hl=es-419"
+  - texto: "Si te arrepentís, repetí lo mismo y elegí «Desbloquear a…». También podés ir al engranaje > «Ver toda la configuración» > «Filtros y direcciones bloqueadas», marcar la dirección y tocar «Desbloquear las direcciones seleccionadas»."
+  - texto: "Si el correo es una estafa (te pide claves o plata), además escribile a PC Doctor «me llegó un correo sospechoso»."
+fuentes:
+  - https://support.google.com/mail/answer/8151?hl=es-419
+madurez: T0
+---
+id: MAIL-005
+area: programas
+titulo:
+  sencillo: "Borré un correo de Gmail y lo quiero recuperar"
+  tecnico: "Gmail: restaurar mensajes desde la Papelera (30 días)"
+explicacion:
+  sencillo: "Los correos que borrás no desaparecen enseguida: quedan en la Papelera unos 30 días y de ahí se pueden devolver a Recibidos. Después de ese plazo se borran para siempre."
+  tecnico: "Más > Papelera > seleccionar > Mover a > Recibidos. Retención de hasta 30 días; los borradores descartados no se recuperan."
+frases: ["borré un mail sin querer", "eliminé un correo de gmail y lo necesito", "dónde quedan los correos borrados", "recuperar un mail que tiré a la papelera"]
+pasos:
+  - texto: "En Gmail, en el menú de la izquierda tocá «Más» y después «Papelera»."
+    abrir: "https://support.google.com/mail/answer/7401?hl=es-419"
+  - texto: "Marcá la casilla de cada correo que quieras recuperar, tocá «Mover a» arriba y elegí «Recibidos»."
+  - texto: "No vacíes la Papelera mientras buscás: lo que se vacía o pasa los 30 días ya no se puede recuperar."
+fuentes:
+  - https://support.google.com/mail/answer/7401?hl=es-419
+madurez: T0
+---
+id: MAIL-006
+area: programas
+titulo:
+  sencillo: "Quiero poner mi nombre y teléfono al final de cada correo de Gmail"
+  tecnico: "Gmail: crear una firma"
+explicacion:
+  sencillo: "La firma es un textito que Gmail agrega solo al final de tus correos, por ejemplo tu nombre y tu teléfono. Se arma una vez y queda."
+  tecnico: "Configuración > Ver toda la configuración > General > Firma > Guardar cambios."
+frases: ["poner una firma en el gmail", "que salga mi nombre abajo de los mails", "agregar mis datos al final del correo", "cómo hago la firma del mail"]
+pasos:
+  - texto: "En Gmail, en la computadora, tocá el engranaje (Configuración) arriba a la derecha y después «Ver toda la configuración»."
+    abrir: "https://support.google.com/mail/answer/8395?hl=es-419"
+  - texto: "Bajá hasta la sección «Firma» y escribí lo que quieras que aparezca (nombre, teléfono)."
+  - texto: "Abajo de todo, tocá «Guardar cambios». Probá escribiendo un correo nuevo: la firma aparece sola."
+fuentes:
+  - https://support.google.com/mail/answer/8395?hl=es-419
+madurez: T0
+---
+id: MAIL-007
+area: programas
+titulo:
+  sencillo: "Me voy de vacaciones y quiero que Gmail conteste solo"
+  tecnico: "Gmail: respuesta automática (fuera de la oficina)"
+explicacion:
+  sencillo: "Gmail puede contestar solo a quien te escriba, con un mensaje tipo «Estoy de vacaciones hasta el lunes». Le ponés fecha de inicio y de fin y se apaga solo."
+  tecnico: "Configuración > Ver toda la configuración > General > Respuesta automática activada; período, asunto y mensaje."
+frases: ["poner un mensaje de vacaciones en gmail", "que el mail conteste solo que no estoy", "respuesta automática en el correo", "aviso de que estoy de viaje en el gmail"]
+pasos:
+  - texto: "En Gmail, en la computadora, tocá el engranaje > «Ver toda la configuración». En la pestaña «General», buscá la sección «Respuesta automática»."
+    abrir: "https://support.google.com/mail/answer/25922?hl=es-419"
+  - texto: "Elegí «Respuesta automática activada» y completá el primer día, el último día, el asunto y el mensaje."
+  - texto: "Si querés, marcá la casilla para que solo les conteste a tus contactos. Abajo de todo tocá «Guardar cambios»."
+  - texto: "Si volvés antes, tocá «Finalizar ahora» en el aviso que aparece arriba de Recibidos."
+fuentes:
+  - https://support.google.com/mail/answer/25922?hl=es-419
+madurez: T0
+---
+id: MAIL-008
+area: programas
+titulo:
+  sencillo: "Gmail dice que me quedé sin espacio"
+  tecnico: "Almacenamiento de Google lleno (15 GB compartidos entre Gmail, Drive y Fotos)"
+explicacion:
+  sencillo: "Tu cuenta de Google tiene un espacio gratis que se comparte entre los correos, las fotos de Google Fotos y los archivos de Drive. Si se llena, no podés mandar ni recibir correos: los que te mandan rebotan."
+  tecnico: "Cuota de 15 GB compartida (Gmail, Drive, Fotos, copias de WhatsApp); con la cuota excedida no se envía ni recibe correo."
+frases: ["gmail dice que no tengo espacio", "se me llenó el almacenamiento de google", "me dicen que mi casilla está llena y les rebota", "cómo libero espacio en el gmail"]
+pasos:
+  - texto: "Primero, vaciá la Papelera y la carpeta Spam de Gmail: lo que está ahí también ocupa lugar. Ojo: lo que vacíes ya no se recupera."
+    abrir: "https://support.google.com/drive/answer/6374270?hl=es-419"
+  - texto: "Buscá los correos más pesados: en la barra de búsqueda de Gmail escribí has:attachment larger:10M y borrá los que no necesites."
+    abrir: "https://support.google.com/mail/answer/7190?hl=es-419"
+  - texto: "Revisá también Google Fotos y Drive, que comparten el mismo espacio. Después de borrar mucho, el espacio puede tardar de 48 a 72 horas en actualizarse."
+  - texto: "Si igual te falta lugar, Google ofrece comprar más espacio con Google One. No hace falta: primero probá liberar."
+fuentes:
+  - https://support.google.com/drive/answer/6374270?hl=es-419
+  - https://support.google.com/mail/answer/7190?hl=es-419
+madurez: T0
+---
+id: MAIL-009
+area: programas
+titulo:
+  sencillo: "No encuentro un correo viejo en Gmail"
+  tecnico: "Gmail: búsqueda avanzada y operadores (from:, subject:, has:attachment, in:anywhere)"
+explicacion:
+  sencillo: "El buscador de arriba de Gmail encuentra correos por quién te lo mandó, por una palabra o por la fecha. Si no aparece, puede estar en Spam o en la Papelera."
+  tecnico: "Operadores: from:, to:, subject:, after:/before:, has:attachment, filename:; in:anywhere incluye Spam y Papelera."
+frases: ["no encuentro un mail que me mandaron", "buscar un correo viejo en gmail", "cómo encuentro el mail de la obra social", "busco un correo que tenía un archivo adjunto"]
+pasos:
+  - texto: "Tocá la barra de búsqueda de arriba en Gmail y escribí el nombre de quien te lo mandó o una palabra que recuerdes del correo."
+    abrir: "https://support.google.com/mail/answer/7190?hl=es-419"
+  - texto: "Para afinar: escribí from: seguido de la dirección de quien lo mandó (por ejemplo from:juan@gmail.com), o has:attachment si tenía un archivo adjunto."
+  - texto: "Si no aparece, sumale in:anywhere a la búsqueda (por ejemplo in:anywhere factura): así busca también en Spam y en la Papelera."
+  - texto: "Si sigue sin aparecer, escribile a PC Doctor «no me llegan los mails al gmail»."
+    abrir: "https://support.google.com/mail/answer/7015314?hl=es-419"
+fuentes:
+  - https://support.google.com/mail/answer/7190?hl=es-419
+  - https://support.google.com/mail/answer/7015314?hl=es-419
+madurez: T0
+---
+id: MAIL-010
+area: programas
+titulo:
+  sencillo: "Quiero que Gmail ordene solo los correos que llegan"
+  tecnico: "Gmail: crear, editar y borrar filtros"
+explicacion:
+  sencillo: "Un filtro es una orden que le das a Gmail: por ejemplo, que todos los correos del club vayan a una etiqueta, se marquen como importantes o se archiven solos."
+  tecnico: "Opciones de búsqueda > criterios > Crear filtro > acción (etiqueta, archivar, borrar, destacar, reenviar); gestión en Filtros y direcciones bloqueadas."
+frases: ["que los mails de alguien vayan a una carpeta solos", "ordenar el correo automáticamente", "crear un filtro en gmail", "que gmail archive solo los mails de propaganda"]
+pasos:
+  - texto: "En Gmail, en la computadora, abrí las opciones de búsqueda (el ícono a la derecha de la barra de búsqueda) y escribí, por ejemplo, la dirección de quien manda esos correos."
+    abrir: "https://support.google.com/mail/answer/6579?hl=es-419"
+  - texto: "Abajo de esa ventanita tocá «Crear filtro» y elegí qué querés que haga Gmail (ponerle una etiqueta, archivarlos, destacarlos…). Confirmá con «Crear filtro»."
+  - texto: "Para cambiarlo o borrarlo: engranaje > «Ver toda la configuración» > «Filtros y direcciones bloqueadas», y al lado del filtro tocá «Editar» o «Eliminar»."
+  - texto: "Cuidado con los filtros que borran: si un correo importante deja de llegar, revisá esta lista primero."
+fuentes:
+  - https://support.google.com/mail/answer/6579?hl=es-419
+  - https://support.google.com/mail/answer/7015314?hl=es-419
+madurez: T0
+---
+id: MAIL-011
+area: programas
+titulo:
+  sencillo: "Quiero agendar una dirección de correo en Gmail"
+  tecnico: "Contactos de Google: crear un contacto"
+explicacion:
+  sencillo: "Si guardás a una persona en tus contactos, después la encontrás escribiendo su nombre, y Gmail deja de mandar sus correos a Spam."
+  tecnico: "contacts.google.com > Crear contacto > Guardar; Gmail guarda automáticamente las direcciones a las que escribís en «Otros contactos»."
+frases: ["quiero agendar un contacto en gmail", "guardar el mail de alguien", "agregar una dirección a mis contactos", "dónde guardo los correos de mis amigos"]
+pasos:
+  - texto: "Abrí Contactos de Google (contacts.google.com) en el navegador, con la misma cuenta de tu Gmail."
+    abrir: "https://support.google.com/contacts/answer/1069522?hl=es-419"
+  - texto: "Arriba a la izquierda tocá «Crear contacto», escribí el nombre, el correo y si querés el teléfono, y tocá «Guardar»."
+  - texto: "Las personas a las que ya les escribiste quedan guardadas solas en «Otros contactos»."
+fuentes:
+  - https://support.google.com/contacts/answer/1069522?hl=es-419
+  - https://support.google.com/mail/answer/1366858?hl=es-419
+madurez: T0
+---
+id: MAIL-012
+area: programas
+titulo:
+  sencillo: "No me llegan los correos a Hotmail u Outlook.com, o no puedo mandar"
+  tecnico: "Outlook.com: no se puede enviar ni recibir (almacenamiento, No deseado, reglas, reenvío)"
+explicacion:
+  sencillo: "En Hotmail/Outlook.com lo más común es que el espacio esté lleno (entonces no entra ni sale nada), que el correo haya ido a «Correo no deseado» o a la pestaña «Otros», o que una regla lo mueva de carpeta."
+  tecnico: "Revisar cuota de almacenamiento, carpeta Correo no deseado, bandeja Prioritarios/Otros, reenvío y reglas; adjuntos de más de 25 MB no se envían."
+frases: ["no me entran los mails al hotmail", "outlook.com no me deja mandar correos", "dejé de recibir correos en hotmail", "me escriben y no me llega nada al outlook"]
+pasos:
+  - texto: "Fijate si tu espacio está lleno: si lo está, no podés mandar ni recibir, y lo que te manden mientras tanto rebota. Escribile a PC Doctor «mi buzón de outlook está lleno»."
+    abrir: "https://support.microsoft.com/office/d39e3341-8d79-4bf1-b3c7-ded602233642"
+  - texto: "Mirá la pestaña «Otros» (al lado de «Prioritarios») y la carpeta «Correo no deseado». Si encontrás el correo ahí, hacé clic derecho y marcalo como que no es correo no deseado."
+  - texto: "Revisá si hay reglas que muevan tus correos de carpeta (Configuración, el engranaje > «Correo» > «Reglas») o si está activado el reenvío a otra dirección."
+    abrir: "https://support.microsoft.com/en-us/outlook/mail/manage-email-messages-by-using-rules-in-outlook"
+  - texto: "Si no podés mandar un correo con un archivo, puede ser que pese más de 25 MB. Escribile a PC Doctor «el archivo es muy grande para mandarlo por correo»."
+fuentes:
+  - https://support.microsoft.com/office/d39e3341-8d79-4bf1-b3c7-ded602233642
+  - https://support.microsoft.com/en-us/outlook/mail/manage-email-messages-by-using-rules-in-outlook
+madurez: T0
+---
+id: MAIL-013
+area: programas
+titulo:
+  sencillo: "Los correos se quedan en la Bandeja de salida de Outlook y no se van"
+  tecnico: "Mensaje atascado en la Bandeja de salida (Outlook clásico y Outlook.com)"
+explicacion:
+  sencillo: "Cuando un correo queda trabado en la Bandeja de salida, casi siempre es porque tiene un archivo adjunto muy pesado o porque Outlook quedó «sin conexión»."
+  tecnico: "Causa habitual: adjunto grande. Trabajar sin conexión, mover a Borradores y quitar el adjunto; desactivar Trabajar sin conexión y Enviar todo."
+frases: ["los mails se quedan en bandeja de salida", "outlook no manda los correos", "el correo queda trabado sin enviarse", "tengo mensajes que no salen del outlook"]
+pasos:
+  - texto: "En Outlook clásico, mirá la pestaña «Enviar y recibir»: si el botón «Trabajar sin conexión» está marcado (azul), tocalo para volver a conectarte y después tocá «Enviar todo»."
+    abrir: "https://support.microsoft.com/outlook/outlook-email-stuck"
+  - texto: "Si sigue trabado: activá «Trabajar sin conexión», abrí la «Bandeja de salida», arrastrá el correo a «Borradores», abrilo y sacale el archivo adjunto pesado."
+  - texto: "Si Outlook dice que lo está transmitiendo y no te deja, cerrá Outlook (si no se cierra, escribile a PC Doctor «un programa se congeló»), abrilo de nuevo y repetí el paso anterior."
+  - texto: "Volvé a tocar «Trabajar sin conexión» para conectarte y mandalo. En Outlook.com, revisá «Borradores» y «Bandeja de salida»; si el adjunto pasa los 25 MB, subilo a OneDrive y mandá el enlace."
+fuentes:
+  - https://support.microsoft.com/outlook/outlook-email-stuck
+madurez: T0
+---
+id: MAIL-014
+area: programas
+titulo:
+  sencillo: "Correos que espero me caen en «Correo no deseado» de Outlook"
+  tecnico: "Outlook: rescatar mensajes de Correo no deseado y agregar remitentes seguros"
+explicacion:
+  sencillo: "Outlook a veces manda correos buenos a la carpeta «Correo no deseado». Los podés devolver a la bandeja y anotar a esa persona como remitente seguro para que no vuelva a pasar. Lo que queda en esa carpeta se borra solo después de un tiempo."
+  tecnico: "Marcar como no deseado/no es correo no deseado; Configuración > Correo > Correo no deseado > Remitentes y dominios seguros. Retención de 30 días en Outlook en la web."
+frases: ["los mails buenos se me van a no deseado en hotmail", "un correo importante me cayó en correo no deseado", "outlook me manda todo a correo basura", "cómo hago para que un mail no vaya a no deseado"]
+pasos:
+  - texto: "Abrí la carpeta «Correo no deseado», hacé clic derecho sobre el correo bueno y elegí la opción para marcarlo como que no es correo no deseado: vuelve a la Bandeja de entrada."
+    abrir: "https://support.microsoft.com/office/d39e3341-8d79-4bf1-b3c7-ded602233642"
+  - texto: "Para que no se repita (Outlook.com y nuevo Outlook): tocá Configuración (el engranaje) > «Correo» > «Correo no deseado». En «Remitentes y dominios seguros» tocá «Agregar», escribí la dirección y tocá «Guardar»."
+    abrir: "https://support.microsoft.com/en-us/outlook/filter-junk-email-and-spam-in-outlook"
+  - texto: "Revisá esa carpeta cada tanto: lo que queda ahí se borra solo después de unos días y ya no se puede recuperar."
+  - texto: "Si el correo te pide claves o datos del banco, no lo saques de ahí. Escribile a PC Doctor «me llegó un correo sospechoso»."
+fuentes:
+  - https://support.microsoft.com/office/d39e3341-8d79-4bf1-b3c7-ded602233642
+  - https://support.microsoft.com/en-us/outlook/filter-junk-email-and-spam-in-outlook
+madurez: T0
+---
+id: MAIL-015
+area: programas
+titulo:
+  sencillo: "Quiero bloquear a alguien que me manda correos en Outlook o Hotmail"
+  tecnico: "Outlook: bloquear y desbloquear remitentes y dominios"
+explicacion:
+  sencillo: "Si bloqueás una dirección, lo que te mande va directo a «Correo no deseado» y no te aparece en la bandeja de entrada."
+  tecnico: "Nuevo Outlook/Outlook.com: Configuración > Correo > Correo no deseado > Remitentes bloqueados. Clásico: clic derecho > Bloquear remitente u Opciones de correo no deseado."
+frases: ["bloquear un mail en hotmail", "no quiero que me escriba más una persona al outlook", "cómo bloqueo una dirección de correo en outlook", "me llegan correos de alguien y los quiero bloquear"]
+pasos:
+  - texto: "En Outlook.com o el nuevo Outlook: tocá Configuración (el engranaje) > «Correo» > «Correo no deseado». En «Remitentes bloqueados», escribí la dirección, tocá «Agregar» y después «Guardar»."
+    abrir: "https://support.microsoft.com/en-us/outlook/mail/block-or-unblock-senders-in-outlook"
+  - texto: "En Outlook clásico: hacé clic derecho sobre un correo de esa persona y elegí la opción para bloquear al remitente."
+  - texto: "Para desbloquearla, volvé a esa lista de remitentes bloqueados y quitala."
+  - texto: "Si usás una cuenta de Gmail o Yahoo dentro del nuevo Outlook, ahí no se puede bloquear: hacelo desde Gmail. Escribile a PC Doctor «bloquear a alguien en gmail»."
+fuentes:
+  - https://support.microsoft.com/en-us/outlook/mail/block-or-unblock-senders-in-outlook
+madurez: T0
+---
+id: MAIL-016
+area: programas
+titulo:
+  sencillo: "Borré un correo en Outlook o Hotmail y lo quiero recuperar"
+  tecnico: "Outlook: restaurar desde Elementos eliminados y recuperar elementos eliminados de esta carpeta"
+explicacion:
+  sencillo: "Lo que borrás va primero a «Elementos eliminados». Si ya lo vaciaste, en Outlook.com todavía hay unos 30 días para recuperarlo desde una opción especial de esa carpeta."
+  tecnico: "Elementos eliminados > Restaurar/Mover; «Recuperar elementos eliminados de esta carpeta» (30 días en Outlook.com); clásico: Inicio > Recuperar elementos eliminados del servidor."
+frases: ["borré un mail del hotmail sin querer", "vacié la papelera del outlook y necesito un correo", "recuperar un correo eliminado en outlook", "dónde van los mails borrados en hotmail"]
+pasos:
+  - texto: "Abrí la carpeta «Elementos eliminados». Si ves el correo, hacé clic derecho > «Restaurar» (o arrastralo a la Bandeja de entrada)."
+    abrir: "https://support.microsoft.com/outlook/mail/recover-and-restore-deleted-items-in-outlook"
+  - texto: "Si no está: dentro de «Elementos eliminados» tocá «Recuperar elementos eliminados de esta carpeta», marcá los correos y tocá «Restaurar». Hacelo desde la computadora: en el celular no se puede."
+  - texto: "En Outlook clásico, con «Elementos eliminados» abierto, en la pestaña «Inicio» tocá «Recuperar elementos eliminados del servidor». Si esa opción no aparece, tu tipo de cuenta no lo permite."
+  - texto: "Pasados unos 30 días, el correo se borra para siempre y ya no se puede recuperar."
+fuentes:
+  - https://support.microsoft.com/outlook/mail/recover-and-restore-deleted-items-in-outlook
+madurez: T0
+---
+id: MAIL-017
+area: programas
+titulo:
+  sencillo: "Me voy de vacaciones y quiero que Outlook conteste solo"
+  tecnico: "Outlook: respuestas automáticas (fuera de la oficina)"
+explicacion:
+  sencillo: "Outlook puede contestar solo a quien te escriba mientras no estás. Le ponés desde cuándo y hasta cuándo, y después se apaga solo."
+  tecnico: "Outlook.com: Configuración > Cuenta(s) > Respuestas automáticas; nuevo Outlook: Ver > Configuración de vista > Cuentas; clásico: Archivo > Respuestas automáticas. No disponible para cuentas Gmail, Yahoo, POP o IMAP."
+frases: ["poner respuesta automática en outlook", "mensaje de fuera de la oficina en hotmail", "que outlook avise que estoy de vacaciones", "contestador automático del correo de outlook"]
+pasos:
+  - texto: "En Outlook.com o el nuevo Outlook: entrá a Configuración (el engranaje) > «Cuentas» (en Outlook.com puede decir «Cuenta») > «Respuestas automáticas» y activá el interruptor."
+    abrir: "https://support.microsoft.com/en-us/office/how-to-set-up-out-of-office-automatic-replies-in-outlook-9742f476-5348-4f9f-997f-5e208513bd67"
+  - texto: "Marcá la opción para enviar respuestas solo durante un período y poné la fecha de inicio y de fin. Escribí el mensaje y tocá «Guardar». Conviene marcar que solo les conteste a tus contactos."
+  - texto: "En Outlook clásico: «Archivo» > «Respuestas automáticas» > «Enviar respuestas automáticas», poné las fechas y el mensaje y tocá «Aceptar»."
+  - texto: "Si en Outlook usás una cuenta de Gmail, esta opción no está: configurala desde Gmail. Escribile a PC Doctor «poner un mensaje de vacaciones en gmail»."
+fuentes:
+  - https://support.microsoft.com/en-us/office/how-to-set-up-out-of-office-automatic-replies-in-outlook-9742f476-5348-4f9f-997f-5e208513bd67
+madurez: T0
+---
+id: MAIL-018
+area: programas
+titulo:
+  sencillo: "Quiero poner una firma al final de mis correos de Outlook"
+  tecnico: "Outlook: crear y elegir una firma predeterminada"
+explicacion:
+  sencillo: "La firma es el texto que Outlook agrega solo al final de cada correo: tu nombre, tu teléfono o lo que quieras."
+  tecnico: "Nuevo Outlook/Outlook.com: Configuración > Cuentas > Firmas; clásico: mensaje nuevo > Mensaje > Firma > Firmas."
+frases: ["poner firma en outlook", "que aparezca mi nombre al final de los mails de hotmail", "cambiar la firma del correo de outlook", "armar una firma para el mail del trabajo"]
+pasos:
+  - texto: "En Outlook.com o el nuevo Outlook: Configuración (el engranaje) > «Cuentas» > «Firmas». Tocá el botón para agregar una firma, ponele un nombre y escribila."
+    abrir: "https://support.microsoft.com/en-us/outlook/mail/how-to-add-and-change-an-email-signature-in-outlook"
+  - texto: "Marcá las casillas para que se agregue sola en los mensajes nuevos y en las respuestas, y tocá «Guardar»."
+  - texto: "En Outlook clásico: abrí un mensaje nuevo y andá a «Mensaje» > «Firma» > «Firmas». Tocá «Nueva», escribila, elegila en «Mensajes nuevos» y tocá «Aceptar»."
+fuentes:
+  - https://support.microsoft.com/en-us/outlook/mail/how-to-add-and-change-an-email-signature-in-outlook
+madurez: T0
+---
+id: MAIL-019
+area: programas
+titulo:
+  sencillo: "Mi buzón de Outlook o Hotmail está lleno"
+  tecnico: "Outlook.com: límite de almacenamiento del buzón (15 GB) y de la nube de Microsoft (5 GB)"
+explicacion:
+  sencillo: "El correo gratis de Microsoft tiene un espacio para mensajes y otro para adjuntos y OneDrive. Si cualquiera de los dos se llena, no podés mandar ni recibir correos, y los que te mandan rebotan."
+  tecnico: "15 GB de buzón + 5 GB de nube compartidos con OneDrive; Configuración > Cuenta > Almacenamiento; Elementos eliminados cuenta hasta vaciarse."
+frases: ["mi buzón de outlook está lleno", "hotmail dice que no tengo espacio", "me rebotan los mails porque la casilla está llena", "cuota excedida en el correo de outlook"]
+pasos:
+  - texto: "En Outlook.com, tocá Configuración (el engranaje) > «Cuenta» > «Almacenamiento». Ahí ves qué carpeta ocupa más."
+    abrir: "https://support.microsoft.com/en-us/outlook/storage-limits-in-outlook-com"
+  - texto: "Desde esa misma página podés borrar una carpeta entera o solo los correos de más de 3, 6 o 12 meses. Ojo: lo que borres desde ahí se elimina para siempre; guardá antes lo que necesites."
+  - texto: "Vaciá «Elementos eliminados»: lo que está ahí sigue ocupando lugar hasta que la vaciás."
+  - texto: "Si lo que se llenó es OneDrive, escribile a PC Doctor «OneDrive dice que está lleno»."
+fuentes:
+  - https://support.microsoft.com/en-us/outlook/storage-limits-in-outlook-com
+  - https://support.microsoft.com/office/d39e3341-8d79-4bf1-b3c7-ded602233642
+madurez: T0
+---
+id: MAIL-020
+area: programas
+titulo:
+  sencillo: "El archivo es muy grande para mandarlo por correo"
+  tecnico: "Adjunto demasiado grande: compartir enlace de OneDrive o Google Drive, comprimir o reducir imágenes"
+explicacion:
+  sencillo: "Los correos tienen un tamaño máximo (en Outlook.com y Gmail, alrededor de 20 a 25 MB contando todo). Para mandar algo más pesado, se sube a la nube y se manda el enlace."
+  tecnico: "Outlook.com y Gmail: ~20 MB por mensaje según Microsoft; Gmail: 25 MB y conversión automática a enlace de Drive; alternativas: OneDrive, ZIP, Cambiar tamaño de imágenes grandes."
+frases: ["el archivo es muy grande para mandarlo por correo", "no puedo mandar un video por mail", "dice que el adjunto supera el tamaño permitido", "cómo mando muchas fotos juntas por correo"]
+pasos:
+  - texto: "En Gmail no tenés que hacer nada: si el archivo pasa los 25 MB, Gmail lo sube solo a Google Drive y pone un enlace en el correo."
+    abrir: "https://support.google.com/mail/answer/6584?hl=es-419"
+  - texto: "En Outlook: subí el archivo a OneDrive (o Google Drive), copiá el enlace para compartir y pegalo en el correo. La otra persona lo abre y lo descarga desde ahí."
+    abrir: "https://support.microsoft.com/en-us/office/reduce-attachment-size-to-send-large-files-with-outlook-8c698842-b462-4a4c-8d53-5c5dd04f77ef"
+  - texto: "Para muchas fotos o documentos, podés juntarlos en un archivo comprimido (ZIP). Escribile a PC Doctor «cómo hago un zip»."
+  - texto: "En Outlook clásico, con las fotos adjuntas: «Archivo» > «Información» y marcá la opción para cambiar el tamaño de las imágenes grandes al enviar."
+fuentes:
+  - https://support.microsoft.com/en-us/office/reduce-attachment-size-to-send-large-files-with-outlook-8c698842-b462-4a4c-8d53-5c5dd04f77ef
+  - https://support.google.com/mail/answer/6584?hl=es-419
+madurez: T0
+---
+id: MAIL-021
+area: programas
+titulo:
+  sencillo: "Quiero que Outlook mueva solo los correos a una carpeta"
+  tecnico: "Outlook: reglas de la Bandeja de entrada (crear, desactivar, eliminar)"
+explicacion:
+  sencillo: "Una regla es una orden para Outlook: por ejemplo, que todo lo que mande el banco vaya a la carpeta «Banco». Se arma una vez y funciona sola con los correos que llegan."
+  tecnico: "Clic derecho > Reglas > Crear regla; Configuración > Correo > Reglas (nuevo Outlook/Outlook.com); clásico: Archivo > Administrar reglas y alertas."
+frases: ["que los mails del banco vayan solos a una carpeta", "crear una regla en outlook", "ordenar automáticamente el hotmail", "outlook me mueve correos solo a otra carpeta"]
+pasos:
+  - texto: "Hacé clic derecho sobre un correo de esa persona, elegí «Reglas» > «Crear regla», elegí la carpeta adonde querés que vayan y tocá «Aceptar»."
+    abrir: "https://support.microsoft.com/en-us/outlook/mail/manage-email-messages-by-using-rules-in-outlook"
+  - texto: "Para ver, apagar o borrar reglas en Outlook.com o el nuevo Outlook: Configuración (el engranaje) > «Correo» > «Reglas». El interruptor al lado de cada regla la apaga sin borrarla."
+  - texto: "En Outlook clásico, las reglas están en «Archivo» > «Administrar reglas y alertas»: desmarcá la casilla para apagarla o elegila y tocá «Eliminar»."
+  - texto: "Si te faltan correos que «desaparecen», revisá esta lista: puede haber una regla que los mueve. El nuevo Outlook no aplica reglas a cuentas de Gmail o Yahoo."
+fuentes:
+  - https://support.microsoft.com/en-us/outlook/mail/manage-email-messages-by-using-rules-in-outlook
+madurez: T0
+---
+id: MAIL-022
+area: archivos
+titulo:
+  sencillo: "Quiero guardar una copia de mis correos de Outlook o abrir un archivo .pst"
+  tecnico: "Outlook clásico: exportar a un archivo de datos de Outlook (.pst) y abrir archivos .pst"
+explicacion:
+  sencillo: "Outlook clásico puede guardar tus correos en un archivo con terminación .pst, como una copia de seguridad que podés llevar a un pendrive. Ese mismo archivo después se abre en Outlook para ver los correos viejos."
+  tecnico: "Archivo > Abrir y exportar > Importar o exportar > Exportar a un archivo > Archivo de datos de Outlook (.pst); abrir: Archivo > Abrir y exportar > Abrir archivo de datos de Outlook. Ubicación habitual: Documentos\\Archivos de Outlook."
+frases: ["hacer copia de seguridad del outlook", "guardar todos mis mails en un archivo", "tengo un archivo pst y no sé cómo abrirlo", "pasar los correos de outlook a otra computadora"]
+pasos:
+  - texto: "Para hacer la copia, en Outlook clásico: «Archivo» > «Abrir y exportar» > «Importar o exportar». Elegí «Exportar a un archivo» > «Siguiente» > «Archivo de datos de Outlook (.pst)» > «Siguiente»."
+    abrir: "https://support.microsoft.com/en-us/outlook/back-up-your-outlook-email"
+  - texto: "Elegí la carpeta que querés guardar (por ejemplo, tu cuenta entera), después dónde guardar el archivo y tocá «Finalizar». Si te ofrece ponerle una clave al archivo es opcional: si la ponés, anotala, porque sin ella no lo vas a poder abrir."
+  - texto: "Para abrir un .pst: «Archivo» > «Abrir y exportar» > «Abrir archivo de datos de Outlook» y elegí el archivo. Aparece en la lista de carpetas de la izquierda."
+    abrir: "https://support.microsoft.com/en-us/outlook/open-and-find-items-in-an-outlook-data-file-pst"
+  - texto: "Si lo buscás en la computadora, suele estar en Documentos, dentro de la carpeta de archivos de Outlook. El nuevo Outlook solo los abre si también tenés Outlook clásico instalado."
+fuentes:
+  - https://support.microsoft.com/en-us/outlook/back-up-your-outlook-email
+  - https://support.microsoft.com/en-us/outlook/open-and-find-items-in-an-outlook-data-file-pst
+madurez: T0
+---
+id: MAIL-023
+area: programas
+titulo:
+  sencillo: "Outlook me pide la contraseña una y otra vez"
+  tecnico: "Outlook clásico solicita credenciales repetidamente"
+explicacion:
+  sencillo: "Si Outlook te pide la clave a cada rato, casi siempre es porque la cambiaste en otro lado (por ejemplo, en la página de Hotmail o de Gmail) y Outlook todavía tiene guardada la vieja. PC Doctor nunca ve ni guarda tu clave."
+  tecnico: "Causas: Bloq Mayús, usuario incompleto, contraseña cambiada o vencida en el proveedor; actualizarla en la configuración de la cuenta de Outlook."
+frases: ["outlook me pide la contraseña todo el tiempo", "sale la ventanita de la clave del correo a cada rato", "pongo la clave en outlook y la vuelve a pedir", "outlook no acepta mi contraseña"]
+pasos:
+  - texto: "Fijate que no esté activado Bloq Mayús (la clave distingue mayúsculas) y que el usuario sea tu dirección de correo completa, con el @ y todo."
+    abrir: "https://support.microsoft.com/en-us/outlook/getstarted/troubleshoot-outlook-email-setup"
+  - texto: "Si hace poco cambiaste la clave en la página de tu correo (o se venció), Outlook sigue usando la vieja: actualizala en Outlook escribiendo la nueva cuando te la pida, en su propia ventana."
+  - texto: "Si no estás seguro de cuál es tu clave, no pruebes muchas veces seguidas: escribile a PC Doctor «me olvidé la contraseña de Gmail» o «mi cuenta de Microsoft está bloqueada»."
+  - texto: "Si tu cuenta es del trabajo, puede que la clave se haya vencido: consultá con el encargado de sistemas."
+fuentes:
+  - https://support.microsoft.com/en-us/outlook/getstarted/troubleshoot-outlook-email-setup
+madurez: T0
+---
+id: MAIL-024
+area: programas
+titulo:
+  sencillo: "Quiero ver mi correo en el celular"
+  tecnico: "Configurar Outlook para Android/iOS o agregar Outlook/Hotmail a la app de Gmail"
+explicacion:
+  sencillo: "Podés tener el mismo correo en la computadora y en el celular. Se instala la app de Outlook (o se usa la de Gmail que ya viene en Android) y se agrega la cuenta. La clave la escribís vos en la pantalla oficial."
+  tecnico: "Outlook móvil: Agregar cuenta (o Configuración > Cuenta > Agregar cuenta); app Gmail Android: Perfil > Agregar otra cuenta > Outlook."
+frases: ["poner el hotmail en el celular", "configurar el correo en el teléfono", "quiero ver los mails en el celu", "agregar mi cuenta de outlook al celular"]
+pasos:
+  - texto: "Con la app de Outlook en Android: instalala desde Google Play, abrila, tocá «Agregar cuenta», escribí tu correo y seguí los pasos. Para una cuenta de Gmail elegí la opción de agregar cuenta de Google."
+    abrir: "https://support.microsoft.com/en-us/outlook/install-mobile/set-up-email-in-the-outlook-for-android-app"
+  - texto: "En iPhone: descargá Outlook desde la App Store, abrila, tocá «Agregar cuenta», escribí tu correo y seguí los pasos en pantalla."
+    abrir: "https://support.microsoft.com/en-us/outlook/install-mobile/set-up-the-outlook-app-for-ios"
+  - texto: "Si preferís la app de Gmail de Android: tocá tu foto de perfil arriba a la derecha > «Agregar otra cuenta» > «Outlook» y seguí los pasos."
+    abrir: "https://support.google.com/mail/answer/6078445?hl=es-419&co=GENIE.Platform%3DAndroid"
+  - texto: "Si tenés la verificación en dos pasos, puede que te pida confirmar con un código o una aprobación en el celular: es normal."
+fuentes:
+  - https://support.microsoft.com/en-us/outlook/install-mobile/set-up-email-in-the-outlook-for-android-app
+  - https://support.microsoft.com/en-us/outlook/install-mobile/set-up-the-outlook-app-for-ios
+  - https://support.google.com/mail/answer/6078445?hl=es-419&co=GENIE.Platform%3DAndroid
+madurez: T0
+---
+id: MAIL-025
+area: programas
+titulo:
+  sencillo: "Me llegó un «mensaje protegido» o cifrado y no lo puedo leer"
+  tecnico: "Abrir mensajes cifrados o protegidos de Microsoft 365 desde Gmail, Yahoo u Outlook.com"
+explicacion:
+  sencillo: "Algunos bancos, médicos u oficinas mandan correos «protegidos»: en vez del texto, llega un aviso con un botón para leerlo. Al tocarlo, se abre una página de Microsoft donde entrás con tu cuenta o te mandan un código de un solo uso a tu correo."
+  tecnico: "Mensajes de Cifrado de mensajes de Microsoft Purview/Microsoft 365: «Leer el mensaje» > iniciar sesión con Google/Yahoo/Microsoft o código de un solo uso (vence a los 15 minutos)."
+frases: ["me llegó un mensaje protegido y no lo puedo abrir", "el correo dice que es un mensaje cifrado", "me piden un código para leer un mail", "no puedo ver un correo seguro que me mandaron"]
+pasos:
+  - texto: "Antes de nada, fijate que conozcas a quien te lo manda. Si no esperabas ese correo o te pide claves, no toques nada y escribile a PC Doctor «me llegó un correo sospechoso»."
+    abrir: "https://support.microsoft.com/en-us/outlook/mail/open-encrypted-and-protected-messages"
+  - texto: "Abrí el correo y tocá el botón para leer el mensaje. Si usás Gmail, elegí iniciar sesión con Google y aceptá; el mensaje se abre en una pestaña nueva del navegador."
+  - texto: "Si no, elegí la opción del código de un solo uso: te llega otro correo con un código. Escribilo en la página y tocá «Continuar». El código vence a los 15 minutos; si se vence, empezá de nuevo."
+fuentes:
+  - https://support.microsoft.com/en-us/outlook/mail/open-encrypted-and-protected-messages
+madurez: T0

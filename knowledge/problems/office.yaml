@@ -1,0 +1,466 @@
+# Word, Excel, PowerPoint y OneNote: problemas y tareas comunes (recuperar, vista protegida, errores de Excel, imprimir, formato, cuentas y reparación). Guiadas con fuente oficial.
+id: OFC-001
+area: archivos
+titulo:
+  sencillo: "Se cerró Word (o Excel) y no había guardado el documento"
+  tecnico: "Recuperar archivos no guardados y Autorrecuperación en Office"
+explicacion:
+  sencillo: "Si Office se cerró de golpe o cerraste sin guardar, muchas veces queda una copia de emergencia. Hay que buscarla cuanto antes y guardarla con otro nombre."
+  tecnico: "Panel Recuperación de documentos al reabrir; Archivo > Información > Administrar documento > recuperar no guardados; Autorrecuperación en Opciones > Guardar."
+frases: ["se me cerró word y no guardé", "se cortó la luz y perdí el documento", "cerré excel sin guardar los cambios", "cómo recupero un documento que no guardé"]
+pasos:
+  - texto: "Volvé a abrir el mismo programa (Word, Excel o PowerPoint). Si aparece el panel «Recuperación de documentos», abrí la versión más nueva y guardala enseguida con «Guardar como»."
+    abrir: "https://support.microsoft.com/office/collab-files/save-back-up-and-recover-a-file-in-microsoft-office"
+  - texto: "Si no aparece: tocá «Archivo» > «Información» > «Administrar documento» (en Excel, «Administrar libro») y elegí la opción de recuperar los no guardados. Abrí el archivo y guardalo."
+    abrir: "https://support.microsoft.com/office/recover-an-earlier-version-of-an-office-file-169cb166-e7e2-438e-8f39-9a8927828121"
+  - texto: "Para la próxima: en «Archivo» > «Opciones» > «Guardar», dejá marcadas «Guardar información de Autorrecuperación cada x minutos» (5 o 10 minutos está bien) y la de mantener la última versión si cerrás sin guardar. Igual, guardá seguido: la Autorrecuperación no reemplaza a guardar."
+    abrir: "https://support.microsoft.com/office/collab-files/help-protect-your-files-in-case-of-a-crash"
+fuentes:
+  - https://support.microsoft.com/office/collab-files/save-back-up-and-recover-a-file-in-microsoft-office
+  - https://support.microsoft.com/office/recover-an-earlier-version-of-an-office-file-169cb166-e7e2-438e-8f39-9a8927828121
+  - https://support.microsoft.com/office/collab-files/help-protect-your-files-in-case-of-a-crash
+madurez: T0
+---
+id: OFC-002
+area: programas
+titulo:
+  sencillo: "El documento se abre pero no me deja escribir (barra amarilla «Vista protegida»)"
+  tecnico: "Vista protegida: modo de solo lectura en Office"
+explicacion:
+  sencillo: "Cuando un archivo viene de Internet o de un correo, Office lo abre «en modo lectura» para cuidarte de virus. Si confiás en quien te lo mandó, lo podés habilitar para editarlo."
+  tecnico: "Vista protegida: apertura de solo lectura para archivos de Internet, adjuntos, ubicaciones no seguras o con error de validación; se sale con Habilitar edición."
+frases: ["el word no me deja escribir", "me dice vista protegida", "el archivo que me mandaron se abre solo para leer", "aparece una barra amarilla arriba del documento"]
+pasos:
+  - texto: "Antes que nada, pensá de dónde vino el archivo. Si no lo esperabas o te parece raro, no lo habilites: cerralo y borralo."
+  - texto: "Si confiás en quien te lo mandó, tocá «Habilitar edición» en la barra amarilla de arriba. Ya vas a poder escribir."
+    abrir: "https://support.microsoft.com/office/collab-files/what-is-protected-view"
+  - texto: "Si la barra es roja o dice que editarlo puede dañar tu equipo, hacelo solo si estás seguro del origen. Si no te deja salir de ninguna forma, puede ser una regla de la empresa o la escuela: consultá con el encargado de sistemas."
+fuentes:
+  - https://support.microsoft.com/office/collab-files/what-is-protected-view
+madurez: T0
+---
+id: OFC-003
+area: programas
+titulo:
+  sencillo: "En Excel aparecen numerales (#####) en vez de números"
+  tecnico: "Error ##### en celdas de Excel"
+explicacion:
+  sencillo: "Los ##### casi siempre quieren decir que el número no entra en la columna. El dato está bien: solo hay que hacer la columna más ancha o achicar cómo se muestra."
+  tecnico: "##### aparece cuando el ancho de columna no alcanza para el valor o cuando una fecha u hora da negativa."
+frases: ["en excel me salen numerales", "la celda muestra ##### en vez del número", "excel me pone todos cardinales", "no se ve el número en la planilla"]
+pasos:
+  - texto: "Arrastrá hacia la derecha el borde derecho de la letra de la columna (arriba de todo) hasta que aparezca el número."
+    abrir: "https://support.microsoft.com/office/how-to-correct-a-error-bf801d0a-2a6e-44bd-a70e-0f780ae8f11e"
+  - texto: "Si el número tiene muchos decimales, en la pestaña «Inicio» tocá el botón para disminuir decimales. Si es una fecha larga, en la lista de formato de número de «Inicio» elegí «Fecha corta»."
+  - texto: "Si es una resta de fechas u horas, puede que el resultado haya dado negativo: revisá que la cuenta reste la fecha más vieja a la más nueva."
+fuentes:
+  - https://support.microsoft.com/office/how-to-correct-a-error-bf801d0a-2a6e-44bd-a70e-0f780ae8f11e
+madurez: T0
+---
+id: OFC-004
+area: programas
+titulo:
+  sencillo: "Excel muestra la fórmula escrita en vez del resultado"
+  tecnico: "Fórmulas que se ven como texto o no se calculan en Excel"
+explicacion:
+  sencillo: "Si en la celda ves «=SUMA(A1:A10)» en lugar del total, Excel la está tomando como texto o tiene activado mostrar las fórmulas. Se arregla con un par de clics."
+  tecnico: "Causas: Mostrar fórmulas activado (Ctrl + acento grave), celda con formato Texto, falta el signo =, o cálculo del libro en Manual."
+frases: ["excel no hace la cuenta", "en la celda aparece la fórmula y no el resultado", "la suma de excel no calcula", "puse una fórmula y queda escrita así nomás"]
+pasos:
+  - texto: "En la pestaña «Fórmulas», fijate si está apretado «Mostrar fórmulas». Si lo está, tocalo para apagarlo."
+    abrir: "https://support.microsoft.com/office/how-to-avoid-broken-formulas-in-excel-8309381d-33e8-42f6-b889-84ef6df1d586"
+  - texto: "Revisá que la fórmula empiece con el signo igual: «=SUMA(A1:A10)», no «SUMA(A1:A10)»."
+  - texto: "Si sigue igual, la celda puede tener formato de texto: hacé clic derecho en la celda > «Formato de celdas» > «General» > «Aceptar». Después apretá F2 y Enter."
+  - texto: "Si los resultados no se actualizan cuando cambiás un número, entrá a «Archivo» > «Opciones» > «Fórmulas» y en «Cálculo del libro» elegí «Automático»."
+fuentes:
+  - https://support.microsoft.com/office/how-to-avoid-broken-formulas-in-excel-8309381d-33e8-42f6-b889-84ef6df1d586
+madurez: T0
+---
+id: OFC-005
+area: programas
+titulo:
+  sencillo: "El video o la música de PowerPoint no se reproduce"
+  tecnico: "Problemas de reproducción de audio y video en PowerPoint"
+explicacion:
+  sencillo: "Muchas veces el video no anda porque está en un formato raro o porque quedó «vinculado» a un archivo que está en otra computadora. PowerPoint trae una opción para dejarlo listo para cualquier equipo."
+  tecnico: "Archivo > Información > Optimizar la compatibilidad; incrustar medios vinculados (Romper vínculo); formato recomendado .mp4 (H.264 + AAC) o .m4a."
+frases: ["el video del powerpoint no anda", "en la presentación no se escucha la música", "power point no reproduce el video", "el video se ve en mi compu pero no en otra"]
+pasos:
+  - texto: "En la compu donde armaste la presentación, tocá «Archivo» > «Información». Si aparece «Optimizar la compatibilidad», tocala y esperá a que termine. Hacelo antes de llevar la presentación a otro lado."
+    abrir: "https://support.microsoft.com/office/are-you-having-video-or-audio-playback-issues-e0a94444-8ea7-4a00-974b-6ad0d6edc4b1"
+  - texto: "Si te avisa que hay videos vinculados, tocá «Ver vínculos» y después «Romper vínculo» en cada uno, así quedan guardados adentro de la presentación."
+  - texto: "Si el video sigue sin andar, lo más seguro es usar un archivo .mp4 (para música, .m4a). Microsoft explica qué formatos funcionan mejor."
+    abrir: "https://support.microsoft.com/powerpoint/video-and-audio-file-formats-supported-in-powerpoint"
+fuentes:
+  - https://support.microsoft.com/office/are-you-having-video-or-audio-playback-issues-e0a94444-8ea7-4a00-974b-6ad0d6edc4b1
+  - https://support.microsoft.com/powerpoint/video-and-audio-file-formats-supported-in-powerpoint
+madurez: T0
+---
+id: OFC-006
+area: programas
+titulo:
+  sencillo: "Word me subraya todo en rojo porque corrige en otro idioma"
+  tecnico: "Cambiar el idioma de corrección ortográfica en Word"
+explicacion:
+  sencillo: "Si Word marca como error palabras que están bien escritas, seguramente está revisando en inglés u otro idioma. Se le puede decir que revise en español."
+  tecnico: "Revisar > Idioma > Establecer idioma de corrección para el texto seleccionado; Preferencias de idioma para agregar herramientas de corrección."
+frases: ["word me marca todo en rojo", "el corrector está en inglés", "cambiar el idioma del corrector de word", "me subraya palabras que están bien escritas"]
+pasos:
+  - texto: "Seleccioná con el mouse el texto que querés corregir (o todo el documento). En la pestaña «Revisar», tocá «Idioma» > «Establecer idioma de corrección», elegí «Español» (por ejemplo, Argentina) y «Aceptar»."
+    abrir: "https://support.microsoft.com/word/set-up-or-change-the-languages-used-to-check-spelling-and-grammar"
+  - texto: "En esa misma ventana, si escribís en varios idiomas, podés marcar «Detectar el idioma automáticamente»."
+  - texto: "Si el español no aparece o no tiene corrector, entrá a «Revisar» > «Idioma» > «Preferencias de idioma» y agregalo con sus herramientas de corrección."
+fuentes:
+  - https://support.microsoft.com/word/set-up-or-change-the-languages-used-to-check-spelling-and-grammar
+madurez: T0
+---
+id: OFC-007
+area: programas
+titulo:
+  sencillo: "Word no me marca las faltas de ortografía"
+  tecnico: "La revisión ortográfica automática no subraya errores"
+explicacion:
+  sencillo: "Si escribís con errores y Word no los subraya, puede que la revisión mientras escribís esté apagada o que el documento tenga ocultos los errores."
+  tecnico: "Archivo > Opciones > Revisión: Revisar ortografía mientras escribe y Excepciones para el documento; F7 para revisión manual."
+frases: ["word no corrige la ortografía", "no me subraya las palabras mal escritas", "el corrector de word no funciona", "no aparecen las rayitas rojas en word"]
+pasos:
+  - texto: "Probá revisar a mano: apretá F7 (o en la pestaña «Revisar», el botón de ortografía y gramática)."
+    abrir: "https://support.microsoft.com/office/check-spelling-and-grammar-in-office"
+  - texto: "Para que marque mientras escribís: «Archivo» > «Opciones» > «Revisión» y marcá «Revisar ortografía mientras escribe»."
+  - texto: "En esa misma pantalla, abajo, en la parte de excepciones para el documento, desmarcá las casillas que ocultan los errores de ortografía y de gramática solo en ese documento."
+  - texto: "Si un pedazo del texto sigue sin revisarse, seleccionalo y en «Revisar» > «Idioma» > «Establecer idioma de corrección» desmarcá «No revisar la ortografía ni la gramática»."
+    abrir: "https://support.microsoft.com/word/set-up-or-change-the-languages-used-to-check-spelling-and-grammar"
+fuentes:
+  - https://support.microsoft.com/office/check-spelling-and-grammar-in-office
+  - https://support.microsoft.com/word/set-up-or-change-the-languages-used-to-check-spelling-and-grammar
+madurez: T0
+---
+id: OFC-008
+area: programas
+titulo:
+  sencillo: "Quiero imprimir solo una parte de la planilla de Excel"
+  tecnico: "Establecer o borrar el área de impresión en Excel"
+explicacion:
+  sencillo: "En Excel podés marcar qué celdas querés imprimir y el resto no sale en el papel. Queda guardado hasta que lo borres."
+  tecnico: "Disposición de página > Configurar página > Área de impresión > Establecer área de impresión / Borrar área de impresión."
+frases: ["imprimir solo algunas celdas de excel", "quiero imprimir una parte de la planilla", "excel me imprime todo y quiero solo un pedazo", "sacar por impresora solo una tabla de la hoja"]
+pasos:
+  - texto: "Seleccioná con el mouse las celdas que querés imprimir."
+  - texto: "Andá a la pestaña de diseño de página («Disposición de página» o «Diseño de página», según la versión) > «Área de impresión» > «Establecer área de impresión». Después imprimí como siempre."
+    abrir: "https://support.microsoft.com/excel/set-or-clear-a-print-area-on-a-worksheet"
+  - texto: "Para volver a imprimir todo: misma pestaña > «Área de impresión» > «Borrar área de impresión»."
+fuentes:
+  - https://support.microsoft.com/excel/set-or-clear-a-print-area-on-a-worksheet
+madurez: T0
+---
+id: OFC-009
+area: programas
+titulo:
+  sencillo: "La planilla de Excel sale cortada en varias hojas al imprimir"
+  tecnico: "Ajustar la hoja a una página al imprimir en Excel"
+explicacion:
+  sencillo: "Cuando la planilla es más ancha que la hoja, Excel la parte en varios papeles. Se le puede pedir que la achique para que entre en una sola página (la letra sale más chica)."
+  tecnico: "Archivo > Imprimir > escalado «Ajustar hoja en una página», o Ajustar área de impresión con Ancho y Alto en 1 página; orientación horizontal."
+frases: ["excel me imprime en varias hojas", "la planilla sale cortada al imprimir", "que la tabla entre en una sola hoja", "se imprimen columnas sueltas en otra página"]
+pasos:
+  - texto: "Tocá «Archivo» > «Imprimir». Abajo de todo, en la opción de escala (normalmente dice «Sin escalado»), elegí «Ajustar hoja en una página»."
+    abrir: "https://support.microsoft.com/excel/scale-a-worksheet"
+  - texto: "Si queda muy chiquito, probá poner la hoja acostada: en la pestaña de diseño de página, «Orientación» > «Horizontal»."
+  - texto: "Para volver a como estaba, en esa misma lista de escala elegí «Sin escalado»."
+fuentes:
+  - https://support.microsoft.com/excel/scale-a-worksheet
+madurez: T0
+---
+id: OFC-010
+area: programas
+titulo:
+  sencillo: "Quiero ponerle número a las páginas en Word"
+  tecnico: "Insertar números de página en Word"
+explicacion:
+  sencillo: "Word numera las páginas solo: elegís dónde querés el número (arriba o abajo) y aparece en todas las hojas."
+  tecnico: "Insertar > Número de página; Primera página diferente en Encabezado y pie de página; Formato de los números de página > Iniciar en."
+frases: ["numerar las hojas en word", "poner número de página", "que aparezca el número abajo de cada hoja", "que la carátula no tenga número"]
+pasos:
+  - texto: "En la pestaña «Insertar», tocá «Número de página» y elegí dónde lo querés (arriba o abajo de la página) y el estilo."
+    abrir: "https://support.microsoft.com/word/training/insert-page-numbers"
+  - texto: "Si no querés número en la primera hoja (la carátula), marcá «Primera página diferente» en la pestaña de encabezado y pie de página que se abre."
+  - texto: "Cuando termines, tocá «Cerrar encabezado y pie de página» o apretá Esc. Para volver a editarlo, hacé doble clic sobre el número."
+fuentes:
+  - https://support.microsoft.com/word/training/insert-page-numbers
+madurez: T0
+---
+id: OFC-011
+area: programas
+titulo:
+  sencillo: "Quiero cambiar los márgenes de la hoja en Word"
+  tecnico: "Cambiar los márgenes en Word"
+explicacion:
+  sencillo: "Los márgenes son el espacio en blanco alrededor del texto. Se pueden achicar para que entre más, o agrandar si te lo piden así en un trabajo."
+  tecnico: "Disposición > Márgenes: valores predefinidos o Márgenes personalizados."
+frases: ["cambiar los márgenes en word", "el texto queda muy pegado al borde", "me piden margen de 3 centímetros", "achicar el espacio en blanco de los costados"]
+pasos:
+  - texto: "En la pestaña «Disposición», tocá «Márgenes» y elegí una de las opciones que trae ya armadas."
+    abrir: "https://support.microsoft.com/word/training/change-margins"
+  - texto: "Si necesitás una medida exacta, tocá «Márgenes personalizados» al final de la lista y escribí la medida de arriba, abajo, izquierda y derecha."
+fuentes:
+  - https://support.microsoft.com/word/training/change-margins
+madurez: T0
+---
+id: OFC-012
+area: programas
+titulo:
+  sencillo: "Quiero poner una foto en un documento de Word"
+  tecnico: "Insertar imágenes desde el equipo en Word"
+explicacion:
+  sencillo: "Podés agregar cualquier foto que tengas en la computadora y después agrandarla, achicarla o moverla."
+  tecnico: "Insertar > Imágenes > Este dispositivo; controladores de esquina para el tamaño; ajuste de texto distinto de En línea con el texto para moverla."
+frases: ["poner una foto en word", "agregar una imagen al documento", "insertar una foto en el texto", "no puedo mover la foto en word"]
+pasos:
+  - texto: "Hacé clic donde querés la foto. En la pestaña «Insertar», tocá «Imágenes» > «Este dispositivo», buscá la foto y tocá «Insertar»."
+    abrir: "https://support.microsoft.com/word/training/insert-pictures"
+  - texto: "Para cambiarle el tamaño, tocá la foto y arrastrá uno de los circulitos de las esquinas."
+  - texto: "Si no la podés mover, tocá la foto y en las opciones de ajuste de texto elegí cualquiera que no sea «En línea con el texto». Después arrastrala a donde quieras."
+fuentes:
+  - https://support.microsoft.com/word/training/insert-pictures
+madurez: T0
+---
+id: OFC-013
+area: programas
+titulo:
+  sencillo: "Quiero poner la hoja acostada (horizontal) en Word"
+  tecnico: "Cambiar la orientación de página a horizontal o vertical"
+explicacion:
+  sencillo: "La hoja puede estar parada (vertical) o acostada (horizontal). Sirve para tablas anchas o carteles. Se puede cambiar todo el documento o solo una parte."
+  tecnico: "Disposición > Orientación; para parte del documento, Configurar página > Horizontal > Aplicar a: Texto seleccionado."
+frases: ["poner la hoja horizontal en word", "hoja apaisada", "dar vuelta la hoja para que quede acostada", "una sola página horizontal en el documento"]
+pasos:
+  - texto: "Para todo el documento: pestaña «Disposición» > «Orientación» > «Horizontal» (o «Vertical» para volver)."
+    abrir: "https://support.microsoft.com/word/training/change-page-orientation-to-landscape-or-portrait"
+  - texto: "Para una sola parte: seleccioná ese texto, en «Disposición» abrí la ventana de configurar página (la flechita chica en la esquina del grupo), elegí «Horizontal» y en «Aplicar a» poné «Texto seleccionado»."
+fuentes:
+  - https://support.microsoft.com/word/training/change-page-orientation-to-landscape-or-portrait
+madurez: T0
+---
+id: OFC-014
+area: programas
+titulo:
+  sencillo: "Quiero juntar varias celdas de Excel en una sola"
+  tecnico: "Combinar y separar celdas en Excel"
+explicacion:
+  sencillo: "Combinar celdas sirve, por ejemplo, para poner un título que ocupe todo el ancho de una tabla. Ojo: si varias celdas tienen algo escrito, solo queda lo de la primera (la de arriba a la izquierda)."
+  tecnico: "Inicio > Combinar y centrar; solo se conserva el contenido de la celda superior izquierda; Separar celdas para deshacer."
+frases: ["juntar celdas en excel", "combinar celdas para un título", "unir dos celdas en una", "separar una celda combinada"]
+pasos:
+  - texto: "Antes de combinar, copiá en otro lado lo que esté escrito en las otras celdas: al combinar se pierde y solo queda lo de la primera."
+  - texto: "Seleccioná las celdas que querés juntar y en la pestaña «Inicio» tocá «Combinar y centrar» (o su flechita > «Combinar celdas», si no querés que quede centrado)."
+    abrir: "https://support.microsoft.com/excel/get-started/merge-and-unmerge-cells-in-excel"
+  - texto: "Para separarlas de nuevo: tocá la celda combinada, abrí la flechita al lado de «Combinar y centrar» y elegí «Separar celdas». Si recién lo hiciste, también sirve Ctrl + Z."
+fuentes:
+  - https://support.microsoft.com/excel/get-started/merge-and-unmerge-cells-in-excel
+madurez: T0
+---
+id: OFC-015
+area: programas
+titulo:
+  sencillo: "Quiero que los títulos de Excel queden fijos cuando bajo en la planilla"
+  tecnico: "Inmovilizar paneles (fijar filas y columnas) en Excel"
+explicacion:
+  sencillo: "En planillas largas, al bajar se pierden de vista los títulos de las columnas. Excel puede dejar fija la primera fila (o la primera columna) para que siempre se vea."
+  tecnico: "Vista > Inmovilizar: fila superior, primera columna o paneles desde la celda seleccionada; Movilizar paneles para quitarlo."
+frases: ["fijar la primera fila en excel", "que no se muevan los títulos al bajar", "dejar quieta la fila de arriba", "la planilla de arriba no se mueve y no sé por qué"]
+pasos:
+  - texto: "Excel deja fijas las filas que están arriba y las columnas que están a la izquierda de la celda que elijas. Para fijar solo la fila de los títulos, tocá la celda A2."
+  - texto: "En la pestaña «Vista», tocá «Inmovilizar» y elegí «Inmovilizar paneles». Para fijar filas y columnas a la vez, elegí antes la celda que está justo debajo y a la derecha de lo que querés dejar quieto."
+    abrir: "https://support.microsoft.com/excel/get-started/freeze-panes-to-lock-rows-and-columns"
+  - texto: "Para sacarlo (o si la parte de arriba no se mueve y no sabés por qué): «Vista» > «Inmovilizar» > «Movilizar paneles»."
+fuentes:
+  - https://support.microsoft.com/excel/get-started/freeze-panes-to-lock-rows-and-columns
+madurez: T0
+---
+id: OFC-016
+area: programas
+titulo:
+  sencillo: "Desaparecieron los botones de arriba en Word o Excel"
+  tecnico: "Mostrar u ocultar la cinta de opciones en Office"
+explicacion:
+  sencillo: "La barra de botones de arriba (la «cinta de opciones») se puede esconder sin querer. No se borró nada: se vuelve a mostrar en un segundo."
+  tecnico: "Cinta contraída (clic derecho en una pestaña > Contraer la cinta de opciones) u Opciones de presentación de la cinta; el modo de pantalla completa la oculta del todo."
+frases: ["desaparecieron los botones de word", "se fue la barra de herramientas de excel", "no veo los menús de arriba", "solo se ven los nombres de las pestañas"]
+pasos:
+  - texto: "Si ves los nombres de las pestañas (Inicio, Insertar…) pero no los botones: hacé clic derecho sobre cualquier pestaña y desmarcá «Contraer la cinta de opciones»."
+    abrir: "https://support.microsoft.com/office/foundations-experiences/show-or-hide-the-ribbon-in-office"
+  - texto: "Otra forma: tocá una pestaña y, en el botón de opciones de presentación de la cinta (abajo a la derecha de la cinta), elegí «Mostrar siempre la cinta de opciones»."
+  - texto: "Si no se ve ninguna pestaña, está en pantalla completa: tocá los tres puntitos «...» arriba a la derecha para que aparezca y cambiá la opción como en el paso anterior."
+fuentes:
+  - https://support.microsoft.com/office/foundations-experiences/show-or-hide-the-ribbon-in-office
+madurez: T0
+---
+id: OFC-017
+area: archivos
+titulo:
+  sencillo: "Arriba del documento dice «Modo de compatibilidad»"
+  tecnico: "Documentos .doc en modo de compatibilidad: convertir a .docx"
+explicacion:
+  sencillo: "Los documentos hechos con versiones viejas de Word (los que terminan en .doc) se abren en «modo de compatibilidad»: se pueden usar, pero algunas funciones nuevas quedan apagadas. Se pueden pasar al formato nuevo."
+  tecnico: "Archivo > Información > Convertir (actualiza el formato y quita las opciones de compatibilidad); o Guardar como > Documento de Word (*.docx)."
+frases: ["me dice modo de compatibilidad", "pasar un archivo doc a docx", "documento viejo de word no me deja usar cosas nuevas", "convertir un word viejo al formato nuevo"]
+pasos:
+  - texto: "Si el documento lo van a seguir usando personas con un Word muy viejo, mejor dejalo como está: el modo de compatibilidad existe para eso."
+  - texto: "Para pasarlo al formato nuevo: con el documento abierto, tocá «Archivo» > «Información» > «Convertir» y aceptá. Desaparece el aviso de compatibilidad."
+    abrir: "https://support.microsoft.com/word/converting-documents-to-a-newer-format"
+  - texto: "Otra forma, que te deja el original intacto: «Archivo» > «Guardar como» y en el tipo de archivo elegí «Documento de Word». Revisá que el documento nuevo se vea bien."
+fuentes:
+  - https://support.microsoft.com/word/converting-documents-to-a-newer-format
+madurez: T0
+---
+id: OFC-018
+area: programas
+titulo:
+  sencillo: "Word, Excel o PowerPoint andan mal y quiero repararlos"
+  tecnico: "Reparar Microsoft 365 / Office desde Aplicaciones instaladas"
+explicacion:
+  sencillo: "Si los programas de Office se cierran solos, dan errores raros o no arrancan bien, Windows trae una opción para reparar los archivos del programa."
+  tecnico: "Configuración > Aplicaciones > Aplicaciones instaladas > Microsoft 365/Office > Modificar > Reparación rápida o Reparación en línea (Hacer clic para ejecutar)."
+frases: ["reparar el office", "el excel tira errores raros", "word anda mal desde hace días", "arreglar los programas de office"]
+pasos:
+  - texto: "Guardá y cerrá todos los documentos de Office. Si tenés documentos importantes, conviene tener una copia antes de empezar."
+  - texto: "Abrí Aplicaciones instaladas, buscá «Microsoft 365» u «Office», tocá los tres puntitos > «Modificar» y aceptá el permiso de Windows."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "Elegí «Reparación rápida» (más corta) o «Reparación en línea» (la más completa, necesita Internet y tarda más) y seguí las instrucciones. Si con la rápida no se arregla, hacé la en línea. Puede que haya que reiniciar la compu."
+    abrir: "https://support.microsoft.com/office/lifecycle/repair-an-office-application"
+fuentes:
+  - https://support.microsoft.com/office/lifecycle/repair-an-office-application
+madurez: T0
+---
+id: OFC-019
+area: programas
+titulo:
+  sencillo: "Office me pide iniciar sesión y no sé con qué cuenta"
+  tecnico: "Iniciar sesión en Office y ver la cuenta asociada a la licencia"
+explicacion:
+  sencillo: "Office queda asociado a una cuenta (un correo): tu cuenta personal de Microsoft o la del trabajo o la escuela. Si te pide iniciar sesión, entrá con esa cuenta. PC Doctor nunca te va a pedir la contraseña: la escribís vos en la ventana de Microsoft."
+  tecnico: "Archivo > Cuenta > Iniciar sesión; Información de producto muestra la cuenta a la que está asignada la licencia; si se inició con otra cuenta, cerrar sesión y entrar con la correcta."
+frases: ["office me pide que inicie sesión", "con qué mail entro al word", "word me pide una cuenta", "no sé con qué correo activé el office"]
+pasos:
+  - texto: "Abrí Word o Excel, tocá «Archivo» > «Cuenta». En «Información de producto» figura a qué cuenta está asignado Office."
+    abrir: "https://support.microsoft.com/accounts-billing/subscriptions/i-forgot-the-account-i-use-with-microsoft-365"
+  - texto: "Si en esa pantalla dice «Iniciar sesión», tocalo y escribí el correo de esa cuenta y tu contraseña en la ventana de Microsoft."
+    abrir: "https://support.microsoft.com/accounts-billing/subscriptions/sign-in-to-microsoft-365"
+  - texto: "Si entraste con una cuenta equivocada, cerrá la sesión en esa misma pantalla y volvé a entrar con la correcta."
+  - texto: "Si Office dice «Producto sin licencia», escribile a PC Doctor «office dice producto sin licencia»."
+fuentes:
+  - https://support.microsoft.com/accounts-billing/subscriptions/sign-in-to-microsoft-365
+  - https://support.microsoft.com/accounts-billing/subscriptions/i-forgot-the-account-i-use-with-microsoft-365
+madurez: T0
+---
+id: OFC-020
+area: programas
+titulo:
+  sencillo: "En Word aparecen tachones y textos de colores al costado"
+  tecnico: "Control de cambios: aceptar cambios y desactivar el seguimiento"
+explicacion:
+  sencillo: "Cuando alguien corrige un documento con «Control de cambios», lo que borra aparece tachado y lo que agrega en color. Para que quede limpio hay que aceptar (o rechazar) esos cambios; esconderlos no alcanza."
+  tecnico: "Revisar > Seguimiento > Control de cambios para dejar de marcar; Aceptar > Aceptar todos los cambios; la vista Sin marcas solo oculta temporalmente."
+frases: ["word me tacha lo que borro", "aparecen letras de colores en el documento", "sacar las correcciones de word", "cómo saco las marcas de revisión"]
+pasos:
+  - texto: "Para que no marque más lo que escribís: en la pestaña «Revisar», tocá «Control de cambios» para que deje de estar resaltado. Lo que ya estaba marcado sigue ahí."
+    abrir: "https://support.microsoft.com/word/training/track-changes-in-word"
+  - texto: "Para dejar el texto limpio con todas las correcciones: en «Revisar», abrí la flechita de «Aceptar» y elegí «Aceptar todos los cambios»."
+    abrir: "https://support.microsoft.com/word/accept-or-reject-tracked-changes-in-word"
+  - texto: "Si preferís revisar uno por uno, usá «Aceptar» o «Rechazar» en cada cambio: Word pasa solo al siguiente. Si te mandaron el documento solo para revisar, puede que no te deje apagar el control de cambios: guardá una copia o pedile a quien te lo mandó que lo comparta de nuevo."
+fuentes:
+  - https://support.microsoft.com/word/training/track-changes-in-word
+  - https://support.microsoft.com/word/accept-or-reject-tracked-changes-in-word
+madurez: T0
+---
+id: OFC-021
+area: programas
+titulo:
+  sencillo: "Cuando escribo en Word se van borrando las letras de adelante"
+  tecnico: "Modo Sobrescribir activado (tecla Insert) en Word"
+explicacion:
+  sencillo: "Si al escribir en el medio de una frase se «come» las letras que siguen, Word está en modo «sobrescribir». Seguramente se apretó sin querer la tecla Insert (Ins)."
+  tecnico: "Archivo > Opciones > Avanzadas > Opciones de edición: Usar la tecla Insert para controlar el modo Sobrescribir / Usar el modo Sobrescribir."
+frases: ["word me borra las letras cuando escribo", "escribo y se come lo que sigue", "se reemplaza el texto al escribir", "apreté insert y ahora escribe encima"]
+pasos:
+  - texto: "Apretá una vez la tecla Insert (en algunos teclados dice «Ins») y probá escribir de nuevo."
+    abrir: "https://support.microsoft.com/office/type-over-text-in-word-for-windows-62c15c48-0936-4902-affe-4cadd71b7038"
+  - texto: "Si sigue igual, entrá a «Archivo» > «Opciones» > «Avanzadas» y en las opciones de edición desmarcá las dos casillas del modo Sobrescribir (la de usar la tecla Insert y la de usar el modo Sobrescribir). Tocá «Aceptar»."
+fuentes:
+  - https://support.microsoft.com/office/type-over-text-in-word-for-windows-62c15c48-0936-4902-affe-4cadd71b7038
+madurez: T0
+---
+id: OFC-022
+area: programas
+titulo:
+  sencillo: "En Word aparecen puntitos y símbolos ¶ entre las palabras"
+  tecnico: "Mostrar u ocultar marcas de formato en Word"
+explicacion:
+  sencillo: "Esos puntitos (espacios), flechitas (tabulaciones) y el símbolo ¶ (fin de párrafo) son caracteres ocultos que Word te deja ver para ayudar a acomodar el texto. No es un error y se pueden esconder con un botón."
+  tecnico: "Botón Mostrar u ocultar (¶) en Inicio; Archivo > Opciones > Mostrar > «Mostrar siempre estas marcas de formato en la pantalla»."
+frases: ["me aparecen puntitos entre las palabras en word", "sale un símbolo raro al final de cada renglón", "cómo saco los signos de párrafo", "aparecen flechitas en el documento"]
+pasos:
+  - texto: "En la pestaña «Inicio», tocá el botón con el símbolo ¶ (mostrar u ocultar). Las marcas desaparecen; tocándolo de nuevo vuelven."
+    abrir: "https://support.microsoft.com/word/show-or-hide-tab-marks-in-word"
+  - texto: "Si alguna marca sigue apareciendo igual, entrá a «Archivo» > «Opciones» > «Mostrar» y, en la parte de marcas de formato que se muestran siempre, desmarcá las que estén tildadas."
+fuentes:
+  - https://support.microsoft.com/word/show-or-hide-tab-marks-in-word
+madurez: T0
+---
+id: OFC-023
+area: programas
+titulo:
+  sencillo: "OneNote no sincroniza mis notas"
+  tecnico: "Errores de sincronización en OneNote"
+explicacion:
+  sencillo: "OneNote guarda las notas en Internet (OneDrive) para verlas en otros aparatos. Si no sincroniza, puede ser la conexión, la cuenta o que el espacio de OneDrive esté lleno."
+  tecnico: "Sincronización manual (Mayús + F9, o Archivo > Información > Ver estado de sincronización), espacio de almacenamiento lleno, cliente desactualizado (0xE40105F9)."
+frases: ["onenote no sincroniza", "las notas no aparecen en el celular", "onenote dice error de sincronización", "no se actualiza el bloc de notas"]
+pasos:
+  - texto: "Importante: no cierres la sesión ni desinstales OneNote para intentar arreglarlo. Microsoft avisa que eso puede hacer perder notas que todavía no se sincronizaron."
+  - texto: "Revisá que haya Internet. Después hacé clic derecho en el nombre del bloc de notas > «Sincronizar» > sincronizar este bloc (o apretá Mayús + F9)."
+    abrir: "https://support.microsoft.com/onenote/onenote-help-and-learning/fix-issues-when-you-can-t-sync-onenote"
+  - texto: "Para ver qué falla, entrá a «Archivo» > «Información» > «Ver estado de sincronización» y tocá para sincronizar todo."
+  - texto: "Si el aviso habla de falta de espacio, fijate que OneDrive no esté lleno: si lo está, escribile a PC Doctor «onedrive dice que está lleno»."
+  - texto: "Actualizá Office: una versión vieja de OneNote puede dejar de sincronizar."
+fuentes:
+  - https://support.microsoft.com/onenote/onenote-help-and-learning/fix-issues-when-you-can-t-sync-onenote
+madurez: T0
+---
+id: OFC-024
+area: archivos
+titulo:
+  sencillo: "Borré una página o una sección de OneNote sin querer"
+  tecnico: "Recuperar notas eliminadas en OneNote (Papelera de reciclaje de blocs de notas)"
+explicacion:
+  sencillo: "OneNote guarda por un tiempo (hasta 60 días) las páginas y secciones que borrás, en una papelera propia. Desde ahí las podés volver a poner en su lugar."
+  tecnico: "Historial > Papelera de reciclaje de blocs de notas > Mover o copiar; copias de seguridad en Archivo > Información > Abrir copias de seguridad."
+frases: ["borré una nota de onenote", "desapareció una página de onenote", "recuperar una sección borrada de onenote", "dónde está la papelera de onenote"]
+pasos:
+  - texto: "Si recién lo borraste, apretá Ctrl + Z."
+  - texto: "Si no, en la pestaña «Historial» abrí la papelera de reciclaje de blocs de notas, hacé clic derecho en la página o sección y elegí «Mover o copiar» para devolverla a un bloc."
+    abrir: "https://support.microsoft.com/onenote/onenote-help-and-learning/recover-deleted-notes"
+  - texto: "Si no está ahí, probá en «Archivo» > «Información» > abrir copias de seguridad."
+fuentes:
+  - https://support.microsoft.com/onenote/onenote-help-and-learning/recover-deleted-notes
+madurez: T0
+---
+id: OFC-025
+area: programas
+titulo:
+  sencillo: "Quiero mostrar mi presentación de PowerPoint en pantalla completa"
+  tecnico: "Iniciar la presentación con diapositivas y usar la Vista Moderador"
+explicacion:
+  sencillo: "Para presentar, PowerPoint muestra las diapositivas ocupando toda la pantalla. Si conectás un proyector o un televisor, en tu compu podés ver tus notas mientras el público ve solo las diapositivas."
+  tecnico: "Presentación con diapositivas > Desde el principio (F5); Vista Moderador automática con dos pantallas o Alt + F5; Configuración de pantalla para intercambiar monitores."
+frases: ["poner el powerpoint en pantalla completa", "cómo empiezo la presentación", "ver mis notas mientras presento", "en el proyector se ven mis notas en vez de las diapositivas"]
+pasos:
+  - texto: "Apretá F5 (o en la pestaña «Presentación con diapositivas», «Desde el principio»). Para terminar, apretá Esc."
+    abrir: "https://support.microsoft.com/accessibility/powerpoint/use-keyboard-shortcuts-to-deliver-powerpoint-presentations"
+  - texto: "Si tenés un proyector o televisor conectado, PowerPoint arma solo la vista del moderador: en tu pantalla, tus notas; en la otra, las diapositivas. Con una sola pantalla la podés probar con Alt + F5."
+    abrir: "https://support.microsoft.com/office/start-the-presentation-and-see-your-notes-in-presenter-view-4de90e28-487e-435c-9401-eb49a3801257"
+  - texto: "Si quedó al revés (tus notas en el proyector), en la barra de arriba de la vista del moderador tocá «Configuración de pantalla» y elegí la opción para intercambiar la vista del moderador y la presentación."
+fuentes:
+  - https://support.microsoft.com/office/start-the-presentation-and-see-your-notes-in-presenter-view-4de90e28-487e-435c-9401-eb49a3801257
+  - https://support.microsoft.com/accessibility/powerpoint/use-keyboard-shortcuts-to-deliver-powerpoint-presentations
+madurez: T0

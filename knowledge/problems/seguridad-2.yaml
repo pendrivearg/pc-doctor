@@ -1,0 +1,506 @@
+# Seguridad, estafas y cuentas hackeadas: cuenta de Google, verificación en dos pasos, contraseñas filtradas, mensajes falsos, avisos de Windows y Defender. Guiadas con fuente oficial.
+id: SEG-001
+area: seguridad
+titulo:
+  sencillo: "Me hackearon el Gmail o la cuenta de Google"
+  tecnico: "Proteger una Cuenta de Google comprometida"
+explicacion:
+  sencillo: "Si alguien entró a tu cuenta de Google, se puede echar y volver a cerrarla con llave: revisar qué pasó, sacar los aparatos que no son tuyos y cambiar la clave. Google nunca te pide la clave ni códigos por correo, llamada o mensaje."
+  tecnico: "Cuenta de Google > Seguridad y acceso: eventos de seguridad recientes, dispositivos, cambio de contraseña, opciones de recuperación, filtros y reenvíos de Gmail, Verificación en 2 pasos."
+frases: ["me hackearon el gmail", "alguien entró a mi cuenta de google", "mi mail manda correos que yo no mandé", "me robaron la cuenta de google", "creo que alguien usa mi gmail"]
+pasos:
+  - texto: "Si no podés entrar, usá solo la recuperación oficial de Google, desde una compu o celular que uses siempre. Nunca le pases la clave ni códigos a nadie que te escriba o te llame."
+    abrir: "https://support.google.com/accounts/answer/7299973?hl=es-419"
+  - texto: "Si podés entrar, abrí tu Cuenta de Google > «Seguridad y acceso» > «Revisar los eventos de seguridad». Si ves algo que no hiciste, tocá «No, no fui yo» y seguí las instrucciones."
+  - texto: "En «Tus dispositivos» > «Administrar dispositivos», sacá los que no reconozcas. Cambiá la contraseña ya, y también en otros sitios donde usabas la misma."
+  - texto: "Revisá que el teléfono y el correo de recuperación sean tuyos, y en Gmail borrá filtros y reenvíos que no hayas creado vos. Google lo explica paso por paso."
+    abrir: "https://support.google.com/accounts/answer/6294825?hl=es-419"
+  - texto: "Para que no vuelva a pasar, activá la verificación en 2 pasos: escribile a PC Doctor «quiero activar la verificación en dos pasos de Google»."
+fuentes:
+  - https://support.google.com/accounts/answer/6294825?hl=es-419
+  - https://support.google.com/accounts/answer/7299973?hl=es-419
+madurez: T0
+---
+id: SEG-002
+area: seguridad
+titulo:
+  sencillo: "Quiero revisar si mi cuenta de Google está segura"
+  tecnico: "Verificación de seguridad de la Cuenta de Google"
+explicacion:
+  sencillo: "Google tiene un chequeo que en un par de minutos te dice qué conviene mejorar en tu cuenta: el teléfono de recuperación, los aparatos conectados, las aplicaciones con permiso y más."
+  tecnico: "Verificación de seguridad (Acciones recomendadas): opciones de recuperación, llaves de acceso, Verificación en 2 pasos, apps vinculadas, bloqueo de pantalla."
+frases: ["revisar la seguridad de mi cuenta de google", "cómo sé si mi gmail está seguro", "hacer el chequeo de seguridad de google", "google me dice que tengo acciones recomendadas"]
+pasos:
+  - texto: "Entrá a tu Cuenta de Google y abrí la Verificación de seguridad. Si aparece «Acciones recomendadas» con un signo de exclamación de color, hacé lo que te sugiere. Si ves un escudo verde, no hay nada urgente."
+    abrir: "https://support.google.com/accounts/answer/46526?hl=es-419"
+  - texto: "Fijate que el teléfono y el correo de recuperación estén al día: sirven para avisarte de algo raro y para volver a entrar si te bloquean."
+  - texto: "Revisá las «apps vinculadas» y quitá las que ya no uses o no reconozcas."
+  - texto: "Poné bloqueo de pantalla (PIN o huella) en tu celular y tu compu, y usá una contraseña distinta para cada cuenta."
+fuentes:
+  - https://support.google.com/accounts/answer/46526?hl=es-419
+madurez: T0
+---
+id: SEG-003
+area: seguridad
+titulo:
+  sencillo: "Quiero activar la verificación en dos pasos de Google"
+  tecnico: "Activar la Verificación en 2 pasos (Cuenta de Google)"
+explicacion:
+  sencillo: "Con la verificación en dos pasos, aunque alguien consiga tu clave, no puede entrar: además te pide una confirmación en tu celular. Es la mejor defensa contra los robos de cuenta."
+  tecnico: "Seguridad y acceso > Cómo acceder a Google > Activar la Verificación en 2 pasos; segundos pasos: mensajes de Google, apps de autenticación, SMS, llaves de seguridad, códigos de respaldo."
+frases: ["activar la verificación en dos pasos de gmail", "que me pida confirmar en el celular cuando entro al mail", "poner doble seguridad en mi cuenta de google", "cómo activo la autenticación en dos pasos"]
+pasos:
+  - texto: "Entrá a tu Cuenta de Google (myaccount.google.com) > «Seguridad y acceso». En «Cómo acceder a Google», elegí «Activar la Verificación en 2 pasos» y seguí los pasos de la pantalla."
+    abrir: "https://support.google.com/accounts/answer/185839?hl=es-419"
+  - texto: "Como segundo paso, Google recomienda el aviso en tu celular (tocás «Sí» o «No»). Los códigos por SMS también sirven, pero son menos seguros."
+  - texto: "Solo en tu compu o celular propios podés marcar que no te lo vuelva a pedir. En una compu compartida, nunca."
+  - texto: "Guardá los códigos de respaldo por si perdés el celular: escribile a PC Doctor «códigos de respaldo de Google»."
+fuentes:
+  - https://support.google.com/accounts/answer/185839?hl=es-419
+madurez: T0
+---
+id: SEG-004
+area: seguridad
+titulo:
+  sencillo: "Quiero tener códigos de respaldo por si pierdo el celular"
+  tecnico: "Códigos de respaldo de la Verificación en 2 pasos de Google"
+explicacion:
+  sencillo: "Si tenés la verificación en dos pasos y perdés el celular, los códigos de respaldo te dejan entrar igual. Son 10 códigos de 8 números; cada uno sirve una sola vez. Se guardan en papel, como un documento importante."
+  tecnico: "Seguridad y acceso > Verificación en 2 pasos > Códigos de respaldo > Obtener códigos de respaldo (10 códigos de un solo uso; Actualizar invalida el juego anterior)."
+frases: ["códigos de respaldo de google", "qué hago si pierdo el celular con la verificación en dos pasos", "imprimir los códigos de seguridad de gmail", "perdí los códigos de respaldo"]
+pasos:
+  - texto: "Primero tenés que tener activada la verificación en 2 pasos. Después, en tu Cuenta de Google > «Seguridad y acceso» > «Verificación en 2 pasos», buscá «Códigos de respaldo» y tocá «Obtener códigos de respaldo»."
+    abrir: "https://support.google.com/accounts/answer/1187538?hl=es-419"
+  - texto: "Imprimilos o descargalos y guardalos en un lugar seguro, por ejemplo junto al pasaporte. No se los pases a nadie: Google solo te pide uno cuando vos iniciás sesión."
+  - texto: "Para usarlos: al entrar, tocá «Probar otro método» y escribí un código que no hayas usado."
+  - texto: "Si los perdiste, se te acabaron o creés que alguien los vio, tocá «Actualizar»: se crean nuevos y los viejos dejan de servir."
+fuentes:
+  - https://support.google.com/accounts/answer/1187538?hl=es-419
+madurez: T0
+---
+id: SEG-005
+area: seguridad
+titulo:
+  sencillo: "Quiero ver en qué aparatos está abierta mi cuenta de Google"
+  tecnico: "Administrar dispositivos con sesión iniciada en la Cuenta de Google"
+explicacion:
+  sencillo: "Google muestra la lista de celulares y computadoras donde está abierta tu cuenta. Si aparece uno que no es tuyo, o uno que ya no usás, podés cerrarle la sesión desde ahí."
+  tecnico: "Seguridad y acceso > Tus dispositivos > Administrar todos los dispositivos > (dispositivo) > Salir."
+frases: ["ver dónde tengo abierta la cuenta de google", "cerrar mi gmail en otra compu", "dejé el mail abierto en una computadora ajena", "cerrar sesión de google en todos lados"]
+pasos:
+  - texto: "Entrá a tu Cuenta de Google > «Seguridad y acceso». En el panel «Tus dispositivos», elegí «Administrar todos los dispositivos»."
+    abrir: "https://support.google.com/accounts/answer/3067630?hl=es-419"
+  - texto: "Tocá el aparato que quieras sacar y después «Salir». Si hay varias sesiones con el mismo nombre, cerralas todas."
+  - texto: "Si aparece un aparato que no reconocés, cambiá la contraseña y revisá tu cuenta: escribile a PC Doctor «me hackearon el gmail»."
+    abrir: "https://support.google.com/accounts/answer/6294825?hl=es-419"
+fuentes:
+  - https://support.google.com/accounts/answer/3067630?hl=es-419
+  - https://support.google.com/accounts/answer/6294825?hl=es-419
+madurez: T0
+---
+id: SEG-006
+area: seguridad
+titulo:
+  sencillo: "Google me avisó que alguien entró a mi cuenta desde otro aparato"
+  tecnico: "Responder a una alerta de seguridad de Google"
+explicacion:
+  sencillo: "Google manda un aviso cuando alguien entra desde un aparato nuevo o hace algo raro. Si fuiste vos, no pasa nada. Si no, hay que proteger la cuenta enseguida, pero entrando vos directamente a Google, sin tocar enlaces del correo."
+  tecnico: "Alertas por inicio de sesión nuevo o actividad sospechosa: No, proteger la cuenta; panel Se encontraron problemas de seguridad > Proteger la cuenta."
+frases: ["me llegó un mail de google de un inicio de sesión nuevo", "google dice que entraron a mi cuenta desde otro celular", "alerta de seguridad de google", "aviso de actividad sospechosa en mi cuenta"]
+pasos:
+  - texto: "Mirá en el aviso qué aparato, a qué hora y desde dónde fue. Si fuiste vos, elegí «Sí» y listo."
+  - texto: "Si no fuiste vos, elegí «No, proteger la cuenta» y seguí los pasos (puede pedirte cambiar la contraseña)."
+    abrir: "https://support.google.com/accounts/answer/2590353?hl=es-419"
+  - texto: "Si dudás de que el aviso sea real, no toques sus enlaces: escribí vos myaccount.google.com en el navegador y, si aparece «Se encontraron problemas de seguridad», tocá «Proteger la cuenta»."
+    abrir: "https://support.google.com/mail/answer/8253?hl=es-419"
+fuentes:
+  - https://support.google.com/accounts/answer/2590353?hl=es-419
+  - https://support.google.com/mail/answer/8253?hl=es-419
+madurez: T0
+---
+id: SEG-007
+area: seguridad
+titulo:
+  sencillo: "Google me ofrece entrar con huella o cara en vez de contraseña"
+  tecnico: "Llaves de acceso (passkeys) en la Cuenta de Google"
+explicacion:
+  sencillo: "Una llave de acceso te deja entrar a Google con lo mismo que usás para desbloquear el celular o la compu: huella, cara o PIN. No se puede copiar ni contar a nadie, así que protege mucho mejor contra los engaños. Tu huella no sale del aparato."
+  tecnico: "Llaves de acceso FIDO: myaccount.google.com/signinoptions/passkeys > Crear una llave de acceso; requiere bloqueo de pantalla; solo en dispositivos personales."
+frases: ["qué es una llave de acceso de google", "entrar al gmail con la huella", "google me pide crear una llave de acceso", "entrar sin contraseña a mi cuenta de google"]
+pasos:
+  - texto: "Asegurate de que tu celular o compu tenga bloqueo de pantalla (PIN, huella o cara). Creá llaves solo en aparatos tuyos: quien pueda desbloquearlo podría entrar a tu cuenta."
+  - texto: "Entrá a myaccount.google.com/signinoptions/passkeys, tocá «Crear una llave de acceso», confirmá y desbloqueá el aparato cuando te lo pida."
+    abrir: "https://support.google.com/accounts/answer/13548313?hl=es-419"
+  - texto: "Puede tardar hasta 7 días en estar disponible. Mientras tanto, seguís entrando como siempre."
+fuentes:
+  - https://support.google.com/accounts/answer/13548313?hl=es-419
+madurez: T0
+---
+id: SEG-008
+area: seguridad
+titulo:
+  sencillo: "Quiero que la compu me guarde las contraseñas de forma segura"
+  tecnico: "Administrador de contraseñas del navegador (Google, Microsoft Edge)"
+explicacion:
+  sencillo: "Chrome y Edge traen un administrador de contraseñas: guarda las claves por vos, las completa solo en el sitio correcto y te deja usar una clave distinta y difícil para cada página sin tener que recordarlas."
+  tecnico: "Administrador de contraseñas de Google (Chrome, passwords.google.com) y administrador integrado de Microsoft Edge: guardado cifrado, autocompletado por sitio, sugerencia de contraseñas seguras."
+frases: ["dónde guardo todas mis contraseñas", "me olvido siempre las claves de las páginas", "que el navegador recuerde mis contraseñas", "programa para guardar contraseñas"]
+pasos:
+  - texto: "En Chrome, cuando entrás a un sitio con una clave nueva, te pregunta si querés guardarla: decí que sí. Al registrarte en un sitio nuevo, también te puede sugerir una contraseña segura."
+  - texto: "Para verlas o cambiarlas: en Chrome, tocá «Más» (los tres puntos) > «Contraseñas y autocompletar» > «Administrador de contraseñas de Google». También podés entrar desde passwords.google.com."
+    abrir: "https://support.google.com/chrome/answer/95606?hl=es-419"
+  - texto: "Si usás Edge, también tiene su propio administrador. Microsoft lo recomienda porque solo completa la clave en el sitio verdadero, lo que ayuda contra las páginas falsas."
+    abrir: "https://learn.microsoft.com/deployedge/microsoft-edge-security-password-manager-security"
+  - texto: "Lo que protege todo es la clave de tu computadora: no la compartas y mantené el antivirus activo."
+fuentes:
+  - https://support.google.com/chrome/answer/95606?hl=es-419
+  - https://learn.microsoft.com/deployedge/microsoft-edge-security-password-manager-security
+madurez: T0
+---
+id: SEG-009
+area: seguridad
+titulo:
+  sencillo: "Chrome me avisa que una contraseña mía apareció en una filtración"
+  tecnico: "Contraseñas comprometidas: Revisión de contraseñas de Google"
+explicacion:
+  sencillo: "Si una página donde tenías cuenta sufrió un robo de datos, tu clave pudo quedar publicada. Chrome y Google te avisan para que la cambies antes de que alguien la use."
+  tecnico: "Alerta de contraseña y Revisión de contraseñas (expuestas, reutilizadas, débiles) en el Administrador de contraseñas de Google."
+frases: ["chrome dice que mi contraseña fue filtrada", "me salió un aviso de contraseña comprometida", "google dice que mi clave apareció en una filtración de datos", "cambiar contraseñas expuestas"]
+pasos:
+  - texto: "No toques enlaces de mensajes: abrí vos la revisión. En Chrome, «Más» (los tres puntos) > «Contraseñas y autocompletar» > «Administrador de contraseñas de Google» > «Revisión» (o entrá a passwords.google.com)."
+    abrir: "https://support.google.com/accounts/answer/9457609?hl=es-419"
+  - texto: "Para cada contraseña marcada como expuesta, entrá a ese sitio y cambiala. Usá una clave distinta para cada cuenta."
+  - texto: "Si la clave filtrada era la de tu cuenta de Google o la usabas en varios lados, hacé también la Verificación de seguridad: escribile a PC Doctor «revisar la seguridad de mi cuenta de google»."
+    abrir: "https://support.google.com/chrome/answer/95606?hl=es-419"
+fuentes:
+  - https://support.google.com/accounts/answer/9457609?hl=es-419
+  - https://support.google.com/chrome/answer/95606?hl=es-419
+madurez: T0
+---
+id: SEG-010
+area: seguridad
+titulo:
+  sencillo: "Quiero que Edge me avise si alguna contraseña mía se filtró"
+  tecnico: "Monitor de contraseñas (Password Monitor) de Microsoft Edge"
+explicacion:
+  sencillo: "Edge puede comparar las claves que tenés guardadas con las que aparecieron en robos de datos de otras páginas, y avisarte cuál tenés que cambiar."
+  tecnico: "Password Monitor compara de forma segura las contraseñas guardadas con credenciales filtradas conocidas; se activa en Configuración > Contraseñas."
+frases: ["edge me dice que una contraseña es insegura", "aviso de contraseña filtrada en edge", "cómo sé si mis claves se filtraron en edge"]
+pasos:
+  - texto: "En Edge, abrí la configuración (los tres puntos de arriba a la derecha) y entrá a la parte de contraseñas. Activá la opción que avisa de contraseñas filtradas (Password Monitor)."
+    abrir: "https://learn.microsoft.com/deployedge/microsoft-edge-security-password-monitor"
+  - texto: "Si Edge te avisa de una clave filtrada, entrá vos a ese sitio y cambiala por una nueva que no uses en ningún otro lado."
+  - texto: "Si es la computadora del trabajo, puede que la empresa maneje esta opción y no la puedas cambiar."
+fuentes:
+  - https://learn.microsoft.com/deployedge/microsoft-edge-security-password-monitor
+  - https://support.google.com/accounts/answer/9457609?hl=es-419
+madurez: T0
+---
+id: SEG-011
+area: seguridad
+titulo:
+  sencillo: "Quiero revisar si mi Chrome está seguro"
+  tecnico: "Verificación de seguridad de Chrome (Safety Check)"
+explicacion:
+  sencillo: "Chrome tiene un chequeo que en un minuto revisa si tus contraseñas se filtraron, si la protección está activa, si falta actualizar y si hay extensiones o notificaciones sospechosas."
+  tecnico: "Configuración > Privacidad y seguridad > Verificación de seguridad: contraseñas, Navegación segura, actualizaciones, notificaciones, permisos y extensiones."
+frases: ["revisar la seguridad de chrome", "chequear si el navegador tiene algo raro", "chrome tiene extensiones sospechosas", "cómo sé si chrome está protegido"]
+pasos:
+  - texto: "En Chrome, tocá «Más» (los tres puntos de arriba a la derecha) > «Configuración». A la izquierda, «Privacidad y seguridad»."
+  - texto: "En «Verificación de seguridad», elegí «Ir a la Verificación de seguridad»."
+    abrir: "https://support.google.com/chrome/answer/10468685?hl=es-419&co=GENIE.Platform%3DDesktop"
+  - texto: "Si encuentra algo, tocá ese punto y seguí las instrucciones de la pantalla (por ejemplo, cambiar una clave o quitar una extensión)."
+fuentes:
+  - "https://support.google.com/chrome/answer/10468685?hl=es-419&co=GENIE.Platform%3DDesktop"
+madurez: T0
+---
+id: SEG-012
+area: seguridad
+titulo:
+  sencillo: "Chrome me muestra una pantalla roja que dice «Sitio peligroso»"
+  tecnico: "Advertencias de Navegación segura de Chrome"
+explicacion:
+  sencillo: "Esa pantalla roja aparece cuando Chrome sabe que la página roba datos, tiene virus o engaña. También avisa si la dirección se parece a una que visitás pero es falsa. Lo seguro es no entrar."
+  tecnico: "Navegación segura: sitios de phishing, software malicioso o no deseado, ingeniería social; avisos de URL parecidas («¿Es el sitio correcto?»)."
+frases: ["chrome me sale todo en rojo sitio peligroso", "me dice que la página es engañosa", "chrome pregunta si quise decir otra página", "me aparece que el sitio es falso"]
+pasos:
+  - texto: "No entres a la página: volvé atrás o cerrá la pestaña. Chrome no recomienda seguir."
+    abrir: "https://support.google.com/chrome/answer/99020?hl=es-419"
+  - texto: "Si dice «¿Es el sitio correcto?» o que el sitio es falso, fijate bien la dirección: puede ser una copia de tu banco o de una tienda. Escribí vos la dirección verdadera."
+  - texto: "No desactives la protección: la opción «Sin protección» también apaga los avisos de descargas peligrosas."
+fuentes:
+  - https://support.google.com/chrome/answer/99020?hl=es-419
+madurez: T0
+---
+id: SEG-013
+area: seguridad
+titulo:
+  sencillo: "Chrome no me deja bajar un archivo porque dice que es peligroso"
+  tecnico: "Descargas bloqueadas por Chrome (peligrosas, sospechosas, no verificadas)"
+explicacion:
+  sencillo: "Chrome frena las descargas que pueden traer virus. Si lo bloqueó, no tenés que hacer nada: tu compu queda protegida. Ojo con las páginas que te dicen que tenés virus para que bajes algo: es un engaño."
+  tecnico: "Bloqueo de descargas por Navegación segura: archivo peligroso, sospechoso, no verificado o inseguro; análisis opcional con Protección mejorada."
+frases: ["chrome bloqueó una descarga", "dice que el archivo puede ser peligroso", "no me deja descargar un programa", "este archivo puede ser peligroso qué hago"]
+pasos:
+  - texto: "Si ves «Este archivo puede ser peligroso», lo mejor es cancelar la descarga. No hace falta hacer nada más."
+    abrir: "https://support.google.com/chrome/answer/6261569?hl=es-419"
+  - texto: "Desconfiá si alguien te pide que ignores el aviso, o si una página dice que tu compu tiene virus para que bajes algo."
+    abrir: "https://support.google.com/chrome/answer/99020?hl=es-419"
+  - texto: "Si necesitás ese programa, buscalo en la página oficial del fabricante o en Microsoft Store: escribile a PC Doctor «quiero instalar un programa sin riesgo de virus»."
+fuentes:
+  - https://support.google.com/chrome/answer/6261569?hl=es-419
+  - https://support.google.com/chrome/answer/99020?hl=es-419
+madurez: T0
+---
+id: SEG-014
+area: seguridad
+titulo:
+  sencillo: "Me llegó un SMS raro del banco, del correo o diciendo que me hackearon"
+  tecnico: "Mensajes de texto fraudulentos (smishing)"
+explicacion:
+  sencillo: "Los estafadores mandan mensajes que parecen del banco, del correo o de Google, con apuro y un enlace, para robarte datos o plata. Ninguna empresa seria te exige datos o pagos en el momento por mensaje."
+  tecnico: "Smishing: SMS con suplantación de identidad, urgencia y enlaces a sitios falsos; verificar por canales oficiales, no responder ni abrir enlaces."
+frases: ["me llegó un sms del banco con un link", "mensaje de que mi paquete está retenido en el correo", "me mandaron un mensaje que mi cuenta fue bloqueada", "sms diciendo que me hackearon la cuenta"]
+pasos:
+  - texto: "No toques el enlace, no contestes y no llames a números que vengan en el mensaje. Tomate tu tiempo: el apuro es parte del engaño."
+    abrir: "https://support.google.com/faqs/answer/10122683?hl=es-419"
+  - texto: "Si dice que es del banco, llamá vos al número que figura en tu tarjeta. Si habla de tu cuenta de Google o de otro servicio, entrá vos directamente desde la compu y revisá la actividad reciente."
+  - texto: "Google no te manda SMS ni te llama para verificar tu identidad. Nunca des contraseñas, números de tarjeta ni códigos."
+    abrir: "https://support.apple.com/es-lamr/102568"
+  - texto: "Marcá el mensaje como spam o no deseado en tu celular y borralo."
+fuentes:
+  - https://support.google.com/faqs/answer/10122683?hl=es-419
+  - https://support.apple.com/es-lamr/102568
+madurez: T0
+---
+id: SEG-015
+area: seguridad
+titulo:
+  sencillo: "Alguien me pide por mensaje un código que me llegó al celular"
+  tecnico: "Estafa del código de verificación (robo de cuenta por código de un solo uso)"
+explicacion:
+  sencillo: "Si te llegó un código por SMS y alguien te lo pide (aunque parezca un amigo, el banco o soporte técnico), es para robarte la cuenta. Esos códigos son solo para vos: ninguna empresa seria los pide."
+  tecnico: "Los códigos de verificación y de dos pasos autorizan el acceso a la cuenta; compartirlos permite que un tercero la tome. Google y Apple nunca los piden por mensaje o llamada."
+frases: ["me piden un código de 6 dígitos por whatsapp", "un amigo me pidió que le pase un código que me llegó por sms", "me llamaron pidiendo el código que me mandaron", "me llegó un código que no pedí"]
+pasos:
+  - texto: "No pases el código a nadie, ni siquiera a un conocido: su cuenta puede estar robada y el mensaje lo manda el estafador."
+    abrir: "https://support.apple.com/es-lamr/102568"
+  - texto: "Google nunca te pide la clave ni códigos por correo, llamada o mensaje. Solo los escribís vos en la página oficial cuando vos estás entrando."
+    abrir: "https://support.google.com/accounts/answer/7299973?hl=es-419"
+  - texto: "Si ya lo pasaste, cambiá la contraseña de esa cuenta enseguida y activá la verificación en dos pasos. Si era tu cuenta de Google, escribile a PC Doctor «me hackearon el gmail»."
+  - texto: "Avisale a tus contactos por otro medio que no respondan pedidos de plata o códigos hechos en tu nombre."
+fuentes:
+  - https://support.apple.com/es-lamr/102568
+  - https://support.google.com/accounts/answer/7299973?hl=es-419
+madurez: T0
+---
+id: SEG-016
+area: seguridad
+titulo:
+  sencillo: "Me llegó un correo amenazándome con publicar videos míos si no pago"
+  tecnico: "Correo de extorsión o sextorsión"
+explicacion:
+  sencillo: "Es una estafa conocida: buscan asustarte para que pagues rápido. Lo más importante es no pagar, no responder y no mandar nada."
+  tecnico: "Sextorsión: chantaje con supuesto material íntimo; se basa en urgencia y miedo. Reportar como phishing y reforzar la seguridad de la cuenta."
+frases: ["me llegó un mail diciendo que tienen videos míos", "me piden bitcoin o publican un video", "un correo me amenaza con mandar fotos a mis contactos", "dicen que hackearon mi cámara y me grabaron"]
+pasos:
+  - texto: "Mantené la calma y no pagues, no contestes ni mandes nada. Ninguna persona u organización seria te exige un pago en el momento."
+    abrir: "https://support.google.com/faqs/answer/10123518?hl=es-419"
+  - texto: "Si está en Gmail, abrí el correo, tocá «Más» al lado de «Responder» y elegí «Denunciar phishing». Después borralo."
+    abrir: "https://support.google.com/mail/answer/8253?hl=es-419"
+  - texto: "Si el correo menciona una contraseña tuya real, cambiala en todos los sitios donde la uses y activá la verificación en dos pasos."
+    abrir: "https://support.google.com/accounts/answer/6294825?hl=es-419"
+  - texto: "Si publicaron algo tuyo o la amenaza sigue, guardá los mensajes y hacé la denuncia."
+fuentes:
+  - https://support.google.com/faqs/answer/10123518?hl=es-419
+  - https://support.google.com/mail/answer/8253?hl=es-419
+  - https://support.google.com/accounts/answer/6294825?hl=es-419
+madurez: T0
+---
+id: SEG-017
+area: seguridad
+titulo:
+  sencillo: "Compré en una página de Internet y creo que era falsa"
+  tecnico: "Tiendas en línea fraudulentas y sitios que imitan comercios"
+explicacion:
+  sencillo: "Hay páginas que copian tiendas conocidas o publican ofertas demasiado buenas para cobrarte y no mandar nada. Antes de pagar conviene revisar bien la dirección; si ya pagaste, actuá rápido."
+  tecnico: "Sitios de phishing que imitan comercios (URL parecidas), ofertas irreales y presión para pagar; Navegación segura avisa de algunos sitios falsos."
+frases: ["compré algo por internet y nunca llegó", "creo que la tienda online era trucha", "una oferta en internet demasiado barata", "pagué en una página falsa"]
+pasos:
+  - texto: "Antes de comprar: desconfiá de ofertas demasiado buenas y de los apuros. Escribí vos la dirección de la tienda en lugar de tocar enlaces de mensajes o publicidades."
+    abrir: "https://support.google.com/mail/answer/8253?hl=es-419"
+  - texto: "Mirá bien la dirección: si Chrome pregunta «¿Es el sitio correcto?» o dice que el sitio es falso, no sigas."
+    abrir: "https://support.google.com/chrome/answer/99020?hl=es-419"
+  - texto: "Si ya pagaste con tarjeta, llamá enseguida al número que figura en tu tarjeta. No mandes más plata aunque te la pidan."
+    abrir: "https://support.google.com/faqs/answer/2952493?hl=es-419"
+  - texto: "Guardá comprobantes y capturas, y hacé la denuncia."
+    abrir: "https://support.google.com/faqs/answer/10123027?hl=es-419"
+fuentes:
+  - https://support.google.com/chrome/answer/99020?hl=es-419
+  - https://support.google.com/mail/answer/8253?hl=es-419
+  - https://support.google.com/faqs/answer/2952493?hl=es-419
+  - https://support.google.com/faqs/answer/10123027?hl=es-419
+madurez: T0
+---
+id: SEG-018
+area: seguridad
+titulo:
+  sencillo: "Al abrir un programa sale «Windows protegió su PC»"
+  tecnico: "Advertencia de Microsoft Defender SmartScreen para aplicaciones no reconocidas"
+explicacion:
+  sencillo: "Ese cartel azul aparece cuando Windows no conoce el programa que bajaste: puede ser nuevo, no tener firma del fabricante o ser peligroso. No quiere decir que sí o sí sea un virus, pero conviene frenar y fijarte de dónde salió."
+  tecnico: "SmartScreen evalúa la reputación del archivo y del editor; sin reputación o sin firma muestra la advertencia y hay que elegir explícitamente ejecutarlo (Run anyway)."
+frases: ["me sale windows protegió su pc", "cartel azul al abrir un programa que bajé", "windows no me deja abrir un instalador", "smartscreen bloqueó una aplicación"]
+pasos:
+  - texto: "Pensá de dónde lo bajaste. Si vino de un enlace que te mandaron, de una publicidad o de una página que no es la del fabricante, no lo abras y borralo."
+    abrir: "https://learn.microsoft.com/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/"
+  - texto: "Si lo bajaste de la página oficial y confiás en el fabricante, el cartel tiene una opción para ejecutarlo igual (aparece al tocar el enlace de más información). Hacelo solo en ese caso."
+    abrir: "https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation"
+  - texto: "Lo más seguro es instalar desde Microsoft Store: esas aplicaciones no muestran este aviso. Escribile a PC Doctor «quiero instalar un programa sin riesgo de virus»."
+fuentes:
+  - https://learn.microsoft.com/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/
+  - https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation
+madurez: T0
+---
+id: SEG-019
+area: seguridad
+titulo:
+  sencillo: "El antivirus de Windows dice que encontró una amenaza"
+  tecnico: "Microsoft Defender: detecciones e Historial de protección"
+explicacion:
+  sencillo: "Cuando Microsoft Defender encuentra algo peligroso, avisa y lo frena. En el historial de protección podés ver qué encontró y qué hizo con eso."
+  tecnico: "Aplicación Seguridad de Windows: sección de protección contra virus y amenazas > historial de protección (Protection history); examen rápido o completo desde las opciones de examen."
+frases: ["el antivirus de windows encontró una amenaza", "me salió un aviso de defender de amenaza encontrada", "dónde veo lo que bloqueó el antivirus", "windows defender detectó un virus"]
+pasos:
+  - texto: "Abrí Seguridad de Windows, entrá en la parte de virus y amenazas (el ícono del escudo) y elegí el historial de protección. Ahí aparece lo que encontró."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Si no sabés qué es lo que encontró, no lo permitas ni lo restaures."
+    abrir: "https://learn.microsoft.com/defender-endpoint/microsoft-defender-security-center-antivirus"
+  - texto: "Para revisar todo, en la misma parte de virus y amenazas abrí las opciones de examen y elegí el examen completo. Tarda un rato."
+  - texto: "Si el aviso vuelve a aparecer, probá el examen sin conexión: escribile a PC Doctor «examen sin conexión de Defender»."
+fuentes:
+  - https://learn.microsoft.com/defender-endpoint/microsoft-defender-security-center-antivirus
+madurez: T0
+---
+id: SEG-020
+area: seguridad
+titulo:
+  sencillo: "El antivirus bloqueó una «aplicación potencialmente no deseada»"
+  tecnico: "Aplicaciones potencialmente no deseadas (PUA)"
+explicacion:
+  sencillo: "No es un virus, pero es un programa que molesta: llena de publicidad, pone la compu lenta o instala otros programas sin avisar bien. Suelen venir escondidos en instaladores gratis."
+  tecnico: "PUA: adware, software de agrupación (bundling) o evasión; Defender lo pone en cuarentena con el prefijo «PUA:»; Edge puede bloquear su descarga con SmartScreen."
+frases: ["el antivirus dice aplicación potencialmente no deseada", "me salió un aviso que empieza con PUA", "se me instalaron programas que no pedí con otro programa", "qué es una aplicación no deseada"]
+pasos:
+  - texto: "Si el aviso empieza con «PUA:», Defender bloqueó ese programa y lo mandó a cuarentena. Podés verlo en el historial de protección de Seguridad de Windows."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Si se te instaló algo que no pediste junto con otro programa, desinstalalo desde la lista de aplicaciones instaladas."
+    abrir: "ms-settings:appsfeatures"
+  - texto: "En Edge podés bloquear estas descargas: tres puntos > Configuración > la sección de privacidad, búsqueda y servicios > en «Seguridad», activá el bloqueo de aplicaciones potencialmente no deseadas."
+    abrir: "https://learn.microsoft.com/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus"
+fuentes:
+  - https://learn.microsoft.com/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus
+madurez: T0
+---
+id: SEG-021
+area: seguridad
+titulo:
+  sencillo: "Windows bloqueó un programa con el «Control inteligente de aplicaciones»"
+  tecnico: "Control inteligente de aplicaciones (Smart App Control) en Windows 11"
+explicacion:
+  sencillo: "Es una protección de Windows 11 que solo deja abrir programas que Microsoft considera seguros o que vienen firmados por su fabricante. Bloquea virus, programas no deseados y programas desconocidos sin firma."
+  tecnico: "Smart App Control: modos de cumplimiento (On), evaluación y apagado; bloquea binarios sin reputación positiva ni firma de una CA del Trusted Root Program."
+frases: ["control inteligente de aplicaciones bloqueó un programa", "windows no me deja abrir un programa viejo", "qué es el control inteligente de aplicaciones", "smart app control"]
+pasos:
+  - texto: "Fijate cómo está: en Configuración, abrí Seguridad de Windows y entrá en la parte de control de aplicaciones y navegador. Si está activado, te está protegiendo; si está en evaluación, todavía está probando si te conviene; si está desactivado, no funciona."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "En modo de evaluación, si Windows ve que te molesta en tu trabajo diario, lo apaga solo. Cuando pasa a estar activo, te avisa con una notificación."
+    abrir: "https://learn.microsoft.com/windows/apps/develop/smart-app-control/overview"
+  - texto: "Si bloqueó algo que necesitás, buscá ese programa en Microsoft Store o en la página oficial del fabricante, en una versión firmada. No instales copias de otras páginas."
+fuentes:
+  - https://learn.microsoft.com/windows/apps/develop/smart-app-control/overview
+madurez: T0
+---
+id: SEG-022
+area: seguridad
+titulo:
+  sencillo: "Quiero proteger mis documentos y fotos de los virus que secuestran archivos"
+  tecnico: "Protección contra ransomware: Acceso controlado a carpetas"
+explicacion:
+  sencillo: "Windows puede cerrar con llave las carpetas de Documentos, Imágenes, Videos y Música para que solo los programas confiables puedan cambiarlas. Así, un virus que quiere secuestrar tus archivos no puede tocarlos."
+  tecnico: "Acceso controlado a carpetas (Microsoft Defender Antivirus): solo apps de confianza modifican carpetas protegidas; viene desactivado; requiere protección en tiempo real."
+frases: ["proteger mis fotos de un virus que pide rescate", "activar la protección contra ransomware", "que ningún programa raro me toque los documentos", "acceso controlado a carpetas"]
+pasos:
+  - texto: "Abrí Seguridad de Windows > la parte de virus y amenazas (el escudo). En la configuración, tocá «Administrar la configuración» y después la opción para administrar el acceso controlado a carpetas."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "En la pantalla de protección contra ransomware, activá el interruptor de acceso controlado a carpetas y aceptá con «Sí» la pregunta de Windows."
+    abrir: "https://learn.microsoft.com/defender-endpoint/controlled-folder-access-configure"
+  - texto: "Ya quedan protegidas Documentos, Imágenes, Videos, Música y Favoritos. Si guardás cosas importantes en otra carpeta, agregala en «Carpetas protegidas»."
+    abrir: "https://learn.microsoft.com/defender-endpoint/controlled-folders"
+  - texto: "Igual hacé copias de seguridad: escribile a PC Doctor «quiero hacer una copia de seguridad de mis cosas»."
+fuentes:
+  - https://learn.microsoft.com/defender-endpoint/controlled-folder-access-configure
+  - https://learn.microsoft.com/defender-endpoint/controlled-folders
+madurez: T0
+---
+id: SEG-023
+area: seguridad
+titulo:
+  sencillo: "Un programa no puede guardar en Documentos porque Windows lo bloquea"
+  tecnico: "Acceso controlado a carpetas bloqueó una aplicación de confianza"
+explicacion:
+  sencillo: "Si activaste la protección de carpetas, Windows frena a los programas que no conoce cuando quieren cambiar tus documentos. A veces frena uno bueno; si estás seguro de que es confiable, lo podés autorizar."
+  tecnico: "Notificación de bloqueo y entrada en el historial de protección; protección contra ransomware > permitir una aplicación (Allow an app through Controlled folder access) > aplicaciones bloqueadas recientemente."
+frases: ["no me deja guardar en mis documentos", "acceso controlado a carpetas bloqueó un programa", "un programa no puede guardar los archivos por la protección de windows", "windows bloquea los cambios en mi carpeta de imágenes"]
+pasos:
+  - texto: "Abrí Seguridad de Windows > virus y amenazas > protección contra ransomware. En la parte de acceso controlado a carpetas, tocá la opción para permitir una aplicación y aceptá con «Sí»."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Tocá agregar una aplicación permitida > aplicaciones bloqueadas recientemente, y elegí el programa. Hacelo solo si sabés qué programa es y de dónde salió."
+    abrir: "https://learn.microsoft.com/defender-endpoint/controlled-folder-access-configure"
+  - texto: "Cerrá y volvé a abrir el programa para que tome el permiso."
+    abrir: "https://learn.microsoft.com/defender-endpoint/controlled-folders"
+fuentes:
+  - https://learn.microsoft.com/defender-endpoint/controlled-folder-access-configure
+  - https://learn.microsoft.com/defender-endpoint/controlled-folders
+madurez: T0
+---
+id: SEG-024
+area: seguridad
+titulo:
+  sencillo: "El virus vuelve aunque el antivirus lo encuentra"
+  tecnico: "Examen de Microsoft Defender sin conexión (Offline)"
+explicacion:
+  sencillo: "Algunos virus se esconden mientras Windows está andando. El examen sin conexión reinicia la compu y la revisa antes de que Windows arranque, en unos 15 minutos. Después vuelve a Windows sola."
+  tecnico: "Microsoft Defender Offline: análisis desde un entorno de confianza fuera del kernel de Windows (rootkits, MBR); requiere WinRE habilitado; resultados en Historial de protección."
+frases: ["el virus vuelve a aparecer siempre", "el antivirus no puede borrar el virus", "examen sin conexión de defender", "revisar la compu antes de que arranque windows"]
+pasos:
+  - texto: "Guardá todo lo que tengas abierto y cerrá los programas: la compu se va a reiniciar."
+  - texto: "Abrí Seguridad de Windows > la parte de virus y amenazas > opciones de examen. Elegí el examen de Microsoft Defender sin conexión y tocá el botón para examinar ahora. Aceptá los avisos."
+    abrir: "ms-settings:windowsdefender"
+  - texto: "Si tu disco está cifrado con BitLocker, al reiniciar puede pedirte la clave de recuperación: tenela a mano."
+    abrir: "https://learn.microsoft.com/defender-endpoint/microsoft-defender-offline"
+  - texto: "Cuando vuelva Windows, mirá el resultado en el historial de protección de Seguridad de Windows."
+fuentes:
+  - https://learn.microsoft.com/defender-endpoint/microsoft-defender-offline
+madurez: T0
+---
+id: SEG-025
+area: seguridad
+titulo:
+  sencillo: "Me robaron o perdí el celular y quiero proteger mis cuentas"
+  tecnico: "Dispositivo Android perdido: Localizador, bloqueo remoto y cierre de sesión"
+explicacion:
+  sencillo: "Desde la computadora podés bloquear el celular perdido, hacerlo sonar o borrarlo, y sacarle el acceso a tu cuenta de Google para que nadie lea tus correos."
+  tecnico: "Localizador de Google (Marcar como perdido, Reproducir sonido, Restablecer configuración de fábrica); quitar el dispositivo en Administrar todos los dispositivos; IMEI para el operador."
+frases: ["me robaron el celular y tengo todo ahí", "perdí el teléfono con el mail abierto", "bloquear el celular robado desde la compu", "cómo encuentro mi celular perdido"]
+pasos:
+  - texto: "Desde la compu, entrá a la versión web de Localizador con tu cuenta de Google y elegí el celular. Podés verlo en el mapa, «Reproducir sonido» o «Marcar como perdido» para bloquearlo con un mensaje."
+    abrir: "https://support.google.com/accounts/answer/6160491?hl=es-419"
+  - texto: "Si no lo vas a recuperar, «Restablecer configuración de fábrica» borra todo. Ojo: después ya no aparece en Localizador."
+  - texto: "En tu Cuenta de Google > «Seguridad y acceso» > «Administrar todos los dispositivos», tocá el celular y «Salir». Cambiá la contraseña."
+    abrir: "https://support.google.com/accounts/answer/3067630?hl=es-419"
+  - texto: "Llamá a tu compañía de celular para bloquear la línea y el equipo (el IMEI figura en Localizador > «Configuración»), y hacé la denuncia."
+fuentes:
+  - https://support.google.com/accounts/answer/6160491?hl=es-419
+  - https://support.google.com/accounts/answer/3067630?hl=es-419
+madurez: T0

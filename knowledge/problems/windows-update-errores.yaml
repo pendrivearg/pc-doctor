@@ -1,0 +1,574 @@
+# Errores de Windows Update y de instalación de actualizaciones, uno por código o situación (0x80070002, 0x800f081f, 0xC1900101, «Deshaciendo cambios», trabada en %, «Esta PC no puede ejecutar Windows 11», etc.). Guiadas con fuente oficial de Microsoft.
+id: WUE-001
+area: windows
+titulo:
+  sencillo: "Windows Update da el error 0x80070002"
+  tecnico: "0x80070002 (ERROR_FILE_NOT_FOUND) al instalar actualizaciones"
+explicacion:
+  sencillo: "Ese código quiere decir que Windows no encontró un archivo que necesitaba para terminar la actualización. Casi siempre se arregla reiniciando, usando el solucionador de Windows Update y dejando lugar libre en el disco."
+  tecnico: "ERROR_FILE_NOT_FOUND. Microsoft indica reiniciar, ejecutar el solucionador de Windows Update y verificar el espacio libre (igual para 0x80070003 y 0x80070057). En actualizaciones de versión, 0x80070002 - 0x20009 indica discos que no son el destino conectados."
+frases: ["windows update me da error 0x80070002", "error 0x80070002 al actualizar", "me sale 0x80070002 y no se instala la actualización", "no se instala la actualización código 0x80070002"]
+pasos:
+  - texto: "Reiniciá la computadora (Inicio > Encendido > «Reiniciar») y después volvé a tocar «Buscar actualizaciones»."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Usá el solucionador de Windows Update. En Windows 11: Configuración > Sistema > Solucionar problemas > «Otros solucionadores de problemas» > Windows Update > «Ejecutar». En Windows 10: Configuración > Actualización y seguridad > Solucionar problemas > «Solucionadores de problemas adicionales» > Windows Update."
+    abrir: "https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c"
+  - texto: "Fijate que haya lugar en el disco de Windows: Microsoft pide al menos 20 GB libres en Windows de 64 bits (16 GB en 32 bits). Si falta, liberá espacio desde Almacenamiento."
+    abrir: "ms-settings:storagesense"
+  - texto: "Si el error apareció al pasar a una versión nueva de Windows (por ejemplo «0x80070002 - 0x20009»), desenchufá los discos y pendrives que no sean el disco donde está Windows y volvé a probar."
+    abrir: "https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a"
+fuentes:
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+  - https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a
+  - https://learn.microsoft.com/troubleshoot/windows-server/installing-updates-features-roles/fix-windows-update-errors
+madurez: T0
+---
+id: WUE-002
+area: windows
+titulo:
+  sencillo: "Windows Update da el error 0x800f081f"
+  tecnico: "0x800F081F (CBS_E_SOURCE_MISSING): almacén de componentes dañado"
+explicacion:
+  sencillo: "Windows guarda una «reserva» de sus propias piezas para poder instalar actualizaciones. Este error dice que a esa reserva le falta algo. Windows trae dos herramientas oficiales que la revisan y la reparan."
+  tecnico: "CBS_E_SOURCE_MISSING: no se encontró el origen del paquete o archivo (corrupción del almacén de componentes). DISM /RestoreHealth y sfc /scannow; si persiste, actualización en el lugar con la imagen de Windows."
+frases: ["error 0x800f081f windows update", "me tira 0x800f081f al instalar la actualización", "la actualización falla con 0x800f081f", "código 0x800f081f y no se actualiza windows"]
+pasos:
+  - texto: "Primero usá el solucionador de Windows Update. En Windows 11: Configuración > Sistema > Solucionar problemas > «Otros solucionadores de problemas» > Windows Update > «Ejecutar». En Windows 10: Configuración > Actualización y seguridad > Solucionar problemas > «Solucionadores de problemas adicionales» > Windows Update."
+    abrir: "https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c"
+  - texto: "Si sigue, abrí la terminal como administrador: escribí «cmd» en el buscador de Inicio, hacé clic derecho en «Símbolo del sistema» > «Ejecutar como administrador» y aceptá. Escribí DISM.exe /Online /Cleanup-image /Restorehealth y apretá Enter (tarda varios minutos y necesita Internet). Cuando termine, escribí sfc /scannow y Enter."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-server/installing-updates-features-roles/fix-windows-update-errors"
+  - texto: "Reiniciá la computadora y volvé a buscar actualizaciones."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si todavía falla, Microsoft sugiere reinstalar Windows encima con su herramienta oficial de descarga. Antes, hacé una copia de seguridad de tus archivos por las dudas."
+    abrir: "https://www.microsoft.com/software-download/windows11"
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-client/installing-updates-features-roles/common-windows-update-errors
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+  - https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a
+  - https://learn.microsoft.com/troubleshoot/windows-server/installing-updates-features-roles/fix-windows-update-errors
+  - https://www.microsoft.com/software-download/windows11
+madurez: T0
+---
+id: WUE-003
+area: windows
+titulo:
+  sencillo: "Windows Update da el error 0x80073712"
+  tecnico: "0x80073712 (ERROR_SXS_COMPONENT_STORE_CORRUPT)"
+explicacion:
+  sencillo: "Significa que un archivo que Windows Update necesita está dañado o falta. La reparación oficial se hace con la herramienta DISM, que baja de Microsoft las piezas sanas para reemplazar las rotas."
+  tecnico: "El almacén de componentes está en un estado incoherente. DISM.exe /Online /Cleanup-image /Restorehealth (usa Windows Update como origen de reparación) y luego sfc /scannow."
+frases: ["windows update error 0x80073712", "0x80073712 no me deja actualizar", "me aparece el código 0x80073712", "falla la actualización con 0x80073712"]
+pasos:
+  - texto: "Conectá la computadora a Internet: DISM descarga de Windows Update los archivos que usa para reparar."
+    abrir: "ms-settings:network-status"
+  - texto: "Abrí la terminal como administrador: escribí «cmd» en el buscador de Inicio, hacé clic derecho en «Símbolo del sistema» > «Ejecutar como administrador» y aceptá. Escribí DISM.exe /Online /Cleanup-image /Restorehealth y apretá Enter. Puede tardar varios minutos."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-server/installing-updates-features-roles/fix-windows-update-errors"
+  - texto: "Cuando termine, en la misma ventana escribí sfc /scannow y Enter. Al final cerrá la ventana, reiniciá y volvé a buscar actualizaciones."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si el error vuelve, usá el solucionador de Windows Update (Windows 11: Configuración > Sistema > Solucionar problemas > «Otros solucionadores de problemas» > Windows Update)."
+    abrir: "https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c"
+fuentes:
+  - https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a
+  - https://learn.microsoft.com/troubleshoot/windows-server/installing-updates-features-roles/fix-windows-update-errors
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+madurez: T0
+---
+id: WUE-004
+area: windows
+titulo:
+  sencillo: "Windows Update da el error 0x8024402f"
+  tecnico: "0x8024402F (WU_E_PT_ECP_SUCCEEDED_WITH_ERRORS)"
+explicacion:
+  sencillo: "Windows no pudo procesar bien lo que descargó para actualizarse. Microsoft señala como causa típica un programa que filtra páginas web y que se mete en el medio de las descargas de Windows Update."
+  tecnico: "El procesamiento del archivo .cab externo terminó con errores. Microsoft lo asocia a software de filtrado web (por ejemplo Lightspeed Rocket): agregar el equipo a la lista de excepciones del filtro."
+frases: ["windows update error 0x8024402f", "me sale 0x8024402f cuando busco actualizaciones", "no puedo actualizar windows 0x8024402f", "código de error 0x8024402f"]
+pasos:
+  - texto: "Comprobá que tengas Internet abriendo cualquier página."
+    abrir: "ms-settings:network-status"
+  - texto: "Si en esta computadora hay un programa que filtra o bloquea páginas web, pedile a quien lo administra que agregue esta computadora a sus excepciones. Después volvé a buscar actualizaciones."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Usá el solucionador de Windows Update (Windows 11: Configuración > Sistema > Solucionar problemas > «Otros solucionadores de problemas» > Windows Update; Windows 10: Configuración > Actualización y seguridad > Solucionar problemas)."
+    abrir: "https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c"
+  - texto: "Microsoft explica este código en su lista de errores comunes (en inglés, para técnicos)."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/installing-updates-features-roles/common-windows-update-errors"
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-client/installing-updates-features-roles/common-windows-update-errors
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+madurez: T0
+---
+id: WUE-005
+area: windows
+titulo:
+  sencillo: "Windows Update no logra conectarse (0x80072ee2, 0x80072efd o 0x80244022)"
+  tecnico: "Tiempo de espera o servicio no disponible al contactar Windows Update"
+explicacion:
+  sencillo: "Windows no pudo comunicarse con los servidores de Microsoft: la conexión se cortó, tardó demasiado o el servicio estaba saturado. Suele ser la conexión a Internet, un firewall o un proxy que bloquea."
+  tecnico: "0x80072EE2 / 0x80072EFD: tiempo de espera agotado (WININET). 0x80244022: HTTP 503, servicio temporalmente sobrecargado. Verificar conectividad y que firewall o proxy no bloqueen las direcciones de descarga de Microsoft."
+frases: ["windows update error 0x80072ee2", "me sale 0x80072efd al buscar actualizaciones", "error 0x80244022 windows update", "windows update no se conecta al servidor"]
+pasos:
+  - texto: "Comprobá que tengas Internet abriendo una página cualquiera. Si no anda, reconectá el Wi-Fi o el cable."
+    abrir: "ms-settings:network-status"
+  - texto: "Revisá si hay un proxy activado. Si no sabés por qué está, puede estar bloqueando las descargas de Microsoft: escribile a PC Doctor «hay un proxy configurado»."
+    abrir: "ms-settings:network-proxy"
+  - texto: "Si tenés un firewall o antivirus de otra marca, fijate que no esté bloqueando a Windows Update."
+  - texto: "Con 0x80244022 el servicio estaba saturado: esperá un rato y volvé a intentar. Si sigue, usá el solucionador de Windows Update (Windows 11: Configuración > Sistema > Solucionar problemas > «Otros solucionadores de problemas» > Windows Update)."
+    abrir: "https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a"
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-client/installing-updates-features-roles/common-windows-update-errors
+  - https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+madurez: T0
+---
+id: WUE-006
+area: windows
+titulo:
+  sencillo: "Windows Update da el error 0x80070422"
+  tecnico: "0x80070422 (ERROR_SERVICE_DISABLED)"
+explicacion:
+  sencillo: "El servicio de Windows Update está apagado o deshabilitado, así que Windows no puede buscar ni instalar nada. Se vuelve a prender desde la lista de Servicios."
+  tecnico: "El servicio Windows Update está detenido o deshabilitado. Microsoft indica poner el Tipo de inicio en Automático e iniciarlo desde services.msc."
+frases: ["windows update error 0x80070422", "me sale 0x80070422 y no actualiza", "0x80070422 servicio de actualizaciones", "no puedo buscar actualizaciones error 0x80070422"]
+pasos:
+  - texto: "Apretá Windows + R, escribí services.msc y apretá Enter. En la lista buscá «Windows Update» y hacé doble clic."
+  - texto: "En «Tipo de inicio» elegí «Automático». Si el servicio figura detenido, tocá «Iniciar». Después tocá «Aplicar» y «Aceptar»."
+    abrir: "https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c"
+  - texto: "Reiniciá la computadora y volvé a buscar actualizaciones."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si se vuelve a apagar solo, escribile a PC Doctor «windows update desactivado»."
+fuentes:
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+  - https://learn.microsoft.com/troubleshoot/windows-client/installing-updates-features-roles/common-windows-update-errors
+madurez: T0
+---
+id: WUE-007
+area: windows
+titulo:
+  sencillo: "Windows Update da el error 0x800f0922"
+  tecnico: "0x800F0922 (CBS_E_INSTALLERS_FAILED)"
+explicacion:
+  sencillo: "Puede pasar por dos cosas: la computadora no llegó a los servidores de Microsoft (muchas veces por una VPN conectada) o no hay lugar suficiente, incluso en una parte chiquita del disco que Windows reserva para el sistema."
+  tecnico: "Según Microsoft: sin conexión con los servidores de Windows Update (VPN de trabajo) o espacio insuficiente, también en la partición Reservada para el sistema. Liberar espacio y desconectar la VPN."
+frases: ["windows update error 0x800f0922", "me tira 0x800f0922 y no se instala", "falla la actualización 0x800f0922", "error 0x800f0922 al actualizar windows 11"]
+pasos:
+  - texto: "Si usás una VPN (por ejemplo la del trabajo), desconectala y probá de nuevo."
+    abrir: "ms-settings:network-vpn"
+  - texto: "Liberá espacio en el disco de Windows: al menos 20 GB libres en Windows de 64 bits (16 GB en 32 bits)."
+    abrir: "ms-settings:storagesense"
+  - texto: "Volvé a buscar actualizaciones."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si sigue, Microsoft explica que puede faltar lugar en la partición «Reservada para el sistema». Agrandarla requiere programas especiales y se puede perder información si sale mal: conviene que lo haga un técnico."
+    abrir: "https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a"
+fuentes:
+  - https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+madurez: T0
+---
+id: WUE-008
+area: windows
+titulo:
+  sencillo: "Windows Update da el error 0x80240034"
+  tecnico: "0x80240034: descarga de la actualización interrumpida"
+explicacion:
+  sencillo: "La descarga de la actualización se cortó o quedó trabada. Hay que revisar la conexión y que el servicio de Windows Update esté funcionando."
+  tecnico: "Descarga interrumpida o actualización atascada. Microsoft indica verificar la conexión, que los servicios de Windows Update estén en ejecución, el firewall, y ejecutar el solucionador."
+frases: ["windows update error 0x80240034", "0x80240034 descarga fallida", "la actualización no baja y dice 0x80240034", "me aparece 0x80240034 en windows update"]
+pasos:
+  - texto: "Revisá la conexión a Internet y, si se cortó, volvé a conectarte."
+    abrir: "ms-settings:network-status"
+  - texto: "Fijate que el servicio esté andando: apretá Windows + R, escribí services.msc y Enter, buscá «Windows Update»; si figura detenido, hacé clic derecho > «Iniciar»."
+  - texto: "Usá el solucionador de Windows Update (Windows 11: Configuración > Sistema > Solucionar problemas > «Otros solucionadores de problemas» > Windows Update; Windows 10: Configuración > Actualización y seguridad > Solucionar problemas)."
+    abrir: "https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c"
+  - texto: "Volvé a buscar actualizaciones para que la descarga empiece de nuevo."
+    abrir: "ms-settings:windowsupdate"
+fuentes:
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+  - https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a
+madurez: T0
+---
+id: WUE-009
+area: windows
+titulo:
+  sencillo: "Windows Update da el error 0x8007000d"
+  tecnico: "0x8007000D (ERROR_INVALID_DATA)"
+explicacion:
+  sencillo: "Lo que se descargó de la actualización llegó dañado. La solución es borrar lo descargado para que Windows lo vuelva a bajar sano."
+  tecnico: "Datos descargados no válidos o corruptos. Solucionador, vaciar la caché de Windows Update (SoftwareDistribution) y volver a descargar; si persiste, DISM y sfc."
+frases: ["windows update error 0x8007000d", "me sale 0x8007000d al actualizar", "0x8007000d actualización dañada", "no se instala la actualización por 0x8007000d"]
+pasos:
+  - texto: "Usá el solucionador de Windows Update (Windows 11: Configuración > Sistema > Solucionar problemas > «Otros solucionadores de problemas» > Windows Update; Windows 10: Configuración > Actualización y seguridad > Solucionar problemas)."
+    abrir: "https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c"
+  - texto: "Borrá la caché de Windows Update: apretá Windows + R, escribí services.msc y Enter; clic derecho en «Windows Update» > «Detener». Abrí la carpeta C:\\Windows\\SoftwareDistribution y borrá todo lo que hay adentro (son actualizaciones descargadas, no tus documentos). Volvé a Servicios: clic derecho en «Windows Update» > «Iniciar»."
+  - texto: "Volvé a buscar actualizaciones: Windows las descarga de nuevo."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si sigue, abrí la terminal como administrador (escribí «cmd» en Inicio, clic derecho en «Símbolo del sistema» > «Ejecutar como administrador»), escribí DISM.exe /Online /Cleanup-image /Restorehealth y Enter; al terminar, sfc /scannow y Enter."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-server/installing-updates-features-roles/fix-windows-update-errors"
+fuentes:
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+  - https://learn.microsoft.com/troubleshoot/windows-client/installing-updates-features-roles/common-windows-update-errors
+  - https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a
+  - https://learn.microsoft.com/troubleshoot/windows-server/installing-updates-features-roles/fix-windows-update-errors
+madurez: T0
+---
+id: WUE-010
+area: windows
+titulo:
+  sencillo: "El paso a la versión nueva de Windows falla con 0xC1900101"
+  tecnico: "0xC1900101: reversión genérica, casi siempre por un controlador incompatible"
+explicacion:
+  sencillo: "Windows intentó pasar a una versión nueva, algo falló y volvió a la anterior. Ese código casi siempre apunta a un controlador (el programita que maneja una pieza, como la placa de video o la de red) que no es compatible."
+  tecnico: "Código de reversión genérico que suele indicar un controlador incompatible (variantes 0x2000c, 0x20017, 0x30018, 0x3000D, 0x4000D, 0x40017). Quitar periféricos, actualizar o desinstalar controladores, quitar antivirus de terceros, arranque limpio."
+frases: ["error 0xc1900101 al actualizar windows", "la actualización de windows 11 falla con 0xc1900101", "0xc1900101 0x4000d", "no puedo pasar a la versión nueva da 0xc1900101", "0xc1900101 y se vuelve atrás la actualización"]
+pasos:
+  - texto: "Desenchufá todo lo que no haga falta: impresoras, pendrives, discos externos, auriculares, parlantes. Dejá solo mouse, teclado y pantalla. Si la notebook está en una base (dock), sacala."
+    abrir: "https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a"
+  - texto: "Dejá lugar libre: al menos 20 GB en Windows de 64 bits (16 GB en 32 bits)."
+    abrir: "ms-settings:storagesense"
+  - texto: "Hacé clic derecho en Inicio > «Administrador de dispositivos» y buscá aparatos con un signo de exclamación amarillo: actualizá o desinstalá ese controlador. Los de video y de red bajalos de la página del fabricante."
+  - texto: "Si tenés un antivirus de otra marca, desinstalalo mientras dura la actualización (Windows queda protegido con su propio antivirus). Tené a mano la clave para reinstalarlo después."
+  - texto: "Si sigue, Microsoft recomienda un «arranque limpio» (Windows con lo mínimo) antes de volver a intentar. Si no te animás, pedí ayuda a un técnico."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-10-upgrade-resolution-procedures"
+fuentes:
+  - https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a
+  - https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-10-upgrade-resolution-procedures
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+madurez: T0
+---
+id: WUE-011
+area: windows
+titulo:
+  sencillo: "La actualización falla con 0x80070070: falta espacio"
+  tecnico: "0x80070070 (- 0x50011, 0x50012, 0x60000): espacio en disco insuficiente"
+explicacion:
+  sencillo: "El disco no tiene lugar suficiente para instalar la actualización. Hay que liberar espacio y volver a intentar."
+  tecnico: "Espacio libre insuficiente para la instalación: se requieren 16 GB (32 bits) o 20 GB (64 bits). Alternativa: unidad USB externa de al menos 8 GB (se recomiendan 16 GB) formateada en NTFS."
+frases: ["windows update error 0x80070070", "0x80070070 sin espacio", "dice que no hay espacio suficiente para la actualización", "0x80070070 0x50011 no se actualiza"]
+pasos:
+  - texto: "Mirá cuánto lugar te queda: abrí el Explorador de archivos (Windows + E) > «Este equipo». El disco de Windows es el que tiene el logo de Windows."
+  - texto: "Liberá espacio desde Almacenamiento (archivos temporales, Papelera, descargas viejas) hasta tener al menos 20 GB libres (16 GB si tu Windows es de 32 bits)."
+    abrir: "ms-settings:storagesense"
+  - texto: "Si el disco es muy chico, Microsoft permite usar un pendrive o disco externo de al menos 8 GB (mejor 16 GB) formateado en NTFS durante la actualización. Ojo: formatear borra todo lo que tenga ese pendrive."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-10-upgrade-resolution-procedures"
+  - texto: "Volvé a buscar actualizaciones."
+    abrir: "ms-settings:windowsupdate"
+fuentes:
+  - https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a
+  - https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-10-upgrade-resolution-procedures
+  - https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-10-upgrade-quick-fixes
+madurez: T0
+---
+id: WUE-012
+area: windows
+titulo:
+  sencillo: "La actualización se instala y después dice «Deshaciendo cambios»"
+  tecnico: "«No se pudieron completar las actualizaciones. Deshaciendo cambios»"
+explicacion:
+  sencillo: "Windows intentó instalar la actualización, falló y la sacó para dejar todo como estaba. Ese mensaje no dice por qué: el motivo está en el código de error que queda guardado en el historial de actualizaciones."
+  tecnico: "Mensaje genérico para cualquier actualización fallida («We couldn't complete the updates. Undoing changes» / «Failure configuring Windows Updates. Reverting changes»). El código específico figura en el Historial de actualizaciones."
+frases: ["no se pudieron completar las actualizaciones deshaciendo cambios", "la actualización se instala y se vuelve atrás", "cada vez que reinicio dice deshaciendo cambios", "se revierte la actualización de windows"]
+pasos:
+  - texto: "Abrí el historial de actualizaciones (Configuración > Windows Update > Historial de actualizaciones) y anotá el código de la que falló (por ejemplo 0x800f0922)."
+    abrir: "ms-settings:windowsupdate-history"
+  - texto: "Escribile ese código a PC Doctor (por ejemplo «windows update error 0x800f0922»): hay una guía para los más comunes."
+  - texto: "Mientras tanto, probá lo básico que recomienda Microsoft: reiniciar, usar el solucionador de Windows Update y tener al menos 20 GB libres."
+    abrir: "https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c"
+  - texto: "Microsoft explica este mensaje junto con los demás errores de instalación."
+    abrir: "https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a"
+fuentes:
+  - https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+madurez: T0
+---
+id: WUE-013
+area: windows
+titulo:
+  sencillo: "La actualización quedó trabada en un porcentaje"
+  tecnico: "Descarga o instalación detenida en 0 %, 100 % o entre 51 % y 99 %"
+explicacion:
+  sencillo: "Que tarde no siempre es una falla: depende del tamaño de la actualización y de la velocidad de Internet. Si queda en 0 % o en 100 % mucho rato, suele ser que otro programa la frena, que se cortó Internet o que falta espacio."
+  tecnico: "0 %/100 %: reiniciar, verificar conexión y espacio libre (16/20 GB). 51-99 %: el tiempo depende de la conexión, la configuración de red y el tamaño; si no avanza, volver a buscar o ejecutar el solucionador."
+frases: ["la actualización está trabada en 0%", "windows update quedó clavado en 100%", "la actualización no pasa del 75 por ciento", "hace horas que la actualización está en el mismo porcentaje"]
+pasos:
+  - texto: "Si está entre 51 % y 99 %, tené paciencia un rato: el tiempo depende de tu Internet y del tamaño. Si no se mueve, volvé a tocar «Buscar actualizaciones»."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si quedó en 0 % o en 100 %, reiniciá la computadora para que ningún programa la bloquee."
+  - texto: "Revisá la conexión y volvé a conectar el Wi-Fi o el cable si hace falta."
+    abrir: "ms-settings:network-status"
+  - texto: "Fijate que haya lugar: al menos 20 GB libres en Windows de 64 bits (16 GB en 32 bits)."
+    abrir: "ms-settings:storagesense"
+  - texto: "Si sigue igual, usá el solucionador de Windows Update (Windows 11: Configuración > Sistema > Solucionar problemas > «Otros solucionadores de problemas» > Windows Update)."
+    abrir: "https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c"
+fuentes:
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+madurez: T0
+---
+id: WUE-014
+area: windows
+titulo:
+  sencillo: "Windows Update dice «Hubo problemas al instalar algunas actualizaciones»"
+  tecnico: "Aviso genérico de falla; errores pasajeros 0xc1900223 y 0x8024402d"
+explicacion:
+  sencillo: "Es un aviso general: alguna actualización no se pudo instalar. El código de cada una queda en el historial. Algunos códigos, como 0xc1900223 o 0x8024402d, son pasajeros: Windows vuelve a intentar solo más tarde."
+  tecnico: "0xc1900223: problema al descargar o instalar; Windows Update reintenta luego, sin acción necesaria. 0x8024402d (WU_E_PT_LOAD_SHEDDING): servidor con carga alta, transitorio; el reintento posterior debería funcionar."
+frases: ["hubo problemas al instalar algunas actualizaciones", "dice que lo volverá a intentar más tarde", "windows update error 0xc1900223", "error 0x8024402d windows update"]
+pasos:
+  - texto: "Abrí el historial de actualizaciones y anotá el código que figura en la que falló."
+    abrir: "ms-settings:windowsupdate-history"
+  - texto: "Si es 0xc1900223 o 0x8024402d, no hace falta hacer nada: Windows reintenta solo. Mirá de nuevo en un día."
+    abrir: "https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a"
+  - texto: "Si querés probar ya, tocá «Buscar actualizaciones»."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si es otro código o se repite muchas veces, reiniciá, usá el solucionador de Windows Update y escribile el código a PC Doctor."
+    abrir: "https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c"
+fuentes:
+  - https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a
+  - https://learn.microsoft.com/troubleshoot/windows-client/installing-updates-features-roles/windows-update-issues-troubleshooting
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+madurez: T0
+---
+id: WUE-015
+area: windows
+titulo:
+  sencillo: "Windows Update se queda «Buscando actualizaciones» y no avanza"
+  tecnico: "Búsqueda de actualizaciones congelada (servicios Update Orchestrator / Windows Update detenidos)"
+explicacion:
+  sencillo: "La pantalla de Windows Update le pregunta a dos servicios internos de Windows si hay novedades. Si alguno se frenó, la búsqueda se queda girando para siempre."
+  tecnico: "La interfaz de Configuración se comunica con el servicio Update Orchestrator, que a su vez habla con el servicio Windows Update; si se detienen inesperadamente, el examen queda congelado."
+frases: ["windows update se queda buscando actualizaciones", "dice buscando actualizaciones y nunca termina", "la búsqueda de actualizaciones está colgada", "windows update no termina de buscar"]
+pasos:
+  - texto: "Cerrá Configuración del todo y volvé a abrirla en Windows Update."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Apretá Windows + R, escribí services.msc y Enter. Fijate que estén «En ejecución» el servicio «Windows Update» y el orquestador de actualizaciones (Microsoft lo nombra «Update State Orchestrator»). Si alguno está detenido, hacé clic derecho > «Iniciar»."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/installing-updates-features-roles/windows-update-issues-troubleshooting"
+  - texto: "Si sigue igual, reiniciá la computadora y usá el solucionador de Windows Update (Windows 11: Configuración > Sistema > Solucionar problemas > «Otros solucionadores de problemas» > Windows Update)."
+    abrir: "https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c"
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-client/installing-updates-features-roles/windows-update-issues-troubleshooting
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+madurez: T0
+---
+id: WUE-016
+area: windows
+titulo:
+  sencillo: "No me aparece la versión nueva de Windows"
+  tecnico: "Actualización de características no ofrecida: retención de protección (safeguard hold)"
+explicacion:
+  sencillo: "Microsoft entrega la versión nueva de a poco y a veces la frena a propósito en algunas computadoras porque detectó un problema con un programa o una pieza de ese equipo. En Windows Update aparece un aviso de que la actualización está en camino. Cuando el problema se arregla, aparece sola."
+  tecnico: "Safeguard hold: Windows Update no ofrece la nueva versión a dispositivos con un problema conocido hasta validar la corrección. Distribución gradual (intelligent rollout). Problemas conocidos en Windows release health."
+frases: ["no me aparece la actualización de windows 11 25h2", "la actualización de características no aparece", "windows update dice que la actualización está en camino", "a mis conocidos les llegó la versión nueva y a mí no"]
+pasos:
+  - texto: "Abrí Windows Update y tocá «Buscar actualizaciones». Si dice que la actualización está en camino y que la vas a ver cuando esté lista para tu dispositivo, tu equipo está en espera."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Microsoft recomienda no forzar la instalación a mano mientras dure esa espera: así protege a tu equipo de un problema conocido. Cuando se libera, Windows Update la ofrece solo."
+    abrir: "https://learn.microsoft.com/windows/deployment/update/safeguard-holds"
+  - texto: "Seguí instalando las actualizaciones mensuales mientras tanto."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Los problemas conocidos de cada versión están publicados en la página de estado de Windows de Microsoft (en inglés)."
+    abrir: "https://learn.microsoft.com/windows/release-health/"
+fuentes:
+  - https://learn.microsoft.com/windows/deployment/update/safeguard-holds
+  - https://learn.microsoft.com/windows/whats-new/windows-11-plan
+  - https://learn.microsoft.com/windows/release-health/
+madurez: T0
+---
+id: WUE-017
+area: windows
+titulo:
+  sencillo: "Dice «Esta PC no puede ejecutar Windows 11»"
+  tecnico: "Requisitos mínimos de Windows 11 no cumplidos (TPM 2.0, Arranque seguro, procesador); 0xC1900200 - 0x20008"
+explicacion:
+  sencillo: "Windows 11 pide un mínimo de equipo: procesador compatible de 64 bits, 4 GB de memoria, 64 GB de disco, un chip de seguridad llamado TPM 2.0 y el «Arranque seguro». Si falta algo, no se puede instalar. A veces el equipo lo tiene y solo hay que activarlo."
+  tecnico: "Requisitos: CPU de 64 bits compatible de 1 GHz y 2 núcleos, 4 GB de RAM, 64 GB, UEFI con Arranque seguro, TPM 2.0, DirectX 12 con WDDM 2.0, pantalla 720p de más de 9 pulgadas. Desde Windows 10 2004 o posterior. Verificación con PC Health Check."
+frases: ["esta pc no puede ejecutar windows 11", "mi compu no es compatible con windows 11", "no me deja pasar a windows 11", "error 0xc1900200 al instalar windows 11", "dice que mi procesador no sirve para windows 11"]
+pasos:
+  - texto: "Usá la app gratuita de Microsoft PC Health Check: te dice qué requisito falta (no revisa la placa de video ni la pantalla)."
+    abrir: "https://www.microsoft.com/windows/windows-11-specifications"
+  - texto: "Compará tu equipo con la lista oficial de requisitos."
+    abrir: "https://learn.microsoft.com/windows/whats-new/windows-11-requirements"
+  - texto: "Si lo que falta es el TPM 2.0 o el Arranque seguro, muchas computadoras los tienen y solo hay que activarlos. Escribile a PC Doctor «el arranque seguro está desactivado» o consultá al fabricante."
+  - texto: "Si el procesador no es compatible, Microsoft sugiere considerar una computadora nueva. Si seguís con Windows 10, escribile a PC Doctor «windows 10 ya no recibe actualizaciones»."
+    abrir: "https://www.microsoft.com/windows/windows-11-specifications"
+fuentes:
+  - https://learn.microsoft.com/windows/whats-new/windows-11-requirements
+  - https://www.microsoft.com/windows/windows-11-specifications
+  - https://learn.microsoft.com/windows/whats-new/windows-11-plan
+  - https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a
+madurez: T0
+---
+id: WUE-018
+area: windows
+titulo:
+  sencillo: "Windows Update da el error 0x80070005 (acceso denegado)"
+  tecnico: "0x80070005 (E_ACCESSDENIED)"
+explicacion:
+  sencillo: "Windows Update no tuvo permiso para tocar algunos archivos. Pasa si tu usuario no es administrador o si un antivirus de otra marca bloquea los archivos de la actualización."
+  tecnico: "El proceso de actualización no puede acceder a archivos, carpetas o claves del registro: permisos alterados en WinSxS o SoftwareDistribution, antivirus de terceros que bloquea archivos, o falta de privilegios de administrador."
+frases: ["windows update error 0x80070005", "0x80070005 acceso denegado al actualizar", "me sale acceso denegado en windows update", "no se instala la actualización 0x80070005"]
+pasos:
+  - texto: "Asegurate de estar en una cuenta de administrador: algunas actualizaciones lo necesitan. Si tu usuario no lo es, pedile a quien tenga una cuenta de administrador que instale las actualizaciones."
+    abrir: "https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c"
+  - texto: "Si tenés un antivirus de otra marca, desactivá un rato su protección en tiempo real, probá la actualización y después volvé a activarlo."
+  - texto: "Si sigue, abrí la terminal como administrador (escribí «cmd» en Inicio, clic derecho en «Símbolo del sistema» > «Ejecutar como administrador»), escribí DISM /Online /Cleanup-Image /RestoreHealth y Enter. Reiniciá, volvé a abrirla y escribí sfc /scannow."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070005"
+  - texto: "Reiniciá y volvé a buscar actualizaciones."
+    abrir: "ms-settings:windowsupdate"
+fuentes:
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+  - https://learn.microsoft.com/troubleshoot/windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070005
+  - https://learn.microsoft.com/troubleshoot/windows-client/installing-updates-features-roles/common-windows-update-errors
+madurez: T0
+---
+id: WUE-019
+area: windows
+titulo:
+  sencillo: "Windows Update da el error 0x80070020"
+  tecnico: "0x80070020 (ERROR_SHARING_VIOLATION): archivo en uso"
+explicacion:
+  sencillo: "Otro programa está usando un archivo que la actualización necesita; muchas veces es el antivirus. Hay que reiniciar o arrancar Windows con lo mínimo para que nada se interponga."
+  tecnico: "El proceso no puede acceder al archivo porque lo usa otro proceso; suele deberse a controladores de filtro de terceros (antivirus). Reiniciar, desactivar el antivirus temporalmente, arranque limpio con MSCONFIG."
+frases: ["windows update error 0x80070020", "0x80070020 archivo en uso", "me sale 0x80070020 cuando actualizo", "falla la actualización con el código 0x80070020"]
+pasos:
+  - texto: "Reiniciá la computadora y volvé a buscar actualizaciones."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Desactivá un rato el antivirus de otra marca y cerrá los programas que tengas abiertos. Cuando termine la actualización, volvé a activar el antivirus."
+    abrir: "https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a"
+  - texto: "Usá el solucionador de Windows Update (Windows 11: Configuración > Sistema > Solucionar problemas > «Otros solucionadores de problemas» > Windows Update; Windows 10: Configuración > Actualización y seguridad > Solucionar problemas)."
+    abrir: "https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c"
+  - texto: "Si sigue, Microsoft recomienda un «arranque limpio» con la herramienta msconfig (Windows arranca sin programas de otras marcas) y volver a intentar. Si no te animás, pedí ayuda a un técnico."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-10-upgrade-resolution-procedures"
+fuentes:
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+  - https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a
+  - https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-10-upgrade-resolution-procedures
+  - https://learn.microsoft.com/troubleshoot/windows-client/installing-updates-features-roles/common-windows-update-errors
+madurez: T0
+---
+id: WUE-020
+area: windows
+titulo:
+  sencillo: "Windows Update da el error 0x80072f8f"
+  tecnico: "0x80072F8F: fecha y hora incorrectas o TLS 1.2 mal configurado"
+explicacion:
+  sencillo: "Las conexiones seguras con Microsoft dependen de que la fecha y la hora de la computadora estén bien. Si el reloj está atrasado o adelantado, Windows Update falla con este código."
+  tecnico: "WININET_E_DECODING_FAILED. Microsoft lo atribuye a fecha, hora o zona horaria incorrectas, o a TLS 1.2 no configurado en el equipo."
+frases: ["windows update error 0x80072f8f", "0x80072f8f no puedo actualizar", "me sale 0x80072f8f y la hora está mal", "código 0x80072f8f en windows update"]
+pasos:
+  - texto: "Abrí Fecha y hora y activá «Establecer la hora automáticamente» y «Establecer la zona horaria automáticamente»."
+    abrir: "ms-settings:dateandtime"
+  - texto: "En la misma pantalla, en «Configuración adicional», tocá «Sincronizar ahora»."
+    abrir: "https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c"
+  - texto: "Reiniciá y volvé a buscar actualizaciones."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si la hora se desarregla cada vez que apagás la compu, escribile a PC Doctor «la hora de la computadora está mal»."
+fuentes:
+  - https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+  - https://learn.microsoft.com/troubleshoot/windows-client/installing-updates-features-roles/common-windows-update-errors
+madurez: T0
+---
+id: WUE-021
+area: windows
+titulo:
+  sencillo: "Windows Update da el error 0x80246007"
+  tecnico: "0x80246007: la actualización no se descargó correctamente"
+explicacion:
+  sencillo: "La actualización no se terminó de descargar bien o los archivos bajados están dañados. Hay que borrar lo descargado y probar otra vez."
+  tecnico: "Descarga incompleta o archivos de actualización faltantes o dañados: vaciar la caché de Windows Update, reiniciar el servicio y ejecutar el solucionador; alternativa para actualizaciones de versión: herramienta oficial de descarga."
+frases: ["windows update error 0x80246007", "0x80246007 no se descarga la actualización", "me tira 0x80246007", "la descarga de la actualización falla con 0x80246007"]
+pasos:
+  - texto: "Borrá la caché de Windows Update: apretá Windows + R, escribí services.msc y Enter; clic derecho en «Windows Update» > «Detener». Abrí la carpeta C:\\Windows\\SoftwareDistribution y borrá todo lo que hay adentro (son actualizaciones descargadas, no tus documentos). Volvé a Servicios: clic derecho en «Windows Update» > «Iniciar»."
+    abrir: "https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c"
+  - texto: "Usá el solucionador de Windows Update (Windows 11: Configuración > Sistema > Solucionar problemas > «Otros solucionadores de problemas» > Windows Update; Windows 10: Configuración > Actualización y seguridad > Solucionar problemas)."
+  - texto: "Reiniciá y volvé a buscar actualizaciones."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si era el paso a una versión nueva y sigue fallando, Microsoft sugiere usar su herramienta oficial de descarga (Asistente de instalación de Windows 11). Antes hacé una copia de seguridad de tus archivos."
+    abrir: "https://www.microsoft.com/software-download/windows11"
+fuentes:
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+  - https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a
+  - https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-10-upgrade-resolution-procedures
+  - https://www.microsoft.com/software-download/windows11
+madurez: T0
+---
+id: WUE-022
+area: windows
+titulo:
+  sencillo: "Windows Update da el error 0x800705b4"
+  tecnico: "0x800705B4: la actualización tardó demasiado o se interrumpió"
+explicacion:
+  sencillo: "La actualización tardó demasiado o se cortó a mitad de camino. Suele ser la conexión o un antivirus o firewall que se mete en el medio."
+  tecnico: "Tiempo de espera agotado o actualización interrumpida. Microsoft indica verificar la conexión, desactivar temporalmente antivirus o firewall de terceros, reiniciar y ejecutar el solucionador."
+frases: ["windows update error 0x800705b4", "0x800705b4 se interrumpió la actualización", "me sale 0x800705b4 al instalar", "la actualización falla por tiempo agotado 0x800705b4"]
+pasos:
+  - texto: "Revisá que Internet ande bien; si se corta, acercate al router o usá el cable."
+    abrir: "ms-settings:network-status"
+  - texto: "Desactivá un rato el antivirus o firewall de otra marca, probá la actualización y después volvé a activarlo."
+    abrir: "https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c"
+  - texto: "Reiniciá la computadora y volvé a buscar actualizaciones."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si sigue, usá el solucionador de Windows Update (Windows 11: Configuración > Sistema > Solucionar problemas > «Otros solucionadores de problemas» > Windows Update; Windows 10: Configuración > Actualización y seguridad > Solucionar problemas)."
+fuentes:
+  - https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c
+madurez: T0
+---
+id: WUE-023
+area: windows
+titulo:
+  sencillo: "La actualización se frena por un programa incompatible (0xC1900208)"
+  tecnico: "0xC1900208 - 0x4000C: una aplicación incompatible bloquea la actualización"
+explicacion:
+  sencillo: "Antes de pasar a una versión nueva, Windows revisa los programas instalados. Si encuentra uno que no es compatible, frena la actualización para que no deje de funcionar."
+  tecnico: "MOSETUP_E_COMPAT_INSTALLREQ_BLOCK: el análisis de compatibilidad no se superó. Desinstalar la aplicación incompatible y reintentar (0xC1900209 cuando se cancela por el mismo motivo)."
+frases: ["error 0xc1900208 al actualizar", "0xc1900208 0x4000c", "dice que un programa no es compatible con la actualización", "error 0xc1900209 actualización de windows"]
+pasos:
+  - texto: "Antes de desinstalar nada, guardá el instalador y la clave de activación de los programas que vayas a querer reinstalar."
+  - texto: "Desinstalá los programas incompatibles y los programas viejos que ya no uses: Panel de control > Programas > Programas y características, elegí el programa y tocá «Desinstalar»."
+  - texto: "Si tenés un antivirus de otra marca, también conviene desinstalarlo mientras dura la actualización: Windows queda protegido con su propio antivirus."
+    abrir: "https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a"
+  - texto: "Volvé a intentar la actualización."
+    abrir: "ms-settings:windowsupdate"
+fuentes:
+  - https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a
+  - https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-10-upgrade-resolution-procedures
+madurez: T0
+---
+id: WUE-024
+area: windows
+titulo:
+  sencillo: "La actualización falla con 0xC1900107"
+  tecnico: "0xC1900107 (MOSETUP_E_CLEANUP_PENDING): limpieza pendiente de un intento anterior"
+explicacion:
+  sencillo: "Quedó sin terminar la limpieza de un intento anterior de actualización, y Windows necesita reiniciar para completarla antes de volver a probar."
+  tecnico: "Hay una operación de limpieza pendiente de una instalación anterior; se requiere reinicio. Si no alcanza, Liberador de espacio en disco (archivos temporales y del sistema)."
+frases: ["error 0xc1900107 al actualizar", "0xc1900107 windows update", "me sale 0xc1900107 y no avanza la actualización", "la instalación de windows dice 0xc1900107"]
+pasos:
+  - texto: "Reiniciá la computadora y volvé a intentar la actualización."
+    abrir: "ms-settings:windowsupdate"
+  - texto: "Si sigue, abrí el Explorador de archivos > «Este equipo», hacé clic derecho en el disco de Windows > «Propiedades» > «Liberar espacio» y después «Limpiar archivos del sistema». Marcá los archivos temporales. Ojo: si marcás las instalaciones anteriores de Windows, ya no vas a poder volver a la versión anterior."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-10-upgrade-quick-fixes"
+  - texto: "Reiniciá otra vez y volvé a intentar."
+    abrir: "https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a"
+fuentes:
+  - https://support.microsoft.com/windows/get-help-with-windows-upgrade-and-installation-errors-ea144c24-513d-a60e-40df-31ff78b3158a
+  - https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-10-upgrade-resolution-procedures
+  - https://learn.microsoft.com/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-10-upgrade-quick-fixes
+madurez: T0
+---
+id: WUE-025
+area: windows
+titulo:
+  sencillo: "Windows Update da el error 0x80070570"
+  tecnico: "0x80070570 (ERROR_FILE_OR_DIRECTORY_CORRUPTED)"
+explicacion:
+  sencillo: "Windows no puede leer archivos que necesita para la actualización. Pueden estar dañados en la descarga, en la reserva interna de Windows o en el propio disco."
+  tecnico: "Caché de descargas corrupta, almacén de componentes dañado, errores del volumen del sistema, interferencia del antivirus o descarga interrumpida. Vaciar SoftwareDistribution\\Download, DISM, sfc y chkdsk."
+frases: ["windows update error 0x80070570", "0x80070570 archivo dañado al actualizar", "me sale 0x80070570 en la actualización", "el archivo o directorio está dañado y no se puede leer en windows update"]
+pasos:
+  - texto: "Antes de empezar, Microsoft recomienda hacer una copia de seguridad: si el disco tiene fallas, podrías perder archivos."
+  - texto: "Abrí la terminal como administrador (escribí «cmd» en Inicio, clic derecho en «Símbolo del sistema» > «Ejecutar como administrador») y escribí estos comandos uno por uno, con Enter después de cada uno: «net stop wuauserv», «net stop bits», «rd /s /q %windir%\\SoftwareDistribution\\Download», «net start bits», «net start wuauserv». Reiniciá y probá la actualización."
+    abrir: "https://learn.microsoft.com/troubleshoot/windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070570"
+  - texto: "Si sigue, en la terminal como administrador escribí DISM /Online /Cleanup-Image /RestoreHealth y Enter. Reiniciá y volvé a probar."
+  - texto: "Si todavía falla, escribí sfc /scannow y Enter. Al terminar, reiniciá y probá otra vez."
+  - texto: "Por último, revisá el disco: escribí chkdsk C: /f /r y Enter, aceptá que se revise en el próximo reinicio y reiniciá. Si aparecen errores de disco, escribile a PC Doctor «un disco informa que está fallando»."
+fuentes:
+  - https://learn.microsoft.com/troubleshoot/windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070570
+madurez: T0
