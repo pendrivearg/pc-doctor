@@ -3,7 +3,7 @@
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Version>0.2.0</Version>
+    <Version>0.3.0</Version>
     <Company>PC Doctor AI</Company>
     <Product>PC Doctor AI</Product>
     <Copyright>PC Doctor AI</Copyright>
