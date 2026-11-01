@@ -202,12 +202,21 @@ switch (args[0])
     {
         var settings = PCDoctor.Core.Updates.UpdateSettings.Load(host.Paths.DataDir);
         if (!settings.Enabled) { Console.WriteLine("Este pendrive no tiene configurado dónde buscar versiones (data/actualizaciones.yaml)."); return 1; }
-        var current = (typeof(DoctorHost).Assembly.GetCustomAttributes(typeof(System.Reflection.AssemblyInformationalVersionAttribute), false)
+        // --como-version permite comprobar una versión publicada haciéndose pasar por una anterior; --descargar la baja y la verifica sin instalarla.
+        var current = Opt("--como-version") ?? (typeof(DoctorHost).Assembly.GetCustomAttributes(typeof(System.Reflection.AssemblyInformationalVersionAttribute), false)
             .OfType<System.Reflection.AssemblyInformationalVersionAttribute>().FirstOrDefault()?.InformationalVersion ?? "0").Split('+')[0];
-        var update = await new PCDoctor.Core.Updates.UpdateClient(settings.Repositorio, PCDoctor.Core.Updates.UpdateKeys.PublicKeyPem).CheckAsync(current);
+        var client = new PCDoctor.Core.Updates.UpdateClient(settings.Repositorio, PCDoctor.Core.Updates.UpdateKeys.PublicKeyPem);
+        var update = await client.CheckAsync(current);
         Console.WriteLine(update is null
             ? $"PC Doctor {current} está al día."
             : $"Hay una versión nueva: {update.Manifest.Version} ({update.DownloadSize / 1048576.0:0.0} MB). Firma comprobada.\n{update.Manifest.Notes}");
+        if (update is not null && Opt("--descargar") is { } folder)
+        {
+            await client.DownloadAsync(update, folder);
+            Console.WriteLine($"Descargada y comprobada en {Path.GetFullPath(folder)} (no se instaló nada).");
+            foreach (var p in update.Manifest.Packages)
+                Console.WriteLine($"  {p.Name}: {Directory.EnumerateFiles(Path.Combine(folder, p.Name), "*", SearchOption.AllDirectories).Count()} archivos, SHA-256 correcto");
+        }
         return 0;
     }
     default:
