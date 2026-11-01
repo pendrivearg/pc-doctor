@@ -133,13 +133,13 @@ public class AgentTests
         var pipeName = "pcdoctor-test-" + Guid.NewGuid().ToString("N");
         var sid = System.Security.Principal.WindowsIdentity.GetCurrent().User!.Value;
         var server = Task.Run(() => AgentServer.RunAsync(host, pipeName, "codigo-correcto", sid, Environment.ProcessId));
-        await using var pipe = new NamedPipeClientStream(".", pipeName, PipeDirection.InOut, PipeOptions.Asynchronous);
+        var pipe = new NamedPipeClientStream(".", pipeName, PipeDirection.InOut, PipeOptions.Asynchronous);
         await pipe.ConnectAsync(10_000);
-        using var writer = new StreamWriter(pipe, new UTF8Encoding(false), leaveOpen: true) { AutoFlush = true };
-        using var reader = new StreamReader(pipe, new UTF8Encoding(false), leaveOpen: true);
         string? reply;
         try
         {
+            var writer = new StreamWriter(pipe, new UTF8Encoding(false), leaveOpen: true) { AutoFlush = true };
+            var reader = new StreamReader(pipe, new UTF8Encoding(false), leaveOpen: true);
             await writer.WriteLineAsync(JsonSerializer.Serialize(new AgentRequest { Token = "codigo-falso", Op = "accion", Accion = "net.dns.flush" }));
             reply = await reader.ReadLineAsync();
         }
@@ -148,6 +148,8 @@ public class AgentTests
             // El agente cortó la conexión antes de que terminara el pedido: también es un rechazo (no respondió ni ejecutó nada).
             reply = null;
         }
+        // Cerrar nuestro extremo también puede encontrar la conexión ya cortada por el agente.
+        try { await pipe.DisposeAsync(); } catch (IOException) { }
         var code = await server.WaitAsync(TimeSpan.FromSeconds(20));
         // Lo importante: no respondió ni ejecutó nada. El código dice por qué cortó (0 = código secreto falso, 2 = proceso no autorizado).
         Assert.True(reply is null, $"el agente respondió: {reply}");
