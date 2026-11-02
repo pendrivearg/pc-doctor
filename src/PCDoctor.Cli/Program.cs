@@ -22,6 +22,7 @@ const string Usage = """
     Para publicar versiones (dueño del proyecto):
       pcdoctor-cli crear-claves <carpeta>      (una sola vez: clave privada para firmar y clave pública para el programa)
       pcdoctor-cli preparar-version --version X.Y.Z --notas "texto" --datos <pendrive publicado> [--rescate <parte de rescate>] --clave <privada.pem> --salida <carpeta>
+      pcdoctor-cli sellar-programa --datos <pendrive publicado> --clave <privada.pem>   (para que se abra solo al enchufarlo)
 
     Códigos de salida: 0 = bien, 1 = error de uso, 2 = se encontraron problemas, 3 = la reparación no se pudo verificar.
     """;
@@ -70,10 +71,29 @@ switch (args[0])
         var parts = new List<(string, string, string, IReadOnlyList<string>)> { ("programa", "datos", datos, PCDoctor.Core.Updates.UpdateLayout.Datos) };
         if (Opt("--rescate") is { } rescate) parts.Add(("rescate", "rescate", rescate, PCDoctor.Core.Updates.UpdateLayout.Rescate));
         var manifest = PCDoctor.Core.Updates.UpdatePackager.Build(version, Opt("--notas") ?? "", parts, salida, privatePem);
+        PCDoctor.Core.Updates.UpdateBundle.Create(salida, manifest.Version, salida); // todo en un archivo, para PCs sin Internet
         Console.WriteLine($"Versión {manifest.Version} lista en {Path.GetFullPath(salida)}:");
         foreach (var f in Directory.EnumerateFiles(salida)) Console.WriteLine($"  {Path.GetFileName(f)}  ({new FileInfo(f).Length / 1024:N0} KB)");
         Console.WriteLine("Subí todos esos archivos a una versión (release) nueva de GitHub.");
         return 0;
+    }
+    case "sellar-programa":
+    {
+        if (Opt("--datos") is not { } datos || Opt("--clave") is not { } clave)
+        {
+            Console.WriteLine(Usage);
+            return 1;
+        }
+        var privatePem = File.ReadAllText(clave);
+        if (PCDoctor.Core.Updates.UpdateSignature.PublicFromPrivate(privatePem).Trim() != PCDoctor.Core.Updates.UpdateKeys.PublicKeyPem.Trim())
+        {
+            Console.Error.WriteLine("Esa clave privada no corresponde a la clave pública que llevan los pendrives.");
+            return 1;
+        }
+        PCDoctor.Core.Updates.ProgramSealer.Seal(datos, privatePem);
+        var ok = PCDoctor.Core.Updates.ProgramSeal.Verify(datos, PCDoctor.Core.Updates.UpdateKeys.PublicKeyPem);
+        Console.WriteLine(ok ? "Programa sellado: el abridor automático lo va a reconocer." : "El sello no se pudo comprobar.");
+        return ok ? 0 : 3;
     }
     case "aplicar-actualizacion" when args.Length >= 2:
     {

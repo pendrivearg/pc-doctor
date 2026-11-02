@@ -19,10 +19,19 @@ SI LA COMPUTADORA NO ARRANCA: MODO RESCATE
    en la configuración de la placa habilitá «Microsoft UEFI CA de terceros», o pedile ayuda a un técnico.
 
 SI WINDOWS ARRANCA: CÓMO SE USA
-1. Abrí este pendrive en el Explorador de archivos.
-2. Hacé doble clic en «ABRIR PC DOCTOR».
-   (Windows no permite que un pendrive se abra solo: este doble clic siempre hace falta.)
-3. Tocá «ANALIZAR Y SOLUCIONAR MI COMPUTADORA» o escribí con tus palabras qué te pasa.
+1. La primera vez en cada PC: abrí este pendrive en el Explorador de archivos y hacé doble clic en «ABRIR PC DOCTOR».
+   (Windows no deja que un pendrive se abra solo: lo bloquea a propósito, contra los virus.)
+2. PC Doctor te pregunta si querés que se abra solo. Si decís que sí, desde ese momento, en esa PC,
+   alcanza con enchufar el pendrive: PC Doctor se abre solo. Se quita desde «Acerca de».
+3. Te pregunta «¿Qué problema tiene tu computadora?»: escribilo con tus palabras o tocá una opción.
+
+ACTUALIZAR EL PENDRIVE
+En PC Doctor tocá «Actualizar el pendrive»:
+- «Buscar la versión nueva por Internet»: la baja y la instala sola.
+- Si esa PC no tiene Internet o puede estar hackeada: en otra PC o en el celular bajá el archivo
+  «pcdoctor-actualizacion-…zip» de github.com/pendrivearg/pc-doctor/releases, copialo a este pendrive
+  y tocá «Instalar la actualización desde un archivo» (si está en el pendrive o en Descargas, lo encuentra solo).
+Cada versión viene firmada: si alguien la cambió, no se instala. Tu historial y lo rescatado no se tocan.
 
 Si Windows muestra «Windows protegió su PC» (SmartScreen), es porque esta versión de prueba
 todavía no tiene firma digital. Tocá «Más información» > «Ejecutar de todas formas».
@@ -32,7 +41,9 @@ QUÉ HACE Y QUÉ NO
   de lo que no se pudo comprobar.
 - Nunca cambia nada sin preguntarte. Cada cambio queda en el «Historial de reparaciones»
   y, si se puede deshacer, tiene su botón «Deshacer».
-- No instala nada en la computadora, no envía datos a Internet y no pide contraseñas.
+- No envía datos a Internet y no pide contraseñas. No instala nada en la computadora, salvo que pidas
+  que se abra solo al enchufarlo: ahí deja un programa chiquito (32 KB) que solo hace eso, y solo abre
+  un PC Doctor original (con sello firmado). Se quita con un botón en «Acerca de».
 - Algunas comprobaciones (temperatura del disco, chip TPM) piden permiso de administrador:
   en ese paso solo se lee información.
 

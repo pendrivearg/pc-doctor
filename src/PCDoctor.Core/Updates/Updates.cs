@@ -212,15 +212,126 @@ public sealed class UpdateClient
             }
             if (!UpdatePackager.Sha256Of(zipPath).Equals(p.Sha256, StringComparison.OrdinalIgnoreCase))
                 throw new InvalidDataException($"«{p.File}» llegó distinto de lo publicado (descarga dañada o modificada). No se instala.");
-            Extract(zipPath, Path.Combine(stagingDir, p.Name), p.Replace);
+            UpdateStaging.Extract(zipPath, Path.Combine(stagingDir, p.Name), p.Replace);
             File.Delete(zipPath);
         }
-        File.WriteAllBytes(Path.Combine(stagingDir, UpdateManifest.ManifestAsset), update.ManifestBytes);
-        File.WriteAllText(Path.Combine(stagingDir, UpdateManifest.SignatureAsset), Convert.ToBase64String(update.Signature));
-        File.WriteAllText(Path.Combine(stagingDir, "lista"), update.Manifest.Version);
+        UpdateStaging.Finish(stagingDir, update.ManifestBytes, update.Signature, update.Manifest.Version);
+    }
+}
+
+/// <summary>
+/// Toda una versión en un solo archivo («pcdoctor-actualizacion-X.Y.Z.zip»): para una PC sin Internet, o hackeada,
+/// se baja en otro lado (otra PC, el celular) y se instala desde el archivo. Lleva el mismo manifiesto firmado:
+/// se comprueba igual que la descarga de Internet.
+/// </summary>
+public static class UpdateBundle
+{
+    public const string Prefix = "pcdoctor-actualizacion-";
+
+    /// <summary>Junta en un solo archivo todo lo de la versión (los paquetes ya vienen comprimidos: se guardan tal cual).</summary>
+    public static string Create(string releaseDir, string version, string outputDir)
+    {
+        Directory.CreateDirectory(outputDir);
+        var path = Path.Combine(outputDir, $"{Prefix}{version}.zip");
+        if (File.Exists(path)) File.Delete(path);
+        var files = Directory.EnumerateFiles(releaseDir).Where(f => !Path.GetFileName(f).StartsWith(Prefix, StringComparison.OrdinalIgnoreCase)).ToList();
+        using var zip = ZipFile.Open(path, ZipArchiveMode.Create);
+        foreach (var f in files) zip.CreateEntryFromFile(f, Path.GetFileName(f), CompressionLevel.NoCompression);
+        return path;
     }
 
-    private static void Extract(string zipPath, string dest, IReadOnlyList<string> allowed)
+    /// <summary>Lee y comprueba la firma del archivo, sin descomprimir los paquetes. Si algo no cierra, lanza <see cref="InvalidDataException"/>.</summary>
+    public static UpdateManifest Read(string bundlePath, string publicKeyPem)
+    {
+        using var zip = OpenZip(bundlePath);
+        return ReadVerified(zip, publicKeyPem).Manifest;
+    }
+
+    /// <summary>Comprueba firma y huellas, y deja la versión lista para instalar en <paramref name="stagingDir"/>.</summary>
+    public static UpdateManifest Stage(string bundlePath, string stagingDir, string publicKeyPem, string currentVersion, IProgress<(long Done, long Total)>? progress = null)
+    {
+        using var zip = OpenZip(bundlePath);
+        var (manifest, bytes, signature) = ReadVerified(zip, publicKeyPem);
+        if (!UpdateVersion.IsNewer(manifest.Version, currentVersion))
+            throw new InvalidDataException($"Ese archivo es la versión {manifest.Version}, y este pendrive ya tiene la {currentVersion}.");
+        if (Directory.Exists(stagingDir)) Directory.Delete(stagingDir, recursive: true);
+        Directory.CreateDirectory(stagingDir);
+        long done = 0, total = manifest.Packages.Sum(p => p.Size);
+        foreach (var p in manifest.Packages)
+        {
+            var entry = zip.GetEntry(p.File) ?? throw new InvalidDataException($"Al archivo le falta «{p.File}»: no se instala.");
+            var zipPath = Path.Combine(stagingDir, p.File);
+            entry.ExtractToFile(zipPath, overwrite: true);
+            done += p.Size;
+            progress?.Report((done, total));
+            if (!UpdatePackager.Sha256Of(zipPath).Equals(p.Sha256, StringComparison.OrdinalIgnoreCase))
+                throw new InvalidDataException($"«{p.File}» está dañado o lo cambió alguien. No se instala.");
+            UpdateStaging.Extract(zipPath, Path.Combine(stagingDir, p.Name), p.Replace);
+            File.Delete(zipPath);
+        }
+        UpdateStaging.Finish(stagingDir, bytes, signature, manifest.Version);
+        return manifest;
+    }
+
+    /// <summary>El archivo de actualización más nuevo en estas carpetas (por ejemplo Descargas), si hay alguno.</summary>
+    public static string? FindNewest(IEnumerable<string> folders) =>
+        folders.Where(Directory.Exists)
+            .SelectMany(d => { try { return Directory.EnumerateFiles(d, Prefix + "*.zip"); } catch (IOException) { return []; } catch (UnauthorizedAccessException) { return []; } })
+            .Select(f => (File: f, Version: UpdateVersion.TryParse(Path.GetFileNameWithoutExtension(f)[Prefix.Length..])))
+            .Where(x => x.Version is not null)
+            .OrderByDescending(x => x.Version)
+            .Select(x => x.File)
+            .FirstOrDefault();
+
+    private static ZipArchive OpenZip(string path)
+    {
+        try { return ZipFile.OpenRead(path); }
+        catch (InvalidDataException) { throw new InvalidDataException("Ese archivo no es una actualización de PC Doctor (o se bajó incompleto)."); }
+    }
+
+    private static (UpdateManifest Manifest, byte[] Bytes, byte[] Signature) ReadVerified(ZipArchive zip, string publicKeyPem)
+    {
+        var m = zip.GetEntry(UpdateManifest.ManifestAsset);
+        var s = zip.GetEntry(UpdateManifest.SignatureAsset);
+        if (m is null || s is null || m.Length > 1_000_000 || s.Length > 10_000)
+            throw new InvalidDataException("Ese archivo no es una actualización de PC Doctor (no tiene manifiesto firmado).");
+        byte[] bytes, signature;
+        using (var ms = new MemoryStream()) { using (var st = m.Open()) st.CopyTo(ms); bytes = ms.ToArray(); }
+        using (var sr = new StreamReader(s.Open()))
+            try { signature = Convert.FromBase64String(sr.ReadToEnd().Trim()); }
+            catch (FormatException) { throw new InvalidDataException("La firma de ese archivo está dañada: no se instala."); }
+        if (!UpdateSignature.Verify(bytes, signature, publicKeyPem))
+            throw new InvalidDataException("La firma de ese archivo no es válida: alguien pudo haberlo modificado. No se instala.");
+        var manifest = UpdateManifest.Parse(bytes);
+        if (manifest.Product != UpdateManifest.ProductName) throw new InvalidDataException("Ese archivo no es de PC Doctor.");
+        foreach (var p in manifest.Packages) foreach (var r in p.Replace) UpdateRules.Normalize(r);
+        return (manifest, bytes, signature);
+    }
+}
+
+/// <summary>Pone el sello firmado del programa en un pendrive publicado (lo hace el dueño, con la clave privada).</summary>
+public static class ProgramSealer
+{
+    public static void Seal(string pendriveRoot, string privatePem)
+    {
+        var text = Encoding.UTF8.GetBytes(ProgramSeal.SealText(ProgramSeal.Sha256Hex(Path.Combine(pendriveRoot, ProgramSeal.ProgramFile))));
+        File.WriteAllBytes(Path.Combine(pendriveRoot, ProgramSeal.SealFile), text);
+        File.WriteAllText(Path.Combine(pendriveRoot, ProgramSeal.SignatureFile), Convert.ToBase64String(UpdateSignature.Sign(text, privatePem)));
+    }
+}
+
+/// <summary>La carpeta de preparación que después instala <see cref="UpdateApplier"/> (venga de Internet o de un archivo).</summary>
+internal static class UpdateStaging
+{
+    /// <summary>Solo cuando todo está comprobado se deja la marca «lista»: una preparación cortada nunca se instala.</summary>
+    public static void Finish(string stagingDir, byte[] manifestBytes, byte[] signature, string version)
+    {
+        File.WriteAllBytes(Path.Combine(stagingDir, UpdateManifest.ManifestAsset), manifestBytes);
+        File.WriteAllText(Path.Combine(stagingDir, UpdateManifest.SignatureAsset), Convert.ToBase64String(signature));
+        File.WriteAllText(Path.Combine(stagingDir, "lista"), version);
+    }
+
+    public static void Extract(string zipPath, string dest, IReadOnlyList<string> allowed)
     {
         using var zip = ZipFile.OpenRead(zipPath);
         var root = Path.GetFullPath(dest) + Path.DirectorySeparatorChar;
@@ -357,6 +468,7 @@ public static class UpdateLayout
     [
         "ABRIR PC DOCTOR.exe", "LEEME.txt", "pcdoctor/pcdoctor-cli.exe", "pcdoctor/e_sqlite3.dll",
         "pcdoctor/knowledge", "pcdoctor/data", "pcdoctor/licencias",
+        "pcdoctor/PCDoctor-Abrir.exe", "pcdoctor/pcdoctor.ico", "autorun.inf", "pcdoctor/firma-programa.txt", "pcdoctor/firma-programa.txt.firma",
     ];
 
     public static readonly string[] Rescate = ["pcdoctor/pcdoctor-rescate", "live/config-hooks"];

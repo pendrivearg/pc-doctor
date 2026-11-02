@@ -26,7 +26,7 @@ Write-Host '2/4  Armando los programas...' -ForegroundColor Cyan
 $base = Join-Path $env:LOCALAPPDATA "pcdbuild\version-$Version"
 if (Test-Path $base) { Remove-Item $base -Recurse -Force }
 $datos = "$base\datos"; $rescate = "$base\rescate"; $salida = "$base\publicar"
-& (Join-Path $PSScriptRoot 'publicar.ps1') -Destino "$datos\" | Out-Null
+& (Join-Path $PSScriptRoot 'publicar.ps1') -Destino "$datos\" -Clave $Clave | Out-Null
 & $dotnet publish (Join-Path $raiz 'src\PCDoctor.Rescue') -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true -p:DebugType=none -nologo -v q -o "$base\rescate-bin"
 if ($LASTEXITCODE -ne 0) { throw 'falló el programa del modo rescate' }
 New-Item -ItemType Directory -Force "$rescate\pcdoctor", "$rescate\live\config-hooks" | Out-Null
@@ -43,7 +43,7 @@ if ($Subir) {
     $archivos = Get-ChildItem $salida -File | ForEach-Object FullName
     gh release create "v$Version" @archivos --title "PC Doctor $Version" --notes $Notas
     if ($LASTEXITCODE -ne 0) { throw 'gh no pudo crear la versión (¿iniciaste sesión con «gh auth login»?)' }
-    Write-Host "Versión v$Version publicada. Los pendrives la ven en «Acerca de» > «Buscar actualizaciones»." -ForegroundColor Green
+    Write-Host "Versión v$Version publicada. Los pendrives la ven en «Actualizar el pendrive» (por Internet o con el archivo pcdoctor-actualizacion-$Version.zip)." -ForegroundColor Green
 } else {
-    Write-Host "Listo. Subí los archivos de $salida a una versión nueva (tag v$Version) en GitHub > Releases." -ForegroundColor Green
+    Write-Host "Listo. Subí TODOS los archivos de $salida a una versión nueva (tag v$Version) en GitHub > Releases. El archivo pcdoctor-actualizacion-$Version.zip sirve para PCs sin Internet." -ForegroundColor Green
 }

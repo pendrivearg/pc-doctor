@@ -166,6 +166,106 @@ public class UiEndToEndTests
     });
 
     [Fact]
+    public Task FromThePendriveOffersAutoOpenAndUpdates() => Ui(async () =>
+    {
+        var pendrive = Directory.CreateDirectory(Path.Combine(Path.GetTempPath(), "PCDoctorPendrive", Guid.NewGuid().ToString("N"))).FullName;
+        Directory.CreateDirectory(Path.Combine(pendrive, "pcdoctor"));
+        File.WriteAllText(Path.Combine(pendrive, "pcdoctor", AutoOpen.ExeName), "abridor");
+        File.WriteAllText(Path.Combine(pendrive, "autorun.inf"), "[autorun]");
+        var install = Path.Combine(pendrive, "instalado");
+        var runKey = @"Software\PCDoctorPruebas\Run-" + Guid.NewGuid().ToString("N");
+        MainWindow.PendriveRootOverride = () => pendrive;
+        MainWindow.SealValid = _ => true;
+        MainWindow.AutoOpenFactory = () => new AutoOpen(install, runKey);
+        string? declined = null;
+        try
+        {
+            var w = new MainWindow { Width = 1100, Height = 900 };
+            w.Show();
+            await w.SealCheck!;
+            await Task.Delay(100);
+            Dispatcher.UIThread.RunJobs();
+            AssertNoError(w, "inicio desde el pendrive");
+            var home = Buttons(w).Select(Label).ToList();
+            Assert.Contains("Actualizar el pendrive", home);
+            Assert.Contains("Sí, que se abra solo", home);
+            Assert.True(File.GetAttributes(Path.Combine(pendrive, "pcdoctor")).HasFlag(FileAttributes.Hidden)); // al abrir el pendrive solo se ve el programa
+            Assert.True(File.GetAttributes(Path.Combine(pendrive, "autorun.inf")).HasFlag(FileAttributes.Hidden));
+
+            // «No, gracias»: no se vuelve a ofrecer en esta PC y no se instala nada.
+            Buttons(w).Single(b => Label(b) == "No, gracias").RaiseEvent(new Avalonia.Interactivity.RoutedEventArgs(Button.ClickEvent));
+            Dispatcher.UIThread.RunJobs();
+            declined = Path.Combine(w.MachineDirForTests, "no-abrir-solo.txt");
+            Assert.True(File.Exists(declined));
+            Assert.DoesNotContain("Sí, que se abra solo", Buttons(w).Select(Label));
+            Assert.False(Directory.Exists(install));
+
+            // Pantalla de actualizar: por Internet y desde un archivo; un archivo falso se rechaza sin romper nada.
+            Buttons(w).Single(b => Label(b) == "Actualizar el pendrive").RaiseEvent(new Avalonia.Interactivity.RoutedEventArgs(Button.ClickEvent));
+            Dispatcher.UIThread.RunJobs();
+            AssertNoError(w, "actualizar el pendrive");
+            var update = Buttons(w).Select(Label).ToList();
+            Assert.Contains("Buscar la versión nueva por Internet", update);
+            Assert.Contains("Instalar la actualización desde un archivo", update);
+            var fake = Path.Combine(pendrive, "pcdoctor-actualizacion-9.9.9.zip");
+            File.WriteAllText(fake, "no es una actualización");
+            w.SnapHome();
+            Dispatcher.UIThread.RunJobs();
+            Buttons(w).Single(b => Label(b) == "Actualizar el pendrive").RaiseEvent(new Avalonia.Interactivity.RoutedEventArgs(Button.ClickEvent));
+            Dispatcher.UIThread.RunJobs();
+            Assert.Contains("Instalar esta actualización", Buttons(w).Select(Label)); // la encontró sola en el pendrive
+            await w.StageBundleAsync(fake);
+            AssertNoError(w, "archivo de actualización falso");
+            var texts = w.GetVisualDescendants().OfType<TextBlock>().Select(t => t.Text ?? "").ToList();
+            Assert.Contains(texts, t => t.Contains("no es una actualización de PC Doctor") && t.Contains("No se cambió nada"));
+            Assert.DoesNotContain("Instalar ahora", Buttons(w).Select(Label));
+            w.Close();
+        }
+        finally
+        {
+            MainWindow.PendriveRootOverride = null;
+            MainWindow.SealValid = root => PCDoctor.Core.Updates.ProgramSeal.Verify(root, PCDoctor.Core.Updates.UpdateKeys.PublicKeyPem);
+            MainWindow.AutoOpenFactory = AutoOpen.ForThisUser;
+            if (declined is not null) File.Delete(declined);
+            Microsoft.Win32.Registry.CurrentUser.DeleteSubKeyTree(@"Software\PCDoctorPruebas", throwOnMissingSubKey: false);
+            foreach (var f in Directory.EnumerateFileSystemEntries(pendrive, "*", SearchOption.AllDirectories)) File.SetAttributes(f, FileAttributes.Normal);
+            Directory.Delete(pendrive, recursive: true);
+        }
+    });
+
+    [Fact]
+    public void AutoOpenInstallsOnlyForThisUserAndRemovesCleanly()
+    {
+        var dir = Directory.CreateDirectory(Path.Combine(Path.GetTempPath(), "PCDoctorAbrir", Guid.NewGuid().ToString("N"))).FullName;
+        var runKey = @"Software\PCDoctorPruebas\Run-" + Guid.NewGuid().ToString("N");
+        try
+        {
+            var source = Path.Combine(dir, "pendrive-abridor.exe");
+            File.WriteAllText(source, "abridor v1");
+            var opener = new AutoOpen(Path.Combine(dir, "instalado"), runKey);
+            Assert.False(opener.IsEnabled);
+            opener.Enable(source, start: false);
+            Assert.True(opener.IsEnabled);
+            using (var key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(runKey))
+                Assert.Equal($"\"{opener.ExePath}\"", key!.GetValue(AutoOpen.ValueName));
+            Assert.False(opener.Refresh(source, start: false)); // igual: no hace nada
+            File.WriteAllText(source, "abridor v2");
+            Assert.True(opener.Refresh(source, start: false)); // el pendrive se actualizó: la PC queda al día
+            Assert.Equal("abridor v2", File.ReadAllText(opener.ExePath));
+            opener.Disable();
+            Assert.False(opener.IsEnabled);
+            Assert.False(Directory.Exists(Path.Combine(dir, "instalado")));
+            using (var key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(runKey))
+                Assert.Null(key?.GetValue(AutoOpen.ValueName));
+        }
+        finally
+        {
+            Microsoft.Win32.Registry.CurrentUser.DeleteSubKeyTree(@"Software\PCDoctorPruebas", throwOnMissingSubKey: false);
+            Directory.Delete(dir, recursive: true);
+        }
+    }
+
+    [Fact]
     public Task PermissionNoticeIsClearAndHasBothChoices() => Ui(() =>
     {
         var w = new MainWindow();

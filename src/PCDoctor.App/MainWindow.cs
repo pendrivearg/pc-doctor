@@ -83,6 +83,7 @@ public sealed class MainWindow : Window
         shell.Children.Add(_content);
         Content = shell;
 
+        if (_host is not null) StartPendriveChecks();
         if (_host is null) Show(() => ErrorView(_startupError ?? "Error desconocido"));
         else Show(HomeView);
         Closing += (_, _) =>
@@ -212,14 +213,8 @@ public sealed class MainWindow : Window
     {
         var host = _host!;
         var page = new StackPanel { Spacing = S(16) };
-        page.Children.Add(Text("Hola. ¿En qué te ayudo?", 28, FontWeight.Bold));
-
-        var big = Btn("ANALIZAR Y SOLUCIONAR MI COMPUTADORA", () => RunDiagnosisAsync(null, null, null), primary: true, size: 26);
-        big.HorizontalAlignment = HorizontalAlignment.Stretch;
-        big.Padding = new Thickness(S(20), S(26));
-        page.Children.Add(big);
-
-        page.Children.Add(Text("¿Tenés un problema? Contalo con tus palabras:", 21, FontWeight.SemiBold));
+        page.Children.Add(Text("¿Qué problema tiene tu computadora?", 30, FontWeight.Bold));
+        page.Children.Add(Text("Contalo con tus palabras, o tocá una de las opciones de abajo:", 20));
         var box = new TextBox
         {
             Watermark = "Por ejemplo: «no tengo sonido», «la compu está muy lenta», «no me sale la @»",
@@ -241,7 +236,12 @@ public sealed class MainWindow : Window
         page.Children.Add(askRow);
         if (notice is not null) page.Children.Add(Card(Text(notice, 18), StatusBrush(HealthStatus.Warning)));
 
-        page.Children.Add(Text("O elegí qué revisar:", 21, FontWeight.SemiBold));
+        var big = Btn("ANALIZAR Y SOLUCIONAR MI COMPUTADORA", () => RunDiagnosisAsync(null, null, null), primary: true, size: 26);
+        big.HorizontalAlignment = HorizontalAlignment.Stretch;
+        big.Padding = new Thickness(S(20), S(26));
+        page.Children.Add(big);
+
+        page.Children.Add(Text("O tocá lo que te pasa:", 21, FontWeight.SemiBold));
         var grid = new UniformGrid { Columns = Bounds.Width is > 0 and < 820 ? 2 : 3 };
         foreach (var area in Areas.All)
         {
@@ -266,6 +266,22 @@ public sealed class MainWindow : Window
             rescue.Children.Add(Btn("Revisar con Windows apagado", () => ConfirmRescueRebootAsync(), size: 19));
             page.Children.Add(Card(rescue, StatusBrush(HealthStatus.Warning)));
         }
+
+        if (PendriveRoot() is not null && UpdateSettings.Load(host.Paths.DataDir).Enabled)
+        {
+            var update = Btn("Actualizar el pendrive", () => Show(UpdateView), size: 19);
+            update.HorizontalAlignment = HorizontalAlignment.Left;
+            page.Children.Add(Card(new StackPanel
+            {
+                Spacing = S(8),
+                Children = { Text($"Este pendrive tiene la versión {Version}. Las versiones nuevas traen más problemas resueltos y arreglos.", 17), update },
+            }));
+        }
+
+        // La oferta de abrirse solo aparece cuando termina de comprobarse el sello del pendrive (unos segundos, sin frenar la pantalla).
+        _autoOpenSlot = new StackPanel();
+        FillAutoOpenSlot(_autoOpenSlot);
+        page.Children.Add(_autoOpenSlot);
 
         var footer = new StringBuilder($"{host.Knowledge.Problems.Count} problemas en la biblioteca · versión {Version} de prueba");
         if (!host.IsElevated) footer.Append(" · Abierto sin permiso de administrador: el análisis funciona igual y te va a pedir permiso solo si hace falta.");
@@ -1007,9 +1023,10 @@ public sealed class MainWindow : Window
             Spacing = S(6),
             Children =
             {
-                Text("• Funciona sin Internet. No envía datos a ningún lado y no tiene publicidad. Solo se conecta si tocás «Buscar actualizaciones», y únicamente para descargar la versión nueva.", 17),
+                Text("• Funciona sin Internet. No envía datos a ningún lado y no tiene publicidad. Solo se conecta si tocás «Buscar la versión nueva por Internet», y únicamente para descargarla.", 17),
                 Text("• No pide, no lee y no guarda contraseñas.", 17),
-                Text("• No instala nada en la computadora y nunca cambia nada sin preguntarte.", 17),
+                Text("• No instala nada en la computadora y nunca cambia nada sin preguntarte. La única excepción es si pedís que se abra solo al enchufar el pendrive: "
+                     + "ahí queda en esta PC un programa chiquito que se quita con el botón de abajo.", 17),
                 Text("• El historial de reparaciones y los informes de cada PC quedan solo en el pendrive y se pueden borrar.", 17),
                 Text("• PC Doctor nunca te va a llamar por teléfono ni pedir acceso remoto o pagos: si alguien lo hace en su nombre, es una estafa.", 17),
             },
@@ -1022,11 +1039,26 @@ public sealed class MainWindow : Window
         var notices = Path.Combine(host.Paths.ContentRoot, "licencias", "THIRD-PARTY-NOTICES.md");
         if (File.Exists(notices)) Add(Btn("Componentes de terceros", () => OpenLocal(notices)));
         Add(Btn("Abrir la carpeta de informes", () => OpenLocal(host.ReportsDir)));
-        var updates = UpdateSettings.Load(host.Paths.DataDir);
-        if (updates.Enabled && PendriveRoot() is not null) Add(Btn("Buscar actualizaciones", () => CheckUpdatesAsync(updates), primary: true));
+        if (PendriveRoot() is { } root)
+        {
+            Add(Btn("Actualizar el pendrive", () => Show(UpdateView), primary: true));
+            var opener = AutoOpenFactory();
+            if (opener.IsEnabled)
+                Add(Btn("Que no se abra solo en esta PC", () =>
+                {
+                    opener.Disable();
+                    File.WriteAllText(Path.Combine(host.MachineDir, NoAutoOpenFile), DateTime.Now.ToString("dd/MM/yyyy"));
+                    Show(AboutView);
+                }));
+            else if (File.Exists(Path.Combine(root, "pcdoctor", AutoOpen.ExeName)) && _sealCheck is { IsCompletedSuccessfully: true, Result: true })
+                Add(Btn("Que se abra solo al enchufarlo en esta PC", () =>
+                {
+                    opener.Enable(Path.Combine(root, "pcdoctor", AutoOpen.ExeName));
+                    File.Delete(Path.Combine(host.MachineDir, NoAutoOpenFile));
+                    Show(AboutView);
+                }));
+        }
         page.Children.Add(actions);
-        var last = Path.Combine(host.Paths.ContentRoot, "ultima-actualizacion.txt");
-        if (File.Exists(last)) page.Children.Add(Text("Última actualización: " + File.ReadAllText(last).Trim(), 14, color: Muted));
         SetPage(page);
     }
 
@@ -1088,20 +1120,200 @@ public sealed class MainWindow : Window
         return dialog;
     }
 
+    // ───────────────────────────── abrirse solo al enchufar ─────────────────────────────
+
+    private const string NoAutoOpenFile = "no-abrir-solo.txt";
+    private Task<bool>? _sealCheck;
+    private StackPanel? _autoOpenSlot;
+
+    /// <summary>¿El programa de este pendrive tiene el sello firmado de PC Doctor? (En las pruebas se reemplaza.)</summary>
+    internal static Func<string, bool> SealValid = root => ProgramSeal.Verify(root, UpdateKeys.PublicKeyPem);
+    internal static Func<AutoOpen> AutoOpenFactory = AutoOpen.ForThisUser;
+    /// <summary>Para las pruebas: hace de cuenta que PC Doctor corre desde un pendrive en esa carpeta.</summary>
+    internal static Func<string?>? PendriveRootOverride;
+    internal Task? SealCheck => _sealCheck;
+    internal string MachineDirForTests => _host!.MachineDir;
+
+    private void StartPendriveChecks()
+    {
+        if (PendriveRoot() is not { } root) return;
+        HidePendriveInternals(root);
+        var opener = Path.Combine(root, "pcdoctor", AutoOpen.ExeName);
+        _sealCheck = Task.Run(() =>
+        {
+            var ok = SealValid(root);
+            // Si esta PC ya lo tiene activado y el pendrive se actualizó, el abridor de la PC queda al día.
+            if (ok)
+                try { AutoOpenFactory().Refresh(opener); }
+                catch (Exception e) { AppLog.Error("abridor", e); }
+            return ok;
+        });
+        _sealCheck.ContinueWith(_ => Avalonia.Threading.Dispatcher.UIThread.Post(() => { if (_autoOpenSlot is { } slot) FillAutoOpenSlot(slot); }));
+    }
+
+    /// <summary>
+    /// Al abrir el pendrive se ve solo «ABRIR PC DOCTOR» y el LEEME. Se repite en cada inicio porque una actualización
+    /// reemplaza archivos y les saca el atributo; así también quedan ordenados los pendrives armados antes.
+    /// </summary>
+    private static void HidePendriveInternals(string root)
+    {
+        foreach (var name in new[] { "pcdoctor", "PC-Doctor-AI-codigo", "autorun.inf" })
+            try
+            {
+                var path = Path.Combine(root, name);
+                if (File.Exists(path) || Directory.Exists(path)) File.SetAttributes(path, File.GetAttributes(path) | FileAttributes.Hidden);
+            }
+            catch (Exception e) when (e is IOException or UnauthorizedAccessException) { }
+    }
+
+    private bool ShouldOfferAutoOpen()
+    {
+        if (_sealCheck is not { IsCompletedSuccessfully: true, Result: true } || PendriveRoot() is not { } root) return false;
+        if (!File.Exists(Path.Combine(root, "pcdoctor", AutoOpen.ExeName)) || File.Exists(Path.Combine(_host!.MachineDir, NoAutoOpenFile))) return false;
+        return !AutoOpenFactory().IsEnabled;
+    }
+
+    private void FillAutoOpenSlot(StackPanel slot)
+    {
+        slot.Children.Clear();
+        if (!ShouldOfferAutoOpen()) return;
+        var offer = new StackPanel { Spacing = S(8) };
+        offer.Children.Add(Text("¿Querés que PC Doctor se abra solo cada vez que enchufes este pendrive en esta computadora?", 20, FontWeight.Bold));
+        offer.Children.Add(Text("Windows no deja que un pendrive se abra solo. Si decís que sí, queda en esta PC un programa chiquito que hace solo eso: "
+                                + "abre PC Doctor al enchufar el pendrive, y únicamente si es un PC Doctor original. Lo podés quitar cuando quieras desde «Acerca de».", 17));
+        offer.Children.Add(Row(10,
+            Btn("Sí, que se abra solo", () =>
+            {
+                AutoOpenFactory().Enable(Path.Combine(PendriveRoot()!, "pcdoctor", AutoOpen.ExeName));
+                Show(() => HomeView("Listo: la próxima vez que enchufes este pendrive en esta PC, PC Doctor se abre solo."));
+            }, primary: true, size: 18),
+            Btn("No, gracias", () =>
+            {
+                File.WriteAllText(Path.Combine(_host!.MachineDir, NoAutoOpenFile), DateTime.Now.ToString("dd/MM/yyyy"));
+                FillAutoOpenSlot(slot);
+            }, size: 18)));
+        slot.Children.Add(Card(offer, StatusBrush(HealthStatus.Ok)));
+    }
+
     /// <summary>Raíz del pendrive (donde está «ABRIR PC DOCTOR.exe»). En desarrollo no hay: ahí no se actualiza nada.</summary>
     private string? PendriveRoot()
     {
+        if (PendriveRootOverride is not null) return PendriveRootOverride();
         var content = Path.GetFullPath(_host!.Paths.ContentRoot).TrimEnd(Path.DirectorySeparatorChar);
         if (!Path.GetFileName(content).Equals("pcdoctor", StringComparison.OrdinalIgnoreCase)) return null;
         var root = Path.GetDirectoryName(content)!;
         return File.Exists(Path.Combine(root, "ABRIR PC DOCTOR.exe")) ? root : null;
     }
 
+    // ───────────────────────────── actualizar el pendrive ─────────────────────────────
+
+    /// <summary>Dónde se busca solo un archivo de actualización ya bajado: Descargas y la raíz del pendrive.</summary>
+    private IEnumerable<string> BundleFolders()
+    {
+        yield return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
+        if (PendriveRoot() is { } root) yield return root;
+    }
+
+    private void UpdateView()
+    {
+        var host = _host!;
+        var page = new StackPanel { Spacing = S(14) };
+        page.Children.Add(Row(12, Btn("Volver al inicio", () => Show(HomeView)), Text("Actualizar el pendrive", 26, FontWeight.Bold)));
+        var info = new StackPanel { Spacing = S(6) };
+        info.Children.Add(Text($"Este pendrive tiene la versión {Version}.", 19, FontWeight.SemiBold));
+        var last = Path.Combine(host.Paths.ContentRoot, "ultima-actualizacion.txt");
+        if (File.Exists(last)) info.Children.Add(Text("Última actualización: " + File.ReadAllText(last).Trim(), 16, color: Muted));
+        info.Children.Add(Text("Se reemplazan el programa y la biblioteca de problemas. Tu historial, tus informes y los archivos rescatados no se tocan. "
+                               + "Cada versión viene firmada: si alguien la cambió, no se instala.", 17));
+        page.Children.Add(Card(info));
+
+        var found = UpdateBundle.FindNewest(BundleFolders());
+        if (found is not null && UpdateVersion.IsNewer(Path.GetFileNameWithoutExtension(found)[UpdateBundle.Prefix.Length..], Version))
+        {
+            var where = string.Equals(Path.GetDirectoryName(found)!.TrimEnd('\\'), PendriveRoot()?.TrimEnd('\\'), StringComparison.OrdinalIgnoreCase)
+                ? "en el pendrive" : "en Descargas";
+            page.Children.Add(Card(new StackPanel
+            {
+                Spacing = S(8),
+                Children =
+                {
+                    Text($"Encontré la actualización «{Path.GetFileName(found)}» {where}.", 19, FontWeight.Bold),
+                    Btn("Instalar esta actualización", () => StageBundleAsync(found), primary: true, size: 19),
+                },
+            }, StatusBrush(HealthStatus.Ok)));
+        }
+
+        var settings = UpdateSettings.Load(host.Paths.DataDir);
+        var online = Btn("Buscar la versión nueva por Internet", () => CheckUpdatesAsync(settings), primary: found is null, size: 19);
+        var file = Btn("Instalar la actualización desde un archivo", () => PickBundleAsync(), size: 19);
+        foreach (var b in new[] { online, file }) b.HorizontalAlignment = HorizontalAlignment.Stretch;
+        if (settings.Enabled) page.Children.Add(online);
+        page.Children.Add(file);
+        var site = settings.Enabled ? $"github.com/{settings.Repositorio}/releases" : "la página del proyecto";
+        page.Children.Add(Text($"Si esta PC no tiene Internet, o puede estar hackeada: en otra PC o en el celular entrá a {site}, bajá el archivo "
+                               + $"«{UpdateBundle.Prefix}…zip», copialo a este pendrive y tocá «Instalar la actualización desde un archivo».", 16, color: Muted));
+        SetPage(page);
+    }
+
+    private async Task PickBundleAsync()
+    {
+        var picker = StorageProvider;
+        var files = await picker.OpenFilePickerAsync(new Avalonia.Platform.Storage.FilePickerOpenOptions
+        {
+            Title = "Elegí el archivo de actualización de PC Doctor",
+            AllowMultiple = false,
+            FileTypeFilter = [new Avalonia.Platform.Storage.FilePickerFileType("Actualización de PC Doctor") { Patterns = [UpdateBundle.Prefix + "*.zip", "*.zip"] }],
+            SuggestedStartLocation = await picker.TryGetWellKnownFolderAsync(Avalonia.Platform.Storage.WellKnownFolder.Downloads),
+        });
+        if (files.Count == 0) return;
+        var path = Avalonia.Platform.Storage.StorageProviderExtensions.TryGetLocalPath(files[0]);
+        if (path is null) { Show(() => UpdateResultView("Ese archivo no se puede abrir desde acá. Copialo al pendrive o a Descargas y probá de nuevo.")); return; }
+        await StageBundleAsync(path);
+    }
+
+    private void UpdateResultView(string message)
+    {
+        var page = new StackPanel { Spacing = S(14) };
+        page.Children.Add(Row(12, Btn("Volver", () => Show(UpdateView)), Text("Actualizar el pendrive", 26, FontWeight.Bold)));
+        page.Children.Add(Card(Text(message, 18), StatusBrush(HealthStatus.Warning)));
+        SetPage(page);
+    }
+
+    /// <summary>Comprueba la firma del archivo y lo deja listo; después la persona confirma y se instala igual que desde Internet.</summary>
+    internal async Task StageBundleAsync(string bundlePath)
+    {
+        var host = _host!;
+        var status = Text("Comprobando la firma de la actualización…", 18);
+        var page = new StackPanel { Spacing = S(14) };
+        page.Children.Add(Row(12, Btn("Volver", () => Show(UpdateView)), Text("Actualizar el pendrive", 26, FontWeight.Bold)));
+        page.Children.Add(Card(status));
+        SetPage(page);
+        var staging = Path.Combine(host.Paths.ContentRoot, "actualizacion");
+        UpdateManifest manifest;
+        _busy = true;
+        try
+        {
+            var progress = new Progress<(long Done, long Total)>(p => status.Text = $"Comprobando y preparando: {p.Done * 100 / Math.Max(p.Total, 1)} %");
+            var current = Version;
+            manifest = await Task.Run(() => UpdateBundle.Stage(bundlePath, staging, UpdateKeys.PublicKeyPem, current, progress));
+        }
+        catch (Exception e) when (e is InvalidDataException or IOException or UnauthorizedAccessException)
+        {
+            status.Text = e.Message + "\nNo se cambió nada.";
+            AppLog.Info("Actualización desde archivo rechazada: " + e.Message);
+            return;
+        }
+        finally { _busy = false; }
+        status.Text = $"La actualización es auténtica: versión {manifest.Version} (tenés la {Version}).\n\n{manifest.Notes}".TrimEnd()
+                      + "\n\nPC Doctor se cierra y se vuelve a abrir solo.";
+        page.Children.Add(Btn("Instalar ahora", () => LaunchInstallerAsync(staging, manifest.Version, status), primary: true));
+    }
+
     private async Task CheckUpdatesAsync(UpdateSettings settings)
     {
         var status = Text("Buscando una versión nueva…", 18);
         var page = new StackPanel { Spacing = S(14) };
-        page.Children.Add(Row(12, Btn("Volver", () => Show(AboutView)), Text("Actualizar PC Doctor", 26, FontWeight.Bold)));
+        page.Children.Add(Row(12, Btn("Volver", () => Show(UpdateView)), Text("Actualizar el pendrive", 26, FontWeight.Bold)));
         page.Children.Add(Card(status));
         SetPage(page);
         var client = new UpdateClient(settings.Repositorio, UpdateKeys.PublicKeyPem);
@@ -1120,8 +1332,6 @@ public sealed class MainWindow : Window
     private async Task InstallUpdateAsync(UpdateClient client, AvailableUpdate update, TextBlock status)
     {
         var host = _host!;
-        var root = PendriveRoot() ?? throw new InvalidOperationException("Solo se puede actualizar PC Doctor desde el pendrive.");
-        var cli = FindCli() ?? throw new InvalidOperationException("No encontré la herramienta pcdoctor-cli.exe junto a PC Doctor.");
         var staging = Path.Combine(host.Paths.ContentRoot, "actualizacion");
         _busy = true;
         try
@@ -1136,6 +1346,15 @@ public sealed class MainWindow : Window
             status.Text = "No se pudo descargar la versión nueva: " + e.Message + "\nNo se cambió nada.";
             return;
         }
+        await LaunchInstallerAsync(staging, update.Manifest.Version, status);
+    }
+
+    /// <summary>Instala una versión ya comprobada en <paramref name="staging"/>: cierra PC Doctor, reemplaza y lo vuelve a abrir.</summary>
+    private async Task LaunchInstallerAsync(string staging, string version, TextBlock status)
+    {
+        var root = PendriveRoot() ?? throw new InvalidOperationException("Solo se puede actualizar PC Doctor desde el pendrive.");
+        var cli = FindCli() ?? throw new InvalidOperationException("No encontré la herramienta pcdoctor-cli.exe junto a PC Doctor.");
+        _busy = true;
         // El instalador corre desde una copia temporal, para que todos los archivos del pendrive queden libres.
         var temp = Directory.CreateDirectory(Path.Combine(Path.GetTempPath(), "pcdoctor-actualizar-" + Guid.NewGuid().ToString("N")[..8])).FullName;
         foreach (var f in Directory.EnumerateFiles(Path.GetDirectoryName(cli)!, "*.*").Where(f => f.EndsWith(".exe") || f.EndsWith(".dll")))
@@ -1145,7 +1364,7 @@ public sealed class MainWindow : Window
             psi.ArgumentList.Add(a);
         var rescue = DriveInfo.GetDrives().FirstOrDefault(d => d.IsReady && d.VolumeLabel.Equals("PCD-RESCATE", StringComparison.OrdinalIgnoreCase));
         if (rescue is not null) { psi.ArgumentList.Add("--rescate"); psi.ArgumentList.Add(rescue.RootDirectory.FullName); }
-        AppLog.Info($"Instalando la versión {update.Manifest.Version}");
+        AppLog.Info($"Instalando la versión {version}");
         status.Text = "Instalando… PC Doctor se va a cerrar y se vuelve a abrir solo en unos segundos.";
         await Task.Delay(1500);
         Process.Start(psi)?.Dispose();

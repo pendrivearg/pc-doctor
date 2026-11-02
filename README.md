@@ -1,6 +1,6 @@
 # PC Doctor AI
 
-Diagnóstico y reparación de computadoras desde un pendrive, pensado para que cualquier persona —incluso sin conocimientos— pueda entender qué le pasa a su PC y solucionarlo. Funciona **sin Internet**, **no instala nada** en la computadora, **no envía datos** y **nunca cambia nada sin preguntar**.
+Diagnóstico y reparación de computadoras desde un pendrive, pensado para que cualquier persona —incluso sin conocimientos— pueda entender qué le pasa a su PC y solucionarlo. Funciona **sin Internet**, **no instala nada** en la computadora (salvo, si la persona lo pide, un abridor de 32 KB para que se abra solo al enchufar el pendrive), **no envía datos** y **nunca cambia nada sin preguntar**.
 
 Si Windows no arranca o un virus no deja usar la PC, el pendrive tiene un **modo rescate** que arranca sin Windows: rescata fotos y documentos, busca virus y señales de hackeo con Windows apagado y revisa si el disco está fallando.
 
@@ -20,7 +20,7 @@ La firma de código de Windows de PC Doctor la provee gratuitamente [SignPath.io
   - **Autores** (pueden subir cambios): [pendrivearg](https://github.com/pendrivearg)
   - **Revisores** (revisan cambios de otras personas): [pendrivearg](https://github.com/pendrivearg)
   - **Aprobadores** (aprueban cada firma): [pendrivearg](https://github.com/pendrivearg)
-- Privacidad: ver la [política de privacidad](PRIVACIDAD.md). En resumen, el programa no envía datos; solo se conecta a GitHub cuando la persona toca «Buscar actualizaciones».
+- Privacidad: ver la [política de privacidad](PRIVACIDAD.md). En resumen, el programa no envía datos; solo se conecta a GitHub cuando la persona toca «Buscar la versión nueva por Internet». La actualización también se puede instalar desde un archivo, sin Internet.
 
 ## Principios
 

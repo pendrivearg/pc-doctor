@@ -279,6 +279,89 @@ public class UpdateTests
         Assert.False(UpdateSettings.Load(NewDir()).Enabled); // sin archivo: apagado
     }
 
+    [Fact]
+    public void InstallsFromASingleFileWithoutInternetAndKeepsUserData()
+    {
+        var (datos, rescate) = OldPendrive();
+        var bundle = UpdateBundle.Create(PublishNewVersion(), "0.3.0", NewDir());
+        Assert.Equal("pcdoctor-actualizacion-0.3.0.zip", Path.GetFileName(bundle));
+        Assert.Equal("0.3.0", UpdateBundle.Read(bundle, Keys.Public).Version);
+
+        var staging = Path.Combine(datos, "pcdoctor", "actualizacion");
+        var manifest = UpdateBundle.Stage(bundle, staging, Keys.Public, "0.2.0");
+        Assert.Equal("0.3.0", manifest.Version);
+        var result = UpdateApplier.Apply(staging, new Dictionary<string, string> { ["datos"] = datos, ["rescate"] = rescate }, Keys.Public, "0.2.0");
+        Assert.True(result.Ok, result.Message);
+        Assert.Equal("nuevo ABRIR PC DOCTOR.exe", Read(datos, "ABRIR PC DOCTOR.exe"));
+        Assert.Equal("nuevo pcdoctor/PCDoctor-Abrir.exe", Read(datos, "pcdoctor/PCDoctor-Abrir.exe"));
+        Assert.Equal("rescate nuevo", Read(rescate, "pcdoctor/pcdoctor-rescate"));
+        Assert.Equal("HISTORIAL", Read(datos, "pcdoctor/state/machines/x/historial.db"));
+        Assert.Equal("FOTO", Read(datos, "RESCATE/2026-11-01/Archivos/Juan/foto.jpg"));
+    }
+
+    [Fact]
+    public void RejectsForgedTamperedOldOrBogusUpdateFiles()
+    {
+        var staging = Path.Combine(NewDir(), "actualizacion");
+        // Firmada por otro.
+        var forged = UpdateBundle.Create(PublishNewVersion(privateKey: UpdateSignature.CreateKeys().PrivatePem), "0.3.0", NewDir());
+        Assert.Contains("firma", Assert.Throws<InvalidDataException>(() => UpdateBundle.Stage(forged, staging, Keys.Public, "0.2.0")).Message);
+        // Un paquete cambiado después de firmar.
+        var release = PublishNewVersion();
+        var zip = Directory.EnumerateFiles(release, "programa-*.zip").Single();
+        var bytes = File.ReadAllBytes(zip);
+        bytes[bytes.Length / 2] ^= 0xFF;
+        File.WriteAllBytes(zip, bytes);
+        var tampered = UpdateBundle.Create(release, "0.3.0", NewDir());
+        Assert.Throws<InvalidDataException>(() => UpdateBundle.Stage(tampered, staging, Keys.Public, "0.2.0"));
+        Assert.False(File.Exists(Path.Combine(staging, "lista"))); // nada queda listo para instalar
+        // Una versión que no es más nueva.
+        var same = UpdateBundle.Create(PublishNewVersion(), "0.3.0", NewDir());
+        Assert.Throws<InvalidDataException>(() => UpdateBundle.Stage(same, staging, Keys.Public, "0.3.0"));
+        // Cualquier otro archivo.
+        var bogus = Path.Combine(NewDir(), "pcdoctor-actualizacion-9.9.9.zip");
+        File.WriteAllText(bogus, "no es un zip");
+        Assert.Throws<InvalidDataException>(() => UpdateBundle.Read(bogus, Keys.Public));
+        var emptyZip = Path.Combine(NewDir(), "vacio.zip");
+        ZipFile.Open(emptyZip, ZipArchiveMode.Create).Dispose();
+        Assert.Throws<InvalidDataException>(() => UpdateBundle.Read(emptyZip, Keys.Public));
+    }
+
+    [Fact]
+    public void FindsTheNewestUpdateFileInDownloads()
+    {
+        var a = NewDir();
+        var b = NewDir();
+        foreach (var (dir, name) in new[] { (a, "pcdoctor-actualizacion-0.3.1.zip"), (a, "pcdoctor-actualizacion-0.10.0.zip"), (b, "pcdoctor-actualizacion-0.9.0.zip"), (b, "pcdoctor-actualizacion-basura.zip"), (b, "otra-cosa-9.9.9.zip") })
+            File.WriteAllText(Path.Combine(dir, name), "x");
+        Assert.Equal("pcdoctor-actualizacion-0.10.0.zip", Path.GetFileName(UpdateBundle.FindNewest([a, b, Path.Combine(a, "no-existe")])));
+        Assert.Null(UpdateBundle.FindNewest([NewDir()]));
+    }
+
+    [Fact]
+    public void TheAutoOpenerOnlyOpensTheSealedProgram()
+    {
+        var root = NewDir();
+        Put(root, "ABRIR PC DOCTOR.exe", "programa original");
+        Directory.CreateDirectory(Path.Combine(root, "pcdoctor"));
+        Assert.False(ProgramSeal.Verify(root, Keys.Public)); // sin sello no se abre
+        ProgramSealer.Seal(root, Keys.Private);
+        Assert.True(ProgramSeal.Verify(root, Keys.Public));
+        Assert.False(ProgramSeal.Verify(root, UpdateSignature.CreateKeys().PublicPem)); // sellado por otro
+        Assert.False(ProgramSeal.Verify(root, UpdateKeys.PublicKeyPem)); // la clave real del proyecto se lee bien y no coincide con la de prueba
+
+        Put(root, "ABRIR PC DOCTOR.exe", "programa cambiado por un virus");
+        Assert.False(ProgramSeal.Verify(root, Keys.Public));
+        Put(root, "ABRIR PC DOCTOR.exe", "programa original");
+        Assert.True(ProgramSeal.Verify(root, Keys.Public));
+        // Alguien que cambia el sello para que coincida con su programa: la firma ya no vale.
+        Put(root, "ABRIR PC DOCTOR.exe", "otro programa");
+        File.WriteAllText(Path.Combine(root, ProgramSeal.SealFile), ProgramSeal.SealText(ProgramSeal.Sha256Hex(Path.Combine(root, ProgramSeal.ProgramFile))));
+        Assert.False(ProgramSeal.Verify(root, Keys.Public));
+        File.WriteAllText(Path.Combine(root, ProgramSeal.SignatureFile), "basura que no es base64 ###");
+        Assert.False(ProgramSeal.Verify(root, Keys.Public));
+    }
+
     private sealed class SyncProgress(Action<(long Done, long Total)> report) : IProgress<(long Done, long Total)>
     {
         public void Report((long Done, long Total) value) => report(value);

@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    Abridor automático: un programa chiquito que, si la persona lo pide, queda en la PC y abre PC Doctor
+    cada vez que se enchufa el pendrive. Usa .NET Framework 4.8 (ya viene en Windows 10 y 11): pesa unos KB
+    y no necesita instalar nada más.
+  -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>PCDoctor-Abrir</AssemblyName>
+    <RootNamespace>PCDoctor.Abrir</RootNamespace>
+    <AssemblyTitle>PC Doctor - abrir al enchufar el pendrive</AssemblyTitle>
+    <ApplicationIcon>..\PCDoctor.App\pcdoctor.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <GenerateAppConfig>false</GenerateAppConfig>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\PCDoctor.Core\Updates\ProgramSeal.cs" Link="ProgramSeal.cs" />
+    <Compile Include="..\PCDoctor.Core\Updates\UpdateKeys.cs" Link="UpdateKeys.cs" />
+  </ItemGroup>
+</Project>
