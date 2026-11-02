@@ -1,10 +1,15 @@
-PC DOCTOR AI — versión 0.2 de prueba
+PC DOCTOR AI — versión 0.3 de prueba
 =====================================
 
-SI LA COMPUTADORA NO ARRANCA, O TIENE UN VIRUS QUE NO TE DEJA USARLA: MODO RESCATE
+SI LA COMPUTADORA PUEDE ESTAR HACKEADA O ANDA MUY MAL (PERO WINDOWS PRENDE)
+1. Abrí PC Doctor (doble clic en «ABRIR PC DOCTOR») y tocá «Revisar con Windows apagado».
+2. La PC se reinicia en una pantalla azul: tocá «Usar un dispositivo» y elegí el pendrive.
+   Así no hace falta saber ninguna tecla. Arranca el modo rescate (ver abajo qué hace).
+
+SI LA COMPUTADORA NO ARRANCA: MODO RESCATE
 1. Con la PC apagada, poné este pendrive.
 2. Prendela y apretá varias veces la tecla del menú de arranque. Según la marca:
-   F12 (Dell, Lenovo, Acer, Toshiba), F9 (HP), Esc (Asus, algunas HP), F11 (MSI), F8 (algunas Asus).
+   F12 (Dell, Lenovo, Acer, Toshiba, Gigabyte), F9 (HP), Esc (notebooks Asus), F8 (Asus de escritorio), F11 (MSI, ASRock).
 3. Elegí el pendrive (suele decir «USB» o «UEFI»). A los 5 segundos arranca «PC Doctor - Modo rescate».
 4. Ahí podés: rescatar tus fotos y documentos al pendrive, buscar virus y señales de hackeo con Windows
    apagado (los virus no se pueden esconder), ver si el disco está fallando y saber cómo reparar Windows.
@@ -38,7 +43,7 @@ SIN NINGUNA GARANTÍA. El texto completo de la licencia y los componentes de ter
 pcdoctor\licencias\. El código fuente completo de esta versión se publica junto con cada versión
 del proyecto; si no lo encontrás, pedíselo a quien te vendió este pendrive.
 
-CONTENIDO DEL PENDRIVE
+CONTENIDO DEL PENDRIVE (las carpetas del programa están ocultas para que no se borren sin querer)
   ABRIR PC DOCTOR.exe    el programa
   pcdoctor\              biblioteca de problemas, datos y herramienta para técnicos (pcdoctor-cli.exe)
   pcdoctor\state\        historial e informes de cada PC revisada (se puede borrar)

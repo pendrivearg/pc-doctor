@@ -121,6 +121,51 @@ public class UiEndToEndTests
     });
 
     [Fact]
+    public Task RescueRebootExplainsStepsAndOnlyRestartsWhenAccepted() => Ui(() =>
+    {
+        var restarts = 0;
+        var originalRestart = MainWindow.RestartToBootMenu;
+        var originalAvailable = MainWindow.RescueAvailable;
+        MainWindow.RestartToBootMenu = () => restarts++; // nunca reinicia esta PC
+        try
+        {
+            var w = new MainWindow { Width = 1100, Height = 900 };
+            foreach (var (label, expected) in new[] { ("No, ahora no", 0), ("Sí, reiniciar ahora", 1) })
+            {
+                var accepted = 0;
+                var dialog = w.BuildRescueRebootDialog(() => accepted++);
+                dialog.Show();
+                Dispatcher.UIThread.RunJobs();
+                var texts = dialog.GetVisualDescendants().OfType<TextBlock>().Select(t => t.Text ?? "").ToList();
+                Assert.Contains(texts, t => t.Contains("«Usar un dispositivo»"));
+                Assert.Contains(texts, t => t.Contains("BitLocker"));
+                dialog.GetVisualDescendants().OfType<Button>().Single(b => Label(b) == label)
+                    .RaiseEvent(new Avalonia.Interactivity.RoutedEventArgs(Button.ClickEvent));
+                Dispatcher.UIThread.RunJobs();
+                Assert.Equal(expected, accepted);
+            }
+            Assert.Equal(0, restarts); // armar la ventana nunca reinicia por sí solo
+
+            // El botón solo aparece con la parte de rescate del pendrive enchufada.
+            foreach (var available in new[] { true, false })
+            {
+                MainWindow.RescueAvailable = () => available;
+                var home = new MainWindow { Width = 1100, Height = 900 };
+                home.Show();
+                AssertNoError(home, "inicio");
+                Assert.Equal(available, Buttons(home).Select(Label).Contains("Revisar con Windows apagado"));
+                home.Close();
+            }
+        }
+        finally
+        {
+            MainWindow.RestartToBootMenu = originalRestart;
+            MainWindow.RescueAvailable = originalAvailable;
+        }
+        return Task.CompletedTask;
+    });
+
+    [Fact]
     public Task PermissionNoticeIsClearAndHasBothChoices() => Ui(() =>
     {
         var w = new MainWindow();

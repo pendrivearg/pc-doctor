@@ -30,4 +30,9 @@ foreach ($d in 'knowledge', 'data') {
 Copy-Item (Join-Path $raiz 'LICENSE') "$pc\licencias\GPL-3.0.txt" -Force
 Copy-Item (Join-Path $raiz 'THIRD-PARTY-NOTICES.md') "$pc\licencias\THIRD-PARTY-NOTICES.md" -Force
 Copy-Item (Join-Path $raiz 'packaging\LEEME.txt') (Join-Path $Destino 'LEEME.txt') -Force
+# Al abrir el pendrive se ve solo «ABRIR PC DOCTOR» y el LEEME: las carpetas del programa quedan ocultas (siguen funcionando).
+foreach ($oculta in 'pcdoctor', 'PC-Doctor-AI-codigo') {
+    $item = Get-Item -LiteralPath (Join-Path $Destino $oculta) -Force -ErrorAction SilentlyContinue
+    if ($item) { $item.Attributes = $item.Attributes -bor [IO.FileAttributes]::Hidden }
+}
 "Publicado en $Destino · agente: $huellas"

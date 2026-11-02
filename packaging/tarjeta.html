@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>PC Doctor — Cómo usarlo</title>
+<style>
+  @page { size: A4; margin: 10mm 12mm; }
+  body { font-family: "Segoe UI", Arial, sans-serif; color: #111; margin: 0; font-size: 13pt; line-height: 1.3; }
+  h1 { font-size: 23pt; margin: 0 0 2mm; }
+  .sub { font-size: 12pt; color: #444; margin-bottom: 4mm; }
+  .caso { border: 2.5pt solid #1b5e9e; border-radius: 4mm; padding: 3mm 5mm; margin-bottom: 4mm; break-inside: avoid; }
+  .caso.rojo { border-color: #b3261e; }
+  .caso.ambar { border-color: #b26a00; }
+  h2 { font-size: 18pt; margin: 0 0 2mm; }
+  ol { margin: 0; padding-left: 7mm; }
+  li { margin: 1mm 0; }
+  b.boton { background: #eef3fb; border: 1pt solid #1b5e9e; border-radius: 2mm; padding: 0 2mm; }
+  table { border-collapse: collapse; width: 100%; font-size: 13pt; margin-top: 2mm; }
+  td { border: 1pt solid #999; padding: 1.2mm 2.5mm; }
+  td.k { font-weight: bold; white-space: nowrap; }
+  .pie { font-size: 10.5pt; color: #555; margin-top: 4mm; }
+</style>
+</head>
+<body>
+  <h1>PC Doctor — Cómo usarlo</h1>
+  <div class="sub">Revisa y arregla tu computadora sin Internet, sin instalar nada y sin cambiar nada sin preguntarte.</div>
+
+  <div class="caso">
+    <h2>1. Si la compu prende normal</h2>
+    <ol>
+      <li>Enchufá el pendrive.</li>
+      <li>Abrí el pendrive (tocá el aviso que aparece abajo a la derecha, o el Explorador de archivos) y hacé <b>doble clic en <b class="boton">ABRIR PC DOCTOR</b></b>.</li>
+      <li>Si Windows muestra «Windows protegió su PC», tocá <b>«Más información»</b> y después <b>«Ejecutar de todas formas»</b>.</li>
+      <li>Tocá <b class="boton">ANALIZAR Y SOLUCIONAR MI COMPUTADORA</b> o escribí con tus palabras qué te pasa.</li>
+    </ol>
+  </div>
+
+  <div class="caso ambar">
+    <h2>2. Si la compu puede estar hackeada o anda muy mal</h2>
+    <ol>
+      <li>Abrí PC Doctor como en el punto 1 y tocá <b class="boton">Revisar con Windows apagado</b>.</li>
+      <li>La compu se reinicia y aparece una pantalla azul: tocá <b>«Usar un dispositivo»</b> y elegí el pendrive (dice «USB» o «UEFI»).</li>
+      <li>Arranca <b>PC Doctor - Modo rescate</b>: rescatá tus fotos y documentos, y buscá virus con Windows apagado (los virus no se pueden esconder).</li>
+    </ol>
+  </div>
+
+  <div class="caso rojo">
+    <h2>3. Si Windows no prende</h2>
+    <ol>
+      <li>Con la compu apagada, poné el pendrive.</li>
+      <li>Prendela y apretá varias veces seguidas la tecla del menú de arranque. Las más comunes:</li>
+    </ol>
+    <table>
+      <tr><td class="k">F12</td><td>Dell, Lenovo (en algunas Fn + F12), Acer, Toshiba, Gigabyte</td></tr>
+      <tr><td class="k">F9</td><td>HP (en algunas primero Esc y después F9)</td></tr>
+      <tr><td class="k">Esc o F8</td><td>Asus (notebooks Esc, de escritorio F8)</td></tr>
+      <tr><td class="k">F11</td><td>MSI, ASRock</td></tr>
+    </table>
+    <ol start="3">
+      <li>Elegí el pendrive. A los 5 segundos arranca <b>PC Doctor - Modo rescate</b>.</li>
+    </ol>
+  </div>
+
+  <div class="pie">
+    Si el disco tiene BitLocker, puede pedir la clave de recuperación: está en tu cuenta de Microsoft (aka.ms/myrecoverykey, desde el celular).<br>
+    PC Doctor nunca te va a llamar por teléfono ni pedir acceso remoto, contraseñas o pagos: si alguien lo hace en su nombre, es una estafa.<br>
+    Software libre (GPL-3.0) · github.com/pendrivearg/pc-doctor
+  </div>
+</body>
+</html>

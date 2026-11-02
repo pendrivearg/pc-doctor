@@ -258,6 +258,15 @@ public sealed class MainWindow : Window
         grid.Children.Add(history);
         page.Children.Add(grid);
 
+        if (RescueAvailable())
+        {
+            var rescue = new StackPanel { Spacing = S(8) };
+            rescue.Children.Add(Text("¿La PC puede estar hackeada o Windows anda muy mal?", 20, FontWeight.Bold));
+            rescue.Children.Add(Text("Revisala con Windows apagado: la PC se reinicia desde este pendrive, donde los virus no se pueden esconder. También sirve para rescatar tus fotos y documentos.", 17));
+            rescue.Children.Add(Btn("Revisar con Windows apagado", () => ConfirmRescueRebootAsync(), size: 19));
+            page.Children.Add(Card(rescue, StatusBrush(HealthStatus.Warning)));
+        }
+
         var footer = new StringBuilder($"{host.Knowledge.Problems.Count} problemas en la biblioteca · versión {Version} de prueba");
         if (!host.IsElevated) footer.Append(" · Abierto sin permiso de administrador: el análisis funciona igual y te va a pedir permiso solo si hace falta.");
         page.Children.Add(Text(footer.ToString(), 14, color: Muted));
@@ -1019,6 +1028,64 @@ public sealed class MainWindow : Window
         var last = Path.Combine(host.Paths.ContentRoot, "ultima-actualizacion.txt");
         if (File.Exists(last)) page.Children.Add(Text("Última actualización: " + File.ReadAllText(last).Trim(), 14, color: Muted));
         SetPage(page);
+    }
+
+    /// <summary>¿Está enchufada la parte de rescate del pendrive? Sin ella, el botón de revisar con Windows apagado no aparece.</summary>
+    internal static Func<bool> RescueAvailable = () =>
+        DriveInfo.GetDrives().Any(d => d.DriveType == DriveType.Removable && d.IsReady
+                                       && d.VolumeLabel.Equals("PCD-RESCATE", StringComparison.OrdinalIgnoreCase));
+
+    /// <summary>
+    /// Reinicia en el menú de arranque de Windows («Elegir una opción»), donde «Usar un dispositivo» arranca desde el pendrive
+    /// sin saber la tecla de cada marca. shutdown /r /o: documentado por Microsoft; no necesita permiso de administrador.
+    /// En las pruebas se reemplaza para que nunca reinicie la PC.
+    /// </summary>
+    internal static Action RestartToBootMenu = () =>
+        Process.Start(new ProcessStartInfo("shutdown.exe") { UseShellExecute = false, CreateNoWindow = true, ArgumentList = { "/r", "/o", "/t", "0" } })?.Dispose();
+
+    private async Task ConfirmRescueRebootAsync()
+    {
+        var accepted = false;
+        await BuildRescueRebootDialog(() => accepted = true).ShowDialog(this);
+        if (!accepted) return;
+        AppLog.Info("Reinicio al menú de arranque para el modo rescate");
+        RestartToBootMenu();
+    }
+
+    /// <summary>Explica con letra grande qué va a aparecer después del reinicio y qué tocar.</summary>
+    internal Window BuildRescueRebootDialog(Action onAccept)
+    {
+        var dialog = new Window
+        {
+            Title = "Revisar con Windows apagado",
+            Width = 680,
+            SizeToContent = SizeToContent.Height,
+            WindowStartupLocation = WindowStartupLocation.CenterOwner,
+            CanResize = false,
+            Background = Brushes.White,
+            FontFamily = FontFamily,
+        };
+        var yes = new Button { Content = new TextBlock { Text = "Sí, reiniciar ahora", FontSize = S(18), FontWeight = FontWeight.Bold }, Padding = new Thickness(S(18), S(10)) };
+        yes.Classes.Add("accent");
+        var no = new Button { Content = new TextBlock { Text = "No, ahora no", FontSize = S(18) }, Padding = new Thickness(S(18), S(10)) };
+        yes.Click += (_, _) => { onAccept(); dialog.Close(); };
+        no.Click += (_, _) => dialog.Close();
+        dialog.Content = new StackPanel
+        {
+            Margin = new Thickness(24),
+            Spacing = 12,
+            Children =
+            {
+                Text("La PC se va a reiniciar. Hacé esto:", 22, FontWeight.Bold),
+                Text("1. Guardá lo que tengas abierto y dejá el pendrive puesto.", 18),
+                Text("2. Aparece una pantalla azul que dice «Elegir una opción». Tocá «Usar un dispositivo».", 18),
+                Text("3. Elegí el pendrive (suele decir «USB» o «UEFI»). Arranca «PC Doctor - Modo rescate».", 18),
+                Text("4. Al terminar, elegí «Apagar» en el modo rescate, sacá el pendrive y prendé la PC normalmente.", 18),
+                Text("Si no aparece «Usar un dispositivo»: apagá la PC y prendela apretando varias veces la tecla de arranque (según la marca: F12, F11, F9, F8 o Esc). Si el disco tiene BitLocker, tené a mano la clave de recuperación.", 15, color: Muted),
+                Row(12, yes, no),
+            },
+        };
+        return dialog;
     }
 
     /// <summary>Raíz del pendrive (donde está «ABRIR PC DOCTOR.exe»). En desarrollo no hay: ahí no se actualiza nada.</summary>
